@@ -1,45 +1,260 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulado PL-300 Power BI Data Analyst</title>
-    <link rel="stylesheet" href="../style.css"> <!-- Link para o CSS principal do portal -->
-    <link rel="stylesheet" href="simulado.css"> <!-- CSS específico do simulado -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulado PL-300 | Power BI Data Analyst</title>
+  <meta name="description" content="Simulado completo para a certificação Microsoft PL-300 Power BI Data Analyst. 120 questões cobrindo todos os domínios do exame.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="simulado.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Simulado PL-300 Power BI Data Analyst</h1>
-            <p>Teste seus conhecimentos para a certificação!</p>
-        </header>
 
-        <main id="quiz-container">
-            <div id="question-card" class="module-card">
-                <div class="module-header" id="question-number">Questão 1</div>
-                <div class="module-content">
-                    <p id="question-text"></p>
-                    <div id="options-container"></div>
-                    <button id="submit-answer" class="button">Responder</button>
-                    <div id="feedback" class="feedback"></div>
-                    <button id="next-question" class="button" style="display: none;">Próxima Questão</button>
-                </div>
-            </div>
-            <div id="results-card" class="module-card" style="display: none;">
-                <div class="module-header">Resultados do Simulado</div>
-                <div class="module-content">
-                    <p>Você acertou <span id="score"></span> de <span id="total-questions"></span> questões.</p>
-                    <button id="restart-quiz" class="button">Refazer Simulado</button>
-                    <a href="../index.html" class="button">Voltar ao Portal</a>
-                </div>
-            </div>
-        </main>
+<!-- BG ORBS -->
+<div class="bg-orbs" aria-hidden="true">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
 
-        <footer>
-            <p>Portal de Estudo - Certificação PL-300 | Criado com ❤️ para sua jornada de aprendizado</p>
-        </footer>
+<!-- ===================== WELCOME ===================== -->
+<div id="screen-welcome" class="screen active">
+  <div class="welcome-content">
+    <div class="logo-badge">⚡ PL-300 Simulator</div>
+    <h1 class="welcome-title">Simulado <span class="gradient-text">Power BI</span><br>Data Analyst</h1>
+    <p class="welcome-subtitle">Prepare-se para a certificação com 120 questões cobrindo todos os domínios do exame real Microsoft.</p>
+
+    <div class="stats-row">
+      <div class="stat-item"><span class="stat-number">120</span><span class="stat-label">Questões</span></div>
+      <div class="stat-item"><span class="stat-number">4</span><span class="stat-label">Domínios</span></div>
+      <div class="stat-item"><span class="stat-number">2</span><span class="stat-label">Modos</span></div>
+      <div class="stat-item"><span class="stat-number">70%</span><span class="stat-label">Aprovação</span></div>
     </div>
 
-    <script src="simulado.js"></script>
+    <div class="mode-cards">
+      <button class="mode-card" id="btn-treino" onclick="selectMode('treino')">
+        <span class="mode-icon">📚</span>
+        <div class="mode-info">
+          <h3>Modo Treino</h3>
+          <p>Feedback imediato, escolha o domínio, sem cronômetro</p>
+        </div>
+        <span class="mode-arrow">→</span>
+      </button>
+      <button class="mode-card mode-card-official" id="btn-oficial" onclick="selectMode('oficial')">
+        <span class="mode-icon">🎯</span>
+        <div class="mode-info">
+          <h3>Simulado Oficial</h3>
+          <p>110 minutos, todos os domínios, condições reais do exame</p>
+        </div>
+        <span class="mode-arrow">→</span>
+      </button>
+    </div>
+
+    <div class="welcome-actions">
+      <button class="btn-ghost" onclick="showScreen('screen-history')">📊 Ver Histórico</button>
+      <a href="../index.html" class="btn-ghost">🏠 Voltar ao Portal</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== DOMAIN SELECT ===================== -->
+<div id="screen-domain" class="screen">
+  <div class="screen-inner">
+    <button class="btn-back" onclick="showScreen('screen-welcome')">← Voltar</button>
+    <h2 class="screen-title">Escolha o Domínio</h2>
+    <p class="screen-subtitle">Selecione um ou mais domínios para praticar</p>
+
+    <div class="domain-grid">
+      <button class="domain-card" data-domain="Todos" onclick="toggleDomain(this)">
+        <span class="domain-icon">🌐</span>
+        <span class="domain-name">Todos os Domínios</span>
+        <span class="domain-count">120 questões</span>
+      </button>
+      <button class="domain-card" data-domain="Preparar Dados" onclick="toggleDomain(this)">
+        <span class="domain-icon">🔧</span>
+        <span class="domain-name">Preparar Dados</span>
+        <span class="domain-count">30 questões</span>
+      </button>
+      <button class="domain-card" data-domain="Modelar Dados" onclick="toggleDomain(this)">
+        <span class="domain-icon">🗃️</span>
+        <span class="domain-name">Modelar Dados</span>
+        <span class="domain-count">30 questões</span>
+      </button>
+      <button class="domain-card" data-domain="Visualizar e Analisar" onclick="toggleDomain(this)">
+        <span class="domain-icon">📊</span>
+        <span class="domain-name">Visualizar e Analisar</span>
+        <span class="domain-count">30 questões</span>
+      </button>
+      <button class="domain-card" data-domain="Implementar e Manter" onclick="toggleDomain(this)">
+        <span class="domain-icon">🚀</span>
+        <span class="domain-name">Implementar e Manter</span>
+        <span class="domain-count">30 questões</span>
+      </button>
+    </div>
+
+    <button class="btn-primary" id="btn-start-treino" onclick="startQuiz()" style="width:100%">
+      Iniciar Treino →
+    </button>
+  </div>
+</div>
+
+<!-- ===================== LOADING ===================== -->
+<div id="screen-loading" class="screen">
+  <div class="loading-content">
+    <div class="loading-spinner"></div>
+    <h3>Preparando o simulado...</h3>
+    <p class="text-muted">Embaralhando questões dos domínios selecionados</p>
+  </div>
+</div>
+
+<!-- ===================== QUIZ ===================== -->
+<div id="screen-quiz" class="screen">
+  <div class="quiz-layout">
+
+    <!-- Topbar -->
+    <div class="quiz-topbar">
+      <button class="btn-quit" onclick="confirmQuit()">✕ Sair</button>
+      <div class="quiz-progress-info">
+        <span id="q-current">1</span>/<span id="q-total">30</span>
+        <div class="domain-badge" id="q-domain-badge">Preparar Dados</div>
+      </div>
+      <div class="timer-display hidden" id="timer-display">
+        <span>⏱</span>
+        <span id="timer-text">110:00</span>
+      </div>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="quiz-progress-bar">
+      <div class="quiz-progress-fill" id="progress-fill"></div>
+    </div>
+
+    <!-- Body -->
+    <div class="quiz-body">
+
+      <!-- Question card -->
+      <div class="question-card" id="question-card">
+        <div class="question-meta">
+          <span class="q-number-badge" id="q-badge">Questão 1</span>
+          <button class="btn-mark" id="btn-mark" onclick="toggleMark()">🚩 Marcar para revisão</button>
+        </div>
+
+        <p class="question-text" id="question-text"></p>
+        <div id="multi-hint-container"></div>
+        <div class="options-grid" id="options-container"></div>
+
+        <div class="question-actions">
+          <button class="btn-primary" id="btn-submit" onclick="submitAnswer()">Confirmar Resposta</button>
+        </div>
+
+        <div id="feedback-box" class="feedback-box hidden"></div>
+
+        <div class="nav-actions" id="nav-actions" style="display:none">
+          <button class="btn-ghost" id="btn-prev" onclick="goToQuestion(state.currentIndex - 1)">← Anterior</button>
+          <button class="btn-primary" id="btn-next" onclick="nextQuestion()">Próxima →</button>
+        </div>
+      </div>
+
+      <!-- Navigator panel -->
+      <div class="question-nav-panel" id="nav-panel">
+        <div class="nav-panel-title">Navegação</div>
+        <div class="nav-grid" id="nav-grid"></div>
+        <div class="nav-legend">
+          <div class="nav-legend-item"><div class="nav-dot nd-answered"></div> Respondida</div>
+          <div class="nav-legend-item"><div class="nav-dot nd-marked"></div> Marcada</div>
+          <div class="nav-legend-item"><div class="nav-dot nd-current"></div> Atual</div>
+        </div>
+      </div>
+
+    </div><!-- /quiz-body -->
+  </div><!-- /quiz-layout -->
+</div>
+
+<!-- ===================== RESULTS ===================== -->
+<div id="screen-results" class="screen">
+  <div class="results-container">
+
+    <!-- Header -->
+    <div class="results-header">
+      <div class="score-circle" id="score-circle">
+        <svg viewBox="0 0 120 120" class="score-ring">
+          <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="9" class="score-ring-bg"/>
+          <circle cx="60" cy="60" r="54" fill="none" stroke="url(#grad)" stroke-width="9"
+            stroke-dasharray="339.3" stroke-dashoffset="339.3" id="score-ring-fill"
+            stroke-linecap="round" transform="rotate(-90 60 60)" class="score-ring-fill"/>
+          <defs>
+            <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%"   stop-color="#8b5cf6"/>
+              <stop offset="100%" stop-color="#3b82f6"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="score-inner">
+          <span class="score-pct" id="score-pct">0%</span>
+          <span class="score-label-sm">acertos</span>
+        </div>
+      </div>
+      <div class="results-summary">
+        <h2 id="results-title">Resultado do Simulado</h2>
+        <div class="result-badge" id="result-badge">⏳</div>
+        <p class="results-detail" id="results-detail"></p>
+        <p class="results-time"   id="results-time"></p>
+      </div>
+    </div>
+
+    <!-- Domain chart -->
+    <div class="results-card">
+      <h3 class="card-title">📊 Desempenho por Domínio</h3>
+      <div class="domain-bars" id="domain-bars"></div>
+    </div>
+
+    <!-- Review -->
+    <div class="results-card">
+      <div class="review-header">
+        <h3 class="card-title" style="margin-bottom:0">📋 Revisão das Questões</h3>
+        <div class="review-filters">
+          <button class="filter-btn active" onclick="filterReview('all',this)">Todas</button>
+          <button class="filter-btn"        onclick="filterReview('wrong',this)">Erradas</button>
+          <button class="filter-btn"        onclick="filterReview('correct',this)">Certas</button>
+        </div>
+      </div>
+      <div style="height:16px"></div>
+      <div class="review-list" id="review-list"></div>
+    </div>
+
+    <div class="results-actions">
+      <button class="btn-primary" onclick="restartFromResults()">🔄 Novo Simulado</button>
+      <button class="btn-ghost"   onclick="showScreen('screen-history')">📊 Histórico</button>
+      <a href="../index.html" class="btn-ghost">🏠 Portal</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===================== HISTORY ===================== -->
+<div id="screen-history" class="screen">
+  <div class="screen-inner">
+    <button class="btn-back" onclick="showScreen('screen-welcome')">← Voltar</button>
+    <h2 class="screen-title">📊 Histórico de Simulados</h2>
+    <p class="screen-subtitle">Seus últimos 10 simulados realizados</p>
+    <div class="history-list" id="history-list"></div>
+    <button class="btn-danger" onclick="clearHistory()" style="margin-top:28px">🗑️ Limpar Histórico</button>
+  </div>
+</div>
+
+<!-- ===================== MODAL ===================== -->
+<div id="quit-modal" class="modal hidden" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <h3>Deseja mesmo sair?</h3>
+    <p>Seu progresso atual será perdido.</p>
+    <div class="modal-actions">
+      <button class="btn-primary" onclick="closeModal()">Continuar</button>
+      <button class="btn-danger"  onclick="quitQuiz()">Sair</button>
+    </div>
+  </div>
+</div>
+
+<script src="simulado.js"></script>
 </body>
 </html>
