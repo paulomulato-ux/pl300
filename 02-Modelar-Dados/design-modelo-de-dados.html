@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>design-modelo-de-dados</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; }
+        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; }
+        code { font-family: "Courier New", Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; }
+        img { max-width: 100%; height: auto; display: block; margin: 10px 0; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏗️ Design de Modelo de Dados</h1>
+<p>Este módulo aprofunda conceitos de <strong>modelagem dimensional</strong>, essenciais para o desempenho e clareza do modelo no Power BI.</p>
+<hr />
+<h2>🔹 Modelo Estrela (Star Schema)</h2>
+<p>A estrutura recomendada pela Microsoft para BI:</p>
+<ul>
+<li><strong>Tabela Fato</strong> → transações, valores numéricos, chaves estrangeiras  </li>
+<li><strong>Tabelas Dimensão</strong> → contexto, atributos, categorias  </li>
+<li><strong>Relacionamentos 1:* (um para muitos)</strong>  </li>
+</ul>
+<p>Benefícios:</p>
+<ul>
+<li>Melhor compressão de dados  </li>
+<li>Menor complexidade  </li>
+<li>Melhor desempenho em DAX  </li>
+<li>Melhor uso de agregações  </li>
+</ul>
+<hr />
+<h2>🔹 Tabela Fato – características</h2>
+<ul>
+<li>Alta granularidade  </li>
+<li>Muitas linhas  </li>
+<li>Poucas colunas  </li>
+<li>Colunas numéricas e chaves  </li>
+</ul>
+<p>Exemplos:</p>
+<ul>
+<li>Fato Vendas  </li>
+<li>Fato Estoque  </li>
+<li>Fato Transações  </li>
+</ul>
+<hr />
+<h2>🔹 Tabelas Dimensão – características</h2>
+<ul>
+<li>Muitas colunas  </li>
+<li>Poucas linhas  </li>
+<li>Atributos descritivos  </li>
+<li>Hierarquias (Ano &gt; Mês &gt; Dia, Região &gt; Estado &gt; Cidade)  </li>
+</ul>
+<hr />
+<h2>🔹 Tipos de Cardinalidade</h2>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1:* (um para muitos)</strong></td>
+<td>padrão ideal</td>
+</tr>
+<tr>
+<td><strong>*:1 (muitos para um)</strong></td>
+<td>equivalente ao 1:* invertido</td>
+</tr>
+<tr>
+<td><strong><em>:</em> (muitos para muitos)</strong></td>
+<td>apenas quando necessário</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>🔹 Direção de Filtro</h2>
+<table>
+<thead>
+<tr>
+<th>Direção</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Single</strong></td>
+<td>ideal, mais eficiente</td>
+</tr>
+<tr>
+<td><strong>Both</strong></td>
+<td>usar com cautela, pode causar loops</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>🔹 Relacionamentos Ativos e Inativos</h2>
+<ul>
+<li><strong>Ativo</strong> → usado por padrão  </li>
+<li><strong>Inativo</strong> → habilitado via <code>USERELATIONSHIP()</code>  </li>
+</ul>
+<p>Exemplo:</p>
+<pre><code class="language-DAX">Vendas Ano Fiscal =
+CALCULATE(
+    [Total Vendas],
+    USERELATIONSHIP(DimCalendario[AnoFiscal], FatoVendas[Data])
+)
+</code></pre>
+<hr />
+<h2>🔹 Tabelas de Datas</h2>
+<p>Requisitos:</p>
+<ul>
+<li>Coluna contínua (sem buracos)  </li>
+<li>Sem horários  </li>
+<li>Cobrir todo o intervalo do dataset  </li>
+<li>Marcar como <strong>Date Table</strong>  </li>
+</ul>
+<hr />
+<h2>📚 Links Oficiais</h2>
+<ul>
+<li>Star Schema: https://learn.microsoft.com/power-bi/guidance/star-schema  </li>
+<li>Relationships: https://learn.microsoft.com/power-bi/transform-model/desktop-relationships  </li>
+</ul>
+    </div>
+</body>
+</html>

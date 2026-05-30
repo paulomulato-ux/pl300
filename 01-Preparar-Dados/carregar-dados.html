@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carregar-dados</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; }
+        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; }
+        code { font-family: "Courier New", Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; }
+        img { max-width: 100%; height: auto; display: block; margin: 10px 0; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📥 Carregar Dados no Power BI</h1>
+<p>Depois de conectar e transformar os dados no Power Query, o próximo passo é <strong>carregar os dados no modelo</strong>.</p>
+<hr />
+<h2>🔹 Métodos de Carga</h2>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Descrição</th>
+<th>Uso Ideal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Import</strong></td>
+<td>Dados são carregados no modelo</td>
+<td>Melhor performance</td>
+</tr>
+<tr>
+<td><strong>DirectQuery</strong></td>
+<td>Consulta sempre a fonte</td>
+<td>Dados grandes ou atualizados frequentemente</td>
+</tr>
+<tr>
+<td><strong>Dual</strong></td>
+<td>Pode atuar como Import ou DirectQuery</td>
+<td>Modelos compostos</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>🔹 Atualização de Dados</h2>
+<h3><strong>Refresh Manual</strong></h3>
+<p>Via Power BI Desktop ou serviço.</p>
+<h3><strong>Agendamento de Atualização</strong></h3>
+<ul>
+<li>Requer gateway se fonte estiver on-premises  </li>
+<li>Necessário Premium para frequências maiores  </li>
+</ul>
+<hr />
+<h2>🔹 Incremental Refresh</h2>
+<p>Ideal para grandes volumes de dados. Permite:</p>
+<ul>
+<li>Atualizar apenas partições recentes  </li>
+<li>Reduzir tempo de atualização  </li>
+<li>Otimizar armazenamento  </li>
+</ul>
+<p>Pré-requisitos:</p>
+<ul>
+<li>Parâmetros RangeStart / RangeEnd  </li>
+<li>Filtro na data de fato  </li>
+<li>Dataset publicado em workspace Pro ou Premium  </li>
+</ul>
+<hr />
+<h2>🔹 Boas Práticas de Carga</h2>
+<ul>
+<li>Remover colunas inúteis antes de carregar  </li>
+<li>Evitar tipos de dados textuais pesados  </li>
+<li>Conferir cardinalidade das colunas  </li>
+<li>Revisar dependências de consultas  </li>
+<li>Evitar colunas calculadas no modelo quando possível  </li>
+</ul>
+<hr />
+<h2>📚 Links Oficiais</h2>
+<ul>
+<li>Incremental refresh:<br />
+  https://learn.microsoft.com/power-bi/connect-data/incremental-refresh-overview  </li>
+</ul>
+<hr />
+    </div>
+</body>
+</html>

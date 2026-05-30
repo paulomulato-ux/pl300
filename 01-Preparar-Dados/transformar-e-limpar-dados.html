@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transformar-e-limpar-dados</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; }
+        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; }
+        code { font-family: "Courier New", Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; }
+        img { max-width: 100%; height: auto; display: block; margin: 10px 0; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Transformar e Limpar Dados com Power Query</h1>
+<p>Este módulo aborda a etapa de <strong>transformação</strong>, fundamental para garantir qualidade, consistência e estrutura do dataset.</p>
+<hr />
+<h2>🔹 Categorias de Transformações</h2>
+<h3>✔ Estrutura</h3>
+<ul>
+<li>Remover linhas  </li>
+<li>Remover colunas  </li>
+<li>Dividir colunas  </li>
+<li>Transpor dados  </li>
+<li>Agrupar por  </li>
+</ul>
+<h3>✔ Qualidade</h3>
+<ul>
+<li>Remover duplicatas  </li>
+<li>Detectar e corrigir erros  </li>
+<li>Substituir valores  </li>
+<li>Preencher valores  </li>
+</ul>
+<h3>✔ Tipos de dados</h3>
+<ul>
+<li>Conversão para inteiro, decimal, data, texto  </li>
+<li>Detecção automática x manual  </li>
+</ul>
+<hr />
+<h2>🔹 Ferramentas importantes</h2>
+<h3><strong>Column Profile</strong></h3>
+<p>Exibe estatísticas detalhadas:
+- Valores distintos<br />
+- Valores vazios<br />
+- Mínimo/máximo<br />
+- Distribuição  </p>
+<h3><strong>Column Quality</strong></h3>
+<p>Mostra:
+- Porcentagem válida<br />
+- Erros<br />
+- Valores vazios  </p>
+<h3><strong>Column Distribution</strong></h3>
+<p>Histograma por coluna  </p>
+<hr />
+<h2>🔹 Mesclar Tabelas (JOIN)</h2>
+<p>Power Query suporta:</p>
+<ul>
+<li>Left Outer (mais comum)  </li>
+<li>Right Outer  </li>
+<li>Inner  </li>
+<li>Full Outer  </li>
+<li>Anti Joins  </li>
+</ul>
+<p>Aplicações típicas:
+- Unir tabelas fato e dimensão<br />
+- Acrescentar parâmetros externos<br />
+- Substituir <em>VLOOKUP</em> do Excel  </p>
+<hr />
+<h2>🔹 Anexar Tabelas (APPEND)</h2>
+<p>Usado para empilhar tabelas com <strong>mesma estrutura</strong>, como:</p>
+<ul>
+<li>Múltiplos arquivos CSV de meses diferentes  </li>
+<li>Logs diários  </li>
+<li>Exportações de sistemas  </li>
+</ul>
+<hr />
+<h2>🔹 Query Folding</h2>
+<p>Folding é quando o Power Query <strong>empurra transformações para a fonte de dados</strong>.</p>
+<p>Transformações que geralmente mantêm folding:</p>
+<ul>
+<li>Filtrar linhas  </li>
+<li>Selecionar colunas  </li>
+<li>Agrupar  </li>
+<li>Join  </li>
+<li>Alterar tipos  </li>
+</ul>
+<p>Transformações que quebram folding:</p>
+<ul>
+<li>Colunas personalizadas complexas  </li>
+<li>Passos que exigem processamento local  </li>
+</ul>
+<hr />
+<h2>📚 Links Oficiais</h2>
+<ul>
+<li>Power Query transformations:<br />
+  https://learn.microsoft.com/power-query/transformation-section  </li>
+</ul>
+<hr />
+    </div>
+</body>
+</html>

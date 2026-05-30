@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>analisar-performance-relatorios</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; }
+        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; }
+        code { font-family: "Courier New", Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; }
+        img { max-width: 100%; height: auto; display: block; margin: 10px 0; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Analisar Performance de Relatórios</h1>
+<p>O desempenho de um relatório impacta diretamente a experiência do usuário e pode influenciar o tempo de carregamento de cada visual no Power BI. Este módulo apresenta as práticas essenciais para identificar e resolver gargalos de performance.</p>
+<hr />
+<h2>🔹 Performance Analyzer</h2>
+<p>A ferramenta <strong>Performance Analyzer</strong> permite medir:</p>
+<ul>
+<li>Tempo de renderização do visual  </li>
+<li>Tempo de execução de DAX  </li>
+<li>Tempo de consulta à fonte  </li>
+<li>Fatores que contribuem para lentidão  </li>
+</ul>
+<h3>✔ Como utilizar</h3>
+<ol>
+<li>Acesse: <strong>View → Performance Analyzer</strong>  </li>
+<li>Clique em <strong>Start recording</strong>  </li>
+<li>Interaja com os visuais  </li>
+<li>Avalie o tempo gasto por cada componente  </li>
+<li>Acesse detalhes e copie a consulta DAX se necessário  </li>
+</ol>
+<hr />
+<h2>🔹 Otimização de DAX</h2>
+<p>Recomendações gerais:</p>
+<h3>✔ Usar variáveis (VAR)</h3>
+<p>Melhora legibilidade e evita cálculos repetidos.</p>
+<pre><code class="language-DAX">Total Com Desconto =
+VAR vBase = [Total Vendas]
+RETURN vBase * 0.9
+</code></pre>
+<h3>✔ Evitar FILTER sobre tabelas grandes</h3>
+<p>Sempre que possível filtrar colunas, não tabelas.</p>
+<pre><code class="language-DAX">-- Evitar
+CALCULATE([Total Vendas], FILTER(FatoVendas, FatoVendas[Categoria] = &quot;A&quot;))
+
+-- Preferir
+CALCULATE([Total Vendas], FatoVendas[Categoria] = &quot;A&quot;)
+</code></pre>
+<h3>✔ Evitar funções iterativas desnecessárias</h3>
+<p>Ex.: SUMX sobre tabelas muito grandes quando SUM simples resolve.</p>
+<hr />
+<h2>🔹 Otimizar o Layout e a Página do Relatório</h2>
+<h3>✔ Reduzir número de visuais</h3>
+<p>Acima de <strong>20 visuais em uma mesma página</strong>, o desempenho normalmente cai.</p>
+<h3>✔ Minimizar segmentadores</h3>
+<p>Segmentadores (especially dropdowns complexos) consomem muita memória.</p>
+<h3>✔ Reduzir elementos gráficos pesados</h3>
+<ul>
+<li>Imagens pesadas  </li>
+<li>Mapas detalhados  </li>
+<li>Visualizações customizadas mal otimizadas  </li>
+</ul>
+<hr />
+<h2>🔹 Melhorar Consultas e Interações</h2>
+<ul>
+<li>Desativar interações desnecessárias entre visuais  </li>
+<li>Usar botões no lugar de muitos segmentadores  </li>
+<li>Substituir joins complexos feitos em DAX por modelagem melhorada  </li>
+<li>Usar agregações para tabelas grandes (Premium ou otimização avançada)  </li>
+</ul>
+<hr />
+<h2>🔹 Boas Práticas Adicionais</h2>
+<h3>✔ Usar medidas em vez de colunas calculadas</h3>
+<p>Medidas são mais leves e calculadas sob demanda.</p>
+<h3>✔ Ajustar cardinalidade</h3>
+<p>Menos valores distintos = melhor compressão e performance.</p>
+<h3>✔ Evitar <em>bidirectional relationships</em></h3>
+<p>Usar apenas quando absolutamente necessário.</p>
+<hr />
+<h2>📚 Links Oficiais</h2>
+<ul>
+<li>Power BI Performance Best Practices:<br />
+  https://learn.microsoft.com/power-bi/guidance/power-bi-performance-best-practices</li>
+</ul>
+<hr />
+<p>Este material resume as principais técnicas de diagnóstico e otimização de desempenho, fundamentais para a certificação PL-300 e para criação de relatórios de alta performance no Power BI.</p>
+    </div>
+</body>
+</html>

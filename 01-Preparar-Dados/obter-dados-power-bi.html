@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obter-dados-power-bi</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; }
+        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; }
+        code { font-family: "Courier New", Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; }
+        img { max-width: 100%; height: auto; display: block; margin: 10px 0; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📘 Obter Dados no Power BI</h1>
+<p>Este arquivo reúne o conteúdo essencial sobre <strong>conexão e importação de dados</strong>, conforme os requisitos da certificação PL-300.</p>
+<hr />
+<h2>🔹 Tipos de Conexão</h2>
+<h3><strong>1. Arquivos</strong></h3>
+<ul>
+<li>Excel (.xlsx)  </li>
+<li>CSV/TXT  </li>
+<li>JSON  </li>
+<li>XML  </li>
+<li>Parquet  </li>
+</ul>
+<h3><strong>2. Bancos de Dados</strong></h3>
+<ul>
+<li>SQL Server  </li>
+<li>Oracle  </li>
+<li>PostgreSQL  </li>
+<li>MySQL  </li>
+<li>Azure SQL  </li>
+<li>Fabric Lakehouse / Warehouse  </li>
+</ul>
+<h3><strong>3. Serviços Online</strong></h3>
+<ul>
+<li>SharePoint  </li>
+<li>OneDrive  </li>
+<li>OData Feed  </li>
+<li>Microsoft Exchange  </li>
+<li>Dynamics 365  </li>
+<li>Dataverse  </li>
+</ul>
+<h3><strong>4. Outros</strong></h3>
+<ul>
+<li>Web scraping (Get data &gt; Web)  </li>
+<li>APIs REST  </li>
+<li>Pastas ("Folder") para ingestão em lote  </li>
+</ul>
+<hr />
+<h2>🔹 Import x DirectQuery x Live Connection</h2>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Características</th>
+<th>Quando usar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Import</strong></td>
+<td>Dados ficam no modelo</td>
+<td>Melhor desempenho; datasets pequenos/médios</td>
+</tr>
+<tr>
+<td><strong>DirectQuery</strong></td>
+<td>Dados permanecem na fonte</td>
+<td>Dados muito grandes ou quase em tempo real</td>
+</tr>
+<tr>
+<td><strong>Live Connection</strong></td>
+<td>Conexão com SSAS, Fabric ou Power BI semantic model</td>
+<td>Modelos centralizados, governança</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>🔹 Conectando a pastas (Folder)</h2>
+<p>Recurso útil para carregar múltiplos arquivos com a mesma estrutura. Passos:</p>
+<ol>
+<li>Get Data → Folder  </li>
+<li><strong>Combine &amp; Transform</strong>  </li>
+<li>Aplicar filtros sobre metadados se necessário  </li>
+<li>Limpar e padronizar colunas  </li>
+</ol>
+<hr />
+<h2>🔹 Conexão com Web/API</h2>
+<p>No Power BI Desktop:</p>
+<ol>
+<li>Get Data → Web  </li>
+<li>Informar URL  </li>
+<li>Lidar com autenticação (Anonymous, Basic, OAuth)  </li>
+<li>Converter JSON → tabelas  </li>
+</ol>
+<hr />
+<h2>🔹 Boas Práticas ao Obter Dados</h2>
+<ul>
+<li>Sempre revisar tipos de dados  </li>
+<li>Evitar colunas desnecessárias  </li>
+<li>Centralizar parâmetros (URL, pastas, datas, tokens)  </li>
+<li>Utilizar <em>Query folding</em> sempre que possível  </li>
+<li>Documentar transformações importantes  </li>
+</ul>
+<hr />
+<h2>📚 Links Oficiais</h2>
+<ul>
+<li>Supported data sources:<br />
+  https://learn.microsoft.com/power-bi/connect-data/desktop-data-sources  </li>
+<li>DirectQuery:<br />
+  https://learn.microsoft.com/power-bi/connect-data/desktop-directquery-about  </li>
+</ul>
+<hr />
+    </div>
+</body>
+</html>

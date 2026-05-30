@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado PL-300 Power BI Data Analyst</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Link para o CSS principal do portal -->
+    <link rel="stylesheet" href="simulado.css"> <!-- CSS específico do simulado -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Simulado PL-300 Power BI Data Analyst</h1>
+            <p>Teste seus conhecimentos para a certificação!</p>
+        </header>
+
+        <main id="quiz-container">
+            <div id="question-card" class="module-card">
+                <div class="module-header" id="question-number">Questão 1</div>
+                <div class="module-content">
+                    <p id="question-text"></p>
+                    <div id="options-container"></div>
+                    <button id="submit-answer" class="button">Responder</button>
+                    <div id="feedback" class="feedback"></div>
+                    <button id="next-question" class="button" style="display: none;">Próxima Questão</button>
+                </div>
+            </div>
+            <div id="results-card" class="module-card" style="display: none;">
+                <div class="module-header">Resultados do Simulado</div>
+                <div class="module-content">
+                    <p>Você acertou <span id="score"></span> de <span id="total-questions"></span> questões.</p>
+                    <button id="restart-quiz" class="button">Refazer Simulado</button>
+                    <a href="../index.html" class="button">Voltar ao Portal</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Portal de Estudo - Certificação PL-300 | Criado com ❤️ para sua jornada de aprendizado</p>
+        </footer>
+    </div>
+
+    <script src="simulado.js"></script>
+</body>
+</html>

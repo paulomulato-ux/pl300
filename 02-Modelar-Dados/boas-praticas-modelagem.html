@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boas-praticas-modelagem</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; }
+        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; }
+        code { font-family: "Courier New", Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; }
+        img { max-width: 100%; height: auto; display: block; margin: 10px 0; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⭐ Boas Práticas de Modelagem</h1>
+<p>Estas práticas garantem um modelo limpo, eficiente e fácil de manter.</p>
+<hr />
+<h2>✔ Usar Modelo Estrela</h2>
+<ul>
+<li>Tabelas fato no centro  </li>
+<li>Dimensões ao redor  </li>
+<li>Evitar snowflake (normalização excessiva)  </li>
+</ul>
+<hr />
+<h2>✔ Criar Medidas Explícitas</h2>
+<p>Evitar medidas automáticas (implícitas). Sempre crie medidas no painel <strong>Modeling &gt; New Measure</strong>.</p>
+<hr />
+<h2>✔ Nomear Tabelas e Medidas Claramente</h2>
+<p>Exemplos:</p>
+<ul>
+<li><code>Fato Vendas</code>  </li>
+<li><code>Dim Produto</code>  </li>
+<li><code>[Total Vendas]</code>  </li>
+<li><code>[Qtd Clientes Ativos]</code>  </li>
+</ul>
+<hr />
+<h2>✔ Criar Pastas de Exibição (Display Folders)</h2>
+<p>Organizar medidas:</p>
+<ul>
+<li>_01 KPIs  </li>
+<li>_02 Time Intelligence  </li>
+<li>_03 Métricas Financeiras  </li>
+</ul>
+<hr />
+<h2>✔ Evitar Colunas Calculadas (quando possível)</h2>
+<p>Preferir medidas:</p>
+<ul>
+<li>consumem menos memória  </li>
+<li>não aumentam tamanho do modelo  </li>
+</ul>
+<hr />
+<h2>✔ Usar Tabela de Datas Oficial</h2>
+<p>Com colunas:</p>
+<ul>
+<li>Data  </li>
+<li>Ano  </li>
+<li>Mês  </li>
+<li>Trimestre  </li>
+<li>Semana ISO  </li>
+</ul>
+<hr />
+<h2>✔ Documentar o Modelo</h2>
+<p>Utilizar:</p>
+<ul>
+<li>Descrições  </li>
+<li>Linhas de anotação  </li>
+<li>Notas no GitHub  </li>
+</ul>
+<hr />
+<h2>📚 Links Oficiais</h2>
+<ul>
+<li>Data Modeling Guidance:<br />
+  https://learn.microsoft.com/power-bi/guidance/  </li>
+</ul>
+    </div>
+</body>
+</html>
