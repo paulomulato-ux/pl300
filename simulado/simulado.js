@@ -10,6 +10,180 @@ const questionBank = {
 
   /* ==================== DOMÍNIO 1 ==================== */
   "Preparar Dados": [
+        {
+            pergunta: "Quais dois blocos formam o código M que executa sua consulta no Power Query?",
+            opcoes: ["do e while", "if e then", "for e each", "let e in"],
+            correta: 3,
+            explicacao: "O código M de uma consulta consiste em dois blocos: 'let' (onde todas as variáveis e etapas são definidas) e 'in' (que especifica a saída final da consulta). Você pode ver isso no Editor Avançado."
+        },
+        {
+            pergunta: "O que acontece internamente cada vez que você aplica uma transformação no Power Query?",
+            opcoes: ["A mesma transformação é aplicada aos dados de origem", "As alterações são permanentes e não podem ser modificadas", "O Editor de Consultas escreve o código DAX correspondente para a etapa aplicada", "O Editor de Consultas escreve o código M correspondente para a etapa aplicada"],
+            correta: 3,
+            explicacao: "Data Mashup, ou código M, é a linguagem de fórmula que impulsiona o Power Query. Sempre que você usa as ferramentas de UI para aplicar uma transformação, o código M correspondente é gerado automaticamente."
+        },
+        {
+            pergunta: "Qual operação do Power Query adiciona linhas a uma tabela existente combinando tabelas com a mesma estrutura de colunas?",
+            opcoes: ["Agrupar por", "Dinamizar", "Mesclar consultas", "Acrescentar consultas"],
+            correta: 3,
+            explicacao: "Acrescentar consultas (Append queries) combina tabelas que compartilham exatamente a mesma estrutura de colunas e tipos de dados, adicionando as linhas de uma tabela ao final da outra."
+        },
+        {
+            pergunta: "Você tem dados de vendas anuais por departamento onde cada ano tem sua própria coluna. Qual ferramenta do Power Query converte as múltiplas colunas 'Ano' em linhas?",
+            opcoes: ["Dinamizar (Pivot)", "Desdinamizar (Unpivot)", "Transpor", "Agrupar por"],
+            correta: 1,
+            explicacao: "Desdinamizar (Unpivot) converte colunas em linhas. No exemplo dado, as colunas de ano seriam convertidas em valores de linha, criando uma estrutura mais adequada para análise no Power BI."
+        },
+        {
+            pergunta: "Qual ferramenta do Power Query você usaria para consolidar dados diários de transações em transações mensais?",
+            opcoes: ["Mesclar consultas", "Acrescentar consultas", "Agrupar por (Group By)", "Dinamizar colunas (Pivot Columns)"],
+            correta: 2,
+            explicacao: "Agrupar por (Group By) permite agregar dados em um nível diferente de granularidade, como consolidar dados diários em mensais. Você pode especificar a coluna de agrupamento (mês) e a agregação (soma, média, etc.)."
+        },
+        {
+            pergunta: "Qual ferramenta do Power Query você usaria quando sabe o resultado desejado de uma coluna, mas não sabe quais transformações usar?",
+            opcoes: ["Coluna por exemplos", "Coluna condicional", "Coluna personalizada", "Coluna de índice"],
+            correta: 0,
+            explicacao: "Coluna por exemplos permite adicionar novas colunas fornecendo apenas um valor de exemplo do resultado desejado. O Power Query infere automaticamente as transformações necessárias para gerar esse resultado."
+        },
+        {
+            pergunta: "O que pode ser útil para criar IDs únicos e formar relacionamentos entre tabelas no Power Query?",
+            opcoes: ["Adicionar uma coluna por exemplos", "Agrupar dados", "Adicionar uma coluna de índice", "Acrescentar consultas"],
+            correta: 2,
+            explicacao: "Colunas de índice contêm uma lista de valores sequenciais que podem identificar cada linha única em uma tabela, sendo frequentemente usadas para criar IDs únicos e formar relacionamentos entre tabelas."
+        },
+        {
+            pergunta: "Quando você usaria uma ferramenta da guia Transformar em vez da guia Adicionar Coluna no Power Query?",
+            opcoes: ["Quando você deseja sobrescrever os valores das colunas existentes", "Quando você deseja manter os valores das colunas existentes", "Quando você deseja criar novas colunas", "Quando você quer adicionar uma coluna de índice"],
+            correta: 0,
+            explicacao: "A guia Transformar modifica os valores da coluna existente (sobrescreve), enquanto a guia Adicionar Coluna cria uma nova coluna mantendo a original intacta. Use Transformar quando quiser modificar os dados da coluna atual."
+        },
+        {
+            pergunta: "Qual ferramenta de perfil de dados fornece estatísticas detalhadas de coluna e distribuição de valores para uma coluna selecionada?",
+            opcoes: ["Qualidade da coluna", "Distribuição da coluna", "Perfil da coluna", "Estatísticas da coluna"],
+            correta: 2,
+            explicacao: "O Perfil da coluna fornece uma visão mais holística dos dados de uma coluna selecionada, incluindo distribuição de amostra dos dados e estatísticas de coluna como min, max, média, contagem de valores distintos e únicos."
+        },
+        {
+            pergunta: "Qual é o propósito do perfil de dados (data profiling) no Power Query?",
+            opcoes: ["Fornecer uma forma visual de explorar dados", "Ter uma ideia da composição do dataset", "Resolver problemas de qualidade de dados nas colunas", "Todas as opções acima"],
+            correta: 3,
+            explicacao: "O perfil de dados no Power Query serve para tudo isso: explorar visualmente os dados, entender a composição do dataset (tipos de dados, distribuição) e identificar e resolver problemas de qualidade como erros, nulos e inconsistências."
+        },
+        {
+            pergunta: "Qual ferramenta de perfil de dados pode ser usada para verificar o número de erros em uma coluna no Power Query?",
+            opcoes: ["Qualidade da coluna", "Distribuição da coluna", "Perfil da coluna", "Qualidade da coluna e Perfil da coluna"],
+            correta: 3,
+            explicacao: "Tanto a Qualidade da coluna (que mostra a porcentagem de erros) quanto o Perfil da coluna (que fornece estatísticas detalhadas incluindo contagem de erros) podem ser usadas para verificar erros em uma coluna."
+        },
+        {
+            pergunta: "Quais ferramentas de perfil de dados o Power Query possui?",
+            opcoes: ["Coluna por exemplos, coluna personalizada e coluna condicional", "Qualidade da coluna, Distribuição da coluna e Perfil da coluna", "Coluna de índice e duplicar coluna", "Formato, extrair e analisar"],
+            correta: 1,
+            explicacao: "A guia EXIBIÇÃO do Power Query inclui ferramentas de perfil de dados: Qualidade da coluna (mostra % de válidos, erros e vazios), Distribuição da coluna (mostra distribuição dos valores) e Perfil da coluna (estatísticas detalhadas)."
+        },
+        {
+            pergunta: "Você tem um site SharePoint Online com várias bibliotecas de documentos. Uma delas contém relatórios de fabricação salvos como arquivos Excel com a mesma estrutura. Você precisa carregar apenas esses relatórios em uma tabela no Power BI Desktop. O que você deve fazer?",
+            opcoes: ["Obter dados de uma Pasta do SharePoint Online, inserir a URL do site e selecionar Combinar e Carregar", "Obter dados de uma Lista do SharePoint Online e inserir a URL do site. Selecionar Combinar e Transformar e filtrar pelo caminho da biblioteca", "Obter dados de uma Pasta do SharePoint Online, inserir a URL do site, selecionar Combinar e Transformar e filtrar pelo caminho da biblioteca de relatórios de fabricação", "Obter dados de uma Lista do SharePoint Online, inserir a URL e selecionar Combinar e Carregar"],
+            correta: 2,
+            explicacao: "Para carregar apenas arquivos de uma biblioteca específica: use 'Pasta do SharePoint Online' (não Lista), selecione 'Combinar e Transformar' (não Carregar direto) para poder filtrar pelo caminho da pasta desejada antes de carregar."
+        },
+        {
+            pergunta: "Você tem um arquivo CSV com uma coluna de data no formato '2018-12-31 at 08:59'. Você precisa analisar as reclamações por data e usar uma hierarquia de data integrada. O que você deve fazer?",
+            opcoes: ["Alterar o tipo de dados da coluna para Data", "Aplicar a função Analisar (Parse) das transformações de Data à coluna", "Criar uma coluna por exemplo que começa com 2018-12-31 e definir o tipo de dados da nova coluna como Data", "Aplicar uma transformação para extrair os primeiros 11 caracteres da coluna"],
+            correta: 2,
+            explicacao: "Como o formato inclui texto 'at', você precisa criar uma coluna por exemplo para extrair apenas a data, e depois definir o tipo como Data para habilitar a hierarquia de data integrada do Power BI."
+        },
+        {
+            pergunta: "Você tem uma lista de clientes em potencial com 1.500 linhas. Você precisa garantir que a lista contém registros para cada Estado/Região. Quais duas ações você deve realizar no Editor do Power Query?",
+            opcoes: ["Abrir o Editor Avançado e selecionar Qualidade da coluna", "Habilitar perfil de coluna baseado no conjunto de dados completo e selecionar Perfil de coluna", "Selecionar Distribuição da coluna e Qualidade da coluna", "Filtrar por Estado/Região e exportar para Excel"],
+            correta: 1,
+            explicacao: "Como o dataset tem 1.500 linhas, você precisa primeiro habilitar o perfil de coluna para todo o dataset (padrão é apenas as primeiras 1.000 linhas) e depois usar Perfil de coluna para ver os valores distintos de Estado/Região."
+        },
+        {
+            pergunta: "Qual funcionalidade do Power Query permite visualizar o código M gerado por cada etapa de transformação?",
+            opcoes: ["Editor Avançado", "Perfil de dados", "Painel de consultas", "Configurações de consulta"],
+            correta: 0,
+            explicacao: "O Editor Avançado permite visualizar e editar o código M completo gerado por cada etapa de transformação aplicada no Power Query."
+        },
+        {
+            pergunta: "Qual é o risco de ter valores nulos em uma coluna numérica no Power BI?",
+            opcoes: ["Expressões DAX que calculam MAX nos dados serão incorretas", "Expressões DAX que calculam SUM nos dados serão incorretas", "Expressões DAX que calculam AVERAGE nos dados serão incorretas", "Os dados não poderão ser importados"],
+            correta: 2,
+            explicacao: "Valores nulos em colunas numéricas afetam principalmente as expressões DAX de AVERAGE (média), pois o Power BI pode excluir os nulos do denominador, resultando em médias incorretas se você não tratar os valores nulos adequadamente."
+        },
+        {
+            pergunta: "Você planeja preencher uma tabela em um conjunto de dados do Power BI com dados de uma lista do SharePoint Online. Qual modo de armazenamento será usado?",
+            opcoes: ["DirectQuery", "Conexão dinâmica (Live connection)", "Composto (Composite)", "Importado (Import)"],
+            correta: 3,
+            explicacao: "Quando dados são conectados de fontes como SharePoint Online, o modo padrão é Importado, onde os dados são copiados para o cache do modelo do Power BI."
+        },
+        {
+            pergunta: "No Power BI Desktop, você está atualizando um relatório que se conecta a um banco de dados SQL Server usando autenticação de banco de dados. As credenciais anteriores expiraram. Quais dois procedimentos você deve realizar para atualizar as credenciais?",
+            opcoes: ["Abrir a caixa de diálogo Configurações de Fonte de Dados e localizar a fonte de dados, depois selecionar Editar Permissões e inserir novas credenciais", "Abrir a caixa de diálogo Obter Dados e fazer uma nova conexão ao banco de dados", "Abrir a caixa de diálogo Opções e permitir que as visualizações de dados sejam baixadas em segundo plano", "Excluir o relatório e criar um novo com as credenciais corretas"],
+            correta: 0,
+            explicacao: "Para atualizar credenciais expiradas: 1) Abra Configurações de Fonte de Dados e localize a fonte, 2) Selecione Editar Permissões e insira as novas credenciais."
+        },
+        {
+            pergunta: "O que é perfil de dados (data profiling) no Power BI?",
+            opcoes: ["Agregar colunas contendo dados numéricos", "Estudar as nuances dos dados para entender sua estrutura e qualidade", "Modelagem de dados", "Criação de métricas calculadas"],
+            correta: 1,
+            explicacao: "O perfil de dados (data profiling) é o processo de estudar as nuances dos dados – suas características, qualidade, distribuição e anomalias – para entender melhor o conjunto de dados."
+        },
+        {
+            pergunta: "Quantas linhas o Power Query verifica para detectar o tipo de dados nas colunas?",
+            opcoes: ["10.000", "1.000", "100", "5.000"],
+            correta: 1,
+            explicacao: "O Power Query verifica as primeiras 1.000 linhas para detectar automaticamente o tipo de dados nas colunas."
+        },
+        {
+            pergunta: "O processo de transformar dados simples em uma tabela que contém um valor de agregação para cada valor único em uma coluna é chamado de quê?",
+            opcoes: ["Agrupar por colunas", "Dinamizar (pivotear uma coluna)", "Gerenciar agregações", "Mesclar consultas"],
+            correta: 1,
+            explicacao: "Dinamizar (pivoting) uma coluna converte dados simples em uma tabela de referência cruzada contendo um valor de agregação para cada valor único em uma coluna."
+        },
+        {
+            pergunta: "Qual é a ferramenta principal de preparação de dados no Power BI Desktop?",
+            opcoes: ["Editor de relatórios", "Editor do Power Query", "Editor de dados", "Designer de modelo"],
+            correta: 1,
+            explicacao: "O Editor do Power Query (também chamado de Editor de Consultas) é a ferramenta principal de preparação de dados no Power BI Desktop."
+        },
+        {
+            pergunta: "Qual fonte de dados no Power BI organiza as informações em sites, bibliotecas de documentos, pastas e arquivos?",
+            opcoes: ["SharePoint Online", "Microsoft Dataverse", "Power BI Libraries", "OneDrive for Business"],
+            correta: 0,
+            explicacao: "O SharePoint Online organiza informações em sites, bibliotecas de documentos, pastas e arquivos dentro de pastas."
+        },
+        {
+            pergunta: "Você tem um serviço publicado em um website que retorna dados em formato OData com coleções de Categorias e Clientes. Qual tipo de fonte você deve usar para criar uma consulta que recupere esses dados?",
+            opcoes: ["JSON", "Texto/CSV", "OData Feed", "XML"],
+            correta: 2,
+            explicacao: "O OData suporta dois formatos para representar recursos: o formato Atom baseado em XML e o formato JSON. Quando um serviço retorna dados como coleções OData, use o conector 'OData Feed'."
+        },
+        {
+            pergunta: "Você tem dois servidores SQL Server chamados SQLProd e SQLDev. O SQLDev contém as mesmas tabelas que o SQLProd, mas apenas um subconjunto dos dados. Você cria um modelo com 120 tabelas do SQLDev e precisa conectar ao SQLProd com esforço administrativo mínimo. O que você deve fazer no Editor de Consultas antes de publicar?",
+            opcoes: ["Criar uma nova conexão ao SQLProd e importar as tabelas", "Excluir as consultas existentes e adicionar novas fontes de dados", "Configurar as configurações de Fonte de Dados", "Editar a origem de cada consulta de tabela individualmente"],
+            correta: 2,
+            explicacao: "Configurar as Configurações de Fonte de Dados permite alterar a fonte de dados de todas as consultas de uma vez, minimizando o esforço administrativo em comparação com editar cada consulta individualmente."
+        },
+        {
+            pergunta: "Você tem uma planilha do Microsoft Excel que contém uma tabela chamada Vendas. Você precisa adicionar a tabela Vendas a um dashboard do Power BI como um bloco. Como você deve configurar o bloco?",
+            opcoes: ["No serviço Power BI, importe os dados da pasta de trabalho do Excel", "No Excel, publique a pasta de trabalho no serviço Power BI", "Na guia Power BI do Excel, fixe a tabela", "No serviço Power BI, faça o upload da pasta de trabalho do Excel"],
+            correta: 2,
+            explicacao: "Para adicionar uma tabela do Excel como bloco em um dashboard do Power BI, você deve usar a guia Power BI no Excel para fixar a tabela diretamente."
+        },
+        {
+            pergunta: "Qual fonte de dados permite conectar seus dados a outros aplicativos de negócios como Power Apps e Power Automate?",
+            opcoes: ["Microsoft Dataverse", "Microsoft Dataplatform", "Microsoft Dataflows", "Microsoft Excel"],
+            correta: 0,
+            explicacao: "O Dataverse é uma opção de armazenamento em nuvem para dados da organização que pode ser conectado a aplicativos de negócios como Power Apps, Power Automate e Power Virtual Agents."
+        },
+        {
+            pergunta: "Como os parâmetros podem ser usados ao conectar-se a dados no Power Query?",
+            opcoes: ["Para conectar a um arquivo JSON", "Para alterar valores de fonte de dados dinamicamente", "Para criar cenários 'E se'", "Para formatar e transformar dados no Editor de Consultas"],
+            correta: 1,
+            explicacao: "Parâmetros são uma forma útil de alterar valores de fonte de dados dinamicamente no Power Query. Esses parâmetros são diferentes dos parâmetros 'E se' criados no front-end do Power BI Desktop."
+        },
     {
       question: "Você se conecta a uma tabela SQL com 100 milhões de linhas que cresce diariamente. A atualização completa demora 3 horas. Qual recurso do Power BI permite importar apenas registros novos ou modificados?",
       options: ["Modo DirectQuery", "Atualização Incremental (Incremental Refresh)", "Atualização Manual agendada", "Tabela de Partições DAX"],
@@ -155,6 +329,66 @@ const questionBank = {
       explanation: "Usar um Parâmetro de Data no filtro do Power Query, quando a fonte suporta Query Folding (como SQL Server), envia o filtro diretamente para o banco, transferindo apenas os dados necessários."
     },
     {
+      question: "Você tem três versões de um banco de dados SQL do Azure: Desenvolvimento, Teste e Produção. O seu conjunto de dados atualmente aponta para a base de Desenvolvimento. Como configurar o modelo para alternar facilmente o servidor de banco de dados diretamente pelo Power BI Service (powerbi.com) com o menor esforço?",
+      options: ["Criar um arquivo JSON com os nomes dos servidores e importá-lo","Criar um Parâmetro no Power Query e atualizar as consultas para usá-lo","Criar uma consulta para cada servidor e ocultar as tabelas de desenvolvimento","Alterar o nível de privacidade e usar a função ReplaceValue"],
+      answer: 1,
+      explanation: "Criar parâmetros de conexão no Power Query permite que os valores dos servidores sejam modificados de forma dinâmica nas configurações do dataset no Power BI Service, sem necessidade de editar o arquivo .pbix local."
+    },
+    {
+      question: "Você criou um modelo no Power BI Desktop que se conecta a 120 tabelas de um servidor SQL de teste (SQLDev). Antes de publicar o modelo para produção, você precisa alterar a conexão de todas as tabelas para o servidor de produção (SQLProd). Como fazer isso com o menor esforço administrativo?",
+      options: ["Criar uma nova conexão para o SQLProd e importar as 120 tabelas novamente","Deletar as consultas existentes e adicionar as novas fontes","Alterar a origem nas Configurações da Fonte de Dados (Data Source Settings) no menu do Power Query","Editar a origem no Editor Avançado de cada uma das 120 tabelas individualmente"],
+      answer: 2,
+      explanation: "Alterar a string de conexão nas 'Configurações da Fonte de Dados' altera a origem de todas as tabelas dependentes daquele servidor de uma só vez, economizando esforço administrativo."
+    },
+    {
+      question: "No Power BI Desktop, você está atualizando um relatório conectado a um banco de dados SQL Server usando autenticação SQL. As credenciais armazenadas expiraram. Qual ação você deve realizar para atualizar as credenciais?",
+      options: ["Abrir as 'Configurações da Fonte de Dados', localizar a fonte e clicar em 'Editar Permissões' para inserir as novas credenciais","Abrir a janela 'Obter Dados' e criar uma nova conexão com o banco","Limpar as permissões globais nas Opções do Power BI e reiniciar o arquivo","Abrir as Opções e permitir que a visualização de dados baixe em segundo plano"],
+      answer: 0,
+      explanation: "O caminho correto para gerenciar ou atualizar credenciais expiradas de uma fonte existente é através de Página Inicial -> Configurações da Fonte de Dados -> Editar Permissões."
+    },
+    {
+      question: "Você importou uma lista de 1.500 clientes no Power Query. Você precisa verificar se a lista possui registros válidos de todas as regiões para as quais deseja direcionar uma campanha de marketing. Qual ação você deve realizar no Power Query?",
+      options: ["Abrir o Editor Avançado e habilitar a qualidade da coluna","Habilitar o 'Perfil de coluna baseado no conjunto de dados completo' na barra de status e selecionar 'Distribuição de Coluna'","Ativar a 'Qualidade de Coluna' e 'Perfil de Coluna' apenas nas primeiras 1000 linhas","Criar uma coluna condicional com as regiões válidas"],
+      answer: 1,
+      explanation: "Para obter estatísticas corretas sobre a distribuição de termos em toda a coluna (além das primeiras 1000 linhas padrão), você deve alterar a amostragem na barra de status para o conjunto de dados completo e selecionar a opção 'Distribuição de Coluna'."
+    },
+    {
+      question: "No Power Query, você aplica a etapa: Table.ReplaceValue(Tabela, \"1318\", \"1319\", Replacer.ReplaceText, {\"Endereco\"}). Uma das linhas possui o valor 'Avenida Brasil, 1318' na coluna Endereco. Qual será o valor resultante após a aplicação dessa etapa?",
+      options: ["1318","1319","Avenida Brasil, 1318","Avenida Brasil, 1319"],
+      answer: 3,
+      explanation: "Como a função utiliza o substituidor Replacer.ReplaceText, ela age como uma substituição parcial de texto em qualquer lugar da string, mudando '1318' para '1319' e preservando o restante do endereço."
+    },
+    {
+      question: "Uma biblioteca do SharePoint Online contém relatórios mensais de fabricação salvos como arquivos Excel com a mesma estrutura de dados. Você precisa carregar apenas os arquivos dessa pasta para análise no Power BI. Qual é o fluxo correto de etapas?",
+      options: ["Obter dados de Pasta do SharePoint Online, inserir a URL do site, clicar em 'Combinar e Transformar' e aplicar filtro pelo caminho da pasta (Folder Path)","Obter dados de Lista do SharePoint, selecionar os arquivos Excel e mesclá-los via DAX","Conectar a cada arquivo Excel individualmente usando o conector Web","Obter dados de Lista do SharePoint, clicar em Combinar e Filtrar pelo nome do arquivo"],
+      answer: 0,
+      explanation: "Conectar a uma Pasta do SharePoint Online (SharePoint Folder) lê todos os arquivos do site. Filtrar pelo 'Folder Path' garante que apenas os arquivos da biblioteca desejada sejam mantidos, e 'Combinar e Transformar' os consolida automaticamente em uma única tabela."
+    },
+    {
+      question: "Você precisa importar 100 arquivos CSV que possuem a mesma estrutura de colunas e estão salvos em uma pasta compartilhada na rede da sua empresa. Como consolidar esses arquivos em uma única tabela no Power BI com o menor esforço administrativo?",
+      options: ["Adicionar cada arquivo CSV individualmente e combiná-los usando etapas de Append","Adicionar uma fonte de dados do tipo 'Pasta' (Folder), apontar para o diretório e selecionar a opção 'Combinar e Carregar'","Copiar todos os dados manualmente para uma planilha Excel e importá-la","Utilizar o conector SQL Server para ler os arquivos de rede"],
+      answer: 1,
+      explanation: "O conector de Pasta (Folder) lê todo o conteúdo de um diretório de arquivos planos de mesma estrutura e gera uma função automática em M para empilhar (combinar) todas as linhas em uma única tabela consolidada automaticamente."
+    },
+    {
+      question: "Você possui duas consultas no Power BI: Query1 traz a tabela SMB_Customers do SQL Server e Query2 traz Enterprise_Customers de um banco Oracle. Ambas possuem as mesmas colunas. Qual comando você deve usar para unir essas duas tabelas em uma única listagem consolidada de clientes?",
+      options: ["Mesclar Consultas (Merge Queries)","Acrescentar Consultas (Append Queries)","Combinar Arquivos","Mesclar Colunas"],
+      answer: 1,
+      explanation: "Como as tabelas possuem a mesma estrutura de colunas e você quer empilhar as linhas verticalmente (unir as bases), a operação correta é o 'Acrescentar Consultas' (Append Queries)."
+    },
+    {
+      question: "Um modelo do Power BI recebe leituras de temperatura de 500 sensores a cada minuto. O requisito de relatório é exibir apenas a temperatura média de cada sensor consolidada por hora. Como reduzir o tamanho do modelo e otimizar a performance?",
+      options: ["Criar visuais que agrupam os dados por hora na aba de Relatório","Utilizar o Power Query para aplicar uma etapa de 'Agrupar Por' (Group By) por Sensor e Hora, agregando a Média","Aplicar um filtro de nível de relatório para a coluna de minutos","Remover as colunas de ID dos sensores"],
+      answer: 1,
+      explanation: "Agrupar e resumir os dados no Power Query (pré-agregação) reduz drasticamente o número de linhas importadas pelo VertiPaq (de 60 linhas por hora por sensor para apenas 1 linha por hora por sensor), melhorando a compactação e a performance."
+    },
+    {
+      question: "Você está mesclando as consultas de Pedidos (Orders) e Detalhes dos Pedidos (Order Details) no Power Query. Devido a problemas de qualidade, alguns pedidos não possuem registros correspondentes nos detalhes. Qual tipo de junção (join) garante que todos os registros da tabela de Pedidos sejam mantidos no resultado?",
+      options: ["Junção Externa Completa (Full Outer)","Junção Interna (Inner)","Junção Externa Esquerda (Left Outer)","Junção Anti Direita (Right Anti)"],
+      answer: 2,
+      explanation: "A Junção Externa Esquerda (Left Outer Join) preserva 100% das linhas da primeira tabela (Pedidos) e traz correspondências da segunda tabela (Detalhes), preenchendo com nulo onde não houver correspondência."
+    },
+    {
       question: "Qual é a melhor prática ao lidar com erros de tipo de dado durante a importação de arquivos CSV no Power Query?",
       options: ["Ignorar os erros e deixar o Power BI resolver automaticamente", "Definir explicitamente os tipos de dado de cada coluna no Power Query e tratar os erros com Substituir Erros ou Remover Erros", "Sempre converter tudo para Texto e tratar no DAX", "Usar um arquivo Excel em vez de CSV"],
       answer: 1,
@@ -290,6 +524,84 @@ const questionBank = {
 
   /* ==================== DOMÍNIO 2 ==================== */
   "Modelar Dados": [
+        {
+            pergunta: "O que é o contexto de filtro (filter context) no DAX?",
+            opcoes: ["O código M que filtra dados no Power Query", "O conjunto de filtros ativos que determinam quais dados são incluídos em um cálculo DAX, incluindo filtros de relatório, segmentadores, hierarquias visuais e relacionamentos", "Uma função específica do DAX para filtrar tabelas", "O filtro de linhas aplicado por regras RLS"],
+            correta: 1,
+            explicacao: "O contexto de filtro é o conjunto de todos os filtros ativos quando uma medida DAX é avaliada. Inclui filtros aplicados por slicers, filtros de página, filtros de relatório, seleções em visuais e filtros propagados por relacionamentos entre tabelas."
+        },
+        {
+            pergunta: "Qual função DAX é usada para criar uma medida que retorna o total acumulado no ano (YTD - Year to Date)?",
+            opcoes: ["TOTALYTD()", "SUMYTD()", "YEARTODATE()", "CUMULATIVESUM()"],
+            correta: 0,
+            explicacao: "TOTALYTD() é a função de inteligência de tempo DAX que calcula o valor acumulado do início do ano até a data atual no contexto do filtro. Requer uma tabela de datas marcada como tabela de datas."
+        },
+        {
+            pergunta: "O que é uma tabela de fatos (fact table) em um modelo de dados do Power BI?",
+            opcoes: ["Uma tabela que armazena informações descritivas como nomes de clientes e endereços", "Uma tabela que contém dados de transações ou eventos mensuráveis, normalmente com chaves estrangeiras para tabelas de dimensão", "Uma tabela criada automaticamente pelo Power BI para cada relatório", "Uma tabela que armazena apenas dados verdadeiros, sem valores nulos"],
+            correta: 1,
+            explicacao: "Tabelas de fatos contêm dados de transações ou eventos mensuráveis (vendas, pedidos, etc.) com métricas numéricas e chaves estrangeiras que se relacionam com tabelas de dimensão. São o centro do esquema estrela."
+        },
+        {
+            pergunta: "O que é uma dimensão de mudança lenta (Slowly Changing Dimension - SCD) Tipo 2 no contexto de modelagem de dados?",
+            opcoes: ["Uma dimensão que nunca muda", "Uma dimensão que sobrescreve os valores antigos quando há mudanças", "Uma dimensão que mantém o histórico de mudanças criando novos registros com data de início/fim de validade", "Uma dimensão que agrega dados históricos em média"],
+            correta: 2,
+            explicacao: "SCD Tipo 2 mantém o histórico completo de mudanças. Quando um atributo muda, um novo registro é criado com a nova versão, e o registro antigo é marcado como inativo com data de fim. Isso permite análises históricas precisas."
+        },
+        {
+            pergunta: "Qual é a diferença entre Mesclar Consultas (Merge) e Acrescentar Consultas (Append) no Power Query?",
+            opcoes: ["Não há diferença, ambas combinam dados da mesma forma", "Mesclar combina colunas de tabelas diferentes (como JOIN no SQL); Acrescentar empilha linhas de tabelas com a mesma estrutura (como UNION)", "Acrescentar combina colunas; Mesclar empilha linhas", "Mesclar é usado para dados numéricos; Acrescentar para dados textuais"],
+            correta: 1,
+            explicacao: "Mesclar Consultas (Merge) é equivalente a um JOIN SQL - combina colunas de tabelas relacionadas por uma chave. Acrescentar Consultas (Append) é como UNION SQL - empilha linhas de tabelas com a mesma estrutura de colunas."
+        },
+        {
+            pergunta: "Qual função DAX calcula a soma de uma expressão avaliada para cada linha de uma tabela?",
+            opcoes: ["SUM()", "SUMX()", "CALCULATE(SUM())", "TOTALSUM()"],
+            correta: 1,
+            explicacao: "SUMX() é uma função de iteração que avalia uma expressão para cada linha de uma tabela e depois soma os resultados. É diferente de SUM() que apenas soma uma coluna existente."
+        },
+        {
+            pergunta: "Qual propriedade de relacionamento no Power BI controla a direção em que os filtros se propagam entre as tabelas?",
+            opcoes: ["Cardinalidade", "Direção do filtro cruzado", "Ativo/Inativo", "Integridade referencial"],
+            correta: 1,
+            explicacao: "A Direção do filtro cruzado (Cross filter direction) controla como os filtros se propagam entre tabelas relacionadas. Pode ser 'Única' (da tabela de um lado para o lado múltiplo) ou 'Ambas' (bidirecional)."
+        },
+        {
+            pergunta: "Qual é a diferença entre uma coluna calculada e uma medida no Power BI?",
+            opcoes: ["Colunas calculadas são calculadas no momento da consulta; medidas são calculadas durante a importação", "Colunas calculadas são armazenadas no modelo e calculadas durante a atualização de dados; medidas são calculadas dinamicamente durante a consulta", "Não há diferença, são equivalentes em funcionalidade e desempenho", "Medidas só podem usar funções de agregação; colunas calculadas podem usar qualquer função DAX"],
+            correta: 1,
+            explicacao: "Colunas calculadas são computadas durante a atualização de dados e armazenadas no modelo (ocupam memória). Medidas são calculadas dinamicamente em tempo de consulta, o que as torna mais eficientes para dados grandes."
+        },
+        {
+            pergunta: "O que é uma tabela de datas (Date table) no Power BI e por que ela é importante?",
+            opcoes: ["Uma tabela que armazena as datas de criação dos relatórios", "Uma tabela com uma linha para cada data em um intervalo contínuo, usada para habilitar a inteligência de tempo DAX", "Uma tabela que registra quando os dados foram importados", "Uma tabela automática criada pelo Power BI para cada coluna de data"],
+            correta: 1,
+            explicacao: "Uma tabela de datas é uma tabela de dimensão com uma linha para cada data em um intervalo contínuo e sem lacunas. É necessária para usar funções de inteligência de tempo DAX como TOTALYTD, SAMEPERIODLASTYEAR, etc."
+        },
+        {
+            pergunta: "Qual função DAX deve ser usada para calcular uma medida ignorando todos os filtros aplicados ao contexto atual?",
+            opcoes: ["ALL()", "REMOVEFILTERS()", "ALLEXCEPT()", "CALCULATE() com ALL()"],
+            correta: 3,
+            explicacao: "CALCULATE() com ALL() como modificador de filtro remove todos os filtros do contexto atual e calcula a expressão no contexto expandido sem filtros."
+        },
+        {
+            pergunta: "Qual tipo de relacionamento no Power BI permite que um valor em uma coluna apareça mais de uma vez em ambas as tabelas relacionadas?",
+            opcoes: ["Um-para-um (1:1)", "Um-para-muitos (1:N)", "Muitos-para-muitos (M:M)", "Nenhum relacionamento"],
+            correta: 2,
+            explicacao: "O relacionamento muitos-para-muitos (M:M) permite que valores apareçam múltiplas vezes em ambas as tabelas. Deve ser usado com cautela pois pode causar problemas de desempenho e ambiguidade."
+        },
+        {
+            pergunta: "Qual é o benefício de usar um modelo estrela (star schema) no Power BI?",
+            opcoes: ["Permite armazenar mais dados do que um modelo normalizado", "Melhora o desempenho das consultas e simplifica as fórmulas DAX", "Elimina a necessidade de relacionamentos entre tabelas", "Permite conectar-se a mais fontes de dados simultaneamente"],
+            correta: 1,
+            explicacao: "O esquema estrela melhora o desempenho das consultas ao minimizar junções complexas e simplifica as fórmulas DAX porque as relações são mais diretas e previsíveis."
+        },
+        {
+            pergunta: "Qual função DAX retorna uma tabela de resumo de valores totais em várias categorias?",
+            opcoes: ["SUMMARIZE", "GROUPBY", "ADDCOLUMNS", "SUMMARIZECOLUMNS"],
+            correta: 3,
+            explicacao: "SUMMARIZECOLUMNS é a função DAX preferida para criar tabelas de resumo com múltiplos agrupamentos, sendo mais eficiente que SUMMARIZE em muitos cenários."
+        },
     {
       question: "Por que é preferível usar um esquema estrela (Star Schema) com tabelas de fato e dimensão separadas em vez de uma única tabela desnormalizada no Power BI?",
       options: ["É obrigatório pelo Power BI, que não aceita tabelas desnormalizadas", "Reduz a redundância de dados, melhora a compactação VertiPaq e a performance das medidas DAX", "Permite usar o modo DirectQuery", "Habilita RLS automaticamente"],
@@ -560,10 +872,149 @@ const questionBank = {
       answer: 1,
       explanation: "Relacionamentos Muitos-para-Muitos diretos na modelagem utilizam lógica de produto cruzado que consome muito processamento de CPU em grandes datasets. O uso de uma tabela ponte contendo valores distintos normalizados e filtros unidirecionais claros simplifica a busca do VertiPaq e acelera a renderização de gráficos."
     }
+,
+    {
+      question: "No seu modelo de dados, uma única tabela dimensão de Calendário filtra a tabela fato de vendas em três datas distintas (Data do Pedido, Data do Envio, Data da Entrega) por meio de relacionamentos ativos e inativos. Essa dimensão é chamada tecnicamente de:",
+      options: ["Dimensão de Degenerada","Dimensão Snowflake","Dimensão de Interpretação de Papéis (Role-Playing Dimension)","Dimensão Junk"],
+      answer: 2,
+      explanation: "Uma dimensão que atua em múltiplos papéis no mesmo modelo filtrando diferentes chaves na fato é conhecida como dimensão de interpretação de papéis (Role-Playing Dimension)."
+    },
+    {
+      question: "Você está modelando as tabelas Customer (contendo o cadastro de clientes com IDs exclusivos) e Transaction (contendo as transações de compras dos clientes). Qual tipo de relacionamento e direção você deve configurar para vincular as tabelas?",
+      options: ["Muitos-para-muitos (N:N) entre Customer e Transaction","Um-para-muitos (1:N) de Transaction para Customer","Um-para-muitos (1:N) de Customer para Transaction","Um-para-um (1:1) entre Customer e Transaction"],
+      answer: 2,
+      explanation: "Um cliente pode realizar múltiplas transações, mas cada transação pertence a um único cliente. Logo, o relacionamento correto é de Um-para-Muitos (1:N) com a direção de filtragem do lado 1 (Customer) para o lado N (Transaction)."
+    },
+    {
+      question: "Ao projetar um modelo de dados estrela (Star Schema) de alta performance, qual das seguintes práticas NÃO é considerada uma boa prática de modelagem recomendada?",
+      options: ["Utilizar esquemas estrela complexos baseados fortemente em relacionamentos Muitos-para-Muitos (N:N) bidirecionais ativos","Configurar relacionamentos com filtros unidirecionais claros em vez de bidirecionais","Manter tabelas com propósitos específicos (Fato para métricas e Dimensão para atributos)","Importar apenas os dados e colunas estritamente necessários para a análise"],
+      answer: 0,
+      explanation: "Relacionamentos Muitos-para-Muitos bidirecionais ativos causam ambiguidade de filtragem, duplo cálculo involuntário e degradação drástica de performance. Devem ser evitados ou modelados com tabelas ponte e filtros unidirecionais."
+    },
+    {
+      question: "Em um relacionamento clássico de cardinalidade Um-para-Muitos (1:N) entre uma tabela de dimensão e uma fato, a qual tipo de coluna do banco o lado 'Muitos' (N) do relacionamento está vinculado na tabela fato?",
+      options: ["Chave Primária (Primary Key)","Chave Estrangeira (Foreign Key)","Coluna de Índice Calculada","Tabela de Pesquisa"],
+      answer: 1,
+      explanation: "O lado 1 (Dimensão) conecta-se por meio de sua Chave Primária (valores exclusivos). O lado N (Fato) conecta-se por meio de sua Chave Estrangeira (valores que podem se repetir)."
+    },
+    {
+      question: "Em relação ao comportamento do fluxo de filtros em relacionamentos do Power BI, qual das seguintes afirmações é verdadeira?",
+      options: ["Por padrão, o filtro se propaga do lado 1 (Um) para o lado N (Muitos) do relacionamento","Ao filtrar uma tabela de dimensão, o contexto de filtro é passado automaticamente para as tabelas fato 'a jusante'","Os filtros não conseguem fluir 'rio acima' (do lado N para o lado 1) a menos que a filtragem bidirecional esteja ativa","Todas as alternativas acima estão corretas"],
+      answer: 3,
+      explanation: "Os filtros seguem o fluxo natural da dimensão para a fato (lado 1 para N). Propagam-se para tabelas dependentes e apenas sobem de volta para o lado 1 se o filtro for configurado explicitamente como bidirecional (Ambos)."
+    },
+    {
+      question: "Se você decidir importar ou construir sua própria tabela de calendário (Date Table) no Power BI, quais requisitos técnicos ela deve cumprir obrigatoriamente para aceitar inteligência de tempo DAX?",
+      options: ["Coneter datas contínuas sem lacunas que representem todos os dias de todos os anos do modelo","Não conter datas duplicadas na coluna de chave de data","Possuir pelo menos uma coluna configurada com o tipo de dado Data (Date) ou Data/Hora (DateTime)","Todas as alternativas acima estão corretas"],
+      answer: 3,
+      explanation: "Uma tabela de datas para inteligência de tempo requer uma coluna de tipo Date/DateTime, com valores únicos, contínuos (sem buracos) e cobrindo anos inteiros mapeados no modelo."
+    },
+    {
+      question: "Você possui uma tabela FactSales com 50 milhões de linhas de dados diários de vendas abrangendo três anos. A sua necessidade de relatórios restringe-se a exibir vendas mensais por produto, sem necessidade de detalhes por dia. Como otimizar o tamanho do modelo sem afetar as entregas?",
+      options: ["Resumir/agrupar a tabela dimensão de datas para o nível mensal","Resumir/agrupar a tabela de fatos FactSales para o nível mensal e de produto no Power Query","Resumir a tabela FactSales para a categoria de produtos apenas","Resumir a tabela fato para o nível trimestral"],
+      answer: 1,
+      explanation: "Pré-agregar as vendas na Fato agrupando por mês e produto reduz dezenas de milhões de linhas diárias para um volume significativamente menor de linhas mensais, economizando memória e acelerando consultas DAX."
+    },
+    {
+      question: "No modelo tabular do Power BI, qual elemento de cálculo é computado dinamicamente em tempo de execução de consulta (on-demand), não consumindo espaço físico de armazenamento no arquivo de dados?",
+      options: ["Colunas Calculadas (Calculated Columns)","Tabelas Calculadas (Calculated Tables)","Medidas DAX (Measures)","Parâmetros de Campo"],
+      answer: 2,
+      explanation: "Medidas DAX são puramente fórmulas matemáticas. Elas não armazenam valores fisicamente no arquivo e são calculadas sob demanda pelo motor de consulta sempre que um visual é renderizado."
+    },
+    {
+      question: "Qual tipo de cálculo em DAX responde diretamente e em tempo real aos filtros, segmentações de dados (slicers) e seleções ativas na tela do relatório feitas pelo usuário?",
+      options: ["Medidas DAX","Colunas Calculadas"],
+      answer: 0,
+      explanation: "Medidas DAX operam dinamicamente sob o 'Contexto de Filtro' atual da página, recalculando-se instantaneamente para refletir qualquer segmentação ou filtro aplicado em tela."
+    },
+    {
+      question: "Como é classificada tecnicamente uma medida em DAX que soma valores normais ao longo de algumas dimensões (como clientes ou filiais), mas deve retornar o último valor disponível ao longo da dimensão de tempo (como saldos de estoque final)?",
+      options: ["Medida Aditiva","Medida Agregada","Medida Semi-aditiva","Medida Não-aditiva"],
+      answer: 2,
+      explanation: "Medidas semi-aditivas são métricas que podem ser somadas em algumas dimensões (ex: somar estoque entre lojas A e B), mas não podem ser somadas na dimensão de datas (ex: somar estoque de Jan + Fev não faz sentido; o saldo correto é o último dia do período)."
+    }
   ],
 
   /* ==================== DOMÍNIO 3 ==================== */
   "Visualizar e Analisar": [
+        {
+            pergunta: "O que é o recurso de Narrativa Inteligente (Smart Narrative) no Power BI e quando é útil?",
+            opcoes: ["Um chatbot integrado ao Power BI para responder perguntas", "Um visual de IA que gera automaticamente resumos textuais das principais tendências e insights dos dados em um relatório, atualizando conforme os filtros mudam", "Uma ferramenta de tradução automática para relatórios multilíngues", "Um gerador de documentação técnica para o modelo de dados"],
+            correta: 1,
+            explicacao: "Narrativa Inteligente é um visual de IA que gera automaticamente descrições textuais contextualizadas dos dados, destacando tendências importantes, anomalias e insights. O texto se atualiza dinamicamente quando filtros são aplicados."
+        },
+        {
+            pergunta: "O que são segmentações de dados (slicers) do tipo hierarquia no Power BI e qual sua vantagem?",
+            opcoes: ["Segmentações que mostram dados em ordem alfabética", "Segmentações que permitem filtrar por múltiplos níveis de uma hierarquia (ex: País > Estado > Cidade) em um único visual, com capacidade de expandir e recolher níveis", "Segmentações vinculadas a colunas de índice", "Segmentações automáticas criadas para cada coluna de texto"],
+            correta: 1,
+            explicacao: "Segmentações de hierarquia permitem filtrar por múltiplos níveis hierárquicos em um único visual compacto. O usuário pode expandir a hierarquia (ex: selecionar país e depois estados dentro dele), tornando o filtro mais intuitivo e eficiente."
+        },
+        {
+            pergunta: "O que é o Bookmarks (Marcadores) no Power BI e como pode ser usado?",
+            opcoes: ["Um recurso para salvar URLs favoritas dentro do relatório", "Um recurso que captura o estado atual de uma página do relatório (filtros, seleções, visibilidade de visuais) e permite retornar a esse estado ou criar uma narrativa visual", "Uma funcionalidade para marcar questões incorretas no relatório", "Um sistema de comentários para colaboração em relatórios"],
+            correta: 1,
+            explicacao: "Bookmarks capturam o estado de uma página do relatório incluindo filtros ativos, seleções e visibilidade de visuais. Podem ser usados para criar stories/apresentações, alternar entre diferentes visões do mesmo relatório, ou criar botões de navegação."
+        },
+        {
+            pergunta: "Qual é a diferença entre um Dashboard e um Relatório no Power BI Service?",
+            opcoes: ["Não há diferença, são termos intercambiáveis", "Dashboards são criados no Power BI Desktop; Relatórios são criados no Power BI Service", "Dashboards são páginas únicas com blocos de vários relatórios/fontes, sem interatividade de filtros cruzados; Relatórios têm múltiplas páginas com visualizações totalmente interativas", "Relatórios são para usuários finais; Dashboards são para administradores"],
+            correta: 2,
+            explicacao: "Dashboards são painéis de página única que compilam blocos de múltiplas fontes (relatórios, conjuntos de dados, URLs), sem filtros cruzados entre blocos. Relatórios têm múltiplas páginas com visualizações totalmente interativas e filtros cruzados."
+        },
+        {
+            pergunta: "O que é um visual de Principais Influenciadores (Key Influencers) no Power BI e para que serve?",
+            opcoes: ["Um visual que mostra os top N produtos por vendas", "Um visual de IA que analisa os dados e classifica os fatores que influenciam uma métrica específica, explicando o que aumenta ou diminui um valor", "Um visual para mostrar influenciadores de redes sociais", "Um gráfico de barras com os principais KPIs"],
+            correta: 1,
+            explicacao: "O visual Principais Influenciadores usa IA para analisar os dados e identificar quais fatores (dimensões) influenciam mais uma métrica específica. Ele explica de forma visual o que aumenta ou diminui um valor, sendo útil para análise de causa raiz."
+        },
+        {
+            pergunta: "O que é a Árvore de Decomposição (Decomposition Tree) no Power BI e para que serve?",
+            opcoes: ["Um visual que mostra a hierarquia das pastas de trabalho", "Um visual de IA que permite explorar e decompor uma métrica ao longo de múltiplas dimensões, identificando fatores que contribuem para um valor", "Uma ferramenta para visualizar a estrutura do modelo de dados", "Um gráfico de árvore hierárquica para dados organizacionais"],
+            correta: 1,
+            explicacao: "A Árvore de Decomposição é um visual de IA que permite explorar uma métrica ao longo de múltiplas dimensões em qualquer ordem. Você pode usá-la para análise ad-hoc e investigação de causa raiz."
+        },
+        {
+            pergunta: "Qual funcionalidade do Power BI Service permite aos usuários explorar dados fazendo perguntas em linguagem natural?",
+            opcoes: ["Quick Insights", "Perguntas e Respostas (Q&A)", "Analyze in Excel", "Decomposition Tree"],
+            correta: 1,
+            explicacao: "O recurso Perguntas e Respostas (Q&A) permite que os usuários façam perguntas sobre seus dados usando linguagem natural e o Power BI gera visualizações automaticamente com base nas respostas."
+        },
+        {
+            pergunta: "O que é um tooltip de relatório (report tooltip) no Power BI e quando deve ser usado?",
+            opcoes: ["Um texto de ajuda exibido quando o usuário passa o mouse sobre um botão de navegação", "Uma página especial do relatório que aparece como um popover ao passar o mouse sobre visuais, mostrando informações adicionais de contexto", "Uma dica de ferramenta automática gerada pelo Power BI para todos os visuais", "Um campo de descrição adicionado às medidas no modelo de dados"],
+            correta: 1,
+            explicacao: "Um tooltip de relatório é uma página especial configurada para aparecer como um popover quando o usuário passa o mouse sobre pontos de dados em visuais. Permite exibir informações detalhadas adicionais sem navegar para outra página."
+        },
+        {
+            pergunta: "Qual visual do Power BI é mais adequado para mostrar a composição de um total e como cada parte contribui para o todo?",
+            opcoes: ["Gráfico de linhas", "Gráfico de barras empilhadas ou gráfico de pizza", "Gráfico de dispersão", "Mapa coroplético"],
+            correta: 1,
+            explicacao: "Gráficos de barras empilhadas e gráficos de pizza são ideais para mostrar composição – como diferentes categorias contribuem para um total. O gráfico de pizza mostra proporções, enquanto as barras empilhadas permitem comparar totais entre categorias."
+        },
+        {
+            pergunta: "Quais são os blocos de construção (building blocks) do Power BI?",
+            opcoes: ["Blocos, dashboards, bancos de dados, dispositivos móveis", "Visual Studio, C# e arquivos JSON", "Conjuntos de dados, Visualizações, Relatórios, Dashboards e Blocos", "Consultas, Modelos, Relatórios e Serviços"],
+            correta: 2,
+            explicacao: "Os blocos de construção do Power BI são: Conjuntos de dados (Datasets), Visualizações (Visualizations), Relatórios (Reports), Dashboards e Blocos (Tiles)."
+        },
+        {
+            pergunta: "Qual é o principal benefício da análise de dados?",
+            opcoes: ["Analytics decisiva", "Decisões de negócios informadas", "Relatórios complexos", "Automatização de processos"],
+            correta: 1,
+            explicacao: "O principal benefício da análise de dados é fornecer insights que levam a decisões de negócios mais informadas e baseadas em evidências."
+        },
+        {
+            pergunta: "Uma coleção de visuais prontos, pré-organizados em dashboards e relatórios é chamada de quê no Power BI?",
+            opcoes: ["A tela (canvas)", "Um aplicativo (app)", "Um conjunto de dados (dataset)", "Uma atualização agendada"],
+            correta: 1,
+            explicacao: "Um aplicativo (App) no Power BI é uma coleção de visuais prontos, relatórios e dashboards pré-organizados que podem ser distribuídos aos usuários como um pacote completo."
+        },
+        {
+            pergunta: "Qual é o fluxo de atividade comum no Power BI?",
+            opcoes: ["Importar dados no Power BI Mobile, criar um relatório e compartilhar com o Power BI Desktop", "Importar dados no Power BI Desktop, criar um relatório, publicar no serviço Power BI e visualizar/interagir com os relatórios", "Criar um relatório no serviço Power BI, compartilhar com o Power BI Mobile e interagir no Power BI Desktop", "Criar um relatório no Power BI Mobile e compartilhar com o Power BI Desktop"],
+            correta: 1,
+            explicacao: "O fluxo comum é: 1) Conectar dados no Power BI Desktop, 2) Criar relatórios, 3) Publicar no serviço Power BI, 4) Visualizar e interagir com relatórios e dashboards."
+        },
     {
       question: "Ao clicar em uma barra de um gráfico, outro visual na mesma página exibe os demais valores em cinza semitransparente, mantendo todos os dados visíveis. Isso é um exemplo de:",
       options: ["Filtro Cruzado (Cross-filter)", "Realce Cruzado (Cross-highlight)", "Drillthrough", "Slicer Sincronizado"],
@@ -840,10 +1291,137 @@ const questionBank = {
       answer: 1,
       explanation: "Plotar milhares de coordenadas individuais satura o visual do mapa e a memória do navegador. Agrupar os pontos em níveis hierárquicos (ex: Cidade, Estado) permite fazer drill-down conforme necessário. Habilitar o 'Clustering' (agrupamento de bolhas) consolida pontos próximos em um único círculo numérico, aliviando a performance visual."
     }
+,
+    {
+      question: "Você possui uma tabela de Vendas e cria um visual de mapa contendo a coluna 'Zone' (que armazena nomes de estados norte-americanos). O mapa plota incorretamente bolhas em cidades aleatórias do mundo. Como garantir que as bolhas representem estados corretamente?",
+      options: ["Adicionar uma coluna contendo o termo 'Estados Unidos' em todas as linhas","Obter coordenadas exatas de latitude e longitude para cada zona e adicioná-las no mapa","Selecionar o campo 'Zone' e, na guia de Modelagem, alterar a Categoria de Dados para 'Estado ou Província'","Alterar o tipo de dados da coluna para Inteiro"],
+      answer: 2,
+      explanation: "Alterar a Categoria de Dados (Data Category) de uma coluna de texto para termos geográficos específicos (como Estado ou Província, Cidade, Código Postal) ajuda o serviço de mapas do Bing a geolocalizar corretamente as localizações."
+    },
+    {
+      question: "Você cria um gráfico de colunas empilhadas contendo a coluna 'Data'. O gráfico exibe todas as datas diárias individuais no eixo X, o que deixa o visual poluído. Você quer que exiba dados consolidados por Ano e que o usuário possa fazer Drill down para ver por Semana e Dia. O que fazer?",
+      options: ["Criar uma nova tabela de calendário com colunas de data, ano, semana e dia, e usá-las para criar uma hierarquia no eixo X do gráfico","Criar uma nova hierarquia de data diretamente dentro da tabela fato de vendas","Alterar o eixo X para o tipo Categórico nas propriedades do gráfico","Adicionar um filtro visual avançado para a coluna de data"],
+      answer: 0,
+      explanation: "Usar uma tabela calendário adequada contendo os níveis hierárquicos e adicioná-los em sequência no campo de 'Eixo' do gráfico cria uma hierarquia de drill-down limpa e profissional."
+    },
+    {
+      question: "Ao estruturar relatórios corporativos na plataforma Power BI, quais são considerados os blocos de construção essenciais da arquitetura do serviço?",
+      options: ["Linguagem M, Scripts R, HTML e consultas SQL","Workspaces, Fluxos de dados, Gateways e conexões locais","Conjuntos de Dados (Datasets), Visualizações, Relatórios, Painéis (Dashboards) e Blocos (Tiles)","Arquivos PBIX, Arquivos RDL, Temas JSON e arquivos CSV"],
+      answer: 2,
+      explanation: "A hierarquia clássica de entrega do Power BI Service é baseada em importar/modelar dados (Datasets) -> criar visuais individuais (Visualizations) -> reuni-los em abas (Reports) -> fixar visuais importantes em telas únicas (Dashboards) contendo blocos interativos (Tiles)."
+    },
+    {
+      question: "No Power BI Service, qual é a diferença de comportamento interativo quando um usuário clica em um visual fixado em um Dashboard (painel) corporativo, comparado a clicar em um gráfico dentro de um Relatório?",
+      options: ["Clicar em um visual do Dashboard navega o usuário de volta ao relatório de origem correspondente; clicar em um gráfico no relatório aplica filtros e realça dados em outros visuais da mesma página","Ambos realizam filtros cruzados dinâmicos nas respectivas telas","O visual do Dashboard abre o editor de consultas M","O visual de relatório é estático"],
+      answer: 0,
+      explanation: "Dashboards são painéis executivos de monitoramento estáticos e rápidos. Seus blocos (tiles) agem como links rápidos. Ao clicar nele, você é direcionado para o relatório interativo de origem, onde os filtros cruzados funcionam dinamicamente."
+    },
+    {
+      question: "Você precisa padronizar as cores, fontes, estilos e margens padrão de todos os visuais corporativos para que sigam estritamente o manual de marca da empresa. Qual é a melhor prática para aplicar essa formatação?",
+      options: ["Modificar as cores manualmente em cada gráfico de todas as páginas dos relatórios","Importar um arquivo de tema JSON personalizado que define os estilos visuais globais para o relatório atual","Escrever regras CSS customizadas na aba de opções avançadas","Publicar um workspace público e mudar o tema corporativo no Service"],
+      answer: 1,
+      explanation: "Os arquivos de tema JSON contêm especificações de paleta de cores e configurações padrão para os visuais. Ao importar o JSON, o Power BI o aplica instantaneamente a todos os gráficos, mantendo consistência de marca."
+    },
+    {
+      question: "Você configurou uma página de dica de ferramenta visual de relatório (Tooltip) com detalhes adicionais de vendas. Como vincular essa página para que apareça automaticamente ao passar o mouse em um gráfico de barras na página principal?",
+      options: ["Arrastar o nome da página de tooltip para o campo de legenda do gráfico","Habilitar dicas de ferramentas nas propriedades de formato do gráfico de destino, alterar o tipo para Página de Relatório e selecionar o nome da página criada","Mapear a página de tooltip como uma ação de botão de navegação","Ativar a sincronização de segmentadores"],
+      answer: 1,
+      explanation: "O gráfico principal consome o tooltip configurando a seção 'Dica de ferramenta' (Tooltip) nas propriedades visuais: Tipo = Página de Relatório, e selecionando a página de destino que foi marcada como Tooltip."
+    },
+    {
+      question: "Um visual de matriz complexo demora mais de 10 segundos para carregar no relatório do Power BI Desktop. Como você identifica se o atraso se deve a uma consulta DAX ineficiente, tempo de renderização gráfica ou processamento na fonte?",
+      options: ["Executar o Diagnóstico de Consulta do Power Query","Utilizar o Analisador de Performance (Performance Analyzer) e analisar os tempos detalhados de DAX, Renderização e Outros para o visual","Criar um alerta de dados no Service","Mudar a conexão de import para DirectQuery"],
+      answer: 1,
+      explanation: "O Analisador de Performance registra logs milissegundo a milissegundo de cada visual em tela, identificando gargalos exatos divididos em Consulta DAX, Renderização Visual e tempo de espera interno (Outros)."
+    },
+    {
+      question: "Você está analisando a correlação entre Vendas e Lucratividade de milhares de produtos usando um gráfico de Dispersão (Scatter Chart). Para identificar agrupamentos naturais de comportamento sem definir regras manuais, qual recurso usar?",
+      options: ["Aplicar filtros visuais de categoria","Executar o recurso de Agrupamento Automático (Clustering / Localizar Clusters) integrado no painel de análise do gráfico","Criar um parâmetro de What-if de cor","Usar RLS por clusters"],
+      answer: 1,
+      explanation: "O Power BI possui algoritmo de K-means nativo no painel de análise de gráficos de dispersão e tabelas. O recurso de clusterização cria colunas de agrupamento automaticamente baseando-se em padrões matemáticos dos eixos."
+    },
+    {
+      question: "Ao criar um painel de filtros retrátil no relatório (que abre e fecha ao clicar em ícones), você usa Bookmarks. Quais dois painéis auxiliares do Power BI Desktop devem estar ativos para configurar essa interatividade de ocultar e exibir visuais?",
+      options: ["Painel de Indicadores (Bookmarks) e Painel de Seleção (Selection)","Painel de Filtros e Painel de Modelagem","Painel de Propriedades e Visualização de Dados","Painel de Gateway e Painel de Campos"],
+      answer: 0,
+      explanation: "O painel de Seleção é crucial porque permite alternar a visibilidade (ícone de olho) de cada gráfico individualmente. O painel de Indicadores grava esses estados de exibição para criar a interatividade."
+    },
+    {
+      question: "Você está desenhando um relatório corporativo focado em ser exibido exclusivamente em TVs de monitoramento na recepção da empresa. Como configurar a visualização da tela para preencher 100% do monitor sem barras de rolagem?",
+      options: ["Ajustar a visualização da página para 'Ajustar à Página' (Fit to Page) nas opções de exibição e configurar o tamanho de tela adequado nas propriedades da página","Reduzir a resolução das imagens","Configurar o layout de tela como Tooltip","Usar visualização mobile"],
+      answer: 0,
+      explanation: "Configurar a exibição como 'Ajustar à Página' (Fit to Page) dimensiona dinamicamente a área de desenho do Power BI para caber nas dimensões físicas do monitor, garantindo apresentação limpa."
+    }
   ],
 
   /* ==================== DOMÍNIO 4 ==================== */
   "Implementar e Manter": [
+        {
+            pergunta: "Qual é a finalidade da certificação de conjuntos de dados e relatórios no Power BI?",
+            opcoes: ["Proteger os dados com criptografia avançada", "Indicar que o conteúdo foi revisado e aprovado como confiável, preciso e pronto para uso pela organização, aumentando a confiança dos usuários", "Certificar que o relatório está em conformidade com LGPD/GDPR", "Validar automaticamente as fórmulas DAX do modelo"],
+            correta: 1,
+            explicacao: "A certificação no Power BI é um processo pelo qual administradores ou usuários autorizados marcam conjuntos de dados e relatórios como 'Certificado', indicando que foram revisados, são confiáveis e representam a fonte oficial de dados para a organização."
+        },
+        {
+            pergunta: "O que é o Power BI Embedded e qual é seu caso de uso principal?",
+            opcoes: ["Uma versão do Power BI para dispositivos móveis offline", "Uma API que permite incorporar relatórios e dashboards do Power BI em aplicações customizadas para usuários que não precisam de conta Power BI", "Uma funcionalidade para criar dashboards embutidos em emails", "Um conector para incorporar dados de ERPs externos ao Power BI"],
+            correta: 1,
+            explicacao: "Power BI Embedded permite que desenvolvedores incorporem relatórios e dashboards do Power BI em suas próprias aplicações usando APIs. Os usuários finais não precisam de conta Power BI, pois a autenticação é feita pela aplicação host."
+        },
+        {
+            pergunta: "O que é um conjunto de dados compartilhado (Shared Dataset) no Power BI e qual é seu benefício principal?",
+            opcoes: ["Um dataset disponível publicamente na internet", "Um conjunto de dados certificado e central que múltiplos relatórios podem usar como fonte, promovendo consistência e reduzindo duplicação de dados", "Um dataset exportado para uso em Excel", "Uma funcionalidade Premium para compartilhar dados entre organizações"],
+            correta: 1,
+            explicacao: "Conjuntos de dados compartilhados permitem que múltiplos relatórios se conectem ao mesmo modelo de dados central. Isso promove uma 'única fonte da verdade', garante consistência de métricas entre relatórios e reduz duplicação de modelos."
+        },
+        {
+            pergunta: "O que são pipelines de implantação (Deployment Pipelines) no Power BI Service e para que servem?",
+            opcoes: ["Uma ferramenta de CI/CD para código Python integrada ao Power BI", "Uma funcionalidade que permite gerenciar o ciclo de vida dos conteúdos do Power BI (relatórios, dashboards, conjuntos de dados) em estágios de Desenvolvimento, Teste e Produção", "Um sistema de backup automático de relatórios", "Uma API para publicação automatizada de relatórios via linha de comando"],
+            correta: 1,
+            explicacao: "Pipelines de Implantação permitem criar fluxos de trabalho de Desenvolvimento → Teste → Produção para conteúdo Power BI. Você pode comparar estágios, promover conteúdo entre estágios e gerenciar regras de dataset por estágio."
+        },
+        {
+            pergunta: "Como você pode compartilhar um relatório do Power BI com usuários externos à sua organização?",
+            opcoes: ["Apenas exportando o arquivo .pbix e enviando por e-mail", "Usando o recurso 'Publicar na Web' para compartilhamento público, ou Azure B2B para compartilhamento seguro com usuários externos com identidade Azure AD", "Não é possível compartilhar relatórios com usuários externos", "Apenas convertendo o relatório para PDF e compartilhando"],
+            correta: 1,
+            explicacao: "Para compartilhar externamente: 'Publicar na Web' torna o relatório acessível publicamente (sem autenticação), ou Azure Active Directory B2B permite compartilhamento seguro com usuários externos convidados que possuem identidade Azure AD."
+        },
+        {
+            pergunta: "Qual é a diferença entre um workspace padrão e um workspace Premium no Power BI Service?",
+            opcoes: ["Workspaces Premium suportam mais usuários simultâneos e permitem publicar aplicativos", "Workspaces Premium oferecem capacidade dedicada, sem compartilhamento de recursos, permitindo conjuntos de dados maiores, atualizações mais frequentes e recursos avançados como paginação de relatórios", "Não há diferença técnica, apenas preço diferente", "Workspaces Premium permitem criar mais de 10 relatórios"],
+            correta: 1,
+            explicacao: "Workspaces Premium usam capacidade dedicada (não compartilhada), o que oferece desempenho consistente, conjuntos de dados maiores (até 400GB vs 1GB), até 48 atualizações diárias e acesso gratuito para usuários visualizadores sem licença Pro."
+        },
+        {
+            pergunta: "O que é RLS (Row-Level Security) no Power BI e como funciona?",
+            opcoes: ["Um método de criptografia de dados em repouso no serviço Power BI", "Um mecanismo que restringe o acesso aos dados no nível de linha, filtrando os dados que cada usuário pode ver com base em regras definidas", "Uma funcionalidade para proteger as credenciais de fonte de dados", "Um controle de acesso que determina quem pode editar relatórios"],
+            correta: 1,
+            explicacao: "RLS (Row-Level Security) é um mecanismo que restringe o acesso aos dados ao nível de linha. Você define regras DAX que filtram os dados retornados para cada usuário com base em sua identidade ou papel, garantindo que usuários vejam apenas os dados a que têm direito."
+        },
+        {
+            pergunta: "Qual método de atualização do Power BI permite que apenas os dados novos ou modificados sejam processados, em vez de reprocessar todos os dados?",
+            opcoes: ["Atualização completa (Full refresh)", "Atualização incremental (Incremental refresh)", "Atualização programada (Scheduled refresh)", "Atualização manual (Manual refresh)"],
+            correta: 1,
+            explicacao: "A atualização incremental processa apenas os dados novos ou modificados desde a última atualização, em vez de reprocessar todos os dados. Isso reduz o tempo de atualização e o consumo de recursos, especialmente para grandes conjuntos de dados."
+        },
+        {
+            pergunta: "O que é o gateway de dados do Power BI e quando ele é necessário?",
+            opcoes: ["Um aplicativo para criar relatórios em dispositivos móveis", "Um software instalado em servidores locais para permitir que o serviço Power BI acesse fontes de dados locais (on-premises)", "Uma API para integração com sistemas externos", "Um serviço de criptografia para dados em trânsito"],
+            correta: 1,
+            explicacao: "O gateway de dados do Power BI é um software instalado em servidores locais que serve como ponte entre o serviço Power BI na nuvem e fontes de dados locais (on-premises). É necessário para atualização agendada de dados locais."
+        },
+        {
+            pergunta: "Qual tarefa do analista de dados tem impacto crítico no desempenho dos relatórios e análise de dados?",
+            opcoes: ["Analisar", "Visualizar", "Modelar", "Publicar"],
+            correta: 2,
+            explicacao: "Modelar dados é a tarefa com maior impacto crítico no desempenho. Um modelo bem projetado com relacionamentos adequados, tabelas de dimensão e medidas otimizadas melhora significativamente o desempenho dos relatórios."
+        },
+        {
+            pergunta: "Qual função de dados permite que os analistas habilitem recursos avançados de análise por meio de relatórios e visualizações?",
+            opcoes: ["Analista de dados", "Cientista de dados", "Engenheiro de dados", "Administrador de banco de dados"],
+            correta: 0,
+            explicacao: "O Analista de dados é a função que habilita recursos avançados de análise por meio de relatórios e visualizações, transformando dados brutos em insights acionáveis para as organizações."
+        },
     {
       question: "A empresa quer um processo formal para promover relatórios por ambientes: Desenvolvimento → Teste → Produção no Power BI Service, com controle de versão e comparação de conteúdo. Qual feature implementa isso?",
       options: ["Power BI Embedded com controle de versão Git", "Pipelines de Implantação (Deployment Pipelines)", "Workspaces Clássicos com permissões diferenciadas", "Power BI Report Server"],
@@ -1113,6 +1691,67 @@ const questionBank = {
       options: ["Todos os visualizadores do aplicativo associado","O Proprietário do Dataset (usuário cujas credenciais configuram o refresh), com a opção de adicionar contatos ou grupos adicionais na interface","Todos os administradores da capacidade Premium corporativa","Nenhum email é gerado para evitar saturação de caixas de correio"],
       answer: 1,
       explanation: "Por padrão, o Power BI envia o alerta de falha de refresh diretamente ao proprietário do dataset. Na interface de configuração de atualização, o proprietário pode marcar a caixa para expandir as notificações para outros usuários do workspace ou grupos de segurança para gerenciamento de falhas corporativo."
+    }
+,
+    {
+      question: "Você planeja publicar um modelo de dados conectado localmente via Conexão Dinâmica (Live Connection) ao SQL Server Analysis Services (SSAS) Tabular para o Power BI Service. O que deve ser configurado obrigatoriamente para possibilitar as consultas aos dados?",
+      options: ["Instalar e configurar um Data Gateway (Gateway de Dados local) na rede corporativa com acesso ao servidor SSAS","Ativar o modo de armazenamento Duplo nas tabelas do modelo","Adicionar parâmetros de conexão dinâmica M","Ativar permissões de administrador de tenant para todos os usuários"],
+      answer: 0,
+      explanation: "Conexões em DirectQuery ou Live Connection a servidores locais como SSAS ou SQL Server exigem o Data Gateway em modo Standard configurado na rede local para intermediar com segurança as requisições sob demanda vindas do Power BI Service."
+    },
+    {
+      question: "No Power BI Desktop, você precisa criar uma regra de Segurança em Nível de Linha (RLS) para o papel 'EUA_Clothing'. A regra deve limitar os dados das tabelas de vendas de forma que os usuários vejam apenas registros que possuam País/Região igual a 'United States' E categoria de produto igual a 'Clothing'. Qual expressão DAX deve ser definida na regra RLS da tabela?",
+      options: ["[CountryRegionName] = \"United States\" OR [ProductCategory] = \"Clothing\"","[CountryRegionName] = \"United States\" , [ProductCategory] = \"Clothing\"","[CountryRegionName] = \"United States\" && [ProductCategory] = \"Clothing\"","[CountryRegionName] = \"United States\" || [ProductCategory] = \"Clothing\""],
+      answer: 2,
+      explanation: "O operador lógico 'E' em DAX é representado por `&&`. Portanto, a expressão correta para impor que ambas as condições sejam estritamente verdadeiras ao mesmo tempo é `&&`."
+    },
+    {
+      question: "No Power BI Service, você precisa distribuir um aplicativo corporativo contendo 5 relatórios diferentes para a equipe de vendas e a de finanças. A equipe de finanças não deve ver os relatórios de vendas. Qual é a melhor prática administrativa?",
+      options: ["Criar dois workspaces distintos e publicar dois aplicativos separados","Publicar um único Aplicativo e criar dois grupos de Audiência distintos, configurando a visibilidade de páginas de relatório específica para cada grupo","Configurar permissões de segurança RLS para cada página do relatório","Utilizar gateways separados para cada relatório"],
+      answer: 1,
+      explanation: "As Audiências de Aplicativos permitem personalizar a exibição do mesmo app. Você cria uma audiência de Vendas (ocultando páginas de finanças) e outra de Finanças (ocultando páginas de vendas), distribuindo tudo sob um único workspace gerenciável."
+    },
+    {
+      question: "O seu relatório corporativo em capacidade Pro corporativa está agendado para atualizar às 08:00 todos os dias. Você percebe que a atualização ocasionalmente inicia às 08:15 ou 08:20. Por que essa discrepância ocorre?",
+      options: ["O servidor de banco de dados atrasa o envio de dados","Em capacidades compartilhadas (Pro), a atualização agendada inicia conforme disponibilidade de recursos em fila na infraestrutura Microsoft, com uma margem de início de até 2 horas","A licença Pro restringe atualizações com precisão de minutos","O gateway de dados local foi desligado"],
+      answer: 1,
+      explanation: "Em workspaces Pro compartilhados, as atualizações concorrem por recursos globais em fila de processamento da Microsoft. A atualização inicia o mais próximo possível da hora agendada, mas pode haver pequenas variações de tempo."
+    },
+    {
+      question: "Como garantir alta disponibilidade e tolerância a falhas (failover) para o seu servidor de Gateway de Dados local corporativo que atende a dezenas de relatórios críticos da empresa?",
+      options: ["Duplicar o arquivo do gateway em várias pastas locais","Criar um Cluster de Gateways, adicionando múltiplos servidores físicos de gateway ao mesmo grupo administrativo","Mudar a conexão de todos os relatórios para Import sem gateway","Habilitar o endpoint XMLA em gravação"],
+      answer: 1,
+      explanation: "Clusters de gateways unem múltiplos computadores físicos rodando o software gateway. Se um servidor falhar ou estiver sem conectividade, as atualizações são redirecionadas automaticamente para as demais máquinas ativas del cluster."
+    },
+    {
+      question: "Um usuário possui a função de 'Membro' (Member) em um workspace do Power BI Service. Qual ação administrativa ele pode realizar que um usuário com a função de 'Contribuidor' (Contributor) é bloqueado de fazer?",
+      options: ["Adicionar novos relatórios e editar modelos de dados existentes","Atualizar dados manualmente e agendar refreshes","Compartilhar itens do workspace e publicar/atualizar o Aplicativo (App) do workspace","Deletar painéis criados por ele mesmo"],
+      answer: 2,
+      explanation: "Membros têm direitos de curadoria e compartilhamento de conteúdo. Eles podem publicar, atualizar e gerenciar o Aplicativo do workspace, enquanto Contribuidores focam apenas no desenvolvimento do conteúdo técnico das tabelas e relatórios."
+    },
+    {
+      question: "Você precisa alterar a estrutura de dados de uma tabela central em seu dataset no Power BI Service. Como você avalia previamente quais relatórios e painéis da empresa serão afetados (e possivelmente quebrados) com essa alteração?",
+      options: ["Acessar o Performance Analyzer no Power BI Desktop","Exibir a Linhagem de Dados (Lineage View) no workspace e clicar em 'Análise de Impacto' (Impact Analysis) no dataset desejado","Enviar um email para todos os administradores do Tenant","Deletar o dataset e ver quem reporta erro"],
+      answer: 1,
+      explanation: "A Análise de Impacto na Visualização de Linhagem exibe detalhadamente todos os artefatos de dados e relatórios dependentes daquele dataset em múltiplos workspaces, gerando um mapa claro do impacto de mudanças estruturais."
+    },
+    {
+      question: "Como configurar para que a equipe de suporte de TI (e não apenas o proprietário do dataset) receba um email de notificação imediato se a atualização agendada de um dataset crítico falhar?",
+      options: ["Mapear a TI como RLS administrativo","Adicionar os endereços de email da equipe ou grupos de email de TI nas configurações de notificação de falha de atualização do dataset nas opções do Service","Instalar o gateway na máquina da equipe de TI","Criar um alerta de dados no dashboard"],
+      answer: 1,
+      explanation: "Nas configurações avançadas do dataset sob agendamento de refresh, há um campo específico para inserir emails de contatos adicionais que devem receber alertas em caso de falha de atualização."
+    },
+    {
+      question: "Ao exportar dados de um relatório corporativo protegido por um Rótulo de Sensibilidade (Sensitivity Label) 'Altamente Confidencial' para o Excel, qual comportamento de segurança ocorre no arquivo local gerado?",
+      options: ["A criptografia é removida e qualquer pessoa pode ler os dados no Excel","O arquivo Excel herda o rótulo de sensibilidade e as políticas de proteção criptográficas integradas, exigindo autenticação do usuário para leitura","A exportação falha com erro de restrição de proxy","O arquivo é automaticamente excluído após 5 minutos"],
+      answer: 1,
+      explanation: "A integração do Power BI com o Microsoft Information Protection garante que rótulos e restrições criptográficas sejam herdados em qualquer exportação externa, mantendo a confidencialidade dos dados."
+    },
+    {
+      question: "Com o ponto de extremidade XMLA (XMLA Endpoint) configurado como Ler/Gravar (Read-Write) na capacidade Premium, qual ferramenta externa pode ser usada para implantar novas medidas e modelos tabulares diretamente na nuvem de forma síncrona?",
+      options: ["DAX Studio","Tabular Editor","Power Query Editor","Power Automate"],
+      answer: 1,
+      explanation: "O Tabular Editor conecta-se ao XMLA Endpoint do Service como se fosse um servidor do Analysis Services local, permitindo gravação e implantação síncrona de metadados, medidas, tabelas calculadas e grupos de cálculo."
     }
   ]
 };
