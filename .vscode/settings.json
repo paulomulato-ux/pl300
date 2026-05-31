@@ -1,0 +1,26 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^cd c:\\\\Users\\\\Public\\\\Apps\\\\pl300-portal ; node - <<'NODE'\nconst fs = require\\('fs'\\);\nconst path = require\\('path'\\);\nconst filePath = path\\.join\\('simulado','simulado\\.js'\\);\nconst content = fs\\.readFileSync\\(filePath,'utf8'\\);\nconst startMarker = 'const questionBank = \\{';\nconst startIdx = content\\.indexOf\\(startMarker\\);\nif \\(startIdx === -1\\) throw new Error\\('Start marker not found'\\);\nlet idx = startIdx \\+ startMarker\\.length - 1; // at '\\{'\nlet depth = 0;\nlet inString = false;\nlet stringChar = '';\nlet escape = false;\nfor \\(; idx < content\\.length; idx\\+\\+\\) \\{\n  const ch = content\\[idx\\];\n  if \\(inString\\) \\{\n    if \\(escape\\) \\{ escape = false; continue; \\}\n    if \\(ch === '\\\\\\\\'\\) \\{ escape = true; continue; \\}\n    if \\(ch === stringChar\\) \\{ inString = false; stringChar = ''; \\}\n    continue;\n  \\}\n  if \\(ch === '\"' ; ch === \"'\"\\) \\{ inString = true; stringChar = ch; continue; \\}\n  if \\(ch === '\\{'\\) \\{ depth\\+\\+; continue; \\}\n  if \\(ch === '\\}'\\) \\{\n    depth--;\n    if \\(depth === 0\\) \\{\n      const objectText = content\\.slice\\(startIdx \\+ 'const questionBank = '\\.length, idx \\+ 1\\);\n      const jsonText = objectText\n        \\.replace\\(/\\(\\[\\\\w\\$\\]\\+\\)\\\\s\\*:/g, '\"\\$1\":'\\)\n        \\.replace\\(/\\(\\['\"\\]\\)\\(\\?:\\(\\?=\\(\\\\\\\\\\?\\)\\)\\\\2\\.\\)\\*\\?\\\\1/g, match => match\\)\n      ;\n      // Use Function to parse JS object literal safely\n      const questionBank = new Function\\('return ' \\+ objectText\\)\\(\\);\n      const outPath = path\\.join\\('simulado','questions\\.json'\\);\n      fs\\.writeFileSync\\(outPath, JSON\\.stringify\\(questionBank, null, 2\\), 'utf8'\\);\n      console\\.log\\('Wrote', outPath\\);\n      process\\.exit\\(0\\);\n    \\}\n  \\}\n\\}\nthrow new Error\\('Did not find matching closing brace'\\);\nNODE$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^node scripts/extract-question-bank\\.js$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^dir scripts ; node scripts/extract-question-bank\\.js$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^node -e \"const fs=require\\('fs'\\),path=require\\('path'\\);const q=fs\\.readFileSync\\(path\\.join\\('simulado','questions\\.json'\\),'utf8'\\);fs\\.writeFileSync\\(path\\.join\\('simulado','questions\\.js'\\),'window\\.questionBank = '\\+q\\+';','utf8'\\);console\\.log\\('Created simulado/questions\\.js'\\);\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^node scripts/update-simulado-question-state\\.js$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "Get-Command": true,
+        "&": true
+    }
+}

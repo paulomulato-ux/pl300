@@ -14,9 +14,35 @@
         table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
         th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
         th { background-color: #f2f2f2; }
+    
+        /* Sidebar Styles */
+        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: #f4f4f4; }
+        .layout-wrapper { display: flex; width: 100%; height: 100vh; }
+        .sidebar { width: 280px; background: #2c3e50; color: #ecf0f1; padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; }
+        .sidebar a { color: #ecf0f1; text-decoration: none; display: block; padding: 8px 0; }
+        .sidebar a:hover, .sidebar a.active { color: #3498db; font-weight: bold; }
+        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid #34495e; padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: #bdc3c7; }
+        .sidebar .back-btn { font-weight: bold; color: #e74c3c; display: flex; align-items: center; gap: 5px; }
+        .sidebar .back-btn:hover { color: #c0392b; text-decoration: none; }
+        .sidebar ul { list-style: none; padding: 0; margin: 0; }
+        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: #f4f4f4; }
+        .container { margin: 0 auto; max-width: 800px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        
     </style>
 </head>
 <body>
+    <div class="layout-wrapper">
+        <aside class="sidebar">
+            <a href="../index.html" class="back-btn">? Voltar para Tela Principal</a>
+            <h3>Navegacao</h3>
+            <ul class="nav-links">
+                <li><a href="analisar-performance-relatorios.html">Analisar Performance Relatorios</a></li>
+                <li><a href="criar-relatorios.html" class="active">Criar Relatorios</a></li>
+                <li><a href="resumo.html">Resumo</a></li>
+                <li><a href="visualizacoes-avancadas.html">Visualizacoes Avancadas</a></li>
+            </ul>
+        </aside>
+        <div class="content-area">
     <div class="container">
         <h1>📊 Criar Relatórios no Power BI</h1>
 <p>Este módulo cobre a criação de relatórios claros, consistentes e orientados a insights.</p>
@@ -101,6 +127,8 @@
 <li>Design guidelines:
   https://learn.microsoft.com/power-bi/create-reports/desktop-report-layers</li>
 </ul>
+    </div>
+    </div>
     </div>
 </body>
 </html>
