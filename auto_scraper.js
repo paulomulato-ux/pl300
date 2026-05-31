@@ -77,10 +77,10 @@ async function scrapePage(page) {
 
             questions.push({
                 domain,
-                pergunta,
-                opcoes,
-                correta,
-                explicacao: explanation
+                question: pergunta,
+                options: opcoes,
+                answer: correta,
+                explanation: explanation
             });
         });
 
@@ -122,13 +122,13 @@ async function run() {
 
     for (const [domain, questions] of Object.entries(grouped)) {
         for (const q of questions) {
-            const opcoeStr = q.opcoes.map(o => '"' + o.replace(/"/g, '\\"').replace(/\n/g, ' ') + '"').join(', ');
+            const opcoeStr = q.options.map(o => '"' + o.replace(/"/g, '\\"').replace(/\n/g, ' ') + '"').join(', ');
             const questionStr = `
         {
-            pergunta: "${q.pergunta.replace(/"/g, '\\"').replace(/\n/g, ' ')}",
-            opcoes: [${opcoeStr}],
-            correta: ${q.correta},
-            explicacao: "${q.explicacao.replace(/"/g, '\\"').replace(/\n/g, ' ')}"
+            question: "${q.question.replace(/"/g, '\\"').replace(/\n/g, ' ')}",
+            options: [${opcoeStr}],
+            answer: ${q.answer},
+            explanation: "${q.explanation.replace(/"/g, '\\"').replace(/\n/g, ' ')}"
         }`;
 
             const domainPattern = `"${domain}"`;

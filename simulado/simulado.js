@@ -3541,6 +3541,17 @@ function toggleDomain(btn) {
   state.selectedDomains = selected;
 }
 
+function normalizeQuestion(raw) {
+  const answerValue = raw.answer !== undefined ? raw.answer : raw.correta;
+  return {
+    ...raw,
+    question: raw.question ?? raw.pergunta ?? '',
+    options: raw.options ?? raw.opcoes ?? [],
+    answer: answerValue,
+    explanation: raw.explanation ?? raw.explicacao ?? ''
+  };
+}
+
 // ============================================================
 //  START QUIZ
 // ============================================================
@@ -3556,8 +3567,8 @@ function startQuiz() {
     // Build question pool
     let pool = [];
     state.selectedDomains.forEach(domain => {
-      (questionBank[domain] || []).forEach(q => {
-        pool.push({ ...q, domain });
+      (questionBank[domain] || []).forEach(raw => {
+        pool.push({ ...normalizeQuestion(raw), domain });
       });
     });
 
