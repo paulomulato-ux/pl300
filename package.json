@@ -7,7 +7,11 @@
   "scripts": {
     "test": "echo \"No tests specified\" && exit 0",
     "scrape": "node auto_scraper.js",
-    "build:questions": "node scripts/build-questions.js"
+    "build:questions": "node scripts/build-questions.js",
+    "convert:md": "node scripts/convert-html-to-md.js"
+  },
+  "devDependencies": {
+    "turndown": "^7.2.4"
   },
   "dependencies": {
     "axios": "^1.16.1",
