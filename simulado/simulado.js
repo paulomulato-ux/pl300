@@ -3658,13 +3658,21 @@ function startTimer() {
 function loadQuestion(index) {
   state.currentIndex = index;
   const q = state.questions[index];
+  
+  if (!q) {
+    alert('Nenhuma questão foi carregada. Verifique os domínios selecionados e tente novamente.');
+    showScreen('screen-start');
+    return;
+  }
+
+  const question = normalizeQuestion(q);
   const total = state.questions.length;
   const answered = state.answers[index];
 
   // Update topbar
   document.getElementById('q-current').textContent = index + 1;
   document.getElementById('q-total').textContent = total;
-  document.getElementById('q-domain-badge').textContent = q.domain;
+  document.getElementById('q-domain-badge').textContent = question.domain;
   document.getElementById('q-badge').textContent = `Questão ${index + 1}`;
   document.getElementById('progress-fill').style.width = `${((index + 1) / total) * 100}%`;
 
@@ -3674,20 +3682,20 @@ function loadQuestion(index) {
 
   // Multi-hint
   const hintContainer = document.getElementById('multi-hint-container');
-  const isMulti = Array.isArray(q.answer);
+  const isMulti = Array.isArray(question.answer);
   hintContainer.innerHTML = isMulti
     ? '<span class="multi-hint">⚠️ Selecione todas as opções corretas</span>'
     : '';
 
   // Question text
-  document.getElementById('question-text').textContent = q.question;
+  document.getElementById('question-text').textContent = question.question;
 
   // Options
   const container = document.getElementById('options-container');
   container.innerHTML = '';
   const letters = ['A', 'B', 'C', 'D', 'E'];
 
-  q.options.forEach((opt, i) => {
+  (question.options || []).forEach((opt, i) => {
     const div = document.createElement('div');
     div.className = 'option-item';
     div.dataset.index = i;
@@ -3697,10 +3705,10 @@ function loadQuestion(index) {
     if (answered) {
       div.classList.add('disabled');
       if (answered.selected.includes(i)) {
-        const correctAnswers = Array.isArray(q.answer) ? q.answer : [q.answer];
+        const correctAnswers = Array.isArray(question.answer) ? question.answer : [question.answer];
         div.classList.add(correctAnswers.includes(i) ? 'correct' : 'incorrect');
       } else {
-        const correctAnswers = Array.isArray(q.answer) ? q.answer : [q.answer];
+        const correctAnswers = Array.isArray(question.answer) ? question.answer : [question.answer];
         if (correctAnswers.includes(i) && state.mode === 'treino') {
           div.classList.add('correct'); // show correct answer
         }
