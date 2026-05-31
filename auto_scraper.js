@@ -82,10 +82,10 @@ async function scrapePage(page) {
 
             questions.push({
                 domain,
-                pergunta,
-                opcoes,
-                correta,
-                explicacao: explanation
+                question: pergunta,
+                options: opcoes,
+                answer: correta,
+                explanation: explanation
             });
         });
 

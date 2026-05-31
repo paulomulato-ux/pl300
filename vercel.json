@@ -8,5 +8,12 @@
         "distDir": "docs"
       }
     }
+  ],
+  "routes": [
+    { "src": "/pl300$", "dest": "/index.html" },
+    { "src": "/pl300/(.*)", "dest": "/$1" }
+  ],
+  "redirects": [
+    { "source": "/", "destination": "/pl300", "permanent": true }
   ]
 }

@@ -1,600 +1,600 @@
 window.questionBank = {
   "Preparar Dados": [
     {
-      "pergunta": "You are creating a Microsoft Power BI imported data model to perform basket analysis. The goal of the analysis is to identify which products are usually bought together in the same transaction across and within sales territories. You import a fact table named Sales as shown in the exhibit. The related dimension tables are imported into the model. Sales contains the data shown in the following table. You are evaluating how to optimize the model. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
-      "opcoes": [
+      "question": "You are creating a Microsoft Power BI imported data model to perform basket analysis. The goal of the analysis is to identify which products are usually bought together in the same transaction across and within sales territories. You import a fact table named Sales as shown in the exhibit. The related dimension tables are imported into the model. Sales contains the data shown in the following table. You are evaluating how to optimize the model. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: Yes - No - No Reference: https://finance-bi.com/power-bi-basket-analysis/"
+      "answer": 1,
+      "explanation": "Resposta: Yes - No - No Reference: https://finance-bi.com/power-bi-basket-analysis/"
     },
     {
-      "pergunta": "You are creating a Microsoft Power BI imported data model to perform basket analysis. The goal of the analysis is to identify which products are usually bought together in the same transaction across and within sales territories. You import a fact table named Sales as shown in the exhibit. The related dimension tables are imported into the model. Sales contains the data shown in the following table. You are evaluating how to optimize the model. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
-      "opcoes": [
+      "question": "You are creating a Microsoft Power BI imported data model to perform basket analysis. The goal of the analysis is to identify which products are usually bought together in the same transaction across and within sales territories. You import a fact table named Sales as shown in the exhibit. The related dimension tables are imported into the model. Sales contains the data shown in the following table. You are evaluating how to optimize the model. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: Yes - No - No Reference: https://finance-bi.com/power-bi-basket-analysis/"
+      "answer": 1,
+      "explanation": "Resposta: Yes - No - No Reference: https://finance-bi.com/power-bi-basket-analysis/"
     },
     {
-      "pergunta": "You are creating a Microsoft Power BI imported data model to perform basket analysis. The goal of the analysis is to identify which products are usually bought together in the same transaction across and within sales territories. You import a fact table named Sales as shown in the exhibit. The related dimension tables are imported into the model. Sales contains the data shown in the following table. You are evaluating how to optimize the model. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
-      "opcoes": [
+      "question": "You are creating a Microsoft Power BI imported data model to perform basket analysis. The goal of the analysis is to identify which products are usually bought together in the same transaction across and within sales territories. You import a fact table named Sales as shown in the exhibit. The related dimension tables are imported into the model. Sales contains the data shown in the following table. You are evaluating how to optimize the model. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: Yes - No - No Reference: https://finance-bi.com/power-bi-basket-analysis/"
+      "answer": 1,
+      "explanation": "Resposta: Yes - No - No Reference: https://finance-bi.com/power-bi-basket-analysis/"
     },
     {
-      "pergunta": "You are creating a Microsoft Power BI imported data model to perform basket analysis. The goal of the analysis is to identify which products are usually bought together in the same transaction across and within sales territories. You import a fact table named Sales as shown in the exhibit. The related dimension tables are imported into the model. Sales contains the data shown in the following table. You are evaluating how to optimize the model. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
-      "opcoes": [
+      "question": "You are creating a Microsoft Power BI imported data model to perform basket analysis. The goal of the analysis is to identify which products are usually bought together in the same transaction across and within sales territories. You import a fact table named Sales as shown in the exhibit. The related dimension tables are imported into the model. Sales contains the data shown in the following table. You are evaluating how to optimize the model. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: Yes - No - No Reference: https://finance-bi.com/power-bi-basket-analysis/"
+      "answer": 1,
+      "explanation": "Resposta: Yes - No - No Reference: https://finance-bi.com/power-bi-basket-analysis/"
     },
     {
-      "pergunta": "You are creating a Microsoft Power BI imported data model to perform basket analysis. The goal of the analysis is to identify which products are usually bought together in the same transaction across and within sales territories. You import a fact table named Sales as shown in the exhibit. The related dimension tables are imported into the model. Sales contains the data shown in the following table. You are evaluating how to optimize the model. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
-      "opcoes": [
+      "question": "You are creating a Microsoft Power BI imported data model to perform basket analysis. The goal of the analysis is to identify which products are usually bought together in the same transaction across and within sales territories. You import a fact table named Sales as shown in the exhibit. The related dimension tables are imported into the model. Sales contains the data shown in the following table. You are evaluating how to optimize the model. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: Yes - No - No Reference: https://finance-bi.com/power-bi-basket-analysis/"
+      "answer": 1,
+      "explanation": "Resposta: Yes - No - No Reference: https://finance-bi.com/power-bi-basket-analysis/"
     },
     {
-      "pergunta": "You are creating a Microsoft Power BI imported data model to perform basket analysis. The goal of the analysis is to identify which products are usually bought together in the same transaction across and within sales territories. You import a fact table named Sales as shown in the exhibit. The related dimension tables are imported into the model. Sales contains the data shown in the following table. You are evaluating how to optimize the model. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
-      "opcoes": [
+      "question": "You are creating a Microsoft Power BI imported data model to perform basket analysis. The goal of the analysis is to identify which products are usually bought together in the same transaction across and within sales territories. You import a fact table named Sales as shown in the exhibit. The related dimension tables are imported into the model. Sales contains the data shown in the following table. You are evaluating how to optimize the model. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: Yes - No - No Reference: https://finance-bi.com/power-bi-basket-analysis/"
+      "answer": 1,
+      "explanation": "Resposta: Yes - No - No Reference: https://finance-bi.com/power-bi-basket-analysis/"
     },
     {
-      "pergunta": "You are creating a Microsoft Power BI imported data model to perform basket analysis. The goal of the analysis is to identify which products are usually bought together in the same transaction across and within sales territories. You import a fact table named Sales as shown in the exhibit. The related dimension tables are imported into the model. Sales contains the data shown in the following table. You are evaluating how to optimize the model. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
-      "opcoes": [
+      "question": "You are creating a Microsoft Power BI imported data model to perform basket analysis. The goal of the analysis is to identify which products are usually bought together in the same transaction across and within sales territories. You import a fact table named Sales as shown in the exhibit. The related dimension tables are imported into the model. Sales contains the data shown in the following table. You are evaluating how to optimize the model. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: Yes - No - No Reference: https://finance-bi.com/power-bi-basket-analysis/"
+      "answer": 1,
+      "explanation": "Resposta: Yes - No - No Reference: https://finance-bi.com/power-bi-basket-analysis/"
     },
     {
-      "pergunta": "You are creating a Microsoft Power BI imported data model to perform basket analysis. The goal of the analysis is to identify which products are usually bought together in the same transaction across and within sales territories. You import a fact table named Sales as shown in the exhibit. The related dimension tables are imported into the model. Sales contains the data shown in the following table. You are evaluating how to optimize the model. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
-      "opcoes": [
+      "question": "You are creating a Microsoft Power BI imported data model to perform basket analysis. The goal of the analysis is to identify which products are usually bought together in the same transaction across and within sales territories. You import a fact table named Sales as shown in the exhibit. The related dimension tables are imported into the model. Sales contains the data shown in the following table. You are evaluating how to optimize the model. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: Yes - No - No Reference: https://finance-bi.com/power-bi-basket-analysis/"
+      "answer": 1,
+      "explanation": "Resposta: Yes - No - No Reference: https://finance-bi.com/power-bi-basket-analysis/"
     },
     {
-      "pergunta": "You are creating a Microsoft Power BI imported data model to perform basket analysis. The goal of the analysis is to identify which products are usually bought together in the same transaction across and within sales territories. You import a fact table named Sales as shown in the exhibit. The related dimension tables are imported into the model. Sales contains the data shown in the following table. You are evaluating how to optimize the model. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
-      "opcoes": [
+      "question": "You are creating a Microsoft Power BI imported data model to perform basket analysis. The goal of the analysis is to identify which products are usually bought together in the same transaction across and within sales territories. You import a fact table named Sales as shown in the exhibit. The related dimension tables are imported into the model. Sales contains the data shown in the following table. You are evaluating how to optimize the model. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: Yes - No - No Reference: https://finance-bi.com/power-bi-basket-analysis/"
+      "answer": 1,
+      "explanation": "Resposta: Yes - No - No Reference: https://finance-bi.com/power-bi-basket-analysis/"
     },
     {
-      "pergunta": "You are creating a Microsoft Power BI imported data model to perform basket analysis. The goal of the analysis is to identify which products are usually bought together in the same transaction across and within sales territories. You import a fact table named Sales as shown in the exhibit. The related dimension tables are imported into the model. Sales contains the data shown in the following table. You are evaluating how to optimize the model. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
-      "opcoes": [
+      "question": "You are creating a Microsoft Power BI imported data model to perform basket analysis. The goal of the analysis is to identify which products are usually bought together in the same transaction across and within sales territories. You import a fact table named Sales as shown in the exhibit. The related dimension tables are imported into the model. Sales contains the data shown in the following table. You are evaluating how to optimize the model. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: Yes - No - No Reference: https://finance-bi.com/power-bi-basket-analysis/"
+      "answer": 1,
+      "explanation": "Resposta: Yes - No - No Reference: https://finance-bi.com/power-bi-basket-analysis/"
     },
     {
-      "pergunta": "Um conector traz emails do último ano (mais de 10 milhões). Análise é sobre redes internas (De quem, Para quem). Você deve impedir leitura dos textos dos emails e reduzir modelo. Como?",
-      "opcoes": [
+      "question": "Um conector traz emails do último ano (mais de 10 milhões). Análise é sobre redes internas (De quem, Para quem). Você deve impedir leitura dos textos dos emails e reduzir modelo. Como?",
+      "options": [
         "Implementar Row-Level Security (RLS) baseada no remetente.",
         "Remover as colunas Subject e Body durante a importação (no Power Query).",
         "Ocultar (Hide) as colunas Subject e Body na visualização do modelo.",
         "Mascarar os textos dos e-mails usando DAX."
       ],
-      "correta": 1,
-      "explicacao": "Remover as colunas na etapa de transformação (Power Query) impede permanentemente o acesso aos textos (segurança) e evita armazenar dados de texto longos, o que reduz radicalmente o tamanho (10M * colunas de texto livres gastam muita memória)."
+      "answer": 1,
+      "explanation": "Remover as colunas na etapa de transformação (Power Query) impede permanentemente o acesso aos textos (segurança) e evita armazenar dados de texto longos, o que reduz radicalmente o tamanho (10M * colunas de texto livres gastam muita memória)."
     },
     {
-      "pergunta": "Modelo de 950 MB, 5 milhões de linhas de vendas dos últimos 5 anos. Requisito: analisar apenas vendas ativas do ano ATUAL e do ano ANTERIOR. O que você deve fazer para reduzir o modelo?",
-      "opcoes": [
+      "question": "Modelo de 950 MB, 5 milhões de linhas de vendas dos últimos 5 anos. Requisito: analisar apenas vendas ativas do ano ATUAL e do ano ANTERIOR. O que você deve fazer para reduzir o modelo?",
+      "options": [
         "Remover a coluna de Status do Produto.",
         "Remover linhas de produtos inativos.",
         "Remover as linhas referentes a vendas que ocorreram há mais de dois anos.",
         "Ocultar as colunas não usadas na exibição de relatório."
       ],
-      "correta": 2,
-      "explicacao": "Se o requisito comercial pede apenas vendas do ano atual e do anterior, manter vendas de 5 anos é um desperdício de memória. Filtrar no Power Query para descartar as linhas velhas minimiza muito o modelo."
+      "answer": 2,
+      "explanation": "Se o requisito comercial pede apenas vendas do ano atual e do anterior, manter vendas de 5 anos é um desperdício de memória. Filtrar no Power Query para descartar as linhas velhas minimiza muito o modelo."
     },
     {
-      "pergunta": "Você tem um dataset de 1 milhão de linhas com uma coluna DateTime. Como reduzir o tamanho do modelo de dados sem perder dados?",
-      "opcoes": [
+      "question": "Você tem um dataset de 1 milhão de linhas com uma coluna DateTime. Como reduzir o tamanho do modelo de dados sem perder dados?",
+      "options": [
         "Arredondar a hora para o início da hora.",
         "Mudar o tipo de dado para Texto.",
         "Cortar (Trim) a coluna de data.",
         "Dividir a coluna DateTime em duas colunas: uma de Data e outra de Tempo (Hora)."
       ],
-      "correta": 3,
-      "explicacao": "Dividir DateTime em duas colunas reduz drasticamente a cardinalidade. Uma coluna DateTime tem milhares de valores únicos (um para cada segundo do ano). Uma coluna de Data terá 365 valores únicos, e a de tempo 86.400 valores."
+      "answer": 3,
+      "explanation": "Dividir DateTime em duas colunas reduz drasticamente a cardinalidade. Uma coluna DateTime tem milhares de valores únicos (um para cada segundo do ano). Uma coluna de Data terá 365 valores únicos, e a de tempo 86.400 valores."
     },
     {
-      "pergunta": "Além do próprio Power BI, onde é o melhor lugar para realizar otimização de desempenho?",
-      "opcoes": [
+      "question": "Além do próprio Power BI, onde é o melhor lugar para realizar otimização de desempenho?",
+      "options": [
         "Na fonte de dados (At the data source)",
         "No serviço Power BI",
         "No Microsoft SharePoint",
         "No gateway de dados local"
       ],
-      "correta": 0,
-      "explicacao": "Filtrar, transformar e agregar dados na própria fonte (ex: criando Views no SQL Server ou executando transformações no banco) tira a carga do Power BI e do Power Query (Query Folding)."
+      "answer": 0,
+      "explanation": "Filtrar, transformar e agregar dados na própria fonte (ex: criando Views no SQL Server ou executando transformações no banco) tira a carga do Power BI e do Power Query (Query Folding)."
     },
     {
-      "pergunta": "Qual o benefício de analisar metadados (metadata) no Power Query?",
-      "opcoes": [
+      "question": "Qual o benefício de analisar metadados (metadata) no Power Query?",
+      "options": [
         "Saber o número de linhas e colunas carregadas.",
         "Identificar claramente inconsistências de dados em seu conjunto de dados.",
         "Reduzir o tamanho do arquivo PBIX.",
         "Criar relações automaticamente."
       ],
-      "correta": 1,
-      "explicacao": "A análise de metadados no Power Query (ex: Qualidade da coluna, Distribuição de coluna, Perfil de coluna) ajuda a identificar valores nulos, erros e anomalias rapidamente antes de carregar o modelo."
+      "answer": 1,
+      "explanation": "A análise de metadados no Power Query (ex: Qualidade da coluna, Distribuição de coluna, Perfil de coluna) ajuda a identificar valores nulos, erros e anomalias rapidamente antes de carregar o modelo."
     },
     {
-      "pergunta": "Você tem uma API que retorna mais de 100 colunas e precisa remover todas as colunas com sufixo 'sourceid'. Qual combinação de funções M você usaria para completar esse código Power Query?",
-      "opcoes": [
+      "question": "Você tem uma API que retorna mais de 100 colunas e precisa remover todas as colunas com sufixo 'sourceid'. Qual combinação de funções M você usaria para completar esse código Power Query?",
+      "options": [
         "Table.RemoveColumns, List.Select e Text.EndsWith",
         "Table.SelectColumns, List.Filter e Text.StartsWith",
         "Table.DeleteColumns, List.Contains e Text.Contains",
         "Table.TransformColumns, List.Generate e Text.Replace"
       ],
-      "correta": 0,
-      "explicacao": "Para remover colunas com base em um padrão de sufixo no Power Query M: Table.RemoveColumns remove as colunas, List.Select filtra a lista de colunas para encontrar as que atendem ao critério, e Text.EndsWith verifica se o nome da coluna termina com o sufixo desejado."
+      "answer": 0,
+      "explanation": "Para remover colunas com base em um padrão de sufixo no Power Query M: Table.RemoveColumns remove as colunas, List.Select filtra a lista de colunas para encontrar as que atendem ao critério, e Text.EndsWith verifica se o nome da coluna termina com o sufixo desejado."
     },
     {
-      "pergunta": "Você está mesclando as consultas Orders e Order Details no Editor do Power Query. Devido a problemas de qualidade de dados, algumas linhas da consulta Orders NÃO têm uma linha correspondente na consulta Order Details. Você precisa garantir que todas as linhas da consulta Orders sejam exibidas. Qual tipo de junção deve usar?",
-      "opcoes": [
+      "question": "Você está mesclando as consultas Orders e Order Details no Editor do Power Query. Devido a problemas de qualidade de dados, algumas linhas da consulta Orders NÃO têm uma linha correspondente na consulta Order Details. Você precisa garantir que todas as linhas da consulta Orders sejam exibidas. Qual tipo de junção deve usar?",
+      "options": [
         "Externa Completa (Full Outer)",
         "Interna (Inner)",
         "Externa Esquerda (Left Outer)",
         "Anti Direita (Right Anti)"
       ],
-      "correta": 2,
-      "explicacao": "Left Outer (Externa Esquerda) retorna TODAS as linhas da tabela da esquerda (Orders) e apenas as linhas correspondentes da tabela da direita (Order Details). Linhas de Orders sem correspondência em Order Details aparecem com valores nulos. Inner Join excluiria as linhas sem correspondência."
+      "answer": 2,
+      "explanation": "Left Outer (Externa Esquerda) retorna TODAS as linhas da tabela da esquerda (Orders) e apenas as linhas correspondentes da tabela da direita (Order Details). Linhas de Orders sem correspondência em Order Details aparecem com valores nulos. Inner Join excluiria as linhas sem correspondência."
     },
     {
-      "pergunta": "Você visualiza uma consulta no Editor do Power Query. Nota que a Coluna A contém valores em branco (blank) e valores nulos (null). Você precisa converter todos os valores em branco para null. Qual opção deve selecionar na Coluna A?",
-      "opcoes": [
+      "question": "Você visualiza uma consulta no Editor do Power Query. Nota que a Coluna A contém valores em branco (blank) e valores nulos (null). Você precisa converter todos os valores em branco para null. Qual opção deve selecionar na Coluna A?",
+      "options": [
         "Limpar (Clean)",
         "Preencher Abaixo (Fill Down)",
         "Substituir Erros (Replace Errors)",
         "Substituir Valores (Replace Values)"
       ],
-      "correta": 3,
-      "explicacao": "Substituir Valores (Replace Values) permite especificar um valor de origem (em branco/string vazia) e um valor de destino (null). Esta é a única opção que permite converter especificamente valores em branco para null sem afetar outros dados."
+      "answer": 3,
+      "explanation": "Substituir Valores (Replace Values) permite especificar um valor de origem (em branco/string vazia) e um valor de destino (null). Esta é a única opção que permite converter especificamente valores em branco para null sem afetar outros dados."
     },
     {
-      "pergunta": "Você está usando o Editor do Power Query para importar um arquivo Excel onde os dados começam com nomes de colunas na linha 5 da planilha. Há valores em branco ocasionais na coluna A. Você precisa remover as linhas em branco do topo e usar a 5ª linha como cabeçalhos. O que deve fazer PRIMEIRO?",
-      "opcoes": [
+      "question": "Você está usando o Editor do Power Query para importar um arquivo Excel onde os dados começam com nomes de colunas na linha 5 da planilha. Há valores em branco ocasionais na coluna A. Você precisa remover as linhas em branco do topo e usar a 5ª linha como cabeçalhos. O que deve fazer PRIMEIRO?",
+      "options": [
         "Remover valores vazios da primeira coluna",
         "Remover as 4 primeiras linhas",
         "Usar os cabeçalhos atuais como primeira linha",
         "Usar a primeira linha como cabeçalhos"
       ],
-      "correta": 1,
-      "explicacao": "A ordem correta é: primeiro remover as 4 linhas superiores (que não contêm dados), depois usar a primeira linha como cabeçalhos. Se você usasse 'Remover valores vazios' primeiro, poderia remover linhas de dados legítimas que têm valores em branco na coluna A."
+      "answer": 1,
+      "explanation": "A ordem correta é: primeiro remover as 4 linhas superiores (que não contêm dados), depois usar a primeira linha como cabeçalhos. Se você usasse 'Remover valores vazios' primeiro, poderia remover linhas de dados legítimas que têm valores em branco na coluna A."
     },
     {
-      "pergunta": "Você tem um modelo Power BI com dados de sensores de 500 sensores que retornam leituras de temperatura a cada minuto. Os relatórios precisam calcular a temperatura média por sensor a cada hora e NÃO mostram os dados brutos por minuto. Você precisa reduzir o tamanho do modelo para melhorar o desempenho. O que deve fazer?",
-      "opcoes": [
+      "question": "Você tem um modelo Power BI com dados de sensores de 500 sensores que retornam leituras de temperatura a cada minuto. Os relatórios precisam calcular a temperatura média por sensor a cada hora e NÃO mostram os dados brutos por minuto. Você precisa reduzir o tamanho do modelo para melhorar o desempenho. O que deve fazer?",
+      "options": [
         "Criar visuais que agrupem os dados por hora",
         "Usar o Power Query para agrupar os dados do sensor por hora",
         "Adicionar um filtro de relatório para a coluna Hora",
         "Remover as linhas que contêm leituras"
       ],
-      "correta": 1,
-      "explicacao": "Agrupar os dados por hora no Power Query reduz drasticamente o número de linhas do modelo (de 1 leitura/minuto para 1 leitura/hora = 60x menos dados). Isso melhora o desempenho pois os dados já chegam agregados ao modelo, sem precisar processar os dados brutos durante a visualização."
+      "answer": 1,
+      "explanation": "Agrupar os dados por hora no Power Query reduz drasticamente o número de linhas do modelo (de 1 leitura/minuto para 1 leitura/hora = 60x menos dados). Isso melhora o desempenho pois os dados já chegam agregados ao modelo, sem precisar processar os dados brutos durante a visualização."
     },
     {
-      "pergunta": "Você tem duas consultas: Query1 recupera a tabela SMB_Customers de um SQL Server e Query2 recupera Enterprise_Customers de um Oracle Server. Ambas as tabelas têm as mesmas colunas. Você precisa combinar os dados. Qual comando deve usar?",
-      "opcoes": [
+      "question": "Você tem duas consultas: Query1 recupera a tabela SMB_Customers de um SQL Server e Query2 recupera Enterprise_Customers de um Oracle Server. Ambas as tabelas têm as mesmas colunas. Você precisa combinar os dados. Qual comando deve usar?",
+      "options": [
         "Combinar Arquivos",
         "Mesclar Consultas",
         "Mesclar Colunas",
         "Acrescentar Consultas"
       ],
-      "correta": 3,
-      "explicacao": "Acrescentar Consultas (Append) é usado para combinar tabelas com a mesma estrutura de colunas verticalmente (empilhando linhas). Mesclar Consultas é como um JOIN, combinando colunas horizontalmente. Como ambas as tabelas têm as mesmas colunas e queremos unir os clientes, Acrescentar é a escolha correta."
+      "answer": 3,
+      "explanation": "Acrescentar Consultas (Append) é usado para combinar tabelas com a mesma estrutura de colunas verticalmente (empilhando linhas). Mesclar Consultas é como um JOIN, combinando colunas horizontalmente. Como ambas as tabelas têm as mesmas colunas e queremos unir os clientes, Acrescentar é a escolha correta."
     },
     {
-      "pergunta": "Você planeja usar o Power BI Desktop para importar 100 arquivos CSV de diferentes lojas, todos com a mesma estrutura, armazenados em um compartilhamento de rede. Você precisa importá-los em uma única tabela com o mínimo de esforço administrativo. O que deve fazer?",
-      "opcoes": [
+      "question": "Você planeja usar o Power BI Desktop para importar 100 arquivos CSV de diferentes lojas, todos com a mesma estrutura, armazenados em um compartilhamento de rede. Você precisa importá-los em uma única tabela com o mínimo de esforço administrativo. O que deve fazer?",
+      "options": [
         "Adicionar uma fonte de dados de Pasta e usar o comando Combinar Arquivos",
         "Adicionar uma fonte de dados de Pasta e usar o comando Mesclar Consultas",
         "Adicionar uma fonte de dados do Excel e usar o comando Mesclar Consultas",
         "Adicionar fontes de dados texto/CSV individuais e usar o comando Acrescentar Consultas"
       ],
-      "correta": 0,
-      "explicacao": "Adicionar uma fonte de dados de Pasta e usar 'Combinar Arquivos' é a forma mais eficiente de consolidar múltiplos arquivos com a mesma estrutura. O Power Query cria automaticamente uma função de combinação que processa todos os arquivos na pasta."
+      "answer": 0,
+      "explanation": "Adicionar uma fonte de dados de Pasta e usar 'Combinar Arquivos' é a forma mais eficiente de consolidar múltiplos arquivos com a mesma estrutura. O Power Query cria automaticamente uma função de combinação que processa todos os arquivos na pasta."
     },
     {
-      "pergunta": "Você tem um cubo SSAS com dados históricos. A consulta retorna 25.499 registros, mas o data warehouse de origem tem 26.423 registros. Você precisa garantir que a consulta retorne todos os registros. O que deve fazer?",
-      "opcoes": [
+      "question": "Você tem um cubo SSAS com dados históricos. A consulta retorna 25.499 registros, mas o data warehouse de origem tem 26.423 registros. Você precisa garantir que a consulta retorne todos os registros. O que deve fazer?",
+      "options": [
         "No Editor de Consultas, atualizar todos os dados",
         "Mudar a consulta para modo de conexão dinâmica (Live Connection)",
         "Excluir a etapa Remover Duplicatas",
         "Adicionar uma etapa Desdinamizar Colunas"
       ],
-      "correta": 2,
-      "explicacao": "A diferença entre 25.499 e 26.423 indica que uma etapa 'Remover Duplicatas' foi aplicada incorretamente. Como os registros de fatos (como rastreamento de pedidos) podem ter valores repetidos em colunas individuais, remover 'duplicatas' com base em uma única coluna exclui registros legítimos."
+      "answer": 2,
+      "explanation": "A diferença entre 25.499 e 26.423 indica que uma etapa 'Remover Duplicatas' foi aplicada incorretamente. Como os registros de fatos (como rastreamento de pedidos) podem ter valores repetidos em colunas individuais, remover 'duplicatas' com base em uma única coluna exclui registros legítimos."
     },
     {
-      "pergunta": "Você está importando dados de vendas de um arquivo Excel. Ao criar um gráfico de barras, as regiões aparecem corretamente, mas o valor de vendas exibe a contagem em vez da soma. Como você deve modificar a consulta para garantir que os dados apareçam corretamente?",
-      "opcoes": [
+      "question": "Você está importando dados de vendas de um arquivo Excel. Ao criar um gráfico de barras, as regiões aparecem corretamente, mas o valor de vendas exibe a contagem em vez da soma. Como você deve modificar a consulta para garantir que os dados apareçam corretamente?",
+      "options": [
         "Excluir a consulta, importar os dados para o SQL Server e depois reimportar",
         "No Editor de Consultas, adicionar uma coluna calculada que totaliza a coluna de valor de vendas",
         "Alterar o tipo de dados da coluna de valor de vendas para Numérico",
         "Atualizar o modelo de dados"
       ],
-      "correta": 2,
-      "explicacao": "Quando o Power BI exibe contagem em vez de soma, geralmente significa que a coluna foi importada como texto em vez de número. Alterar o tipo de dados para Numérico (Decimal ou Número Inteiro) resolve o problema, permitindo que o DAX agregue corretamente."
+      "answer": 2,
+      "explanation": "Quando o Power BI exibe contagem em vez de soma, geralmente significa que a coluna foi importada como texto em vez de número. Alterar o tipo de dados para Numérico (Decimal ou Número Inteiro) resolve o problema, permitindo que o DAX agregue corretamente."
     },
     {
-      "pergunta": "Você importa uma tabela no Power BI Desktop. Precisa configurar a tabela para extrair apenas o texto após um delimitador em uma coluna. O que deve fazer?",
-      "opcoes": [
+      "question": "Você importa uma tabela no Power BI Desktop. Precisa configurar a tabela para extrair apenas o texto após um delimitador em uma coluna. O que deve fazer?",
+      "options": [
         "No menu Formato, clicar em Aparar",
         "No menu Extrair, clicar em Últimos caracteres",
         "No menu Dividir Coluna, clicar em Por Delimitador",
         "No menu Extrair, clicar em Texto Após Delimitador"
       ],
-      "correta": 3,
-      "explicacao": "A opção 'Texto Após Delimitador' no menu Extrair permite extrair apenas o texto que aparece após um caractere delimitador específico em uma coluna, mantendo a coluna em uma única coluna resultante."
+      "answer": 3,
+      "explanation": "A opção 'Texto Após Delimitador' no menu Extrair permite extrair apenas o texto que aparece após um caractere delimitador específico em uma coluna, mantendo a coluna em uma única coluna resultante."
     },
     {
-      "pergunta": "Você tem uma consulta de um banco de dados SQL Azure. Descobre que a coluna 'ErrorCode' tem valores com espaço no início e a coluna 'SubStatus' contém caracteres não imprimíveis. Você precisa remover os espaços iniciais de ErrorCode e os caracteres não imprimíveis de SubStatus. O que deve fazer em cada coluna?",
-      "opcoes": [
+      "question": "Você tem uma consulta de um banco de dados SQL Azure. Descobre que a coluna 'ErrorCode' tem valores com espaço no início e a coluna 'SubStatus' contém caracteres não imprimíveis. Você precisa remover os espaços iniciais de ErrorCode e os caracteres não imprimíveis de SubStatus. O que deve fazer em cada coluna?",
+      "options": [
         "Trim e Clean",
         "Substituir valores e Limpar",
         "Extrair e Formatar",
         "Dividir coluna e Aparar"
       ],
-      "correta": 0,
-      "explicacao": "Trim remove espaços iniciais e finais de uma coluna de texto. Clean remove caracteres não imprimíveis. Ambas as funções estão disponíveis na guia Transformar > Formato do Power Query Editor."
+      "answer": 0,
+      "explanation": "Trim remove espaços iniciais e finais de uma coluna de texto. Clean remove caracteres não imprimíveis. Ambas as funções estão disponíveis na guia Transformar > Formato do Power Query Editor."
     },
     {
-      "pergunta": "Durante o processo de QA dos dados, você percebe que há valores nulos na coluna 'Return type' (Returned, No return e null). Após conversar com seu gerente, você decide substituir os valores nulos por 'No return'. Qual ação você deve executar?",
-      "opcoes": [
+      "question": "Durante o processo de QA dos dados, você percebe que há valores nulos na coluna 'Return type' (Returned, No return e null). Após conversar com seu gerente, você decide substituir os valores nulos por 'No return'. Qual ação você deve executar?",
+      "options": [
         "Selecionar a coluna Return type > Transformar > Substituir valores",
         "Selecionar a coluna Return type > Transformar > Preencher abaixo",
         "Selecionar a coluna Return type > Adicionar coluna > Coluna por exemplos",
         "Selecionar a coluna Return type > Início > Remover linhas"
       ],
-      "correta": 0,
-      "explicacao": "Para substituir valores nulos por um valor específico, use Transformar > Substituir valores. Isso permite definir exatamente qual valor deve substituir os nulos, mantendo todos os outros dados intactos."
+      "answer": 0,
+      "explanation": "Para substituir valores nulos por um valor específico, use Transformar > Substituir valores. Isso permite definir exatamente qual valor deve substituir os nulos, mantendo todos os outros dados intactos."
     },
     {
-      "pergunta": "Quais dois blocos formam o código M que executa sua consulta no Power Query?",
-      "opcoes": [
+      "question": "Quais dois blocos formam o código M que executa sua consulta no Power Query?",
+      "options": [
         "do e while",
         "if e then",
         "for e each",
         "let e in"
       ],
-      "correta": 3,
-      "explicacao": "O código M de uma consulta consiste em dois blocos: 'let' (onde todas as variáveis e etapas são definidas) e 'in' (que especifica a saída final da consulta). Você pode ver isso no Editor Avançado."
+      "answer": 3,
+      "explanation": "O código M de uma consulta consiste em dois blocos: 'let' (onde todas as variáveis e etapas são definidas) e 'in' (que especifica a saída final da consulta). Você pode ver isso no Editor Avançado."
     },
     {
-      "pergunta": "O que acontece internamente cada vez que você aplica uma transformação no Power Query?",
-      "opcoes": [
+      "question": "O que acontece internamente cada vez que você aplica uma transformação no Power Query?",
+      "options": [
         "A mesma transformação é aplicada aos dados de origem",
         "As alterações são permanentes e não podem ser modificadas",
         "O Editor de Consultas escreve o código DAX correspondente para a etapa aplicada",
         "O Editor de Consultas escreve o código M correspondente para a etapa aplicada"
       ],
-      "correta": 3,
-      "explicacao": "Data Mashup, ou código M, é a linguagem de fórmula que impulsiona o Power Query. Sempre que você usa as ferramentas de UI para aplicar uma transformação, o código M correspondente é gerado automaticamente."
+      "answer": 3,
+      "explanation": "Data Mashup, ou código M, é a linguagem de fórmula que impulsiona o Power Query. Sempre que você usa as ferramentas de UI para aplicar uma transformação, o código M correspondente é gerado automaticamente."
     },
     {
-      "pergunta": "Qual operação do Power Query adiciona linhas a uma tabela existente combinando tabelas com a mesma estrutura de colunas?",
-      "opcoes": [
+      "question": "Qual operação do Power Query adiciona linhas a uma tabela existente combinando tabelas com a mesma estrutura de colunas?",
+      "options": [
         "Agrupar por",
         "Dinamizar",
         "Mesclar consultas",
         "Acrescentar consultas"
       ],
-      "correta": 3,
-      "explicacao": "Acrescentar consultas (Append queries) combina tabelas que compartilham exatamente a mesma estrutura de colunas e tipos de dados, adicionando as linhas de uma tabela ao final da outra."
+      "answer": 3,
+      "explanation": "Acrescentar consultas (Append queries) combina tabelas que compartilham exatamente a mesma estrutura de colunas e tipos de dados, adicionando as linhas de uma tabela ao final da outra."
     },
     {
-      "pergunta": "Você tem dados de vendas anuais por departamento onde cada ano tem sua própria coluna. Qual ferramenta do Power Query converte as múltiplas colunas 'Ano' em linhas?",
-      "opcoes": [
+      "question": "Você tem dados de vendas anuais por departamento onde cada ano tem sua própria coluna. Qual ferramenta do Power Query converte as múltiplas colunas 'Ano' em linhas?",
+      "options": [
         "Dinamizar (Pivot)",
         "Desdinamizar (Unpivot)",
         "Transpor",
         "Agrupar por"
       ],
-      "correta": 1,
-      "explicacao": "Desdinamizar (Unpivot) converte colunas em linhas. No exemplo dado, as colunas de ano seriam convertidas em valores de linha, criando uma estrutura mais adequada para análise no Power BI."
+      "answer": 1,
+      "explanation": "Desdinamizar (Unpivot) converte colunas em linhas. No exemplo dado, as colunas de ano seriam convertidas em valores de linha, criando uma estrutura mais adequada para análise no Power BI."
     },
     {
-      "pergunta": "Qual ferramenta do Power Query você usaria para consolidar dados diários de transações em transações mensais?",
-      "opcoes": [
+      "question": "Qual ferramenta do Power Query você usaria para consolidar dados diários de transações em transações mensais?",
+      "options": [
         "Mesclar consultas",
         "Acrescentar consultas",
         "Agrupar por (Group By)",
         "Dinamizar colunas (Pivot Columns)"
       ],
-      "correta": 2,
-      "explicacao": "Agrupar por (Group By) permite agregar dados em um nível diferente de granularidade, como consolidar dados diários em mensais. Você pode especificar a coluna de agrupamento (mês) e a agregação (soma, média, etc.)."
+      "answer": 2,
+      "explanation": "Agrupar por (Group By) permite agregar dados em um nível diferente de granularidade, como consolidar dados diários em mensais. Você pode especificar a coluna de agrupamento (mês) e a agregação (soma, média, etc.)."
     },
     {
-      "pergunta": "Qual ferramenta do Power Query você usaria quando sabe o resultado desejado de uma coluna, mas não sabe quais transformações usar?",
-      "opcoes": [
+      "question": "Qual ferramenta do Power Query você usaria quando sabe o resultado desejado de uma coluna, mas não sabe quais transformações usar?",
+      "options": [
         "Coluna por exemplos",
         "Coluna condicional",
         "Coluna personalizada",
         "Coluna de índice"
       ],
-      "correta": 0,
-      "explicacao": "Coluna por exemplos permite adicionar novas colunas fornecendo apenas um valor de exemplo do resultado desejado. O Power Query infere automaticamente as transformações necessárias para gerar esse resultado."
+      "answer": 0,
+      "explanation": "Coluna por exemplos permite adicionar novas colunas fornecendo apenas um valor de exemplo do resultado desejado. O Power Query infere automaticamente as transformações necessárias para gerar esse resultado."
     },
     {
-      "pergunta": "O que pode ser útil para criar IDs únicos e formar relacionamentos entre tabelas no Power Query?",
-      "opcoes": [
+      "question": "O que pode ser útil para criar IDs únicos e formar relacionamentos entre tabelas no Power Query?",
+      "options": [
         "Adicionar uma coluna por exemplos",
         "Agrupar dados",
         "Adicionar uma coluna de índice",
         "Acrescentar consultas"
       ],
-      "correta": 2,
-      "explicacao": "Colunas de índice contêm uma lista de valores sequenciais que podem identificar cada linha única em uma tabela, sendo frequentemente usadas para criar IDs únicos e formar relacionamentos entre tabelas."
+      "answer": 2,
+      "explanation": "Colunas de índice contêm uma lista de valores sequenciais que podem identificar cada linha única em uma tabela, sendo frequentemente usadas para criar IDs únicos e formar relacionamentos entre tabelas."
     },
     {
-      "pergunta": "Quando você usaria uma ferramenta da guia Transformar em vez da guia Adicionar Coluna no Power Query?",
-      "opcoes": [
+      "question": "Quando você usaria uma ferramenta da guia Transformar em vez da guia Adicionar Coluna no Power Query?",
+      "options": [
         "Quando você deseja sobrescrever os valores das colunas existentes",
         "Quando você deseja manter os valores das colunas existentes",
         "Quando você deseja criar novas colunas",
         "Quando você quer adicionar uma coluna de índice"
       ],
-      "correta": 0,
-      "explicacao": "A guia Transformar modifica os valores da coluna existente (sobrescreve), enquanto a guia Adicionar Coluna cria uma nova coluna mantendo a original intacta. Use Transformar quando quiser modificar os dados da coluna atual."
+      "answer": 0,
+      "explanation": "A guia Transformar modifica os valores da coluna existente (sobrescreve), enquanto a guia Adicionar Coluna cria uma nova coluna mantendo a original intacta. Use Transformar quando quiser modificar os dados da coluna atual."
     },
     {
-      "pergunta": "Qual ferramenta de perfil de dados fornece estatísticas detalhadas de coluna e distribuição de valores para uma coluna selecionada?",
-      "opcoes": [
+      "question": "Qual ferramenta de perfil de dados fornece estatísticas detalhadas de coluna e distribuição de valores para uma coluna selecionada?",
+      "options": [
         "Qualidade da coluna",
         "Distribuição da coluna",
         "Perfil da coluna",
         "Estatísticas da coluna"
       ],
-      "correta": 2,
-      "explicacao": "O Perfil da coluna fornece uma visão mais holística dos dados de uma coluna selecionada, incluindo distribuição de amostra dos dados e estatísticas de coluna como min, max, média, contagem de valores distintos e únicos."
+      "answer": 2,
+      "explanation": "O Perfil da coluna fornece uma visão mais holística dos dados de uma coluna selecionada, incluindo distribuição de amostra dos dados e estatísticas de coluna como min, max, média, contagem de valores distintos e únicos."
     },
     {
-      "pergunta": "Qual é o propósito do perfil de dados (data profiling) no Power Query?",
-      "opcoes": [
+      "question": "Qual é o propósito do perfil de dados (data profiling) no Power Query?",
+      "options": [
         "Fornecer uma forma visual de explorar dados",
         "Ter uma ideia da composição do dataset",
         "Resolver problemas de qualidade de dados nas colunas",
         "Todas as opções acima"
       ],
-      "correta": 3,
-      "explicacao": "O perfil de dados no Power Query serve para tudo isso: explorar visualmente os dados, entender a composição do dataset (tipos de dados, distribuição) e identificar e resolver problemas de qualidade como erros, nulos e inconsistências."
+      "answer": 3,
+      "explanation": "O perfil de dados no Power Query serve para tudo isso: explorar visualmente os dados, entender a composição do dataset (tipos de dados, distribuição) e identificar e resolver problemas de qualidade como erros, nulos e inconsistências."
     },
     {
-      "pergunta": "Qual ferramenta de perfil de dados pode ser usada para verificar o número de erros em uma coluna no Power Query?",
-      "opcoes": [
+      "question": "Qual ferramenta de perfil de dados pode ser usada para verificar o número de erros em uma coluna no Power Query?",
+      "options": [
         "Qualidade da coluna",
         "Distribuição da coluna",
         "Perfil da coluna",
         "Qualidade da coluna e Perfil da coluna"
       ],
-      "correta": 3,
-      "explicacao": "Tanto a Qualidade da coluna (que mostra a porcentagem de erros) quanto o Perfil da coluna (que fornece estatísticas detalhadas incluindo contagem de erros) podem ser usadas para verificar erros em uma coluna."
+      "answer": 3,
+      "explanation": "Tanto a Qualidade da coluna (que mostra a porcentagem de erros) quanto o Perfil da coluna (que fornece estatísticas detalhadas incluindo contagem de erros) podem ser usadas para verificar erros em uma coluna."
     },
     {
-      "pergunta": "Quais ferramentas de perfil de dados o Power Query possui?",
-      "opcoes": [
+      "question": "Quais ferramentas de perfil de dados o Power Query possui?",
+      "options": [
         "Coluna por exemplos, coluna personalizada e coluna condicional",
         "Qualidade da coluna, Distribuição da coluna e Perfil da coluna",
         "Coluna de índice e duplicar coluna",
         "Formato, extrair e analisar"
       ],
-      "correta": 1,
-      "explicacao": "A guia EXIBIÇÃO do Power Query inclui ferramentas de perfil de dados: Qualidade da coluna (mostra % de válidos, erros e vazios), Distribuição da coluna (mostra distribuição dos valores) e Perfil da coluna (estatísticas detalhadas)."
+      "answer": 1,
+      "explanation": "A guia EXIBIÇÃO do Power Query inclui ferramentas de perfil de dados: Qualidade da coluna (mostra % de válidos, erros e vazios), Distribuição da coluna (mostra distribuição dos valores) e Perfil da coluna (estatísticas detalhadas)."
     },
     {
-      "pergunta": "Você tem um site SharePoint Online com várias bibliotecas de documentos. Uma delas contém relatórios de fabricação salvos como arquivos Excel com a mesma estrutura. Você precisa carregar apenas esses relatórios em uma tabela no Power BI Desktop. O que você deve fazer?",
-      "opcoes": [
+      "question": "Você tem um site SharePoint Online com várias bibliotecas de documentos. Uma delas contém relatórios de fabricação salvos como arquivos Excel com a mesma estrutura. Você precisa carregar apenas esses relatórios em uma tabela no Power BI Desktop. O que você deve fazer?",
+      "options": [
         "Obter dados de uma Pasta do SharePoint Online, inserir a URL do site e selecionar Combinar e Carregar",
         "Obter dados de uma Lista do SharePoint Online e inserir a URL do site. Selecionar Combinar e Transformar e filtrar pelo caminho da biblioteca",
         "Obter dados de uma Pasta do SharePoint Online, inserir a URL do site, selecionar Combinar e Transformar e filtrar pelo caminho da biblioteca de relatórios de fabricação",
         "Obter dados de uma Lista do SharePoint Online, inserir a URL e selecionar Combinar e Carregar"
       ],
-      "correta": 2,
-      "explicacao": "Para carregar apenas arquivos de uma biblioteca específica: use 'Pasta do SharePoint Online' (não Lista), selecione 'Combinar e Transformar' (não Carregar direto) para poder filtrar pelo caminho da pasta desejada antes de carregar."
+      "answer": 2,
+      "explanation": "Para carregar apenas arquivos de uma biblioteca específica: use 'Pasta do SharePoint Online' (não Lista), selecione 'Combinar e Transformar' (não Carregar direto) para poder filtrar pelo caminho da pasta desejada antes de carregar."
     },
     {
-      "pergunta": "Você tem um arquivo CSV com uma coluna de data no formato '2018-12-31 at 08:59'. Você precisa analisar as reclamações por data e usar uma hierarquia de data integrada. O que você deve fazer?",
-      "opcoes": [
+      "question": "Você tem um arquivo CSV com uma coluna de data no formato '2018-12-31 at 08:59'. Você precisa analisar as reclamações por data e usar uma hierarquia de data integrada. O que você deve fazer?",
+      "options": [
         "Alterar o tipo de dados da coluna para Data",
         "Aplicar a função Analisar (Parse) das transformações de Data à coluna",
         "Criar uma coluna por exemplo que começa com 2018-12-31 e definir o tipo de dados da nova coluna como Data",
         "Aplicar uma transformação para extrair os primeiros 11 caracteres da coluna"
       ],
-      "correta": 2,
-      "explicacao": "Como o formato inclui texto 'at', você precisa criar uma coluna por exemplo para extrair apenas a data, e depois definir o tipo como Data para habilitar a hierarquia de data integrada do Power BI."
+      "answer": 2,
+      "explanation": "Como o formato inclui texto 'at', você precisa criar uma coluna por exemplo para extrair apenas a data, e depois definir o tipo como Data para habilitar a hierarquia de data integrada do Power BI."
     },
     {
-      "pergunta": "Você tem uma lista de clientes em potencial com 1.500 linhas. Você precisa garantir que a lista contém registros para cada Estado/Região. Quais duas ações você deve realizar no Editor do Power Query?",
-      "opcoes": [
+      "question": "Você tem uma lista de clientes em potencial com 1.500 linhas. Você precisa garantir que a lista contém registros para cada Estado/Região. Quais duas ações você deve realizar no Editor do Power Query?",
+      "options": [
         "Abrir o Editor Avançado e selecionar Qualidade da coluna",
         "Habilitar perfil de coluna baseado no conjunto de dados completo e selecionar Perfil de coluna",
         "Selecionar Distribuição da coluna e Qualidade da coluna",
         "Filtrar por Estado/Região e exportar para Excel"
       ],
-      "correta": 1,
-      "explicacao": "Como o dataset tem 1.500 linhas, você precisa primeiro habilitar o perfil de coluna para todo o dataset (padrão é apenas as primeiras 1.000 linhas) e depois usar Perfil de coluna para ver os valores distintos de Estado/Região."
+      "answer": 1,
+      "explanation": "Como o dataset tem 1.500 linhas, você precisa primeiro habilitar o perfil de coluna para todo o dataset (padrão é apenas as primeiras 1.000 linhas) e depois usar Perfil de coluna para ver os valores distintos de Estado/Região."
     },
     {
-      "pergunta": "Qual funcionalidade do Power Query permite visualizar o código M gerado por cada etapa de transformação?",
-      "opcoes": [
+      "question": "Qual funcionalidade do Power Query permite visualizar o código M gerado por cada etapa de transformação?",
+      "options": [
         "Editor Avançado",
         "Perfil de dados",
         "Painel de consultas",
         "Configurações de consulta"
       ],
-      "correta": 0,
-      "explicacao": "O Editor Avançado permite visualizar e editar o código M completo gerado por cada etapa de transformação aplicada no Power Query."
+      "answer": 0,
+      "explanation": "O Editor Avançado permite visualizar e editar o código M completo gerado por cada etapa de transformação aplicada no Power Query."
     },
     {
-      "pergunta": "Qual é o risco de ter valores nulos em uma coluna numérica no Power BI?",
-      "opcoes": [
+      "question": "Qual é o risco de ter valores nulos em uma coluna numérica no Power BI?",
+      "options": [
         "Expressões DAX que calculam MAX nos dados serão incorretas",
         "Expressões DAX que calculam SUM nos dados serão incorretas",
         "Expressões DAX que calculam AVERAGE nos dados serão incorretas",
         "Os dados não poderão ser importados"
       ],
-      "correta": 2,
-      "explicacao": "Valores nulos em colunas numéricas afetam principalmente as expressões DAX de AVERAGE (média), pois o Power BI pode excluir os nulos do denominador, resultando em médias incorretas se você não tratar os valores nulos adequadamente."
+      "answer": 2,
+      "explanation": "Valores nulos em colunas numéricas afetam principalmente as expressões DAX de AVERAGE (média), pois o Power BI pode excluir os nulos do denominador, resultando em médias incorretas se você não tratar os valores nulos adequadamente."
     },
     {
-      "pergunta": "Você planeja preencher uma tabela em um conjunto de dados do Power BI com dados de uma lista do SharePoint Online. Qual modo de armazenamento será usado?",
-      "opcoes": [
+      "question": "Você planeja preencher uma tabela em um conjunto de dados do Power BI com dados de uma lista do SharePoint Online. Qual modo de armazenamento será usado?",
+      "options": [
         "DirectQuery",
         "Conexão dinâmica (Live connection)",
         "Composto (Composite)",
         "Importado (Import)"
       ],
-      "correta": 3,
-      "explicacao": "Quando dados são conectados de fontes como SharePoint Online, o modo padrão é Importado, onde os dados são copiados para o cache do modelo do Power BI."
+      "answer": 3,
+      "explanation": "Quando dados são conectados de fontes como SharePoint Online, o modo padrão é Importado, onde os dados são copiados para o cache do modelo do Power BI."
     },
     {
-      "pergunta": "No Power BI Desktop, você está atualizando um relatório que se conecta a um banco de dados SQL Server usando autenticação de banco de dados. As credenciais anteriores expiraram. Quais dois procedimentos você deve realizar para atualizar as credenciais?",
-      "opcoes": [
+      "question": "No Power BI Desktop, você está atualizando um relatório que se conecta a um banco de dados SQL Server usando autenticação de banco de dados. As credenciais anteriores expiraram. Quais dois procedimentos você deve realizar para atualizar as credenciais?",
+      "options": [
         "Abrir a caixa de diálogo Configurações de Fonte de Dados e localizar a fonte de dados, depois selecionar Editar Permissões e inserir novas credenciais",
         "Abrir a caixa de diálogo Obter Dados e fazer uma nova conexão ao banco de dados",
         "Abrir a caixa de diálogo Opções e permitir que as visualizações de dados sejam baixadas em segundo plano",
         "Excluir o relatório e criar um novo com as credenciais corretas"
       ],
-      "correta": 0,
-      "explicacao": "Para atualizar credenciais expiradas: 1) Abra Configurações de Fonte de Dados e localize a fonte, 2) Selecione Editar Permissões e insira as novas credenciais."
+      "answer": 0,
+      "explanation": "Para atualizar credenciais expiradas: 1) Abra Configurações de Fonte de Dados e localize a fonte, 2) Selecione Editar Permissões e insira as novas credenciais."
     },
     {
-      "pergunta": "O que é perfil de dados (data profiling) no Power BI?",
-      "opcoes": [
+      "question": "O que é perfil de dados (data profiling) no Power BI?",
+      "options": [
         "Agregar colunas contendo dados numéricos",
         "Estudar as nuances dos dados para entender sua estrutura e qualidade",
         "Modelagem de dados",
         "Criação de métricas calculadas"
       ],
-      "correta": 1,
-      "explicacao": "O perfil de dados (data profiling) é o processo de estudar as nuances dos dados – suas características, qualidade, distribuição e anomalias – para entender melhor o conjunto de dados."
+      "answer": 1,
+      "explanation": "O perfil de dados (data profiling) é o processo de estudar as nuances dos dados – suas características, qualidade, distribuição e anomalias – para entender melhor o conjunto de dados."
     },
     {
-      "pergunta": "Quantas linhas o Power Query verifica para detectar o tipo de dados nas colunas?",
-      "opcoes": [
+      "question": "Quantas linhas o Power Query verifica para detectar o tipo de dados nas colunas?",
+      "options": [
         "10.000",
         "1.000",
         "100",
         "5.000"
       ],
-      "correta": 1,
-      "explicacao": "O Power Query verifica as primeiras 1.000 linhas para detectar automaticamente o tipo de dados nas colunas."
+      "answer": 1,
+      "explanation": "O Power Query verifica as primeiras 1.000 linhas para detectar automaticamente o tipo de dados nas colunas."
     },
     {
-      "pergunta": "O processo de transformar dados simples em uma tabela que contém um valor de agregação para cada valor único em uma coluna é chamado de quê?",
-      "opcoes": [
+      "question": "O processo de transformar dados simples em uma tabela que contém um valor de agregação para cada valor único em uma coluna é chamado de quê?",
+      "options": [
         "Agrupar por colunas",
         "Dinamizar (pivotear uma coluna)",
         "Gerenciar agregações",
         "Mesclar consultas"
       ],
-      "correta": 1,
-      "explicacao": "Dinamizar (pivoting) uma coluna converte dados simples em uma tabela de referência cruzada contendo um valor de agregação para cada valor único em uma coluna."
+      "answer": 1,
+      "explanation": "Dinamizar (pivoting) uma coluna converte dados simples em uma tabela de referência cruzada contendo um valor de agregação para cada valor único em uma coluna."
     },
     {
-      "pergunta": "Qual é a ferramenta principal de preparação de dados no Power BI Desktop?",
-      "opcoes": [
+      "question": "Qual é a ferramenta principal de preparação de dados no Power BI Desktop?",
+      "options": [
         "Editor de relatórios",
         "Editor do Power Query",
         "Editor de dados",
         "Designer de modelo"
       ],
-      "correta": 1,
-      "explicacao": "O Editor do Power Query (também chamado de Editor de Consultas) é a ferramenta principal de preparação de dados no Power BI Desktop."
+      "answer": 1,
+      "explanation": "O Editor do Power Query (também chamado de Editor de Consultas) é a ferramenta principal de preparação de dados no Power BI Desktop."
     },
     {
-      "pergunta": "Qual fonte de dados no Power BI organiza as informações em sites, bibliotecas de documentos, pastas e arquivos?",
-      "opcoes": [
+      "question": "Qual fonte de dados no Power BI organiza as informações em sites, bibliotecas de documentos, pastas e arquivos?",
+      "options": [
         "SharePoint Online",
         "Microsoft Dataverse",
         "Power BI Libraries",
         "OneDrive for Business"
       ],
-      "correta": 0,
-      "explicacao": "O SharePoint Online organiza informações em sites, bibliotecas de documentos, pastas e arquivos dentro de pastas."
+      "answer": 0,
+      "explanation": "O SharePoint Online organiza informações em sites, bibliotecas de documentos, pastas e arquivos dentro de pastas."
     },
     {
-      "pergunta": "Você tem um serviço publicado em um website que retorna dados em formato OData com coleções de Categorias e Clientes. Qual tipo de fonte você deve usar para criar uma consulta que recupere esses dados?",
-      "opcoes": [
+      "question": "Você tem um serviço publicado em um website que retorna dados em formato OData com coleções de Categorias e Clientes. Qual tipo de fonte você deve usar para criar uma consulta que recupere esses dados?",
+      "options": [
         "JSON",
         "Texto/CSV",
         "OData Feed",
         "XML"
       ],
-      "correta": 2,
-      "explicacao": "O OData suporta dois formatos para representar recursos: o formato Atom baseado em XML e o formato JSON. Quando um serviço retorna dados como coleções OData, use o conector 'OData Feed'."
+      "answer": 2,
+      "explanation": "O OData suporta dois formatos para representar recursos: o formato Atom baseado em XML e o formato JSON. Quando um serviço retorna dados como coleções OData, use o conector 'OData Feed'."
     },
     {
-      "pergunta": "Você tem dois servidores SQL Server chamados SQLProd e SQLDev. O SQLDev contém as mesmas tabelas que o SQLProd, mas apenas um subconjunto dos dados. Você cria um modelo com 120 tabelas do SQLDev e precisa conectar ao SQLProd com esforço administrativo mínimo. O que você deve fazer no Editor de Consultas antes de publicar?",
-      "opcoes": [
+      "question": "Você tem dois servidores SQL Server chamados SQLProd e SQLDev. O SQLDev contém as mesmas tabelas que o SQLProd, mas apenas um subconjunto dos dados. Você cria um modelo com 120 tabelas do SQLDev e precisa conectar ao SQLProd com esforço administrativo mínimo. O que você deve fazer no Editor de Consultas antes de publicar?",
+      "options": [
         "Criar uma nova conexão ao SQLProd e importar as tabelas",
         "Excluir as consultas existentes e adicionar novas fontes de dados",
         "Configurar as configurações de Fonte de Dados",
         "Editar a origem de cada consulta de tabela individualmente"
       ],
-      "correta": 2,
-      "explicacao": "Configurar as Configurações de Fonte de Dados permite alterar a fonte de dados de todas as consultas de uma vez, minimizando o esforço administrativo em comparação com editar cada consulta individualmente."
+      "answer": 2,
+      "explanation": "Configurar as Configurações de Fonte de Dados permite alterar a fonte de dados de todas as consultas de uma vez, minimizando o esforço administrativo em comparação com editar cada consulta individualmente."
     },
     {
-      "pergunta": "Você tem uma planilha do Microsoft Excel que contém uma tabela chamada Vendas. Você precisa adicionar a tabela Vendas a um dashboard do Power BI como um bloco. Como você deve configurar o bloco?",
-      "opcoes": [
+      "question": "Você tem uma planilha do Microsoft Excel que contém uma tabela chamada Vendas. Você precisa adicionar a tabela Vendas a um dashboard do Power BI como um bloco. Como você deve configurar o bloco?",
+      "options": [
         "No serviço Power BI, importe os dados da pasta de trabalho do Excel",
         "No Excel, publique a pasta de trabalho no serviço Power BI",
         "Na guia Power BI do Excel, fixe a tabela",
         "No serviço Power BI, faça o upload da pasta de trabalho do Excel"
       ],
-      "correta": 2,
-      "explicacao": "Para adicionar uma tabela do Excel como bloco em um dashboard do Power BI, você deve usar a guia Power BI no Excel para fixar a tabela diretamente."
+      "answer": 2,
+      "explanation": "Para adicionar uma tabela do Excel como bloco em um dashboard do Power BI, você deve usar a guia Power BI no Excel para fixar a tabela diretamente."
     },
     {
-      "pergunta": "Qual fonte de dados permite conectar seus dados a outros aplicativos de negócios como Power Apps e Power Automate?",
-      "opcoes": [
+      "question": "Qual fonte de dados permite conectar seus dados a outros aplicativos de negócios como Power Apps e Power Automate?",
+      "options": [
         "Microsoft Dataverse",
         "Microsoft Dataplatform",
         "Microsoft Dataflows",
         "Microsoft Excel"
       ],
-      "correta": 0,
-      "explicacao": "O Dataverse é uma opção de armazenamento em nuvem para dados da organização que pode ser conectado a aplicativos de negócios como Power Apps, Power Automate e Power Virtual Agents."
+      "answer": 0,
+      "explanation": "O Dataverse é uma opção de armazenamento em nuvem para dados da organização que pode ser conectado a aplicativos de negócios como Power Apps, Power Automate e Power Virtual Agents."
     },
     {
-      "pergunta": "Como os parâmetros podem ser usados ao conectar-se a dados no Power Query?",
-      "opcoes": [
+      "question": "Como os parâmetros podem ser usados ao conectar-se a dados no Power Query?",
+      "options": [
         "Para conectar a um arquivo JSON",
         "Para alterar valores de fonte de dados dinamicamente",
         "Para criar cenários 'E se'",
         "Para formatar e transformar dados no Editor de Consultas"
       ],
-      "correta": 1,
-      "explicacao": "Parâmetros são uma forma útil de alterar valores de fonte de dados dinamicamente no Power Query. Esses parâmetros são diferentes dos parâmetros 'E se' criados no front-end do Power BI Desktop."
+      "answer": 1,
+      "explanation": "Parâmetros são uma forma útil de alterar valores de fonte de dados dinamicamente no Power Query. Esses parâmetros são diferentes dos parâmetros 'E se' criados no front-end do Power BI Desktop."
     },
     {
       "question": "Você se conecta a uma tabela SQL com 100 milhões de linhas que cresce diariamente. A atualização completa demora 3 horas. Qual recurso do Power BI permite importar apenas registros novos ou modificados?",
@@ -1218,895 +1218,895 @@ window.questionBank = {
   ],
   "Modelar Dados": [
     {
-      "pergunta": "A tabela de Vendas está relacionada à Tabela Data e Produto (Muitos para um). Você tem Total Sales Amount. Como criar uma medida escalável para agregar isso?",
-      "opcoes": [
+      "question": "A tabela de Vendas está relacionada à Tabela Data e Produto (Muitos para um). Você tem Total Sales Amount. Como criar uma medida escalável para agregar isso?",
+      "options": [
         "Total Sales = SUM('Sales'[Total Sales Amount])",
         "Total Sales = ALL('Sales'[Total Sales Amount])",
         "Total Sales = MAX('Sales'[Total Sales Amount])",
         "Total Sales = CALCULATE([Total Sales])"
       ],
-      "correta": 0,
-      "explicacao": "A função de agregação padrão em DAX para calcular subtotais (vendas) é SUM."
+      "answer": 0,
+      "explanation": "A função de agregação padrão em DAX para calcular subtotais (vendas) é SUM."
     },
     {
-      "pergunta": "Você criou um KPI usando um mês como eixo de tendência (trend axis), mas não está ordenado corretamente por mês e você descobre que visuais KPI não têm botão de ordenar. Como resolver?",
-      "opcoes": [
+      "question": "Você criou um KPI usando um mês como eixo de tendência (trend axis), mas não está ordenado corretamente por mês e você descobre que visuais KPI não têm botão de ordenar. Como resolver?",
+      "options": [
         "Modificar os filtros visuais.",
         "Converter a visualização temporariamente para um tipo diferente (ex: Tabela ou Barra) e ordenar lá.",
         "Remover o eixo de tendência do visual.",
         "Deletar o dataset inteiro."
       ],
-      "correta": 1,
-      "explicacao": "Como não existe a opção de ordenação ativa no KPI Visual nativo, o truque de contorno é convertê-lo em barra/tabela, usar as reticências para 'Ordenar Eixo' pelo mês e, em seguida, voltar para KPI."
+      "answer": 1,
+      "explanation": "Como não existe a opção de ordenação ativa no KPI Visual nativo, o truque de contorno é convertê-lo em barra/tabela, usar as reticências para 'Ordenar Eixo' pelo mês e, em seguida, voltar para KPI."
     },
     {
-      "pergunta": "Num medidor, você vê valores numéricos como 0.52. Mas precisa que apareçam como 52%. Qual a forma nativa recomendada de consertar isso?",
-      "opcoes": [
+      "question": "Num medidor, você vê valores numéricos como 0.52. Mas precisa que apareçam como 52%. Qual a forma nativa recomendada de consertar isso?",
+      "options": [
         "Na aba Modelagem (Modeling), alterar o Tipo de Dados (Data Type) ou formato para Porcentagem.",
         "Editar a consulta e alterar o tipo de dados lá.",
         "Criar uma coluna calculada que concatena '%' no final.",
         "Criar uma medida que adiciona '%' manualmente usando DAX FORMAT."
       ],
-      "correta": 0,
-      "explicacao": "A forma preferencial no Power BI é selecionar a coluna ou medida e, usando a guia Ferramentas de Coluna/Medida, definir a Formatação nativa para Porcentagem."
+      "answer": 0,
+      "explanation": "A forma preferencial no Power BI é selecionar a coluna ou medida e, usando a guia Ferramentas de Coluna/Medida, definir a Formatação nativa para Porcentagem."
     },
     {
-      "pergunta": "Você exibe nomes de meses (Jan, Fev, Mar...) e eles aparecem em ordem alfabética num visual. Como garantir que apareçam na ordem do calendário?",
-      "opcoes": [
+      "question": "Você exibe nomes de meses (Jan, Fev, Mar...) e eles aparecem em ordem alfabética num visual. Como garantir que apareçam na ordem do calendário?",
+      "options": [
         "Ordenar a coluna MonthName de forma descendente.",
         "Classificar a coluna MonthName por (Sort by column) MonthNumber.",
         "Ordenar a coluna MonthName de forma ascendente.",
         "Classificar a coluna MonthName por DateKey."
       ],
-      "correta": 1,
-      "explicacao": "Para organizar textos corretamente em cronologia ou outras sequências, usa-se 'Classificar por coluna' para ordenar os nomes (textos) por uma coluna numérica associada, como 'Número do Mês' (1 a 12)."
+      "answer": 1,
+      "explanation": "Para organizar textos corretamente em cronologia ou outras sequências, usa-se 'Classificar por coluna' para ordenar os nomes (textos) por uma coluna numérica associada, como 'Número do Mês' (1 a 12)."
     },
     {
-      "pergunta": "Usuários usam a palavra 'assinantes' em vez de 'clientes' e o modelo tem a tabela Customer. Como garantir que Q&A entenda a pergunta 'número de assinantes' sem inflar o tamanho do modelo?",
-      "opcoes": [
+      "question": "Usuários usam a palavra 'assinantes' em vez de 'clientes' e o modelo tem a tabela Customer. Como garantir que Q&A entenda a pergunta 'número de assinantes' sem inflar o tamanho do modelo?",
+      "options": [
         "Definir 'Summarize By' para Count na coluna CustomerID.",
         "Adicionar um sinônimo 'assinante' (subscriber) à tabela Customer.",
         "Criar uma nova tabela calculada filtrando assinantes.",
         "Adicionar uma descrição à medida 'Customer Count'."
       ],
-      "correta": 1,
-      "explicacao": "Adicionar sinônimos às tabelas e campos informa ao mecanismo de P&R as diferentes nomenclaturas usadas pela organização sem afetar tamanho de modelo."
+      "answer": 1,
+      "explanation": "Adicionar sinônimos às tabelas e campos informa ao mecanismo de P&R as diferentes nomenclaturas usadas pela organização sem afetar tamanho de modelo."
     },
     {
-      "pergunta": "Relatório com 12 milhões de linhas e 25 visuais carrega lentamente. Atualiza 2x por dia. Como melhorar a performance com MENOS impacto nos recursos?",
-      "opcoes": [
+      "question": "Relatório com 12 milhões de linhas e 25 visuais carrega lentamente. Atualiza 2x por dia. Como melhorar a performance com MENOS impacto nos recursos?",
+      "options": [
         "Mudar as medidas para usar funções iteradoras.",
         "Mudar o dataset importado para DirectQuery.",
         "Aumentar a frequência de atualização.",
         "Substituir os visuais padrão por visuais do AppSource."
       ],
-      "correta": 1,
-      "explicacao": "DirectQuery transfere a carga de processamento para o banco de dados de origem, o que pode aliviar o consumo de memória do Power BI, especialmente para modelos grandes (12M de linhas não é gigante para importação, mas a questão aponta para DQ como solução de contorno para capacidade)."
+      "answer": 1,
+      "explanation": "DirectQuery transfere a carga de processamento para o banco de dados de origem, o que pode aliviar o consumo de memória do Power BI, especialmente para modelos grandes (12M de linhas não é gigante para importação, mas a questão aponta para DQ como solução de contorno para capacidade)."
     },
     {
-      "pergunta": "Para uma tabela com 30 milhões de registros/mês, como apresentar contagens de impressão por campanha e site mantendo o modelo pequeno?",
-      "opcoes": [
+      "question": "Para uma tabela com 30 milhões de registros/mês, como apresentar contagens de impressão por campanha e site mantendo o modelo pequeno?",
+      "options": [
         "Agrupar as impressões por Ad_id, Site_name e Impression_date no Power Query e agregar usando CountRows.",
         "Criar uma medida calculada com COUNTROWS.",
         "Criar uma tabela calculada em DAX com Ad_id e Site_name.",
         "Manter todos os dados e usar DirectQuery."
       ],
-      "correta": 0,
-      "explicacao": "Agrupar os dados (Group By) na fonte ou no Power Query eleva a granularidade, reduzindo drasticamente o número de linhas e o tamanho do modelo."
+      "answer": 0,
+      "explanation": "Agrupar os dados (Group By) na fonte ou no Power Query eleva a granularidade, reduzindo drasticamente o número de linhas e o tamanho do modelo."
     },
     {
-      "pergunta": "Antes de começar a criar agregações (aggregations) no Power BI, você deve primeiro decidir:",
-      "opcoes": [
+      "question": "Antes de começar a criar agregações (aggregations) no Power BI, você deve primeiro decidir:",
+      "options": [
         "O modo de armazenamento (Storage mode)",
         "A granularidade (nível de detalhe) na qual criá-las.",
         "O tipo de relacionamento",
         "A linguagem de consulta (DAX ou M)"
       ],
-      "correta": 1,
-      "explicacao": "A granularidade (nível) define como os dados serão resumidos (ex: agrupar vendas diárias por mês). Isso afeta diretamente a perda de detalhes versus ganho de desempenho."
+      "answer": 1,
+      "explanation": "A granularidade (nível) define como os dados serão resumidos (ex: agrupar vendas diárias por mês). Isso afeta diretamente a perda de detalhes versus ganho de desempenho."
     },
     {
-      "pergunta": "É possível criar um relacionamento entre duas colunas se elas tiverem TIPOS DE DADOS diferentes?",
-      "opcoes": [
+      "question": "É possível criar um relacionamento entre duas colunas se elas tiverem TIPOS DE DADOS diferentes?",
+      "options": [
         "Sim, se for muitos-para-muitos.",
         "Sim, é totalmente suportado na versão mais recente.",
         "Não, ambas as colunas devem ter o mesmo tipo de dados.",
         "Sim, desde que uma seja texto e outra seja data."
       ],
-      "correta": 2,
-      "explicacao": "No Power BI, as colunas usadas para criar um relacionamento entre tabelas DEVEM ter o mesmo tipo de dados (ex: Inteiro com Inteiro, Texto com Texto)."
+      "answer": 2,
+      "explanation": "No Power BI, as colunas usadas para criar um relacionamento entre tabelas DEVEM ter o mesmo tipo de dados (ex: Inteiro com Inteiro, Texto com Texto)."
     },
     {
-      "pergunta": "Qual opção do Power BI permite reduzir o número de consultas enviadas ao banco de dados cruzado e desativar atualizações em tempo real durante interações?",
-      "opcoes": [
+      "question": "Qual opção do Power BI permite reduzir o número de consultas enviadas ao banco de dados cruzado e desativar atualizações em tempo real durante interações?",
+      "options": [
         "Direct query",
         "Query reduction (Redução de consulta)",
         "Query diagnostics",
         "Dual mode"
       ],
-      "correta": 1,
-      "explicacao": "Em 'Opções > Redução de consulta', você pode adicionar botões 'Aplicar' aos segmentadores e filtros para evitar que consultas sejam disparadas a cada clique."
+      "answer": 1,
+      "explanation": "Em 'Opções > Redução de consulta', você pode adicionar botões 'Aplicar' aos segmentadores e filtros para evitar que consultas sejam disparadas a cada clique."
     },
     {
-      "pergunta": "O que é Cardinalidade (Cardinality) em modelagem de dados?",
-      "opcoes": [
+      "question": "O que é Cardinalidade (Cardinality) em modelagem de dados?",
+      "options": [
         "A granularidade dos dados.",
         "O tempo que os dados levam para carregar.",
         "A singularidade (uniqueness) dos valores em uma coluna. Ex: Relação um-para-muitos.",
         "Um tipo de elemento visual."
       ],
-      "correta": 2,
-      "explicacao": "Cardinalidade refere-se ao número de valores exclusivos em uma coluna, o que dita o tipo de relacionamento que pode ser formado entre tabelas (1:1, 1:*, *:*)."
+      "answer": 2,
+      "explanation": "Cardinalidade refere-se ao número de valores exclusivos em uma coluna, o que dita o tipo de relacionamento que pode ser formado entre tabelas (1:1, 1:*, *:*)."
     },
     {
-      "pergunta": "Qual ferramenta do Power BI Desktop permite identificar gargalos de desempenho em DAX ou recursos visuais?",
-      "opcoes": [
+      "question": "Qual ferramenta do Power BI Desktop permite identificar gargalos de desempenho em DAX ou recursos visuais?",
+      "options": [
         "Q&A",
         "Column profiling (Criação de perfil de coluna)",
         "Performance analyzer (Analisador de desempenho)",
         "Query diagnostics"
       ],
-      "correta": 2,
-      "explicacao": "O Analisador de Desempenho (Performance Analyzer) permite gravar as interações no relatório e ver quanto tempo cada visual gasta consultando (DAX) e renderizando."
+      "answer": 2,
+      "explanation": "O Analisador de Desempenho (Performance Analyzer) permite gravar as interações no relatório e ver quanto tempo cada visual gasta consultando (DAX) e renderizando."
     },
     {
-      "pergunta": "Você precisa substituir uma coluna arrastada para Valores (que faz soma automática) por uma medida explícita de Soma. Qual a fórmula?",
-      "opcoes": [
+      "question": "Você precisa substituir uma coluna arrastada para Valores (que faz soma automática) por uma medida explícita de Soma. Qual a fórmula?",
+      "options": [
         "Sales Amount = COUNT(Sales[SalesAmt])",
         "Sales Amount = Sales",
         "Sales Amount = Sales[SalesAmt]",
         "Sales Amount = SUM(Sales[SalesAmt])"
       ],
-      "correta": 3,
-      "explicacao": "SUM é a função agregadora que soma os valores de uma coluna."
+      "answer": 3,
+      "explanation": "SUM é a função agregadora que soma os valores de uma coluna."
     },
     {
-      "pergunta": "Para uma tabela de estoque onde saldos NÃO são gravados aos finais de semana, qual função usar para pegar o último saldo disponível em um período?",
-      "opcoes": [
+      "question": "Para uma tabela de estoque onde saldos NÃO são gravados aos finais de semana, qual função usar para pegar o último saldo disponível em um período?",
+      "options": [
         "EOMONTH",
         "FIRSTNONBLANK",
         "LASTNONBLANK",
         "NETWORKDAYS"
       ],
-      "correta": 2,
-      "explicacao": "LASTNONBLANK encontra a última data onde a expressão (neste caso, o saldo de estoque) não está em branco. Como não há dados nos finais de semana, LASTDATE poderia retornar em branco se o mês terminar no fim de semana."
+      "answer": 2,
+      "explanation": "LASTNONBLANK encontra a última data onde a expressão (neste caso, o saldo de estoque) não está em branco. Como não há dados nos finais de semana, LASTDATE poderia retornar em branco se o mês terminar no fim de semana."
     },
     {
-      "pergunta": "Você tem uma tabela de estoque (snapshot) com saldo por dia. Qual medida retorna o estoque disponível no ÚLTIMO dia do período selecionado?",
-      "opcoes": [
+      "question": "Você tem uma tabela de estoque (snapshot) com saldo por dia. Qual medida retorna o estoque disponível no ÚLTIMO dia do período selecionado?",
+      "options": [
         "CALCULATE(SUM(FactInventory[UnitsBalance]), LASTDATE('Date'[Date]))",
         "CALCULATE(SUM(FactInventory[UnitsBalance]), FIRSTDATE('Date'[Date]))",
         "CALCULATE(SUM(FactInventory[UnitsBalance]), MAX('Date'[Date]))",
         "SUM(FactInventory[UnitsBalance])"
       ],
-      "correta": 0,
-      "explicacao": "LASTDATE retorna a última data no contexto de filtro atual, ideal para obter saldos de fechamento de período (semi-aditivos)."
+      "answer": 0,
+      "explanation": "LASTDATE retorna a última data no contexto de filtro atual, ideal para obter saldos de fechamento de período (semi-aditivos)."
     },
     {
-      "pergunta": "Você precisa criar uma dimensão role-playing (ex: uma mesma tabela de data servindo para Data Pedido e Data Entrega). Que tipo de expressão DAX usar?",
-      "opcoes": [
+      "question": "Você precisa criar uma dimensão role-playing (ex: uma mesma tabela de data servindo para Data Pedido e Data Entrega). Que tipo de expressão DAX usar?",
+      "options": [
         "Calculated column (Coluna calculada)",
         "Calculated table (Tabela calculada)",
         "Measure (Medida)",
         "What-If analysis"
       ],
-      "correta": 1,
-      "explicacao": "Para dimensões role-playing no Power BI, você cria múltiplas instâncias da tabela, normalmente usando uma Tabela Calculada (ex: ShipDate = 'Date'). Outra opção é usar múltiplos relacionamentos e a função USERELATIONSHIP."
+      "answer": 1,
+      "explanation": "Para dimensões role-playing no Power BI, você cria múltiplas instâncias da tabela, normalmente usando uma Tabela Calculada (ex: ShipDate = 'Date'). Outra opção é usar múltiplos relacionamentos e a função USERELATIONSHIP."
     },
     {
-      "pergunta": "Você precisa calcular o percentual de aumento do total de ativos desde um ano atrás. Qual fórmula usar?",
-      "opcoes": [
+      "question": "Você precisa calcular o percentual de aumento do total de ativos desde um ano atrás. Qual fórmula usar?",
+      "options": [
         "(SUM(Assets[Value]) - CALCULATE(SUM(Assets[Value]), SAMEPERIODLASTYEAR('Date'[Date]))) / CALCULATE(SUM(Assets[Value]), SAMEPERIODLASTYEAR('Date'[Date]))",
         "CALCULATE(SUM(Assets[Value]), SAMEPERIODLASTYEAR('Date'[Date])) / SUM(Assets[Value])",
         "CALCULATE(SUM(Assets[Value]), DATESYTD('Date'[Date])) / SUM(Assets[Value])",
         "SUM(Assets[Value]) / CALCULATE(SUM(Assets[Value]), SAMEPERIODLASTYEAR('Date'[Date]))"
       ],
-      "correta": 0,
-      "explicacao": "A fórmula básica de percentual de crescimento é (Atual - Anterior) / Anterior. SAMEPERIODLASTYEAR('Date'[Date]) obtém o valor anterior."
+      "answer": 0,
+      "explanation": "A fórmula básica de percentual de crescimento é (Atual - Anterior) / Anterior. SAMEPERIODLASTYEAR('Date'[Date]) obtém o valor anterior."
     },
     {
-      "pergunta": "Você tem uma tabela Person com uma coluna Age. Qual fórmula DAX encontra o valor do meio na faixa de valores de idade?",
-      "opcoes": [
+      "question": "Você tem uma tabela Person com uma coluna Age. Qual fórmula DAX encontra o valor do meio na faixa de valores de idade?",
+      "options": [
         "AVERAGE('Person'[Age])",
         "MEDIAN('Person'[Age])",
         "RANK.EQ('Person'[Age], 'Person'[Age])",
         "PERCENTILE.INC('Person'[Age], 0.5)"
       ],
-      "correta": 1,
-      "explicacao": "MEDIAN('Person'[Age]) retorna a mediana da coluna Age, que é exatamente o valor do meio do conjunto de dados."
+      "answer": 1,
+      "explanation": "MEDIAN('Person'[Age]) retorna a mediana da coluna Age, que é exatamente o valor do meio do conjunto de dados."
     },
     {
-      "pergunta": "Você precisa criar uma medida para calcular as vendas dos últimos 12 meses a partir da última data com venda, ignorando filtros do relatório. Quais funções DAX usar?",
-      "opcoes": [
+      "question": "Você precisa criar uma medida para calcular as vendas dos últimos 12 meses a partir da última data com venda, ignorando filtros do relatório. Quais funções DAX usar?",
+      "options": [
         "DATEADD e LASTNONBLANK",
         "DATESYTD e MAX",
         "SAMEPERIODLASTYEAR e MIN",
         "DATESBETWEEN e TODAY"
       ],
-      "correta": 0,
-      "explicacao": "DATEADD pode recuar 12 meses, LASTNONBLANK encontra a última data com vendas registradas, e CALCULATE junta isso ignorando os filtros. Ex: CALCULATE([Sales], DATESBETWEEN(Date[Date], DATEADD(LASTNONBLANK(Date[Date], [Sales]), -1, YEAR), LASTNONBLANK(Date[Date], [Sales])))"
+      "answer": 0,
+      "explanation": "DATEADD pode recuar 12 meses, LASTNONBLANK encontra a última data com vendas registradas, e CALCULATE junta isso ignorando os filtros. Ex: CALCULATE([Sales], DATESBETWEEN(Date[Date], DATEADD(LASTNONBLANK(Date[Date], [Sales]), -1, YEAR), LASTNONBLANK(Date[Date], [Sales])))"
     },
     {
-      "pergunta": "Você tem um modelo para vendas e precisa comparar o YTD (acumulado do ano) com o mesmo período do ano anterior. Qual função DAX deve usar?",
-      "opcoes": [
+      "question": "Você tem um modelo para vendas e precisa comparar o YTD (acumulado do ano) com o mesmo período do ano anterior. Qual função DAX deve usar?",
+      "options": [
         "LASTDATE",
         "TOTALYTD",
         "SAMEPERIODLASTYEAR",
         "PREVIOUSYEAR"
       ],
-      "correta": 2,
-      "explicacao": "SAMEPERIODLASTYEAR retorna um conjunto de datas correspondente ao mesmo período do ano anterior. Para comparar YTD com o ano anterior: YtdSalesSamePeriodLastYear = CALCULATE([YtdSales], SAMEPERIODLASTYEAR(Date[Date])). PREVIOUSYEAR retorna todo o ano anterior, não o mesmo período."
+      "answer": 2,
+      "explanation": "SAMEPERIODLASTYEAR retorna um conjunto de datas correspondente ao mesmo período do ano anterior. Para comparar YTD com o ano anterior: YtdSalesSamePeriodLastYear = CALCULATE([YtdSales], SAMEPERIODLASTYEAR(Date[Date])). PREVIOUSYEAR retorna todo o ano anterior, não o mesmo período."
     },
     {
-      "pergunta": "Você precisa criar uma medida para ranquear clientes pelo total de vendas. Quais tabelas são Sales e Customer, relacionadas por CustomerID. Qual fórmula DAX usar?",
-      "opcoes": [
+      "question": "Você precisa criar uma medida para ranquear clientes pelo total de vendas. Quais tabelas são Sales e Customer, relacionadas por CustomerID. Qual fórmula DAX usar?",
+      "options": [
         "RANKX(ALL(Sales), SUMX(RELATEDTABLE(Customer), [Sales_amount]))",
         "TOPN(ALL(Customer), SUMX(RELATEDTABLE(Sales), [Sales_amount]))",
         "RANKX(ALL(Customer), SUMX(RELATEDTABLE(Sales), [Sales_amount]))",
         "RANK.EQ(Sales[sales_amount], Customer[CustomerID])"
       ],
-      "correta": 2,
-      "explicacao": "RANKX(ALL(Customer), SUMX(RELATEDTABLE(Sales), [Sales_amount])) é a fórmula correta. ALL(Customer) remove filtros da tabela Customer para avaliar o rank globalmente. SUMX(RELATEDTABLE(Sales), [Sales_amount]) soma as vendas de todas as transações relacionadas a cada cliente."
+      "answer": 2,
+      "explanation": "RANKX(ALL(Customer), SUMX(RELATEDTABLE(Sales), [Sales_amount])) é a fórmula correta. ALL(Customer) remove filtros da tabela Customer para avaliar o rank globalmente. SUMX(RELATEDTABLE(Sales), [Sales_amount]) soma as vendas de todas as transações relacionadas a cada cliente."
     },
     {
-      "pergunta": "Você precisa adicionar uma coluna de data formatada como 'December 01, 2014'. Qual fórmula DAX deve usar?",
-      "opcoes": [
+      "question": "Você precisa adicionar uma coluna de data formatada como 'December 01, 2014'. Qual fórmula DAX deve usar?",
+      "options": [
         "FORMAT([Date], \"MMM\") & \" \" & FORMAT([Date], \"DD\") & \", \" & FORMAT([Date], \"YYYY\")",
         "FORMAT([Date], \"M\") & \" \" & FORMAT([Date], \"D\") & \", \" & [Date].[Year]",
         "[Date].[Month] & \" \" & FORMAT([Date], \"D\") & \", \" & [Date].[Year]",
         "FORMAT([Date], \"MMMM DD, YYYY\")"
       ],
-      "correta": 3,
-      "explicacao": "FORMAT([Date], \"MMMM DD, YYYY\") produz o formato completo 'December 01, 2014'. MMMM = nome completo do mês, DD = dia com dois dígitos, YYYY = ano com quatro dígitos. MMM produziria a versão abreviada (Dec). Essa é a forma mais simples e correta."
+      "answer": 3,
+      "explanation": "FORMAT([Date], \"MMMM DD, YYYY\") produz o formato completo 'December 01, 2014'. MMMM = nome completo do mês, DD = dia com dois dígitos, YYYY = ano com quatro dígitos. MMM produziria a versão abreviada (Dec). Essa é a forma mais simples e correta."
     },
     {
-      "pergunta": "Você precisa criar uma medida para calcular vendas do mesmo período do ano anterior. Qual fórmula DAX deve usar?",
-      "opcoes": [
+      "question": "Você precisa criar uma medida para calcular vendas do mesmo período do ano anterior. Qual fórmula DAX deve usar?",
+      "options": [
         "SUM(sales[sales_amount]) - CALCULATE(SUM(sales[sales_amount]), DATESYTD('Date'[Date]))",
         "CALCULATE(SUM(sales[sales_amount]), SAMEPERIODLASTYEAR('Date'[Date]))",
         "SUM(sales[sales_amount]) - CALCULATE(SUM(sales[sales_amount]), SAMEPERIODLASTYEAR('Date'[Date]))",
         "CALCULATEX(SUM(sales[sales_amount]), DATESYTD('Date'[Date]))"
       ],
-      "correta": 1,
-      "explicacao": "CALCULATE(SUM(sales[sales_amount]), SAMEPERIODLASTYEAR('Date'[Date])) é a fórmula correta para calcular vendas do mesmo período do ano anterior. SAMEPERIODLASTYEAR retorna um conjunto de datas equivalentes ao período atual, mas no ano anterior."
+      "answer": 1,
+      "explanation": "CALCULATE(SUM(sales[sales_amount]), SAMEPERIODLASTYEAR('Date'[Date])) é a fórmula correta para calcular vendas do mesmo período do ano anterior. SAMEPERIODLASTYEAR retorna um conjunto de datas equivalentes ao período atual, mas no ano anterior."
     },
     {
-      "pergunta": "Qual função DAX permite calcular totais acumulados (running totals)?",
-      "opcoes": [
+      "question": "Qual função DAX permite calcular totais acumulados (running totals)?",
+      "options": [
         "DATESYTD",
         "DATEADD",
         "DATESINPERIOD",
         "Todas as anteriores"
       ],
-      "correta": 2,
-      "explicacao": "DATESINPERIOD retorna um conjunto de datas baseado em um intervalo de tempo específico, o que permite calcular totais acumulados (rolling totals). DATESYTD calcula o acumulado do ano. DATEADD desloca datas para comparar com período anterior. DATESINPERIOD é a mais flexível para acumulados móveis."
+      "answer": 2,
+      "explanation": "DATESINPERIOD retorna um conjunto de datas baseado em um intervalo de tempo específico, o que permite calcular totais acumulados (rolling totals). DATESYTD calcula o acumulado do ano. DATEADD desloca datas para comparar com período anterior. DATESINPERIOD é a mais flexível para acumulados móveis."
     },
     {
-      "pergunta": "Qual das seguintes afirmações NÃO é verdadeira sobre modificadores do CALCULATE?",
-      "opcoes": [
+      "question": "Qual das seguintes afirmações NÃO é verdadeira sobre modificadores do CALCULATE?",
+      "options": [
         "Eles são usados para alterar o contexto de filtro",
         "Eles são usados para acessar relacionamentos de tabela inativos",
         "Eles permitem arrastar e soltar campos em vez de escrever DAX do zero",
         "Eles são usados para alterar como os filtros se propagam"
       ],
-      "correta": 2,
-      "explicacao": "Medidas Rápidas (Quick Measures) é que permitem arrastar e soltar campos para gerar DAX automaticamente, não os modificadores do CALCULATE. Os modificadores do CALCULATE (como ALL, USERELATIONSHIP, CROSSFILTER) são usados para alterar contexto de filtro, ativar relacionamentos inativos e controlar propagação de filtros."
+      "answer": 2,
+      "explanation": "Medidas Rápidas (Quick Measures) é que permitem arrastar e soltar campos para gerar DAX automaticamente, não os modificadores do CALCULATE. Os modificadores do CALCULATE (como ALL, USERELATIONSHIP, CROSSFILTER) são usados para alterar contexto de filtro, ativar relacionamentos inativos e controlar propagação de filtros."
     },
     {
-      "pergunta": "Quais das seguintes funções DAX retornam uma tabela?",
-      "opcoes": [
+      "question": "Quais das seguintes funções DAX retornam uma tabela?",
+      "options": [
         "Apenas TOPN",
         "Apenas FILTER",
         "Apenas DATEADD",
         "Todas as anteriores (TOPN, FILTER e DATEADD)"
       ],
-      "correta": 3,
-      "explicacao": "TOPN, FILTER e DATEADD são todas funções que retornam tabelas no DAX. Funções que retornam tabelas são usadas como argumentos de tabela em outras funções ou podem ser usadas para criar tabelas calculadas. Isso as distingue de funções escalares que retornam um único valor."
+      "answer": 3,
+      "explanation": "TOPN, FILTER e DATEADD são todas funções que retornam tabelas no DAX. Funções que retornam tabelas são usadas como argumentos de tabela em outras funções ou podem ser usadas para criar tabelas calculadas. Isso as distingue de funções escalares que retornam um único valor."
     },
     {
-      "pergunta": "Qual função DAX modifica e substitui qualquer contexto de filtro concorrente?",
-      "opcoes": [
+      "question": "Qual função DAX modifica e substitui qualquer contexto de filtro concorrente?",
+      "options": [
         "CALCULATE",
         "SUMX",
         "RELATED",
         "REPLACE"
       ],
-      "correta": 0,
-      "explicacao": "CALCULATE é a função mais poderosa do DAX que modifica e substitui o contexto de filtro concorrente. Seus filtros têm precedência sobre o contexto de filtro herdado do relatório. Por exemplo, CALCULATE([Vendas], ALL(Produto)) ignora qualquer filtro de produto aplicado pelo usuário."
+      "answer": 0,
+      "explanation": "CALCULATE é a função mais poderosa do DAX que modifica e substitui o contexto de filtro concorrente. Seus filtros têm precedência sobre o contexto de filtro herdado do relatório. Por exemplo, CALCULATE([Vendas], ALL(Produto)) ignora qualquer filtro de produto aplicado pelo usuário."
     },
     {
-      "pergunta": "Qual categoria de funções DAX percorre o mesmo cálculo em cada linha de uma tabela e depois agrega os resultados?",
-      "opcoes": [
+      "question": "Qual categoria de funções DAX percorre o mesmo cálculo em cada linha de uma tabela e depois agrega os resultados?",
+      "options": [
         "Funções Lógicas",
         "Funções de Filtro",
         "Funções Estatísticas",
         "Funções de Iteração (Iterator Functions)"
       ],
-      "correta": 3,
-      "explicacao": "Funções de Iteração (ou funções 'X') como SUMX, AVERAGEX, COUNTX percorrem cada linha de uma tabela, calculam uma expressão para cada linha, e depois agregam os resultados. São identificadas pelo sufixo 'X' e criam contexto de linha dentro de um contexto de filtro."
+      "answer": 3,
+      "explanation": "Funções de Iteração (ou funções 'X') como SUMX, AVERAGEX, COUNTX percorrem cada linha de uma tabela, calculam uma expressão para cada linha, e depois agregam os resultados. São identificadas pelo sufixo 'X' e criam contexto de linha dentro de um contexto de filtro."
     },
     {
-      "pergunta": "Em qual campo de um visual as medidas tipicamente 'vivem' (são colocadas)?",
-      "opcoes": [
+      "question": "Em qual campo de um visual as medidas tipicamente 'vivem' (são colocadas)?",
+      "options": [
         "Linhas (Rows)",
         "Colunas (Columns)",
         "Valores (Values)",
         "Filtros (Filters)"
       ],
-      "correta": 2,
-      "explicacao": "Medidas são valores numéricos calculados que são analisados no campo 'Valores' (Values) de um visual de relatório. Elas representam o 'quê' que você está medindo. Dimensões (textos/categorias) vão em Linhas ou Colunas; medidas vão em Valores."
+      "answer": 2,
+      "explanation": "Medidas são valores numéricos calculados que são analisados no campo 'Valores' (Values) de um visual de relatório. Elas representam o 'quê' que você está medindo. Dimensões (textos/categorias) vão em Linhas ou Colunas; medidas vão em Valores."
     },
     {
-      "pergunta": "Qual das seguintes afirmações NÃO é verdadeira sobre medidas DAX?",
-      "opcoes": [
+      "question": "Qual das seguintes afirmações NÃO é verdadeira sobre medidas DAX?",
+      "options": [
         "Elas são avaliadas com base no contexto de linha",
         "Elas referenciam tabelas ou colunas inteiras",
         "Elas não são visíveis dentro das tabelas",
         "Elas recalculam em resposta a qualquer mudança nos filtros do relatório"
       ],
-      "correta": 0,
-      "explicacao": "Medidas são avaliadas com base no contexto de FILTRO, não de linha. Contexto de linha é usado por colunas calculadas (que processam linha a linha). Medidas operam sobre conjuntos de dados filtrados e respondem dinamicamente às interações do usuário com o relatório."
+      "answer": 0,
+      "explanation": "Medidas são avaliadas com base no contexto de FILTRO, não de linha. Contexto de linha é usado por colunas calculadas (que processam linha a linha). Medidas operam sobre conjuntos de dados filtrados e respondem dinamicamente às interações do usuário com o relatório."
     },
     {
-      "pergunta": "Onde você deve criar colunas calculadas para reduzir o tamanho do modelo e melhorar o desempenho?",
-      "opcoes": [
+      "question": "Onde você deve criar colunas calculadas para reduzir o tamanho do modelo e melhorar o desempenho?",
+      "options": [
         "Nos dados de origem (fonte)",
         "No Power Query",
         "No modelo de dados",
         "Todos os métodos produzem os mesmos resultados"
       ],
-      "correta": 0,
-      "explicacao": "Criar colunas calculadas o mais próximo possível da fonte de dados reduz o tamanho do modelo e melhora o desempenho. Colunas criadas no modelo de dados DAX são armazenadas no modelo e ocupam memória. Colunas criadas no Power Query são mais eficientes que DAX, mas ainda menos que criar na fonte."
+      "answer": 0,
+      "explanation": "Criar colunas calculadas o mais próximo possível da fonte de dados reduz o tamanho do modelo e melhora o desempenho. Colunas criadas no modelo de dados DAX são armazenadas no modelo e ocupam memória. Colunas criadas no Power Query são mais eficientes que DAX, mas ainda menos que criar na fonte."
     },
     {
-      "pergunta": "O que significa a sigla DAX no contexto do Power BI?",
-      "opcoes": [
+      "question": "O que significa a sigla DAX no contexto do Power BI?",
+      "options": [
         "Data Analysis Expressions",
         "Data & Analysis Exchange",
         "Data Aggregation Expressions",
         "Dynamic Analysis Expressions"
       ],
-      "correta": 0,
-      "explicacao": "DAX significa Data Analysis Expressions (Expressões de Análise de Dados). É a linguagem de fórmulas que impulsiona o Power BI, o Power Pivot e o Analysis Services. DAX inclui funções, operadores e constantes que podem ser usados em fórmulas ou expressões para calcular e retornar valores."
+      "answer": 0,
+      "explanation": "DAX significa Data Analysis Expressions (Expressões de Análise de Dados). É a linguagem de fórmulas que impulsiona o Power BI, o Power Pivot e o Analysis Services. DAX inclui funções, operadores e constantes que podem ser usados em fórmulas ou expressões para calcular e retornar valores."
     },
     {
-      "pergunta": "Ao criar uma tabela de calendário dinâmica no Editor de Consultas, qual expressão M cria uma coluna 'Start of Week' que começa na segunda-feira?",
-      "opcoes": [
+      "question": "Ao criar uma tabela de calendário dinâmica no Editor de Consultas, qual expressão M cria uma coluna 'Start of Week' que começa na segunda-feira?",
+      "options": [
         "Table.AddColumn(..., each Date.StartOfWeek([Date], Day.Sunday), type date)",
         "Table.AddColumn(..., each Date.StartOfWeek([Date], Day.Monday), type date)",
         "Table.AddColumn(..., each Date.EndOfWeek([Date], Day.Sunday), type date)",
         "Table.AddColumn(..., each Date.EndOfWeek([Date], Day.Tuesday), type date)"
       ],
-      "correta": 1,
-      "explicacao": "Date.StartOfWeek([Date], Day.Monday) retorna o início da semana definindo segunda-feira como o primeiro dia. Se Day.Sunday fosse usado, a semana começaria no domingo (padrão americano). A função Date.StartOfWeek vs Date.EndOfWeek determina se retorna o início ou fim da semana."
+      "answer": 1,
+      "explanation": "Date.StartOfWeek([Date], Day.Monday) retorna o início da semana definindo segunda-feira como o primeiro dia. Se Day.Sunday fosse usado, a semana começaria no domingo (padrão americano). A função Date.StartOfWeek vs Date.EndOfWeek determina se retorna o início ou fim da semana."
     },
     {
-      "pergunta": "Você precisa criar uma tabela calculada para retornar os 100 clientes com maior gasto. Quais funções DAX você usaria para completar a expressão?",
-      "opcoes": [
+      "question": "Você precisa criar uma tabela calculada para retornar os 100 clientes com maior gasto. Quais funções DAX você usaria para completar a expressão?",
+      "options": [
         "TOPN, SUMMARIZE e DESC",
         "TOPN, CALCULATE e ASC",
         "FILTER, SUMMARIZE e DESC",
         "RANKX, ALL e DESC"
       ],
-      "correta": 0,
-      "explicacao": "TOPN retorna as N primeiras linhas de uma tabela. SUMMARIZE cria uma tabela resumida com totais por grupos. DESC especifica a ordenação decrescente. Sintaxe: TOPN(100, SUMMARIZE(Customers, ..., 'Total Gasto'), [Total Gasto], DESC)"
+      "answer": 0,
+      "explanation": "TOPN retorna as N primeiras linhas de uma tabela. SUMMARIZE cria uma tabela resumida com totais por grupos. DESC especifica a ordenação decrescente. Sintaxe: TOPN(100, SUMMARIZE(Customers, ..., 'Total Gasto'), [Total Gasto], DESC)"
     },
     {
-      "pergunta": "Seu modelo de dados contém muitas expressões DAX complexas com frequentes referências às funções RELATED e RELATEDTABLE. Você precisa minimizar o uso dessas funções. O que deve recomendar?",
-      "opcoes": [
+      "question": "Seu modelo de dados contém muitas expressões DAX complexas com frequentes referências às funções RELATED e RELATEDTABLE. Você precisa minimizar o uso dessas funções. O que deve recomendar?",
+      "options": [
         "Dividir o modelo em múltiplos modelos",
         "Ocultar colunas não utilizadas no modelo",
         "Mesclar tabelas usando o Power Query",
         "Transpor as tabelas"
       ],
-      "correta": 2,
-      "explicacao": "RELATED e RELATEDTABLE são usadas para acessar dados em tabelas relacionadas. Mesclar tabelas no Power Query elimina a necessidade dessas funções, pois todos os dados ficam na mesma tabela. Isso simplifica as expressões DAX ao custo de maior redundância de dados."
+      "answer": 2,
+      "explanation": "RELATED e RELATEDTABLE são usadas para acessar dados em tabelas relacionadas. Mesclar tabelas no Power Query elimina a necessidade dessas funções, pois todos os dados ficam na mesma tabela. Isso simplifica as expressões DAX ao custo de maior redundância de dados."
     },
     {
-      "pergunta": "Você importou as tabelas Customer e Address para o Power Query. Customer tem Address ID como chave estrangeira. Você precisa criar uma consulta com uma linha por cliente, incluindo City, State/Region e Country. O que deve fazer?",
-      "opcoes": [
+      "question": "Você importou as tabelas Customer e Address para o Power Query. Customer tem Address ID como chave estrangeira. Você precisa criar uma consulta com uma linha por cliente, incluindo City, State/Region e Country. O que deve fazer?",
+      "options": [
         "Mesclar as tabelas Customer e Address",
         "Transpor as tabelas Customer e Address",
         "Agrupar as tabelas Customer e Address pela coluna Address ID",
         "Acrescentar as tabelas Customer e Address"
       ],
-      "correta": 0,
-      "explicacao": "Mesclar (Merge) é a operação correta para trazer colunas de uma tabela relacionada para outra - equivalente a um JOIN. Como você quer adicionar colunas de endereço (City, State, Country) a cada cliente (baseado em Address ID), Mesclar é a opção certa. Acrescentar empilharia linhas, não colunas."
+      "answer": 0,
+      "explanation": "Mesclar (Merge) é a operação correta para trazer colunas de uma tabela relacionada para outra - equivalente a um JOIN. Como você quer adicionar colunas de endereço (City, State, Country) a cada cliente (baseado em Address ID), Mesclar é a opção certa. Acrescentar empilharia linhas, não colunas."
     },
     {
-      "pergunta": "Quais duas funções DAX você usaria para comparar dados com o mês anterior?",
-      "opcoes": [
+      "question": "Quais duas funções DAX você usaria para comparar dados com o mês anterior?",
+      "options": [
         "TOTALYTD e PREVIOUSMONTH",
         "CALCULATE e TOTALYTD",
         "CALCULATE e PREVIOUSMONTH",
         "DATEADD e SAMEPERIODLASTYEAR"
       ],
-      "correta": 2,
-      "explicacao": "Para comparar com o mês anterior, você usa CALCULATE (para modificar o contexto de filtro) em combinação com PREVIOUSMONTH (para deslocar o filtro de data para o mês anterior). Exemplo: Vendas Mês Anterior = CALCULATE([Total Vendas], PREVIOUSMONTH(DimDate[Date]))"
+      "answer": 2,
+      "explanation": "Para comparar com o mês anterior, você usa CALCULATE (para modificar o contexto de filtro) em combinação com PREVIOUSMONTH (para deslocar o filtro de data para o mês anterior). Exemplo: Vendas Mês Anterior = CALCULATE([Total Vendas], PREVIOUSMONTH(DimDate[Date]))"
     },
     {
-      "pergunta": "Que tipo de funções DAX permitem manipular dados usando períodos de tempo como anos, trimestres, meses e dias?",
-      "opcoes": [
+      "question": "Que tipo de funções DAX permitem manipular dados usando períodos de tempo como anos, trimestres, meses e dias?",
+      "options": [
         "Funções de inteligência de tempo (Time intelligence)",
         "Funções de comparação (Comparer functions)",
         "Funções de valor (Value functions)",
         "Funções de filtro (Filter functions)"
       ],
-      "correta": 0,
-      "explicacao": "Funções de inteligência de tempo no DAX (como TOTALYTD, SAMEPERIODLASTYEAR, PREVIOUSMONTH, DATESINPERIOD) permitem criar cálculos que comparam períodos de tempo, calculam acumulados e analisam tendências temporais. Requerem uma tabela de datas marcada."
+      "answer": 0,
+      "explanation": "Funções de inteligência de tempo no DAX (como TOTALYTD, SAMEPERIODLASTYEAR, PREVIOUSMONTH, DATESINPERIOD) permitem criar cálculos que comparam períodos de tempo, calculam acumulados e analisam tendências temporais. Requerem uma tabela de datas marcada."
     },
     {
-      "pergunta": "Que tipo de medida usa SUM para agregar sobre um conjunto de dimensões e uma agregação diferente sobre outro conjunto de dimensões?",
-      "opcoes": [
+      "question": "Que tipo de medida usa SUM para agregar sobre um conjunto de dimensões e uma agregação diferente sobre outro conjunto de dimensões?",
+      "options": [
         "Aditiva (Additive)",
         "Agregada (Aggregate)",
         "Semi-aditiva (Semi-additive)",
         "Não aditiva (Non-additive)"
       ],
-      "correta": 2,
-      "explicacao": "Medidas semi-aditivas se somam em algumas dimensões mas não em outras. O exemplo clássico é saldo de conta bancária: pode ser somado por conta ou agência (dimensão de entidade), mas não por tempo (não faz sentido somar saldos de janeiro, fevereiro e março - deve-se pegar o último valor)."
+      "answer": 2,
+      "explanation": "Medidas semi-aditivas se somam em algumas dimensões mas não em outras. O exemplo clássico é saldo de conta bancária: pode ser somado por conta ou agência (dimensão de entidade), mas não por tempo (não faz sentido somar saldos de janeiro, fevereiro e março - deve-se pegar o último valor)."
     },
     {
-      "pergunta": "Por que você desejaria substituir o contexto de filtro padrão em uma medida DAX?",
-      "opcoes": [
+      "question": "Por que você desejaria substituir o contexto de filtro padrão em uma medida DAX?",
+      "options": [
         "Para criar medidas que se comportem de acordo com a seleção do usuário",
         "Para criar medidas que se comportem de acordo com sua intenção, independentemente do que o usuário seleciona",
         "Para melhorar o desempenho das consultas",
         "Para ocultar dados sensíveis dos usuários"
       ],
-      "correta": 1,
-      "explicacao": "Você substitui o contexto padrão quando precisa que uma medida se comporte de uma forma específica, independente do que o usuário filtra. Por exemplo: calcular sempre a % do total geral, ou comparar com o mesmo período do ano anterior, onde você define o período, não o usuário."
+      "answer": 1,
+      "explanation": "Você substitui o contexto padrão quando precisa que uma medida se comporte de uma forma específica, independente do que o usuário filtra. Por exemplo: calcular sempre a % do total geral, ou comparar com o mesmo período do ano anterior, onde você define o período, não o usuário."
     },
     {
-      "pergunta": "Qual função DAX avalia uma expressão em um contexto de filtro modificado?",
-      "opcoes": [
+      "question": "Qual função DAX avalia uma expressão em um contexto de filtro modificado?",
+      "options": [
         "SUMX",
         "CALCULATE",
         "ALL",
         "FILTER"
       ],
-      "correta": 1,
-      "explicacao": "CALCULATE() é a função mais poderosa do DAX. Ela avalia uma expressão em um contexto de filtro modificado pelos filtros que você especifica. Permite substituir, adicionar ou remover filtros do contexto atual, sendo a base para cálculos avançados como comparações com período anterior."
+      "answer": 1,
+      "explanation": "CALCULATE() é a função mais poderosa do DAX. Ela avalia uma expressão em um contexto de filtro modificado pelos filtros que você especifica. Permite substituir, adicionar ou remover filtros do contexto atual, sendo a base para cálculos avançados como comparações com período anterior."
     },
     {
-      "pergunta": "Qual tipo de objeto DAX é calculado com base nos filtros aplicados pelo usuário do relatório?",
-      "opcoes": [
+      "question": "Qual tipo de objeto DAX é calculado com base nos filtros aplicados pelo usuário do relatório?",
+      "options": [
         "Medidas",
         "Colunas calculadas",
         "Tabelas calculadas",
         "Hierarquias"
       ],
-      "correta": 0,
-      "explicacao": "Medidas são avaliadas dinamicamente com base no contexto de filtro criado pelas interações do usuário (slicers, filtros, seleções em visuais). Isso as torna extremamente poderosas para análises dinâmicas. Colunas calculadas têm contexto de linha fixo calculado na atualização."
+      "answer": 0,
+      "explanation": "Medidas são avaliadas dinamicamente com base no contexto de filtro criado pelas interações do usuário (slicers, filtros, seleções em visuais). Isso as torna extremamente poderosas para análises dinâmicas. Colunas calculadas têm contexto de linha fixo calculado na atualização."
     },
     {
-      "pergunta": "Qual tipo de objeto DAX é calculado sob demanda, no momento em que o usuário interage com o relatório?",
-      "opcoes": [
+      "question": "Qual tipo de objeto DAX é calculado sob demanda, no momento em que o usuário interage com o relatório?",
+      "options": [
         "Colunas calculadas",
         "Tabelas calculadas",
         "Medidas",
         "Parâmetros de campo"
       ],
-      "correta": 2,
-      "explicacao": "Medidas (Measures) são calculadas sob demanda, ou seja, apenas quando são usadas em um visual. Elas respondem ao contexto de filtro atual do relatório. Colunas calculadas e tabelas calculadas são computadas durante a atualização do modelo e armazenadas na memória."
+      "answer": 2,
+      "explanation": "Medidas (Measures) são calculadas sob demanda, ou seja, apenas quando são usadas em um visual. Elas respondem ao contexto de filtro atual do relatório. Colunas calculadas e tabelas calculadas são computadas durante a atualização do modelo e armazenadas na memória."
     },
     {
-      "pergunta": "Você tem FactSales com 50 milhões de linhas de dados diários, DimProduct com 1.000 produtos e DimDate com 3 anos. Os relatórios mostram vendas mensais por produto. Você precisa minimizar o tamanho do modelo. O que deve fazer?",
-      "opcoes": [
+      "question": "Você tem FactSales com 50 milhões de linhas de dados diários, DimProduct com 1.000 produtos e DimDate com 3 anos. Os relatórios mostram vendas mensais por produto. Você precisa minimizar o tamanho do modelo. O que deve fazer?",
+      "options": [
         "Resumir a tabela DimDate ao nível de mês",
         "Resumir a tabela FactSales ao nível de mês",
         "Resumir a tabela FactSales ao nível de categoria de produto",
         "Resumir a tabela FactSales ao nível de trimestre"
       ],
-      "correta": 1,
-      "explicacao": "Como os relatórios mostram dados mensais, você pode agregar FactSales por mês e produto, reduzindo dramaticamente o número de linhas (de 50M de linhas diárias para muito menos linhas mensais). A DimDate mantém os 3 anos; o que muda é a granularidade da tabela de fatos."
+      "answer": 1,
+      "explanation": "Como os relatórios mostram dados mensais, você pode agregar FactSales por mês e produto, reduzindo dramaticamente o número de linhas (de 50M de linhas diárias para muito menos linhas mensais). A DimDate mantém os 3 anos; o que muda é a granularidade da tabela de fatos."
     },
     {
-      "pergunta": "Você tem DimCustomer (uma linha por cliente) e FactOrder (uma linha por pedido). Que tipo de cardinalidade de relacionamento deve usar entre DimCustomer e FactOrder?",
-      "opcoes": [
+      "question": "Você tem DimCustomer (uma linha por cliente) e FactOrder (uma linha por pedido). Que tipo de cardinalidade de relacionamento deve usar entre DimCustomer e FactOrder?",
+      "options": [
         "Muitos-para-muitos",
         "Muitos-para-um",
         "Um-para-muitos",
         "Um-para-um"
       ],
-      "correta": 2,
-      "explicacao": "Um cliente pode ter muitos pedidos, portanto o relacionamento é um-para-muitos (1:*) de DimCustomer (lado 'um', chave primária CustomerID) para FactOrder (lado 'muitos', chave estrangeira CustomerID). Este é o padrão clássico de esquema estrela."
+      "answer": 2,
+      "explanation": "Um cliente pode ter muitos pedidos, portanto o relacionamento é um-para-muitos (1:*) de DimCustomer (lado 'um', chave primária CustomerID) para FactOrder (lado 'muitos', chave estrangeira CustomerID). Este é o padrão clássico de esquema estrela."
     },
     {
-      "pergunta": "Você tem um modelo com as tabelas DimDate e FactSales, onde FactSales tem um relacionamento ativo com DimDate[Date] via OrderDate, e dois relacionamentos inativos via ShipDate e ReturnDate. Qual tipo de dimensão é DimDate?",
-      "opcoes": [
+      "question": "Você tem um modelo com as tabelas DimDate e FactSales, onde FactSales tem um relacionamento ativo com DimDate[Date] via OrderDate, e dois relacionamentos inativos via ShipDate e ReturnDate. Qual tipo de dimensão é DimDate?",
+      "options": [
         "Dimensão degenerada",
         "Dimensão junk",
         "Dimensão outrigger",
         "Dimensão de interpretação múltipla (role-playing dimension)"
       ],
-      "correta": 3,
-      "explicacao": "DimDate é uma role-playing dimension porque a mesma tabela de dimensão (DimDate) é usada múltiplas vezes com papéis diferentes (Data do Pedido, Data de Envio, Data de Retorno). Cada papel usa um relacionamento diferente com a tabela de fatos."
+      "answer": 3,
+      "explanation": "DimDate é uma role-playing dimension porque a mesma tabela de dimensão (DimDate) é usada múltiplas vezes com papéis diferentes (Data do Pedido, Data de Envio, Data de Retorno). Cada papel usa um relacionamento diferente com a tabela de fatos."
     },
     {
-      "pergunta": "Você visualiza uma tabela com colunas LocationName, LocationID, Temperature e DateTime. Você precisa convertê-la em um esquema estrela. Em qual tabela o campo LocationName deve ser adicionado?",
-      "opcoes": [
+      "question": "Você visualiza uma tabela com colunas LocationName, LocationID, Temperature e DateTime. Você precisa convertê-la em um esquema estrela. Em qual tabela o campo LocationName deve ser adicionado?",
+      "options": [
         "Dimensão de Data (Date Dimension)",
         "Dimensão de Localização (Location Dimension)",
         "Fato de Localização (Location Fact)",
         "Fato de Medições de Temperatura (Temperature Measurements Fact)"
       ],
-      "correta": 1,
-      "explicacao": "LocationName é um atributo descritivo de uma localização, portanto pertence à tabela de dimensão de localização. Temperature e DateTime são métricas/eventos que vão para a tabela de fatos. LocationID ficaria em ambas como chave de relacionamento."
+      "answer": 1,
+      "explanation": "LocationName é um atributo descritivo de uma localização, portanto pertence à tabela de dimensão de localização. Temperature e DateTime são métricas/eventos que vão para a tabela de fatos. LocationID ficaria em ambas como chave de relacionamento."
     },
     {
-      "pergunta": "Você precisa criar um relacionamento entre as tabelas Sales e Sales Detail. Para cada linha na tabela Sales, existe pelo menos uma linha, e possivelmente múltiplas, na tabela Sales Detail. Como configurar o relacionamento?",
-      "opcoes": [
+      "question": "Você precisa criar um relacionamento entre as tabelas Sales e Sales Detail. Para cada linha na tabela Sales, existe pelo menos uma linha, e possivelmente múltiplas, na tabela Sales Detail. Como configurar o relacionamento?",
+      "options": [
         "Um-para-um de Sales para Sales Detail",
         "Um-para-muitos de Sales para Sales Detail",
         "Muitos-para-muitos de Sales para Sales Detail",
         "Muitos-para-um de Sales para Sales Detail"
       ],
-      "correta": 1,
-      "explicacao": "Como cada linha em Sales pode ter múltiplas linhas em Sales Detail, o relacionamento é um-para-muitos (1:*) de Sales (lado 'um') para Sales Detail (lado 'muitos'). Sales contém a chave primária; Sales Detail contém a chave estrangeira."
+      "answer": 1,
+      "explanation": "Como cada linha em Sales pode ter múltiplas linhas em Sales Detail, o relacionamento é um-para-muitos (1:*) de Sales (lado 'um') para Sales Detail (lado 'muitos'). Sales contém a chave primária; Sales Detail contém a chave estrangeira."
     },
     {
-      "pergunta": "Você tem um modelo Power BI com uma tabela de datas chamada Sale Date. Você precisa adicionar uma segunda tabela de datas chamada Ship Date com as mesmas colunas, sem repetir a lógica de consulta. O que você deve fazer?",
-      "opcoes": [
+      "question": "Você tem um modelo Power BI com uma tabela de datas chamada Sale Date. Você precisa adicionar uma segunda tabela de datas chamada Ship Date com as mesmas colunas, sem repetir a lógica de consulta. O que você deve fazer?",
+      "options": [
         "Referenciar a consulta Sale Date",
         "Duplicar a consulta Sale Date",
         "Renomear a consulta Sale Date para Ship Date",
         "Acrescentar a consulta Sale Date como uma nova consulta"
       ],
-      "correta": 0,
-      "explicacao": "Referenciar (Reference) cria uma nova consulta que usa os resultados da consulta original como ponto de partida, sem duplicar a lógica subjacente. Se a consulta original mudar, a referência também muda. Duplicar cria uma cópia independente (com lógica repetida)."
+      "answer": 0,
+      "explanation": "Referenciar (Reference) cria uma nova consulta que usa os resultados da consulta original como ponto de partida, sem duplicar a lógica subjacente. Se a consulta original mudar, a referência também muda. Duplicar cria uma cópia independente (com lógica repetida)."
     },
     {
-      "pergunta": "Você cria um gráfico de colunas que exibe ProductName por Date, mas o eixo mostra todas as datas individuais. Você precisa exibir por ano com drill-down para semana e dia. O que deve fazer PRIMEIRO?",
-      "opcoes": [
+      "question": "Você cria um gráfico de colunas que exibe ProductName por Date, mas o eixo mostra todas as datas individuais. Você precisa exibir por ano com drill-down para semana e dia. O que deve fazer PRIMEIRO?",
+      "options": [
         "Criar uma nova tabela com colunas para data, ano, semana e dia",
         "Criar uma nova hierarquia na tabela Sales",
         "Formatar a visualização e definir o tipo do Eixo X como Categórico",
         "Configurar um filtro visual para a coluna Date usando filtro avançado"
       ],
-      "correta": 0,
-      "explicacao": "Para ter drill-down por Ano > Semana > Dia, você precisa primeiro criar uma tabela de datas dedicada com essas colunas. Em seguida, crie um relacionamento entre a tabela Date e a tabela Sales e crie a hierarquia de datas. A tabela Sales por si só não tem as colunas de granularidade necessárias."
+      "answer": 0,
+      "explanation": "Para ter drill-down por Ano > Semana > Dia, você precisa primeiro criar uma tabela de datas dedicada com essas colunas. Em seguida, crie um relacionamento entre a tabela Date e a tabela Sales e crie a hierarquia de datas. A tabela Sales por si só não tem as colunas de granularidade necessárias."
     },
     {
-      "pergunta": "Você tem uma consulta de dados de vendas onde a coluna Date contém valores nulos que devem ser substituídos pela data da linha anterior. O que você deve clicar na guia Transformar do Editor de Consultas?",
-      "opcoes": [
+      "question": "Você tem uma consulta de dados de vendas onde a coluna Date contém valores nulos que devem ser substituídos pela data da linha anterior. O que você deve clicar na guia Transformar do Editor de Consultas?",
+      "options": [
         "Formato e depois Limpar",
         "Data e depois Mais Antigo",
         "Preencher e depois Abaixo",
         "Substituir Valores e depois Substituir Erros"
       ],
-      "correta": 2,
-      "explicacao": "Fill Down (Preencher Abaixo) substitui valores nulos pelo valor da linha anterior (acima). Fill Up faria o contrário - substituiria nulos pelo valor da linha seguinte. Esta é a operação correta para propagar datas para baixo quando há nulos."
+      "answer": 2,
+      "explanation": "Fill Down (Preencher Abaixo) substitui valores nulos pelo valor da linha anterior (acima). Fill Up faria o contrário - substituiria nulos pelo valor da linha seguinte. Esta é a operação correta para propagar datas para baixo quando há nulos."
     },
     {
-      "pergunta": "Você tem tabelas CustomerVisits e Date no Power BI. A medida de total de visitas mostra 60.000 para todos os meses, mas o total real é 60.000 com 5.000 apenas em agosto. Como corrigir o relatório?",
-      "opcoes": [
+      "question": "Você tem tabelas CustomerVisits e Date no Power BI. A medida de total de visitas mostra 60.000 para todos os meses, mas o total real é 60.000 com 5.000 apenas em agosto. Como corrigir o relatório?",
+      "options": [
         "Modificar a medida para usar a função DAX CALCULATE",
         "Criar um relacionamento entre a tabela CustomerVisits e a tabela Date",
         "Modificar a medida para usar a função DAX SUM",
         "Criar uma hierarquia na tabela Date"
       ],
-      "correta": 1,
-      "explicacao": "Quando uma medida mostra o mesmo valor total para todos os filtros de data, geralmente significa que não existe relacionamento entre a tabela de fatos (CustomerVisits) e a tabela de dimensão Date. Sem o relacionamento, os filtros de data não propagam para a tabela de fatos."
+      "answer": 1,
+      "explanation": "Quando uma medida mostra o mesmo valor total para todos os filtros de data, geralmente significa que não existe relacionamento entre a tabela de fatos (CustomerVisits) e a tabela de dimensão Date. Sem o relacionamento, os filtros de data não propagam para a tabela de fatos."
     },
     {
-      "pergunta": "Você tem um modelo Power Pivot no Excel com tabelas Product, Sales e Salesperson relacionadas. Você precisa gerar um relatório que mostre a contagem de produtos vendidos por cada vendedor. O que você deve fazer antes de criar o relatório?",
-      "opcoes": [
+      "question": "Você tem um modelo Power Pivot no Excel com tabelas Product, Sales e Salesperson relacionadas. Você precisa gerar um relatório que mostre a contagem de produtos vendidos por cada vendedor. O que você deve fazer antes de criar o relatório?",
+      "options": [
         "Criar um relacionamento um-para-um entre Product e Salesperson",
         "Para cada relacionamento, alterar a direção do filtro cruzado para Ambos (Both)",
         "Para cada relacionamento, alterar a cardinalidade para Um para um (1:1)",
         "Criar um relacionamento muitos-para-um entre Product e Salesperson"
       ],
-      "correta": 1,
-      "explicacao": "Para contar produtos por vendedor, o filtro deve fluir da tabela Sales para a tabela Product (que filtra quais produtos foram vendidos) e também para Salesperson. Alterar o Cross Filter Direction para Both nas relações existentes permite esse fluxo bidirecional sem criar novos relacionamentos."
+      "answer": 1,
+      "explanation": "Para contar produtos por vendedor, o filtro deve fluir da tabela Sales para a tabela Product (que filtra quais produtos foram vendidos) e também para Salesperson. Alterar o Cross Filter Direction para Both nas relações existentes permite esse fluxo bidirecional sem criar novos relacionamentos."
     },
     {
-      "pergunta": "Se você importar ou criar sua própria tabela de datas no Power BI, quais requisitos ela deve atender?",
-      "opcoes": [
+      "question": "Se você importar ou criar sua própria tabela de datas no Power BI, quais requisitos ela deve atender?",
+      "options": [
         "Deve conter todos os dias de todos os anos representados no modelo",
         "Não pode conter datas duplicadas",
         "Deve ter pelo menos um campo definido como tipo Date ou DateTime",
         "Todos os itens acima"
       ],
-      "correta": 3,
-      "explicacao": "Uma tabela de datas personalizada deve atender a todos esses requisitos: conter todos os dias de todos os anos do modelo, não ter datas duplicadas e ter pelo menos um campo Date/DateTime. Além disso, todos os horários devem ser idênticos (ex: 12:00)."
+      "answer": 3,
+      "explanation": "Uma tabela de datas personalizada deve atender a todos esses requisitos: conter todos os dias de todos os anos do modelo, não ter datas duplicadas e ter pelo menos um campo Date/DateTime. Além disso, todos os horários devem ser idênticos (ex: 12:00)."
     },
     {
-      "pergunta": "Qual das seguintes afirmações sobre usar tabelas mescladas em vez de modelos de dados NÃO é verdadeira?",
-      "opcoes": [
+      "question": "Qual das seguintes afirmações sobre usar tabelas mescladas em vez de modelos de dados NÃO é verdadeira?",
+      "options": [
         "Mesclar cria dados redundantes",
         "Mesclar usa mais memória",
         "Mesclar usa mais poder de processamento",
         "Mesclar mantém métricas e dimensões em tabelas separadas"
       ],
-      "correta": 3,
-      "explicacao": "Quando você mescla dados em uma única tabela (flat table), as métricas e dimensões ficam JUNTAS, não separadas. Isso é o oposto de um modelo de dados em estrela onde fatos e dimensões são tabelas separadas. Além disso, mesclar cria redundância de dados e consome mais memória e CPU."
+      "answer": 3,
+      "explanation": "Quando você mescla dados em uma única tabela (flat table), as métricas e dimensões ficam JUNTAS, não separadas. Isso é o oposto de um modelo de dados em estrela onde fatos e dimensões são tabelas separadas. Além disso, mesclar cria redundância de dados e consome mais memória e CPU."
     },
     {
-      "pergunta": "Você tem um modelo Power BI com tabelas Customers e Invoice relacionadas por CustomerID. Você precisa definir o relacionamento para otimizar a performance das consultas. O que deve configurar?",
-      "opcoes": [
+      "question": "Você tem um modelo Power BI com tabelas Customers e Invoice relacionadas por CustomerID. Você precisa definir o relacionamento para otimizar a performance das consultas. O que deve configurar?",
+      "options": [
         "Cardinalidade: Muitos-para-muitos; Direção de filtro cruzado: Ambos",
         "Cardinalidade: Um-para-muitos (Customers para Invoice); Direção de filtro cruzado: Único",
         "Cardinalidade: Um-para-um; Direção de filtro cruzado: Ambos",
         "Cardinalidade: Um-para-muitos (Invoice para Customers); Direção de filtro cruzado: Único"
       ],
-      "correta": 1,
-      "explicacao": "Como um cliente pode ter muitas faturas, a cardinalidade é um-para-muitos de Customers (lado 'um') para Invoice (lado 'muitos'). Filtro Único é preferido para performance, pois filtros bidirecionais podem criar ambiguidade e prejudicar o desempenho do modelo."
+      "answer": 1,
+      "explanation": "Como um cliente pode ter muitas faturas, a cardinalidade é um-para-muitos de Customers (lado 'um') para Invoice (lado 'muitos'). Filtro Único é preferido para performance, pois filtros bidirecionais podem criar ambiguidade e prejudicar o desempenho do modelo."
     },
     {
-      "pergunta": "Qual função DAX pode ser usada para ativar relacionamentos inativos em um modelo de dados?",
-      "opcoes": [
+      "question": "Qual função DAX pode ser usada para ativar relacionamentos inativos em um modelo de dados?",
+      "options": [
         "RELATED",
         "RELATEDTABLE",
         "USERELATIONSHIP",
         "ACTIVATE"
       ],
-      "correta": 2,
-      "explicacao": "USERELATIONSHIP() permite especificar qual relacionamento usar em um cálculo DAX, incluindo relacionamentos inativos. É especialmente útil em modelos com role-playing dimensions (como múltiplas datas) onde você precisa ativar um relacionamento alternativo para um cálculo específico."
+      "answer": 2,
+      "explanation": "USERELATIONSHIP() permite especificar qual relacionamento usar em um cálculo DAX, incluindo relacionamentos inativos. É especialmente útil em modelos com role-playing dimensions (como múltiplas datas) onde você precisa ativar um relacionamento alternativo para um cálculo específico."
     },
     {
-      "pergunta": "Qual das seguintes afirmações é verdadeira sobre o fluxo de filtros (filter flow) em relacionamentos do Power BI?",
-      "opcoes": [
+      "question": "Qual das seguintes afirmações é verdadeira sobre o fluxo de filtros (filter flow) em relacionamentos do Power BI?",
+      "options": [
         "Por padrão, o filtro aponta do lado 'um' para o lado 'muitos'",
         "Quando você filtra uma tabela, o contexto de filtro é passado para todas as tabelas 'downstream' relacionadas",
         "Os filtros não podem fluir 'upstream' (contra a direção da seta)",
         "Todas as alternativas acima"
       ],
-      "correta": 3,
-      "explicacao": "Todas são verdadeiras: por padrão, os filtros fluem do lado 'um' (dimensões) para o lado 'muitos' (fatos). O contexto de filtro se propaga para tabelas downstream (seguindo a direção da seta). Filtros não fluem upstream (contra a seta) sem filtros bidirecionais."
+      "answer": 3,
+      "explanation": "Todas são verdadeiras: por padrão, os filtros fluem do lado 'um' (dimensões) para o lado 'muitos' (fatos). O contexto de filtro se propaga para tabelas downstream (seguindo a direção da seta). Filtros não fluem upstream (contra a seta) sem filtros bidirecionais."
     },
     {
-      "pergunta": "Em um relacionamento um-para-muitos, ao que o 'muitos' está associado?",
-      "opcoes": [
+      "question": "Em um relacionamento um-para-muitos, ao que o 'muitos' está associado?",
+      "options": [
         "Chave primária",
         "Chave estrangeira",
         "Coluna de índice",
         "Tabela de consulta (lookup)"
       ],
-      "correta": 1,
-      "explicacao": "Em um relacionamento um-para-muitos, o lado 'um' é a chave primária (valores únicos na tabela de dimensão) e o lado 'muitos' é a chave estrangeira (valores que se repetem na tabela de fatos). A cardinalidade refere-se à unicidade dos valores na coluna."
+      "answer": 1,
+      "explanation": "Em um relacionamento um-para-muitos, o lado 'um' é a chave primária (valores únicos na tabela de dimensão) e o lado 'muitos' é a chave estrangeira (valores que se repetem na tabela de fatos). A cardinalidade refere-se à unicidade dos valores na coluna."
     },
     {
-      "pergunta": "Qual é o nome da coluna ou campo usado para identificar exclusivamente cada linha de uma tabela?",
-      "opcoes": [
+      "question": "Qual é o nome da coluna ou campo usado para identificar exclusivamente cada linha de uma tabela?",
+      "options": [
         "Chave primária (Primary key)",
         "Chave estrangeira (Foreign key)",
         "Chave nativa (Native key)",
         "Chave única (Unique key)"
       ],
-      "correta": 0,
-      "explicacao": "A chave primária identifica exclusivamente cada linha de uma tabela e corresponde às chaves estrangeiras nas tabelas de dados relacionadas. Em tabelas de dimensão, a chave primária é o campo que liga a dimensão à tabela de fatos."
+      "answer": 0,
+      "explanation": "A chave primária identifica exclusivamente cada linha de uma tabela e corresponde às chaves estrangeiras nas tabelas de dados relacionadas. Em tabelas de dimensão, a chave primária é o campo que liga a dimensão à tabela de fatos."
     },
     {
-      "pergunta": "Qual dos seguintes campos seria tipicamente encontrado em uma tabela de dados (fatos) em um modelo Power BI?",
-      "opcoes": [
+      "question": "Qual dos seguintes campos seria tipicamente encontrado em uma tabela de dados (fatos) em um modelo Power BI?",
+      "options": [
         "Nome do produto",
         "Preço de varejo",
         "Quantidade vendida",
         "Marca do produto"
       ],
-      "correta": 2,
-      "explicacao": "Tabelas de fatos contêm métricas mensuráveis do negócio, como 'Quantidade Vendida', 'Valor da Venda', 'Custo'. Já nome do produto, preço de varejo e marca do produto são atributos descritivos que pertencem à tabela de dimensão de Produtos."
+      "answer": 2,
+      "explanation": "Tabelas de fatos contêm métricas mensuráveis do negócio, como 'Quantidade Vendida', 'Valor da Venda', 'Custo'. Já nome do produto, preço de varejo e marca do produto são atributos descritivos que pertencem à tabela de dimensão de Produtos."
     },
     {
-      "pergunta": "Qual destas NÃO é uma boa prática de modelagem de dados no Power BI?",
-      "opcoes": [
+      "question": "Qual destas NÃO é uma boa prática de modelagem de dados no Power BI?",
+      "options": [
         "Usar esquema estrela com relacionamentos muitos-para-muitos",
         "Usar relacionamentos com filtros unidirecionais",
         "Ter tabelas que servem propósitos específicos (fatos e dimensões)",
         "Incluir apenas os dados necessários para análise"
       ],
-      "correta": 0,
-      "explicacao": "Relacionamentos muitos-para-muitos devem ser evitados no esquema estrela. Um modelo bem projetado usa relacionamentos um-para-muitos (1:*) entre tabelas de dimensão (1) e tabelas de fatos (*). Muitos-para-muitos podem causar problemas de ambiguidade e desempenho."
+      "answer": 0,
+      "explanation": "Relacionamentos muitos-para-muitos devem ser evitados no esquema estrela. Um modelo bem projetado usa relacionamentos um-para-muitos (1:*) entre tabelas de dimensão (1) e tabelas de fatos (*). Muitos-para-muitos podem causar problemas de ambiguidade e desempenho."
     },
     {
-      "pergunta": "O que transforma uma coleção de tabelas independentes em um modelo de dados no Power BI?",
-      "opcoes": [
+      "question": "O que transforma uma coleção de tabelas independentes em um modelo de dados no Power BI?",
+      "options": [
         "Conectar as tabelas via relacionamentos baseados em seus campos comuns",
         "Conectar às tabelas em um único arquivo Power BI",
         "Mesclar as tabelas em uma única tabela mestre",
         "Dar nomes relacionados às tabelas"
       ],
-      "correta": 0,
-      "explicacao": "Um modelo de dados é criado ao conectar tabelas através de relacionamentos baseados em campos comuns (chaves primária e estrangeira). Os relacionamentos permitem que os filtros fluam entre as tabelas e que os cálculos DAX naveguem pelo modelo."
+      "answer": 0,
+      "explanation": "Um modelo de dados é criado ao conectar tabelas através de relacionamentos baseados em campos comuns (chaves primária e estrangeira). Os relacionamentos permitem que os filtros fluam entre as tabelas e que os cálculos DAX naveguem pelo modelo."
     },
     {
-      "pergunta": "Que tipo de tabela armazena detalhes sobre entidades de negócio como clientes, produtos ou localizações?",
-      "opcoes": [
+      "question": "Que tipo de tabela armazena detalhes sobre entidades de negócio como clientes, produtos ou localizações?",
+      "options": [
         "Tabela de fatos",
         "Tabela de dimensão",
         "Tabela de datas",
         "Tabela de dados"
       ],
-      "correta": 1,
-      "explicacao": "Tabelas de dimensão armazenam detalhes sobre entidades de negócio (atributos descritivos). Por exemplo: tabela de Clientes (nome, endereço, segmento), tabela de Produtos (nome, categoria, preço), tabela de Locais (cidade, estado, país)."
+      "answer": 1,
+      "explanation": "Tabelas de dimensão armazenam detalhes sobre entidades de negócio (atributos descritivos). Por exemplo: tabela de Clientes (nome, endereço, segmento), tabela de Produtos (nome, categoria, preço), tabela de Locais (cidade, estado, país)."
     },
     {
-      "pergunta": "Uma dimensão que pode filtrar fatos relacionados de formas diferentes é chamada de quê?",
-      "opcoes": [
+      "question": "Uma dimensão que pode filtrar fatos relacionados de formas diferentes é chamada de quê?",
+      "options": [
         "Dimensão de interpretação múltipla (Role-playing dimension)",
         "Dimensão floco de neve (Snowflake dimension)",
         "Dimensão degenerada (Degenerate dimension)",
         "Dimensão conformada (Conformed dimension)"
       ],
-      "correta": 0,
-      "explicacao": "Uma Role-playing dimension (dimensão de interpretação múltipla) é uma tabela de dimensão, como uma tabela de datas, que pode ser usada várias vezes no mesmo modelo com diferentes papéis. Por exemplo, uma tabela de datas pode ser usada como 'Data do Pedido', 'Data de Entrega' e 'Data de Envio'."
+      "answer": 0,
+      "explanation": "Uma Role-playing dimension (dimensão de interpretação múltipla) é uma tabela de dimensão, como uma tabela de datas, que pode ser usada várias vezes no mesmo modelo com diferentes papéis. Por exemplo, uma tabela de datas pode ser usada como 'Data do Pedido', 'Data de Entrega' e 'Data de Envio'."
     },
     {
-      "pergunta": "Como se chama quando múltiplos registros de uma tabela estão associados a múltiplos registros de outra tabela?",
-      "opcoes": [
+      "question": "Como se chama quando múltiplos registros de uma tabela estão associados a múltiplos registros de outra tabela?",
+      "options": [
         "Relacionamento muitos-para-muitos",
         "Relacionamento um-para-muitos",
         "Relacionamento muitos-para-um",
         "Relacionamento um-para-um"
       ],
-      "correta": 0,
-      "explicacao": "Um relacionamento muitos-para-muitos (many-to-many) ocorre quando múltiplos registros de uma tabela podem estar relacionados com múltiplos registros de outra. No Power BI, esses relacionamentos têm cardinalidade muitos-para-muitos e geralmente requerem uma tabela ponte."
+      "answer": 0,
+      "explanation": "Um relacionamento muitos-para-muitos (many-to-many) ocorre quando múltiplos registros de uma tabela podem estar relacionados com múltiplos registros de outra. No Power BI, esses relacionamentos têm cardinalidade muitos-para-muitos e geralmente requerem uma tabela ponte."
     },
     {
-      "pergunta": "Qual é a diferença entre uma tabela de fatos e uma tabela de dimensão no modelo de dados?",
-      "opcoes": [
+      "question": "Qual é a diferença entre uma tabela de fatos e uma tabela de dimensão no modelo de dados?",
+      "options": [
         "Tabelas de fatos armazenam observações ou eventos; tabelas de dimensão contêm informações sobre entidades específicas nos dados",
         "Tabelas de fatos contêm informações sobre entidades; tabelas de dimensão contêm dados observacionais",
         "Tabelas de dimensão definem papéis no Power BI; tabelas de fatos fornecem fatos associados",
         "Não há diferença entre elas"
       ],
-      "correta": 0,
-      "explicacao": "Tabelas de fatos armazenam observações ou eventos mensuráveis (transações, vendas, logs), geralmente com valores numéricos. Tabelas de dimensão descrevem entidades do negócio (produtos, clientes, locais) com atributos que contextualizam os fatos."
+      "answer": 0,
+      "explanation": "Tabelas de fatos armazenam observações ou eventos mensuráveis (transações, vendas, logs), geralmente com valores numéricos. Tabelas de dimensão descrevem entidades do negócio (produtos, clientes, locais) com atributos que contextualizam os fatos."
     },
     {
-      "pergunta": "Quais são os dois tipos de tabelas em um esquema estrela (star schema)?",
-      "opcoes": [
+      "question": "Quais são os dois tipos de tabelas em um esquema estrela (star schema)?",
+      "options": [
         "Tabelas ativas e inativas",
         "Tabelas de dados qualitativos e quantitativos",
         "Tabelas de fatos e tabelas de dimensão",
         "Tabelas primárias e secundárias"
       ],
-      "correta": 2,
-      "explicacao": "Um esquema estrela é composto por dois tipos de tabelas: tabelas de fatos (que armazenam métricas e eventos como vendas, transações) e tabelas de dimensão (que armazenam atributos descritivos como produtos, clientes, datas)."
+      "answer": 2,
+      "explanation": "Um esquema estrela é composto por dois tipos de tabelas: tabelas de fatos (que armazenam métricas e eventos como vendas, transações) e tabelas de dimensão (que armazenam atributos descritivos como produtos, clientes, datas)."
     },
     {
-      "pergunta": "O que é o contexto de filtro (filter context) no DAX?",
-      "opcoes": [
+      "question": "O que é o contexto de filtro (filter context) no DAX?",
+      "options": [
         "O código M que filtra dados no Power Query",
         "O conjunto de filtros ativos que determinam quais dados são incluídos em um cálculo DAX, incluindo filtros de relatório, segmentadores, hierarquias visuais e relacionamentos",
         "Uma função específica do DAX para filtrar tabelas",
         "O filtro de linhas aplicado por regras RLS"
       ],
-      "correta": 1,
-      "explicacao": "O contexto de filtro é o conjunto de todos os filtros ativos quando uma medida DAX é avaliada. Inclui filtros aplicados por slicers, filtros de página, filtros de relatório, seleções em visuais e filtros propagados por relacionamentos entre tabelas."
+      "answer": 1,
+      "explanation": "O contexto de filtro é o conjunto de todos os filtros ativos quando uma medida DAX é avaliada. Inclui filtros aplicados por slicers, filtros de página, filtros de relatório, seleções em visuais e filtros propagados por relacionamentos entre tabelas."
     },
     {
-      "pergunta": "Qual função DAX é usada para criar uma medida que retorna o total acumulado no ano (YTD - Year to Date)?",
-      "opcoes": [
+      "question": "Qual função DAX é usada para criar uma medida que retorna o total acumulado no ano (YTD - Year to Date)?",
+      "options": [
         "TOTALYTD()",
         "SUMYTD()",
         "YEARTODATE()",
         "CUMULATIVESUM()"
       ],
-      "correta": 0,
-      "explicacao": "TOTALYTD() é a função de inteligência de tempo DAX que calcula o valor acumulado do início do ano até a data atual no contexto do filtro. Requer uma tabela de datas marcada como tabela de datas."
+      "answer": 0,
+      "explanation": "TOTALYTD() é a função de inteligência de tempo DAX que calcula o valor acumulado do início do ano até a data atual no contexto do filtro. Requer uma tabela de datas marcada como tabela de datas."
     },
     {
-      "pergunta": "O que é uma tabela de fatos (fact table) em um modelo de dados do Power BI?",
-      "opcoes": [
+      "question": "O que é uma tabela de fatos (fact table) em um modelo de dados do Power BI?",
+      "options": [
         "Uma tabela que armazena informações descritivas como nomes de clientes e endereços",
         "Uma tabela que contém dados de transações ou eventos mensuráveis, normalmente com chaves estrangeiras para tabelas de dimensão",
         "Uma tabela criada automaticamente pelo Power BI para cada relatório",
         "Uma tabela que armazena apenas dados verdadeiros, sem valores nulos"
       ],
-      "correta": 1,
-      "explicacao": "Tabelas de fatos contêm dados de transações ou eventos mensuráveis (vendas, pedidos, etc.) com métricas numéricas e chaves estrangeiras que se relacionam com tabelas de dimensão. São o centro do esquema estrela."
+      "answer": 1,
+      "explanation": "Tabelas de fatos contêm dados de transações ou eventos mensuráveis (vendas, pedidos, etc.) com métricas numéricas e chaves estrangeiras que se relacionam com tabelas de dimensão. São o centro do esquema estrela."
     },
     {
-      "pergunta": "O que é uma dimensão de mudança lenta (Slowly Changing Dimension - SCD) Tipo 2 no contexto de modelagem de dados?",
-      "opcoes": [
+      "question": "O que é uma dimensão de mudança lenta (Slowly Changing Dimension - SCD) Tipo 2 no contexto de modelagem de dados?",
+      "options": [
         "Uma dimensão que nunca muda",
         "Uma dimensão que sobrescreve os valores antigos quando há mudanças",
         "Uma dimensão que mantém o histórico de mudanças criando novos registros com data de início/fim de validade",
         "Uma dimensão que agrega dados históricos em média"
       ],
-      "correta": 2,
-      "explicacao": "SCD Tipo 2 mantém o histórico completo de mudanças. Quando um atributo muda, um novo registro é criado com a nova versão, e o registro antigo é marcado como inativo com data de fim. Isso permite análises históricas precisas."
+      "answer": 2,
+      "explanation": "SCD Tipo 2 mantém o histórico completo de mudanças. Quando um atributo muda, um novo registro é criado com a nova versão, e o registro antigo é marcado como inativo com data de fim. Isso permite análises históricas precisas."
     },
     {
-      "pergunta": "Qual é a diferença entre Mesclar Consultas (Merge) e Acrescentar Consultas (Append) no Power Query?",
-      "opcoes": [
+      "question": "Qual é a diferença entre Mesclar Consultas (Merge) e Acrescentar Consultas (Append) no Power Query?",
+      "options": [
         "Não há diferença, ambas combinam dados da mesma forma",
         "Mesclar combina colunas de tabelas diferentes (como JOIN no SQL); Acrescentar empilha linhas de tabelas com a mesma estrutura (como UNION)",
         "Acrescentar combina colunas; Mesclar empilha linhas",
         "Mesclar é usado para dados numéricos; Acrescentar para dados textuais"
       ],
-      "correta": 1,
-      "explicacao": "Mesclar Consultas (Merge) é equivalente a um JOIN SQL - combina colunas de tabelas relacionadas por uma chave. Acrescentar Consultas (Append) é como UNION SQL - empilha linhas de tabelas com a mesma estrutura de colunas."
+      "answer": 1,
+      "explanation": "Mesclar Consultas (Merge) é equivalente a um JOIN SQL - combina colunas de tabelas relacionadas por uma chave. Acrescentar Consultas (Append) é como UNION SQL - empilha linhas de tabelas com a mesma estrutura de colunas."
     },
     {
-      "pergunta": "Qual função DAX calcula a soma de uma expressão avaliada para cada linha de uma tabela?",
-      "opcoes": [
+      "question": "Qual função DAX calcula a soma de uma expressão avaliada para cada linha de uma tabela?",
+      "options": [
         "SUM()",
         "SUMX()",
         "CALCULATE(SUM())",
         "TOTALSUM()"
       ],
-      "correta": 1,
-      "explicacao": "SUMX() é uma função de iteração que avalia uma expressão para cada linha de uma tabela e depois soma os resultados. É diferente de SUM() que apenas soma uma coluna existente."
+      "answer": 1,
+      "explanation": "SUMX() é uma função de iteração que avalia uma expressão para cada linha de uma tabela e depois soma os resultados. É diferente de SUM() que apenas soma uma coluna existente."
     },
     {
-      "pergunta": "Qual propriedade de relacionamento no Power BI controla a direção em que os filtros se propagam entre as tabelas?",
-      "opcoes": [
+      "question": "Qual propriedade de relacionamento no Power BI controla a direção em que os filtros se propagam entre as tabelas?",
+      "options": [
         "Cardinalidade",
         "Direção do filtro cruzado",
         "Ativo/Inativo",
         "Integridade referencial"
       ],
-      "correta": 1,
-      "explicacao": "A Direção do filtro cruzado (Cross filter direction) controla como os filtros se propagam entre tabelas relacionadas. Pode ser 'Única' (da tabela de um lado para o lado múltiplo) ou 'Ambas' (bidirecional)."
+      "answer": 1,
+      "explanation": "A Direção do filtro cruzado (Cross filter direction) controla como os filtros se propagam entre tabelas relacionadas. Pode ser 'Única' (da tabela de um lado para o lado múltiplo) ou 'Ambas' (bidirecional)."
     },
     {
-      "pergunta": "Qual é a diferença entre uma coluna calculada e uma medida no Power BI?",
-      "opcoes": [
+      "question": "Qual é a diferença entre uma coluna calculada e uma medida no Power BI?",
+      "options": [
         "Colunas calculadas são calculadas no momento da consulta; medidas são calculadas durante a importação",
         "Colunas calculadas são armazenadas no modelo e calculadas durante a atualização de dados; medidas são calculadas dinamicamente durante a consulta",
         "Não há diferença, são equivalentes em funcionalidade e desempenho",
         "Medidas só podem usar funções de agregação; colunas calculadas podem usar qualquer função DAX"
       ],
-      "correta": 1,
-      "explicacao": "Colunas calculadas são computadas durante a atualização de dados e armazenadas no modelo (ocupam memória). Medidas são calculadas dinamicamente em tempo de consulta, o que as torna mais eficientes para dados grandes."
+      "answer": 1,
+      "explanation": "Colunas calculadas são computadas durante a atualização de dados e armazenadas no modelo (ocupam memória). Medidas são calculadas dinamicamente em tempo de consulta, o que as torna mais eficientes para dados grandes."
     },
     {
-      "pergunta": "O que é uma tabela de datas (Date table) no Power BI e por que ela é importante?",
-      "opcoes": [
+      "question": "O que é uma tabela de datas (Date table) no Power BI e por que ela é importante?",
+      "options": [
         "Uma tabela que armazena as datas de criação dos relatórios",
         "Uma tabela com uma linha para cada data em um intervalo contínuo, usada para habilitar a inteligência de tempo DAX",
         "Uma tabela que registra quando os dados foram importados",
         "Uma tabela automática criada pelo Power BI para cada coluna de data"
       ],
-      "correta": 1,
-      "explicacao": "Uma tabela de datas é uma tabela de dimensão com uma linha para cada data em um intervalo contínuo e sem lacunas. É necessária para usar funções de inteligência de tempo DAX como TOTALYTD, SAMEPERIODLASTYEAR, etc."
+      "answer": 1,
+      "explanation": "Uma tabela de datas é uma tabela de dimensão com uma linha para cada data em um intervalo contínuo e sem lacunas. É necessária para usar funções de inteligência de tempo DAX como TOTALYTD, SAMEPERIODLASTYEAR, etc."
     },
     {
-      "pergunta": "Qual função DAX deve ser usada para calcular uma medida ignorando todos os filtros aplicados ao contexto atual?",
-      "opcoes": [
+      "question": "Qual função DAX deve ser usada para calcular uma medida ignorando todos os filtros aplicados ao contexto atual?",
+      "options": [
         "ALL()",
         "REMOVEFILTERS()",
         "ALLEXCEPT()",
         "CALCULATE() com ALL()"
       ],
-      "correta": 3,
-      "explicacao": "CALCULATE() com ALL() como modificador de filtro remove todos os filtros do contexto atual e calcula a expressão no contexto expandido sem filtros."
+      "answer": 3,
+      "explanation": "CALCULATE() com ALL() como modificador de filtro remove todos os filtros do contexto atual e calcula a expressão no contexto expandido sem filtros."
     },
     {
-      "pergunta": "Qual tipo de relacionamento no Power BI permite que um valor em uma coluna apareça mais de uma vez em ambas as tabelas relacionadas?",
-      "opcoes": [
+      "question": "Qual tipo de relacionamento no Power BI permite que um valor em uma coluna apareça mais de uma vez em ambas as tabelas relacionadas?",
+      "options": [
         "Um-para-um (1:1)",
         "Um-para-muitos (1:N)",
         "Muitos-para-muitos (M:M)",
         "Nenhum relacionamento"
       ],
-      "correta": 2,
-      "explicacao": "O relacionamento muitos-para-muitos (M:M) permite que valores apareçam múltiplas vezes em ambas as tabelas. Deve ser usado com cautela pois pode causar problemas de desempenho e ambiguidade."
+      "answer": 2,
+      "explanation": "O relacionamento muitos-para-muitos (M:M) permite que valores apareçam múltiplas vezes em ambas as tabelas. Deve ser usado com cautela pois pode causar problemas de desempenho e ambiguidade."
     },
     {
-      "pergunta": "Qual é o benefício de usar um modelo estrela (star schema) no Power BI?",
-      "opcoes": [
+      "question": "Qual é o benefício de usar um modelo estrela (star schema) no Power BI?",
+      "options": [
         "Permite armazenar mais dados do que um modelo normalizado",
         "Melhora o desempenho das consultas e simplifica as fórmulas DAX",
         "Elimina a necessidade de relacionamentos entre tabelas",
         "Permite conectar-se a mais fontes de dados simultaneamente"
       ],
-      "correta": 1,
-      "explicacao": "O esquema estrela melhora o desempenho das consultas ao minimizar junções complexas e simplifica as fórmulas DAX porque as relações são mais diretas e previsíveis."
+      "answer": 1,
+      "explanation": "O esquema estrela melhora o desempenho das consultas ao minimizar junções complexas e simplifica as fórmulas DAX porque as relações são mais diretas e previsíveis."
     },
     {
-      "pergunta": "Qual função DAX retorna uma tabela de resumo de valores totais em várias categorias?",
-      "opcoes": [
+      "question": "Qual função DAX retorna uma tabela de resumo de valores totais em várias categorias?",
+      "options": [
         "SUMMARIZE",
         "GROUPBY",
         "ADDCOLUMNS",
         "SUMMARIZECOLUMNS"
       ],
-      "correta": 3,
-      "explicacao": "SUMMARIZECOLUMNS é a função DAX preferida para criar tabelas de resumo com múltiplos agrupamentos, sendo mais eficiente que SUMMARIZE em muitos cenários."
+      "answer": 3,
+      "explanation": "SUMMARIZECOLUMNS é a função DAX preferida para criar tabelas de resumo com múltiplos agrupamentos, sendo mais eficiente que SUMMARIZE em muitos cenários."
     },
     {
       "question": "Por que é preferível usar um esquema estrela (Star Schema) com tabelas de fato e dimensão separadas em vez de uma única tabela desnormalizada no Power BI?",
@@ -2714,1803 +2714,1803 @@ window.questionBank = {
   ],
   "Visualizar e Analisar": [
     {
-      "pergunta": "Overview Litware, Inc. is an online retailer that uses Microsoft Power BI dashboards and reports. The company plans to leverage data from Microsoft SQL Server databases, Microsoft Excel files, text files, and several other data sources. Litware uses Azure Active Directory (Azure AD) to authenticate users. Existing Environment Sales Data Litware has online sales data that has the SQL schema shown in the following table. In the Date table, the date_id column has a format of yyyymmdd and the month column has a format of yyyymm. The week column in the Date table and the week_id column in the Weekly_Returns table have a format of yyyyww. The sales_id column in the Sales table represents a unique transaction. The region_id column can be managed by only one sales manager. Data Concerns You are concerned with the quality and completeness of the sales data. You plan to verify the sales data for negative sales amounts. Reporting Requirements Litware identifies the following technical requirements: Executives require a visual that shows sales by region. Regional managers require a visual to analyze weekly sales and returns. Sales managers must be able to see the sales data of their respective region only. The sales managers require a visual to analyze sales performance versus sales targets. The sale department requires reports that contain the number of sales transactions. Users must be able to see the month in reports as shown in the following example: Feb 2020. The customer service department requires a visual that can be filtered by both sales month and ship month independently. Question You need to create relationships to meet the reporting requirements of the customer service department. What should you create?",
-      "opcoes": [
+      "question": "Overview Litware, Inc. is an online retailer that uses Microsoft Power BI dashboards and reports. The company plans to leverage data from Microsoft SQL Server databases, Microsoft Excel files, text files, and several other data sources. Litware uses Azure Active Directory (Azure AD) to authenticate users. Existing Environment Sales Data Litware has online sales data that has the SQL schema shown in the following table. In the Date table, the date_id column has a format of yyyymmdd and the month column has a format of yyyymm. The week column in the Date table and the week_id column in the Weekly_Returns table have a format of yyyyww. The sales_id column in the Sales table represents a unique transaction. The region_id column can be managed by only one sales manager. Data Concerns You are concerned with the quality and completeness of the sales data. You plan to verify the sales data for negative sales amounts. Reporting Requirements Litware identifies the following technical requirements: Executives require a visual that shows sales by region. Regional managers require a visual to analyze weekly sales and returns. Sales managers must be able to see the sales data of their respective region only. The sales managers require a visual to analyze sales performance versus sales targets. The sale department requires reports that contain the number of sales transactions. Users must be able to see the month in reports as shown in the following example: Feb 2020. The customer service department requires a visual that can be filtered by both sales month and ship month independently. Question You need to create relationships to meet the reporting requirements of the customer service department. What should you create?",
+      "options": [
         "an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id]",
         "an additional date table named ShipDate, a many-to-many relationship from Sales[sales_date_id] to Date[date_id], and a many-to-many relationship from Sales[sales_ship_date_id] to ShipDate[date_id]",
         "a one-to-many relationship from Date[date_id] to Sales[sales_date_id] and another one-to-many relationship from Date[date_id] to Weekly_Returns[week_id]",
         "a one-to-many relationship from Sales[sales_date_id] to Date[date_id] and a one-to-many relationship from Sales[sales_ship_date_id] to Date[date_id]"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id] Scenario: The customer service department requires a visual that can be filtered by both sales month and ship month independently. In Power BI Desktop, only one relationship can be active between a Fact table and Dimension table, so we need an extra table. Use one-to-many relationship to be able to filter. Incorrect Answers: C: Cannot make a relation between a date_id and a week_id. D: The one-to-many relationships between the Sales and the Date tables goes in the other direction: for each date there can be many sales or shipments. Reference: https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand"
+      "answer": 0,
+      "explanation": "Resposta: an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id] Scenario: The customer service department requires a visual that can be filtered by both sales month and ship month independently. In Power BI Desktop, only one relationship can be active between a Fact table and Dimension table, so we need an extra table. Use one-to-many relationship to be able to filter. Incorrect Answers: C: Cannot make a relation between a date_id and a week_id. D: The one-to-many relationships between the Sales and the Date tables goes in the other direction: for each date there can be many sales or shipments. Reference: https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand"
     },
     {
-      "pergunta": "Overview Litware, Inc. is an online retailer that uses Microsoft Power BI dashboards and reports. The company plans to leverage data from Microsoft SQL Server databases, Microsoft Excel files, text files, and several other data sources. Litware uses Azure Active Directory (Azure AD) to authenticate users. Existing Environment Sales Data Litware has online sales data that has the SQL schema shown in the following table. In the Date table, the date_id column has a format of yyyymmdd and the month column has a format of yyyymm. The week column in the Date table and the week_id column in the Weekly_Returns table have a format of yyyyww. The sales_id column in the Sales table represents a unique transaction. The region_id column can be managed by only one sales manager. Data Concerns You are concerned with the quality and completeness of the sales data. You plan to verify the sales data for negative sales amounts. Reporting Requirements Litware identifies the following technical requirements: Executives require a visual that shows sales by region. Regional managers require a visual to analyze weekly sales and returns. Sales managers must be able to see the sales data of their respective region only. The sales managers require a visual to analyze sales performance versus sales targets. The sale department requires reports that contain the number of sales transactions. Users must be able to see the month in reports as shown in the following example: Feb 2020. The customer service department requires a visual that can be filtered by both sales month and ship month independently. Question You need to create relationships to meet the reporting requirements of the customer service department. What should you create?",
-      "opcoes": [
+      "question": "Overview Litware, Inc. is an online retailer that uses Microsoft Power BI dashboards and reports. The company plans to leverage data from Microsoft SQL Server databases, Microsoft Excel files, text files, and several other data sources. Litware uses Azure Active Directory (Azure AD) to authenticate users. Existing Environment Sales Data Litware has online sales data that has the SQL schema shown in the following table. In the Date table, the date_id column has a format of yyyymmdd and the month column has a format of yyyymm. The week column in the Date table and the week_id column in the Weekly_Returns table have a format of yyyyww. The sales_id column in the Sales table represents a unique transaction. The region_id column can be managed by only one sales manager. Data Concerns You are concerned with the quality and completeness of the sales data. You plan to verify the sales data for negative sales amounts. Reporting Requirements Litware identifies the following technical requirements: Executives require a visual that shows sales by region. Regional managers require a visual to analyze weekly sales and returns. Sales managers must be able to see the sales data of their respective region only. The sales managers require a visual to analyze sales performance versus sales targets. The sale department requires reports that contain the number of sales transactions. Users must be able to see the month in reports as shown in the following example: Feb 2020. The customer service department requires a visual that can be filtered by both sales month and ship month independently. Question You need to create relationships to meet the reporting requirements of the customer service department. What should you create?",
+      "options": [
         "an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id]",
         "an additional date table named ShipDate, a many-to-many relationship from Sales[sales_date_id] to Date[date_id], and a many-to-many relationship from Sales[sales_ship_date_id] to ShipDate[date_id]",
         "a one-to-many relationship from Date[date_id] to Sales[sales_date_id] and another one-to-many relationship from Date[date_id] to Weekly_Returns[week_id]",
         "a one-to-many relationship from Sales[sales_date_id] to Date[date_id] and a one-to-many relationship from Sales[sales_ship_date_id] to Date[date_id]"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id] Scenario: The customer service department requires a visual that can be filtered by both sales month and ship month independently. In Power BI Desktop, only one relationship can be active between a Fact table and Dimension table, so we need an extra table. Use one-to-many relationship to be able to filter. Incorrect Answers: C: Cannot make a relation between a date_id and a week_id. D: The one-to-many relationships between the Sales and the Date tables goes in the other direction: for each date there can be many sales or shipments. Reference: https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand"
+      "answer": 0,
+      "explanation": "Resposta: an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id] Scenario: The customer service department requires a visual that can be filtered by both sales month and ship month independently. In Power BI Desktop, only one relationship can be active between a Fact table and Dimension table, so we need an extra table. Use one-to-many relationship to be able to filter. Incorrect Answers: C: Cannot make a relation between a date_id and a week_id. D: The one-to-many relationships between the Sales and the Date tables goes in the other direction: for each date there can be many sales or shipments. Reference: https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand"
     },
     {
-      "pergunta": "Overview Litware, Inc. is an online retailer that uses Microsoft Power BI dashboards and reports. The company plans to leverage data from Microsoft SQL Server databases, Microsoft Excel files, text files, and several other data sources. Litware uses Azure Active Directory (Azure AD) to authenticate users. Existing Environment Sales Data Litware has online sales data that has the SQL schema shown in the following table. In the Date table, the date_id column has a format of yyyymmdd and the month column has a format of yyyymm. The week column in the Date table and the week_id column in the Weekly_Returns table have a format of yyyyww. The sales_id column in the Sales table represents a unique transaction. The region_id column can be managed by only one sales manager. Data Concerns You are concerned with the quality and completeness of the sales data. You plan to verify the sales data for negative sales amounts. Reporting Requirements Litware identifies the following technical requirements: Executives require a visual that shows sales by region. Regional managers require a visual to analyze weekly sales and returns. Sales managers must be able to see the sales data of their respective region only. The sales managers require a visual to analyze sales performance versus sales targets. The sale department requires reports that contain the number of sales transactions. Users must be able to see the month in reports as shown in the following example: Feb 2020. The customer service department requires a visual that can be filtered by both sales month and ship month independently. Question You need to create relationships to meet the reporting requirements of the customer service department. What should you create?",
-      "opcoes": [
+      "question": "Overview Litware, Inc. is an online retailer that uses Microsoft Power BI dashboards and reports. The company plans to leverage data from Microsoft SQL Server databases, Microsoft Excel files, text files, and several other data sources. Litware uses Azure Active Directory (Azure AD) to authenticate users. Existing Environment Sales Data Litware has online sales data that has the SQL schema shown in the following table. In the Date table, the date_id column has a format of yyyymmdd and the month column has a format of yyyymm. The week column in the Date table and the week_id column in the Weekly_Returns table have a format of yyyyww. The sales_id column in the Sales table represents a unique transaction. The region_id column can be managed by only one sales manager. Data Concerns You are concerned with the quality and completeness of the sales data. You plan to verify the sales data for negative sales amounts. Reporting Requirements Litware identifies the following technical requirements: Executives require a visual that shows sales by region. Regional managers require a visual to analyze weekly sales and returns. Sales managers must be able to see the sales data of their respective region only. The sales managers require a visual to analyze sales performance versus sales targets. The sale department requires reports that contain the number of sales transactions. Users must be able to see the month in reports as shown in the following example: Feb 2020. The customer service department requires a visual that can be filtered by both sales month and ship month independently. Question You need to create relationships to meet the reporting requirements of the customer service department. What should you create?",
+      "options": [
         "an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id]",
         "an additional date table named ShipDate, a many-to-many relationship from Sales[sales_date_id] to Date[date_id], and a many-to-many relationship from Sales[sales_ship_date_id] to ShipDate[date_id]",
         "a one-to-many relationship from Date[date_id] to Sales[sales_date_id] and another one-to-many relationship from Date[date_id] to Weekly_Returns[week_id]",
         "a one-to-many relationship from Sales[sales_date_id] to Date[date_id] and a one-to-many relationship from Sales[sales_ship_date_id] to Date[date_id]"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id] Scenario: The customer service department requires a visual that can be filtered by both sales month and ship month independently. In Power BI Desktop, only one relationship can be active between a Fact table and Dimension table, so we need an extra table. Use one-to-many relationship to be able to filter. Incorrect Answers: C: Cannot make a relation between a date_id and a week_id. D: The one-to-many relationships between the Sales and the Date tables goes in the other direction: for each date there can be many sales or shipments. Reference: https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand"
+      "answer": 0,
+      "explanation": "Resposta: an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id] Scenario: The customer service department requires a visual that can be filtered by both sales month and ship month independently. In Power BI Desktop, only one relationship can be active between a Fact table and Dimension table, so we need an extra table. Use one-to-many relationship to be able to filter. Incorrect Answers: C: Cannot make a relation between a date_id and a week_id. D: The one-to-many relationships between the Sales and the Date tables goes in the other direction: for each date there can be many sales or shipments. Reference: https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand"
     },
     {
-      "pergunta": "Overview Litware, Inc. is an online retailer that uses Microsoft Power BI dashboards and reports. The company plans to leverage data from Microsoft SQL Server databases, Microsoft Excel files, text files, and several other data sources. Litware uses Azure Active Directory (Azure AD) to authenticate users. Existing Environment Sales Data Litware has online sales data that has the SQL schema shown in the following table. In the Date table, the date_id column has a format of yyyymmdd and the month column has a format of yyyymm. The week column in the Date table and the week_id column in the Weekly_Returns table have a format of yyyyww. The sales_id column in the Sales table represents a unique transaction. The region_id column can be managed by only one sales manager. Data Concerns You are concerned with the quality and completeness of the sales data. You plan to verify the sales data for negative sales amounts. Reporting Requirements Litware identifies the following technical requirements: Executives require a visual that shows sales by region. Regional managers require a visual to analyze weekly sales and returns. Sales managers must be able to see the sales data of their respective region only. The sales managers require a visual to analyze sales performance versus sales targets. The sale department requires reports that contain the number of sales transactions. Users must be able to see the month in reports as shown in the following example: Feb 2020. The customer service department requires a visual that can be filtered by both sales month and ship month independently. Question You need to create relationships to meet the reporting requirements of the customer service department. What should you create?",
-      "opcoes": [
+      "question": "Overview Litware, Inc. is an online retailer that uses Microsoft Power BI dashboards and reports. The company plans to leverage data from Microsoft SQL Server databases, Microsoft Excel files, text files, and several other data sources. Litware uses Azure Active Directory (Azure AD) to authenticate users. Existing Environment Sales Data Litware has online sales data that has the SQL schema shown in the following table. In the Date table, the date_id column has a format of yyyymmdd and the month column has a format of yyyymm. The week column in the Date table and the week_id column in the Weekly_Returns table have a format of yyyyww. The sales_id column in the Sales table represents a unique transaction. The region_id column can be managed by only one sales manager. Data Concerns You are concerned with the quality and completeness of the sales data. You plan to verify the sales data for negative sales amounts. Reporting Requirements Litware identifies the following technical requirements: Executives require a visual that shows sales by region. Regional managers require a visual to analyze weekly sales and returns. Sales managers must be able to see the sales data of their respective region only. The sales managers require a visual to analyze sales performance versus sales targets. The sale department requires reports that contain the number of sales transactions. Users must be able to see the month in reports as shown in the following example: Feb 2020. The customer service department requires a visual that can be filtered by both sales month and ship month independently. Question You need to create relationships to meet the reporting requirements of the customer service department. What should you create?",
+      "options": [
         "an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id]",
         "an additional date table named ShipDate, a many-to-many relationship from Sales[sales_date_id] to Date[date_id], and a many-to-many relationship from Sales[sales_ship_date_id] to ShipDate[date_id]",
         "a one-to-many relationship from Date[date_id] to Sales[sales_date_id] and another one-to-many relationship from Date[date_id] to Weekly_Returns[week_id]",
         "a one-to-many relationship from Sales[sales_date_id] to Date[date_id] and a one-to-many relationship from Sales[sales_ship_date_id] to Date[date_id]"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id] Scenario: The customer service department requires a visual that can be filtered by both sales month and ship month independently. In Power BI Desktop, only one relationship can be active between a Fact table and Dimension table, so we need an extra table. Use one-to-many relationship to be able to filter. Incorrect Answers: C: Cannot make a relation between a date_id and a week_id. D: The one-to-many relationships between the Sales and the Date tables goes in the other direction: for each date there can be many sales or shipments. Reference: https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand"
+      "answer": 0,
+      "explanation": "Resposta: an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id] Scenario: The customer service department requires a visual that can be filtered by both sales month and ship month independently. In Power BI Desktop, only one relationship can be active between a Fact table and Dimension table, so we need an extra table. Use one-to-many relationship to be able to filter. Incorrect Answers: C: Cannot make a relation between a date_id and a week_id. D: The one-to-many relationships between the Sales and the Date tables goes in the other direction: for each date there can be many sales or shipments. Reference: https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand"
     },
     {
-      "pergunta": "Overview Litware, Inc. is an online retailer that uses Microsoft Power BI dashboards and reports. The company plans to leverage data from Microsoft SQL Server databases, Microsoft Excel files, text files, and several other data sources. Litware uses Azure Active Directory (Azure AD) to authenticate users. Existing Environment Sales Data Litware has online sales data that has the SQL schema shown in the following table. In the Date table, the date_id column has a format of yyyymmdd and the month column has a format of yyyymm. The week column in the Date table and the week_id column in the Weekly_Returns table have a format of yyyyww. The sales_id column in the Sales table represents a unique transaction. The region_id column can be managed by only one sales manager. Data Concerns You are concerned with the quality and completeness of the sales data. You plan to verify the sales data for negative sales amounts. Reporting Requirements Litware identifies the following technical requirements: Executives require a visual that shows sales by region. Regional managers require a visual to analyze weekly sales and returns. Sales managers must be able to see the sales data of their respective region only. The sales managers require a visual to analyze sales performance versus sales targets. The sale department requires reports that contain the number of sales transactions. Users must be able to see the month in reports as shown in the following example: Feb 2020. The customer service department requires a visual that can be filtered by both sales month and ship month independently. Question You need to create relationships to meet the reporting requirements of the customer service department. What should you create?",
-      "opcoes": [
+      "question": "Overview Litware, Inc. is an online retailer that uses Microsoft Power BI dashboards and reports. The company plans to leverage data from Microsoft SQL Server databases, Microsoft Excel files, text files, and several other data sources. Litware uses Azure Active Directory (Azure AD) to authenticate users. Existing Environment Sales Data Litware has online sales data that has the SQL schema shown in the following table. In the Date table, the date_id column has a format of yyyymmdd and the month column has a format of yyyymm. The week column in the Date table and the week_id column in the Weekly_Returns table have a format of yyyyww. The sales_id column in the Sales table represents a unique transaction. The region_id column can be managed by only one sales manager. Data Concerns You are concerned with the quality and completeness of the sales data. You plan to verify the sales data for negative sales amounts. Reporting Requirements Litware identifies the following technical requirements: Executives require a visual that shows sales by region. Regional managers require a visual to analyze weekly sales and returns. Sales managers must be able to see the sales data of their respective region only. The sales managers require a visual to analyze sales performance versus sales targets. The sale department requires reports that contain the number of sales transactions. Users must be able to see the month in reports as shown in the following example: Feb 2020. The customer service department requires a visual that can be filtered by both sales month and ship month independently. Question You need to create relationships to meet the reporting requirements of the customer service department. What should you create?",
+      "options": [
         "an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id]",
         "an additional date table named ShipDate, a many-to-many relationship from Sales[sales_date_id] to Date[date_id], and a many-to-many relationship from Sales[sales_ship_date_id] to ShipDate[date_id]",
         "a one-to-many relationship from Date[date_id] to Sales[sales_date_id] and another one-to-many relationship from Date[date_id] to Weekly_Returns[week_id]",
         "a one-to-many relationship from Sales[sales_date_id] to Date[date_id] and a one-to-many relationship from Sales[sales_ship_date_id] to Date[date_id]"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id] Scenario: The customer service department requires a visual that can be filtered by both sales month and ship month independently. In Power BI Desktop, only one relationship can be active between a Fact table and Dimension table, so we need an extra table. Use one-to-many relationship to be able to filter. Incorrect Answers: C: Cannot make a relation between a date_id and a week_id. D: The one-to-many relationships between the Sales and the Date tables goes in the other direction: for each date there can be many sales or shipments. Reference: https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand"
+      "answer": 0,
+      "explanation": "Resposta: an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id] Scenario: The customer service department requires a visual that can be filtered by both sales month and ship month independently. In Power BI Desktop, only one relationship can be active between a Fact table and Dimension table, so we need an extra table. Use one-to-many relationship to be able to filter. Incorrect Answers: C: Cannot make a relation between a date_id and a week_id. D: The one-to-many relationships between the Sales and the Date tables goes in the other direction: for each date there can be many sales or shipments. Reference: https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand"
     },
     {
-      "pergunta": "Overview Litware, Inc. is an online retailer that uses Microsoft Power BI dashboards and reports. The company plans to leverage data from Microsoft SQL Server databases, Microsoft Excel files, text files, and several other data sources. Litware uses Azure Active Directory (Azure AD) to authenticate users. Existing Environment Sales Data Litware has online sales data that has the SQL schema shown in the following table. In the Date table, the date_id column has a format of yyyymmdd and the month column has a format of yyyymm. The week column in the Date table and the week_id column in the Weekly_Returns table have a format of yyyyww. The sales_id column in the Sales table represents a unique transaction. The region_id column can be managed by only one sales manager. Data Concerns You are concerned with the quality and completeness of the sales data. You plan to verify the sales data for negative sales amounts. Reporting Requirements Litware identifies the following technical requirements: Executives require a visual that shows sales by region. Regional managers require a visual to analyze weekly sales and returns. Sales managers must be able to see the sales data of their respective region only. The sales managers require a visual to analyze sales performance versus sales targets. The sale department requires reports that contain the number of sales transactions. Users must be able to see the month in reports as shown in the following example: Feb 2020. The customer service department requires a visual that can be filtered by both sales month and ship month independently. Question You need to create relationships to meet the reporting requirements of the customer service department. What should you create?",
-      "opcoes": [
+      "question": "Overview Litware, Inc. is an online retailer that uses Microsoft Power BI dashboards and reports. The company plans to leverage data from Microsoft SQL Server databases, Microsoft Excel files, text files, and several other data sources. Litware uses Azure Active Directory (Azure AD) to authenticate users. Existing Environment Sales Data Litware has online sales data that has the SQL schema shown in the following table. In the Date table, the date_id column has a format of yyyymmdd and the month column has a format of yyyymm. The week column in the Date table and the week_id column in the Weekly_Returns table have a format of yyyyww. The sales_id column in the Sales table represents a unique transaction. The region_id column can be managed by only one sales manager. Data Concerns You are concerned with the quality and completeness of the sales data. You plan to verify the sales data for negative sales amounts. Reporting Requirements Litware identifies the following technical requirements: Executives require a visual that shows sales by region. Regional managers require a visual to analyze weekly sales and returns. Sales managers must be able to see the sales data of their respective region only. The sales managers require a visual to analyze sales performance versus sales targets. The sale department requires reports that contain the number of sales transactions. Users must be able to see the month in reports as shown in the following example: Feb 2020. The customer service department requires a visual that can be filtered by both sales month and ship month independently. Question You need to create relationships to meet the reporting requirements of the customer service department. What should you create?",
+      "options": [
         "an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id]",
         "an additional date table named ShipDate, a many-to-many relationship from Sales[sales_date_id] to Date[date_id], and a many-to-many relationship from Sales[sales_ship_date_id] to ShipDate[date_id]",
         "a one-to-many relationship from Date[date_id] to Sales[sales_date_id] and another one-to-many relationship from Date[date_id] to Weekly_Returns[week_id]",
         "a one-to-many relationship from Sales[sales_date_id] to Date[date_id] and a one-to-many relationship from Sales[sales_ship_date_id] to Date[date_id]"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id] Scenario: The customer service department requires a visual that can be filtered by both sales month and ship month independently. In Power BI Desktop, only one relationship can be active between a Fact table and Dimension table, so we need an extra table. Use one-to-many relationship to be able to filter. Incorrect Answers: C: Cannot make a relation between a date_id and a week_id. D: The one-to-many relationships between the Sales and the Date tables goes in the other direction: for each date there can be many sales or shipments. Reference: https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand"
+      "answer": 0,
+      "explanation": "Resposta: an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id] Scenario: The customer service department requires a visual that can be filtered by both sales month and ship month independently. In Power BI Desktop, only one relationship can be active between a Fact table and Dimension table, so we need an extra table. Use one-to-many relationship to be able to filter. Incorrect Answers: C: Cannot make a relation between a date_id and a week_id. D: The one-to-many relationships between the Sales and the Date tables goes in the other direction: for each date there can be many sales or shipments. Reference: https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand"
     },
     {
-      "pergunta": "Overview Litware, Inc. is an online retailer that uses Microsoft Power BI dashboards and reports. The company plans to leverage data from Microsoft SQL Server databases, Microsoft Excel files, text files, and several other data sources. Litware uses Azure Active Directory (Azure AD) to authenticate users. Existing Environment Sales Data Litware has online sales data that has the SQL schema shown in the following table. In the Date table, the date_id column has a format of yyyymmdd and the month column has a format of yyyymm. The week column in the Date table and the week_id column in the Weekly_Returns table have a format of yyyyww. The sales_id column in the Sales table represents a unique transaction. The region_id column can be managed by only one sales manager. Data Concerns You are concerned with the quality and completeness of the sales data. You plan to verify the sales data for negative sales amounts. Reporting Requirements Litware identifies the following technical requirements: Executives require a visual that shows sales by region. Regional managers require a visual to analyze weekly sales and returns. Sales managers must be able to see the sales data of their respective region only. The sales managers require a visual to analyze sales performance versus sales targets. The sale department requires reports that contain the number of sales transactions. Users must be able to see the month in reports as shown in the following example: Feb 2020. The customer service department requires a visual that can be filtered by both sales month and ship month independently. Question You need to create relationships to meet the reporting requirements of the customer service department. What should you create?",
-      "opcoes": [
+      "question": "Overview Litware, Inc. is an online retailer that uses Microsoft Power BI dashboards and reports. The company plans to leverage data from Microsoft SQL Server databases, Microsoft Excel files, text files, and several other data sources. Litware uses Azure Active Directory (Azure AD) to authenticate users. Existing Environment Sales Data Litware has online sales data that has the SQL schema shown in the following table. In the Date table, the date_id column has a format of yyyymmdd and the month column has a format of yyyymm. The week column in the Date table and the week_id column in the Weekly_Returns table have a format of yyyyww. The sales_id column in the Sales table represents a unique transaction. The region_id column can be managed by only one sales manager. Data Concerns You are concerned with the quality and completeness of the sales data. You plan to verify the sales data for negative sales amounts. Reporting Requirements Litware identifies the following technical requirements: Executives require a visual that shows sales by region. Regional managers require a visual to analyze weekly sales and returns. Sales managers must be able to see the sales data of their respective region only. The sales managers require a visual to analyze sales performance versus sales targets. The sale department requires reports that contain the number of sales transactions. Users must be able to see the month in reports as shown in the following example: Feb 2020. The customer service department requires a visual that can be filtered by both sales month and ship month independently. Question You need to create relationships to meet the reporting requirements of the customer service department. What should you create?",
+      "options": [
         "an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id]",
         "an additional date table named ShipDate, a many-to-many relationship from Sales[sales_date_id] to Date[date_id], and a many-to-many relationship from Sales[sales_ship_date_id] to ShipDate[date_id]",
         "a one-to-many relationship from Date[date_id] to Sales[sales_date_id] and another one-to-many relationship from Date[date_id] to Weekly_Returns[week_id]",
         "a one-to-many relationship from Sales[sales_date_id] to Date[date_id] and a one-to-many relationship from Sales[sales_ship_date_id] to Date[date_id]"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id] Scenario: The customer service department requires a visual that can be filtered by both sales month and ship month independently. In Power BI Desktop, only one relationship can be active between a Fact table and Dimension table, so we need an extra table. Use one-to-many relationship to be able to filter. Incorrect Answers: C: Cannot make a relation between a date_id and a week_id. D: The one-to-many relationships between the Sales and the Date tables goes in the other direction: for each date there can be many sales or shipments. Reference: https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand"
+      "answer": 0,
+      "explanation": "Resposta: an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id] Scenario: The customer service department requires a visual that can be filtered by both sales month and ship month independently. In Power BI Desktop, only one relationship can be active between a Fact table and Dimension table, so we need an extra table. Use one-to-many relationship to be able to filter. Incorrect Answers: C: Cannot make a relation between a date_id and a week_id. D: The one-to-many relationships between the Sales and the Date tables goes in the other direction: for each date there can be many sales or shipments. Reference: https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand"
     },
     {
-      "pergunta": "Overview Litware, Inc. is an online retailer that uses Microsoft Power BI dashboards and reports. The company plans to leverage data from Microsoft SQL Server databases, Microsoft Excel files, text files, and several other data sources. Litware uses Azure Active Directory (Azure AD) to authenticate users. Existing Environment Sales Data Litware has online sales data that has the SQL schema shown in the following table. In the Date table, the date_id column has a format of yyyymmdd and the month column has a format of yyyymm. The week column in the Date table and the week_id column in the Weekly_Returns table have a format of yyyyww. The sales_id column in the Sales table represents a unique transaction. The region_id column can be managed by only one sales manager. Data Concerns You are concerned with the quality and completeness of the sales data. You plan to verify the sales data for negative sales amounts. Reporting Requirements Litware identifies the following technical requirements: Executives require a visual that shows sales by region. Regional managers require a visual to analyze weekly sales and returns. Sales managers must be able to see the sales data of their respective region only. The sales managers require a visual to analyze sales performance versus sales targets. The sale department requires reports that contain the number of sales transactions. Users must be able to see the month in reports as shown in the following example: Feb 2020. The customer service department requires a visual that can be filtered by both sales month and ship month independently. Question You need to create relationships to meet the reporting requirements of the customer service department. What should you create?",
-      "opcoes": [
+      "question": "Overview Litware, Inc. is an online retailer that uses Microsoft Power BI dashboards and reports. The company plans to leverage data from Microsoft SQL Server databases, Microsoft Excel files, text files, and several other data sources. Litware uses Azure Active Directory (Azure AD) to authenticate users. Existing Environment Sales Data Litware has online sales data that has the SQL schema shown in the following table. In the Date table, the date_id column has a format of yyyymmdd and the month column has a format of yyyymm. The week column in the Date table and the week_id column in the Weekly_Returns table have a format of yyyyww. The sales_id column in the Sales table represents a unique transaction. The region_id column can be managed by only one sales manager. Data Concerns You are concerned with the quality and completeness of the sales data. You plan to verify the sales data for negative sales amounts. Reporting Requirements Litware identifies the following technical requirements: Executives require a visual that shows sales by region. Regional managers require a visual to analyze weekly sales and returns. Sales managers must be able to see the sales data of their respective region only. The sales managers require a visual to analyze sales performance versus sales targets. The sale department requires reports that contain the number of sales transactions. Users must be able to see the month in reports as shown in the following example: Feb 2020. The customer service department requires a visual that can be filtered by both sales month and ship month independently. Question You need to create relationships to meet the reporting requirements of the customer service department. What should you create?",
+      "options": [
         "an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id]",
         "an additional date table named ShipDate, a many-to-many relationship from Sales[sales_date_id] to Date[date_id], and a many-to-many relationship from Sales[sales_ship_date_id] to ShipDate[date_id]",
         "a one-to-many relationship from Date[date_id] to Sales[sales_date_id] and another one-to-many relationship from Date[date_id] to Weekly_Returns[week_id]",
         "a one-to-many relationship from Sales[sales_date_id] to Date[date_id] and a one-to-many relationship from Sales[sales_ship_date_id] to Date[date_id]"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id] Scenario: The customer service department requires a visual that can be filtered by both sales month and ship month independently. In Power BI Desktop, only one relationship can be active between a Fact table and Dimension table, so we need an extra table. Use one-to-many relationship to be able to filter. Incorrect Answers: C: Cannot make a relation between a date_id and a week_id. D: The one-to-many relationships between the Sales and the Date tables goes in the other direction: for each date there can be many sales or shipments. Reference: https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand"
+      "answer": 0,
+      "explanation": "Resposta: an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id] Scenario: The customer service department requires a visual that can be filtered by both sales month and ship month independently. In Power BI Desktop, only one relationship can be active between a Fact table and Dimension table, so we need an extra table. Use one-to-many relationship to be able to filter. Incorrect Answers: C: Cannot make a relation between a date_id and a week_id. D: The one-to-many relationships between the Sales and the Date tables goes in the other direction: for each date there can be many sales or shipments. Reference: https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand"
     },
     {
-      "pergunta": "Overview Litware, Inc. is an online retailer that uses Microsoft Power BI dashboards and reports. The company plans to leverage data from Microsoft SQL Server databases, Microsoft Excel files, text files, and several other data sources. Litware uses Azure Active Directory (Azure AD) to authenticate users. Existing Environment Sales Data Litware has online sales data that has the SQL schema shown in the following table. In the Date table, the date_id column has a format of yyyymmdd and the month column has a format of yyyymm. The week column in the Date table and the week_id column in the Weekly_Returns table have a format of yyyyww. The sales_id column in the Sales table represents a unique transaction. The region_id column can be managed by only one sales manager. Data Concerns You are concerned with the quality and completeness of the sales data. You plan to verify the sales data for negative sales amounts. Reporting Requirements Litware identifies the following technical requirements: Executives require a visual that shows sales by region. Regional managers require a visual to analyze weekly sales and returns. Sales managers must be able to see the sales data of their respective region only. The sales managers require a visual to analyze sales performance versus sales targets. The sale department requires reports that contain the number of sales transactions. Users must be able to see the month in reports as shown in the following example: Feb 2020. The customer service department requires a visual that can be filtered by both sales month and ship month independently. Question You need to create relationships to meet the reporting requirements of the customer service department. What should you create?",
-      "opcoes": [
+      "question": "Overview Litware, Inc. is an online retailer that uses Microsoft Power BI dashboards and reports. The company plans to leverage data from Microsoft SQL Server databases, Microsoft Excel files, text files, and several other data sources. Litware uses Azure Active Directory (Azure AD) to authenticate users. Existing Environment Sales Data Litware has online sales data that has the SQL schema shown in the following table. In the Date table, the date_id column has a format of yyyymmdd and the month column has a format of yyyymm. The week column in the Date table and the week_id column in the Weekly_Returns table have a format of yyyyww. The sales_id column in the Sales table represents a unique transaction. The region_id column can be managed by only one sales manager. Data Concerns You are concerned with the quality and completeness of the sales data. You plan to verify the sales data for negative sales amounts. Reporting Requirements Litware identifies the following technical requirements: Executives require a visual that shows sales by region. Regional managers require a visual to analyze weekly sales and returns. Sales managers must be able to see the sales data of their respective region only. The sales managers require a visual to analyze sales performance versus sales targets. The sale department requires reports that contain the number of sales transactions. Users must be able to see the month in reports as shown in the following example: Feb 2020. The customer service department requires a visual that can be filtered by both sales month and ship month independently. Question You need to create relationships to meet the reporting requirements of the customer service department. What should you create?",
+      "options": [
         "an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id]",
         "an additional date table named ShipDate, a many-to-many relationship from Sales[sales_date_id] to Date[date_id], and a many-to-many relationship from Sales[sales_ship_date_id] to ShipDate[date_id]",
         "a one-to-many relationship from Date[date_id] to Sales[sales_date_id] and another one-to-many relationship from Date[date_id] to Weekly_Returns[week_id]",
         "a one-to-many relationship from Sales[sales_date_id] to Date[date_id] and a one-to-many relationship from Sales[sales_ship_date_id] to Date[date_id]"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id] Scenario: The customer service department requires a visual that can be filtered by both sales month and ship month independently. In Power BI Desktop, only one relationship can be active between a Fact table and Dimension table, so we need an extra table. Use one-to-many relationship to be able to filter. Incorrect Answers: C: Cannot make a relation between a date_id and a week_id. D: The one-to-many relationships between the Sales and the Date tables goes in the other direction: for each date there can be many sales or shipments. Reference: https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand"
+      "answer": 0,
+      "explanation": "Resposta: an additional date table named ShipDate, a one-to-many relationship from Date[date_id] to Sales[Sales_date_id], and a one-to-many relationship from ShipDate[date_id] to Sales[sales_ship_date_id] Scenario: The customer service department requires a visual that can be filtered by both sales month and ship month independently. In Power BI Desktop, only one relationship can be active between a Fact table and Dimension table, so we need an extra table. Use one-to-many relationship to be able to filter. Incorrect Answers: C: Cannot make a relation between a date_id and a week_id. D: The one-to-many relationships between the Sales and the Date tables goes in the other direction: for each date there can be many sales or shipments. Reference: https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand"
     },
     {
-      "pergunta": "You have a Microsoft Excel workbook that is saved to Microsoft SharePoint Online. The workbook contains several Power View sheets. You need to recreate the Power View sheets as reports in the Power BI service. Solution: From Excel, click Publish to Power BI, and then click Export. Does this meet the goal?",
-      "opcoes": [
+      "question": "You have a Microsoft Excel workbook that is saved to Microsoft SharePoint Online. The workbook contains several Power View sheets. You need to recreate the Power View sheets as reports in the Power BI service. Solution: From Excel, click Publish to Power BI, and then click Export. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Yes Aim is to have Power View sheets shown as Reports. That's done via Publish -> Export. Export workbook data to Power BI When you choose the Export option, any supported data in tables and/or a data model are exported into a new dataset in Power BI. Any Power View sheets in the workbook are re-created in Power BI as reports. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-publish-from-excel"
+      "answer": 0,
+      "explanation": "Resposta: Yes Aim is to have Power View sheets shown as Reports. That's done via Publish -> Export. Export workbook data to Power BI When you choose the Export option, any supported data in tables and/or a data model are exported into a new dataset in Power BI. Any Power View sheets in the workbook are re-created in Power BI as reports. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-publish-from-excel"
     },
     {
-      "pergunta": "You have a Microsoft Excel workbook that is saved to Microsoft SharePoint Online. The workbook contains several Power View sheets. You need to recreate the Power View sheets as reports in the Power BI service. Solution: From Excel, click Publish to Power BI, and then click Export. Does this meet the goal?",
-      "opcoes": [
+      "question": "You have a Microsoft Excel workbook that is saved to Microsoft SharePoint Online. The workbook contains several Power View sheets. You need to recreate the Power View sheets as reports in the Power BI service. Solution: From Excel, click Publish to Power BI, and then click Export. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Yes Aim is to have Power View sheets shown as Reports. That's done via Publish -> Export. Export workbook data to Power BI When you choose the Export option, any supported data in tables and/or a data model are exported into a new dataset in Power BI. Any Power View sheets in the workbook are re-created in Power BI as reports. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-publish-from-excel"
+      "answer": 0,
+      "explanation": "Resposta: Yes Aim is to have Power View sheets shown as Reports. That's done via Publish -> Export. Export workbook data to Power BI When you choose the Export option, any supported data in tables and/or a data model are exported into a new dataset in Power BI. Any Power View sheets in the workbook are re-created in Power BI as reports. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-publish-from-excel"
     },
     {
-      "pergunta": "You have a Microsoft Excel workbook that is saved to Microsoft SharePoint Online. The workbook contains several Power View sheets. You need to recreate the Power View sheets as reports in the Power BI service. Solution: From Excel, click Publish to Power BI, and then click Export. Does this meet the goal?",
-      "opcoes": [
+      "question": "You have a Microsoft Excel workbook that is saved to Microsoft SharePoint Online. The workbook contains several Power View sheets. You need to recreate the Power View sheets as reports in the Power BI service. Solution: From Excel, click Publish to Power BI, and then click Export. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Yes Aim is to have Power View sheets shown as Reports. That's done via Publish -> Export. Export workbook data to Power BI When you choose the Export option, any supported data in tables and/or a data model are exported into a new dataset in Power BI. Any Power View sheets in the workbook are re-created in Power BI as reports. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-publish-from-excel"
+      "answer": 0,
+      "explanation": "Resposta: Yes Aim is to have Power View sheets shown as Reports. That's done via Publish -> Export. Export workbook data to Power BI When you choose the Export option, any supported data in tables and/or a data model are exported into a new dataset in Power BI. Any Power View sheets in the workbook are re-created in Power BI as reports. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-publish-from-excel"
     },
     {
-      "pergunta": "You have a Microsoft Excel workbook that is saved to Microsoft SharePoint Online. The workbook contains several Power View sheets. You need to recreate the Power View sheets as reports in the Power BI service. Solution: From Excel, click Publish to Power BI, and then click Export. Does this meet the goal?",
-      "opcoes": [
+      "question": "You have a Microsoft Excel workbook that is saved to Microsoft SharePoint Online. The workbook contains several Power View sheets. You need to recreate the Power View sheets as reports in the Power BI service. Solution: From Excel, click Publish to Power BI, and then click Export. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Yes Aim is to have Power View sheets shown as Reports. That's done via Publish -> Export. Export workbook data to Power BI When you choose the Export option, any supported data in tables and/or a data model are exported into a new dataset in Power BI. Any Power View sheets in the workbook are re-created in Power BI as reports. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-publish-from-excel"
+      "answer": 0,
+      "explanation": "Resposta: Yes Aim is to have Power View sheets shown as Reports. That's done via Publish -> Export. Export workbook data to Power BI When you choose the Export option, any supported data in tables and/or a data model are exported into a new dataset in Power BI. Any Power View sheets in the workbook are re-created in Power BI as reports. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-publish-from-excel"
     },
     {
-      "pergunta": "You have a Microsoft Excel workbook that is saved to Microsoft SharePoint Online. The workbook contains several Power View sheets. You need to recreate the Power View sheets as reports in the Power BI service. Solution: From Excel, click Publish to Power BI, and then click Export. Does this meet the goal?",
-      "opcoes": [
+      "question": "You have a Microsoft Excel workbook that is saved to Microsoft SharePoint Online. The workbook contains several Power View sheets. You need to recreate the Power View sheets as reports in the Power BI service. Solution: From Excel, click Publish to Power BI, and then click Export. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Yes Aim is to have Power View sheets shown as Reports. That's done via Publish -> Export. Export workbook data to Power BI When you choose the Export option, any supported data in tables and/or a data model are exported into a new dataset in Power BI. Any Power View sheets in the workbook are re-created in Power BI as reports. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-publish-from-excel"
+      "answer": 0,
+      "explanation": "Resposta: Yes Aim is to have Power View sheets shown as Reports. That's done via Publish -> Export. Export workbook data to Power BI When you choose the Export option, any supported data in tables and/or a data model are exported into a new dataset in Power BI. Any Power View sheets in the workbook are re-created in Power BI as reports. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-publish-from-excel"
     },
     {
-      "pergunta": "You have a Microsoft Excel workbook that is saved to Microsoft SharePoint Online. The workbook contains several Power View sheets. You need to recreate the Power View sheets as reports in the Power BI service. Solution: From Excel, click Publish to Power BI, and then click Export. Does this meet the goal?",
-      "opcoes": [
+      "question": "You have a Microsoft Excel workbook that is saved to Microsoft SharePoint Online. The workbook contains several Power View sheets. You need to recreate the Power View sheets as reports in the Power BI service. Solution: From Excel, click Publish to Power BI, and then click Export. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Yes Aim is to have Power View sheets shown as Reports. That's done via Publish -> Export. Export workbook data to Power BI When you choose the Export option, any supported data in tables and/or a data model are exported into a new dataset in Power BI. Any Power View sheets in the workbook are re-created in Power BI as reports. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-publish-from-excel"
+      "answer": 0,
+      "explanation": "Resposta: Yes Aim is to have Power View sheets shown as Reports. That's done via Publish -> Export. Export workbook data to Power BI When you choose the Export option, any supported data in tables and/or a data model are exported into a new dataset in Power BI. Any Power View sheets in the workbook are re-created in Power BI as reports. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-publish-from-excel"
     },
     {
-      "pergunta": "You have a Microsoft Excel workbook that is saved to Microsoft SharePoint Online. The workbook contains several Power View sheets. You need to recreate the Power View sheets as reports in the Power BI service. Solution: From Excel, click Publish to Power BI, and then click Export. Does this meet the goal?",
-      "opcoes": [
+      "question": "You have a Microsoft Excel workbook that is saved to Microsoft SharePoint Online. The workbook contains several Power View sheets. You need to recreate the Power View sheets as reports in the Power BI service. Solution: From Excel, click Publish to Power BI, and then click Export. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Yes Aim is to have Power View sheets shown as Reports. That's done via Publish -> Export. Export workbook data to Power BI When you choose the Export option, any supported data in tables and/or a data model are exported into a new dataset in Power BI. Any Power View sheets in the workbook are re-created in Power BI as reports. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-publish-from-excel"
+      "answer": 0,
+      "explanation": "Resposta: Yes Aim is to have Power View sheets shown as Reports. That's done via Publish -> Export. Export workbook data to Power BI When you choose the Export option, any supported data in tables and/or a data model are exported into a new dataset in Power BI. Any Power View sheets in the workbook are re-created in Power BI as reports. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-publish-from-excel"
     },
     {
-      "pergunta": "You have a Microsoft Excel workbook that is saved to Microsoft SharePoint Online. The workbook contains several Power View sheets. You need to recreate the Power View sheets as reports in the Power BI service. Solution: From Excel, click Publish to Power BI, and then click Export. Does this meet the goal?",
-      "opcoes": [
+      "question": "You have a Microsoft Excel workbook that is saved to Microsoft SharePoint Online. The workbook contains several Power View sheets. You need to recreate the Power View sheets as reports in the Power BI service. Solution: From Excel, click Publish to Power BI, and then click Export. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Yes Aim is to have Power View sheets shown as Reports. That's done via Publish -> Export. Export workbook data to Power BI When you choose the Export option, any supported data in tables and/or a data model are exported into a new dataset in Power BI. Any Power View sheets in the workbook are re-created in Power BI as reports. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-publish-from-excel"
+      "answer": 0,
+      "explanation": "Resposta: Yes Aim is to have Power View sheets shown as Reports. That's done via Publish -> Export. Export workbook data to Power BI When you choose the Export option, any supported data in tables and/or a data model are exported into a new dataset in Power BI. Any Power View sheets in the workbook are re-created in Power BI as reports. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-publish-from-excel"
     },
     {
-      "pergunta": "You have a Microsoft Excel workbook that is saved to Microsoft SharePoint Online. The workbook contains several Power View sheets. You need to recreate the Power View sheets as reports in the Power BI service. Solution: From Excel, click Publish to Power BI, and then click Export. Does this meet the goal?",
-      "opcoes": [
+      "question": "You have a Microsoft Excel workbook that is saved to Microsoft SharePoint Online. The workbook contains several Power View sheets. You need to recreate the Power View sheets as reports in the Power BI service. Solution: From Excel, click Publish to Power BI, and then click Export. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Yes Aim is to have Power View sheets shown as Reports. That's done via Publish -> Export. Export workbook data to Power BI When you choose the Export option, any supported data in tables and/or a data model are exported into a new dataset in Power BI. Any Power View sheets in the workbook are re-created in Power BI as reports. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-publish-from-excel"
+      "answer": 0,
+      "explanation": "Resposta: Yes Aim is to have Power View sheets shown as Reports. That's done via Publish -> Export. Export workbook data to Power BI When you choose the Export option, any supported data in tables and/or a data model are exported into a new dataset in Power BI. Any Power View sheets in the workbook are re-created in Power BI as reports. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-publish-from-excel"
     },
     {
-      "pergunta": "You have a Microsoft Excel workbook that is saved to Microsoft SharePoint Online. The workbook contains several Power View sheets. You need to recreate the Power View sheets as reports in the Power BI service. Solution: From Excel, click Publish to Power BI, and then click Export. Does this meet the goal?",
-      "opcoes": [
+      "question": "You have a Microsoft Excel workbook that is saved to Microsoft SharePoint Online. The workbook contains several Power View sheets. You need to recreate the Power View sheets as reports in the Power BI service. Solution: From Excel, click Publish to Power BI, and then click Export. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Yes Aim is to have Power View sheets shown as Reports. That's done via Publish -> Export. Export workbook data to Power BI When you choose the Export option, any supported data in tables and/or a data model are exported into a new dataset in Power BI. Any Power View sheets in the workbook are re-created in Power BI as reports. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-publish-from-excel"
+      "answer": 0,
+      "explanation": "Resposta: Yes Aim is to have Power View sheets shown as Reports. That's done via Publish -> Export. Export workbook data to Power BI When you choose the Export option, any supported data in tables and/or a data model are exported into a new dataset in Power BI. Any Power View sheets in the workbook are re-created in Power BI as reports. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-publish-from-excel"
     },
     {
-      "pergunta": "You have several reports and dashboards in a workspace. You need to grant all organizational users read access to a dashboard and several reports. Solution: You create an Azure Active Directory group that contains all the users. You share each report and dashboard to the group. Does this meet the goal?",
-      "opcoes": [
+      "question": "You have several reports and dashboards in a workspace. You need to grant all organizational users read access to a dashboard and several reports. Solution: You create an Azure Active Directory group that contains all the users. You share each report and dashboard to the group. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: No Instead assign all the users the Viewer role to the workspace. Note: The Viewer role gives a read-only experience to its users. They can view dashboards, reports, or workbooks in the workspace, but can't browse the datasets or dataflows. Use the Viewer role wherever you would previously use a classic workspace set to Members can only view Power BI content. Reference: https://powerbi.microsoft.com/en-us/blog/announcing-the-new-viewer-role-for-power-bi-workspaces/"
+      "answer": 1,
+      "explanation": "Resposta: No Instead assign all the users the Viewer role to the workspace. Note: The Viewer role gives a read-only experience to its users. They can view dashboards, reports, or workbooks in the workspace, but can't browse the datasets or dataflows. Use the Viewer role wherever you would previously use a classic workspace set to Members can only view Power BI content. Reference: https://powerbi.microsoft.com/en-us/blog/announcing-the-new-viewer-role-for-power-bi-workspaces/"
     },
     {
-      "pergunta": "You have several reports and dashboards in a workspace. You need to grant all organizational users read access to a dashboard and several reports. Solution: You create an Azure Active Directory group that contains all the users. You share each report and dashboard to the group. Does this meet the goal?",
-      "opcoes": [
+      "question": "You have several reports and dashboards in a workspace. You need to grant all organizational users read access to a dashboard and several reports. Solution: You create an Azure Active Directory group that contains all the users. You share each report and dashboard to the group. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: No Instead assign all the users the Viewer role to the workspace. Note: The Viewer role gives a read-only experience to its users. They can view dashboards, reports, or workbooks in the workspace, but can't browse the datasets or dataflows. Use the Viewer role wherever you would previously use a classic workspace set to Members can only view Power BI content. Reference: https://powerbi.microsoft.com/en-us/blog/announcing-the-new-viewer-role-for-power-bi-workspaces/"
+      "answer": 1,
+      "explanation": "Resposta: No Instead assign all the users the Viewer role to the workspace. Note: The Viewer role gives a read-only experience to its users. They can view dashboards, reports, or workbooks in the workspace, but can't browse the datasets or dataflows. Use the Viewer role wherever you would previously use a classic workspace set to Members can only view Power BI content. Reference: https://powerbi.microsoft.com/en-us/blog/announcing-the-new-viewer-role-for-power-bi-workspaces/"
     },
     {
-      "pergunta": "You have several reports and dashboards in a workspace. You need to grant all organizational users read access to a dashboard and several reports. Solution: You create an Azure Active Directory group that contains all the users. You share each report and dashboard to the group. Does this meet the goal?",
-      "opcoes": [
+      "question": "You have several reports and dashboards in a workspace. You need to grant all organizational users read access to a dashboard and several reports. Solution: You create an Azure Active Directory group that contains all the users. You share each report and dashboard to the group. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: No Instead assign all the users the Viewer role to the workspace. Note: The Viewer role gives a read-only experience to its users. They can view dashboards, reports, or workbooks in the workspace, but can't browse the datasets or dataflows. Use the Viewer role wherever you would previously use a classic workspace set to Members can only view Power BI content. Reference: https://powerbi.microsoft.com/en-us/blog/announcing-the-new-viewer-role-for-power-bi-workspaces/"
+      "answer": 1,
+      "explanation": "Resposta: No Instead assign all the users the Viewer role to the workspace. Note: The Viewer role gives a read-only experience to its users. They can view dashboards, reports, or workbooks in the workspace, but can't browse the datasets or dataflows. Use the Viewer role wherever you would previously use a classic workspace set to Members can only view Power BI content. Reference: https://powerbi.microsoft.com/en-us/blog/announcing-the-new-viewer-role-for-power-bi-workspaces/"
     },
     {
-      "pergunta": "You have several reports and dashboards in a workspace. You need to grant all organizational users read access to a dashboard and several reports. Solution: You create an Azure Active Directory group that contains all the users. You share each report and dashboard to the group. Does this meet the goal?",
-      "opcoes": [
+      "question": "You have several reports and dashboards in a workspace. You need to grant all organizational users read access to a dashboard and several reports. Solution: You create an Azure Active Directory group that contains all the users. You share each report and dashboard to the group. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: No Instead assign all the users the Viewer role to the workspace. Note: The Viewer role gives a read-only experience to its users. They can view dashboards, reports, or workbooks in the workspace, but can't browse the datasets or dataflows. Use the Viewer role wherever you would previously use a classic workspace set to Members can only view Power BI content. Reference: https://powerbi.microsoft.com/en-us/blog/announcing-the-new-viewer-role-for-power-bi-workspaces/"
+      "answer": 1,
+      "explanation": "Resposta: No Instead assign all the users the Viewer role to the workspace. Note: The Viewer role gives a read-only experience to its users. They can view dashboards, reports, or workbooks in the workspace, but can't browse the datasets or dataflows. Use the Viewer role wherever you would previously use a classic workspace set to Members can only view Power BI content. Reference: https://powerbi.microsoft.com/en-us/blog/announcing-the-new-viewer-role-for-power-bi-workspaces/"
     },
     {
-      "pergunta": "You have several reports and dashboards in a workspace. You need to grant all organizational users read access to a dashboard and several reports. Solution: You create an Azure Active Directory group that contains all the users. You share each report and dashboard to the group. Does this meet the goal?",
-      "opcoes": [
+      "question": "You have several reports and dashboards in a workspace. You need to grant all organizational users read access to a dashboard and several reports. Solution: You create an Azure Active Directory group that contains all the users. You share each report and dashboard to the group. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: No Instead assign all the users the Viewer role to the workspace. Note: The Viewer role gives a read-only experience to its users. They can view dashboards, reports, or workbooks in the workspace, but can't browse the datasets or dataflows. Use the Viewer role wherever you would previously use a classic workspace set to Members can only view Power BI content. Reference: https://powerbi.microsoft.com/en-us/blog/announcing-the-new-viewer-role-for-power-bi-workspaces/"
+      "answer": 1,
+      "explanation": "Resposta: No Instead assign all the users the Viewer role to the workspace. Note: The Viewer role gives a read-only experience to its users. They can view dashboards, reports, or workbooks in the workspace, but can't browse the datasets or dataflows. Use the Viewer role wherever you would previously use a classic workspace set to Members can only view Power BI content. Reference: https://powerbi.microsoft.com/en-us/blog/announcing-the-new-viewer-role-for-power-bi-workspaces/"
     },
     {
-      "pergunta": "You have several reports and dashboards in a workspace. You need to grant all organizational users read access to a dashboard and several reports. Solution: You create an Azure Active Directory group that contains all the users. You share each report and dashboard to the group. Does this meet the goal?",
-      "opcoes": [
+      "question": "You have several reports and dashboards in a workspace. You need to grant all organizational users read access to a dashboard and several reports. Solution: You create an Azure Active Directory group that contains all the users. You share each report and dashboard to the group. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: No Instead assign all the users the Viewer role to the workspace. Note: The Viewer role gives a read-only experience to its users. They can view dashboards, reports, or workbooks in the workspace, but can't browse the datasets or dataflows. Use the Viewer role wherever you would previously use a classic workspace set to Members can only view Power BI content. Reference: https://powerbi.microsoft.com/en-us/blog/announcing-the-new-viewer-role-for-power-bi-workspaces/"
+      "answer": 1,
+      "explanation": "Resposta: No Instead assign all the users the Viewer role to the workspace. Note: The Viewer role gives a read-only experience to its users. They can view dashboards, reports, or workbooks in the workspace, but can't browse the datasets or dataflows. Use the Viewer role wherever you would previously use a classic workspace set to Members can only view Power BI content. Reference: https://powerbi.microsoft.com/en-us/blog/announcing-the-new-viewer-role-for-power-bi-workspaces/"
     },
     {
-      "pergunta": "You have several reports and dashboards in a workspace. You need to grant all organizational users read access to a dashboard and several reports. Solution: You create an Azure Active Directory group that contains all the users. You share each report and dashboard to the group. Does this meet the goal?",
-      "opcoes": [
+      "question": "You have several reports and dashboards in a workspace. You need to grant all organizational users read access to a dashboard and several reports. Solution: You create an Azure Active Directory group that contains all the users. You share each report and dashboard to the group. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: No Instead assign all the users the Viewer role to the workspace. Note: The Viewer role gives a read-only experience to its users. They can view dashboards, reports, or workbooks in the workspace, but can't browse the datasets or dataflows. Use the Viewer role wherever you would previously use a classic workspace set to Members can only view Power BI content. Reference: https://powerbi.microsoft.com/en-us/blog/announcing-the-new-viewer-role-for-power-bi-workspaces/"
+      "answer": 1,
+      "explanation": "Resposta: No Instead assign all the users the Viewer role to the workspace. Note: The Viewer role gives a read-only experience to its users. They can view dashboards, reports, or workbooks in the workspace, but can't browse the datasets or dataflows. Use the Viewer role wherever you would previously use a classic workspace set to Members can only view Power BI content. Reference: https://powerbi.microsoft.com/en-us/blog/announcing-the-new-viewer-role-for-power-bi-workspaces/"
     },
     {
-      "pergunta": "You have several reports and dashboards in a workspace. You need to grant all organizational users read access to a dashboard and several reports. Solution: You create an Azure Active Directory group that contains all the users. You share each report and dashboard to the group. Does this meet the goal?",
-      "opcoes": [
+      "question": "You have several reports and dashboards in a workspace. You need to grant all organizational users read access to a dashboard and several reports. Solution: You create an Azure Active Directory group that contains all the users. You share each report and dashboard to the group. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: No Instead assign all the users the Viewer role to the workspace. Note: The Viewer role gives a read-only experience to its users. They can view dashboards, reports, or workbooks in the workspace, but can't browse the datasets or dataflows. Use the Viewer role wherever you would previously use a classic workspace set to Members can only view Power BI content. Reference: https://powerbi.microsoft.com/en-us/blog/announcing-the-new-viewer-role-for-power-bi-workspaces/"
+      "answer": 1,
+      "explanation": "Resposta: No Instead assign all the users the Viewer role to the workspace. Note: The Viewer role gives a read-only experience to its users. They can view dashboards, reports, or workbooks in the workspace, but can't browse the datasets or dataflows. Use the Viewer role wherever you would previously use a classic workspace set to Members can only view Power BI content. Reference: https://powerbi.microsoft.com/en-us/blog/announcing-the-new-viewer-role-for-power-bi-workspaces/"
     },
     {
-      "pergunta": "You have several reports and dashboards in a workspace. You need to grant all organizational users read access to a dashboard and several reports. Solution: You create an Azure Active Directory group that contains all the users. You share each report and dashboard to the group. Does this meet the goal?",
-      "opcoes": [
+      "question": "You have several reports and dashboards in a workspace. You need to grant all organizational users read access to a dashboard and several reports. Solution: You create an Azure Active Directory group that contains all the users. You share each report and dashboard to the group. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: No Instead assign all the users the Viewer role to the workspace. Note: The Viewer role gives a read-only experience to its users. They can view dashboards, reports, or workbooks in the workspace, but can't browse the datasets or dataflows. Use the Viewer role wherever you would previously use a classic workspace set to Members can only view Power BI content. Reference: https://powerbi.microsoft.com/en-us/blog/announcing-the-new-viewer-role-for-power-bi-workspaces/"
+      "answer": 1,
+      "explanation": "Resposta: No Instead assign all the users the Viewer role to the workspace. Note: The Viewer role gives a read-only experience to its users. They can view dashboards, reports, or workbooks in the workspace, but can't browse the datasets or dataflows. Use the Viewer role wherever you would previously use a classic workspace set to Members can only view Power BI content. Reference: https://powerbi.microsoft.com/en-us/blog/announcing-the-new-viewer-role-for-power-bi-workspaces/"
     },
     {
-      "pergunta": "You have several reports and dashboards in a workspace. You need to grant all organizational users read access to a dashboard and several reports. Solution: You create an Azure Active Directory group that contains all the users. You share each report and dashboard to the group. Does this meet the goal?",
-      "opcoes": [
+      "question": "You have several reports and dashboards in a workspace. You need to grant all organizational users read access to a dashboard and several reports. Solution: You create an Azure Active Directory group that contains all the users. You share each report and dashboard to the group. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: No Instead assign all the users the Viewer role to the workspace. Note: The Viewer role gives a read-only experience to its users. They can view dashboards, reports, or workbooks in the workspace, but can't browse the datasets or dataflows. Use the Viewer role wherever you would previously use a classic workspace set to Members can only view Power BI content. Reference: https://powerbi.microsoft.com/en-us/blog/announcing-the-new-viewer-role-for-power-bi-workspaces/"
+      "answer": 1,
+      "explanation": "Resposta: No Instead assign all the users the Viewer role to the workspace. Note: The Viewer role gives a read-only experience to its users. They can view dashboards, reports, or workbooks in the workspace, but can't browse the datasets or dataflows. Use the Viewer role wherever you would previously use a classic workspace set to Members can only view Power BI content. Reference: https://powerbi.microsoft.com/en-us/blog/announcing-the-new-viewer-role-for-power-bi-workspaces/"
     },
     {
-      "pergunta": "You are building a dataset from a JSON file that contains an array of documents. You need to import attributes as columns from all the documents in the JSON file. The solution must ensure that date attributes can be used as date hierarchies in Microsoft Power BI reports. Which three actions should you perform in sequence?",
-      "opcoes": [
+      "question": "You are building a dataset from a JSON file that contains an array of documents. You need to import attributes as columns from all the documents in the JSON file. The solution must ensure that date attributes can be used as date hierarchies in Microsoft Power BI reports. Which three actions should you perform in sequence?",
+      "options": [
         "Create a new aggregation that summarizes by employee.",
         "Create a new group on the state column and set the Group type to List.",
         "Create a new group on the state column and set the Group type to Bin.",
         "Create a new aggregation that summarizes by state."
       ],
-      "correta": 1,
-      "explicacao": "Reference: https://www.mssqltips.com/sqlservertip/4621/using-power-bi-with-json-data-sources-and-files/"
+      "answer": 1,
+      "explanation": "Reference: https://www.mssqltips.com/sqlservertip/4621/using-power-bi-with-json-data-sources-and-files/"
     },
     {
-      "pergunta": "You are building a dataset from a JSON file that contains an array of documents. You need to import attributes as columns from all the documents in the JSON file. The solution must ensure that date attributes can be used as date hierarchies in Microsoft Power BI reports. Which three actions should you perform in sequence?",
-      "opcoes": [
+      "question": "You are building a dataset from a JSON file that contains an array of documents. You need to import attributes as columns from all the documents in the JSON file. The solution must ensure that date attributes can be used as date hierarchies in Microsoft Power BI reports. Which three actions should you perform in sequence?",
+      "options": [
         "Create a new aggregation that summarizes by employee.",
         "Create a new group on the state column and set the Group type to List.",
         "Create a new group on the state column and set the Group type to Bin.",
         "Create a new aggregation that summarizes by state."
       ],
-      "correta": 1,
-      "explicacao": "Reference: https://www.mssqltips.com/sqlservertip/4621/using-power-bi-with-json-data-sources-and-files/"
+      "answer": 1,
+      "explanation": "Reference: https://www.mssqltips.com/sqlservertip/4621/using-power-bi-with-json-data-sources-and-files/"
     },
     {
-      "pergunta": "You are building a dataset from a JSON file that contains an array of documents. You need to import attributes as columns from all the documents in the JSON file. The solution must ensure that date attributes can be used as date hierarchies in Microsoft Power BI reports. Which three actions should you perform in sequence?",
-      "opcoes": [
+      "question": "You are building a dataset from a JSON file that contains an array of documents. You need to import attributes as columns from all the documents in the JSON file. The solution must ensure that date attributes can be used as date hierarchies in Microsoft Power BI reports. Which three actions should you perform in sequence?",
+      "options": [
         "Create a new aggregation that summarizes by employee.",
         "Create a new group on the state column and set the Group type to List.",
         "Create a new group on the state column and set the Group type to Bin.",
         "Create a new aggregation that summarizes by state."
       ],
-      "correta": 1,
-      "explicacao": "Reference: https://www.mssqltips.com/sqlservertip/4621/using-power-bi-with-json-data-sources-and-files/"
+      "answer": 1,
+      "explanation": "Reference: https://www.mssqltips.com/sqlservertip/4621/using-power-bi-with-json-data-sources-and-files/"
     },
     {
-      "pergunta": "You are building a dataset from a JSON file that contains an array of documents. You need to import attributes as columns from all the documents in the JSON file. The solution must ensure that date attributes can be used as date hierarchies in Microsoft Power BI reports. Which three actions should you perform in sequence?",
-      "opcoes": [
+      "question": "You are building a dataset from a JSON file that contains an array of documents. You need to import attributes as columns from all the documents in the JSON file. The solution must ensure that date attributes can be used as date hierarchies in Microsoft Power BI reports. Which three actions should you perform in sequence?",
+      "options": [
         "Create a new aggregation that summarizes by employee.",
         "Create a new group on the state column and set the Group type to List.",
         "Create a new group on the state column and set the Group type to Bin.",
         "Create a new aggregation that summarizes by state."
       ],
-      "correta": 1,
-      "explicacao": "Reference: https://www.mssqltips.com/sqlservertip/4621/using-power-bi-with-json-data-sources-and-files/"
+      "answer": 1,
+      "explanation": "Reference: https://www.mssqltips.com/sqlservertip/4621/using-power-bi-with-json-data-sources-and-files/"
     },
     {
-      "pergunta": "You are building a dataset from a JSON file that contains an array of documents. You need to import attributes as columns from all the documents in the JSON file. The solution must ensure that date attributes can be used as date hierarchies in Microsoft Power BI reports. Which three actions should you perform in sequence?",
-      "opcoes": [
+      "question": "You are building a dataset from a JSON file that contains an array of documents. You need to import attributes as columns from all the documents in the JSON file. The solution must ensure that date attributes can be used as date hierarchies in Microsoft Power BI reports. Which three actions should you perform in sequence?",
+      "options": [
         "Create a new aggregation that summarizes by employee.",
         "Create a new group on the state column and set the Group type to List.",
         "Create a new group on the state column and set the Group type to Bin.",
         "Create a new aggregation that summarizes by state."
       ],
-      "correta": 1,
-      "explicacao": "Reference: https://www.mssqltips.com/sqlservertip/4621/using-power-bi-with-json-data-sources-and-files/"
+      "answer": 1,
+      "explanation": "Reference: https://www.mssqltips.com/sqlservertip/4621/using-power-bi-with-json-data-sources-and-files/"
     },
     {
-      "pergunta": "You are building a dataset from a JSON file that contains an array of documents. You need to import attributes as columns from all the documents in the JSON file. The solution must ensure that date attributes can be used as date hierarchies in Microsoft Power BI reports. Which three actions should you perform in sequence?",
-      "opcoes": [
+      "question": "You are building a dataset from a JSON file that contains an array of documents. You need to import attributes as columns from all the documents in the JSON file. The solution must ensure that date attributes can be used as date hierarchies in Microsoft Power BI reports. Which three actions should you perform in sequence?",
+      "options": [
         "Create a new aggregation that summarizes by employee.",
         "Create a new group on the state column and set the Group type to List.",
         "Create a new group on the state column and set the Group type to Bin.",
         "Create a new aggregation that summarizes by state."
       ],
-      "correta": 1,
-      "explicacao": "Reference: https://www.mssqltips.com/sqlservertip/4621/using-power-bi-with-json-data-sources-and-files/"
+      "answer": 1,
+      "explanation": "Reference: https://www.mssqltips.com/sqlservertip/4621/using-power-bi-with-json-data-sources-and-files/"
     },
     {
-      "pergunta": "You are building a dataset from a JSON file that contains an array of documents. You need to import attributes as columns from all the documents in the JSON file. The solution must ensure that date attributes can be used as date hierarchies in Microsoft Power BI reports. Which three actions should you perform in sequence?",
-      "opcoes": [
+      "question": "You are building a dataset from a JSON file that contains an array of documents. You need to import attributes as columns from all the documents in the JSON file. The solution must ensure that date attributes can be used as date hierarchies in Microsoft Power BI reports. Which three actions should you perform in sequence?",
+      "options": [
         "Create a new aggregation that summarizes by employee.",
         "Create a new group on the state column and set the Group type to List.",
         "Create a new group on the state column and set the Group type to Bin.",
         "Create a new aggregation that summarizes by state."
       ],
-      "correta": 1,
-      "explicacao": "Reference: https://www.mssqltips.com/sqlservertip/4621/using-power-bi-with-json-data-sources-and-files/"
+      "answer": 1,
+      "explanation": "Reference: https://www.mssqltips.com/sqlservertip/4621/using-power-bi-with-json-data-sources-and-files/"
     },
     {
-      "pergunta": "You are building a dataset from a JSON file that contains an array of documents. You need to import attributes as columns from all the documents in the JSON file. The solution must ensure that date attributes can be used as date hierarchies in Microsoft Power BI reports. Which three actions should you perform in sequence?",
-      "opcoes": [
+      "question": "You are building a dataset from a JSON file that contains an array of documents. You need to import attributes as columns from all the documents in the JSON file. The solution must ensure that date attributes can be used as date hierarchies in Microsoft Power BI reports. Which three actions should you perform in sequence?",
+      "options": [
         "Create a new aggregation that summarizes by employee.",
         "Create a new group on the state column and set the Group type to List.",
         "Create a new group on the state column and set the Group type to Bin.",
         "Create a new aggregation that summarizes by state."
       ],
-      "correta": 1,
-      "explicacao": "Reference: https://www.mssqltips.com/sqlservertip/4621/using-power-bi-with-json-data-sources-and-files/"
+      "answer": 1,
+      "explanation": "Reference: https://www.mssqltips.com/sqlservertip/4621/using-power-bi-with-json-data-sources-and-files/"
     },
     {
-      "pergunta": "You are building a dataset from a JSON file that contains an array of documents. You need to import attributes as columns from all the documents in the JSON file. The solution must ensure that date attributes can be used as date hierarchies in Microsoft Power BI reports. Which three actions should you perform in sequence?",
-      "opcoes": [
+      "question": "You are building a dataset from a JSON file that contains an array of documents. You need to import attributes as columns from all the documents in the JSON file. The solution must ensure that date attributes can be used as date hierarchies in Microsoft Power BI reports. Which three actions should you perform in sequence?",
+      "options": [
         "Create a new aggregation that summarizes by employee.",
         "Create a new group on the state column and set the Group type to List.",
         "Create a new group on the state column and set the Group type to Bin.",
         "Create a new aggregation that summarizes by state."
       ],
-      "correta": 1,
-      "explicacao": "Reference: https://www.mssqltips.com/sqlservertip/4621/using-power-bi-with-json-data-sources-and-files/"
+      "answer": 1,
+      "explanation": "Reference: https://www.mssqltips.com/sqlservertip/4621/using-power-bi-with-json-data-sources-and-files/"
     },
     {
-      "pergunta": "You are building a dataset from a JSON file that contains an array of documents. You need to import attributes as columns from all the documents in the JSON file. The solution must ensure that date attributes can be used as date hierarchies in Microsoft Power BI reports. Which three actions should you perform in sequence?",
-      "opcoes": [
+      "question": "You are building a dataset from a JSON file that contains an array of documents. You need to import attributes as columns from all the documents in the JSON file. The solution must ensure that date attributes can be used as date hierarchies in Microsoft Power BI reports. Which three actions should you perform in sequence?",
+      "options": [
         "Create a new aggregation that summarizes by employee.",
         "Create a new group on the state column and set the Group type to List.",
         "Create a new group on the state column and set the Group type to Bin.",
         "Create a new aggregation that summarizes by state."
       ],
-      "correta": 1,
-      "explicacao": "Reference: https://www.mssqltips.com/sqlservertip/4621/using-power-bi-with-json-data-sources-and-files/"
+      "answer": 1,
+      "explanation": "Reference: https://www.mssqltips.com/sqlservertip/4621/using-power-bi-with-json-data-sources-and-files/"
     },
     {
-      "pergunta": "You embed a Power BI report in a Microsoft SharePoint Online page. A user named User1 can access the SharePoint Online page, but the Power BI web part displays the following error message: \"This content isn't available.\" User1 is unable to view the report. You verify that you can access the SharePoint Online page and that the Power BI report displays as expected. You need to ensure that User1 can view the report from SharePoint Online. What should you do?",
-      "opcoes": [
+      "question": "You embed a Power BI report in a Microsoft SharePoint Online page. A user named User1 can access the SharePoint Online page, but the Power BI web part displays the following error message: \"This content isn't available.\" User1 is unable to view the report. You verify that you can access the SharePoint Online page and that the Power BI report displays as expected. You need to ensure that User1 can view the report from SharePoint Online. What should you do?",
+      "options": [
         "Publish the app workspace.",
         "Share the dashboard in the app workspace.",
         "Edit the settings of the Power BI web part.",
         "Modify the members of the app workspace."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Modify the members of the app workspace. Users or groups need access to both the SharePoint Online page and the report in the Power BI app to see the report on the SharePoint page. Reference: https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-embed-report-spo"
+      "answer": 3,
+      "explanation": "Resposta: Modify the members of the app workspace. Users or groups need access to both the SharePoint Online page and the report in the Power BI app to see the report on the SharePoint page. Reference: https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-embed-report-spo"
     },
     {
-      "pergunta": "You embed a Power BI report in a Microsoft SharePoint Online page. A user named User1 can access the SharePoint Online page, but the Power BI web part displays the following error message: \"This content isn't available.\" User1 is unable to view the report. You verify that you can access the SharePoint Online page and that the Power BI report displays as expected. You need to ensure that User1 can view the report from SharePoint Online. What should you do?",
-      "opcoes": [
+      "question": "You embed a Power BI report in a Microsoft SharePoint Online page. A user named User1 can access the SharePoint Online page, but the Power BI web part displays the following error message: \"This content isn't available.\" User1 is unable to view the report. You verify that you can access the SharePoint Online page and that the Power BI report displays as expected. You need to ensure that User1 can view the report from SharePoint Online. What should you do?",
+      "options": [
         "Publish the app workspace.",
         "Share the dashboard in the app workspace.",
         "Edit the settings of the Power BI web part.",
         "Modify the members of the app workspace."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Modify the members of the app workspace. Users or groups need access to both the SharePoint Online page and the report in the Power BI app to see the report on the SharePoint page. Reference: https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-embed-report-spo"
+      "answer": 3,
+      "explanation": "Resposta: Modify the members of the app workspace. Users or groups need access to both the SharePoint Online page and the report in the Power BI app to see the report on the SharePoint page. Reference: https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-embed-report-spo"
     },
     {
-      "pergunta": "You embed a Power BI report in a Microsoft SharePoint Online page. A user named User1 can access the SharePoint Online page, but the Power BI web part displays the following error message: \"This content isn't available.\" User1 is unable to view the report. You verify that you can access the SharePoint Online page and that the Power BI report displays as expected. You need to ensure that User1 can view the report from SharePoint Online. What should you do?",
-      "opcoes": [
+      "question": "You embed a Power BI report in a Microsoft SharePoint Online page. A user named User1 can access the SharePoint Online page, but the Power BI web part displays the following error message: \"This content isn't available.\" User1 is unable to view the report. You verify that you can access the SharePoint Online page and that the Power BI report displays as expected. You need to ensure that User1 can view the report from SharePoint Online. What should you do?",
+      "options": [
         "Publish the app workspace.",
         "Share the dashboard in the app workspace.",
         "Edit the settings of the Power BI web part.",
         "Modify the members of the app workspace."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Modify the members of the app workspace. Users or groups need access to both the SharePoint Online page and the report in the Power BI app to see the report on the SharePoint page. Reference: https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-embed-report-spo"
+      "answer": 3,
+      "explanation": "Resposta: Modify the members of the app workspace. Users or groups need access to both the SharePoint Online page and the report in the Power BI app to see the report on the SharePoint page. Reference: https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-embed-report-spo"
     },
     {
-      "pergunta": "You embed a Power BI report in a Microsoft SharePoint Online page. A user named User1 can access the SharePoint Online page, but the Power BI web part displays the following error message: \"This content isn't available.\" User1 is unable to view the report. You verify that you can access the SharePoint Online page and that the Power BI report displays as expected. You need to ensure that User1 can view the report from SharePoint Online. What should you do?",
-      "opcoes": [
+      "question": "You embed a Power BI report in a Microsoft SharePoint Online page. A user named User1 can access the SharePoint Online page, but the Power BI web part displays the following error message: \"This content isn't available.\" User1 is unable to view the report. You verify that you can access the SharePoint Online page and that the Power BI report displays as expected. You need to ensure that User1 can view the report from SharePoint Online. What should you do?",
+      "options": [
         "Publish the app workspace.",
         "Share the dashboard in the app workspace.",
         "Edit the settings of the Power BI web part.",
         "Modify the members of the app workspace."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Modify the members of the app workspace. Users or groups need access to both the SharePoint Online page and the report in the Power BI app to see the report on the SharePoint page. Reference: https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-embed-report-spo"
+      "answer": 3,
+      "explanation": "Resposta: Modify the members of the app workspace. Users or groups need access to both the SharePoint Online page and the report in the Power BI app to see the report on the SharePoint page. Reference: https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-embed-report-spo"
     },
     {
-      "pergunta": "You embed a Power BI report in a Microsoft SharePoint Online page. A user named User1 can access the SharePoint Online page, but the Power BI web part displays the following error message: \"This content isn't available.\" User1 is unable to view the report. You verify that you can access the SharePoint Online page and that the Power BI report displays as expected. You need to ensure that User1 can view the report from SharePoint Online. What should you do?",
-      "opcoes": [
+      "question": "You embed a Power BI report in a Microsoft SharePoint Online page. A user named User1 can access the SharePoint Online page, but the Power BI web part displays the following error message: \"This content isn't available.\" User1 is unable to view the report. You verify that you can access the SharePoint Online page and that the Power BI report displays as expected. You need to ensure that User1 can view the report from SharePoint Online. What should you do?",
+      "options": [
         "Publish the app workspace.",
         "Share the dashboard in the app workspace.",
         "Edit the settings of the Power BI web part.",
         "Modify the members of the app workspace."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Modify the members of the app workspace. Users or groups need access to both the SharePoint Online page and the report in the Power BI app to see the report on the SharePoint page. Reference: https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-embed-report-spo"
+      "answer": 3,
+      "explanation": "Resposta: Modify the members of the app workspace. Users or groups need access to both the SharePoint Online page and the report in the Power BI app to see the report on the SharePoint page. Reference: https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-embed-report-spo"
     },
     {
-      "pergunta": "You embed a Power BI report in a Microsoft SharePoint Online page. A user named User1 can access the SharePoint Online page, but the Power BI web part displays the following error message: \"This content isn't available.\" User1 is unable to view the report. You verify that you can access the SharePoint Online page and that the Power BI report displays as expected. You need to ensure that User1 can view the report from SharePoint Online. What should you do?",
-      "opcoes": [
+      "question": "You embed a Power BI report in a Microsoft SharePoint Online page. A user named User1 can access the SharePoint Online page, but the Power BI web part displays the following error message: \"This content isn't available.\" User1 is unable to view the report. You verify that you can access the SharePoint Online page and that the Power BI report displays as expected. You need to ensure that User1 can view the report from SharePoint Online. What should you do?",
+      "options": [
         "Publish the app workspace.",
         "Share the dashboard in the app workspace.",
         "Edit the settings of the Power BI web part.",
         "Modify the members of the app workspace."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Modify the members of the app workspace. Users or groups need access to both the SharePoint Online page and the report in the Power BI app to see the report on the SharePoint page. Reference: https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-embed-report-spo"
+      "answer": 3,
+      "explanation": "Resposta: Modify the members of the app workspace. Users or groups need access to both the SharePoint Online page and the report in the Power BI app to see the report on the SharePoint page. Reference: https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-embed-report-spo"
     },
     {
-      "pergunta": "You embed a Power BI report in a Microsoft SharePoint Online page. A user named User1 can access the SharePoint Online page, but the Power BI web part displays the following error message: \"This content isn't available.\" User1 is unable to view the report. You verify that you can access the SharePoint Online page and that the Power BI report displays as expected. You need to ensure that User1 can view the report from SharePoint Online. What should you do?",
-      "opcoes": [
+      "question": "You embed a Power BI report in a Microsoft SharePoint Online page. A user named User1 can access the SharePoint Online page, but the Power BI web part displays the following error message: \"This content isn't available.\" User1 is unable to view the report. You verify that you can access the SharePoint Online page and that the Power BI report displays as expected. You need to ensure that User1 can view the report from SharePoint Online. What should you do?",
+      "options": [
         "Publish the app workspace.",
         "Share the dashboard in the app workspace.",
         "Edit the settings of the Power BI web part.",
         "Modify the members of the app workspace."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Modify the members of the app workspace. Users or groups need access to both the SharePoint Online page and the report in the Power BI app to see the report on the SharePoint page. Reference: https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-embed-report-spo"
+      "answer": 3,
+      "explanation": "Resposta: Modify the members of the app workspace. Users or groups need access to both the SharePoint Online page and the report in the Power BI app to see the report on the SharePoint page. Reference: https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-embed-report-spo"
     },
     {
-      "pergunta": "You embed a Power BI report in a Microsoft SharePoint Online page. A user named User1 can access the SharePoint Online page, but the Power BI web part displays the following error message: \"This content isn't available.\" User1 is unable to view the report. You verify that you can access the SharePoint Online page and that the Power BI report displays as expected. You need to ensure that User1 can view the report from SharePoint Online. What should you do?",
-      "opcoes": [
+      "question": "You embed a Power BI report in a Microsoft SharePoint Online page. A user named User1 can access the SharePoint Online page, but the Power BI web part displays the following error message: \"This content isn't available.\" User1 is unable to view the report. You verify that you can access the SharePoint Online page and that the Power BI report displays as expected. You need to ensure that User1 can view the report from SharePoint Online. What should you do?",
+      "options": [
         "Publish the app workspace.",
         "Share the dashboard in the app workspace.",
         "Edit the settings of the Power BI web part.",
         "Modify the members of the app workspace."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Modify the members of the app workspace. Users or groups need access to both the SharePoint Online page and the report in the Power BI app to see the report on the SharePoint page. Reference: https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-embed-report-spo"
+      "answer": 3,
+      "explanation": "Resposta: Modify the members of the app workspace. Users or groups need access to both the SharePoint Online page and the report in the Power BI app to see the report on the SharePoint page. Reference: https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-embed-report-spo"
     },
     {
-      "pergunta": "You embed a Power BI report in a Microsoft SharePoint Online page. A user named User1 can access the SharePoint Online page, but the Power BI web part displays the following error message: \"This content isn't available.\" User1 is unable to view the report. You verify that you can access the SharePoint Online page and that the Power BI report displays as expected. You need to ensure that User1 can view the report from SharePoint Online. What should you do?",
-      "opcoes": [
+      "question": "You embed a Power BI report in a Microsoft SharePoint Online page. A user named User1 can access the SharePoint Online page, but the Power BI web part displays the following error message: \"This content isn't available.\" User1 is unable to view the report. You verify that you can access the SharePoint Online page and that the Power BI report displays as expected. You need to ensure that User1 can view the report from SharePoint Online. What should you do?",
+      "options": [
         "Publish the app workspace.",
         "Share the dashboard in the app workspace.",
         "Edit the settings of the Power BI web part.",
         "Modify the members of the app workspace."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Modify the members of the app workspace. Users or groups need access to both the SharePoint Online page and the report in the Power BI app to see the report on the SharePoint page. Reference: https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-embed-report-spo"
+      "answer": 3,
+      "explanation": "Resposta: Modify the members of the app workspace. Users or groups need access to both the SharePoint Online page and the report in the Power BI app to see the report on the SharePoint page. Reference: https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-embed-report-spo"
     },
     {
-      "pergunta": "You embed a Power BI report in a Microsoft SharePoint Online page. A user named User1 can access the SharePoint Online page, but the Power BI web part displays the following error message: \"This content isn't available.\" User1 is unable to view the report. You verify that you can access the SharePoint Online page and that the Power BI report displays as expected. You need to ensure that User1 can view the report from SharePoint Online. What should you do?",
-      "opcoes": [
+      "question": "You embed a Power BI report in a Microsoft SharePoint Online page. A user named User1 can access the SharePoint Online page, but the Power BI web part displays the following error message: \"This content isn't available.\" User1 is unable to view the report. You verify that you can access the SharePoint Online page and that the Power BI report displays as expected. You need to ensure that User1 can view the report from SharePoint Online. What should you do?",
+      "options": [
         "Publish the app workspace.",
         "Share the dashboard in the app workspace.",
         "Edit the settings of the Power BI web part.",
         "Modify the members of the app workspace."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Modify the members of the app workspace. Users or groups need access to both the SharePoint Online page and the report in the Power BI app to see the report on the SharePoint page. Reference: https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-embed-report-spo"
+      "answer": 3,
+      "explanation": "Resposta: Modify the members of the app workspace. Users or groups need access to both the SharePoint Online page and the report in the Power BI app to see the report on the SharePoint page. Reference: https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-embed-report-spo"
     },
     {
-      "pergunta": "You plan to embed multiple visualizations in a public website. Your Power BI infrastructure contains the visualizations configured as shown in the following table. Which two visualizations can you embed into the website? Each correct answer presents a complete solution.",
-      "opcoes": [
+      "question": "You plan to embed multiple visualizations in a public website. Your Power BI infrastructure contains the visualizations configured as shown in the following table. Which two visualizations can you embed into the website? Each correct answer presents a complete solution.",
+      "options": [
         "Visual 1",
         "Visual 2",
         "Visual 3",
         "Visual 4",
         "Visual 5"
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Visual 2 and 4 Not all reports can be published to the web, unsupported scenarios as: 1- R visuals 2- Reports with row-level security (RLS) -> (Visual 1) 3- Reports that connect live to on-premises Analysis Services Tabular (Visual 5) 4- Reports shared with you -> (Visual 3) References: https://docs.microsoft.com/en-us/power-bi/service-publish-to-web"
+      "answer": 3,
+      "explanation": "Resposta: Visual 2 and 4 Not all reports can be published to the web, unsupported scenarios as: 1- R visuals 2- Reports with row-level security (RLS) -> (Visual 1) 3- Reports that connect live to on-premises Analysis Services Tabular (Visual 5) 4- Reports shared with you -> (Visual 3) References: https://docs.microsoft.com/en-us/power-bi/service-publish-to-web"
     },
     {
-      "pergunta": "You plan to embed multiple visualizations in a public website. Your Power BI infrastructure contains the visualizations configured as shown in the following table. Which two visualizations can you embed into the website? Each correct answer presents a complete solution.",
-      "opcoes": [
+      "question": "You plan to embed multiple visualizations in a public website. Your Power BI infrastructure contains the visualizations configured as shown in the following table. Which two visualizations can you embed into the website? Each correct answer presents a complete solution.",
+      "options": [
         "Visual 1",
         "Visual 2",
         "Visual 3",
         "Visual 4",
         "Visual 5"
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Visual 2 and 4 Not all reports can be published to the web, unsupported scenarios as: 1- R visuals 2- Reports with row-level security (RLS) -> (Visual 1) 3- Reports that connect live to on-premises Analysis Services Tabular (Visual 5) 4- Reports shared with you -> (Visual 3) References: https://docs.microsoft.com/en-us/power-bi/service-publish-to-web"
+      "answer": 3,
+      "explanation": "Resposta: Visual 2 and 4 Not all reports can be published to the web, unsupported scenarios as: 1- R visuals 2- Reports with row-level security (RLS) -> (Visual 1) 3- Reports that connect live to on-premises Analysis Services Tabular (Visual 5) 4- Reports shared with you -> (Visual 3) References: https://docs.microsoft.com/en-us/power-bi/service-publish-to-web"
     },
     {
-      "pergunta": "You plan to embed multiple visualizations in a public website. Your Power BI infrastructure contains the visualizations configured as shown in the following table. Which two visualizations can you embed into the website? Each correct answer presents a complete solution.",
-      "opcoes": [
+      "question": "You plan to embed multiple visualizations in a public website. Your Power BI infrastructure contains the visualizations configured as shown in the following table. Which two visualizations can you embed into the website? Each correct answer presents a complete solution.",
+      "options": [
         "Visual 1",
         "Visual 2",
         "Visual 3",
         "Visual 4",
         "Visual 5"
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Visual 2 and 4 Not all reports can be published to the web, unsupported scenarios as: 1- R visuals 2- Reports with row-level security (RLS) -> (Visual 1) 3- Reports that connect live to on-premises Analysis Services Tabular (Visual 5) 4- Reports shared with you -> (Visual 3) References: https://docs.microsoft.com/en-us/power-bi/service-publish-to-web"
+      "answer": 3,
+      "explanation": "Resposta: Visual 2 and 4 Not all reports can be published to the web, unsupported scenarios as: 1- R visuals 2- Reports with row-level security (RLS) -> (Visual 1) 3- Reports that connect live to on-premises Analysis Services Tabular (Visual 5) 4- Reports shared with you -> (Visual 3) References: https://docs.microsoft.com/en-us/power-bi/service-publish-to-web"
     },
     {
-      "pergunta": "You plan to embed multiple visualizations in a public website. Your Power BI infrastructure contains the visualizations configured as shown in the following table. Which two visualizations can you embed into the website? Each correct answer presents a complete solution.",
-      "opcoes": [
+      "question": "You plan to embed multiple visualizations in a public website. Your Power BI infrastructure contains the visualizations configured as shown in the following table. Which two visualizations can you embed into the website? Each correct answer presents a complete solution.",
+      "options": [
         "Visual 1",
         "Visual 2",
         "Visual 3",
         "Visual 4",
         "Visual 5"
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Visual 2 and 4 Not all reports can be published to the web, unsupported scenarios as: 1- R visuals 2- Reports with row-level security (RLS) -> (Visual 1) 3- Reports that connect live to on-premises Analysis Services Tabular (Visual 5) 4- Reports shared with you -> (Visual 3) References: https://docs.microsoft.com/en-us/power-bi/service-publish-to-web"
+      "answer": 3,
+      "explanation": "Resposta: Visual 2 and 4 Not all reports can be published to the web, unsupported scenarios as: 1- R visuals 2- Reports with row-level security (RLS) -> (Visual 1) 3- Reports that connect live to on-premises Analysis Services Tabular (Visual 5) 4- Reports shared with you -> (Visual 3) References: https://docs.microsoft.com/en-us/power-bi/service-publish-to-web"
     },
     {
-      "pergunta": "You plan to embed multiple visualizations in a public website. Your Power BI infrastructure contains the visualizations configured as shown in the following table. Which two visualizations can you embed into the website? Each correct answer presents a complete solution.",
-      "opcoes": [
+      "question": "You plan to embed multiple visualizations in a public website. Your Power BI infrastructure contains the visualizations configured as shown in the following table. Which two visualizations can you embed into the website? Each correct answer presents a complete solution.",
+      "options": [
         "Visual 1",
         "Visual 2",
         "Visual 3",
         "Visual 4",
         "Visual 5"
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Visual 2 and 4 Not all reports can be published to the web, unsupported scenarios as: 1- R visuals 2- Reports with row-level security (RLS) -> (Visual 1) 3- Reports that connect live to on-premises Analysis Services Tabular (Visual 5) 4- Reports shared with you -> (Visual 3) References: https://docs.microsoft.com/en-us/power-bi/service-publish-to-web"
+      "answer": 3,
+      "explanation": "Resposta: Visual 2 and 4 Not all reports can be published to the web, unsupported scenarios as: 1- R visuals 2- Reports with row-level security (RLS) -> (Visual 1) 3- Reports that connect live to on-premises Analysis Services Tabular (Visual 5) 4- Reports shared with you -> (Visual 3) References: https://docs.microsoft.com/en-us/power-bi/service-publish-to-web"
     },
     {
-      "pergunta": "You plan to embed multiple visualizations in a public website. Your Power BI infrastructure contains the visualizations configured as shown in the following table. Which two visualizations can you embed into the website? Each correct answer presents a complete solution.",
-      "opcoes": [
+      "question": "You plan to embed multiple visualizations in a public website. Your Power BI infrastructure contains the visualizations configured as shown in the following table. Which two visualizations can you embed into the website? Each correct answer presents a complete solution.",
+      "options": [
         "Visual 1",
         "Visual 2",
         "Visual 3",
         "Visual 4",
         "Visual 5"
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Visual 2 and 4 Not all reports can be published to the web, unsupported scenarios as: 1- R visuals 2- Reports with row-level security (RLS) -> (Visual 1) 3- Reports that connect live to on-premises Analysis Services Tabular (Visual 5) 4- Reports shared with you -> (Visual 3) References: https://docs.microsoft.com/en-us/power-bi/service-publish-to-web"
+      "answer": 3,
+      "explanation": "Resposta: Visual 2 and 4 Not all reports can be published to the web, unsupported scenarios as: 1- R visuals 2- Reports with row-level security (RLS) -> (Visual 1) 3- Reports that connect live to on-premises Analysis Services Tabular (Visual 5) 4- Reports shared with you -> (Visual 3) References: https://docs.microsoft.com/en-us/power-bi/service-publish-to-web"
     },
     {
-      "pergunta": "You plan to embed multiple visualizations in a public website. Your Power BI infrastructure contains the visualizations configured as shown in the following table. Which two visualizations can you embed into the website? Each correct answer presents a complete solution.",
-      "opcoes": [
+      "question": "You plan to embed multiple visualizations in a public website. Your Power BI infrastructure contains the visualizations configured as shown in the following table. Which two visualizations can you embed into the website? Each correct answer presents a complete solution.",
+      "options": [
         "Visual 1",
         "Visual 2",
         "Visual 3",
         "Visual 4",
         "Visual 5"
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Visual 2 and 4 Not all reports can be published to the web, unsupported scenarios as: 1- R visuals 2- Reports with row-level security (RLS) -> (Visual 1) 3- Reports that connect live to on-premises Analysis Services Tabular (Visual 5) 4- Reports shared with you -> (Visual 3) References: https://docs.microsoft.com/en-us/power-bi/service-publish-to-web"
+      "answer": 3,
+      "explanation": "Resposta: Visual 2 and 4 Not all reports can be published to the web, unsupported scenarios as: 1- R visuals 2- Reports with row-level security (RLS) -> (Visual 1) 3- Reports that connect live to on-premises Analysis Services Tabular (Visual 5) 4- Reports shared with you -> (Visual 3) References: https://docs.microsoft.com/en-us/power-bi/service-publish-to-web"
     },
     {
-      "pergunta": "You plan to embed multiple visualizations in a public website. Your Power BI infrastructure contains the visualizations configured as shown in the following table. Which two visualizations can you embed into the website? Each correct answer presents a complete solution.",
-      "opcoes": [
+      "question": "You plan to embed multiple visualizations in a public website. Your Power BI infrastructure contains the visualizations configured as shown in the following table. Which two visualizations can you embed into the website? Each correct answer presents a complete solution.",
+      "options": [
         "Visual 1",
         "Visual 2",
         "Visual 3",
         "Visual 4",
         "Visual 5"
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Visual 2 and 4 Not all reports can be published to the web, unsupported scenarios as: 1- R visuals 2- Reports with row-level security (RLS) -> (Visual 1) 3- Reports that connect live to on-premises Analysis Services Tabular (Visual 5) 4- Reports shared with you -> (Visual 3) References: https://docs.microsoft.com/en-us/power-bi/service-publish-to-web"
+      "answer": 3,
+      "explanation": "Resposta: Visual 2 and 4 Not all reports can be published to the web, unsupported scenarios as: 1- R visuals 2- Reports with row-level security (RLS) -> (Visual 1) 3- Reports that connect live to on-premises Analysis Services Tabular (Visual 5) 4- Reports shared with you -> (Visual 3) References: https://docs.microsoft.com/en-us/power-bi/service-publish-to-web"
     },
     {
-      "pergunta": "You plan to embed multiple visualizations in a public website. Your Power BI infrastructure contains the visualizations configured as shown in the following table. Which two visualizations can you embed into the website? Each correct answer presents a complete solution.",
-      "opcoes": [
+      "question": "You plan to embed multiple visualizations in a public website. Your Power BI infrastructure contains the visualizations configured as shown in the following table. Which two visualizations can you embed into the website? Each correct answer presents a complete solution.",
+      "options": [
         "Visual 1",
         "Visual 2",
         "Visual 3",
         "Visual 4",
         "Visual 5"
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Visual 2 and 4 Not all reports can be published to the web, unsupported scenarios as: 1- R visuals 2- Reports with row-level security (RLS) -> (Visual 1) 3- Reports that connect live to on-premises Analysis Services Tabular (Visual 5) 4- Reports shared with you -> (Visual 3) References: https://docs.microsoft.com/en-us/power-bi/service-publish-to-web"
+      "answer": 3,
+      "explanation": "Resposta: Visual 2 and 4 Not all reports can be published to the web, unsupported scenarios as: 1- R visuals 2- Reports with row-level security (RLS) -> (Visual 1) 3- Reports that connect live to on-premises Analysis Services Tabular (Visual 5) 4- Reports shared with you -> (Visual 3) References: https://docs.microsoft.com/en-us/power-bi/service-publish-to-web"
     },
     {
-      "pergunta": "You plan to embed multiple visualizations in a public website. Your Power BI infrastructure contains the visualizations configured as shown in the following table. Which two visualizations can you embed into the website? Each correct answer presents a complete solution.",
-      "opcoes": [
+      "question": "You plan to embed multiple visualizations in a public website. Your Power BI infrastructure contains the visualizations configured as shown in the following table. Which two visualizations can you embed into the website? Each correct answer presents a complete solution.",
+      "options": [
         "Visual 1",
         "Visual 2",
         "Visual 3",
         "Visual 4",
         "Visual 5"
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Visual 2 and 4 Not all reports can be published to the web, unsupported scenarios as: 1- R visuals 2- Reports with row-level security (RLS) -> (Visual 1) 3- Reports that connect live to on-premises Analysis Services Tabular (Visual 5) 4- Reports shared with you -> (Visual 3) References: https://docs.microsoft.com/en-us/power-bi/service-publish-to-web"
+      "answer": 3,
+      "explanation": "Resposta: Visual 2 and 4 Not all reports can be published to the web, unsupported scenarios as: 1- R visuals 2- Reports with row-level security (RLS) -> (Visual 1) 3- Reports that connect live to on-premises Analysis Services Tabular (Visual 5) 4- Reports shared with you -> (Visual 3) References: https://docs.microsoft.com/en-us/power-bi/service-publish-to-web"
     },
     {
-      "pergunta": "What is the best description of a workspace?",
-      "opcoes": [
+      "question": "What is the best description of a workspace?",
+      "options": [
         "A workspace is a feature in Power BI service that allows you to view reports only.",
         "A workspace is a feature that allows you to view and edit the data model, build visualizations, and transform the data.",
         "A workspace is a feature of Power BI Desktop that allows you to build reports only.",
         "A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
+      "answer": 3,
+      "explanation": "Resposta: A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
     },
     {
-      "pergunta": "What is the best description of a workspace?",
-      "opcoes": [
+      "question": "What is the best description of a workspace?",
+      "options": [
         "A workspace is a feature in Power BI service that allows you to view reports only.",
         "A workspace is a feature that allows you to view and edit the data model, build visualizations, and transform the data.",
         "A workspace is a feature of Power BI Desktop that allows you to build reports only.",
         "A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
+      "answer": 3,
+      "explanation": "Resposta: A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
     },
     {
-      "pergunta": "What is the best description of a workspace?",
-      "opcoes": [
+      "question": "What is the best description of a workspace?",
+      "options": [
         "A workspace is a feature in Power BI service that allows you to view reports only.",
         "A workspace is a feature that allows you to view and edit the data model, build visualizations, and transform the data.",
         "A workspace is a feature of Power BI Desktop that allows you to build reports only.",
         "A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
+      "answer": 3,
+      "explanation": "Resposta: A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
     },
     {
-      "pergunta": "What is the best description of a workspace?",
-      "opcoes": [
+      "question": "What is the best description of a workspace?",
+      "options": [
         "A workspace is a feature in Power BI service that allows you to view reports only.",
         "A workspace is a feature that allows you to view and edit the data model, build visualizations, and transform the data.",
         "A workspace is a feature of Power BI Desktop that allows you to build reports only.",
         "A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
+      "answer": 3,
+      "explanation": "Resposta: A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
     },
     {
-      "pergunta": "What is the best description of a workspace?",
-      "opcoes": [
+      "question": "What is the best description of a workspace?",
+      "options": [
         "A workspace is a feature in Power BI service that allows you to view reports only.",
         "A workspace is a feature that allows you to view and edit the data model, build visualizations, and transform the data.",
         "A workspace is a feature of Power BI Desktop that allows you to build reports only.",
         "A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
+      "answer": 3,
+      "explanation": "Resposta: A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
     },
     {
-      "pergunta": "What is the best description of a workspace?",
-      "opcoes": [
+      "question": "What is the best description of a workspace?",
+      "options": [
         "A workspace is a feature in Power BI service that allows you to view reports only.",
         "A workspace is a feature that allows you to view and edit the data model, build visualizations, and transform the data.",
         "A workspace is a feature of Power BI Desktop that allows you to build reports only.",
         "A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
+      "answer": 3,
+      "explanation": "Resposta: A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
     },
     {
-      "pergunta": "What is the best description of a workspace?",
-      "opcoes": [
+      "question": "What is the best description of a workspace?",
+      "options": [
         "A workspace is a feature in Power BI service that allows you to view reports only.",
         "A workspace is a feature that allows you to view and edit the data model, build visualizations, and transform the data.",
         "A workspace is a feature of Power BI Desktop that allows you to build reports only.",
         "A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
+      "answer": 3,
+      "explanation": "Resposta: A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
     },
     {
-      "pergunta": "What is the best description of a workspace?",
-      "opcoes": [
+      "question": "What is the best description of a workspace?",
+      "options": [
         "A workspace is a feature in Power BI service that allows you to view reports only.",
         "A workspace is a feature that allows you to view and edit the data model, build visualizations, and transform the data.",
         "A workspace is a feature of Power BI Desktop that allows you to build reports only.",
         "A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
+      "answer": 3,
+      "explanation": "Resposta: A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
     },
     {
-      "pergunta": "What is the best description of a workspace?",
-      "opcoes": [
+      "question": "What is the best description of a workspace?",
+      "options": [
         "A workspace is a feature in Power BI service that allows you to view reports only.",
         "A workspace is a feature that allows you to view and edit the data model, build visualizations, and transform the data.",
         "A workspace is a feature of Power BI Desktop that allows you to build reports only.",
         "A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
+      "answer": 3,
+      "explanation": "Resposta: A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
     },
     {
-      "pergunta": "What is the best description of a workspace?",
-      "opcoes": [
+      "question": "What is the best description of a workspace?",
+      "options": [
         "A workspace is a feature in Power BI service that allows you to view reports only.",
         "A workspace is a feature that allows you to view and edit the data model, build visualizations, and transform the data.",
         "A workspace is a feature of Power BI Desktop that allows you to build reports only.",
         "A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
+      "answer": 3,
+      "explanation": "Resposta: A workspace is a centralized location or repository that allows you to collaborate with colleagues and teams to create collections of reports, dashboards, etc."
     },
     {
-      "pergunta": "You have a table that contains the following three columns: - City - Total Sales - Occupation You need to create a key influencers visualization as shown in the exhibit. How should you configure the visualization?",
-      "opcoes": [
+      "question": "You have a table that contains the following three columns: - City - Total Sales - Occupation You need to create a key influencers visualization as shown in the exhibit. How should you configure the visualization?",
+      "options": [
         "Add a Top N filter to the visual.",
         "Configure the Sales Profit measure to use the RANKX function.",
         "Add a calculated column to the table that uses the TOPN function. In the visual, replace Sales Profit with the calculated column.",
         "Add a calculated column to the table that returns the city name if the city is in the top 10, otherwise the calculated column will return \"Not in Top 10\". In the visual, replace Sales Profit with the calculated column."
       ],
-      "correta": 0,
-      "explicacao": "Box 1: Total Sales Box 2: Occupation Box 3: City Total Sales is what we analyze,we explain by occupation and expand by city. You can use Expand By to add fields you want to use for setting the level of the analysis without looking for new influencers. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers"
+      "answer": 0,
+      "explanation": "Box 1: Total Sales Box 2: Occupation Box 3: City Total Sales is what we analyze,we explain by occupation and expand by city. You can use Expand By to add fields you want to use for setting the level of the analysis without looking for new influencers. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers"
     },
     {
-      "pergunta": "You have a table that contains the following three columns: - City - Total Sales - Occupation You need to create a key influencers visualization as shown in the exhibit. How should you configure the visualization?",
-      "opcoes": [
+      "question": "You have a table that contains the following three columns: - City - Total Sales - Occupation You need to create a key influencers visualization as shown in the exhibit. How should you configure the visualization?",
+      "options": [
         "Add a Top N filter to the visual.",
         "Configure the Sales Profit measure to use the RANKX function.",
         "Add a calculated column to the table that uses the TOPN function. In the visual, replace Sales Profit with the calculated column.",
         "Add a calculated column to the table that returns the city name if the city is in the top 10, otherwise the calculated column will return \"Not in Top 10\". In the visual, replace Sales Profit with the calculated column."
       ],
-      "correta": 0,
-      "explicacao": "Box 1: Total Sales Box 2: Occupation Box 3: City Total Sales is what we analyze,we explain by occupation and expand by city. You can use Expand By to add fields you want to use for setting the level of the analysis without looking for new influencers. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers"
+      "answer": 0,
+      "explanation": "Box 1: Total Sales Box 2: Occupation Box 3: City Total Sales is what we analyze,we explain by occupation and expand by city. You can use Expand By to add fields you want to use for setting the level of the analysis without looking for new influencers. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers"
     },
     {
-      "pergunta": "You have a table that contains the following three columns: - City - Total Sales - Occupation You need to create a key influencers visualization as shown in the exhibit. How should you configure the visualization?",
-      "opcoes": [
+      "question": "You have a table that contains the following three columns: - City - Total Sales - Occupation You need to create a key influencers visualization as shown in the exhibit. How should you configure the visualization?",
+      "options": [
         "Add a Top N filter to the visual.",
         "Configure the Sales Profit measure to use the RANKX function.",
         "Add a calculated column to the table that uses the TOPN function. In the visual, replace Sales Profit with the calculated column.",
         "Add a calculated column to the table that returns the city name if the city is in the top 10, otherwise the calculated column will return \"Not in Top 10\". In the visual, replace Sales Profit with the calculated column."
       ],
-      "correta": 0,
-      "explicacao": "Box 1: Total Sales Box 2: Occupation Box 3: City Total Sales is what we analyze,we explain by occupation and expand by city. You can use Expand By to add fields you want to use for setting the level of the analysis without looking for new influencers. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers"
+      "answer": 0,
+      "explanation": "Box 1: Total Sales Box 2: Occupation Box 3: City Total Sales is what we analyze,we explain by occupation and expand by city. You can use Expand By to add fields you want to use for setting the level of the analysis without looking for new influencers. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers"
     },
     {
-      "pergunta": "You have a table that contains the following three columns: - City - Total Sales - Occupation You need to create a key influencers visualization as shown in the exhibit. How should you configure the visualization?",
-      "opcoes": [
+      "question": "You have a table that contains the following three columns: - City - Total Sales - Occupation You need to create a key influencers visualization as shown in the exhibit. How should you configure the visualization?",
+      "options": [
         "Add a Top N filter to the visual.",
         "Configure the Sales Profit measure to use the RANKX function.",
         "Add a calculated column to the table that uses the TOPN function. In the visual, replace Sales Profit with the calculated column.",
         "Add a calculated column to the table that returns the city name if the city is in the top 10, otherwise the calculated column will return \"Not in Top 10\". In the visual, replace Sales Profit with the calculated column."
       ],
-      "correta": 0,
-      "explicacao": "Box 1: Total Sales Box 2: Occupation Box 3: City Total Sales is what we analyze,we explain by occupation and expand by city. You can use Expand By to add fields you want to use for setting the level of the analysis without looking for new influencers. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers"
+      "answer": 0,
+      "explanation": "Box 1: Total Sales Box 2: Occupation Box 3: City Total Sales is what we analyze,we explain by occupation and expand by city. You can use Expand By to add fields you want to use for setting the level of the analysis without looking for new influencers. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers"
     },
     {
-      "pergunta": "You have a table that contains the following three columns: - City - Total Sales - Occupation You need to create a key influencers visualization as shown in the exhibit. How should you configure the visualization?",
-      "opcoes": [
+      "question": "You have a table that contains the following three columns: - City - Total Sales - Occupation You need to create a key influencers visualization as shown in the exhibit. How should you configure the visualization?",
+      "options": [
         "Add a Top N filter to the visual.",
         "Configure the Sales Profit measure to use the RANKX function.",
         "Add a calculated column to the table that uses the TOPN function. In the visual, replace Sales Profit with the calculated column.",
         "Add a calculated column to the table that returns the city name if the city is in the top 10, otherwise the calculated column will return \"Not in Top 10\". In the visual, replace Sales Profit with the calculated column."
       ],
-      "correta": 0,
-      "explicacao": "Box 1: Total Sales Box 2: Occupation Box 3: City Total Sales is what we analyze,we explain by occupation and expand by city. You can use Expand By to add fields you want to use for setting the level of the analysis without looking for new influencers. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers"
+      "answer": 0,
+      "explanation": "Box 1: Total Sales Box 2: Occupation Box 3: City Total Sales is what we analyze,we explain by occupation and expand by city. You can use Expand By to add fields you want to use for setting the level of the analysis without looking for new influencers. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers"
     },
     {
-      "pergunta": "You have a table that contains the following three columns: - City - Total Sales - Occupation You need to create a key influencers visualization as shown in the exhibit. How should you configure the visualization?",
-      "opcoes": [
+      "question": "You have a table that contains the following three columns: - City - Total Sales - Occupation You need to create a key influencers visualization as shown in the exhibit. How should you configure the visualization?",
+      "options": [
         "Add a Top N filter to the visual.",
         "Configure the Sales Profit measure to use the RANKX function.",
         "Add a calculated column to the table that uses the TOPN function. In the visual, replace Sales Profit with the calculated column.",
         "Add a calculated column to the table that returns the city name if the city is in the top 10, otherwise the calculated column will return \"Not in Top 10\". In the visual, replace Sales Profit with the calculated column."
       ],
-      "correta": 0,
-      "explicacao": "Box 1: Total Sales Box 2: Occupation Box 3: City Total Sales is what we analyze,we explain by occupation and expand by city. You can use Expand By to add fields you want to use for setting the level of the analysis without looking for new influencers. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers"
+      "answer": 0,
+      "explanation": "Box 1: Total Sales Box 2: Occupation Box 3: City Total Sales is what we analyze,we explain by occupation and expand by city. You can use Expand By to add fields you want to use for setting the level of the analysis without looking for new influencers. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers"
     },
     {
-      "pergunta": "You have a table that contains the following three columns: - City - Total Sales - Occupation You need to create a key influencers visualization as shown in the exhibit. How should you configure the visualization?",
-      "opcoes": [
+      "question": "You have a table that contains the following three columns: - City - Total Sales - Occupation You need to create a key influencers visualization as shown in the exhibit. How should you configure the visualization?",
+      "options": [
         "Add a Top N filter to the visual.",
         "Configure the Sales Profit measure to use the RANKX function.",
         "Add a calculated column to the table that uses the TOPN function. In the visual, replace Sales Profit with the calculated column.",
         "Add a calculated column to the table that returns the city name if the city is in the top 10, otherwise the calculated column will return \"Not in Top 10\". In the visual, replace Sales Profit with the calculated column."
       ],
-      "correta": 0,
-      "explicacao": "Box 1: Total Sales Box 2: Occupation Box 3: City Total Sales is what we analyze,we explain by occupation and expand by city. You can use Expand By to add fields you want to use for setting the level of the analysis without looking for new influencers. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers"
+      "answer": 0,
+      "explanation": "Box 1: Total Sales Box 2: Occupation Box 3: City Total Sales is what we analyze,we explain by occupation and expand by city. You can use Expand By to add fields you want to use for setting the level of the analysis without looking for new influencers. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers"
     },
     {
-      "pergunta": "You have a table that contains the following three columns: - City - Total Sales - Occupation You need to create a key influencers visualization as shown in the exhibit. How should you configure the visualization?",
-      "opcoes": [
+      "question": "You have a table that contains the following three columns: - City - Total Sales - Occupation You need to create a key influencers visualization as shown in the exhibit. How should you configure the visualization?",
+      "options": [
         "Add a Top N filter to the visual.",
         "Configure the Sales Profit measure to use the RANKX function.",
         "Add a calculated column to the table that uses the TOPN function. In the visual, replace Sales Profit with the calculated column.",
         "Add a calculated column to the table that returns the city name if the city is in the top 10, otherwise the calculated column will return \"Not in Top 10\". In the visual, replace Sales Profit with the calculated column."
       ],
-      "correta": 0,
-      "explicacao": "Box 1: Total Sales Box 2: Occupation Box 3: City Total Sales is what we analyze,we explain by occupation and expand by city. You can use Expand By to add fields you want to use for setting the level of the analysis without looking for new influencers. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers"
+      "answer": 0,
+      "explanation": "Box 1: Total Sales Box 2: Occupation Box 3: City Total Sales is what we analyze,we explain by occupation and expand by city. You can use Expand By to add fields you want to use for setting the level of the analysis without looking for new influencers. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers"
     },
     {
-      "pergunta": "You have a table that contains the following three columns: - City - Total Sales - Occupation You need to create a key influencers visualization as shown in the exhibit. How should you configure the visualization?",
-      "opcoes": [
+      "question": "You have a table that contains the following three columns: - City - Total Sales - Occupation You need to create a key influencers visualization as shown in the exhibit. How should you configure the visualization?",
+      "options": [
         "Add a Top N filter to the visual.",
         "Configure the Sales Profit measure to use the RANKX function.",
         "Add a calculated column to the table that uses the TOPN function. In the visual, replace Sales Profit with the calculated column.",
         "Add a calculated column to the table that returns the city name if the city is in the top 10, otherwise the calculated column will return \"Not in Top 10\". In the visual, replace Sales Profit with the calculated column."
       ],
-      "correta": 0,
-      "explicacao": "Box 1: Total Sales Box 2: Occupation Box 3: City Total Sales is what we analyze,we explain by occupation and expand by city. You can use Expand By to add fields you want to use for setting the level of the analysis without looking for new influencers. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers"
+      "answer": 0,
+      "explanation": "Box 1: Total Sales Box 2: Occupation Box 3: City Total Sales is what we analyze,we explain by occupation and expand by city. You can use Expand By to add fields you want to use for setting the level of the analysis without looking for new influencers. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers"
     },
     {
-      "pergunta": "You have a table that contains the following three columns: - City - Total Sales - Occupation You need to create a key influencers visualization as shown in the exhibit. How should you configure the visualization?",
-      "opcoes": [
+      "question": "You have a table that contains the following three columns: - City - Total Sales - Occupation You need to create a key influencers visualization as shown in the exhibit. How should you configure the visualization?",
+      "options": [
         "Add a Top N filter to the visual.",
         "Configure the Sales Profit measure to use the RANKX function.",
         "Add a calculated column to the table that uses the TOPN function. In the visual, replace Sales Profit with the calculated column.",
         "Add a calculated column to the table that returns the city name if the city is in the top 10, otherwise the calculated column will return \"Not in Top 10\". In the visual, replace Sales Profit with the calculated column."
       ],
-      "correta": 0,
-      "explicacao": "Box 1: Total Sales Box 2: Occupation Box 3: City Total Sales is what we analyze,we explain by occupation and expand by city. You can use Expand By to add fields you want to use for setting the level of the analysis without looking for new influencers. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers"
+      "answer": 0,
+      "explanation": "Box 1: Total Sales Box 2: Occupation Box 3: City Total Sales is what we analyze,we explain by occupation and expand by city. You can use Expand By to add fields you want to use for setting the level of the analysis without looking for new influencers. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers"
     },
     {
-      "pergunta": "You use an R visual to produce a map of 500,000 customers. You include the values of CustomerID, Latitude, and Longitude in the fields sent to the visual. Each customer ID is unique. In powerbi.com, when users load the visual, they only see some of the customers. What is the cause of the issue?",
-      "opcoes": [
+      "question": "You use an R visual to produce a map of 500,000 customers. You include the values of CustomerID, Latitude, and Longitude in the fields sent to the visual. Each customer ID is unique. In powerbi.com, when users load the visual, they only see some of the customers. What is the cause of the issue?",
+      "options": [
         "The visual was built by using a different version of R.",
         "The data comes from a Microsoft SQL Server source.",
         "The data is deduplicated.",
         "Too many records were sent to the visual."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Too many records were sent to the visual. R visuals in the Power BI service have a few limitations including: - Data size limitations data used by the R visual for plotting is limited to 150,000 rows. If more than 150,000 rows are selected, only the top 150,000 rows are used and a message is displayed on the image. Additionally, the input data has a limit of 250 MB. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/service-r-visuals"
+      "answer": 3,
+      "explanation": "Resposta: Too many records were sent to the visual. R visuals in the Power BI service have a few limitations including: - Data size limitations data used by the R visual for plotting is limited to 150,000 rows. If more than 150,000 rows are selected, only the top 150,000 rows are used and a message is displayed on the image. Additionally, the input data has a limit of 250 MB. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/service-r-visuals"
     },
     {
-      "pergunta": "You use an R visual to produce a map of 500,000 customers. You include the values of CustomerID, Latitude, and Longitude in the fields sent to the visual. Each customer ID is unique. In powerbi.com, when users load the visual, they only see some of the customers. What is the cause of the issue?",
-      "opcoes": [
+      "question": "You use an R visual to produce a map of 500,000 customers. You include the values of CustomerID, Latitude, and Longitude in the fields sent to the visual. Each customer ID is unique. In powerbi.com, when users load the visual, they only see some of the customers. What is the cause of the issue?",
+      "options": [
         "The visual was built by using a different version of R.",
         "The data comes from a Microsoft SQL Server source.",
         "The data is deduplicated.",
         "Too many records were sent to the visual."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Too many records were sent to the visual. R visuals in the Power BI service have a few limitations including: - Data size limitations data used by the R visual for plotting is limited to 150,000 rows. If more than 150,000 rows are selected, only the top 150,000 rows are used and a message is displayed on the image. Additionally, the input data has a limit of 250 MB. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/service-r-visuals"
+      "answer": 3,
+      "explanation": "Resposta: Too many records were sent to the visual. R visuals in the Power BI service have a few limitations including: - Data size limitations data used by the R visual for plotting is limited to 150,000 rows. If more than 150,000 rows are selected, only the top 150,000 rows are used and a message is displayed on the image. Additionally, the input data has a limit of 250 MB. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/service-r-visuals"
     },
     {
-      "pergunta": "You use an R visual to produce a map of 500,000 customers. You include the values of CustomerID, Latitude, and Longitude in the fields sent to the visual. Each customer ID is unique. In powerbi.com, when users load the visual, they only see some of the customers. What is the cause of the issue?",
-      "opcoes": [
+      "question": "You use an R visual to produce a map of 500,000 customers. You include the values of CustomerID, Latitude, and Longitude in the fields sent to the visual. Each customer ID is unique. In powerbi.com, when users load the visual, they only see some of the customers. What is the cause of the issue?",
+      "options": [
         "The visual was built by using a different version of R.",
         "The data comes from a Microsoft SQL Server source.",
         "The data is deduplicated.",
         "Too many records were sent to the visual."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Too many records were sent to the visual. R visuals in the Power BI service have a few limitations including: - Data size limitations data used by the R visual for plotting is limited to 150,000 rows. If more than 150,000 rows are selected, only the top 150,000 rows are used and a message is displayed on the image. Additionally, the input data has a limit of 250 MB. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/service-r-visuals"
+      "answer": 3,
+      "explanation": "Resposta: Too many records were sent to the visual. R visuals in the Power BI service have a few limitations including: - Data size limitations data used by the R visual for plotting is limited to 150,000 rows. If more than 150,000 rows are selected, only the top 150,000 rows are used and a message is displayed on the image. Additionally, the input data has a limit of 250 MB. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/service-r-visuals"
     },
     {
-      "pergunta": "You use an R visual to produce a map of 500,000 customers. You include the values of CustomerID, Latitude, and Longitude in the fields sent to the visual. Each customer ID is unique. In powerbi.com, when users load the visual, they only see some of the customers. What is the cause of the issue?",
-      "opcoes": [
+      "question": "You use an R visual to produce a map of 500,000 customers. You include the values of CustomerID, Latitude, and Longitude in the fields sent to the visual. Each customer ID is unique. In powerbi.com, when users load the visual, they only see some of the customers. What is the cause of the issue?",
+      "options": [
         "The visual was built by using a different version of R.",
         "The data comes from a Microsoft SQL Server source.",
         "The data is deduplicated.",
         "Too many records were sent to the visual."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Too many records were sent to the visual. R visuals in the Power BI service have a few limitations including: - Data size limitations data used by the R visual for plotting is limited to 150,000 rows. If more than 150,000 rows are selected, only the top 150,000 rows are used and a message is displayed on the image. Additionally, the input data has a limit of 250 MB. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/service-r-visuals"
+      "answer": 3,
+      "explanation": "Resposta: Too many records were sent to the visual. R visuals in the Power BI service have a few limitations including: - Data size limitations data used by the R visual for plotting is limited to 150,000 rows. If more than 150,000 rows are selected, only the top 150,000 rows are used and a message is displayed on the image. Additionally, the input data has a limit of 250 MB. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/service-r-visuals"
     },
     {
-      "pergunta": "You use an R visual to produce a map of 500,000 customers. You include the values of CustomerID, Latitude, and Longitude in the fields sent to the visual. Each customer ID is unique. In powerbi.com, when users load the visual, they only see some of the customers. What is the cause of the issue?",
-      "opcoes": [
+      "question": "You use an R visual to produce a map of 500,000 customers. You include the values of CustomerID, Latitude, and Longitude in the fields sent to the visual. Each customer ID is unique. In powerbi.com, when users load the visual, they only see some of the customers. What is the cause of the issue?",
+      "options": [
         "The visual was built by using a different version of R.",
         "The data comes from a Microsoft SQL Server source.",
         "The data is deduplicated.",
         "Too many records were sent to the visual."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Too many records were sent to the visual. R visuals in the Power BI service have a few limitations including: - Data size limitations data used by the R visual for plotting is limited to 150,000 rows. If more than 150,000 rows are selected, only the top 150,000 rows are used and a message is displayed on the image. Additionally, the input data has a limit of 250 MB. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/service-r-visuals"
+      "answer": 3,
+      "explanation": "Resposta: Too many records were sent to the visual. R visuals in the Power BI service have a few limitations including: - Data size limitations data used by the R visual for plotting is limited to 150,000 rows. If more than 150,000 rows are selected, only the top 150,000 rows are used and a message is displayed on the image. Additionally, the input data has a limit of 250 MB. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/service-r-visuals"
     },
     {
-      "pergunta": "You use an R visual to produce a map of 500,000 customers. You include the values of CustomerID, Latitude, and Longitude in the fields sent to the visual. Each customer ID is unique. In powerbi.com, when users load the visual, they only see some of the customers. What is the cause of the issue?",
-      "opcoes": [
+      "question": "You use an R visual to produce a map of 500,000 customers. You include the values of CustomerID, Latitude, and Longitude in the fields sent to the visual. Each customer ID is unique. In powerbi.com, when users load the visual, they only see some of the customers. What is the cause of the issue?",
+      "options": [
         "The visual was built by using a different version of R.",
         "The data comes from a Microsoft SQL Server source.",
         "The data is deduplicated.",
         "Too many records were sent to the visual."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Too many records were sent to the visual. R visuals in the Power BI service have a few limitations including: - Data size limitations data used by the R visual for plotting is limited to 150,000 rows. If more than 150,000 rows are selected, only the top 150,000 rows are used and a message is displayed on the image. Additionally, the input data has a limit of 250 MB. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/service-r-visuals"
+      "answer": 3,
+      "explanation": "Resposta: Too many records were sent to the visual. R visuals in the Power BI service have a few limitations including: - Data size limitations data used by the R visual for plotting is limited to 150,000 rows. If more than 150,000 rows are selected, only the top 150,000 rows are used and a message is displayed on the image. Additionally, the input data has a limit of 250 MB. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/service-r-visuals"
     },
     {
-      "pergunta": "You use an R visual to produce a map of 500,000 customers. You include the values of CustomerID, Latitude, and Longitude in the fields sent to the visual. Each customer ID is unique. In powerbi.com, when users load the visual, they only see some of the customers. What is the cause of the issue?",
-      "opcoes": [
+      "question": "You use an R visual to produce a map of 500,000 customers. You include the values of CustomerID, Latitude, and Longitude in the fields sent to the visual. Each customer ID is unique. In powerbi.com, when users load the visual, they only see some of the customers. What is the cause of the issue?",
+      "options": [
         "The visual was built by using a different version of R.",
         "The data comes from a Microsoft SQL Server source.",
         "The data is deduplicated.",
         "Too many records were sent to the visual."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Too many records were sent to the visual. R visuals in the Power BI service have a few limitations including: - Data size limitations data used by the R visual for plotting is limited to 150,000 rows. If more than 150,000 rows are selected, only the top 150,000 rows are used and a message is displayed on the image. Additionally, the input data has a limit of 250 MB. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/service-r-visuals"
+      "answer": 3,
+      "explanation": "Resposta: Too many records were sent to the visual. R visuals in the Power BI service have a few limitations including: - Data size limitations data used by the R visual for plotting is limited to 150,000 rows. If more than 150,000 rows are selected, only the top 150,000 rows are used and a message is displayed on the image. Additionally, the input data has a limit of 250 MB. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/service-r-visuals"
     },
     {
-      "pergunta": "You use an R visual to produce a map of 500,000 customers. You include the values of CustomerID, Latitude, and Longitude in the fields sent to the visual. Each customer ID is unique. In powerbi.com, when users load the visual, they only see some of the customers. What is the cause of the issue?",
-      "opcoes": [
+      "question": "You use an R visual to produce a map of 500,000 customers. You include the values of CustomerID, Latitude, and Longitude in the fields sent to the visual. Each customer ID is unique. In powerbi.com, when users load the visual, they only see some of the customers. What is the cause of the issue?",
+      "options": [
         "The visual was built by using a different version of R.",
         "The data comes from a Microsoft SQL Server source.",
         "The data is deduplicated.",
         "Too many records were sent to the visual."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Too many records were sent to the visual. R visuals in the Power BI service have a few limitations including: - Data size limitations data used by the R visual for plotting is limited to 150,000 rows. If more than 150,000 rows are selected, only the top 150,000 rows are used and a message is displayed on the image. Additionally, the input data has a limit of 250 MB. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/service-r-visuals"
+      "answer": 3,
+      "explanation": "Resposta: Too many records were sent to the visual. R visuals in the Power BI service have a few limitations including: - Data size limitations data used by the R visual for plotting is limited to 150,000 rows. If more than 150,000 rows are selected, only the top 150,000 rows are used and a message is displayed on the image. Additionally, the input data has a limit of 250 MB. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/service-r-visuals"
     },
     {
-      "pergunta": "You use an R visual to produce a map of 500,000 customers. You include the values of CustomerID, Latitude, and Longitude in the fields sent to the visual. Each customer ID is unique. In powerbi.com, when users load the visual, they only see some of the customers. What is the cause of the issue?",
-      "opcoes": [
+      "question": "You use an R visual to produce a map of 500,000 customers. You include the values of CustomerID, Latitude, and Longitude in the fields sent to the visual. Each customer ID is unique. In powerbi.com, when users load the visual, they only see some of the customers. What is the cause of the issue?",
+      "options": [
         "The visual was built by using a different version of R.",
         "The data comes from a Microsoft SQL Server source.",
         "The data is deduplicated.",
         "Too many records were sent to the visual."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Too many records were sent to the visual. R visuals in the Power BI service have a few limitations including: - Data size limitations data used by the R visual for plotting is limited to 150,000 rows. If more than 150,000 rows are selected, only the top 150,000 rows are used and a message is displayed on the image. Additionally, the input data has a limit of 250 MB. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/service-r-visuals"
+      "answer": 3,
+      "explanation": "Resposta: Too many records were sent to the visual. R visuals in the Power BI service have a few limitations including: - Data size limitations data used by the R visual for plotting is limited to 150,000 rows. If more than 150,000 rows are selected, only the top 150,000 rows are used and a message is displayed on the image. Additionally, the input data has a limit of 250 MB. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/service-r-visuals"
     },
     {
-      "pergunta": "You use an R visual to produce a map of 500,000 customers. You include the values of CustomerID, Latitude, and Longitude in the fields sent to the visual. Each customer ID is unique. In powerbi.com, when users load the visual, they only see some of the customers. What is the cause of the issue?",
-      "opcoes": [
+      "question": "You use an R visual to produce a map of 500,000 customers. You include the values of CustomerID, Latitude, and Longitude in the fields sent to the visual. Each customer ID is unique. In powerbi.com, when users load the visual, they only see some of the customers. What is the cause of the issue?",
+      "options": [
         "The visual was built by using a different version of R.",
         "The data comes from a Microsoft SQL Server source.",
         "The data is deduplicated.",
         "Too many records were sent to the visual."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Too many records were sent to the visual. R visuals in the Power BI service have a few limitations including: - Data size limitations data used by the R visual for plotting is limited to 150,000 rows. If more than 150,000 rows are selected, only the top 150,000 rows are used and a message is displayed on the image. Additionally, the input data has a limit of 250 MB. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/service-r-visuals"
+      "answer": 3,
+      "explanation": "Resposta: Too many records were sent to the visual. R visuals in the Power BI service have a few limitations including: - Data size limitations data used by the R visual for plotting is limited to 150,000 rows. If more than 150,000 rows are selected, only the top 150,000 rows are used and a message is displayed on the image. Additionally, the input data has a limit of 250 MB. Reference: https://docs.microsoft.com/en-us/power-bi/visuals/service-r-visuals"
     },
     {
-      "pergunta": "You need to create a dashboard in the Power BI service to display data from a PubNub source. What should you do?",
-      "opcoes": [
+      "question": "You need to create a dashboard in the Power BI service to display data from a PubNub source. What should you do?",
+      "options": [
         "Add a Microsoft SQL Server Analysis Services (SSAS) data source that uses Connect live and create a report. Pin the report to a dashboard.",
         "Create an app workspace and publish the workspace to a dashboard.",
         "Add a Microsoft Azure SQL database data source that uses DirectQuery and create a report. Pin the report to a dashboard.",
         "Add a custom streaming data tile to a dashboard."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Add a custom streaming data tile to a dashboard. For pubnub data, we can visualize it using data tile on dashboard and configure pubnub as data source. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-real-time-streaming#streaming-dataset"
+      "answer": 3,
+      "explanation": "Resposta: Add a custom streaming data tile to a dashboard. For pubnub data, we can visualize it using data tile on dashboard and configure pubnub as data source. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-real-time-streaming#streaming-dataset"
     },
     {
-      "pergunta": "You need to create a dashboard in the Power BI service to display data from a PubNub source. What should you do?",
-      "opcoes": [
+      "question": "You need to create a dashboard in the Power BI service to display data from a PubNub source. What should you do?",
+      "options": [
         "Add a Microsoft SQL Server Analysis Services (SSAS) data source that uses Connect live and create a report. Pin the report to a dashboard.",
         "Create an app workspace and publish the workspace to a dashboard.",
         "Add a Microsoft Azure SQL database data source that uses DirectQuery and create a report. Pin the report to a dashboard.",
         "Add a custom streaming data tile to a dashboard."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Add a custom streaming data tile to a dashboard. For pubnub data, we can visualize it using data tile on dashboard and configure pubnub as data source. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-real-time-streaming#streaming-dataset"
+      "answer": 3,
+      "explanation": "Resposta: Add a custom streaming data tile to a dashboard. For pubnub data, we can visualize it using data tile on dashboard and configure pubnub as data source. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-real-time-streaming#streaming-dataset"
     },
     {
-      "pergunta": "You need to create a dashboard in the Power BI service to display data from a PubNub source. What should you do?",
-      "opcoes": [
+      "question": "You need to create a dashboard in the Power BI service to display data from a PubNub source. What should you do?",
+      "options": [
         "Add a Microsoft SQL Server Analysis Services (SSAS) data source that uses Connect live and create a report. Pin the report to a dashboard.",
         "Create an app workspace and publish the workspace to a dashboard.",
         "Add a Microsoft Azure SQL database data source that uses DirectQuery and create a report. Pin the report to a dashboard.",
         "Add a custom streaming data tile to a dashboard."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Add a custom streaming data tile to a dashboard. For pubnub data, we can visualize it using data tile on dashboard and configure pubnub as data source. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-real-time-streaming#streaming-dataset"
+      "answer": 3,
+      "explanation": "Resposta: Add a custom streaming data tile to a dashboard. For pubnub data, we can visualize it using data tile on dashboard and configure pubnub as data source. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-real-time-streaming#streaming-dataset"
     },
     {
-      "pergunta": "You need to create a dashboard in the Power BI service to display data from a PubNub source. What should you do?",
-      "opcoes": [
+      "question": "You need to create a dashboard in the Power BI service to display data from a PubNub source. What should you do?",
+      "options": [
         "Add a Microsoft SQL Server Analysis Services (SSAS) data source that uses Connect live and create a report. Pin the report to a dashboard.",
         "Create an app workspace and publish the workspace to a dashboard.",
         "Add a Microsoft Azure SQL database data source that uses DirectQuery and create a report. Pin the report to a dashboard.",
         "Add a custom streaming data tile to a dashboard."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Add a custom streaming data tile to a dashboard. For pubnub data, we can visualize it using data tile on dashboard and configure pubnub as data source. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-real-time-streaming#streaming-dataset"
+      "answer": 3,
+      "explanation": "Resposta: Add a custom streaming data tile to a dashboard. For pubnub data, we can visualize it using data tile on dashboard and configure pubnub as data source. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-real-time-streaming#streaming-dataset"
     },
     {
-      "pergunta": "You need to create a dashboard in the Power BI service to display data from a PubNub source. What should you do?",
-      "opcoes": [
+      "question": "You need to create a dashboard in the Power BI service to display data from a PubNub source. What should you do?",
+      "options": [
         "Add a Microsoft SQL Server Analysis Services (SSAS) data source that uses Connect live and create a report. Pin the report to a dashboard.",
         "Create an app workspace and publish the workspace to a dashboard.",
         "Add a Microsoft Azure SQL database data source that uses DirectQuery and create a report. Pin the report to a dashboard.",
         "Add a custom streaming data tile to a dashboard."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Add a custom streaming data tile to a dashboard. For pubnub data, we can visualize it using data tile on dashboard and configure pubnub as data source. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-real-time-streaming#streaming-dataset"
+      "answer": 3,
+      "explanation": "Resposta: Add a custom streaming data tile to a dashboard. For pubnub data, we can visualize it using data tile on dashboard and configure pubnub as data source. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-real-time-streaming#streaming-dataset"
     },
     {
-      "pergunta": "You need to create a dashboard in the Power BI service to display data from a PubNub source. What should you do?",
-      "opcoes": [
+      "question": "You need to create a dashboard in the Power BI service to display data from a PubNub source. What should you do?",
+      "options": [
         "Add a Microsoft SQL Server Analysis Services (SSAS) data source that uses Connect live and create a report. Pin the report to a dashboard.",
         "Create an app workspace and publish the workspace to a dashboard.",
         "Add a Microsoft Azure SQL database data source that uses DirectQuery and create a report. Pin the report to a dashboard.",
         "Add a custom streaming data tile to a dashboard."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Add a custom streaming data tile to a dashboard. For pubnub data, we can visualize it using data tile on dashboard and configure pubnub as data source. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-real-time-streaming#streaming-dataset"
+      "answer": 3,
+      "explanation": "Resposta: Add a custom streaming data tile to a dashboard. For pubnub data, we can visualize it using data tile on dashboard and configure pubnub as data source. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-real-time-streaming#streaming-dataset"
     },
     {
-      "pergunta": "You need to create a dashboard in the Power BI service to display data from a PubNub source. What should you do?",
-      "opcoes": [
+      "question": "You need to create a dashboard in the Power BI service to display data from a PubNub source. What should you do?",
+      "options": [
         "Add a Microsoft SQL Server Analysis Services (SSAS) data source that uses Connect live and create a report. Pin the report to a dashboard.",
         "Create an app workspace and publish the workspace to a dashboard.",
         "Add a Microsoft Azure SQL database data source that uses DirectQuery and create a report. Pin the report to a dashboard.",
         "Add a custom streaming data tile to a dashboard."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Add a custom streaming data tile to a dashboard. For pubnub data, we can visualize it using data tile on dashboard and configure pubnub as data source. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-real-time-streaming#streaming-dataset"
+      "answer": 3,
+      "explanation": "Resposta: Add a custom streaming data tile to a dashboard. For pubnub data, we can visualize it using data tile on dashboard and configure pubnub as data source. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-real-time-streaming#streaming-dataset"
     },
     {
-      "pergunta": "You need to create a dashboard in the Power BI service to display data from a PubNub source. What should you do?",
-      "opcoes": [
+      "question": "You need to create a dashboard in the Power BI service to display data from a PubNub source. What should you do?",
+      "options": [
         "Add a Microsoft SQL Server Analysis Services (SSAS) data source that uses Connect live and create a report. Pin the report to a dashboard.",
         "Create an app workspace and publish the workspace to a dashboard.",
         "Add a Microsoft Azure SQL database data source that uses DirectQuery and create a report. Pin the report to a dashboard.",
         "Add a custom streaming data tile to a dashboard."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Add a custom streaming data tile to a dashboard. For pubnub data, we can visualize it using data tile on dashboard and configure pubnub as data source. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-real-time-streaming#streaming-dataset"
+      "answer": 3,
+      "explanation": "Resposta: Add a custom streaming data tile to a dashboard. For pubnub data, we can visualize it using data tile on dashboard and configure pubnub as data source. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-real-time-streaming#streaming-dataset"
     },
     {
-      "pergunta": "You need to create a dashboard in the Power BI service to display data from a PubNub source. What should you do?",
-      "opcoes": [
+      "question": "You need to create a dashboard in the Power BI service to display data from a PubNub source. What should you do?",
+      "options": [
         "Add a Microsoft SQL Server Analysis Services (SSAS) data source that uses Connect live and create a report. Pin the report to a dashboard.",
         "Create an app workspace and publish the workspace to a dashboard.",
         "Add a Microsoft Azure SQL database data source that uses DirectQuery and create a report. Pin the report to a dashboard.",
         "Add a custom streaming data tile to a dashboard."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Add a custom streaming data tile to a dashboard. For pubnub data, we can visualize it using data tile on dashboard and configure pubnub as data source. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-real-time-streaming#streaming-dataset"
+      "answer": 3,
+      "explanation": "Resposta: Add a custom streaming data tile to a dashboard. For pubnub data, we can visualize it using data tile on dashboard and configure pubnub as data source. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-real-time-streaming#streaming-dataset"
     },
     {
-      "pergunta": "You need to create a dashboard in the Power BI service to display data from a PubNub source. What should you do?",
-      "opcoes": [
+      "question": "You need to create a dashboard in the Power BI service to display data from a PubNub source. What should you do?",
+      "options": [
         "Add a Microsoft SQL Server Analysis Services (SSAS) data source that uses Connect live and create a report. Pin the report to a dashboard.",
         "Create an app workspace and publish the workspace to a dashboard.",
         "Add a Microsoft Azure SQL database data source that uses DirectQuery and create a report. Pin the report to a dashboard.",
         "Add a custom streaming data tile to a dashboard."
       ],
-      "correta": 3,
-      "explicacao": "Resposta: Add a custom streaming data tile to a dashboard. For pubnub data, we can visualize it using data tile on dashboard and configure pubnub as data source. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-real-time-streaming#streaming-dataset"
+      "answer": 3,
+      "explanation": "Resposta: Add a custom streaming data tile to a dashboard. For pubnub data, we can visualize it using data tile on dashboard and configure pubnub as data source. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-real-time-streaming#streaming-dataset"
     },
     {
-      "pergunta": "What allows users to jump to different report pages while simultaneously filtering based on the specific item selected?",
-      "opcoes": [
+      "question": "What allows users to jump to different report pages while simultaneously filtering based on the specific item selected?",
+      "options": [
         "Drill through filters",
         "Tooltips",
         "R visuals",
         "Page filters"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Drill through filters Drill through filters allow users to jump to different report pages (like bookmarks), while simultaneously filtering based on the specific item selected"
+      "answer": 0,
+      "explanation": "Resposta: Drill through filters Drill through filters allow users to jump to different report pages (like bookmarks), while simultaneously filtering based on the specific item selected"
     },
     {
-      "pergunta": "What allows users to jump to different report pages while simultaneously filtering based on the specific item selected?",
-      "opcoes": [
+      "question": "What allows users to jump to different report pages while simultaneously filtering based on the specific item selected?",
+      "options": [
         "Drill through filters",
         "Tooltips",
         "R visuals",
         "Page filters"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Drill through filters Drill through filters allow users to jump to different report pages (like bookmarks), while simultaneously filtering based on the specific item selected"
+      "answer": 0,
+      "explanation": "Resposta: Drill through filters Drill through filters allow users to jump to different report pages (like bookmarks), while simultaneously filtering based on the specific item selected"
     },
     {
-      "pergunta": "What allows users to jump to different report pages while simultaneously filtering based on the specific item selected?",
-      "opcoes": [
+      "question": "What allows users to jump to different report pages while simultaneously filtering based on the specific item selected?",
+      "options": [
         "Drill through filters",
         "Tooltips",
         "R visuals",
         "Page filters"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Drill through filters Drill through filters allow users to jump to different report pages (like bookmarks), while simultaneously filtering based on the specific item selected"
+      "answer": 0,
+      "explanation": "Resposta: Drill through filters Drill through filters allow users to jump to different report pages (like bookmarks), while simultaneously filtering based on the specific item selected"
     },
     {
-      "pergunta": "What allows users to jump to different report pages while simultaneously filtering based on the specific item selected?",
-      "opcoes": [
+      "question": "What allows users to jump to different report pages while simultaneously filtering based on the specific item selected?",
+      "options": [
         "Drill through filters",
         "Tooltips",
         "R visuals",
         "Page filters"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Drill through filters Drill through filters allow users to jump to different report pages (like bookmarks), while simultaneously filtering based on the specific item selected"
+      "answer": 0,
+      "explanation": "Resposta: Drill through filters Drill through filters allow users to jump to different report pages (like bookmarks), while simultaneously filtering based on the specific item selected"
     },
     {
-      "pergunta": "What allows users to jump to different report pages while simultaneously filtering based on the specific item selected?",
-      "opcoes": [
+      "question": "What allows users to jump to different report pages while simultaneously filtering based on the specific item selected?",
+      "options": [
         "Drill through filters",
         "Tooltips",
         "R visuals",
         "Page filters"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Drill through filters Drill through filters allow users to jump to different report pages (like bookmarks), while simultaneously filtering based on the specific item selected"
+      "answer": 0,
+      "explanation": "Resposta: Drill through filters Drill through filters allow users to jump to different report pages (like bookmarks), while simultaneously filtering based on the specific item selected"
     },
     {
-      "pergunta": "What allows users to jump to different report pages while simultaneously filtering based on the specific item selected?",
-      "opcoes": [
+      "question": "What allows users to jump to different report pages while simultaneously filtering based on the specific item selected?",
+      "options": [
         "Drill through filters",
         "Tooltips",
         "R visuals",
         "Page filters"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Drill through filters Drill through filters allow users to jump to different report pages (like bookmarks), while simultaneously filtering based on the specific item selected"
+      "answer": 0,
+      "explanation": "Resposta: Drill through filters Drill through filters allow users to jump to different report pages (like bookmarks), while simultaneously filtering based on the specific item selected"
     },
     {
-      "pergunta": "What allows users to jump to different report pages while simultaneously filtering based on the specific item selected?",
-      "opcoes": [
+      "question": "What allows users to jump to different report pages while simultaneously filtering based on the specific item selected?",
+      "options": [
         "Drill through filters",
         "Tooltips",
         "R visuals",
         "Page filters"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Drill through filters Drill through filters allow users to jump to different report pages (like bookmarks), while simultaneously filtering based on the specific item selected"
+      "answer": 0,
+      "explanation": "Resposta: Drill through filters Drill through filters allow users to jump to different report pages (like bookmarks), while simultaneously filtering based on the specific item selected"
     },
     {
-      "pergunta": "What allows users to jump to different report pages while simultaneously filtering based on the specific item selected?",
-      "opcoes": [
+      "question": "What allows users to jump to different report pages while simultaneously filtering based on the specific item selected?",
+      "options": [
         "Drill through filters",
         "Tooltips",
         "R visuals",
         "Page filters"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Drill through filters Drill through filters allow users to jump to different report pages (like bookmarks), while simultaneously filtering based on the specific item selected"
+      "answer": 0,
+      "explanation": "Resposta: Drill through filters Drill through filters allow users to jump to different report pages (like bookmarks), while simultaneously filtering based on the specific item selected"
     },
     {
-      "pergunta": "What allows users to jump to different report pages while simultaneously filtering based on the specific item selected?",
-      "opcoes": [
+      "question": "What allows users to jump to different report pages while simultaneously filtering based on the specific item selected?",
+      "options": [
         "Drill through filters",
         "Tooltips",
         "R visuals",
         "Page filters"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Drill through filters Drill through filters allow users to jump to different report pages (like bookmarks), while simultaneously filtering based on the specific item selected"
+      "answer": 0,
+      "explanation": "Resposta: Drill through filters Drill through filters allow users to jump to different report pages (like bookmarks), while simultaneously filtering based on the specific item selected"
     },
     {
-      "pergunta": "What allows users to jump to different report pages while simultaneously filtering based on the specific item selected?",
-      "opcoes": [
+      "question": "What allows users to jump to different report pages while simultaneously filtering based on the specific item selected?",
+      "options": [
         "Drill through filters",
         "Tooltips",
         "R visuals",
         "Page filters"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Drill through filters Drill through filters allow users to jump to different report pages (like bookmarks), while simultaneously filtering based on the specific item selected"
+      "answer": 0,
+      "explanation": "Resposta: Drill through filters Drill through filters allow users to jump to different report pages (like bookmarks), while simultaneously filtering based on the specific item selected"
     },
     {
-      "pergunta": "Can a dashboard be created from multiple reports?",
-      "opcoes": [
+      "question": "Can a dashboard be created from multiple reports?",
+      "options": [
         "No, dashboards can only be created from a single dataset or report.",
         "Yes, dashboards can be created from multiple datasets or reports."
       ],
-      "correta": 1,
-      "explicacao": "Resposta: Yes, dashboards can be created from multiple datasets or reports."
+      "answer": 1,
+      "explanation": "Resposta: Yes, dashboards can be created from multiple datasets or reports."
     },
     {
-      "pergunta": "Can a dashboard be created from multiple reports?",
-      "opcoes": [
+      "question": "Can a dashboard be created from multiple reports?",
+      "options": [
         "No, dashboards can only be created from a single dataset or report.",
         "Yes, dashboards can be created from multiple datasets or reports."
       ],
-      "correta": 1,
-      "explicacao": "Resposta: Yes, dashboards can be created from multiple datasets or reports."
+      "answer": 1,
+      "explanation": "Resposta: Yes, dashboards can be created from multiple datasets or reports."
     },
     {
-      "pergunta": "Can a dashboard be created from multiple reports?",
-      "opcoes": [
+      "question": "Can a dashboard be created from multiple reports?",
+      "options": [
         "No, dashboards can only be created from a single dataset or report.",
         "Yes, dashboards can be created from multiple datasets or reports."
       ],
-      "correta": 1,
-      "explicacao": "Resposta: Yes, dashboards can be created from multiple datasets or reports."
+      "answer": 1,
+      "explanation": "Resposta: Yes, dashboards can be created from multiple datasets or reports."
     },
     {
-      "pergunta": "Can a dashboard be created from multiple reports?",
-      "opcoes": [
+      "question": "Can a dashboard be created from multiple reports?",
+      "options": [
         "No, dashboards can only be created from a single dataset or report.",
         "Yes, dashboards can be created from multiple datasets or reports."
       ],
-      "correta": 1,
-      "explicacao": "Resposta: Yes, dashboards can be created from multiple datasets or reports."
+      "answer": 1,
+      "explanation": "Resposta: Yes, dashboards can be created from multiple datasets or reports."
     },
     {
-      "pergunta": "Can a dashboard be created from multiple reports?",
-      "opcoes": [
+      "question": "Can a dashboard be created from multiple reports?",
+      "options": [
         "No, dashboards can only be created from a single dataset or report.",
         "Yes, dashboards can be created from multiple datasets or reports."
       ],
-      "correta": 1,
-      "explicacao": "Resposta: Yes, dashboards can be created from multiple datasets or reports."
+      "answer": 1,
+      "explanation": "Resposta: Yes, dashboards can be created from multiple datasets or reports."
     },
     {
-      "pergunta": "Can a dashboard be created from multiple reports?",
-      "opcoes": [
+      "question": "Can a dashboard be created from multiple reports?",
+      "options": [
         "No, dashboards can only be created from a single dataset or report.",
         "Yes, dashboards can be created from multiple datasets or reports."
       ],
-      "correta": 1,
-      "explicacao": "Resposta: Yes, dashboards can be created from multiple datasets or reports."
+      "answer": 1,
+      "explanation": "Resposta: Yes, dashboards can be created from multiple datasets or reports."
     },
     {
-      "pergunta": "Can a dashboard be created from multiple reports?",
-      "opcoes": [
+      "question": "Can a dashboard be created from multiple reports?",
+      "options": [
         "No, dashboards can only be created from a single dataset or report.",
         "Yes, dashboards can be created from multiple datasets or reports."
       ],
-      "correta": 1,
-      "explicacao": "Resposta: Yes, dashboards can be created from multiple datasets or reports."
+      "answer": 1,
+      "explanation": "Resposta: Yes, dashboards can be created from multiple datasets or reports."
     },
     {
-      "pergunta": "Can a dashboard be created from multiple reports?",
-      "opcoes": [
+      "question": "Can a dashboard be created from multiple reports?",
+      "options": [
         "No, dashboards can only be created from a single dataset or report.",
         "Yes, dashboards can be created from multiple datasets or reports."
       ],
-      "correta": 1,
-      "explicacao": "Resposta: Yes, dashboards can be created from multiple datasets or reports."
+      "answer": 1,
+      "explanation": "Resposta: Yes, dashboards can be created from multiple datasets or reports."
     },
     {
-      "pergunta": "Can a dashboard be created from multiple reports?",
-      "opcoes": [
+      "question": "Can a dashboard be created from multiple reports?",
+      "options": [
         "No, dashboards can only be created from a single dataset or report.",
         "Yes, dashboards can be created from multiple datasets or reports."
       ],
-      "correta": 1,
-      "explicacao": "Resposta: Yes, dashboards can be created from multiple datasets or reports."
+      "answer": 1,
+      "explanation": "Resposta: Yes, dashboards can be created from multiple datasets or reports."
     },
     {
-      "pergunta": "Can a dashboard be created from multiple reports?",
-      "opcoes": [
+      "question": "Can a dashboard be created from multiple reports?",
+      "options": [
         "No, dashboards can only be created from a single dataset or report.",
         "Yes, dashboards can be created from multiple datasets or reports."
       ],
-      "correta": 1,
-      "explicacao": "Resposta: Yes, dashboards can be created from multiple datasets or reports."
+      "answer": 1,
+      "explanation": "Resposta: Yes, dashboards can be created from multiple datasets or reports."
     },
     {
-      "pergunta": "You have a report that includes a card visualization. You need to apply the following conditional formatting to the card while minimizing design effort: - For values that are greater than or equal to 100, the font of the data label must be dark red. - For values that are less than 100, the font of the data label must be dark gray. Which type of format should you use?",
-      "opcoes": [
+      "question": "You have a report that includes a card visualization. You need to apply the following conditional formatting to the card while minimizing design effort: - For values that are greater than or equal to 100, the font of the data label must be dark red. - For values that are less than 100, the font of the data label must be dark gray. Which type of format should you use?",
+      "options": [
         "Color scale",
         "Rules",
         "Field value"
       ],
-      "correta": 1,
-      "explicacao": "Finding the conditional formatting in the card visual is a bit tricky. There is no separate option for that. You need to go to the Format tab of the visual, and then expand the Data Label. The right beside the Data Label's colour you need to hover your mouse, and you will find a three dots icon appearing, which if you click on it, you will see Conditional Formatting. Now in the Conditional Formatting tab, you can apply it in different methods. for example, you can choose Rules, and then The Rules mode will give you the ability to put custom roles as below; Reference: https://radacad.com/enhance-the-card-visual-in-power-bi-with-conditional-formatting"
+      "answer": 1,
+      "explanation": "Finding the conditional formatting in the card visual is a bit tricky. There is no separate option for that. You need to go to the Format tab of the visual, and then expand the Data Label. The right beside the Data Label's colour you need to hover your mouse, and you will find a three dots icon appearing, which if you click on it, you will see Conditional Formatting. Now in the Conditional Formatting tab, you can apply it in different methods. for example, you can choose Rules, and then The Rules mode will give you the ability to put custom roles as below; Reference: https://radacad.com/enhance-the-card-visual-in-power-bi-with-conditional-formatting"
     },
     {
-      "pergunta": "You have a report that includes a card visualization. You need to apply the following conditional formatting to the card while minimizing design effort: - For values that are greater than or equal to 100, the font of the data label must be dark red. - For values that are less than 100, the font of the data label must be dark gray. Which type of format should you use?",
-      "opcoes": [
+      "question": "You have a report that includes a card visualization. You need to apply the following conditional formatting to the card while minimizing design effort: - For values that are greater than or equal to 100, the font of the data label must be dark red. - For values that are less than 100, the font of the data label must be dark gray. Which type of format should you use?",
+      "options": [
         "Color scale",
         "Rules",
         "Field value"
       ],
-      "correta": 1,
-      "explicacao": "Finding the conditional formatting in the card visual is a bit tricky. There is no separate option for that. You need to go to the Format tab of the visual, and then expand the Data Label. The right beside the Data Label's colour you need to hover your mouse, and you will find a three dots icon appearing, which if you click on it, you will see Conditional Formatting. Now in the Conditional Formatting tab, you can apply it in different methods. for example, you can choose Rules, and then The Rules mode will give you the ability to put custom roles as below; Reference: https://radacad.com/enhance-the-card-visual-in-power-bi-with-conditional-formatting"
+      "answer": 1,
+      "explanation": "Finding the conditional formatting in the card visual is a bit tricky. There is no separate option for that. You need to go to the Format tab of the visual, and then expand the Data Label. The right beside the Data Label's colour you need to hover your mouse, and you will find a three dots icon appearing, which if you click on it, you will see Conditional Formatting. Now in the Conditional Formatting tab, you can apply it in different methods. for example, you can choose Rules, and then The Rules mode will give you the ability to put custom roles as below; Reference: https://radacad.com/enhance-the-card-visual-in-power-bi-with-conditional-formatting"
     },
     {
-      "pergunta": "You have a report that includes a card visualization. You need to apply the following conditional formatting to the card while minimizing design effort: - For values that are greater than or equal to 100, the font of the data label must be dark red. - For values that are less than 100, the font of the data label must be dark gray. Which type of format should you use?",
-      "opcoes": [
+      "question": "You have a report that includes a card visualization. You need to apply the following conditional formatting to the card while minimizing design effort: - For values that are greater than or equal to 100, the font of the data label must be dark red. - For values that are less than 100, the font of the data label must be dark gray. Which type of format should you use?",
+      "options": [
         "Color scale",
         "Rules",
         "Field value"
       ],
-      "correta": 1,
-      "explicacao": "Finding the conditional formatting in the card visual is a bit tricky. There is no separate option for that. You need to go to the Format tab of the visual, and then expand the Data Label. The right beside the Data Label's colour you need to hover your mouse, and you will find a three dots icon appearing, which if you click on it, you will see Conditional Formatting. Now in the Conditional Formatting tab, you can apply it in different methods. for example, you can choose Rules, and then The Rules mode will give you the ability to put custom roles as below; Reference: https://radacad.com/enhance-the-card-visual-in-power-bi-with-conditional-formatting"
+      "answer": 1,
+      "explanation": "Finding the conditional formatting in the card visual is a bit tricky. There is no separate option for that. You need to go to the Format tab of the visual, and then expand the Data Label. The right beside the Data Label's colour you need to hover your mouse, and you will find a three dots icon appearing, which if you click on it, you will see Conditional Formatting. Now in the Conditional Formatting tab, you can apply it in different methods. for example, you can choose Rules, and then The Rules mode will give you the ability to put custom roles as below; Reference: https://radacad.com/enhance-the-card-visual-in-power-bi-with-conditional-formatting"
     },
     {
-      "pergunta": "You have a report that includes a card visualization. You need to apply the following conditional formatting to the card while minimizing design effort: - For values that are greater than or equal to 100, the font of the data label must be dark red. - For values that are less than 100, the font of the data label must be dark gray. Which type of format should you use?",
-      "opcoes": [
+      "question": "You have a report that includes a card visualization. You need to apply the following conditional formatting to the card while minimizing design effort: - For values that are greater than or equal to 100, the font of the data label must be dark red. - For values that are less than 100, the font of the data label must be dark gray. Which type of format should you use?",
+      "options": [
         "Color scale",
         "Rules",
         "Field value"
       ],
-      "correta": 1,
-      "explicacao": "Finding the conditional formatting in the card visual is a bit tricky. There is no separate option for that. You need to go to the Format tab of the visual, and then expand the Data Label. The right beside the Data Label's colour you need to hover your mouse, and you will find a three dots icon appearing, which if you click on it, you will see Conditional Formatting. Now in the Conditional Formatting tab, you can apply it in different methods. for example, you can choose Rules, and then The Rules mode will give you the ability to put custom roles as below; Reference: https://radacad.com/enhance-the-card-visual-in-power-bi-with-conditional-formatting"
+      "answer": 1,
+      "explanation": "Finding the conditional formatting in the card visual is a bit tricky. There is no separate option for that. You need to go to the Format tab of the visual, and then expand the Data Label. The right beside the Data Label's colour you need to hover your mouse, and you will find a three dots icon appearing, which if you click on it, you will see Conditional Formatting. Now in the Conditional Formatting tab, you can apply it in different methods. for example, you can choose Rules, and then The Rules mode will give you the ability to put custom roles as below; Reference: https://radacad.com/enhance-the-card-visual-in-power-bi-with-conditional-formatting"
     },
     {
-      "pergunta": "You have a report that includes a card visualization. You need to apply the following conditional formatting to the card while minimizing design effort: - For values that are greater than or equal to 100, the font of the data label must be dark red. - For values that are less than 100, the font of the data label must be dark gray. Which type of format should you use?",
-      "opcoes": [
+      "question": "You have a report that includes a card visualization. You need to apply the following conditional formatting to the card while minimizing design effort: - For values that are greater than or equal to 100, the font of the data label must be dark red. - For values that are less than 100, the font of the data label must be dark gray. Which type of format should you use?",
+      "options": [
         "Color scale",
         "Rules",
         "Field value"
       ],
-      "correta": 1,
-      "explicacao": "Finding the conditional formatting in the card visual is a bit tricky. There is no separate option for that. You need to go to the Format tab of the visual, and then expand the Data Label. The right beside the Data Label's colour you need to hover your mouse, and you will find a three dots icon appearing, which if you click on it, you will see Conditional Formatting. Now in the Conditional Formatting tab, you can apply it in different methods. for example, you can choose Rules, and then The Rules mode will give you the ability to put custom roles as below; Reference: https://radacad.com/enhance-the-card-visual-in-power-bi-with-conditional-formatting"
+      "answer": 1,
+      "explanation": "Finding the conditional formatting in the card visual is a bit tricky. There is no separate option for that. You need to go to the Format tab of the visual, and then expand the Data Label. The right beside the Data Label's colour you need to hover your mouse, and you will find a three dots icon appearing, which if you click on it, you will see Conditional Formatting. Now in the Conditional Formatting tab, you can apply it in different methods. for example, you can choose Rules, and then The Rules mode will give you the ability to put custom roles as below; Reference: https://radacad.com/enhance-the-card-visual-in-power-bi-with-conditional-formatting"
     },
     {
-      "pergunta": "You have a report that includes a card visualization. You need to apply the following conditional formatting to the card while minimizing design effort: - For values that are greater than or equal to 100, the font of the data label must be dark red. - For values that are less than 100, the font of the data label must be dark gray. Which type of format should you use?",
-      "opcoes": [
+      "question": "You have a report that includes a card visualization. You need to apply the following conditional formatting to the card while minimizing design effort: - For values that are greater than or equal to 100, the font of the data label must be dark red. - For values that are less than 100, the font of the data label must be dark gray. Which type of format should you use?",
+      "options": [
         "Color scale",
         "Rules",
         "Field value"
       ],
-      "correta": 1,
-      "explicacao": "Finding the conditional formatting in the card visual is a bit tricky. There is no separate option for that. You need to go to the Format tab of the visual, and then expand the Data Label. The right beside the Data Label's colour you need to hover your mouse, and you will find a three dots icon appearing, which if you click on it, you will see Conditional Formatting. Now in the Conditional Formatting tab, you can apply it in different methods. for example, you can choose Rules, and then The Rules mode will give you the ability to put custom roles as below; Reference: https://radacad.com/enhance-the-card-visual-in-power-bi-with-conditional-formatting"
+      "answer": 1,
+      "explanation": "Finding the conditional formatting in the card visual is a bit tricky. There is no separate option for that. You need to go to the Format tab of the visual, and then expand the Data Label. The right beside the Data Label's colour you need to hover your mouse, and you will find a three dots icon appearing, which if you click on it, you will see Conditional Formatting. Now in the Conditional Formatting tab, you can apply it in different methods. for example, you can choose Rules, and then The Rules mode will give you the ability to put custom roles as below; Reference: https://radacad.com/enhance-the-card-visual-in-power-bi-with-conditional-formatting"
     },
     {
-      "pergunta": "You have a report that includes a card visualization. You need to apply the following conditional formatting to the card while minimizing design effort: - For values that are greater than or equal to 100, the font of the data label must be dark red. - For values that are less than 100, the font of the data label must be dark gray. Which type of format should you use?",
-      "opcoes": [
+      "question": "You have a report that includes a card visualization. You need to apply the following conditional formatting to the card while minimizing design effort: - For values that are greater than or equal to 100, the font of the data label must be dark red. - For values that are less than 100, the font of the data label must be dark gray. Which type of format should you use?",
+      "options": [
         "Color scale",
         "Rules",
         "Field value"
       ],
-      "correta": 1,
-      "explicacao": "Finding the conditional formatting in the card visual is a bit tricky. There is no separate option for that. You need to go to the Format tab of the visual, and then expand the Data Label. The right beside the Data Label's colour you need to hover your mouse, and you will find a three dots icon appearing, which if you click on it, you will see Conditional Formatting. Now in the Conditional Formatting tab, you can apply it in different methods. for example, you can choose Rules, and then The Rules mode will give you the ability to put custom roles as below; Reference: https://radacad.com/enhance-the-card-visual-in-power-bi-with-conditional-formatting"
+      "answer": 1,
+      "explanation": "Finding the conditional formatting in the card visual is a bit tricky. There is no separate option for that. You need to go to the Format tab of the visual, and then expand the Data Label. The right beside the Data Label's colour you need to hover your mouse, and you will find a three dots icon appearing, which if you click on it, you will see Conditional Formatting. Now in the Conditional Formatting tab, you can apply it in different methods. for example, you can choose Rules, and then The Rules mode will give you the ability to put custom roles as below; Reference: https://radacad.com/enhance-the-card-visual-in-power-bi-with-conditional-formatting"
     },
     {
-      "pergunta": "You have a report that includes a card visualization. You need to apply the following conditional formatting to the card while minimizing design effort: - For values that are greater than or equal to 100, the font of the data label must be dark red. - For values that are less than 100, the font of the data label must be dark gray. Which type of format should you use?",
-      "opcoes": [
+      "question": "You have a report that includes a card visualization. You need to apply the following conditional formatting to the card while minimizing design effort: - For values that are greater than or equal to 100, the font of the data label must be dark red. - For values that are less than 100, the font of the data label must be dark gray. Which type of format should you use?",
+      "options": [
         "Color scale",
         "Rules",
         "Field value"
       ],
-      "correta": 1,
-      "explicacao": "Finding the conditional formatting in the card visual is a bit tricky. There is no separate option for that. You need to go to the Format tab of the visual, and then expand the Data Label. The right beside the Data Label's colour you need to hover your mouse, and you will find a three dots icon appearing, which if you click on it, you will see Conditional Formatting. Now in the Conditional Formatting tab, you can apply it in different methods. for example, you can choose Rules, and then The Rules mode will give you the ability to put custom roles as below; Reference: https://radacad.com/enhance-the-card-visual-in-power-bi-with-conditional-formatting"
+      "answer": 1,
+      "explanation": "Finding the conditional formatting in the card visual is a bit tricky. There is no separate option for that. You need to go to the Format tab of the visual, and then expand the Data Label. The right beside the Data Label's colour you need to hover your mouse, and you will find a three dots icon appearing, which if you click on it, you will see Conditional Formatting. Now in the Conditional Formatting tab, you can apply it in different methods. for example, you can choose Rules, and then The Rules mode will give you the ability to put custom roles as below; Reference: https://radacad.com/enhance-the-card-visual-in-power-bi-with-conditional-formatting"
     },
     {
-      "pergunta": "You have a report that includes a card visualization. You need to apply the following conditional formatting to the card while minimizing design effort: - For values that are greater than or equal to 100, the font of the data label must be dark red. - For values that are less than 100, the font of the data label must be dark gray. Which type of format should you use?",
-      "opcoes": [
+      "question": "You have a report that includes a card visualization. You need to apply the following conditional formatting to the card while minimizing design effort: - For values that are greater than or equal to 100, the font of the data label must be dark red. - For values that are less than 100, the font of the data label must be dark gray. Which type of format should you use?",
+      "options": [
         "Color scale",
         "Rules",
         "Field value"
       ],
-      "correta": 1,
-      "explicacao": "Finding the conditional formatting in the card visual is a bit tricky. There is no separate option for that. You need to go to the Format tab of the visual, and then expand the Data Label. The right beside the Data Label's colour you need to hover your mouse, and you will find a three dots icon appearing, which if you click on it, you will see Conditional Formatting. Now in the Conditional Formatting tab, you can apply it in different methods. for example, you can choose Rules, and then The Rules mode will give you the ability to put custom roles as below; Reference: https://radacad.com/enhance-the-card-visual-in-power-bi-with-conditional-formatting"
+      "answer": 1,
+      "explanation": "Finding the conditional formatting in the card visual is a bit tricky. There is no separate option for that. You need to go to the Format tab of the visual, and then expand the Data Label. The right beside the Data Label's colour you need to hover your mouse, and you will find a three dots icon appearing, which if you click on it, you will see Conditional Formatting. Now in the Conditional Formatting tab, you can apply it in different methods. for example, you can choose Rules, and then The Rules mode will give you the ability to put custom roles as below; Reference: https://radacad.com/enhance-the-card-visual-in-power-bi-with-conditional-formatting"
     },
     {
-      "pergunta": "You have a report that includes a card visualization. You need to apply the following conditional formatting to the card while minimizing design effort: - For values that are greater than or equal to 100, the font of the data label must be dark red. - For values that are less than 100, the font of the data label must be dark gray. Which type of format should you use?",
-      "opcoes": [
+      "question": "You have a report that includes a card visualization. You need to apply the following conditional formatting to the card while minimizing design effort: - For values that are greater than or equal to 100, the font of the data label must be dark red. - For values that are less than 100, the font of the data label must be dark gray. Which type of format should you use?",
+      "options": [
         "Color scale",
         "Rules",
         "Field value"
       ],
-      "correta": 1,
-      "explicacao": "Finding the conditional formatting in the card visual is a bit tricky. There is no separate option for that. You need to go to the Format tab of the visual, and then expand the Data Label. The right beside the Data Label's colour you need to hover your mouse, and you will find a three dots icon appearing, which if you click on it, you will see Conditional Formatting. Now in the Conditional Formatting tab, you can apply it in different methods. for example, you can choose Rules, and then The Rules mode will give you the ability to put custom roles as below; Reference: https://radacad.com/enhance-the-card-visual-in-power-bi-with-conditional-formatting"
+      "answer": 1,
+      "explanation": "Finding the conditional formatting in the card visual is a bit tricky. There is no separate option for that. You need to go to the Format tab of the visual, and then expand the Data Label. The right beside the Data Label's colour you need to hover your mouse, and you will find a three dots icon appearing, which if you click on it, you will see Conditional Formatting. Now in the Conditional Formatting tab, you can apply it in different methods. for example, you can choose Rules, and then The Rules mode will give you the ability to put custom roles as below; Reference: https://radacad.com/enhance-the-card-visual-in-power-bi-with-conditional-formatting"
     },
     {
-      "pergunta": "Para usar um visual do tipo Nuvem de Palavras (Word Cloud) do AppSource na sua página. O que você deve fazer?",
-      "opcoes": [
+      "question": "Para usar um visual do tipo Nuvem de Palavras (Word Cloud) do AppSource na sua página. O que você deve fazer?",
+      "options": [
         "Adicionar um visual de relatório paginado (Paginated report visual).",
         "No painel Visualização, selecionar 'Obter mais visuais' (Get More Visuals).",
         "Importar um visual de um arquivo local.",
         "Adicionar um visual do Python à página de relatório."
       ],
-      "correta": 1,
-      "explicacao": "Obter mais visuais (Get More Visuals) abre o marketplace interno (AppSource) onde você busca e clica para adicionar diretamente o visual."
+      "answer": 1,
+      "explanation": "Obter mais visuais (Get More Visuals) abre o marketplace interno (AppSource) onde você busca e clica para adicionar diretamente o visual."
     },
     {
-      "pergunta": "Qual gráfico é ideal para recomendar e fazer uma COMPARAÇÃO RÁPIDA das vendas do trimestre atual por PAÍS?",
-      "opcoes": [
+      "question": "Qual gráfico é ideal para recomendar e fazer uma COMPARAÇÃO RÁPIDA das vendas do trimestre atual por PAÍS?",
+      "options": [
         "Matriz (Matrix)",
         "Gráfico de colunas (Column chart)",
         "Gráfico de dispersão (Scatter chart)",
         "Gráfico de medidor (Gauge chart)"
       ],
-      "correta": 1,
-      "explicacao": "Gráficos de colunas ou barras são os melhores visuais para fazer comparações simples e rápidas de um único valor categórico (País) em relação a um valor numérico (Vendas)."
+      "answer": 1,
+      "explanation": "Gráficos de colunas ou barras são os melhores visuais para fazer comparações simples e rápidas de um único valor categórico (País) em relação a um valor numérico (Vendas)."
     },
     {
-      "pergunta": "Você tem um relatório em Desktop com gráficos filtrados por um slicer de ano. Você quer criar um Slide Show (apresentação interativa) pro Serviço Power BI. O que fazer ANTES de publicar?",
-      "opcoes": [
+      "question": "Você tem um relatório em Desktop com gráficos filtrados por um slicer de ano. Você quer criar um Slide Show (apresentação interativa) pro Serviço Power BI. O que fazer ANTES de publicar?",
+      "options": [
         "Filtrar os gráficos no slicer e então criar marcadores (bookmarks).",
         "Configurar filtros de nível de página e usar o agrupamento List.",
         "Criar filtros de nível de relatório e agrupar por Bin.",
         "Configurar filtros drillthrough para cada gráfico de barras."
       ],
-      "correta": 0,
-      "explicacao": "Marcadores capturam o estado atual dos visuais, filtros e slicers da página. Ao gravá-los, você pode compô-los numa sequência de slide usando o botão 'Visualizar Marcadores' (View Bookmarks)."
+      "answer": 0,
+      "explanation": "Marcadores capturam o estado atual dos visuais, filtros e slicers da página. Ao gravá-los, você pode compô-los numa sequência de slide usando o botão 'Visualizar Marcadores' (View Bookmarks)."
     },
     {
-      "pergunta": "Você precisa criar um visual estilo KPI, mas que pareça uma tabela de linhas. Qual visual nativo é a melhor alternativa ao invés de uma Tabela, se o KPI usar múltiplas colunas e formatações de fundo?",
-      "opcoes": [
+      "question": "Você precisa criar um visual estilo KPI, mas que pareça uma tabela de linhas. Qual visual nativo é a melhor alternativa ao invés de uma Tabela, se o KPI usar múltiplas colunas e formatações de fundo?",
+      "options": [
         "Matriz (Matrix)",
         "KPI nativo",
         "Cartão de várias linhas (Multi row card)",
         "Tabela (Table)"
       ],
-      "correta": 0,
-      "explicacao": "A Matriz lida nativamente com subtotais, ícones condicionais mais complexos e permite formatar espaços de forma mais flexível (ex. estilo Tabela Dinâmica) quando KPIs visuais sozinhos não bastam."
+      "answer": 0,
+      "explanation": "A Matriz lida nativamente com subtotais, ícones condicionais mais complexos e permite formatar espaços de forma mais flexível (ex. estilo Tabela Dinâmica) quando KPIs visuais sozinhos não bastam."
     },
     {
-      "pergunta": "Você tem um gráfico de barras e um de rosca. Como configurar para que selecionar um ano na barra NÃO mude nada na rosca?",
-      "opcoes": [
+      "question": "Você tem um gráfico de barras e um de rosca. Como configurar para que selecionar um ano na barra NÃO mude nada na rosca?",
+      "options": [
         "Adicionar um Slicer usando a coluna de ano.",
         "Definir um filtro de nível visual na barra.",
         "Editar as interações (Edit Interactions) a partir do menu Formatar.",
         "Definir um filtro visual na rosca."
       ],
-      "correta": 2,
-      "explicacao": "Com o visual de barras selecionado, você acessa 'Editar Interações' e clica no ícone 'Nenhum' (None) acima do gráfico de rosca para interromper a filtragem cruzada."
+      "answer": 2,
+      "explanation": "Com o visual de barras selecionado, você acessa 'Editar Interações' e clica no ícone 'Nenhum' (None) acima do gráfico de rosca para interromper a filtragem cruzada."
     },
     {
-      "pergunta": "Um usuário quer poder detalhar a localização (Country > ProvState > City) em um gráfico de barras. Como você configura o drill down nesse gráfico?",
-      "opcoes": [
+      "question": "Um usuário quer poder detalhar a localização (Country > ProvState > City) em um gráfico de barras. Como você configura o drill down nesse gráfico?",
+      "options": [
         "No campo Eixo (Axis), adicione Country no topo, seguido por ProvState e depois City.",
         "No campo Valor (Value), adicione Country no topo, seguido por ProvState, e depois City.",
         "No campo Legenda (Legend), adicione Country, e no campo Eixo, ProvState seguido por City.",
         "Mude o gráfico para um Treemap."
       ],
-      "correta": 0,
-      "explicacao": "Para ativar o recurso de drill down num visual, os campos devem ser hierarquicamente empilhados na área 'Eixo' (Axis)."
+      "answer": 0,
+      "explanation": "Para ativar o recurso de drill down num visual, os campos devem ser hierarquicamente empilhados na área 'Eixo' (Axis)."
     },
     {
-      "pergunta": "Qual das seguintes opções de filtro se aplica a todos os visuais em todas as páginas do relatório?",
-      "opcoes": [
+      "question": "Qual das seguintes opções de filtro se aplica a todos os visuais em todas as páginas do relatório?",
+      "options": [
         "Nível de página (Page level)",
         "Nível visual (Visual level)",
         "Nível de relatório (Report level)",
         "Drill through"
       ],
-      "correta": 2,
-      "explicacao": "Os filtros de nível de relatório (Report level filters) persistem as seleções de filtro globalmente para todas as páginas no arquivo."
+      "answer": 2,
+      "explanation": "Os filtros de nível de relatório (Report level filters) persistem as seleções de filtro globalmente para todas as páginas no arquivo."
     },
     {
-      "pergunta": "Qual visual permite detalhar (break down) uma medida através de múltiplas dimensões fazendo exploração ad-hoc?",
-      "opcoes": [
+      "question": "Qual visual permite detalhar (break down) uma medida através de múltiplas dimensões fazendo exploração ad-hoc?",
+      "options": [
         "Árvore de Decomposição (Decomposition Tree)",
         "Gráfico de Linhas",
         "Principais Influenciadores (Key Influencers)",
         "Mapa de Árvore (Treemap)"
       ],
-      "correta": 0,
-      "explicacao": "A Árvore de Decomposição permite desmembrar um valor e escolher dinamicamente qual a próxima categoria (dimensão) usar para dividir os dados, muito útil para análise de causa raiz."
+      "answer": 0,
+      "explanation": "A Árvore de Decomposição permite desmembrar um valor e escolher dinamicamente qual a próxima categoria (dimensão) usar para dividir os dados, muito útil para análise de causa raiz."
     },
     {
-      "pergunta": "Qual visual você poderia usar se quisesse entender os fatores que impulsionam (drive) uma métrica específica?",
-      "opcoes": [
+      "question": "Qual visual você poderia usar se quisesse entender os fatores que impulsionam (drive) uma métrica específica?",
+      "options": [
         "Gráfico de Linhas",
         "Árvore de Decomposição (Decomposition Tree)",
         "Principais Influenciadores (Key Influencers)",
         "Mapa de Árvore (Treemap)"
       ],
-      "correta": 2,
-      "explicacao": "O visual 'Principais Influenciadores' usa aprendizado de máquina para analisar e mostrar os fatores que afetam diretamente a variação de uma métrica escolhida."
+      "answer": 2,
+      "explanation": "O visual 'Principais Influenciadores' usa aprendizado de máquina para analisar e mostrar os fatores que afetam diretamente a variação de uma métrica escolhida."
     },
     {
-      "pergunta": "Que objeto você poderia adicionar a um dashboard ou relatório se o usuário quisesse uma maneira interativa de classificar e filtrar os dados usando datas?",
-      "opcoes": [
+      "question": "Que objeto você poderia adicionar a um dashboard ou relatório se o usuário quisesse uma maneira interativa de classificar e filtrar os dados usando datas?",
+      "options": [
         "Filtro Top N",
         "Segmentador de Dados de Data (Date Slicer)",
         "Filtro de Nível de Relatório",
         "Segmentador Categórico"
       ],
-      "correta": 1,
-      "explicacao": "Slicers (Segmentadores de dados) oferecem filtros visuais interativos. Um Date Slicer permite definir datas em intervalos, controles deslizantes ou menus."
+      "answer": 1,
+      "explanation": "Slicers (Segmentadores de dados) oferecem filtros visuais interativos. Um Date Slicer permite definir datas em intervalos, controles deslizantes ou menus."
     },
     {
-      "pergunta": "Qual configuração de filtro você usaria se quisesse retornar as 3 principais categorias por lucro total?",
-      "opcoes": [
+      "question": "Qual configuração de filtro você usaria se quisesse retornar as 3 principais categorias por lucro total?",
+      "options": [
         "Filtro Dinâmico (Dynamic)",
         "Filtro Básico (Basic)",
         "Filtro Avançado (Advanced)",
         "Top N"
       ],
-      "correta": 3,
-      "explicacao": "O filtro Top N (Top N filter) permite limitar os resultados para exibir os 'n' itens superiores ou inferiores com base em uma medida."
+      "answer": 3,
+      "explanation": "O filtro Top N (Top N filter) permite limitar os resultados para exibir os 'n' itens superiores ou inferiores com base em uma medida."
     },
     {
-      "pergunta": "Qual das seguintes opções de filtro se aplica apenas ao visual específico no qual está definida?",
-      "opcoes": [
+      "question": "Qual das seguintes opções de filtro se aplica apenas ao visual específico no qual está definida?",
+      "options": [
         "Nível de página (Page level)",
         "Nível visual (Visual level)",
         "Nível de relatório (Report level)",
         "Drill through"
       ],
-      "correta": 1,
-      "explicacao": "Os filtros de nível visual (Visual level filters) afetam apenas a visualização em que são aplicados."
+      "answer": 1,
+      "explanation": "Os filtros de nível visual (Visual level filters) afetam apenas a visualização em que são aplicados."
     },
     {
-      "pergunta": "O visual Q&A permite que você explore os dados 'com suas próprias palavras' usando o quê?",
-      "opcoes": [
+      "question": "O visual Q&A permite que você explore os dados 'com suas próprias palavras' usando o quê?",
+      "options": [
         "Consultas em SQL",
         "Expressões DAX",
         "Consultas em linguagem natural (Natural language queries)",
         "Código M (Power Query M)"
       ],
-      "correta": 2,
-      "explicacao": "O Q&A (Perguntas e Respostas) usa linguagem natural para que os usuários possam digitar perguntas como 'Total de vendas por país'."
+      "answer": 2,
+      "explanation": "O Q&A (Perguntas e Respostas) usa linguagem natural para que os usuários possam digitar perguntas como 'Total de vendas por país'."
     },
     {
-      "pergunta": "Em qual tipo de gráfico você pode adicionar uma previsão (Forecast) com base em períodos de tempo na guia Análise?",
-      "opcoes": [
+      "question": "Em qual tipo de gráfico você pode adicionar uma previsão (Forecast) com base em períodos de tempo na guia Análise?",
+      "options": [
         "Gráfico de colunas clusterizado",
         "Gráfico de dispersão",
         "Gráfico de cascata",
         "Gráfico de linhas (Line chart)"
       ],
-      "correta": 3,
-      "explicacao": "O recurso nativo de previsão (Forecasting) suporta dados temporais univariados e é ativado nativamente no visual de Gráfico de Linhas."
+      "answer": 3,
+      "explanation": "O recurso nativo de previsão (Forecasting) suporta dados temporais univariados e é ativado nativamente no visual de Gráfico de Linhas."
     },
     {
-      "pergunta": "Qual é um caso de uso comum para gráficos de dispersão (scatter charts)?",
-      "opcoes": [
+      "question": "Qual é um caso de uso comum para gráficos de dispersão (scatter charts)?",
+      "options": [
         "Mostrar padrões e anomalias em grandes conjuntos de dados bivariados.",
         "Comparar valores categóricos de texto único.",
         "Exibir totais percentuais com fatias.",
         "Mostrar fluxo de entrada e saída."
       ],
-      "correta": 0,
-      "explicacao": "Dispersão mostra a intersecção de valores x e y e ajuda a revelar tendências, clusters ou outliers em conjuntos grandes."
+      "answer": 0,
+      "explanation": "Dispersão mostra a intersecção de valores x e y e ajuda a revelar tendências, clusters ou outliers em conjuntos grandes."
     },
     {
-      "pergunta": "Como criar um menu inicial que leve a diferentes páginas de relatório, garantindo que funcione em qualquer workspace?",
-      "opcoes": [
+      "question": "Como criar um menu inicial que leve a diferentes páginas de relatório, garantindo que funcione em qualquer workspace?",
+      "options": [
         "Criar caixas de texto com links absolutos.",
         "Criar botões com a ação definida como Navegação de Página (Page navigation) ou Marcador (Bookmark).",
         "Criar um visual do Power Apps com um menu suspenso.",
         "Criar segmentações de página."
       ],
-      "correta": 1,
-      "explicacao": "Botões com ação 'Navegação na página' ou 'Indicador' levam o usuário diretamente à página desejada de forma nativa e não dependem de URLs rígidas."
+      "answer": 1,
+      "explanation": "Botões com ação 'Navegação na página' ou 'Indicador' levam o usuário diretamente à página desejada de forma nativa e não dependem de URLs rígidas."
     },
     {
-      "pergunta": "Qual gráfico é mais adequado para comparar a evolução de receita e custo ao longo do TEMPO?",
-      "opcoes": [
+      "question": "Qual gráfico é mais adequado para comparar a evolução de receita e custo ao longo do TEMPO?",
+      "options": [
         "Gráfico de área empilhada",
         "Gráfico de rosca (Donut chart)",
         "Gráfico de cascata (Waterfall)",
         "Gráfico de linhas (Line chart)"
       ],
-      "correta": 3,
-      "explicacao": "Gráficos de linhas são a melhor escolha padrão para comparar múltiplas medidas ao longo do tempo ou de categorias sequenciais."
+      "answer": 3,
+      "explanation": "Gráficos de linhas são a melhor escolha padrão para comparar múltiplas medidas ao longo do tempo ou de categorias sequenciais."
     },
     {
-      "pergunta": "Qual gráfico usar para relacionar Preço Unitário e Quantidade Pedida, evidenciando padrões ou agrupamentos (clusters) de preços e quantidades semelhantes?",
-      "opcoes": [
+      "question": "Qual gráfico usar para relacionar Preço Unitário e Quantidade Pedida, evidenciando padrões ou agrupamentos (clusters) de preços e quantidades semelhantes?",
+      "options": [
         "Gráfico de colunas clusterizado",
         "Gráfico de dispersão (Scatter chart)",
         "Gráfico de barras 100% empilhadas",
         "Árvore de decomposição"
       ],
-      "correta": 1,
-      "explicacao": "Gráficos de dispersão usam dois eixos de valor para mostrar as relações entre duas medidas. Eles possuem uma funcionalidade nativa para 'Localizar clusters automaticamente'."
+      "answer": 1,
+      "explanation": "Gráficos de dispersão usam dois eixos de valor para mostrar as relações entre duas medidas. Eles possuem uma funcionalidade nativa para 'Localizar clusters automaticamente'."
     },
     {
-      "pergunta": "Gráfico de barras (contagem por segmento) e colunas (vendas por mês). Ao clicar num segmento na barra, como configurar as interações para que o gráfico de colunas mostre qual PORÇÃO da barra pertence àquele segmento?",
-      "opcoes": [
+      "question": "Gráfico de barras (contagem por segmento) e colunas (vendas por mês). Ao clicar num segmento na barra, como configurar as interações para que o gráfico de colunas mostre qual PORÇÃO da barra pertence àquele segmento?",
+      "options": [
         "Filtro (Filter)",
         "Realce (Highlight)",
         "Nenhum (None)",
         "Drillthrough"
       ],
-      "correta": 1,
-      "explicacao": "O realce (highlight) mantém a barra inteira (total) e escurece a porção da barra que corresponde ao filtro selecionado, mostrando a proporção visualmente."
+      "answer": 1,
+      "explanation": "O realce (highlight) mantém a barra inteira (total) e escurece a porção da barra que corresponde ao filtro selecionado, mostrando a proporção visualmente."
     },
     {
-      "pergunta": "Você tem um gráfico de linhas e precisa ver os custos salariais totais ao passar o mouse sobre um ponto de dados (sem alterar a linha do gráfico). Como fazer?",
-      "opcoes": [
+      "question": "Você tem um gráfico de linhas e precisa ver os custos salariais totais ao passar o mouse sobre um ponto de dados (sem alterar a linha do gráfico). Como fazer?",
+      "options": [
         "Adicionar salário aos campos de drillthrough.",
         "Adicionar salário aos tooltips (dicas de ferramenta).",
         "Adicionar um filtro visual de salário.",
         "Alterar o gráfico de linhas para um gráfico de dispersão."
       ],
-      "correta": 1,
-      "explicacao": "Adicionar a medida ao campo Tooltips exibirá esse valor extra quando o usuário passar o cursor (hover) no ponto de dados."
+      "answer": 1,
+      "explanation": "Adicionar a medida ao campo Tooltips exibirá esse valor extra quando o usuário passar o cursor (hover) no ponto de dados."
     },
     {
-      "pergunta": "Você pode usar marcadores (bookmarks) para criar uma apresentação de slides (slide show) no Power BI?",
-      "opcoes": [
+      "question": "Você pode usar marcadores (bookmarks) para criar uma apresentação de slides (slide show) no Power BI?",
+      "options": [
         "Não, marcadores não são dinâmicos.",
         "Não, é necessário um visual específico do AppSource.",
         "Sim, adicionando botões como navegação para alternar entre marcadores salvos.",
         "Sim, usando a funcionalidade de reprodução automática nativa no Desktop."
       ],
-      "correta": 2,
-      "explicacao": "Você pode salvar diferentes estados (bookmarks) e usar Botões com ações definidas para 'Bookmark' para permitir que os usuários naveguem através deles como um slide show."
+      "answer": 2,
+      "explanation": "Você pode salvar diferentes estados (bookmarks) e usar Botões com ações definidas para 'Bookmark' para permitir que os usuários naveguem através deles como um slide show."
     },
     {
-      "pergunta": "Como você pode analisar o desempenho de cada um dos elementos do seu relatório e descobrir consultas demoradas?",
-      "opcoes": [
+      "question": "Como você pode analisar o desempenho de cada um dos elementos do seu relatório e descobrir consultas demoradas?",
+      "options": [
         "Usando o analisador de desempenho (Performance Analyzer).",
         "Analisando seus metadados no Power Query.",
         "Usando o SQL Server Profiler conectado ao modelo importado.",
         "Verificando os logs do Gateway de dados local."
       ],
-      "correta": 0,
-      "explicacao": "O Analisador de Desempenho (Performance Analyzer) no Power BI Desktop permite inspecionar quanto tempo cada visual leva para renderizar e avaliar consultas DAX."
+      "answer": 0,
+      "explanation": "O Analisador de Desempenho (Performance Analyzer) no Power BI Desktop permite inspecionar quanto tempo cada visual leva para renderizar e avaliar consultas DAX."
     },
     {
-      "pergunta": "Qual dos seguintes filtros NÃO está disponível em relatórios do Power BI?",
-      "opcoes": [
+      "question": "Qual dos seguintes filtros NÃO está disponível em relatórios do Power BI?",
+      "options": [
         "Filtro de nível de relatório (Report level)",
         "Filtro de tipo de página (Page type)",
         "Filtro de nível de página (Page level)",
         "Drillthrough"
       ],
-      "correta": 1,
-      "explicacao": "Os tipos padrão de filtros no painel de filtro são: Visual, Página (Page), Relatório (Report) e Drillthrough. Não existe 'Page type filter'."
+      "answer": 1,
+      "explanation": "Os tipos padrão de filtros no painel de filtro são: Visual, Página (Page), Relatório (Report) e Drillthrough. Não existe 'Page type filter'."
     },
     {
-      "pergunta": "Você precisa importar visuais personalizados (custom visuals) cada vez que deseja usá-los ao desenvolver um novo relatório?",
-      "opcoes": [
+      "question": "Você precisa importar visuais personalizados (custom visuals) cada vez que deseja usá-los ao desenvolver um novo relatório?",
+      "options": [
         "Não, visuais personalizados estão sempre disponíveis na aba Visualizations.",
         "Não, importando uma vez, eles ficam permanentemente no Power BI Desktop.",
         "Sim, visuais personalizados devem ser importados do AppSource cada vez que você começa um novo relatório.",
         "Sim, mas apenas para relatórios no Power BI Service."
       ],
-      "correta": 2,
-      "explicacao": "No Power BI Desktop, os visuais personalizados são importados em um nível por relatório (arquivo PBIX). Para usar em um novo relatório, você deve importá-lo novamente (ou usar o recurso de visuais organizacionais)."
+      "answer": 2,
+      "explanation": "No Power BI Desktop, os visuais personalizados são importados em um nível por relatório (arquivo PBIX). Para usar em um novo relatório, você deve importá-lo novamente (ou usar o recurso de visuais organizacionais)."
     },
     {
-      "pergunta": "Qual é o benefício de usar uma dica de ferramenta (tooltip) de relatório?",
-      "opcoes": [
+      "question": "Qual é o benefício de usar uma dica de ferramenta (tooltip) de relatório?",
+      "options": [
         "Dar aos usuários a capacidade de exportar dados do visual.",
         "Dar aos usuários informações sobre o autor do relatório.",
         "Fornecer detalhes adicionais específicos ao contexto dos dados sobre os quais se passa o mouse.",
         "Permitir o drill-through para outras páginas."
       ],
-      "correta": 2,
-      "explicacao": "Tooltips fornecem contexto adicional e detalhado (como outros valores de medidas ou gráficos) quando o usuário passa o cursor sobre um ponto de dados específico."
+      "answer": 2,
+      "explanation": "Tooltips fornecem contexto adicional e detalhado (como outros valores de medidas ou gráficos) quando o usuário passa o cursor sobre um ponto de dados específico."
     },
     {
-      "pergunta": "Você criou uma tabela com Region e Sales, mas um visual agrupa as regiões mostrando apenas 4 linhas em vez de 6 linhas brutas. O que causa isso?",
-      "opcoes": [
+      "question": "Você criou uma tabela com Region e Sales, mas um visual agrupa as regiões mostrando apenas 4 linhas em vez de 6 linhas brutas. O que causa isso?",
+      "options": [
         "A categoria de dados (Data Category) de Region",
         "A sumarização padrão (Default Summarization) em Region",
         "A sumarização padrão (Default Summarization) em Sales",
         "O tipo de dados de Sales"
       ],
-      "correta": 2,
-      "explicacao": "Se a coluna Sales estiver com sumarização padrão definida (ex: Soma), o Power BI agregará automaticamente os valores da região. Para ver todas as linhas brutas, a sumarização de Sales precisaria ser 'Não resumir' ou a visualização configurada como tabela sem resumo."
+      "answer": 2,
+      "explanation": "Se a coluna Sales estiver com sumarização padrão definida (ex: Soma), o Power BI agregará automaticamente os valores da região. Para ver todas as linhas brutas, a sumarização de Sales precisaria ser 'Não resumir' ou a visualização configurada como tabela sem resumo."
     },
     {
-      "pergunta": "Qual das seguintes alternativas não é uma prática recomendada ao usar o visual de Perguntas e Respostas (Q&A)?",
-      "opcoes": [
+      "question": "Qual das seguintes alternativas não é uma prática recomendada ao usar o visual de Perguntas e Respostas (Q&A)?",
+      "options": [
         "Adicionar sinônimos a tabelas e colunas",
         "Adicionar relacionamentos ausentes entre tabelas",
         "Corrigir tipos de dados incorretos",
         "Adicionar rótulos de eixo a todos os gráficos"
       ],
-      "correta": 3,
-      "explicacao": "Práticas recomendadas para Q&A incluem renomear tabelas/colunas, corrigir tipos de dados, adicionar relacionamentos ausentes e adicionar sinônimos. Adicionar rótulos de eixo não afeta o modelo de P&R."
+      "answer": 3,
+      "explanation": "Práticas recomendadas para Q&A incluem renomear tabelas/colunas, corrigir tipos de dados, adicionar relacionamentos ausentes e adicionar sinônimos. Adicionar rótulos de eixo não afeta o modelo de P&R."
     },
     {
-      "pergunta": "O que é o recurso de Narrativa Inteligente (Smart Narrative) no Power BI e quando é útil?",
-      "opcoes": [
+      "question": "O que é o recurso de Narrativa Inteligente (Smart Narrative) no Power BI e quando é útil?",
+      "options": [
         "Um chatbot integrado ao Power BI para responder perguntas",
         "Um visual de IA que gera automaticamente resumos textuais das principais tendências e insights dos dados em um relatório, atualizando conforme os filtros mudam",
         "Uma ferramenta de tradução automática para relatórios multilíngues",
         "Um gerador de documentação técnica para o modelo de dados"
       ],
-      "correta": 1,
-      "explicacao": "Narrativa Inteligente é um visual de IA que gera automaticamente descrições textuais contextualizadas dos dados, destacando tendências importantes, anomalias e insights. O texto se atualiza dinamicamente quando filtros são aplicados."
+      "answer": 1,
+      "explanation": "Narrativa Inteligente é um visual de IA que gera automaticamente descrições textuais contextualizadas dos dados, destacando tendências importantes, anomalias e insights. O texto se atualiza dinamicamente quando filtros são aplicados."
     },
     {
-      "pergunta": "O que são segmentações de dados (slicers) do tipo hierarquia no Power BI e qual sua vantagem?",
-      "opcoes": [
+      "question": "O que são segmentações de dados (slicers) do tipo hierarquia no Power BI e qual sua vantagem?",
+      "options": [
         "Segmentações que mostram dados em ordem alfabética",
         "Segmentações que permitem filtrar por múltiplos níveis de uma hierarquia (ex: País > Estado > Cidade) em um único visual, com capacidade de expandir e recolher níveis",
         "Segmentações vinculadas a colunas de índice",
         "Segmentações automáticas criadas para cada coluna de texto"
       ],
-      "correta": 1,
-      "explicacao": "Segmentações de hierarquia permitem filtrar por múltiplos níveis hierárquicos em um único visual compacto. O usuário pode expandir a hierarquia (ex: selecionar país e depois estados dentro dele), tornando o filtro mais intuitivo e eficiente."
+      "answer": 1,
+      "explanation": "Segmentações de hierarquia permitem filtrar por múltiplos níveis hierárquicos em um único visual compacto. O usuário pode expandir a hierarquia (ex: selecionar país e depois estados dentro dele), tornando o filtro mais intuitivo e eficiente."
     },
     {
-      "pergunta": "O que é o Bookmarks (Marcadores) no Power BI e como pode ser usado?",
-      "opcoes": [
+      "question": "O que é o Bookmarks (Marcadores) no Power BI e como pode ser usado?",
+      "options": [
         "Um recurso para salvar URLs favoritas dentro do relatório",
         "Um recurso que captura o estado atual de uma página do relatório (filtros, seleções, visibilidade de visuais) e permite retornar a esse estado ou criar uma narrativa visual",
         "Uma funcionalidade para marcar questões incorretas no relatório",
         "Um sistema de comentários para colaboração em relatórios"
       ],
-      "correta": 1,
-      "explicacao": "Bookmarks capturam o estado de uma página do relatório incluindo filtros ativos, seleções e visibilidade de visuais. Podem ser usados para criar stories/apresentações, alternar entre diferentes visões do mesmo relatório, ou criar botões de navegação."
+      "answer": 1,
+      "explanation": "Bookmarks capturam o estado de uma página do relatório incluindo filtros ativos, seleções e visibilidade de visuais. Podem ser usados para criar stories/apresentações, alternar entre diferentes visões do mesmo relatório, ou criar botões de navegação."
     },
     {
-      "pergunta": "Qual é a diferença entre um Dashboard e um Relatório no Power BI Service?",
-      "opcoes": [
+      "question": "Qual é a diferença entre um Dashboard e um Relatório no Power BI Service?",
+      "options": [
         "Não há diferença, são termos intercambiáveis",
         "Dashboards são criados no Power BI Desktop; Relatórios são criados no Power BI Service",
         "Dashboards são páginas únicas com blocos de vários relatórios/fontes, sem interatividade de filtros cruzados; Relatórios têm múltiplas páginas com visualizações totalmente interativas",
         "Relatórios são para usuários finais; Dashboards são para administradores"
       ],
-      "correta": 2,
-      "explicacao": "Dashboards são painéis de página única que compilam blocos de múltiplas fontes (relatórios, conjuntos de dados, URLs), sem filtros cruzados entre blocos. Relatórios têm múltiplas páginas com visualizações totalmente interativas e filtros cruzados."
+      "answer": 2,
+      "explanation": "Dashboards são painéis de página única que compilam blocos de múltiplas fontes (relatórios, conjuntos de dados, URLs), sem filtros cruzados entre blocos. Relatórios têm múltiplas páginas com visualizações totalmente interativas e filtros cruzados."
     },
     {
-      "pergunta": "O que é um visual de Principais Influenciadores (Key Influencers) no Power BI e para que serve?",
-      "opcoes": [
+      "question": "O que é um visual de Principais Influenciadores (Key Influencers) no Power BI e para que serve?",
+      "options": [
         "Um visual que mostra os top N produtos por vendas",
         "Um visual de IA que analisa os dados e classifica os fatores que influenciam uma métrica específica, explicando o que aumenta ou diminui um valor",
         "Um visual para mostrar influenciadores de redes sociais",
         "Um gráfico de barras com os principais KPIs"
       ],
-      "correta": 1,
-      "explicacao": "O visual Principais Influenciadores usa IA para analisar os dados e identificar quais fatores (dimensões) influenciam mais uma métrica específica. Ele explica de forma visual o que aumenta ou diminui um valor, sendo útil para análise de causa raiz."
+      "answer": 1,
+      "explanation": "O visual Principais Influenciadores usa IA para analisar os dados e identificar quais fatores (dimensões) influenciam mais uma métrica específica. Ele explica de forma visual o que aumenta ou diminui um valor, sendo útil para análise de causa raiz."
     },
     {
-      "pergunta": "O que é a Árvore de Decomposição (Decomposition Tree) no Power BI e para que serve?",
-      "opcoes": [
+      "question": "O que é a Árvore de Decomposição (Decomposition Tree) no Power BI e para que serve?",
+      "options": [
         "Um visual que mostra a hierarquia das pastas de trabalho",
         "Um visual de IA que permite explorar e decompor uma métrica ao longo de múltiplas dimensões, identificando fatores que contribuem para um valor",
         "Uma ferramenta para visualizar a estrutura do modelo de dados",
         "Um gráfico de árvore hierárquica para dados organizacionais"
       ],
-      "correta": 1,
-      "explicacao": "A Árvore de Decomposição é um visual de IA que permite explorar uma métrica ao longo de múltiplas dimensões em qualquer ordem. Você pode usá-la para análise ad-hoc e investigação de causa raiz."
+      "answer": 1,
+      "explanation": "A Árvore de Decomposição é um visual de IA que permite explorar uma métrica ao longo de múltiplas dimensões em qualquer ordem. Você pode usá-la para análise ad-hoc e investigação de causa raiz."
     },
     {
-      "pergunta": "Qual funcionalidade do Power BI Service permite aos usuários explorar dados fazendo perguntas em linguagem natural?",
-      "opcoes": [
+      "question": "Qual funcionalidade do Power BI Service permite aos usuários explorar dados fazendo perguntas em linguagem natural?",
+      "options": [
         "Quick Insights",
         "Perguntas e Respostas (Q&A)",
         "Analyze in Excel",
         "Decomposition Tree"
       ],
-      "correta": 1,
-      "explicacao": "O recurso Perguntas e Respostas (Q&A) permite que os usuários façam perguntas sobre seus dados usando linguagem natural e o Power BI gera visualizações automaticamente com base nas respostas."
+      "answer": 1,
+      "explanation": "O recurso Perguntas e Respostas (Q&A) permite que os usuários façam perguntas sobre seus dados usando linguagem natural e o Power BI gera visualizações automaticamente com base nas respostas."
     },
     {
-      "pergunta": "O que é um tooltip de relatório (report tooltip) no Power BI e quando deve ser usado?",
-      "opcoes": [
+      "question": "O que é um tooltip de relatório (report tooltip) no Power BI e quando deve ser usado?",
+      "options": [
         "Um texto de ajuda exibido quando o usuário passa o mouse sobre um botão de navegação",
         "Uma página especial do relatório que aparece como um popover ao passar o mouse sobre visuais, mostrando informações adicionais de contexto",
         "Uma dica de ferramenta automática gerada pelo Power BI para todos os visuais",
         "Um campo de descrição adicionado às medidas no modelo de dados"
       ],
-      "correta": 1,
-      "explicacao": "Um tooltip de relatório é uma página especial configurada para aparecer como um popover quando o usuário passa o mouse sobre pontos de dados em visuais. Permite exibir informações detalhadas adicionais sem navegar para outra página."
+      "answer": 1,
+      "explanation": "Um tooltip de relatório é uma página especial configurada para aparecer como um popover quando o usuário passa o mouse sobre pontos de dados em visuais. Permite exibir informações detalhadas adicionais sem navegar para outra página."
     },
     {
-      "pergunta": "Qual visual do Power BI é mais adequado para mostrar a composição de um total e como cada parte contribui para o todo?",
-      "opcoes": [
+      "question": "Qual visual do Power BI é mais adequado para mostrar a composição de um total e como cada parte contribui para o todo?",
+      "options": [
         "Gráfico de linhas",
         "Gráfico de barras empilhadas ou gráfico de pizza",
         "Gráfico de dispersão",
         "Mapa coroplético"
       ],
-      "correta": 1,
-      "explicacao": "Gráficos de barras empilhadas e gráficos de pizza são ideais para mostrar composição – como diferentes categorias contribuem para um total. O gráfico de pizza mostra proporções, enquanto as barras empilhadas permitem comparar totais entre categorias."
+      "answer": 1,
+      "explanation": "Gráficos de barras empilhadas e gráficos de pizza são ideais para mostrar composição – como diferentes categorias contribuem para um total. O gráfico de pizza mostra proporções, enquanto as barras empilhadas permitem comparar totais entre categorias."
     },
     {
-      "pergunta": "Quais são os blocos de construção (building blocks) do Power BI?",
-      "opcoes": [
+      "question": "Quais são os blocos de construção (building blocks) do Power BI?",
+      "options": [
         "Blocos, dashboards, bancos de dados, dispositivos móveis",
         "Visual Studio, C# e arquivos JSON",
         "Conjuntos de dados, Visualizações, Relatórios, Dashboards e Blocos",
         "Consultas, Modelos, Relatórios e Serviços"
       ],
-      "correta": 2,
-      "explicacao": "Os blocos de construção do Power BI são: Conjuntos de dados (Datasets), Visualizações (Visualizations), Relatórios (Reports), Dashboards e Blocos (Tiles)."
+      "answer": 2,
+      "explanation": "Os blocos de construção do Power BI são: Conjuntos de dados (Datasets), Visualizações (Visualizations), Relatórios (Reports), Dashboards e Blocos (Tiles)."
     },
     {
-      "pergunta": "Qual é o principal benefício da análise de dados?",
-      "opcoes": [
+      "question": "Qual é o principal benefício da análise de dados?",
+      "options": [
         "Analytics decisiva",
         "Decisões de negócios informadas",
         "Relatórios complexos",
         "Automatização de processos"
       ],
-      "correta": 1,
-      "explicacao": "O principal benefício da análise de dados é fornecer insights que levam a decisões de negócios mais informadas e baseadas em evidências."
+      "answer": 1,
+      "explanation": "O principal benefício da análise de dados é fornecer insights que levam a decisões de negócios mais informadas e baseadas em evidências."
     },
     {
-      "pergunta": "Uma coleção de visuais prontos, pré-organizados em dashboards e relatórios é chamada de quê no Power BI?",
-      "opcoes": [
+      "question": "Uma coleção de visuais prontos, pré-organizados em dashboards e relatórios é chamada de quê no Power BI?",
+      "options": [
         "A tela (canvas)",
         "Um aplicativo (app)",
         "Um conjunto de dados (dataset)",
         "Uma atualização agendada"
       ],
-      "correta": 1,
-      "explicacao": "Um aplicativo (App) no Power BI é uma coleção de visuais prontos, relatórios e dashboards pré-organizados que podem ser distribuídos aos usuários como um pacote completo."
+      "answer": 1,
+      "explanation": "Um aplicativo (App) no Power BI é uma coleção de visuais prontos, relatórios e dashboards pré-organizados que podem ser distribuídos aos usuários como um pacote completo."
     },
     {
-      "pergunta": "Qual é o fluxo de atividade comum no Power BI?",
-      "opcoes": [
+      "question": "Qual é o fluxo de atividade comum no Power BI?",
+      "options": [
         "Importar dados no Power BI Mobile, criar um relatório e compartilhar com o Power BI Desktop",
         "Importar dados no Power BI Desktop, criar um relatório, publicar no serviço Power BI e visualizar/interagir com os relatórios",
         "Criar um relatório no serviço Power BI, compartilhar com o Power BI Mobile e interagir no Power BI Desktop",
         "Criar um relatório no Power BI Mobile e compartilhar com o Power BI Desktop"
       ],
-      "correta": 1,
-      "explicacao": "O fluxo comum é: 1) Conectar dados no Power BI Desktop, 2) Criar relatórios, 3) Publicar no serviço Power BI, 4) Visualizar e interagir com relatórios e dashboards."
+      "answer": 1,
+      "explanation": "O fluxo comum é: 1) Conectar dados no Power BI Desktop, 2) Criar relatórios, 3) Publicar no serviço Power BI, 4) Visualizar e interagir com relatórios e dashboards."
     },
     {
       "question": "Ao clicar em uma barra de um gráfico, outro visual na mesma página exibe os demais valores em cinza semitransparente, mantendo todos os dados visíveis. Isso é um exemplo de:",
@@ -5131,479 +5131,479 @@ window.questionBank = {
   ],
   "Implementar e Manter": [
     {
-      "pergunta": "After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are modeling data by using Microsoft Power BI. Part of the data model is a large Microsoft SQL Server table named Order that has more than 100 million records. During the development process, you need to import a sample of the data from the Order table. Solution: You add a WHERE clause to the SQL statement. Does this meet the goal?",
-      "opcoes": [
+      "question": "After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are modeling data by using Microsoft Power BI. Part of the data model is a large Microsoft SQL Server table named Order that has more than 100 million records. During the development process, you need to import a sample of the data from the Order table. Solution: You add a WHERE clause to the SQL statement. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Yes The WHERE clause has its effects before the data is imported. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial"
+      "answer": 0,
+      "explanation": "Resposta: Yes The WHERE clause has its effects before the data is imported. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial"
     },
     {
-      "pergunta": "After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are modeling data by using Microsoft Power BI. Part of the data model is a large Microsoft SQL Server table named Order that has more than 100 million records. During the development process, you need to import a sample of the data from the Order table. Solution: You add a WHERE clause to the SQL statement. Does this meet the goal?",
-      "opcoes": [
+      "question": "After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are modeling data by using Microsoft Power BI. Part of the data model is a large Microsoft SQL Server table named Order that has more than 100 million records. During the development process, you need to import a sample of the data from the Order table. Solution: You add a WHERE clause to the SQL statement. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Yes The WHERE clause has its effects before the data is imported. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial"
+      "answer": 0,
+      "explanation": "Resposta: Yes The WHERE clause has its effects before the data is imported. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial"
     },
     {
-      "pergunta": "After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are modeling data by using Microsoft Power BI. Part of the data model is a large Microsoft SQL Server table named Order that has more than 100 million records. During the development process, you need to import a sample of the data from the Order table. Solution: You add a WHERE clause to the SQL statement. Does this meet the goal?",
-      "opcoes": [
+      "question": "After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are modeling data by using Microsoft Power BI. Part of the data model is a large Microsoft SQL Server table named Order that has more than 100 million records. During the development process, you need to import a sample of the data from the Order table. Solution: You add a WHERE clause to the SQL statement. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Yes The WHERE clause has its effects before the data is imported. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial"
+      "answer": 0,
+      "explanation": "Resposta: Yes The WHERE clause has its effects before the data is imported. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial"
     },
     {
-      "pergunta": "After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are modeling data by using Microsoft Power BI. Part of the data model is a large Microsoft SQL Server table named Order that has more than 100 million records. During the development process, you need to import a sample of the data from the Order table. Solution: You add a WHERE clause to the SQL statement. Does this meet the goal?",
-      "opcoes": [
+      "question": "After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are modeling data by using Microsoft Power BI. Part of the data model is a large Microsoft SQL Server table named Order that has more than 100 million records. During the development process, you need to import a sample of the data from the Order table. Solution: You add a WHERE clause to the SQL statement. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Yes The WHERE clause has its effects before the data is imported. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial"
+      "answer": 0,
+      "explanation": "Resposta: Yes The WHERE clause has its effects before the data is imported. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial"
     },
     {
-      "pergunta": "After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are modeling data by using Microsoft Power BI. Part of the data model is a large Microsoft SQL Server table named Order that has more than 100 million records. During the development process, you need to import a sample of the data from the Order table. Solution: You add a WHERE clause to the SQL statement. Does this meet the goal?",
-      "opcoes": [
+      "question": "After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are modeling data by using Microsoft Power BI. Part of the data model is a large Microsoft SQL Server table named Order that has more than 100 million records. During the development process, you need to import a sample of the data from the Order table. Solution: You add a WHERE clause to the SQL statement. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Yes The WHERE clause has its effects before the data is imported. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial"
+      "answer": 0,
+      "explanation": "Resposta: Yes The WHERE clause has its effects before the data is imported. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial"
     },
     {
-      "pergunta": "After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are modeling data by using Microsoft Power BI. Part of the data model is a large Microsoft SQL Server table named Order that has more than 100 million records. During the development process, you need to import a sample of the data from the Order table. Solution: You add a WHERE clause to the SQL statement. Does this meet the goal?",
-      "opcoes": [
+      "question": "After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are modeling data by using Microsoft Power BI. Part of the data model is a large Microsoft SQL Server table named Order that has more than 100 million records. During the development process, you need to import a sample of the data from the Order table. Solution: You add a WHERE clause to the SQL statement. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Yes The WHERE clause has its effects before the data is imported. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial"
+      "answer": 0,
+      "explanation": "Resposta: Yes The WHERE clause has its effects before the data is imported. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial"
     },
     {
-      "pergunta": "After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are modeling data by using Microsoft Power BI. Part of the data model is a large Microsoft SQL Server table named Order that has more than 100 million records. During the development process, you need to import a sample of the data from the Order table. Solution: You add a WHERE clause to the SQL statement. Does this meet the goal?",
-      "opcoes": [
+      "question": "After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are modeling data by using Microsoft Power BI. Part of the data model is a large Microsoft SQL Server table named Order that has more than 100 million records. During the development process, you need to import a sample of the data from the Order table. Solution: You add a WHERE clause to the SQL statement. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Yes The WHERE clause has its effects before the data is imported. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial"
+      "answer": 0,
+      "explanation": "Resposta: Yes The WHERE clause has its effects before the data is imported. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial"
     },
     {
-      "pergunta": "After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are modeling data by using Microsoft Power BI. Part of the data model is a large Microsoft SQL Server table named Order that has more than 100 million records. During the development process, you need to import a sample of the data from the Order table. Solution: You add a WHERE clause to the SQL statement. Does this meet the goal?",
-      "opcoes": [
+      "question": "After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are modeling data by using Microsoft Power BI. Part of the data model is a large Microsoft SQL Server table named Order that has more than 100 million records. During the development process, you need to import a sample of the data from the Order table. Solution: You add a WHERE clause to the SQL statement. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Yes The WHERE clause has its effects before the data is imported. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial"
+      "answer": 0,
+      "explanation": "Resposta: Yes The WHERE clause has its effects before the data is imported. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial"
     },
     {
-      "pergunta": "After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are modeling data by using Microsoft Power BI. Part of the data model is a large Microsoft SQL Server table named Order that has more than 100 million records. During the development process, you need to import a sample of the data from the Order table. Solution: You add a WHERE clause to the SQL statement. Does this meet the goal?",
-      "opcoes": [
+      "question": "After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are modeling data by using Microsoft Power BI. Part of the data model is a large Microsoft SQL Server table named Order that has more than 100 million records. During the development process, you need to import a sample of the data from the Order table. Solution: You add a WHERE clause to the SQL statement. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Yes The WHERE clause has its effects before the data is imported. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial"
+      "answer": 0,
+      "explanation": "Resposta: Yes The WHERE clause has its effects before the data is imported. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial"
     },
     {
-      "pergunta": "After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are modeling data by using Microsoft Power BI. Part of the data model is a large Microsoft SQL Server table named Order that has more than 100 million records. During the development process, you need to import a sample of the data from the Order table. Solution: You add a WHERE clause to the SQL statement. Does this meet the goal?",
-      "opcoes": [
+      "question": "After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen. You are modeling data by using Microsoft Power BI. Part of the data model is a large Microsoft SQL Server table named Order that has more than 100 million records. During the development process, you need to import a sample of the data from the Order table. Solution: You add a WHERE clause to the SQL statement. Does this meet the goal?",
+      "options": [
         "Yes",
         "No"
       ],
-      "correta": 0,
-      "explicacao": "Resposta: Yes The WHERE clause has its effects before the data is imported. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial"
+      "answer": 0,
+      "explanation": "Resposta: Yes The WHERE clause has its effects before the data is imported. Reference: https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial"
     },
     {
-      "pergunta": "Which of the following functions allows you to define filtered views for a specific list of users?",
-      "opcoes": [
+      "question": "Which of the following functions allows you to define filtered views for a specific list of users?",
+      "options": [
         "USER",
         "USERPRINCIPALNAME",
         "ROLE",
         "USERELATIONSHIP"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: USERPRINCIPALNAME Dynamic roles allow you to define filtered views for a specific list of users with the DAX functions USERNAME or USERPRINCIPALNAME."
+      "answer": 1,
+      "explanation": "Resposta: USERPRINCIPALNAME Dynamic roles allow you to define filtered views for a specific list of users with the DAX functions USERNAME or USERPRINCIPALNAME."
     },
     {
-      "pergunta": "Which of the following functions allows you to define filtered views for a specific list of users?",
-      "opcoes": [
+      "question": "Which of the following functions allows you to define filtered views for a specific list of users?",
+      "options": [
         "USER",
         "USERPRINCIPALNAME",
         "ROLE",
         "USERELATIONSHIP"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: USERPRINCIPALNAME Dynamic roles allow you to define filtered views for a specific list of users with the DAX functions USERNAME or USERPRINCIPALNAME."
+      "answer": 1,
+      "explanation": "Resposta: USERPRINCIPALNAME Dynamic roles allow you to define filtered views for a specific list of users with the DAX functions USERNAME or USERPRINCIPALNAME."
     },
     {
-      "pergunta": "Which of the following functions allows you to define filtered views for a specific list of users?",
-      "opcoes": [
+      "question": "Which of the following functions allows you to define filtered views for a specific list of users?",
+      "options": [
         "USER",
         "USERPRINCIPALNAME",
         "ROLE",
         "USERELATIONSHIP"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: USERPRINCIPALNAME Dynamic roles allow you to define filtered views for a specific list of users with the DAX functions USERNAME or USERPRINCIPALNAME."
+      "answer": 1,
+      "explanation": "Resposta: USERPRINCIPALNAME Dynamic roles allow you to define filtered views for a specific list of users with the DAX functions USERNAME or USERPRINCIPALNAME."
     },
     {
-      "pergunta": "Which of the following functions allows you to define filtered views for a specific list of users?",
-      "opcoes": [
+      "question": "Which of the following functions allows you to define filtered views for a specific list of users?",
+      "options": [
         "USER",
         "USERPRINCIPALNAME",
         "ROLE",
         "USERELATIONSHIP"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: USERPRINCIPALNAME Dynamic roles allow you to define filtered views for a specific list of users with the DAX functions USERNAME or USERPRINCIPALNAME."
+      "answer": 1,
+      "explanation": "Resposta: USERPRINCIPALNAME Dynamic roles allow you to define filtered views for a specific list of users with the DAX functions USERNAME or USERPRINCIPALNAME."
     },
     {
-      "pergunta": "Which of the following functions allows you to define filtered views for a specific list of users?",
-      "opcoes": [
+      "question": "Which of the following functions allows you to define filtered views for a specific list of users?",
+      "options": [
         "USER",
         "USERPRINCIPALNAME",
         "ROLE",
         "USERELATIONSHIP"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: USERPRINCIPALNAME Dynamic roles allow you to define filtered views for a specific list of users with the DAX functions USERNAME or USERPRINCIPALNAME."
+      "answer": 1,
+      "explanation": "Resposta: USERPRINCIPALNAME Dynamic roles allow you to define filtered views for a specific list of users with the DAX functions USERNAME or USERPRINCIPALNAME."
     },
     {
-      "pergunta": "Which of the following functions allows you to define filtered views for a specific list of users?",
-      "opcoes": [
+      "question": "Which of the following functions allows you to define filtered views for a specific list of users?",
+      "options": [
         "USER",
         "USERPRINCIPALNAME",
         "ROLE",
         "USERELATIONSHIP"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: USERPRINCIPALNAME Dynamic roles allow you to define filtered views for a specific list of users with the DAX functions USERNAME or USERPRINCIPALNAME."
+      "answer": 1,
+      "explanation": "Resposta: USERPRINCIPALNAME Dynamic roles allow you to define filtered views for a specific list of users with the DAX functions USERNAME or USERPRINCIPALNAME."
     },
     {
-      "pergunta": "Which of the following functions allows you to define filtered views for a specific list of users?",
-      "opcoes": [
+      "question": "Which of the following functions allows you to define filtered views for a specific list of users?",
+      "options": [
         "USER",
         "USERPRINCIPALNAME",
         "ROLE",
         "USERELATIONSHIP"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: USERPRINCIPALNAME Dynamic roles allow you to define filtered views for a specific list of users with the DAX functions USERNAME or USERPRINCIPALNAME."
+      "answer": 1,
+      "explanation": "Resposta: USERPRINCIPALNAME Dynamic roles allow you to define filtered views for a specific list of users with the DAX functions USERNAME or USERPRINCIPALNAME."
     },
     {
-      "pergunta": "Which of the following functions allows you to define filtered views for a specific list of users?",
-      "opcoes": [
+      "question": "Which of the following functions allows you to define filtered views for a specific list of users?",
+      "options": [
         "USER",
         "USERPRINCIPALNAME",
         "ROLE",
         "USERELATIONSHIP"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: USERPRINCIPALNAME Dynamic roles allow you to define filtered views for a specific list of users with the DAX functions USERNAME or USERPRINCIPALNAME."
+      "answer": 1,
+      "explanation": "Resposta: USERPRINCIPALNAME Dynamic roles allow you to define filtered views for a specific list of users with the DAX functions USERNAME or USERPRINCIPALNAME."
     },
     {
-      "pergunta": "Which of the following functions allows you to define filtered views for a specific list of users?",
-      "opcoes": [
+      "question": "Which of the following functions allows you to define filtered views for a specific list of users?",
+      "options": [
         "USER",
         "USERPRINCIPALNAME",
         "ROLE",
         "USERELATIONSHIP"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: USERPRINCIPALNAME Dynamic roles allow you to define filtered views for a specific list of users with the DAX functions USERNAME or USERPRINCIPALNAME."
+      "answer": 1,
+      "explanation": "Resposta: USERPRINCIPALNAME Dynamic roles allow you to define filtered views for a specific list of users with the DAX functions USERNAME or USERPRINCIPALNAME."
     },
     {
-      "pergunta": "Which of the following functions allows you to define filtered views for a specific list of users?",
-      "opcoes": [
+      "question": "Which of the following functions allows you to define filtered views for a specific list of users?",
+      "options": [
         "USER",
         "USERPRINCIPALNAME",
         "ROLE",
         "USERELATIONSHIP"
       ],
-      "correta": 1,
-      "explicacao": "Resposta: USERPRINCIPALNAME Dynamic roles allow you to define filtered views for a specific list of users with the DAX functions USERNAME or USERPRINCIPALNAME."
+      "answer": 1,
+      "explanation": "Resposta: USERPRINCIPALNAME Dynamic roles allow you to define filtered views for a specific list of users with the DAX functions USERNAME or USERPRINCIPALNAME."
     },
     {
-      "pergunta": "Which of the following is a benefit of incremental refresh?",
-      "opcoes": [
+      "question": "Which of the following is a benefit of incremental refresh?",
+      "options": [
         "Faster refresh times",
         "More reliable",
         "Reduced resource usage",
         "All of the above"
       ],
-      "correta": 3,
-      "explicacao": "Resposta: All of the above Incremental Refresh is the process of reloading only the part of a dataset that may change over time and adding it to the rest of the data set that no longer changes, which includes all 3 of these benefits."
+      "answer": 3,
+      "explanation": "Resposta: All of the above Incremental Refresh is the process of reloading only the part of a dataset that may change over time and adding it to the rest of the data set that no longer changes, which includes all 3 of these benefits."
     },
     {
-      "pergunta": "Which of the following is a benefit of incremental refresh?",
-      "opcoes": [
+      "question": "Which of the following is a benefit of incremental refresh?",
+      "options": [
         "Faster refresh times",
         "More reliable",
         "Reduced resource usage",
         "All of the above"
       ],
-      "correta": 3,
-      "explicacao": "Resposta: All of the above Incremental Refresh is the process of reloading only the part of a dataset that may change over time and adding it to the rest of the data set that no longer changes, which includes all 3 of these benefits."
+      "answer": 3,
+      "explanation": "Resposta: All of the above Incremental Refresh is the process of reloading only the part of a dataset that may change over time and adding it to the rest of the data set that no longer changes, which includes all 3 of these benefits."
     },
     {
-      "pergunta": "Which of the following is a benefit of incremental refresh?",
-      "opcoes": [
+      "question": "Which of the following is a benefit of incremental refresh?",
+      "options": [
         "Faster refresh times",
         "More reliable",
         "Reduced resource usage",
         "All of the above"
       ],
-      "correta": 3,
-      "explicacao": "Resposta: All of the above Incremental Refresh is the process of reloading only the part of a dataset that may change over time and adding it to the rest of the data set that no longer changes, which includes all 3 of these benefits."
+      "answer": 3,
+      "explanation": "Resposta: All of the above Incremental Refresh is the process of reloading only the part of a dataset that may change over time and adding it to the rest of the data set that no longer changes, which includes all 3 of these benefits."
     },
     {
-      "pergunta": "Which of the following is a benefit of incremental refresh?",
-      "opcoes": [
+      "question": "Which of the following is a benefit of incremental refresh?",
+      "options": [
         "Faster refresh times",
         "More reliable",
         "Reduced resource usage",
         "All of the above"
       ],
-      "correta": 3,
-      "explicacao": "Resposta: All of the above Incremental Refresh is the process of reloading only the part of a dataset that may change over time and adding it to the rest of the data set that no longer changes, which includes all 3 of these benefits."
+      "answer": 3,
+      "explanation": "Resposta: All of the above Incremental Refresh is the process of reloading only the part of a dataset that may change over time and adding it to the rest of the data set that no longer changes, which includes all 3 of these benefits."
     },
     {
-      "pergunta": "Which of the following is a benefit of incremental refresh?",
-      "opcoes": [
+      "question": "Which of the following is a benefit of incremental refresh?",
+      "options": [
         "Faster refresh times",
         "More reliable",
         "Reduced resource usage",
         "All of the above"
       ],
-      "correta": 3,
-      "explicacao": "Resposta: All of the above Incremental Refresh is the process of reloading only the part of a dataset that may change over time and adding it to the rest of the data set that no longer changes, which includes all 3 of these benefits."
+      "answer": 3,
+      "explanation": "Resposta: All of the above Incremental Refresh is the process of reloading only the part of a dataset that may change over time and adding it to the rest of the data set that no longer changes, which includes all 3 of these benefits."
     },
     {
-      "pergunta": "Which of the following is a benefit of incremental refresh?",
-      "opcoes": [
+      "question": "Which of the following is a benefit of incremental refresh?",
+      "options": [
         "Faster refresh times",
         "More reliable",
         "Reduced resource usage",
         "All of the above"
       ],
-      "correta": 3,
-      "explicacao": "Resposta: All of the above Incremental Refresh is the process of reloading only the part of a dataset that may change over time and adding it to the rest of the data set that no longer changes, which includes all 3 of these benefits."
+      "answer": 3,
+      "explanation": "Resposta: All of the above Incremental Refresh is the process of reloading only the part of a dataset that may change over time and adding it to the rest of the data set that no longer changes, which includes all 3 of these benefits."
     },
     {
-      "pergunta": "Which of the following is a benefit of incremental refresh?",
-      "opcoes": [
+      "question": "Which of the following is a benefit of incremental refresh?",
+      "options": [
         "Faster refresh times",
         "More reliable",
         "Reduced resource usage",
         "All of the above"
       ],
-      "correta": 3,
-      "explicacao": "Resposta: All of the above Incremental Refresh is the process of reloading only the part of a dataset that may change over time and adding it to the rest of the data set that no longer changes, which includes all 3 of these benefits."
+      "answer": 3,
+      "explanation": "Resposta: All of the above Incremental Refresh is the process of reloading only the part of a dataset that may change over time and adding it to the rest of the data set that no longer changes, which includes all 3 of these benefits."
     },
     {
-      "pergunta": "Which of the following is a benefit of incremental refresh?",
-      "opcoes": [
+      "question": "Which of the following is a benefit of incremental refresh?",
+      "options": [
         "Faster refresh times",
         "More reliable",
         "Reduced resource usage",
         "All of the above"
       ],
-      "correta": 3,
-      "explicacao": "Resposta: All of the above Incremental Refresh is the process of reloading only the part of a dataset that may change over time and adding it to the rest of the data set that no longer changes, which includes all 3 of these benefits."
+      "answer": 3,
+      "explanation": "Resposta: All of the above Incremental Refresh is the process of reloading only the part of a dataset that may change over time and adding it to the rest of the data set that no longer changes, which includes all 3 of these benefits."
     },
     {
-      "pergunta": "Which of the following is a benefit of incremental refresh?",
-      "opcoes": [
+      "question": "Which of the following is a benefit of incremental refresh?",
+      "options": [
         "Faster refresh times",
         "More reliable",
         "Reduced resource usage",
         "All of the above"
       ],
-      "correta": 3,
-      "explicacao": "Resposta: All of the above Incremental Refresh is the process of reloading only the part of a dataset that may change over time and adding it to the rest of the data set that no longer changes, which includes all 3 of these benefits."
+      "answer": 3,
+      "explanation": "Resposta: All of the above Incremental Refresh is the process of reloading only the part of a dataset that may change over time and adding it to the rest of the data set that no longer changes, which includes all 3 of these benefits."
     },
     {
-      "pergunta": "Which of the following is a benefit of incremental refresh?",
-      "opcoes": [
+      "question": "Which of the following is a benefit of incremental refresh?",
+      "options": [
         "Faster refresh times",
         "More reliable",
         "Reduced resource usage",
         "All of the above"
       ],
-      "correta": 3,
-      "explicacao": "Resposta: All of the above Incremental Refresh is the process of reloading only the part of a dataset that may change over time and adding it to the rest of the data set that no longer changes, which includes all 3 of these benefits."
+      "answer": 3,
+      "explanation": "Resposta: All of the above Incremental Refresh is the process of reloading only the part of a dataset that may change over time and adding it to the rest of the data set that no longer changes, which includes all 3 of these benefits."
     },
     {
-      "pergunta": "O Report1.pbix tem custom visuals. Report2.pbix tem Row-Level Security. Report3.pbix é DirectQuery. Quais suportam Publish to Web (publicação pública não autenticada)?",
-      "opcoes": [
+      "question": "O Report1.pbix tem custom visuals. Report2.pbix tem Row-Level Security. Report3.pbix é DirectQuery. Quais suportam Publish to Web (publicação pública não autenticada)?",
+      "options": [
         "Somente Report1.pbix",
         "Report1.pbix e Report3.pbix",
         "Todos suportam",
         "Somente Report2.pbix"
       ],
-      "correta": 1,
-      "explicacao": "O recurso 'Publicar na Web (público)' não suporta relatórios que implementam Row-Level Security (RLS) porque exporia o conteúdo a qualquer pessoa anonimamente."
+      "answer": 1,
+      "explanation": "O recurso 'Publicar na Web (público)' não suporta relatórios que implementam Row-Level Security (RLS) porque exporia o conteúdo a qualquer pessoa anonimamente."
     },
     {
-      "pergunta": "Uma dashboard tem 10 visuais. Os usuários reclamam que as consultas P&R (Q&A) de linguagem natural não entendem os nomes que eles usam na empresa. Onde você configura a integração nativa (sinônimos) se estiver usando Service + DirectQuery?",
-      "opcoes": [
+      "question": "Uma dashboard tem 10 visuais. Os usuários reclamam que as consultas P&R (Q&A) de linguagem natural não entendem os nomes que eles usam na empresa. Onde você configura a integração nativa (sinônimos) se estiver usando Service + DirectQuery?",
+      "options": [
         "A partir do painel de Vendas, defini-lo como Favorito.",
         "Das configurações de idioma do workspace.",
         "Nas propriedades dos datasets, modificar as configurações de Q&A.",
         "A partir das propriedades do dashboard, modificar as configurações."
       ],
-      "correta": 2,
-      "explicacao": "O suporte a P&R é gerenciado no nível do Conjunto de Dados (Dataset), permitindo configurações e indexações especiais, bem como adicionar sinônimos via modelo."
+      "answer": 2,
+      "explanation": "O suporte a P&R é gerenciado no nível do Conjunto de Dados (Dataset), permitindo configurações e indexações especiais, bem como adicionar sinônimos via modelo."
     },
     {
-      "pergunta": "Um usuário quer receber notificações diárias automáticas com o valor mostrado em um cartão no painel. O usuário tem função de Espectador (Viewer). Como fazer isso?",
-      "opcoes": [
+      "question": "Um usuário quer receber notificações diárias automáticas com o valor mostrado em um cartão no painel. O usuário tem função de Espectador (Viewer). Como fazer isso?",
+      "options": [
         "Criar um alerta de dados (Data Alert).",
         "Criar uma assinatura (Subscription) para o e-mail dele.",
         "Compartilhar o dashboard marcando a opção de notificação diária.",
         "Mencioná-lo em um comentário diário automático."
       ],
-      "correta": 1,
-      "explicacao": "Assinaturas de email enviam o relatório/painel por e-mail em uma frequência definida (ex: diariamente). Alertas de dados não enviam automaticamente todo dia a não ser que o dado mude e cruze o limite, enquanto que a assinatura entrega relatórios regulares garantidos."
+      "answer": 1,
+      "explanation": "Assinaturas de email enviam o relatório/painel por e-mail em uma frequência definida (ex: diariamente). Alertas de dados não enviam automaticamente todo dia a não ser que o dado mude e cruze o limite, enquanto que a assinatura entrega relatórios regulares garantidos."
     },
     {
-      "pergunta": "O que é necessário instalar primeiro para desenvolver seus próprios visuais personalizados (custom visuals) programando do zero?",
-      "opcoes": [
+      "question": "O que é necessário instalar primeiro para desenvolver seus próprios visuais personalizados (custom visuals) programando do zero?",
+      "options": [
         "Visual Studio 2022",
         "Node.js",
         "Azure PowerShell",
         "jQuery"
       ],
-      "correta": 1,
-      "explicacao": "Para construir Custom Visuals com ferramentas CLI da Microsoft (pbiviz), você precisa do Node.js como plataforma de execução das ferramentas."
+      "answer": 1,
+      "explanation": "Para construir Custom Visuals com ferramentas CLI da Microsoft (pbiviz), você precisa do Node.js como plataforma de execução das ferramentas."
     },
     {
-      "pergunta": "Qual é a finalidade da certificação de conjuntos de dados e relatórios no Power BI?",
-      "opcoes": [
+      "question": "Qual é a finalidade da certificação de conjuntos de dados e relatórios no Power BI?",
+      "options": [
         "Proteger os dados com criptografia avançada",
         "Indicar que o conteúdo foi revisado e aprovado como confiável, preciso e pronto para uso pela organização, aumentando a confiança dos usuários",
         "Certificar que o relatório está em conformidade com LGPD/GDPR",
         "Validar automaticamente as fórmulas DAX do modelo"
       ],
-      "correta": 1,
-      "explicacao": "A certificação no Power BI é um processo pelo qual administradores ou usuários autorizados marcam conjuntos de dados e relatórios como 'Certificado', indicando que foram revisados, são confiáveis e representam a fonte oficial de dados para a organização."
+      "answer": 1,
+      "explanation": "A certificação no Power BI é um processo pelo qual administradores ou usuários autorizados marcam conjuntos de dados e relatórios como 'Certificado', indicando que foram revisados, são confiáveis e representam a fonte oficial de dados para a organização."
     },
     {
-      "pergunta": "O que é o Power BI Embedded e qual é seu caso de uso principal?",
-      "opcoes": [
+      "question": "O que é o Power BI Embedded e qual é seu caso de uso principal?",
+      "options": [
         "Uma versão do Power BI para dispositivos móveis offline",
         "Uma API que permite incorporar relatórios e dashboards do Power BI em aplicações customizadas para usuários que não precisam de conta Power BI",
         "Uma funcionalidade para criar dashboards embutidos em emails",
         "Um conector para incorporar dados de ERPs externos ao Power BI"
       ],
-      "correta": 1,
-      "explicacao": "Power BI Embedded permite que desenvolvedores incorporem relatórios e dashboards do Power BI em suas próprias aplicações usando APIs. Os usuários finais não precisam de conta Power BI, pois a autenticação é feita pela aplicação host."
+      "answer": 1,
+      "explanation": "Power BI Embedded permite que desenvolvedores incorporem relatórios e dashboards do Power BI em suas próprias aplicações usando APIs. Os usuários finais não precisam de conta Power BI, pois a autenticação é feita pela aplicação host."
     },
     {
-      "pergunta": "O que é um conjunto de dados compartilhado (Shared Dataset) no Power BI e qual é seu benefício principal?",
-      "opcoes": [
+      "question": "O que é um conjunto de dados compartilhado (Shared Dataset) no Power BI e qual é seu benefício principal?",
+      "options": [
         "Um dataset disponível publicamente na internet",
         "Um conjunto de dados certificado e central que múltiplos relatórios podem usar como fonte, promovendo consistência e reduzindo duplicação de dados",
         "Um dataset exportado para uso em Excel",
         "Uma funcionalidade Premium para compartilhar dados entre organizações"
       ],
-      "correta": 1,
-      "explicacao": "Conjuntos de dados compartilhados permitem que múltiplos relatórios se conectem ao mesmo modelo de dados central. Isso promove uma 'única fonte da verdade', garante consistência de métricas entre relatórios e reduz duplicação de modelos."
+      "answer": 1,
+      "explanation": "Conjuntos de dados compartilhados permitem que múltiplos relatórios se conectem ao mesmo modelo de dados central. Isso promove uma 'única fonte da verdade', garante consistência de métricas entre relatórios e reduz duplicação de modelos."
     },
     {
-      "pergunta": "O que são pipelines de implantação (Deployment Pipelines) no Power BI Service e para que servem?",
-      "opcoes": [
+      "question": "O que são pipelines de implantação (Deployment Pipelines) no Power BI Service e para que servem?",
+      "options": [
         "Uma ferramenta de CI/CD para código Python integrada ao Power BI",
         "Uma funcionalidade que permite gerenciar o ciclo de vida dos conteúdos do Power BI (relatórios, dashboards, conjuntos de dados) em estágios de Desenvolvimento, Teste e Produção",
         "Um sistema de backup automático de relatórios",
         "Uma API para publicação automatizada de relatórios via linha de comando"
       ],
-      "correta": 1,
-      "explicacao": "Pipelines de Implantação permitem criar fluxos de trabalho de Desenvolvimento → Teste → Produção para conteúdo Power BI. Você pode comparar estágios, promover conteúdo entre estágios e gerenciar regras de dataset por estágio."
+      "answer": 1,
+      "explanation": "Pipelines de Implantação permitem criar fluxos de trabalho de Desenvolvimento → Teste → Produção para conteúdo Power BI. Você pode comparar estágios, promover conteúdo entre estágios e gerenciar regras de dataset por estágio."
     },
     {
-      "pergunta": "Como você pode compartilhar um relatório do Power BI com usuários externos à sua organização?",
-      "opcoes": [
+      "question": "Como você pode compartilhar um relatório do Power BI com usuários externos à sua organização?",
+      "options": [
         "Apenas exportando o arquivo .pbix e enviando por e-mail",
         "Usando o recurso 'Publicar na Web' para compartilhamento público, ou Azure B2B para compartilhamento seguro com usuários externos com identidade Azure AD",
         "Não é possível compartilhar relatórios com usuários externos",
         "Apenas convertendo o relatório para PDF e compartilhando"
       ],
-      "correta": 1,
-      "explicacao": "Para compartilhar externamente: 'Publicar na Web' torna o relatório acessível publicamente (sem autenticação), ou Azure Active Directory B2B permite compartilhamento seguro com usuários externos convidados que possuem identidade Azure AD."
+      "answer": 1,
+      "explanation": "Para compartilhar externamente: 'Publicar na Web' torna o relatório acessível publicamente (sem autenticação), ou Azure Active Directory B2B permite compartilhamento seguro com usuários externos convidados que possuem identidade Azure AD."
     },
     {
-      "pergunta": "Qual é a diferença entre um workspace padrão e um workspace Premium no Power BI Service?",
-      "opcoes": [
+      "question": "Qual é a diferença entre um workspace padrão e um workspace Premium no Power BI Service?",
+      "options": [
         "Workspaces Premium suportam mais usuários simultâneos e permitem publicar aplicativos",
         "Workspaces Premium oferecem capacidade dedicada, sem compartilhamento de recursos, permitindo conjuntos de dados maiores, atualizações mais frequentes e recursos avançados como paginação de relatórios",
         "Não há diferença técnica, apenas preço diferente",
         "Workspaces Premium permitem criar mais de 10 relatórios"
       ],
-      "correta": 1,
-      "explicacao": "Workspaces Premium usam capacidade dedicada (não compartilhada), o que oferece desempenho consistente, conjuntos de dados maiores (até 400GB vs 1GB), até 48 atualizações diárias e acesso gratuito para usuários visualizadores sem licença Pro."
+      "answer": 1,
+      "explanation": "Workspaces Premium usam capacidade dedicada (não compartilhada), o que oferece desempenho consistente, conjuntos de dados maiores (até 400GB vs 1GB), até 48 atualizações diárias e acesso gratuito para usuários visualizadores sem licença Pro."
     },
     {
-      "pergunta": "O que é RLS (Row-Level Security) no Power BI e como funciona?",
-      "opcoes": [
+      "question": "O que é RLS (Row-Level Security) no Power BI e como funciona?",
+      "options": [
         "Um método de criptografia de dados em repouso no serviço Power BI",
         "Um mecanismo que restringe o acesso aos dados no nível de linha, filtrando os dados que cada usuário pode ver com base em regras definidas",
         "Uma funcionalidade para proteger as credenciais de fonte de dados",
         "Um controle de acesso que determina quem pode editar relatórios"
       ],
-      "correta": 1,
-      "explicacao": "RLS (Row-Level Security) é um mecanismo que restringe o acesso aos dados ao nível de linha. Você define regras DAX que filtram os dados retornados para cada usuário com base em sua identidade ou papel, garantindo que usuários vejam apenas os dados a que têm direito."
+      "answer": 1,
+      "explanation": "RLS (Row-Level Security) é um mecanismo que restringe o acesso aos dados ao nível de linha. Você define regras DAX que filtram os dados retornados para cada usuário com base em sua identidade ou papel, garantindo que usuários vejam apenas os dados a que têm direito."
     },
     {
-      "pergunta": "Qual método de atualização do Power BI permite que apenas os dados novos ou modificados sejam processados, em vez de reprocessar todos os dados?",
-      "opcoes": [
+      "question": "Qual método de atualização do Power BI permite que apenas os dados novos ou modificados sejam processados, em vez de reprocessar todos os dados?",
+      "options": [
         "Atualização completa (Full refresh)",
         "Atualização incremental (Incremental refresh)",
         "Atualização programada (Scheduled refresh)",
         "Atualização manual (Manual refresh)"
       ],
-      "correta": 1,
-      "explicacao": "A atualização incremental processa apenas os dados novos ou modificados desde a última atualização, em vez de reprocessar todos os dados. Isso reduz o tempo de atualização e o consumo de recursos, especialmente para grandes conjuntos de dados."
+      "answer": 1,
+      "explanation": "A atualização incremental processa apenas os dados novos ou modificados desde a última atualização, em vez de reprocessar todos os dados. Isso reduz o tempo de atualização e o consumo de recursos, especialmente para grandes conjuntos de dados."
     },
     {
-      "pergunta": "O que é o gateway de dados do Power BI e quando ele é necessário?",
-      "opcoes": [
+      "question": "O que é o gateway de dados do Power BI e quando ele é necessário?",
+      "options": [
         "Um aplicativo para criar relatórios em dispositivos móveis",
         "Um software instalado em servidores locais para permitir que o serviço Power BI acesse fontes de dados locais (on-premises)",
         "Uma API para integração com sistemas externos",
         "Um serviço de criptografia para dados em trânsito"
       ],
-      "correta": 1,
-      "explicacao": "O gateway de dados do Power BI é um software instalado em servidores locais que serve como ponte entre o serviço Power BI na nuvem e fontes de dados locais (on-premises). É necessário para atualização agendada de dados locais."
+      "answer": 1,
+      "explanation": "O gateway de dados do Power BI é um software instalado em servidores locais que serve como ponte entre o serviço Power BI na nuvem e fontes de dados locais (on-premises). É necessário para atualização agendada de dados locais."
     },
     {
-      "pergunta": "Qual tarefa do analista de dados tem impacto crítico no desempenho dos relatórios e análise de dados?",
-      "opcoes": [
+      "question": "Qual tarefa do analista de dados tem impacto crítico no desempenho dos relatórios e análise de dados?",
+      "options": [
         "Analisar",
         "Visualizar",
         "Modelar",
         "Publicar"
       ],
-      "correta": 2,
-      "explicacao": "Modelar dados é a tarefa com maior impacto crítico no desempenho. Um modelo bem projetado com relacionamentos adequados, tabelas de dimensão e medidas otimizadas melhora significativamente o desempenho dos relatórios."
+      "answer": 2,
+      "explanation": "Modelar dados é a tarefa com maior impacto crítico no desempenho. Um modelo bem projetado com relacionamentos adequados, tabelas de dimensão e medidas otimizadas melhora significativamente o desempenho dos relatórios."
     },
     {
-      "pergunta": "Qual função de dados permite que os analistas habilitem recursos avançados de análise por meio de relatórios e visualizações?",
-      "opcoes": [
+      "question": "Qual função de dados permite que os analistas habilitem recursos avançados de análise por meio de relatórios e visualizações?",
+      "options": [
         "Analista de dados",
         "Cientista de dados",
         "Engenheiro de dados",
         "Administrador de banco de dados"
       ],
-      "correta": 0,
-      "explicacao": "O Analista de dados é a função que habilita recursos avançados de análise por meio de relatórios e visualizações, transformando dados brutos em insights acionáveis para as organizações."
+      "answer": 0,
+      "explanation": "O Analista de dados é a função que habilita recursos avançados de análise por meio de relatórios e visualizações, transformando dados brutos em insights acionáveis para as organizações."
     },
     {
       "question": "A empresa quer um processo formal para promover relatórios por ambientes: Desenvolvimento → Teste → Produção no Power BI Service, com controle de versão e comparação de conteúdo. Qual feature implementa isso?",

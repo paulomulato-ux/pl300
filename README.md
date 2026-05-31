@@ -65,6 +65,11 @@ E o diretório de saída como:
 docs
 ```
 
+O site será acessível em:
+
+- `https://www.paulomulato.com.br/pl300`
+- e o acesso `https://www.paulomulato.com.br` será redirecionado automaticamente para `/pl300`
+
 > Se você preferir, também pode usar `npm run build:docs` localmente para gerar o site.
 
 ## Estrutura do projeto

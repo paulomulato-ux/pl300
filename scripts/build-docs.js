@@ -57,6 +57,7 @@ function renderPage(title, body, navHtml) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/pl300/">
   <title>${title} | PL-300 Portal</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -100,6 +101,7 @@ ${links}
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/pl300/">
   <title>PL-300 Portal Documentation</title>
   <link rel="stylesheet" href="style.css">
 </head>

@@ -44,6 +44,15 @@ function formatTime(seconds) {
   return `${m}:${s}`;
 }
 
+function normalizeQuestion(raw) {
+  return {
+    question: raw.question || raw.pergunta || '',
+    options: raw.options || raw.opcoes || [],
+    answer: raw.answer !== undefined ? raw.answer : raw.correta,
+    explanation: raw.explanation || raw.explicacao || ''
+  };
+}
+
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
@@ -102,7 +111,7 @@ function startQuiz() {
     let pool = [];
     state.selectedDomains.forEach(domain => {
       (questionBank[domain] || []).forEach(q => {
-        pool.push({ ...q, domain });
+        pool.push({ ...normalizeQuestion(q), domain });
       });
     });
 
