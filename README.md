@@ -50,6 +50,11 @@ npm run build:docs
 
 O site sai em `docs/`.
 
+### Publicar no GitHub Pages
+Este repositório já inclui uma ação do GitHub para publicar o conteúdo de `docs/` no branch `gh-pages` automaticamente sempre que houver push no `main`.
+
+Se preferir publicar manualmente, configure o GitHub Pages para usar a pasta `docs/`.
+
 ## Estrutura do projeto
 
 - `index.html` — portal principal do material de estudo
