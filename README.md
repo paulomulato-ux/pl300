@@ -50,10 +50,22 @@ npm run build:docs
 
 O site sai em `docs/`.
 
-### Publicar no GitHub Pages
-Este repositório já inclui uma ação do GitHub para publicar o conteúdo de `docs/` no branch `gh-pages` automaticamente sempre que houver push no `main`.
+### Publicar no Vercel
+Este repositório já inclui uma configuração `vercel.json` para publicar o site estático a partir da pasta `docs/`.
 
-Se preferir publicar manualmente, configure o GitHub Pages para usar a pasta `docs/`.
+No Vercel, defina o comando de build como:
+
+```bash
+npm run build
+```
+
+E o diretório de saída como:
+
+```text
+docs
+```
+
+> Se você preferir, também pode usar `npm run build:docs` localmente para gerar o site.
 
 ## Estrutura do projeto
 

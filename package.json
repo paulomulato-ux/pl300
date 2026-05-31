@@ -6,6 +6,7 @@
   "main": "auto_scraper.js",
   "scripts": {
     "test": "echo \"No tests specified\" && exit 0",
+    "build": "npm run build:docs",
     "scrape": "node auto_scraper.js",
     "build:questions": "node scripts/build-questions.js",
     "convert:md": "node scripts/convert-html-to-md.js",
