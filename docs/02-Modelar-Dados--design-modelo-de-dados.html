@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02 Modelar Dados — design modelo de dados | PL-300 Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html">PL-300 Portal</a>
+      </div>
+      <div class="sidebar-nav">
+    <div class="nav-group">
+      <h3>01 Preparar Dados</h3>
+      <ul>
+      <li><a href="01-Preparar-Dados--carregar-dados.html">carregar dados</a></li>
+      <li><a href="01-Preparar-Dados--obter-dados-power-bi.html">obter dados power bi</a></li>
+      <li><a href="01-Preparar-Dados--resumo.html">resumo</a></li>
+      <li><a href="01-Preparar-Dados--transformar-e-limpar-dados.html">transformar e limpar dados</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>02 Modelar Dados</h3>
+      <ul>
+      <li><a href="02-Modelar-Dados--boas-praticas-modelagem.html">boas praticas modelagem</a></li>
+      <li><a href="02-Modelar-Dados--design-modelo-de-dados.html">design modelo de dados</a></li>
+      <li><a href="02-Modelar-Dados--resumo.html">resumo</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>03 Visualizar e Analisar</h3>
+      <ul>
+      <li><a href="03-Visualizar-e-Analisar--analisar-performance-relatorios.html">analisar performance relatorios</a></li>
+      <li><a href="03-Visualizar-e-Analisar--criar-relatorios.html">criar relatorios</a></li>
+      <li><a href="03-Visualizar-e-Analisar--resumo.html">resumo</a></li>
+      <li><a href="03-Visualizar-e-Analisar--visualizacoes-avancadas.html">visualizacoes avancadas</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>04 Implementar e Manter Entregaveis</h3>
+      <ul>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--compartilhamento-e-governanca.html">compartilhamento e governanca</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--gerenciar-workspaces.html">gerenciar workspaces</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--resumo.html">resumo</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--seguranca-RLS.html">seguranca RLS</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>05 Labs Oficiais</h3>
+      <ul>
+      <li><a href="05-Labs-Oficiais--guia-labs.html">guia labs</a></li>
+      <li><a href="05-Labs-Oficiais--links-uteis.html">links uteis</a></li>
+      </ul>
+    </div>
+      </div>
+    </aside>
+    <main class="content">
+      <header class="page-header">
+        <h1>02 Modelar Dados — design modelo de dados</h1>
+        <a class="button" href="index.html">Voltar para Início</a>
+      </header>
+      <article class="markdown-body">
+<p>  design-modelo-de-dados body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; } .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); } pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; } code { font-family: &quot;Courier New&quot;, Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; } img { max-width: 100%; height: auto; display: block; margin: 10px 0; } table { width: 100%; border-collapse: collapse; margin-bottom: 1em; } th, td { border: 1px solid #ddd; padding: 8px; text-align: left; } th { background-color: #f2f2f2; }</p>
+<h1>🏗️ Design de Modelo de Dados</h1>
+<p>Este módulo aprofunda conceitos de <strong>modelagem dimensional</strong>, essenciais para o desempenho e clareza do modelo no Power BI.</p>
+<hr>
+<h2>🔹 Modelo Estrela (Star Schema)</h2>
+<p>A estrutura recomendada pela Microsoft para BI:</p>
+<ul>
+<li><strong>Tabela Fato</strong> → transações, valores numéricos, chaves estrangeiras</li>
+<li><strong>Tabelas Dimensão</strong> → contexto, atributos, categorias</li>
+<li><strong>Relacionamentos 1:* (um para muitos)</strong></li>
+</ul>
+<p>Benefícios:</p>
+<ul>
+<li>Melhor compressão de dados</li>
+<li>Menor complexidade</li>
+<li>Melhor desempenho em DAX</li>
+<li>Melhor uso de agregações</li>
+</ul>
+<hr>
+<h2>🔹 Tabela Fato – características</h2>
+<ul>
+<li>Alta granularidade</li>
+<li>Muitas linhas</li>
+<li>Poucas colunas</li>
+<li>Colunas numéricas e chaves</li>
+</ul>
+<p>Exemplos:</p>
+<ul>
+<li>Fato Vendas</li>
+<li>Fato Estoque</li>
+<li>Fato Transações</li>
+</ul>
+<hr>
+<h2>🔹 Tabelas Dimensão – características</h2>
+<ul>
+<li>Muitas colunas</li>
+<li>Poucas linhas</li>
+<li>Atributos descritivos</li>
+<li>Hierarquias (Ano &gt; Mês &gt; Dia, Região &gt; Estado &gt; Cidade)</li>
+</ul>
+<hr>
+<h2>🔹 Tipos de Cardinalidade</h2>
+<p>Tipo</p>
+<p>Uso</p>
+<p><strong>1:* (um para muitos)</strong></p>
+<p>padrão ideal</p>
+<p><strong>*:1 (muitos para um)</strong></p>
+<p>equivalente ao 1:* invertido</p>
+<p><strong><em>:</em> (muitos para muitos)</strong></p>
+<p>apenas quando necessário</p>
+<hr>
+<h2>🔹 Direção de Filtro</h2>
+<p>Direção</p>
+<p>Descrição</p>
+<p><strong>Single</strong></p>
+<p>ideal, mais eficiente</p>
+<p><strong>Both</strong></p>
+<p>usar com cautela, pode causar loops</p>
+<hr>
+<h2>🔹 Relacionamentos Ativos e Inativos</h2>
+<ul>
+<li><strong>Ativo</strong> → usado por padrão</li>
+<li><strong>Inativo</strong> → habilitado via <code>USERELATIONSHIP()</code></li>
+</ul>
+<p>Exemplo:</p>
+<pre><code>Vendas Ano Fiscal =
+CALCULATE(
+    [Total Vendas],
+    USERELATIONSHIP(DimCalendario[AnoFiscal], FatoVendas[Data])
+)
+</code></pre>
+<hr>
+<h2>🔹 Tabelas de Datas</h2>
+<p>Requisitos:</p>
+<ul>
+<li>Coluna contínua (sem buracos)</li>
+<li>Sem horários</li>
+<li>Cobrir todo o intervalo do dataset</li>
+<li>Marcar como <strong>Date Table</strong></li>
+</ul>
+<hr>
+<h2>📚 Links Oficiais</h2>
+<ul>
+<li>Star Schema: <a href="https://learn.microsoft.com/power-bi/guidance/star-schema">https://learn.microsoft.com/power-bi/guidance/star-schema</a></li>
+<li>Relationships: <a href="https://learn.microsoft.com/power-bi/transform-model/desktop-relationships">https://learn.microsoft.com/power-bi/transform-model/desktop-relationships</a></li>
+</ul>
+
+      </article>
+    </main>
+  </div>
+</body>
+</html>

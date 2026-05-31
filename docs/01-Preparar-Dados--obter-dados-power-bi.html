@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01 Preparar Dados — obter dados power bi | PL-300 Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html">PL-300 Portal</a>
+      </div>
+      <div class="sidebar-nav">
+    <div class="nav-group">
+      <h3>01 Preparar Dados</h3>
+      <ul>
+      <li><a href="01-Preparar-Dados--carregar-dados.html">carregar dados</a></li>
+      <li><a href="01-Preparar-Dados--obter-dados-power-bi.html">obter dados power bi</a></li>
+      <li><a href="01-Preparar-Dados--resumo.html">resumo</a></li>
+      <li><a href="01-Preparar-Dados--transformar-e-limpar-dados.html">transformar e limpar dados</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>02 Modelar Dados</h3>
+      <ul>
+      <li><a href="02-Modelar-Dados--boas-praticas-modelagem.html">boas praticas modelagem</a></li>
+      <li><a href="02-Modelar-Dados--design-modelo-de-dados.html">design modelo de dados</a></li>
+      <li><a href="02-Modelar-Dados--resumo.html">resumo</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>03 Visualizar e Analisar</h3>
+      <ul>
+      <li><a href="03-Visualizar-e-Analisar--analisar-performance-relatorios.html">analisar performance relatorios</a></li>
+      <li><a href="03-Visualizar-e-Analisar--criar-relatorios.html">criar relatorios</a></li>
+      <li><a href="03-Visualizar-e-Analisar--resumo.html">resumo</a></li>
+      <li><a href="03-Visualizar-e-Analisar--visualizacoes-avancadas.html">visualizacoes avancadas</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>04 Implementar e Manter Entregaveis</h3>
+      <ul>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--compartilhamento-e-governanca.html">compartilhamento e governanca</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--gerenciar-workspaces.html">gerenciar workspaces</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--resumo.html">resumo</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--seguranca-RLS.html">seguranca RLS</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>05 Labs Oficiais</h3>
+      <ul>
+      <li><a href="05-Labs-Oficiais--guia-labs.html">guia labs</a></li>
+      <li><a href="05-Labs-Oficiais--links-uteis.html">links uteis</a></li>
+      </ul>
+    </div>
+      </div>
+    </aside>
+    <main class="content">
+      <header class="page-header">
+        <h1>01 Preparar Dados — obter dados power bi</h1>
+        <a class="button" href="index.html">Voltar para Início</a>
+      </header>
+      <article class="markdown-body">
+<p>  obter-dados-power-bi body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; } .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); } pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; } code { font-family: &quot;Courier New&quot;, Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; } img { max-width: 100%; height: auto; display: block; margin: 10px 0; } table { width: 100%; border-collapse: collapse; margin-bottom: 1em; } th, td { border: 1px solid #ddd; padding: 8px; text-align: left; } th { background-color: #f2f2f2; }</p>
+<h1>📘 Obter Dados no Power BI</h1>
+<p>Este arquivo reúne o conteúdo essencial sobre <strong>conexão e importação de dados</strong>, conforme os requisitos da certificação PL-300.</p>
+<hr>
+<h2>🔹 Tipos de Conexão</h2>
+<h3><strong>1. Arquivos</strong></h3>
+<ul>
+<li>Excel (.xlsx)</li>
+<li>CSV/TXT</li>
+<li>JSON</li>
+<li>XML</li>
+<li>Parquet</li>
+</ul>
+<h3><strong>2. Bancos de Dados</strong></h3>
+<ul>
+<li>SQL Server</li>
+<li>Oracle</li>
+<li>PostgreSQL</li>
+<li>MySQL</li>
+<li>Azure SQL</li>
+<li>Fabric Lakehouse / Warehouse</li>
+</ul>
+<h3><strong>3. Serviços Online</strong></h3>
+<ul>
+<li>SharePoint</li>
+<li>OneDrive</li>
+<li>OData Feed</li>
+<li>Microsoft Exchange</li>
+<li>Dynamics 365</li>
+<li>Dataverse</li>
+</ul>
+<h3><strong>4. Outros</strong></h3>
+<ul>
+<li>Web scraping (Get data &gt; Web)</li>
+<li>APIs REST</li>
+<li>Pastas (&quot;Folder&quot;) para ingestão em lote</li>
+</ul>
+<hr>
+<h2>🔹 Import x DirectQuery x Live Connection</h2>
+<p>Método</p>
+<p>Características</p>
+<p>Quando usar</p>
+<p><strong>Import</strong></p>
+<p>Dados ficam no modelo</p>
+<p>Melhor desempenho; datasets pequenos/médios</p>
+<p><strong>DirectQuery</strong></p>
+<p>Dados permanecem na fonte</p>
+<p>Dados muito grandes ou quase em tempo real</p>
+<p><strong>Live Connection</strong></p>
+<p>Conexão com SSAS, Fabric ou Power BI semantic model</p>
+<p>Modelos centralizados, governança</p>
+<hr>
+<h2>🔹 Conectando a pastas (Folder)</h2>
+<p>Recurso útil para carregar múltiplos arquivos com a mesma estrutura. Passos:</p>
+<ol>
+<li>Get Data → Folder</li>
+<li><strong>Combine &amp; Transform</strong></li>
+<li>Aplicar filtros sobre metadados se necessário</li>
+<li>Limpar e padronizar colunas</li>
+</ol>
+<hr>
+<h2>🔹 Conexão com Web/API</h2>
+<p>No Power BI Desktop:</p>
+<ol>
+<li>Get Data → Web</li>
+<li>Informar URL</li>
+<li>Lidar com autenticação (Anonymous, Basic, OAuth)</li>
+<li>Converter JSON → tabelas</li>
+</ol>
+<hr>
+<h2>🔹 Boas Práticas ao Obter Dados</h2>
+<ul>
+<li>Sempre revisar tipos de dados</li>
+<li>Evitar colunas desnecessárias</li>
+<li>Centralizar parâmetros (URL, pastas, datas, tokens)</li>
+<li>Utilizar <em>Query folding</em> sempre que possível</li>
+<li>Documentar transformações importantes</li>
+</ul>
+<hr>
+<h2>📚 Links Oficiais</h2>
+<ul>
+<li>Supported data sources:<br><a href="https://learn.microsoft.com/power-bi/connect-data/desktop-data-sources">https://learn.microsoft.com/power-bi/connect-data/desktop-data-sources</a></li>
+<li>DirectQuery:<br><a href="https://learn.microsoft.com/power-bi/connect-data/desktop-directquery-about">https://learn.microsoft.com/power-bi/connect-data/desktop-directquery-about</a></li>
+</ul>
+<hr>
+
+      </article>
+    </main>
+  </div>
+</body>
+</html>

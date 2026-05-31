@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04 Implementar e Manter Entregaveis — seguranca RLS | PL-300 Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html">PL-300 Portal</a>
+      </div>
+      <div class="sidebar-nav">
+    <div class="nav-group">
+      <h3>01 Preparar Dados</h3>
+      <ul>
+      <li><a href="01-Preparar-Dados--carregar-dados.html">carregar dados</a></li>
+      <li><a href="01-Preparar-Dados--obter-dados-power-bi.html">obter dados power bi</a></li>
+      <li><a href="01-Preparar-Dados--resumo.html">resumo</a></li>
+      <li><a href="01-Preparar-Dados--transformar-e-limpar-dados.html">transformar e limpar dados</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>02 Modelar Dados</h3>
+      <ul>
+      <li><a href="02-Modelar-Dados--boas-praticas-modelagem.html">boas praticas modelagem</a></li>
+      <li><a href="02-Modelar-Dados--design-modelo-de-dados.html">design modelo de dados</a></li>
+      <li><a href="02-Modelar-Dados--resumo.html">resumo</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>03 Visualizar e Analisar</h3>
+      <ul>
+      <li><a href="03-Visualizar-e-Analisar--analisar-performance-relatorios.html">analisar performance relatorios</a></li>
+      <li><a href="03-Visualizar-e-Analisar--criar-relatorios.html">criar relatorios</a></li>
+      <li><a href="03-Visualizar-e-Analisar--resumo.html">resumo</a></li>
+      <li><a href="03-Visualizar-e-Analisar--visualizacoes-avancadas.html">visualizacoes avancadas</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>04 Implementar e Manter Entregaveis</h3>
+      <ul>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--compartilhamento-e-governanca.html">compartilhamento e governanca</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--gerenciar-workspaces.html">gerenciar workspaces</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--resumo.html">resumo</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--seguranca-RLS.html">seguranca RLS</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>05 Labs Oficiais</h3>
+      <ul>
+      <li><a href="05-Labs-Oficiais--guia-labs.html">guia labs</a></li>
+      <li><a href="05-Labs-Oficiais--links-uteis.html">links uteis</a></li>
+      </ul>
+    </div>
+      </div>
+    </aside>
+    <main class="content">
+      <header class="page-header">
+        <h1>04 Implementar e Manter Entregaveis — seguranca RLS</h1>
+        <a class="button" href="index.html">Voltar para Início</a>
+      </header>
+      <article class="markdown-body">
+<p>  seguranca-RLS body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; } .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); } pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; } code { font-family: &quot;Courier New&quot;, Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; } img { max-width: 100%; height: auto; display: block; margin: 10px 0; } table { width: 100%; border-collapse: collapse; margin-bottom: 1em; } th, td { border: 1px solid #ddd; padding: 8px; text-align: left; } th { background-color: #f2f2f2; }</p>
+<h1>🔐 Segurança em Nível de Linha (RLS)</h1>
+<p>Row-Level Security (RLS) permite que diferentes usuários vejam apenas os dados autorizados, com base em filtros definidos diretamente no modelo semântico do Power BI.</p>
+<hr>
+<h2>🔹 Tipos de RLS</h2>
+<h3>✔ Estática</h3>
+<p>Os filtros são fixos dentro da função criada no modelo.</p>
+<p>Exemplo:</p>
+<pre><code>DimRegiao[Estado] = &quot;SP&quot;
+</code></pre>
+<h3>✔ Dinâmica</h3>
+<p>Os filtros dependem do usuário conectado, usando funções como <code>USERPRINCIPALNAME()</code>.</p>
+<p>Exemplo:</p>
+<pre><code>DimVendedor[Email] = USERPRINCIPALNAME()
+</code></pre>
+<hr>
+<h2>🔹 Como Criar Funções de Segurança</h2>
+<ol>
+<li>No Power BI Desktop, vá em <strong>Modeling → Manage Roles</strong></li>
+<li>Clique em <strong>Create</strong></li>
+<li>Defina o nome da função (ex.: &quot;Vendedores_SP&quot;)</li>
+<li>Aplique o filtro DAX na tabela correspondente</li>
+</ol>
+<p>Exemplo de regra:</p>
+<pre><code>FatoVendas[Estado] = &quot;SP&quot;
+</code></pre>
+<hr>
+<h2>🔹 RLS Dinâmico – Exemplo Completo</h2>
+<p>Imagine uma dimensão de vendedores:</p>
+<p>Vendedor</p>
+<p>Email</p>
+<p>Região</p>
+<p>João</p>
+<p><a href="mailto:joao@empresa.com">joao@empresa.com</a></p>
+<p>Sul</p>
+<p>Maria</p>
+<p><a href="mailto:maria@empresa.com">maria@empresa.com</a></p>
+<p>Norte</p>
+<p>Regra dinâmica:</p>
+<pre><code>DimVendedor[Email] = USERPRINCIPALNAME()
+</code></pre>
+<p>O Power BI fará automaticamente o filtro para o usuário conectado no serviço.</p>
+<hr>
+<h2>🔹 Testar RLS no Power BI Desktop</h2>
+<ol>
+<li>Vá em <strong>Modeling → View As</strong></li>
+<li>Escolha a função a ser testada</li>
+<li>Verifique se o relatório mostra os dados esperados</li>
+</ol>
+<p>Isso evita erros antes da publicação.</p>
+<hr>
+<h2>🔹 Configuração no Power BI Service</h2>
+<p>Após publicar o dataset:</p>
+<ol>
+<li>Acesse o workspace</li>
+<li>Vá em <strong>Datasets → Security</strong></li>
+<li>Escolha a função criada</li>
+<li>Adicione usuários ou grupos correspondentes</li>
+</ol>
+<p>Lembre-se:</p>
+<ul>
+<li><strong>RLS não funciona no “Meu Workspace”</strong></li>
+<li>Para apps corporativos, recomenda-se workspaces dedicados e governança ativa</li>
+</ul>
+<hr>
+<h2>🔹 Recomendações Importantes</h2>
+<ul>
+<li>Armazene usuários em uma tabela de dimensão quando usar RLS dinâmico</li>
+<li>Evite relacionamentos bidirecionais</li>
+<li>Certifique-se de que a coluna usada no filtro está corretamente relacionada às tabelas fato</li>
+<li>Teste sempre antes de publicar</li>
+<li>Combine RLS com governança e sensibilidade de dados</li>
+</ul>
+<hr>
+<h2>📚 Links Oficiais</h2>
+<ul>
+<li>Documentação RLS:<br><a href="https://learn.microsoft.com/power-bi/enterprise/service-admin-row-level-security">https://learn.microsoft.com/power-bi/enterprise/service-admin-row-level-security</a></li>
+</ul>
+
+      </article>
+    </main>
+  </div>
+</body>
+</html>

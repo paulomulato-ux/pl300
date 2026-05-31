@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04 Implementar e Manter Entregaveis — compartilhamento e governanca | PL-300 Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html">PL-300 Portal</a>
+      </div>
+      <div class="sidebar-nav">
+    <div class="nav-group">
+      <h3>01 Preparar Dados</h3>
+      <ul>
+      <li><a href="01-Preparar-Dados--carregar-dados.html">carregar dados</a></li>
+      <li><a href="01-Preparar-Dados--obter-dados-power-bi.html">obter dados power bi</a></li>
+      <li><a href="01-Preparar-Dados--resumo.html">resumo</a></li>
+      <li><a href="01-Preparar-Dados--transformar-e-limpar-dados.html">transformar e limpar dados</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>02 Modelar Dados</h3>
+      <ul>
+      <li><a href="02-Modelar-Dados--boas-praticas-modelagem.html">boas praticas modelagem</a></li>
+      <li><a href="02-Modelar-Dados--design-modelo-de-dados.html">design modelo de dados</a></li>
+      <li><a href="02-Modelar-Dados--resumo.html">resumo</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>03 Visualizar e Analisar</h3>
+      <ul>
+      <li><a href="03-Visualizar-e-Analisar--analisar-performance-relatorios.html">analisar performance relatorios</a></li>
+      <li><a href="03-Visualizar-e-Analisar--criar-relatorios.html">criar relatorios</a></li>
+      <li><a href="03-Visualizar-e-Analisar--resumo.html">resumo</a></li>
+      <li><a href="03-Visualizar-e-Analisar--visualizacoes-avancadas.html">visualizacoes avancadas</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>04 Implementar e Manter Entregaveis</h3>
+      <ul>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--compartilhamento-e-governanca.html">compartilhamento e governanca</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--gerenciar-workspaces.html">gerenciar workspaces</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--resumo.html">resumo</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--seguranca-RLS.html">seguranca RLS</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>05 Labs Oficiais</h3>
+      <ul>
+      <li><a href="05-Labs-Oficiais--guia-labs.html">guia labs</a></li>
+      <li><a href="05-Labs-Oficiais--links-uteis.html">links uteis</a></li>
+      </ul>
+    </div>
+      </div>
+    </aside>
+    <main class="content">
+      <header class="page-header">
+        <h1>04 Implementar e Manter Entregaveis — compartilhamento e governanca</h1>
+        <a class="button" href="index.html">Voltar para Início</a>
+      </header>
+      <article class="markdown-body">
+<p>  compartilhamento-e-governanca body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; } .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); } pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; } code { font-family: &quot;Courier New&quot;, Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; } img { max-width: 100%; height: auto; display: block; margin: 10px 0; } table { width: 100%; border-collapse: collapse; margin-bottom: 1em; } th, td { border: 1px solid #ddd; padding: 8px; text-align: left; } th { background-color: #f2f2f2; }</p>
+<h1>🔗 Compartilhamento e Governança</h1>
+<p>Este módulo aborda como distribuir conteúdo, aplicar políticas de governança e gerenciar permissões de forma segura no Power BI.</p>
+<hr>
+<h2>🔹 Maneiras de Compartilhar Conteúdo</h2>
+<h3>✔ Compartilhamento direto</h3>
+<p>Permite enviar o relatório ou dashboard diretamente ao usuário.</p>
+<h3>✔ Publicar App</h3>
+<p>Melhor opção para empresas: - Layout consistente<br>- Controle centralizado<br>- Atualizações sem impactar versões antigas</p>
+<h3>✔ Permissões no Dataset</h3>
+<ul>
+<li>Build Permission</li>
+<li>Read</li>
+<li>Reshare</li>
+</ul>
+<hr>
+<h2>🔹 Governança no Power BI</h2>
+<h3>✔ Data Lineage</h3>
+<p>Mostra a origem dos dados e onde eles são usados.</p>
+<h3>✔ Impact Analysis</h3>
+<p>Permite avaliar risco antes de editar um dataset.</p>
+<h3>✔ Certificação e Promoção de Datasets</h3>
+<ul>
+<li><strong>Promoted</strong> → recomendado pela equipe</li>
+<li><strong>Certified</strong> → dataset oficial corporativo</li>
+</ul>
+<hr>
+<h2>🔹 Auditoria e Segurança de Acesso</h2>
+<ul>
+<li>Monitoramento de uso</li>
+<li>Logs de atividade (Premium)</li>
+<li>Bloqueios por IP (Admin)</li>
+<li>Sensibilidade (Microsoft Purview)</li>
+</ul>
+<hr>
+<h2>📚 Links Oficiais</h2>
+<ul>
+<li>Collaboration and governance:<br><a href="https://learn.microsoft.com/power-bi/guidance/power-bi-governance">https://learn.microsoft.com/power-bi/guidance/power-bi-governance</a></li>
+</ul>
+
+      </article>
+    </main>
+  </div>
+</body>
+</html>

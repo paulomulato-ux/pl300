@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01 Preparar Dados — carregar dados | PL-300 Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html">PL-300 Portal</a>
+      </div>
+      <div class="sidebar-nav">
+    <div class="nav-group">
+      <h3>01 Preparar Dados</h3>
+      <ul>
+      <li><a href="01-Preparar-Dados--carregar-dados.html">carregar dados</a></li>
+      <li><a href="01-Preparar-Dados--obter-dados-power-bi.html">obter dados power bi</a></li>
+      <li><a href="01-Preparar-Dados--resumo.html">resumo</a></li>
+      <li><a href="01-Preparar-Dados--transformar-e-limpar-dados.html">transformar e limpar dados</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>02 Modelar Dados</h3>
+      <ul>
+      <li><a href="02-Modelar-Dados--boas-praticas-modelagem.html">boas praticas modelagem</a></li>
+      <li><a href="02-Modelar-Dados--design-modelo-de-dados.html">design modelo de dados</a></li>
+      <li><a href="02-Modelar-Dados--resumo.html">resumo</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>03 Visualizar e Analisar</h3>
+      <ul>
+      <li><a href="03-Visualizar-e-Analisar--analisar-performance-relatorios.html">analisar performance relatorios</a></li>
+      <li><a href="03-Visualizar-e-Analisar--criar-relatorios.html">criar relatorios</a></li>
+      <li><a href="03-Visualizar-e-Analisar--resumo.html">resumo</a></li>
+      <li><a href="03-Visualizar-e-Analisar--visualizacoes-avancadas.html">visualizacoes avancadas</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>04 Implementar e Manter Entregaveis</h3>
+      <ul>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--compartilhamento-e-governanca.html">compartilhamento e governanca</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--gerenciar-workspaces.html">gerenciar workspaces</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--resumo.html">resumo</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--seguranca-RLS.html">seguranca RLS</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>05 Labs Oficiais</h3>
+      <ul>
+      <li><a href="05-Labs-Oficiais--guia-labs.html">guia labs</a></li>
+      <li><a href="05-Labs-Oficiais--links-uteis.html">links uteis</a></li>
+      </ul>
+    </div>
+      </div>
+    </aside>
+    <main class="content">
+      <header class="page-header">
+        <h1>01 Preparar Dados — carregar dados</h1>
+        <a class="button" href="index.html">Voltar para Início</a>
+      </header>
+      <article class="markdown-body">
+<p>  carregar-dados body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; } .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); } pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; } code { font-family: &quot;Courier New&quot;, Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; } img { max-width: 100%; height: auto; display: block; margin: 10px 0; } table { width: 100%; border-collapse: collapse; margin-bottom: 1em; } th, td { border: 1px solid #ddd; padding: 8px; text-align: left; } th { background-color: #f2f2f2; }</p>
+<h1>📥 Carregar Dados no Power BI</h1>
+<p>Depois de conectar e transformar os dados no Power Query, o próximo passo é <strong>carregar os dados no modelo</strong>.</p>
+<hr>
+<h2>🔹 Métodos de Carga</h2>
+<p>Método</p>
+<p>Descrição</p>
+<p>Uso Ideal</p>
+<p><strong>Import</strong></p>
+<p>Dados são carregados no modelo</p>
+<p>Melhor performance</p>
+<p><strong>DirectQuery</strong></p>
+<p>Consulta sempre a fonte</p>
+<p>Dados grandes ou atualizados frequentemente</p>
+<p><strong>Dual</strong></p>
+<p>Pode atuar como Import ou DirectQuery</p>
+<p>Modelos compostos</p>
+<hr>
+<h2>🔹 Atualização de Dados</h2>
+<h3><strong>Refresh Manual</strong></h3>
+<p>Via Power BI Desktop ou serviço.</p>
+<h3><strong>Agendamento de Atualização</strong></h3>
+<ul>
+<li>Requer gateway se fonte estiver on-premises</li>
+<li>Necessário Premium para frequências maiores</li>
+</ul>
+<hr>
+<h2>🔹 Incremental Refresh</h2>
+<p>Ideal para grandes volumes de dados. Permite:</p>
+<ul>
+<li>Atualizar apenas partições recentes</li>
+<li>Reduzir tempo de atualização</li>
+<li>Otimizar armazenamento</li>
+</ul>
+<p>Pré-requisitos:</p>
+<ul>
+<li>Parâmetros RangeStart / RangeEnd</li>
+<li>Filtro na data de fato</li>
+<li>Dataset publicado em workspace Pro ou Premium</li>
+</ul>
+<hr>
+<h2>🔹 Boas Práticas de Carga</h2>
+<ul>
+<li>Remover colunas inúteis antes de carregar</li>
+<li>Evitar tipos de dados textuais pesados</li>
+<li>Conferir cardinalidade das colunas</li>
+<li>Revisar dependências de consultas</li>
+<li>Evitar colunas calculadas no modelo quando possível</li>
+</ul>
+<hr>
+<h2>📚 Links Oficiais</h2>
+<ul>
+<li>Incremental refresh:<br><a href="https://learn.microsoft.com/power-bi/connect-data/incremental-refresh-overview">https://learn.microsoft.com/power-bi/connect-data/incremental-refresh-overview</a></li>
+</ul>
+<hr>
+
+      </article>
+    </main>
+  </div>
+</body>
+</html>

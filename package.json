@@ -8,9 +8,11 @@
     "test": "echo \"No tests specified\" && exit 0",
     "scrape": "node auto_scraper.js",
     "build:questions": "node scripts/build-questions.js",
-    "convert:md": "node scripts/convert-html-to-md.js"
+    "convert:md": "node scripts/convert-html-to-md.js",
+    "build:docs": "node scripts/build-docs.js"
   },
   "devDependencies": {
+    "marked": "^9.0.0",
     "turndown": "^7.2.4"
   },
   "dependencies": {

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04 Implementar e Manter Entregaveis — gerenciar workspaces | PL-300 Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html">PL-300 Portal</a>
+      </div>
+      <div class="sidebar-nav">
+    <div class="nav-group">
+      <h3>01 Preparar Dados</h3>
+      <ul>
+      <li><a href="01-Preparar-Dados--carregar-dados.html">carregar dados</a></li>
+      <li><a href="01-Preparar-Dados--obter-dados-power-bi.html">obter dados power bi</a></li>
+      <li><a href="01-Preparar-Dados--resumo.html">resumo</a></li>
+      <li><a href="01-Preparar-Dados--transformar-e-limpar-dados.html">transformar e limpar dados</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>02 Modelar Dados</h3>
+      <ul>
+      <li><a href="02-Modelar-Dados--boas-praticas-modelagem.html">boas praticas modelagem</a></li>
+      <li><a href="02-Modelar-Dados--design-modelo-de-dados.html">design modelo de dados</a></li>
+      <li><a href="02-Modelar-Dados--resumo.html">resumo</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>03 Visualizar e Analisar</h3>
+      <ul>
+      <li><a href="03-Visualizar-e-Analisar--analisar-performance-relatorios.html">analisar performance relatorios</a></li>
+      <li><a href="03-Visualizar-e-Analisar--criar-relatorios.html">criar relatorios</a></li>
+      <li><a href="03-Visualizar-e-Analisar--resumo.html">resumo</a></li>
+      <li><a href="03-Visualizar-e-Analisar--visualizacoes-avancadas.html">visualizacoes avancadas</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>04 Implementar e Manter Entregaveis</h3>
+      <ul>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--compartilhamento-e-governanca.html">compartilhamento e governanca</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--gerenciar-workspaces.html">gerenciar workspaces</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--resumo.html">resumo</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--seguranca-RLS.html">seguranca RLS</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>05 Labs Oficiais</h3>
+      <ul>
+      <li><a href="05-Labs-Oficiais--guia-labs.html">guia labs</a></li>
+      <li><a href="05-Labs-Oficiais--links-uteis.html">links uteis</a></li>
+      </ul>
+    </div>
+      </div>
+    </aside>
+    <main class="content">
+      <header class="page-header">
+        <h1>04 Implementar e Manter Entregaveis — gerenciar workspaces</h1>
+        <a class="button" href="index.html">Voltar para Início</a>
+      </header>
+      <article class="markdown-body">
+<p>  gerenciar-workspaces body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; } .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); } pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; } code { font-family: &quot;Courier New&quot;, Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; } img { max-width: 100%; height: auto; display: block; margin: 10px 0; } table { width: 100%; border-collapse: collapse; margin-bottom: 1em; } th, td { border: 1px solid #ddd; padding: 8px; text-align: left; } th { background-color: #f2f2f2; }</p>
+<h1>🗂️ Gerenciar Workspaces no Power BI</h1>
+<p>Workspaces são áreas colaborativas onde equipes criam, publicam e gerenciam conteúdos Power BI.</p>
+<hr>
+<h2>🔹 Tipos de Workspaces</h2>
+<h3>✔ Meu Workspace</h3>
+<ul>
+<li>Uso individual</li>
+<li>Não recomendado para produção</li>
+</ul>
+<h3>✔ Workspaces compartilhados</h3>
+<p>Recomendado para trabalho colaborativo.<br>Permite: - Publicar relatórios e datasets<br>- Controlar permissões<br>- Criar Apps<br>- Usar pipelines (com Premium)</p>
+<hr>
+<h2>🔹 Funções do Workspace</h2>
+<p>Função</p>
+<p>Permissões</p>
+<p><strong>Admin</strong></p>
+<p>Total controle</p>
+<p><strong>Member</strong></p>
+<p>Edita conteúdo</p>
+<p><strong>Contributor</strong></p>
+<p>Publica, mas não gerencia</p>
+<p><strong>Viewer</strong></p>
+<p>Acessa somente leitura</p>
+<hr>
+<h2>🔹 Publicar Relatórios</h2>
+<ol>
+<li>No Power BI Desktop → <strong>Publish</strong></li>
+<li>Escolher o workspace</li>
+<li>Conferir dataset e relatório publicados</li>
+</ol>
+<hr>
+<h2>🔹 Atualização de Dados</h2>
+<h3>✔ Gateway</h3>
+<p>Necessário quando a fonte está on-premises.</p>
+<h3>✔ Agendamentos</h3>
+<ul>
+<li>Até 8x/dia com Pro</li>
+<li>Até 48x/dia com Premium</li>
+</ul>
+<hr>
+<h2>🔹 Apps</h2>
+<p>Os Apps são a forma recomendada de distribuir conteúdo ao usuário final.</p>
+<p>Incluem: - Relatórios<br>- Dashboards<br>- Dataflows<br>- Permissões configuráveis</p>
+<hr>
+<h2>📚 Links Oficiais</h2>
+<ul>
+<li>Workspaces:<br><a href="https://learn.microsoft.com/power-bi/collaborate-share/service-create-workspaces">https://learn.microsoft.com/power-bi/collaborate-share/service-create-workspaces</a></li>
+</ul>
+
+      </article>
+    </main>
+  </div>
+</body>
+</html>

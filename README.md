@@ -41,6 +41,15 @@ Se você editar `simulado/questions.json` manualmente, execute:
 npm run build:questions
 ```
 
+### Gerar o site de documentação
+Para converter o conteúdo Markdown em site estático, execute:
+
+```bash
+npm run build:docs
+```
+
+O site sai em `docs/`.
+
 ## Estrutura do projeto
 
 - `index.html` — portal principal do material de estudo

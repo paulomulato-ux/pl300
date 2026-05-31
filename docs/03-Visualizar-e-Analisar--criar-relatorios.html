@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03 Visualizar e Analisar — criar relatorios | PL-300 Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html">PL-300 Portal</a>
+      </div>
+      <div class="sidebar-nav">
+    <div class="nav-group">
+      <h3>01 Preparar Dados</h3>
+      <ul>
+      <li><a href="01-Preparar-Dados--carregar-dados.html">carregar dados</a></li>
+      <li><a href="01-Preparar-Dados--obter-dados-power-bi.html">obter dados power bi</a></li>
+      <li><a href="01-Preparar-Dados--resumo.html">resumo</a></li>
+      <li><a href="01-Preparar-Dados--transformar-e-limpar-dados.html">transformar e limpar dados</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>02 Modelar Dados</h3>
+      <ul>
+      <li><a href="02-Modelar-Dados--boas-praticas-modelagem.html">boas praticas modelagem</a></li>
+      <li><a href="02-Modelar-Dados--design-modelo-de-dados.html">design modelo de dados</a></li>
+      <li><a href="02-Modelar-Dados--resumo.html">resumo</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>03 Visualizar e Analisar</h3>
+      <ul>
+      <li><a href="03-Visualizar-e-Analisar--analisar-performance-relatorios.html">analisar performance relatorios</a></li>
+      <li><a href="03-Visualizar-e-Analisar--criar-relatorios.html">criar relatorios</a></li>
+      <li><a href="03-Visualizar-e-Analisar--resumo.html">resumo</a></li>
+      <li><a href="03-Visualizar-e-Analisar--visualizacoes-avancadas.html">visualizacoes avancadas</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>04 Implementar e Manter Entregaveis</h3>
+      <ul>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--compartilhamento-e-governanca.html">compartilhamento e governanca</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--gerenciar-workspaces.html">gerenciar workspaces</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--resumo.html">resumo</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--seguranca-RLS.html">seguranca RLS</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>05 Labs Oficiais</h3>
+      <ul>
+      <li><a href="05-Labs-Oficiais--guia-labs.html">guia labs</a></li>
+      <li><a href="05-Labs-Oficiais--links-uteis.html">links uteis</a></li>
+      </ul>
+    </div>
+      </div>
+    </aside>
+    <main class="content">
+      <header class="page-header">
+        <h1>03 Visualizar e Analisar — criar relatorios</h1>
+        <a class="button" href="index.html">Voltar para Início</a>
+      </header>
+      <article class="markdown-body">
+<p>  criar-relatorios body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; } .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); } pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; } code { font-family: &quot;Courier New&quot;, Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; } img { max-width: 100%; height: auto; display: block; margin: 10px 0; } table { width: 100%; border-collapse: collapse; margin-bottom: 1em; } th, td { border: 1px solid #ddd; padding: 8px; text-align: left; } th { background-color: #f2f2f2; }</p>
+<h1>📊 Criar Relatórios no Power BI</h1>
+<p>Este módulo cobre a criação de relatórios claros, consistentes e orientados a insights.</p>
+<hr>
+<h2>🔹 Layout e Design</h2>
+<h3>✔ Grade de alinhamento</h3>
+<p>Utilizar: - Grade de 8 px - Snapping - Margens e espaçamentos consistentes</p>
+<h3>✔ Temas</h3>
+<p>Permite padronizar: - Cores - Tipografia - Formatos numéricos</p>
+<p>Temas podem ser importados em JSON.</p>
+<hr>
+<h2>🔹 Escolha de Visualizações</h2>
+<p>Tipo de Análise</p>
+<p>Visualização Recomendada</p>
+<p>Comparação</p>
+<p>Colunas, Barras, Linhas</p>
+<p>Tendência</p>
+<p>Linha, Área</p>
+<p>Distribuição</p>
+<p>Histograma, Boxplot</p>
+<p>Correlação</p>
+<p>Dispersão</p>
+<p>Parte do todo</p>
+<p>Pizza (com cautela), Donut, Treemap</p>
+<p>Detalhamento</p>
+<p>Tabela, Matriz</p>
+<hr>
+<h2>🔹 Filtros e Interações</h2>
+<ul>
+<li>Edit Interactions: controlar como visuais se afetam</li>
+<li>Sync Slicers: sincronizar segmentações entre páginas</li>
+<li>Filtros de nível:</li>
+<li>Visual</li>
+<li>Página</li>
+<li>Relatório</li>
+</ul>
+<hr>
+<h2>🔹 Drill-down e Hierarquias</h2>
+<h3>✔ Drill-down</h3>
+<p>Expandir níveis de detalhe (Ano → Mês → Dia).</p>
+<h3>✔ Drill-through</h3>
+<p>Criar página específica de detalhes: - Perfil de cliente - Detalhes de venda - Análises específicas</p>
+<hr>
+<h2>🔹 Tooltips Personalizados</h2>
+<p>Permitem exibir uma página personalizada ao passar o mouse sobre um visual.</p>
+<p>Recomendações: - Manter páginas pequenas - Utilizar texto claro - Mostrar KPIs relevantes</p>
+<hr>
+<h2>📚 Links Oficiais</h2>
+<ul>
+<li>Design guidelines: <a href="https://learn.microsoft.com/power-bi/create-reports/desktop-report-layers">https://learn.microsoft.com/power-bi/create-reports/desktop-report-layers</a></li>
+</ul>
+
+      </article>
+    </main>
+  </div>
+</body>
+</html>

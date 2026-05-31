@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02 Modelar Dados — resumo | PL-300 Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html">PL-300 Portal</a>
+      </div>
+      <div class="sidebar-nav">
+    <div class="nav-group">
+      <h3>01 Preparar Dados</h3>
+      <ul>
+      <li><a href="01-Preparar-Dados--carregar-dados.html">carregar dados</a></li>
+      <li><a href="01-Preparar-Dados--obter-dados-power-bi.html">obter dados power bi</a></li>
+      <li><a href="01-Preparar-Dados--resumo.html">resumo</a></li>
+      <li><a href="01-Preparar-Dados--transformar-e-limpar-dados.html">transformar e limpar dados</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>02 Modelar Dados</h3>
+      <ul>
+      <li><a href="02-Modelar-Dados--boas-praticas-modelagem.html">boas praticas modelagem</a></li>
+      <li><a href="02-Modelar-Dados--design-modelo-de-dados.html">design modelo de dados</a></li>
+      <li><a href="02-Modelar-Dados--resumo.html">resumo</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>03 Visualizar e Analisar</h3>
+      <ul>
+      <li><a href="03-Visualizar-e-Analisar--analisar-performance-relatorios.html">analisar performance relatorios</a></li>
+      <li><a href="03-Visualizar-e-Analisar--criar-relatorios.html">criar relatorios</a></li>
+      <li><a href="03-Visualizar-e-Analisar--resumo.html">resumo</a></li>
+      <li><a href="03-Visualizar-e-Analisar--visualizacoes-avancadas.html">visualizacoes avancadas</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>04 Implementar e Manter Entregaveis</h3>
+      <ul>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--compartilhamento-e-governanca.html">compartilhamento e governanca</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--gerenciar-workspaces.html">gerenciar workspaces</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--resumo.html">resumo</a></li>
+      <li><a href="04-Implementar-e-Manter-Entregaveis--seguranca-RLS.html">seguranca RLS</a></li>
+      </ul>
+    </div>
+    <div class="nav-group">
+      <h3>05 Labs Oficiais</h3>
+      <ul>
+      <li><a href="05-Labs-Oficiais--guia-labs.html">guia labs</a></li>
+      <li><a href="05-Labs-Oficiais--links-uteis.html">links uteis</a></li>
+      </ul>
+    </div>
+      </div>
+    </aside>
+    <main class="content">
+      <header class="page-header">
+        <h1>02 Modelar Dados — resumo</h1>
+        <a class="button" href="index.html">Voltar para Início</a>
+      </header>
+      <article class="markdown-body">
+<p>  resumo body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; } .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); } pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; } code { font-family: &quot;Courier New&quot;, Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; } img { max-width: 100%; height: auto; display: block; margin: 10px 0; } table { width: 100%; border-collapse: collapse; margin-bottom: 1em; } th, td { border: 1px solid #ddd; padding: 8px; text-align: left; } th { background-color: #f2f2f2; }</p>
+<h1>🧩 Resumo – Modelar Dados</h1>
+<p>Este módulo aborda os princípios essenciais de <strong>modelagem dimensional</strong>, relações entre tabelas, DAX, desempenho e estruturação de modelos eficientes no Power BI.</p>
+<hr>
+<h2>🎯 Objetivos do módulo</h2>
+<ul>
+<li>Construir modelos eficientes baseados em <strong>tabelas fato e dimensões</strong></li>
+<li>Configurar relacionamentos e cardinalidades</li>
+<li>Criar medidas com DAX</li>
+<li>Implementar hierarquias</li>
+<li>Controlar direcionalidade de filtros</li>
+<li>Otimizar desempenho do modelo</li>
+</ul>
+<hr>
+<h2>🔹 Tópicos Principais</h2>
+<h3>1. Modelo Estrela (Star Schema)</h3>
+<p>Estrutura padrão recomendada pela Microsoft:</p>
+<ul>
+<li>Tabelas fato → métricas, granularidade definida</li>
+<li>Tabelas dimensão → atributos descritivos</li>
+<li>Minimiza duplicidades, melhora performance e compressão</li>
+</ul>
+<hr>
+<h3>2. Relacionamentos</h3>
+<p>Propriedades:</p>
+<ul>
+<li>Cardinalidade: 1:<em>,</em> :1, <em>:</em></li>
+<li>Direcionalidade: single vs. both</li>
+<li>Cross-filtering</li>
+<li>Relacionamentos ativos e inativos (USERELATIONSHIP)</li>
+</ul>
+<hr>
+<h3>3. DAX – medidas e cálculos</h3>
+<p>Tipos comuns:</p>
+<ul>
+<li>Medidas implícitas vs. explícitas</li>
+<li>Funções de agregação</li>
+<li>Time intelligence</li>
+<li>Contextos: linha, filtro e avaliação</li>
+</ul>
+<hr>
+<h3>4. Otimização de Modelos</h3>
+<p>Inclui:</p>
+<ul>
+<li>Remoção de colunas irrelevantes</li>
+<li>Minimização de cardinalidade</li>
+<li>Redução de relacionamentos desnecessários</li>
+<li>Gerenciamento de tabelas intermediárias</li>
+<li>Uso correto de data table</li>
+</ul>
+<hr>
+<h2>📚 Links Oficiais</h2>
+<ul>
+<li>Data modeling best practices<br><a href="https://learn.microsoft.com/power-bi/guidance/star-schema">https://learn.microsoft.com/power-bi/guidance/star-schema</a></li>
+<li>Relationships in Power BI<br><a href="https://learn.microsoft.com/power-bi/transform-model/desktop-relationships">https://learn.microsoft.com/power-bi/transform-model/desktop-relationships</a></li>
+</ul>
+<hr>
+<h2>✅ Checklist de Estudos</h2>
+<ul>
+<li>[ ] Criar um modelo estrela com fato e dimensões</li>
+<li>[ ] Configurar relacionamentos corretamente</li>
+<li>[ ] Criar medidas básicas e avançadas em DAX</li>
+<li>[ ] Utilizar funções de time intelligence</li>
+<li>[ ] Reduzir cardinalidade de colunas pesadas</li>
+</ul>
+
+      </article>
+    </main>
+  </div>
+</body>
+</html>
