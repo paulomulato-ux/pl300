@@ -1,7 +1,12 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 const fs = require('fs');
-const path = 'C:\\Users\\Public\\Apps\\pl300-portal\\simulado\\simulado.js';
+const path = require('path');
+const projectRoot = path.resolve(__dirname);
+const outputJson = process.argv[2]
+  ? path.resolve(process.argv[2])
+  : path.join(projectRoot, 'simulado', 'questions.json');
+const outputJs = path.join(projectRoot, 'simulado', 'questions.js');
 
 function classifyDomain(text) {
     const lower = text.toLowerCase();
@@ -116,35 +121,11 @@ async function run() {
         }
     }
 
-    // Inject into simulado.js
-    let content = fs.readFileSync(path, 'utf8');
-    let totalAdded = 0;
-
-    for (const [domain, questions] of Object.entries(grouped)) {
-        for (const q of questions) {
-            const opcoeStr = q.opcoes.map(o => '"' + o.replace(/"/g, '\\"').replace(/\n/g, ' ') + '"').join(', ');
-            const questionStr = `
-        {
-            pergunta: "${q.pergunta.replace(/"/g, '\\"').replace(/\n/g, ' ')}",
-            opcoes: [${opcoeStr}],
-            correta: ${q.correta},
-            explicacao: "${q.explicacao.replace(/"/g, '\\"').replace(/\n/g, ' ')}"
-        }`;
-
-            const domainPattern = `"${domain}"`;
-            const domainIdx = content.indexOf(domainPattern);
-            if (domainIdx === -1) { console.log(`AVISO: "${domain}" não encontrado!`); continue; }
-
-            const arrayStart = content.indexOf('[', domainIdx);
-            if (arrayStart === -1) { console.log(`AVISO: Array para "${domain}" não encontrado!`); continue; }
-
-            content = content.slice(0, arrayStart + 1) + questionStr + ',' + content.slice(arrayStart + 1);
-            totalAdded++;
-        }
-    }
-
-    fs.writeFileSync(path, content, 'utf8');
-    console.log(`\n🎉 Total adicionado ao simulado.js: ${totalAdded} questões!`);
+    fs.writeFileSync(outputJson, JSON.stringify(grouped, null, 2), 'utf8');
+    fs.writeFileSync(outputJs, 'window.questionBank = ' + JSON.stringify(grouped, null, 2) + ';', 'utf8');
+    console.log(`\n🎉 Total de questões extraídas: ${allQuestions.length}`);
+    console.log(`Arquivo JSON salvo: ${outputJson}`);
+    console.log(`Arquivo JS salvo: ${outputJs}`);
 }
 
 run();
