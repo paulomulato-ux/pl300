@@ -62,9 +62,13 @@
       </button>
     </div>
 
-    <div class="welcome-actions">
-      <button class="btn-ghost" onclick="showScreen('screen-history')">📊 Ver Histórico</button>
-      <a href="../index.html" class="btn-ghost">🏠 Voltar ao Portal</a>
+    <div class="welcome-actions" style="flex-direction: column; align-items: center;">
+      <button class="btn-primary" id="btn-resume-session" onclick="resumeSession()" style="display: none; width: 100%; margin-bottom: 12px; background: var(--warning); color: #fff;">▶ Continuar Simulado em Andamento</button>
+      <div style="display:flex; gap:12px; width:100%; justify-content:center; flex-wrap: wrap;">
+        <button class="btn-ghost" onclick="showScreen('screen-history')">📊 Ver Histórico</button>
+        <button class="btn-ghost" style="color:var(--danger)" onclick="resetGlobalProgress()">🗑️ Zerar Progresso</button>
+        <a href="../index.html" class="btn-ghost">🏠 Portal</a>
+      </div>
     </div>
   </div>
 </div>

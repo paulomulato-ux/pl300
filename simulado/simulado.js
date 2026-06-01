@@ -3765,6 +3765,18 @@ function applyUITexts() {
   if (modalBtns[1]) modalBtns[1].textContent = t('quitBtn');
 }
 
+function checkActiveSession() {
+  const active = localStorage.getItem('pl300_active_session');
+  const btn = document.getElementById('btn-resume-session');
+  if (btn) {
+    if (active) {
+      btn.style.display = 'block';
+    } else {
+      btn.style.display = 'none';
+    }
+  }
+}
+
 function initSettings() {
   const savedTheme = localStorage.getItem('pl300_theme') || 'dark';
   const savedLang  = localStorage.getItem('pl300_lang')  || 'pt';
@@ -3773,6 +3785,7 @@ function initSettings() {
   if (typeof window.setTheme === 'function') window.setTheme(savedTheme);
   if (typeof window.setLang  === 'function') window.setLang(savedLang);
   else { state.lang = savedLang; state.theme = savedTheme; applyUITexts(); }
+  checkActiveSession();
 }
 
 // Auto-init on load
@@ -3883,11 +3896,22 @@ function startQuiz() {
   setTimeout(() => {
     // Build question pool
     let pool = [];
+    let answeredGlobally = new Set(JSON.parse(localStorage.getItem('pl300_answered') || '[]'));
+
     state.selectedDomains.forEach(domain => {
-      (questionBank[domain] || []).forEach(raw => {
-        pool.push({ ...normalizeQuestion(raw), domain });
+      (questionBank[domain] || []).forEach((raw, idx) => {
+        const qId = `${domain}-${idx}`;
+        if (!answeredGlobally.has(qId)) {
+          pool.push({ ...normalizeQuestion(raw), domain, id: qId });
+        }
       });
     });
+
+    if (pool.length === 0) {
+      alert(state.lang === 'pt' ? 'Você já respondeu todas as questões destes domínios! Zere o progresso para recomeçar.' : 'You have already answered all questions in these domains! Reset progress to start over.');
+      showScreen('screen-welcome');
+      return;
+    }
 
     // Shuffle questions
     let shuffledPool = shuffle(pool);
@@ -3926,6 +3950,14 @@ function startQuiz() {
     state.score = 0;
     state.answers = new Array(state.questions.length).fill(null);
     state.marked = new Set();
+
+    let globalMarked = new Set(JSON.parse(localStorage.getItem('pl300_global_marked') || '[]'));
+    state.questions.forEach((q, i) => {
+      if (globalMarked.has(q.id)) {
+        state.marked.add(i);
+      }
+    });
+
     state.startTime = Date.now();
     if (typeof updateGlobalStats === 'function') updateGlobalStats();
 
@@ -3938,6 +3970,7 @@ function startQuiz() {
 
     buildNavGrid();
     loadQuestion(0);
+    saveActiveSession();
     showScreen('screen-quiz');
   }, 600);
 }
@@ -3966,6 +3999,8 @@ function startTimer() {
     if (state.timeRemaining <= 0) {
       clearInterval(state.timerInterval);
       showResults();
+    } else {
+      saveActiveSession();
     }
   }, 1000);
 }
@@ -4126,8 +4161,13 @@ function submitAnswer() {
   document.getElementById('btn-submit').style.display = 'none';
   document.getElementById('nav-actions').style.display = 'flex';
 
+  let answeredGlobally = new Set(JSON.parse(localStorage.getItem('pl300_answered') || '[]'));
+  answeredGlobally.add(q.id);
+  localStorage.setItem('pl300_answered', JSON.stringify(Array.from(answeredGlobally)));
+
   updateNavGrid();
   if (typeof updateGlobalStats === 'function') updateGlobalStats();
+  saveActiveSession();
 }
 
 function showFeedback(q, isCorrect) {
@@ -4149,6 +4189,7 @@ function nextQuestion() {
   if (next < state.questions.length) {
     loadQuestion(next);
     window.scrollTo(0, 0);
+    saveActiveSession();
   } else {
     if (!allAnswered() && state.mode === 'treino') {
       const unanswered = state.questions.length - state.answers.filter(a => a !== null).length;
@@ -4163,6 +4204,7 @@ function goToQuestion(index) {
   if (index < 0 || index >= state.questions.length) return;
   loadQuestion(index);
   window.scrollTo(0, 0);
+  saveActiveSession();
 }
 
 function allAnswered() {
@@ -4174,15 +4216,23 @@ function allAnswered() {
 // ============================================================
 function toggleMark() {
   const i = state.currentIndex;
+  const qId = state.questions[i].id;
+  let globalMarked = new Set(JSON.parse(localStorage.getItem('pl300_global_marked') || '[]'));
+
   if (state.marked.has(i)) {
     state.marked.delete(i);
+    globalMarked.delete(qId);
   } else {
     state.marked.add(i);
+    globalMarked.add(qId);
   }
+  localStorage.setItem('pl300_global_marked', JSON.stringify(Array.from(globalMarked)));
+
   const btn = document.getElementById('btn-mark');
   btn.className = 'btn-mark' + (state.marked.has(i) ? ' marked' : '');
   updateNavGrid();
   if (typeof updateGlobalStats === 'function') updateGlobalStats();
+  saveActiveSession();
 }
 
 function updateGlobalStats() {
@@ -4237,6 +4287,7 @@ function quitQuiz() {
   clearInterval(state.timerInterval);
   closeModal();
   showScreen('screen-welcome');
+  checkActiveSession();
 }
 
 // ============================================================
@@ -4244,6 +4295,7 @@ function quitQuiz() {
 // ============================================================
 function showResults() {
   clearInterval(state.timerInterval);
+  localStorage.removeItem('pl300_active_session');
 
   const answered = state.answers.filter(a => a !== null);
   const correct = answered.filter(a => a.correct).length;
@@ -4427,5 +4479,62 @@ function clearHistory() {
   if (confirm(t('confirmClear'))) {
     localStorage.removeItem('pl300_history');
     renderHistory();
+  }
+}
+
+// ============================================================
+//  ACTIVE SESSION (localStorage)
+// ============================================================
+function saveActiveSession() {
+  const sessionData = {
+    mode: state.mode,
+    selectedDomains: state.selectedDomains,
+    questions: state.questions,
+    currentIndex: state.currentIndex,
+    score: state.score,
+    answers: state.answers,
+    marked: Array.from(state.marked),
+    startTime: state.startTime,
+    timeRemaining: state.timeRemaining
+  };
+  localStorage.setItem('pl300_active_session', JSON.stringify(sessionData));
+}
+
+function resumeSession() {
+  const sessionJson = localStorage.getItem('pl300_active_session');
+  if (!sessionJson) return;
+  const sessionData = JSON.parse(sessionJson);
+  
+  state.mode = sessionData.mode;
+  state.selectedDomains = sessionData.selectedDomains;
+  state.questions = sessionData.questions;
+  state.currentIndex = sessionData.currentIndex;
+  state.score = sessionData.score;
+  state.answers = sessionData.answers;
+  state.marked = new Set(sessionData.marked);
+  state.startTime = sessionData.startTime;
+  state.timeRemaining = sessionData.timeRemaining;
+  
+  if (state.mode === 'oficial') {
+    startTimer();
+  }
+  
+  buildNavGrid();
+  loadQuestion(state.currentIndex);
+  showScreen('screen-quiz');
+}
+
+function resetGlobalProgress() {
+  const msg = state.lang === 'pt' 
+    ? "Tem certeza que deseja zerar TODAS as marcações, histórico de respondidas e sessões ativas?"
+    : "Are you sure you want to reset ALL markings, answered history and active sessions?";
+  if (confirm(msg)) {
+    localStorage.removeItem('pl300_answered');
+    localStorage.removeItem('pl300_global_marked');
+    localStorage.removeItem('pl300_active_session');
+    localStorage.removeItem('pl300_history');
+    localStorage.removeItem('pl300_sim_stats');
+    alert(state.lang === 'pt' ? "Progresso zerado com sucesso!" : "Progress reset successfully!");
+    location.reload();
   }
 }
