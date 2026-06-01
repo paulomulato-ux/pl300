@@ -3927,6 +3927,7 @@ function startQuiz() {
     state.answers = new Array(state.questions.length).fill(null);
     state.marked = new Set();
     state.startTime = Date.now();
+    if (typeof updateGlobalStats === 'function') updateGlobalStats();
 
     // Timer (official mode only)
     clearInterval(state.timerInterval);
