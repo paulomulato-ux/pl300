@@ -3786,6 +3786,11 @@ function initSettings() {
   if (typeof window.setLang  === 'function') window.setLang(savedLang);
   else { state.lang = savedLang; state.theme = savedTheme; applyUITexts(); }
   checkActiveSession();
+
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('mode') === 'revisao') {
+    selectMode('revisao');
+  }
 }
 
 // Auto-init on load
@@ -3897,19 +3902,30 @@ function startQuiz() {
     // Build question pool
     let pool = [];
     let answeredGlobally = new Set(JSON.parse(localStorage.getItem('pl300_answered') || '[]'));
+    let globalMarked = new Set(JSON.parse(localStorage.getItem('pl300_global_marked') || '[]'));
 
     state.selectedDomains.forEach(domain => {
       (questionBank[domain] || []).forEach((raw, idx) => {
         const qId = `${domain}-${idx}`;
-        if (!answeredGlobally.has(qId)) {
-          pool.push({ ...normalizeQuestion(raw), domain, id: qId });
+        if (state.mode === 'revisao') {
+          if (globalMarked.has(qId)) {
+            pool.push({ ...normalizeQuestion(raw), domain, id: qId });
+          }
+        } else {
+          if (!answeredGlobally.has(qId)) {
+            pool.push({ ...normalizeQuestion(raw), domain, id: qId });
+          }
         }
       });
     });
 
     if (pool.length === 0) {
-      alert(state.lang === 'pt' ? 'Você já respondeu todas as questões destes domínios! Zere o progresso para recomeçar.' : 'You have already answered all questions in these domains! Reset progress to start over.');
-      showScreen('screen-welcome');
+      if (state.mode === 'revisao') {
+        alert(state.lang === 'pt' ? 'Você não tem questões marcadas para revisão.' : 'You have no questions marked for review.');
+      } else {
+        alert(state.lang === 'pt' ? 'Você já respondeu todas as questões destes domínios! Zere o progresso para recomeçar.' : 'You have already answered all questions in these domains! Reset progress to start over.');
+      }
+      window.location.href = '../index.html';
       return;
     }
 
@@ -3941,6 +3957,9 @@ function startQuiz() {
       }
       
       state.questions = shuffle(balancedPool);
+    } else if (state.mode === 'revisao') {
+      // In review mode, we just load all marked questions (or up to a sensible limit like 60 to prevent memory issues, but they probably won't have more than that)
+      state.questions = shuffledPool;
     } else {
       // Training mode: take a subset of exactly 30 questions
       state.questions = shuffledPool.slice(0, 30);
