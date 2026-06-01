@@ -16,17 +16,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>README</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; }
-        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; }
-        code { font-family: "Courier New", Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: var(--bg-main); color: var(--text-primary); }
+        .container { max-width: 800px; margin: auto; background: var(--surface-card); padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        pre { background-color: var(--bg-secondary); padding: 10px; border-radius: 5px; overflow-x: auto; }
+        code { font-family: "Courier New", Courier, monospace; background-color: var(--bg-secondary); padding: 2px 4px; border-radius: 3px; }
         img { max-width: 100%; height: auto; display: block; margin: 10px 0; }
         table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
+        th, td { border: 1px solid var(--border-color); padding: 8px; text-align: left; }
+        th { background-color: var(--bg-secondary); }
+    
+        /* Sidebar Styles */
+        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: var(--bg-main); color: var(--text-primary); }
+        .layout-wrapper { display: flex; width: 100%; height: 100vh; }
+        .sidebar { width: 280px; background: var(--bg-secondary); color: var(--text-primary); padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; border-right: 1px solid var(--border-color); }
+        .sidebar a { color: var(--text-primary); text-decoration: none; display: block; padding: 8px 0; opacity: 0.8; }
+        .sidebar a:hover, .sidebar a.active { color: var(--primary-color); font-weight: bold; opacity: 1; }
+        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary); }
+        .sidebar .back-btn { font-weight: bold; color: #e74c3c; display: flex; align-items: center; gap: 5px; margin-bottom: 20px; }
+        .sidebar .back-btn:hover { color: #c0392b; text-decoration: none; }
+        .sidebar ul { list-style: none; padding: 0; margin: 0; }
+        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: var(--bg-main); }
+        .container { margin: 0 auto; max-width: 900px; background: var(--surface-card); padding: 30px; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border-color); }
+        
+        /* Settings Panel */
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        
+        /* Language Utilities */
+        [lang-content] { display: none; }
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
+
     </style>
+    <link rel="stylesheet" href="portal-style.css">
+    <script src="portal-core.js?v=2"></script>
 </head>
 <body>
+    
+    <div class="settings-panel" id="settings-panel">
+      <button class="settings-btn" id="btn-lang" onclick="toggleLang()" title="Switch language / Alternar idioma">
+        <span class="btn-icon" id="lang-icon">🇧🇷</span>
+        <span id="lang-label">PT</span>
+      </button>
+      <button class="settings-btn" id="btn-theme" onclick="toggleTheme()" title="Toggle dark/light mode">
+        <span class="btn-icon" id="theme-icon">🌙</span>
+        <span id="theme-label">Dark</span>
+      </button>
+    </div>
+    <div class="layout-wrapper">
+        <aside class="sidebar">
+            <a href="index.html" class="back-btn">
+                <span lang-content="pt">&omacr; Voltar para Tela Principal</span>
+                <span lang-content="en">&omacr; Back to Main Portal</span>
+            </a>
+            <h3 lang-content="pt">Materiais Complementares</h3>
+            <h3 lang-content="en">Additional Materials</h3>
+            <ul class="nav-links">
+                <li><a href="05-Labs-Oficiais/guia-labs.html">
+                <span lang-content="pt">Guia Labs</span>
+                <span lang-content="en">Labs Guide</span>
+            </a></li>
+                <li><a href="05-Labs-Oficiais/links-uteis.html">
+                <span lang-content="pt">Links Úteis</span>
+                <span lang-content="en">Useful Links</span>
+            </a></li>
+                <li><a href="README.html" class="active">
+                <span lang-content="pt">Sobre o Projeto (README)</span>
+                <span lang-content="en">About (README)</span>
+            </a></li>
+            </ul>
+        </aside>
+        <div class="content-area">
     <div class="container"><h1 lang-content="pt">📘 Material de Estudo — Certificação <strong>PL-300: Microsoft Power BI Data Analyst</strong></h1>
 <h1 lang-content="en">📘 Study Material — Certification <strong>PL-300: Microsoft Power BI Data Analyst</strong></h1>
 <p lang-content="pt">Este repositório reúne um guia estruturado de estudos para a certificação <strong>PL-300</strong>, utilizando <strong>materiais oficiais da Microsoft</strong>, anotações pessoais, exercícios e resumos dos principais tópicos cobrados no exame.</p>
@@ -224,5 +287,7 @@ Feel free to open <em>issues</em> or submit <em>pull requests</em>.</p>
 LinkedIn: https://www.linkedin.com/in/paulomulato/</p>
 <p lang-content="en"><strong>Paulo Mulato</strong><br />
 LinkedIn: https://www.linkedin.com/in/paulomulato/</p></div>
+    </div>
+    </div>
 </body>
 </html>
