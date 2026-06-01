@@ -548,6 +548,17 @@
 
         window.addEventListener('portalProgressChanged', renderProgress);
 
+        function renderStats() {
+            try {
+                const answered = JSON.parse(localStorage.getItem('pl300_answered') || '[]');
+                const marked = JSON.parse(localStorage.getItem('pl300_global_marked') || '[]');
+                const solvedEl = document.getElementById('stats-solved');
+                const reviewEl = document.getElementById('stats-review');
+                if (solvedEl) solvedEl.innerText = answered.length;
+                if (reviewEl) reviewEl.innerText = marked.length;
+            } catch(e) {}
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             if(typeof updateTheme === 'function') updateTheme();
             if(typeof applyTranslations === 'function') applyTranslations();
@@ -555,6 +566,7 @@
             updateThemeUI();
             updateLangUI();
             renderProgress();
+            renderStats();
         });
     </script>
 </body>
