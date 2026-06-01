@@ -1719,14 +1719,14 @@ const questionBank = {
         "Habilitar Endpoint XMLA"
       ],
       "explanation_pt": "O Data Gateway (modo Padrão ou Pessoal) é o componente que cria uma ponte segura entre o Power BI Service na nuvem e fontes de dados locais na rede corporativa.",
-      "question_en": "Você publicou um relatório no Power BI Service conectado a um banco SQL Server local. Para configurar a atualização agendada, o que é obrigatório?",
+      "question_en": "You published a report about the Power BI service connected to an on-premises SQL Server database. To configure the calendar update, what is mandatory?",
       "options_en": [
-        "Licença Power BI Premium",
-        "Um Data Gateway instalado na rede local com acesso ao banco",
-        "Conta de Administrador do Workspace",
-        "Habilitar o Endpoint XMLA"
+        "Power BI Premium License",
+        "A Data Gateway installed on the local network with access to the bank",
+        "Workspace Administrator Account",
+        "Enable XMLA Endpoint"
       ],
-      "explanation_en": "O Data Gateway (modo Padrão ou Pessoal) é o componente que cria uma ponte segura entre o Power BI Service na nuvem e fontes de dados locais na rede corporativa."
+      "explanation_en": "The Data Gateway (Standard or Personal mode) is the component that creates a secure bridge between the Power BI Service in the cloud and on-premises data sources on the corporate network."
     },
     {
       "question": "Qual é o propósito da opção 'Ativar Carregamento para' (Enable Load) em uma query do Power Query?",
@@ -1746,14 +1746,14 @@ const questionBank = {
         "Converter uma consulta para formato DirectQuery"
       ],
       "explanation_pt": "Quando 'Enable Load' está desativado, existe uma consulta no Power Query mas não é fornecida como tabela no modelo, sendo útil para consultas de apoio ou staging.",
-      "question_en": "Qual é o propósito da opção 'Ativar Carregamento para' (Enable Load) em uma query do Power Query?",
+      "question_en": "What is the purpose of the 'Enable Load for' option in a Power Query query?",
       "options_en": [
-        "Forçar a atualização imediata da query",
-        "Controlar se a query será carregada como tabela no modelo de dados",
-        "Habilitar a query para uso em relatórios paginados",
-        "Converter a query para formato DirectQuery"
+        "Force an immediate update of the query",
+        "Control whether a query is provided as a table in the data model",
+        "Enable a query for use in paginated reports",
+        "Convert a query to DirectQuery format"
       ],
-      "explanation_en": "Quando 'Enable Load' está desativado, a query existe no Power Query mas não é carregada como tabela no modelo, sendo útil para queries de apoio ou staging."
+      "explanation_en": "When 'Enable Load' is disabled, a query exists in Power Query but is not provided as a table in the model, making it useful for supporting or staging queries."
     },
     {
       "question": "Ao usar o Power Query para conectar a uma API REST via Web.Contents, o que é necessário para garantir o Query Folding?",
@@ -1773,14 +1773,14 @@ const questionBank = {
         "Usando apenas filtros nativos da API"
       ],
       "explanation_pt": "Query Folding não é suportado para conectores Web/API REST, pois o Power Query não consegue traduzir as transformações M em requisições HTTP nativas. As transformações são sempre feitas localmente.",
-      "question_en": "Ao usar o Power Query para conectar a uma API REST via Web.Contents, o que é necessário para garantir o Query Folding?",
+      "question_en": "When using Power Query to connect a REST API via Web.Contents, what is needed to ensure Query Folding?",
       "options_en": [
-        "Query Folding não é suportado para fontes Web/API REST",
-        "Usar o parâmetro RelativePath e Query no Web.Contents",
-        "Habilitar DirectQuery para a fonte Web",
-        "Usar apenas filtros nativos da API"
+        "Query Folding is not supported for Web sources/REST API",
+        "Use the RelativePath and Query parameter in Web.Contents",
+        "Enable DirectQuery for Web Source",
+        "Using only native API filters"
       ],
-      "explanation_en": "Query Folding não é suportado para conectores Web/API REST, pois o Power Query não consegue traduzir as transformações M em requisições HTTP nativas. As transformações são sempre feitas localmente."
+      "explanation_en": "Query Folding is not supported for Web/REST API connectors as Power Query cannot translate M transformations into native HTTP requests. Transformations are always done locally."
     },
     {
       "question": "Você precisa criar uma coluna personalizada no Power Query baseada em condições. Qual é a diferença entre 'Coluna Condicional' (Conditional Column) e 'Coluna Personalizada' (Custom Column)?",
@@ -1800,14 +1800,14 @@ const questionBank = {
         "Coluna Condicional suporta apenas dois resultados"
       ],
       "explanation_pt": "A Coluna Condicional oferece uma interface gráfica para criar lógica IF/ELSE simples. A Coluna Personalizada usa a linguagem M, oferecendo flexibilidade total para expressões complexas.",
-      "question_en": "Você precisa criar uma coluna personalizada no Power Query baseada em condições. Qual é a diferença entre 'Coluna Condicional' (Conditional Column) e 'Coluna Personalizada' (Custom Column)?",
+      "question_en": "You need to create a custom column in Power Query based on conditions. What is the difference between 'Conditional Column' (Conditional Column) and 'Custom Column' (Custom Column)?",
       "options_en": [
-        "Não há diferença funcional",
-        "Coluna Condicional usa interface visual com regras IF/ELSE; Coluna Personalizada usa linguagem M livremente",
-        "Coluna Personalizada é mais lenta",
-        "Coluna Condicional suporta apenas dois resultados"
+        "There is no functional difference",
+        "Conditional Column uses visual interface with IF/ELSE rules; Custom Column uses M language freely",
+        "Custom Column is slower",
+        "Conditional Column supports only two results"
       ],
-      "explanation_en": "A Coluna Condicional oferece uma interface gráfica para criar lógica IF/ELSE simples. A Coluna Personalizada usa a linguagem M, oferecendo flexibilidade total para expressões complexas."
+      "explanation_en": "The Conditional Column provides a graphical interface for creating simple IF/ELSE logic. Custom Column uses the M language, offering full flexibility for complex expressions."
     },
     {
       "question": "Qual função M do Power Query é equivalente ao VLOOKUP do Excel, buscando um valor em outra tabela?",
@@ -1827,14 +1827,14 @@ const questionBank = {
         "Registro.Campo()"
       ],
       "explanation_pt": "Table.NestedJoin (ou 'Mesclar Consultas' na interface) combinado com a expansão da coluna resultante é o equivalente ao VLOOKUP no Power Query, buscando valores de tabelas relacionadas.",
-      "question_en": "Qual função M do Power Query é equivalente ao VLOOKUP do Excel, buscando um valor em outra tabela?",
+      "question_en": "Which Power Query M function is equivalent to Excel's VLOOKUP, looking for a value in another table?",
       "options_en": [
         "Table.Join()",
-        "Table.NestedJoin() combinado com expansão de coluna",
+        "Table.NestedJoin() combined with column expansion",
         "List.Contains()",
         "Record.Field()"
       ],
-      "explanation_en": "Table.NestedJoin (ou 'Mesclar Consultas' na interface) combinado com a expansão da coluna resultante é o equivalente ao VLOOKUP no Power Query, buscando valores de tabelas relacionadas."
+      "explanation_en": "Table.NestedJoin (or 'Merge Queries' in the interface) combined with the resulting column expansion is the equivalent of VLOOKUP in Power Query, fetching values ​​from related tables."
     },
     {
       "question": "Você conecta o Power BI a uma fonte de dados SQL e percebe que as transformações do Power Query NÃO estão sendo enviadas como SQL para o servidor (Query Folding quebrado). Qual é o impacto mais significativo?",
@@ -1854,14 +1854,14 @@ const questionBank = {
         "O RLS deixa de funcionar"
       ],
       "explanation_pt": "Quando o Query Folding é quebrado, o Power Query baixa todos os dados brutos da fonte para aplicar as transformações localmente, o que é muito mais lento e consome mais recursos.",
-      "question_en": "Você conecta o Power BI a uma fonte de dados SQL e percebe que as transformações do Power Query NÃO estão sendo enviadas como SQL para o servidor (Query Folding quebrado). Qual é o impacto mais significativo?",
+      "question_en": "You connect Power BI to a SQL data source and notice that Power Query transformations are NOT sent as SQL to the server (Broken Query Folding). What is the most significant impact?",
       "options_en": [
-        "O relatório não consegue atualizar os dados",
-        "Todos os dados são transferidos para o Power BI antes das transformações serem aplicadas, aumentando o consumo de rede e memória",
-        "As medidas DAX param de funcionar",
-        "O RLS deixa de funcionar"
+        "The report cannot update the data",
+        "All data is transferred to Power BI before transformations are applied, increasing network and memory consumption",
+        "DAX measures stop working",
+        "RLS stops working"
       ],
-      "explanation_en": "Quando o Query Folding está quebrado, o Power Query baixa todos os dados brutos da fonte para aplicar as transformações localmente, o que é muito mais lento e consome mais recursos."
+      "explanation_en": "When Query Folding is broken, Power Query downloads all the raw data from the source to apply transformations locally, which is much slower and more resource-intensive."
     },
     {
       "question": "Qual é o tipo de dado mais eficiente para representar datas no modelo do Power BI, visando melhor compactação e suporte a funções de inteligência de tempo?",
@@ -1881,14 +1881,14 @@ const questionBank = {
         "DataHora"
       ],
       "explanation_pt": "O tipo 'Date' sem componente de hora é mais eficiente que DateTime (menor cardinalidade), mais funcional que texto (suporta operações de dados) e mais legível que inteiros, além de ser compatível com inteligência de tempo DAX.",
-      "question_en": "Qual é o tipo de dado mais eficiente para representar datas no modelo do Power BI, visando melhor compactação e suporte a funções de inteligência de tempo?",
+      "question_en": "What is the most efficient data type for representing data in the Power BI model, improving compression and supporting time intelligence functions?",
       "options_en": [
-        "Texto (Text) no formato AAAA-MM-DD",
-        "Número Inteiro (Whole Number) no formato AAAAMMDD",
+        "Text (Text) in YYYY-MM-DD format",
+        "Integer in YYYYMMDD format",
         "Data (Date)",
         "DateTime"
       ],
-      "explanation_en": "O tipo 'Date' sem componente de hora é mais eficiente que DateTime (menor cardinalidade), mais funcional que texto (suporta operações de data) e mais legível que inteiros, além de ser compatível com inteligência de tempo DAX."
+      "explanation_en": "The 'Date' type without a time component is more efficient than DateTime (lower cardinality), more functional than text (supports data operations) and more readable than integers, as well as being compatible with DAX time intelligence."
     },
     {
       "question": "Você está usando o Power Query para combinar dados de múltiplas planilhas dentro de um único arquivo Excel. Qual recurso permite isso de forma automática?",
@@ -1908,14 +1908,14 @@ const questionBank = {
         "Usando o conector OData"
       ],
       "explanation_pt": "Ao conectar um arquivo Excel e selecionar várias planilhas ou usar a opção 'Combinar e Transformar', o Power Query gera automaticamente uma função para combinar como abas.",
-      "question_en": "Você está usando o Power Query para combinar dados de múltiplas planilhas dentro de um único arquivo Excel. Qual recurso permite isso de forma automática?",
+      "question_en": "You are using Power Query to combine data from multiple worksheets into a single Excel file. Which feature allows this automatically?",
       "options_en": [
-        "Importar cada aba individualmente usando múltiplas conexões",
-        "Usar a opção 'Combinar e Transformar' ao conectar ao arquivo Excel",
-        "Criar uma macro VBA no Excel primeiro",
-        "Usar o conector OData"
+        "Import each tab individually using multiple connections",
+        "Using 'Combine and Transform' option when connecting to Excel file",
+        "Create a VBA macro in Excel first",
+        "Using the OData connector"
       ],
-      "explanation_en": "Ao conectar a um arquivo Excel e selecionar múltiplas planilhas ou usar a opção 'Combinar e Transformar', o Power Query gera automaticamente uma função para combinar as abas."
+      "explanation_en": "When connecting an Excel file and selecting multiple sheets or using the 'Combine and Transform' option, Power Query automatically generates a function to combine as tabs."
     },
     {
       "question": "Qual é o propósito do 'Diagnóstico de Query' (Query Diagnostics) no Power Query?",
@@ -1935,14 +1935,14 @@ const questionBank = {
         "Monitorar o uso de memória em tempo real"
       ],
       "explanation_pt": "O Diagnóstico de Query registra informações detalhadas sobre cada etapa do Power Query, mostrando quais consultas foram enviadas à fonte (Query Folding) e onde estão os gargalos de performance.",
-      "question_en": "Qual é o propósito do 'Diagnóstico de Query' (Query Diagnostics) no Power Query?",
+      "question_en": "What is the purpose of 'Query Diagnostics' in Power Query?",
       "options_en": [
-        "Verificar erros de sintaxe na linguagem M",
-        "Identificar gargalos de performance nas etapas de transformação e verificar o Query Folding",
-        "Testar conexões com fontes de dados externas",
-        "Monitorar o uso de memória em tempo real"
+        "Check syntax errors in M ​​language",
+        "identify performance bottlenecks in the transformation stages and verify Query Folding",
+        "Test connections to external data sources",
+        "Monitor memory usage in real time"
       ],
-      "explanation_en": "O Diagnóstico de Query registra informações detalhadas sobre cada etapa do Power Query, mostrando quais consultas foram enviadas à fonte (Query Folding) e onde estão os gargalos de performance."
+      "explanation_en": "Query Diagnostics records detailed information about each step of Power Query, showing which queries were sent to the source (Query Folding) and where the performance bottlenecks are."
     },
     {
       "question": "Você precisa que o Power Query leia apenas os dados dos últimos 30 dias de uma tabela SQL enorme. Qual é a abordagem mais eficiente para filtrar na fonte?",
@@ -1962,14 +1962,14 @@ const questionBank = {
         "Crie uma view no banco de dados e conecte-a a ela"
       ],
       "explanation_pt": "Usando um parâmetro de dados no filtro do Power Query, quando a fonte suporta Query Folding (como SQL Server), envie o filtro diretamente para o banco, transferindo apenas os dados necessários.",
-      "question_en": "Você precisa que o Power Query leia apenas os dados dos últimos 30 dias de uma tabela SQL enorme. Qual é a abordagem mais eficiente para filtrar na fonte?",
+      "question_en": "You need Power Query to read only the last 30 days of data from a huge SQL table. What is the most efficient approach to filtering at the source?",
       "options_en": [
-        "Carregar todos os dados e filtrar depois com DAX",
-        "Adicionar um passo de Filtrar Linhas baseado na coluna de data após carregar tudo",
-        "Usar um Parâmetro de Data e aplicar o filtro no Power Query, garantindo Query Folding para SQL",
-        "Criar uma view no banco de dados e conectar a ela"
+        "Load all data and filter later with DAX",
+        "Add a Filter Rows based on data column step after loading everything",
+        "Use a data parameter and apply the filter in Power Query, ensuring Query Folding for SQL",
+        "Create a view in the database and connect it to it"
       ],
-      "explanation_en": "Usar um Parâmetro de Data no filtro do Power Query, quando a fonte suporta Query Folding (como SQL Server), envia o filtro diretamente para o banco, transferindo apenas os dados necessários."
+      "explanation_en": "Using a data parameter in the Power Query filter, when the source supports Query Folding (such as SQL Server), send the filter directly to the database, transferring only the necessary data."
     },
     {
       "question": "Você tem três versões de um banco de dados SQL do Azure: Desenvolvimento, Teste e Produção. O seu conjunto de dados atualmente aponta para a base de Desenvolvimento. Como configurar o modelo para alternar facilmente o servidor de banco de dados diretamente pelo Power BI Service (powerbi.com) com o menor esforço?",
@@ -1989,14 +1989,14 @@ const questionBank = {
         "Alterar o nível de privacidade e usar a função ReplaceValue"
       ],
       "explanation_pt": "Criar parâmetros de conexão no Power Query permite que os valores dos servidores sejam modificados de forma dinâmica nas configurações do conjunto de dados no Power BI Service, sem necessidade de editar o arquivo .pbix local.",
-      "question_en": "Você tem três versões de um banco de dados SQL do Azure: Desenvolvimento, Teste e Produção. O seu conjunto de dados atualmente aponta para a base de Desenvolvimento. Como configurar o modelo para alternar facilmente o servidor de banco de dados diretamente pelo Power BI Service (powerbi.com) com o menor esforço?",
+      "question_en": "You have three versions of an Azure SQL database: Development, Test, and Production. Your dataset currently points to the Development base. How to configure the template to easily switch database server directly through Power BI Service (powerbi.com) with least effort?",
       "options_en": [
-        "Criar um arquivo JSON com os nomes dos servidores e importá-lo",
-        "Criar um Parâmetro no Power Query e atualizar as consultas para usá-lo",
-        "Criar uma consulta para cada servidor e ocultar as tabelas de desenvolvimento",
-        "Alterar o nível de privacidade e usar a função ReplaceValue"
+        "Create a JSON file with server names and import it",
+        "Create a Parameter in Power Query and update queries to use it",
+        "Create a query for each server and hide the development tables",
+        "Change the privacy level and use the ReplaceValue function"
       ],
-      "explanation_en": "Criar parâmetros de conexão no Power Query permite que os valores dos servidores sejam modificados de forma dinâmica nas configurações do dataset no Power BI Service, sem necessidade de editar o arquivo .pbix local."
+      "explanation_en": "Creating connection parameters in Power Query allows server values ​​to be dynamically modified in dataset settings in Power BI Service, without the need to edit the local .pbix file."
     },
     {
       "question": "Você criou um modelo no Power BI Desktop que se conecta a 120 tabelas de um servidor SQL de teste (SQLDev). Antes de publicar o modelo para produção, você precisa alterar a conexão de todas as tabelas para o servidor de produção (SQLProd). Como fazer isso com o menor esforço administrativo?",
@@ -2016,14 +2016,14 @@ const questionBank = {
         "Editar a origem no Editor Avançado de cada uma das 120 tabelas individualmente"
       ],
       "explanation_pt": "Alterar a string de conexão nas 'Configurações da Fonte de Dados' altera a origem de todas as tabelas dependentes daquele servidor de uma só vez, economizando esforço administrativo.",
-      "question_en": "Você criou um modelo no Power BI Desktop que se conecta a 120 tabelas de um servidor SQL de teste (SQLDev). Antes de publicar o modelo para produção, você precisa alterar a conexão de todas as tabelas para o servidor de produção (SQLProd). Como fazer isso com o menor esforço administrativo?",
+      "question_en": "You created a model in Power BI Desktop that connects to 120 tables on a test SQL server (SQLDev). Before publishing the model to production, you need to change the connection of all tables to the production server (SQLProd). How to do this with the least administrative effort?",
       "options_en": [
-        "Criar uma nova conexão para o SQLProd e importar as 120 tabelas novamente",
-        "Deletar as consultas existentes e adicionar as novas fontes",
-        "Alterar a origem nas Configurações da Fonte de Dados (Data Source Settings) no menu do Power Query",
-        "Editar a origem no Editor Avançado de cada uma das 120 tabelas individualmente"
+        "Create a new connection to SQLProd and import the 120 tables again",
+        "Delete existing queries and add new sources",
+        "Change the source in Data Source Settings in the Power Query menu",
+        "Edit the source in the Advanced Editor for each of the 120 tables individually"
       ],
-      "explanation_en": "Alterar a string de conexão nas 'Configurações da Fonte de Dados' altera a origem de todas as tabelas dependentes daquele servidor de uma só vez, economizando esforço administrativo."
+      "explanation_en": "Changing the connection string in 'Data Source Settings' changes the origin of all tables dependent on that server at once, saving administrative effort."
     },
     {
       "question": "No Power BI Desktop, você está atualizando um relatório conectado a um banco de dados SQL Server usando autenticação SQL. As credenciais armazenadas expiraram. Qual ação você deve realizar para atualizar as credenciais?",
@@ -2043,14 +2043,14 @@ const questionBank = {
         "Abra as opções e permita que a visualização de dados baixe em segundo plano"
       ],
       "explanation_pt": "O caminho correto para gerenciar ou atualizar credenciais expiradas de uma fonte existente é através da Página Inicial -> Configurações da Fonte de Dados -> Editar Permissões.",
-      "question_en": "No Power BI Desktop, você está atualizando um relatório conectado a um banco de dados SQL Server usando autenticação SQL. As credenciais armazenadas expiraram. Qual ação você deve realizar para atualizar as credenciais?",
+      "question_en": "In Power BI Desktop, you are updating a report connected to a SQL Server database using SQL authentication. Stored credentials have expired. What action should you take to update your credentials?",
       "options_en": [
-        "Abrir as 'Configurações da Fonte de Dados', localizar a fonte e clicar em 'Editar Permissões' para inserir as novas credenciais",
-        "Abrir a janela 'Obter Dados' e criar uma nova conexão com o banco",
-        "Limpar as permissões globais nas Opções do Power BI e reiniciar o arquivo",
-        "Abrir as Opções e permitir que a visualização de dados baixe em segundo plano"
+        "Open as 'Data Source Settings', locate the source and click 'Edit Permissions' to enter the new credentials",
+        "Open the 'Get Data' window and create a new connection to the bank",
+        "Clear global assignments in Power BI options and reset the file",
+        "Open options and allow data preview to download in the background"
       ],
-      "explanation_en": "O caminho correto para gerenciar ou atualizar credenciais expiradas de uma fonte existente é através de Página Inicial -> Configurações da Fonte de Dados -> Editar Permissões."
+      "explanation_en": "The correct way to manage or update expired credentials for an existing source is through Home -> Data Source Settings -> Edit Permissions."
     },
     {
       "question": "Você importou uma lista de 1.500 clientes no Power Query. Você precisa verificar se a lista possui registros válidos de todas as regiões para as quais deseja direcionar uma campanha de marketing. Qual ação você deve realizar no Power Query?",
@@ -2070,14 +2070,14 @@ const questionBank = {
         "Criar uma coluna condicional com as regiões válidas"
       ],
       "explanation_pt": "Para obter estatísticas corretas sobre a distribuição de termos em toda a coluna (além das primeiras 1000 linhas padrão), você deve alterar a amostragem na barra de status para o conjunto de dados completo e selecionar a opção 'Distribuição de Coluna'.",
-      "question_en": "Você importou uma lista de 1.500 clientes no Power Query. Você precisa verificar se a lista possui registros válidos de todas as regiões para as quais deseja direcionar uma campanha de marketing. Qual ação você deve realizar no Power Query?",
+      "question_en": "You have imported a list of 1,500 customers into Power Query. You need to verify that the list has valid records for all the regions you want to target a marketing campaign. What action should you take in Power Query?",
       "options_en": [
-        "Abrir o Editor Avançado e habilitar a qualidade da coluna",
-        "Habilitar o 'Perfil de coluna baseado no conjunto de dados completo' na barra de status e selecionar 'Distribuição de Coluna'",
-        "Ativar a 'Qualidade de Coluna' e 'Perfil de Coluna' apenas nas primeiras 1000 linhas",
-        "Criar uma coluna condicional com as regiões válidas"
+        "Open the Advanced Editor and enable column quality",
+        "Enable 'Column profile based on complete dataset' in the status bar and select 'Column Distribution'",
+        "Enable 'Column Quality' and 'Column Profile' only on the first 1000 rows",
+        "Create a conditional column with valid regions"
       ],
-      "explanation_en": "Para obter estatísticas corretas sobre a distribuição de termos em toda a coluna (além das primeiras 1000 linhas padrão), você deve alterar a amostragem na barra de status para o conjunto de dados completo e selecionar a opção 'Distribuição de Coluna'."
+      "explanation_en": "To get correct statistics on the distribution of terms across the entire column (beyond the first 1000 default rows), you must change the sampling in the status bar to the full dataset and select the 'Column Distribution' option."
     },
     {
       "question": "No Power Query, você aplica a etapa: Table.ReplaceValue(Tabela, \"1318\", \"1319\", Replacer.ReplaceText, {\"Endereco\"}). Uma das linhas possui o valor 'Avenida Brasil, 1318' na coluna Endereco. Qual será o valor resultante após a aplicação dessa etapa?",
@@ -2097,14 +2097,14 @@ const questionBank = {
         "Avenida Brasil, 1319"
       ],
       "explanation_pt": "Como a função utiliza o substituto Replacer.ReplaceText, ela é como uma substituição parcial de texto em qualquer lugar da string, mudando '1318' para '1319' e preservando o restante do endereço.",
-      "question_en": "No Power Query, você aplica a etapa: Table.ReplaceValue(Tabela, \"1318\", \"1319\", Replacer.ReplaceText, {\"Endereco\"}). Uma das linhas possui o valor 'Avenida Brasil, 1318' na coluna Endereco. Qual será o valor resultante após a aplicação dessa etapa?",
+      "question_en": "In Power Query, you apply the step: Table.ReplaceValue(Table, \"1318\", \"1319\", Replacer.ReplaceText, {\"Address\"}). One of the lines has the value 'Avenida Brasil, 1318' in the Address column. What will be the resulting value from applying this step?",
       "options_en": [
         "1318",
         "1319",
         "Avenida Brasil, 1318",
         "Avenida Brasil, 1319"
       ],
-      "explanation_en": "Como a função utiliza o substituidor Replacer.ReplaceText, ela age como uma substituição parcial de texto em qualquer lugar da string, mudando '1318' para '1319' e preservando o restante do endereço."
+      "explanation_en": "Because the function uses the Replacer.ReplaceText substitute, it is like a partial text replacement anywhere in the string, changing '1318' to '1319' and preserving the rest of the address."
     },
     {
       "question": "Uma biblioteca do SharePoint Online contém relatórios mensais de fabricação salvos como arquivos Excel com a mesma estrutura de dados. Você precisa carregar apenas os arquivos dessa pasta para análise no Power BI. Qual é o fluxo correto de etapas?",
@@ -2124,14 +2124,14 @@ const questionBank = {
         "Obtenha dados da Lista do SharePoint, clique em Combinar e Filtrar pelo nome do arquivo"
       ],
       "explanation_pt": "Conectar a uma Pasta do SharePoint Online (SharePoint Folder) lê todos os arquivos do site. Filtrar pelo 'Folder Path' garante que apenas os arquivos da biblioteca sejam desejados, e 'Combinar e Transformar' os consolida automaticamente em uma única tabela.",
-      "question_en": "Uma biblioteca do SharePoint Online contém relatórios mensais de fabricação salvos como arquivos Excel com a mesma estrutura de dados. Você precisa carregar apenas os arquivos dessa pasta para análise no Power BI. Qual é o fluxo correto de etapas?",
+      "question_en": "A SharePoint Online library contains monthly manufacturing reports saved as Excel files with the same data structure. You only need to upload files from this folder for analysis in Power BI. What is the correct flow of steps?",
       "options_en": [
-        "Obter dados de Pasta do SharePoint Online, inserir a URL do site, clicar em 'Combinar e Transformar' e aplicar filtro pelo caminho da pasta (Folder Path)",
-        "Obter dados de Lista do SharePoint, selecionar os arquivos Excel e mesclá-los via DAX",
-        "Conectar a cada arquivo Excel individualmente usando o conector Web",
-        "Obter dados de Lista do SharePoint, clicar em Combinar e Filtrar pelo nome do arquivo"
+        "Get SharePoint Online Folder data, enter the site URL, click 'Merge and Transform' and apply filter by Folder Path",
+        "Get data from SharePoint List, select Excel files and merge them via DAX",
+        "Connect to each Excel file individually using the Web connector",
+        "Get data from SharePoint List, click Combine and Filter by file name"
       ],
-      "explanation_en": "Conectar a uma Pasta do SharePoint Online (SharePoint Folder) lê todos os arquivos do site. Filtrar pelo 'Folder Path' garante que apenas os arquivos da biblioteca desejada sejam mantidos, e 'Combinar e Transformar' os consolida automaticamente em uma única tabela."
+      "explanation_en": "Connecting to a SharePoint Folder reads all files on the site. Filtering by 'Folder Path' ensures that only library files are wanted, and 'Combine and Transform' automatically consolidates them into a single table."
     },
     {
       "question": "Você precisa importar 100 arquivos CSV que possuem a mesma estrutura de colunas e estão salvos em uma pasta compartilhada na rede da sua empresa. Como consolidar esses arquivos em uma única tabela no Power BI com o menor esforço administrativo?",
@@ -2151,14 +2151,14 @@ const questionBank = {
         "Utilizando o conector SQL Server para ler os arquivos de rede"
       ],
       "explanation_pt": "O conector Pasta (Folder) lê todo o conteúdo de um diretório de arquivos planos da mesma estrutura e gera uma função automática em M para empilhar (combinar) todas as linhas em uma única tabela consolidada automaticamente.",
-      "question_en": "Você precisa importar 100 arquivos CSV que possuem a mesma estrutura de colunas e estão salvos em uma pasta compartilhada na rede da sua empresa. Como consolidar esses arquivos em uma única tabela no Power BI com o menor esforço administrativo?",
+      "question_en": "You need to import 100 CSV files that have the same column structure and are saved in a shared folder on your company network. How to consolidate these files into a single table in Power BI with the least administrative effort?",
       "options_en": [
-        "Adicionar cada arquivo CSV individualmente e combiná-los usando etapas de Append",
-        "Adicionar uma fonte de dados do tipo 'Pasta' (Folder), apontar para o diretório e selecionar a opção 'Combinar e Carregar'",
-        "Copiar todos os dados manualmente para uma planilha Excel e importá-la",
-        "Utilizar o conector SQL Server para ler os arquivos de rede"
+        "Add each CSV file individually and combine them using Append steps",
+        "Add a data source of type 'Folder' (Folder), point to the directory and select the 'Combine and Load' option",
+        "Copy all data manually to an Excel spreadsheet and import it",
+        "Using the SQL Server connector to read network files"
       ],
-      "explanation_en": "O conector de Pasta (Folder) lê todo o conteúdo de um diretório de arquivos planos de mesma estrutura e gera uma função automática em M para empilhar (combinar) todas as linhas em uma única tabela consolidada automaticamente."
+      "explanation_en": "The Folder connector reads the entire contents of a directory of flat files of the same structure and generates an automatic function in M ​​to stack (combine) all rows into a single automatically consolidated table."
     },
     {
       "question": "Você possui duas consultas no Power BI: Query1 traz a tabela SMB_Customers do SQL Server e Query2 traz Enterprise_Customers de um banco Oracle. Ambas possuem as mesmas colunas. Qual comando você deve usar para unir essas duas tabelas em uma única listagem consolidada de clientes?",
@@ -2178,14 +2178,14 @@ const questionBank = {
         "Mesclar Colunas"
       ],
       "explanation_pt": "Como as tabelas possuem a mesma estrutura de colunas e você quer empilhar as linhas verticalmente (unir as bases), a operação correta é o 'Acrescentar Consultas' (Append Queries).",
-      "question_en": "Você possui duas consultas no Power BI: Query1 traz a tabela SMB_Customers do SQL Server e Query2 traz Enterprise_Customers de um banco Oracle. Ambas possuem as mesmas colunas. Qual comando você deve usar para unir essas duas tabelas em uma única listagem consolidada de clientes?",
+      "question_en": "You have two queries in Power BI: Query1 brings the SMB_Customers table from SQL Server and Query2 brings Enterprise_Customers from an Oracle database. Both have the same columns. Which command should you use to join these two tables into a single consolidated customer list?",
       "options_en": [
         "Mesclar Consultas (Merge Queries)",
         "Acrescentar Consultas (Append Queries)",
-        "Combinar Arquivos",
-        "Mesclar Colunas"
+        "Combine Files",
+        "Merge Columns"
       ],
-      "explanation_en": "Como as tabelas possuem a mesma estrutura de colunas e você quer empilhar as linhas verticalmente (unir as bases), a operação correta é o 'Acrescentar Consultas' (Append Queries)."
+      "explanation_en": "As the tables have the same column structure and you want to stack the rows vertically (join the bases), the correct operation is 'Append Queries'."
     },
     {
       "question": "Um modelo do Power BI recebe leituras de temperatura de 500 sensores a cada minuto. O requisito de relatório é exibir apenas a temperatura média de cada sensor consolidada por hora. Como reduzir o tamanho do modelo e otimizar a performance?",
@@ -2205,14 +2205,14 @@ const questionBank = {
         "Removendo as colunas de ID dos sensores"
       ],
       "explanation_pt": "Agrupar e resumir os dados no Power Query (pré-agregação) reduz drasticamente o número de linhas importadas pelo VertiPaq (de 60 linhas por hora por sensor para apenas 1 linha por hora por sensor), melhorando a compactação e o desempenho.",
-      "question_en": "Um modelo do Power BI recebe leituras de temperatura de 500 sensores a cada minuto. O requisito de relatório é exibir apenas a temperatura média de cada sensor consolidada por hora. Como reduzir o tamanho do modelo e otimizar a performance?",
+      "question_en": "A Power BI model receives temperature readings from 500 sensors every minute. The report requirement is to display only the average temperature of each sensor consolidated per hour. How to reduce model size and optimize performance?",
       "options_en": [
-        "Criar visuais que agrupam os dados por hora na aba de Relatório",
-        "Utilizar o Power Query para aplicar uma etapa de 'Agrupar Por' (Group By) por Sensor e Hora, agregando a Média",
-        "Aplicar um filtro de nível de relatório para a coluna de minutos",
-        "Remover as colunas de ID dos sensores"
+        "Create visualizations that group data by hour in the Report tab",
+        "Using Power Query to apply a 'Group By' step by Sensor and Time, aggregating the Average",
+        "Apply a report-level filter to the minutes column",
+        "Removing the sensor ID columns"
       ],
-      "explanation_en": "Agrupar e resumir os dados no Power Query (pré-agregação) reduz drasticamente o número de linhas importadas pelo VertiPaq (de 60 linhas por hora por sensor para apenas 1 linha por hora por sensor), melhorando a compactação e a performance."
+      "explanation_en": "Grouping and summarizing data in Power Query (pre-aggregation) dramatically reduces the number of rows imported by VertiPaq (from 60 rows per hour per sensor to just 1 row per hour per sensor), improving compression and performance."
     },
     {
       "question": "Você está mesclando as consultas de Pedidos (Orders) e Detalhes dos Pedidos (Order Details) no Power Query. Devido a problemas de qualidade, alguns pedidos não possuem registros correspondentes nos detalhes. Qual tipo de junção (join) garante que todos os registros da tabela de Pedidos sejam mantidos no resultado?",
@@ -2232,14 +2232,14 @@ const questionBank = {
         "Junção Anti Direita"
       ],
       "explanation_pt": "A Junção Externa Esquerda (Left Outer Join) preserva 100% das linhas da primeira tabela (Pedidos) e traz correspondências da segunda tabela (Detalhes), preenchendo com nulo onde não houver correspondência.",
-      "question_en": "Você está mesclando as consultas de Pedidos (Orders) e Detalhes dos Pedidos (Order Details) no Power Query. Devido a problemas de qualidade, alguns pedidos não possuem registros correspondentes nos detalhes. Qual tipo de junção (join) garante que todos os registros da tabela de Pedidos sejam mantidos no resultado?",
+      "question_en": "You are merging Orders and Order Details queries in Power Query. Due to quality issues, some orders do not have corresponding records in details. Which order type (join) guarantees that all order table records are kept in the result?",
       "options_en": [
         "Junção Externa Completa (Full Outer)",
         "Junção Interna (Inner)",
         "Junção Externa Esquerda (Left Outer)",
         "Junção Anti Direita (Right Anti)"
       ],
-      "explanation_en": "A Junção Externa Esquerda (Left Outer Join) preserva 100% das linhas da primeira tabela (Pedidos) e traz correspondências da segunda tabela (Detalhes), preenchendo com nulo onde não houver correspondência."
+      "explanation_en": "The Left Outer Join preserves 100% of the rows from the first table (Orders) and brings matches from the second table (Details), filling with null where there is no match."
     },
     {
       "question": "Qual é a melhor prática ao lidar com erros de tipo de dado durante a importação de arquivos CSV no Power Query?",
@@ -2259,14 +2259,14 @@ const questionBank = {
         "Usando um arquivo Excel em vez de CSV"
       ],
       "explanation_pt": "os tipos de dados explicitamente no Power Query garantem consistência e permitem tratar erros de definição de conversão de forma controlada antes que os dados cheguem ao modelo.",
-      "question_en": "Qual é a melhor prática ao lidar com erros de tipo de dado durante a importação de arquivos CSV no Power Query?",
+      "question_en": "What is the best practice when dealing with data type errors when importing CSV files into Power Query?",
       "options_en": [
-        "Ignorar os erros e deixar o Power BI resolver automaticamente",
-        "Definir explicitamente os tipos de dado de cada coluna no Power Query e tratar os erros com Substituir Erros ou Remover Erros",
-        "Sempre converter tudo para Texto e tratar no DAX",
-        "Usar um arquivo Excel em vez de CSV"
+        "Ignore errors and let Power BI resolve automatically",
+        "Clearly define the data types of each column in Power Query and handle errors with Replace Errors or Remove Errors",
+        "Always convert everything to Text and process it in DAX",
+        "Using an Excel file instead of CSV"
       ],
-      "explanation_en": "Definir os tipos de dado explicitamente no Power Query garante consistência e permite tratar erros de conversão de forma controlada antes que os dados cheguem ao modelo."
+      "explanation_en": "Data types explicitly in Power Query ensure consistency and allow you to handle conversion definition errors in a controlled way before the data reaches the model."
     },
     {
       "question": "Você tem uma tabela de clientes com uma coluna 'Endereço Completo' no formato 'Rua, Cidade, Estado'. Você precisa separar em três colunas. Qual recurso do Power Query usar?",
@@ -2286,14 +2286,14 @@ const questionBank = {
         "Substituir Valores"
       ],
       "explanation_pt": "'Dividir Coluna por Delimitador' separa o conteúdo de uma coluna em múltiplas colunas com base em um separador de caracteres, como vírgula ou ponto e vírgula.",
-      "question_en": "Você tem uma tabela de clientes com uma coluna 'Endereço Completo' no formato 'Rua, Cidade, Estado'. Você precisa separar em três colunas. Qual recurso do Power Query usar?",
+      "question_en": "You have a customer table with a 'Full Address' column in the format 'Street, City, State'. You need to separate it into three columns. What feature does Power Query use?",
       "options_en": [
         "Extrair (Extract) → Texto Após Delimitador",
-        "Dividir Coluna (Split Column) por delimitador",
-        "Coluna Condicional",
-        "Substituir Valores"
+        "Split Column by delimiter",
+        "Conditional Column",
+        "Replace Values"
       ],
-      "explanation_en": "'Dividir Coluna por Delimitador' separa o conteúdo de uma coluna em múltiplas colunas com base em um caractere separador, como vírgula ou ponto e vírgula."
+      "explanation_en": "'Split Column by Delimiter' separates the contents of one column into multiple columns based on a character separator such as a comma or semicolon."
     },
     {
       "question": "Qual é o comportamento padrão do Power Query ao alterar o tipo de uma coluna que contém valores incompatíveis?",
@@ -2313,14 +2313,14 @@ const questionBank = {
         "O Power Query ignora a alteração de tipo"
       ],
       "explanation_pt": "Ao alterar o tipo de dado, valores que não podem ser convertidos geram um erro (#Error) nas células. O usuário precisa tratar esses erros com 'Substituir Erros' ou 'Remover Erros'.",
-      "question_en": "Qual é o comportamento padrão do Power Query ao alterar o tipo de uma coluna que contém valores incompatíveis?",
+      "question_en": "What is the default behavior for Power Query when changing the type of a column that contains incompatible values?",
       "options_en": [
-        "A importação falha completamente",
-        "Os valores incompatíveis são convertidos para null",
-        "Os valores incompatíveis geram um erro na célula (#Error)",
-        "O Power Query ignora a alteração de tipo"
+        "The image completely failed",
+        "Incompatible values ​​are converted to null",
+        "Incompatible values ​​generate an error in the cell (#Error)",
+        "Power Query ignores type change"
       ],
-      "explanation_en": "Ao alterar o tipo de dado, valores que não podem ser convertidos geram um erro (#Error) na célula. O usuário precisa tratar esses erros com 'Substituir Erros' ou 'Remover Erros'."
+      "explanation_en": "When changing the data type, values ​​that cannot be converted generate an error (#Error) in the cells. User needs to handle these errors with 'Replace Errors' or 'Remove Errors'."
     },
     {
       "question": "Qual é a vantagem de usar 'Funções Personalizadas' (Custom Functions) em M no Power Query?",
@@ -2340,14 +2340,14 @@ const questionBank = {
         "Permitem executar o código Python no Power Query"
       ],
       "explanation_pt": "Funções personalizadas em M encapsulam lógica reutilizável que pode ser aplicada a múltiplas consultas ou tabelas, evitando duplicação e facilitando a manutenção.",
-      "question_en": "Qual é a vantagem de usar 'Funções Personalizadas' (Custom Functions) em M no Power Query?",
+      "question_en": "What is the advantage of using 'Custom Functions' in M ​​in Power Query?",
       "options_en": [
-        "Melhoram o Query Folding automaticamente",
-        "Permitem reutilizar lógica de transformação em múltiplas queries evitando duplicação de código",
-        "São mais rápidas que os passos nativos do Power Query",
-        "Permitem executar código Python dentro do Power Query"
+        "Automatically improve query folding",
+        "Allows you to reuse transformation logic in multiple queries, avoiding code duplication",
+        "They are faster than the native Power Query steps",
+        "Allows you to run Python code in Power Query"
       ],
-      "explanation_en": "Funções personalizadas em M encapsulam lógica reutilizável que pode ser aplicada a múltiplas queries ou tabelas, evitando duplicação e facilitando a manutenção."
+      "explanation_en": "Custom functions in M ​​encapsulate reusable logic that can be applied to multiple queries or tables, avoiding duplication and easing maintenance."
     },
     {
       "question": "Você precisa conectar o Power BI a dados de um banco Oracle local e configurar atualização agendada no Service. Qual requisito adicional é necessário?",
@@ -2367,14 +2367,14 @@ const questionBank = {
         "Não é possível usar Oracle com Power BI"
       ],
       "explanation_pt": "Para conectar as fontes Oracle, além do Data Gateway, é necessário instalar o provedor Oracle Data Provider for .NET (ODP.NET) ou o driver Oracle ODBC na máquina onde o Gateway estiver instalado.",
-      "question_en": "Você precisa conectar o Power BI a dados de um banco Oracle local e configurar atualização agendada no Service. Qual requisito adicional é necessário?",
+      "question_en": "You need to connect Power BI to data from a local Oracle database and configure scheduled refresh in the Service. What additional requirements are needed?",
       "options_en": [
-        "Instalar o driver Oracle ODBC no servidor do Gateway",
-        "Usar apenas DirectQuery para Oracle",
-        "Converter os dados para CSV primeiro",
-        "Não é possível usar Oracle com Power BI"
+        "Install the Oracle ODBC driver on the Gateway server",
+        "Only use DirectQuery for Oracle",
+        "Convert the data to CSV first",
+        "It is not possible to use Oracle with Power BI"
       ],
-      "explanation_en": "Para conectar a fontes Oracle, além do Data Gateway, é necessário instalar o provedor Oracle Data Provider for .NET (ODP.NET) ou o driver Oracle ODBC na máquina onde o Gateway está instalado."
+      "explanation_en": "To connect Oracle sources, in addition to the Data Gateway, it is necessary to install the Oracle Data Provider for .NET (ODP.NET) provider or the Oracle ODBC driver on the machine where the Gateway is installed."
     },
     {
       "question": "Qual é o impacto de manter muitas etapas de transformação no Power Query que quebram o Query Folding em uma fonte SQL?",
@@ -2394,14 +2394,14 @@ const questionBank = {
         "Quebra os relacionamentos do modelo"
       ],
       "explanation_pt": "Quando o Query Folding é quebrado, o Power Query precisa baixar os dados brutos e processá-los localmente, o que é significativamente mais lento do que deixar o servidor de banco de dados fazer o processamento.",
-      "question_en": "Qual é o impacto de manter muitas etapas de transformação no Power Query que quebram o Query Folding em uma fonte SQL?",
+      "question_en": "What is the impact of maintaining many transformation steps in Power Query that break Query Folding into a SQL source?",
       "options_en": [
-        "Nenhum impacto, o Power BI otimiza automaticamente",
-        "Aumenta o tempo de atualização pois os dados são processados no motor local do Power Query em vez do servidor de banco de dados",
-        "Impede o uso de medidas DAX",
-        "Quebra os relacionamentos do modelo"
+        "No impact, Power BI automatically optimizes",
+        "Increases update time as data is processed in the local Power Query engine instead of the database server",
+        "Prevent the use of DAX measures",
+        "Breaks model relationships"
       ],
-      "explanation_en": "Quando o Query Folding é quebrado, o Power Query precisa baixar os dados brutos e processá-los localmente, o que é significativamente mais lento do que deixar o servidor de banco de dados fazer o processamento."
+      "explanation_en": "When Query Folding breaks, Power Query has to download the raw data and process it locally, which is significantly slower than letting the database server do the processing."
     },
     {
       "question": "Você quer criar uma tabela de calendário completa diretamente no Power Query (não no DAX). Qual função M é a base para gerar uma lista de datas contínua?",
@@ -2421,14 +2421,14 @@ const questionBank = {
         "Data.AddDays()"
       ],
       "explanation_pt": "List.Dates(startDate, count, step) gera uma lista de dados a partir de um dado inicial, com um número de dados e um incremento definido. É uma base para criar tabelas de calendário em M.",
-      "question_en": "Você quer criar uma tabela de calendário completa diretamente no Power Query (não no DAX). Qual função M é a base para gerar uma lista de datas contínua?",
+      "question_en": "You want to create a complete calendar table directly in Power Query (not in DAX). Which function M is the basis for generating a continuous data list?",
       "options_en": [
         "List.Numbers()",
         "List.Dates()",
         "Table.FromList()",
         "Date.AddDays()"
       ],
-      "explanation_en": "List.Dates(startDate, count, step) gera uma lista de datas a partir de uma data inicial, com um número de datas e um incremento definidos. É a base para criar tabelas de calendário em M."
+      "explanation_en": "List.Dates(startDate, count, step) generates a list of data from an initial data, with a number of data and a defined increment. It is a basis for creating calendar tables in M."
     },
     {
       "question": "Você se conecta a uma API REST usando Web.Contents. Durante a atualização agendada no Power BI Service, você recebe um erro de que as credenciais do recurso não podem ser validadas dinamicamente. Qual parâmetro da função M resolve este problema de segurança?",
@@ -2448,14 +2448,14 @@ const questionBank = {
         "Tempo esgotado"
       ],
       "explanation_pt": "No Power BI Service, URLs dinâmicas falham na atualização porque o serviço não consegue analisar a URL base estática para autenticação. O uso de 'RelativePath' mantém uma URL base estática no Web.Contents, permitindo a validação correta das credenciais enquanto acrescenta caminhos dinâmicos.",
-      "question_en": "Você se conecta a uma API REST usando Web.Contents. Durante a atualização agendada no Power BI Service, você recebe um erro de que as credenciais do recurso não podem ser validadas dinamicamente. Qual parâmetro da função M resolve este problema de segurança?",
+      "question_en": "You connect to a REST API using Web.Contents. During scheduled refresh in Power BI Service, you receive an error that resource credentials cannot be dynamically validated. Which parameter of function M solves this security problem?",
       "options_en": [
         "Headers",
         "RelativePath",
         "Query",
         "Timeout"
       ],
-      "explanation_en": "No Power BI Service, URLs dinâmicas falham na atualização porque o serviço não consegue analisar a URL base estática para autenticação. O uso de 'RelativePath' mantém a URL base estática no Web.Contents, permitindo a validação correta das credenciais enquanto acrescenta caminhos dinâmicos."
+      "explanation_en": "In Power BI Service, dynamic URLs fail to update because the service cannot parse the static base URL for authentication. Using 'RelativePath' maintains a static base URL in Web.Contents, allowing for correct validation of credentials while adding dynamic paths."
     },
     {
       "question": "Você está combinando dados de um banco SQL Server (DirectQuery) e de uma planilha Excel (Import) em um modelo composto. Para otimizar o desempenho de relacionamentos entre tabelas de dimensão pequenas do SQL e tabelas de fato do Excel, qual modo de armazenamento deve ser atribuído às tabelas de dimensão?",
@@ -2475,14 +2475,14 @@ const questionBank = {
         "Híbrido"
       ],
       "explanation_pt": "O modo Duplo permite que a tabela atue tanto em cache (Import) quanto via consulta direta (DirectQuery) dependendo do contexto. Ao relacionar com fatos locais (Importação), ela é como Importar evitando consultas lentas entre fontes. Ao relacionar com fatos DirectQuery, ela é como DirectQuery preservando desempenho.",
-      "question_en": "Você está combinando dados de um banco SQL Server (DirectQuery) e de uma planilha Excel (Import) em um modelo composto. Para otimizar o desempenho de relacionamentos entre tabelas de dimensão pequenas do SQL e tabelas de fato do Excel, qual modo de armazenamento deve ser atribuído às tabelas de dimensão?",
+      "question_en": "You are combining data from a SQL Server database (DirectQuery) and an Excel spreadsheet (Import) into a composite model. To improve the performance of relationships between SQL small dimension tables and Excel fact tables, which storage mode should be assigned to the dimension tables?",
       "options_en": [
         "DirectQuery",
         "Import",
         "Duplo (Dual)",
-        "Híbrido"
+        "Hybrid"
       ],
-      "explanation_en": "O modo Duplo (Dual) permite que a tabela atue tanto em cache (Import) quanto via consulta direta (DirectQuery) dependendo do contexto. Ao relacionar com fatos locais (Import), ela age como Import evitando cross-source queries lentas. Ao relacionar com fatos DirectQuery, ela age como DirectQuery preservando performance."
+      "explanation_en": "Double mode allows the table to act both in cache (Import) and via direct query (DirectQuery) depending on the context. When relating to local facts (Import), it is like Import, avoiding slow queries between sources. When relating to DirectQuery facts, it is like DirectQuery while preserving performance."
     },
     {
       "question": "Você está escrevendo uma etapa de transformação complexa no Power Query em M que ocasionalmente gera erros de divisão por zero ou nulos. Qual estrutura em M permite testar uma expressão e retornar um valor padrão caso ocorra uma falha?",
@@ -2502,14 +2502,14 @@ const questionBank = {
         "pegar"
       ],
       "explanation_pt": "A expressão 'try ... else' na linguagem M avalia o primeiro bloco e, se ele falhar ou retornar erro, executa e retorna o valor fornecido no bloco 'otherwise', movido como tratamento de abordagens robustas.",
-      "question_en": "Você está escrevendo uma etapa de transformação complexa no Power Query em M que ocasionalmente gera erros de divisão por zero ou nulos. Qual estrutura em M permite testar uma expressão e retornar um valor padrão caso ocorra uma falha?",
+      "question_en": "You are writing a complex transformation step in Power Query in M ​​that occasionally generates divide by zero or null errors. Which structure in M ​​allows you to test an expression and return a default value if a failure occurs?",
       "options_en": [
         "if ... then ... else",
         "try ... otherwise",
         "error ... rescue",
         "catch"
       ],
-      "explanation_en": "A expressão 'try ... otherwise' na linguagem M avalia o primeiro bloco e, se ele falhar ou retornar erro, executa e retorna o valor fornecido no bloco 'otherwise', agindo como tratamento de exceções robusto."
+      "explanation_en": "The 'try...else' expression in M ​​language evaluates the first block and if it fails or returns error, executes and returns the value given in the 'otherwise' block, moved as robust approaches handling."
     },
     {
       "question": "No Power Query Editor, a mensagem 'Perfil de coluna baseado nas primeiras 1000 linhas' é exibida na barra de status. O seu conjunto de dados possui 1 milhão de linhas. Qual o impacto prático dessa configuração padrão?",
@@ -2529,14 +2529,14 @@ const questionBank = {
         "Nenhum, pois uma amostragem de 1000 linhas é estatisticamente idêntica para qualquer volume"
       ],
       "explanation_pt": "Por padrão, o Perfil de Dados do Power Query analisa apenas as primeiras 1000 linhas para garantir velocidade de visualização. Se o arquivo apresentar anomalias ou erros após a linha 1000, eles não serão exibidos no Perfil até que o usuário clique na mensagem e ative 'Perfil de coluna baseado no conjunto de dados completo'.",
-      "question_en": "No Power Query Editor, a mensagem 'Perfil de coluna baseado nas primeiras 1000 linhas' é exibida na barra de status. O seu conjunto de dados possui 1 milhão de linhas. Qual o impacto prático dessa configuração padrão?",
+      "question_en": "In Power Query Editor, the message 'Column profile based on first 1000 rows' is displayed in the status bar. Your dataset has 1 million rows. What is the practical impact of this default setting?",
       "options_en": [
-        "Os dados acima de 1000 linhas não serão importados pelo modelo final",
-        "As estatísticas de qualidade, distribuição e perfil dos dados podem ser imprecisas para o conjunto completo",
-        "O Power Query executará de forma mais lenta porque força a leitura por lotes",
-        "Nenhum, pois a amostragem de 1000 linhas é estatisticamente idêntica para qualquer volume"
+        "Data above 1000 rows will not be imported by the final model",
+        "Data quality, distribution, and profile statistics may be inaccurate for the full set",
+        "Power Query will run slower because it will force batch reading",
+        "None, as a sample of 1000 lines is statistically identical for any volume"
       ],
-      "explanation_en": "Por padrão, o Perfil de Dados do Power Query analisa apenas as primeiras 1000 linhas para garantir velocidade de preview. Se o arquivo contiver anomalias ou erros após a linha 1000, eles não serão exibidos no Perfil até que o usuário clique na mensagem e ative 'Perfil de coluna baseado no conjunto de dados completo'."
+      "explanation_en": "By default, Power Query Data Profile only analyzes the first 1000 rows to ensure preview speed. If the file has anomalies or errors after line 1000, they will not be displayed in the Profile until the user clicks the message and activates 'Column profile based on full dataset'."
     },
     {
       "question": "Você precisa extrair dados de uma instância corporativa do Microsoft Dataverse de forma rápida e com suporte a consultas nativas eficientes. Qual conector ou recurso oferece melhor desempenho técnico?",
@@ -2556,14 +2556,14 @@ const questionBank = {
         "Exportar para arquivos CSV no OneDrive e lê-los"
       ],
       "explanation_pt": "O ponto de extremidade TDS (Tabular Data Stream) permite que aplicativos externos se conectem ao Dataverse exatamente da mesma forma que fariam com um banco de dados SQL Server, otimizando o fluxo e permitindo que o Power BI envie consultas SQL nativas e aproveite o Query Folding.",
-      "question_en": "Você precisa extrair dados de uma instância corporativa do Microsoft Dataverse de forma rápida e com suporte a consultas nativas eficientes. Qual conector ou recurso oferece melhor desempenho técnico?",
+      "question_en": "You need to extract data from an enterprise instance of Microsoft Dataverse quickly and with powerful native query support. Which connector or feature provides better technical performance?",
       "options_en": [
-        "Conector Dataverse Padrão com modo Import",
-        "Ponto de extremidade TDS (Tabular Data Stream) ativo na organização",
-        "Conector Web lendo endpoints de OData",
-        "Exportar para arquivos CSV no OneDrive e lê-los"
+        "Standard Dataverse Connector with Import mode",
+        "Tabular Data Stream (TDS) endpoint active in the organization",
+        "Web connector reading OData endpoints",
+        "Export to CSV files on OneDrive and read them"
       ],
-      "explanation_en": "O ponto de extremidade TDS (Tabular Data Stream) permite que aplicativos externos se conectem ao Dataverse exatamente da mesma forma que fariam com um banco de dados SQL Server, otimizando o fluxo e permitindo que o Power BI envie consultas SQL nativas e aproveite o Query Folding."
+      "explanation_en": "The TDS (Tabular Data Stream) endpoint allows external applications to connect to Dataverse in exactly the same way as they would to a SQL Server database, optimizing the flow and allowing Power BI to send native SQL queries and take advantage of Query Folding."
     },
     {
       "question": "Ao conectar a uma base de dados SQL Server corporativa, um analista cola uma consulta SQL personalizada complexa no campo 'Instrução SQL' das Opções Avançadas do conector. Qual é o impacto direto no Query Folding?",
@@ -2583,14 +2583,14 @@ const questionBank = {
         "Uma consulta é automaticamente iniciada a rodar apenas no modo DirectQuery"
       ],
       "explanation_pt": "Ao inserir uma consulta SQL nativa no conector, você assume o controle da proteção. O Power Query não consegue analisar o SQL bruto complexo para fundir (fold) transformações de etapas posteriores (como filtros adicionais) na fonte. Toda transformação será subsequentemente feita em memória local.",
-      "question_en": "Ao conectar a uma base de dados SQL Server corporativa, um analista cola uma consulta SQL personalizada complexa no campo 'Instrução SQL' das Opções Avançadas do conector. Qual é o impacto direto no Query Folding?",
+      "question_en": "When connecting to an enterprise SQL Server database, an analyst pastes a complex custom SQL query into the 'SQL Statement' field of the connector's Advanced Options. What is the direct impact on Query Folding?",
       "options_en": [
-        "Habilita o Query Folding em todas as etapas subsequentes criadas na interface do Power Query",
-        "Desabilita permanentemente o Query Folding para quaisquer etapas de transformação subsequentes aplicadas a essa query",
-        "Nenhum impacto, desde que a query SQL não possua cláusulas ORDER BY",
-        "A query é automaticamente forçada a rodar apenas no modo DirectQuery"
+        "Enable Query Folding in all subsequent steps created in the Power Query interface",
+        "Permanently disables Query Folding for any subsequent transformation steps applied to this query",
+        "No impact as long as a SQL query does not have ORDER BY clauses",
+        "A query is automatically started to run in DirectQuery mode only"
       ],
-      "explanation_en": "Ao inserir uma consulta SQL nativa no conector, você assume o controle da extração. O Power Query não consegue analisar o SQL bruto complexo para fundir (fold) transformações de etapas posteriores (como filtros adicionais) na fonte. Toda transformação subsequente será feita em memória local."
+      "explanation_en": "By inserting a native SQL query into the connector, you take control of the protection. Power Query cannot parse complex raw SQL to merge (fold) transformations from later steps (such as additional filters) into the source. All transformation will subsequently be done in local memory."
     },
     {
       "question": "Você importa um arquivo de log estruturado em formato JSON que contém uma matriz (list) de registros de auditoria. Qual fluxo básico de etapas do Power Query é necessário para expor esses registros em uma tabela colunar limpa?",
@@ -2610,14 +2610,14 @@ const questionBank = {
         "Agrupar por ID de auditoria → Criar coluna de índice"
       ],
       "explanation_pt": "Arquivos JSON que contêm listas aninháveis ​​são lidos como objetos 'List' ou 'Record'. O fluxo correto é converter a lista de registros em uma Tabela do Power Query e, em seguida, clicar no ícone de expansão (setas duplas) no cabeçalho da coluna para expor os campos individuais em novas colunas.",
-      "question_en": "Você importa um arquivo de log estruturado em formato JSON que contém uma matriz (list) de registros de auditoria. Qual fluxo básico de etapas do Power Query é necessário para expor esses registros em uma tabela colunar limpa?",
+      "question_en": "You import a structured log file in JSON format that contains an array (list) of audit records. What basic flow of Power Query steps is needed to expose these records in a clean columnar table?",
       "options_en": [
-        "Mesclar Colunas → Dividir Coluna por delimitador",
-        "Converter para Tabela → Expandir as colunas e extrair valores",
+        "Merge Columns → Split Column by Delimiter",
+        "Convert to Table → Expand columns and extract values",
         "Despivotar Colunas → Transpor linhas",
-        "Agrupar por ID de auditoria → Criar coluna de índice"
+        "Group by Audit ID → Create Index Column"
       ],
-      "explanation_en": "Arquivos JSON que contêm listas aninhadas são lidos como objetos 'List' ou 'Record'. O fluxo correto é converter a lista de registros em uma Tabela do Power Query e, em seguida, clicar no ícone de expansão (setas duplas) no cabeçalho da coluna para expor os campos individuais em novas colunas."
+      "explanation_en": "JSON files that contain nested lists are read as 'List' or 'Record' objects. The correct flow is to convert the list of records to a Power Query Table and then click the expand icon (double arrows) in the column header to expose the individual fields in new columns."
     },
     {
       "question": "Você está modelando uma conexão em DirectQuery com SQL Server. Para otimizar a performance dos relacionamentos e forçar o banco a realizar INNER JOINs mais rápidos em vez de OUTER JOINs lentos, qual propriedade de relacionamento deve ser configurada?",
@@ -2637,14 +2637,14 @@ const questionBank = {
         "Marcar como relacionamento inativo"
       ],
       "explanation_pt": "Ao marcar 'Assumir Integridade Referencial', você garante ao Power BI que os valores de chave estrangeiros na tabela de fatos sempre possuem um correspondente exato na tabela de dimensões. Isso permite que o motor gere consultas usando INNER JOIN, que é significativamente mais rápido que LEFT OUTER JOIN.",
-      "question_en": "Você está modelando uma conexão em DirectQuery com SQL Server. Para otimizar a performance dos relacionamentos e forçar o banco a realizar INNER JOINs mais rápidos em vez de OUTER JOINs lentos, qual propriedade de relacionamento deve ser configurada?",
+      "question_en": "You are modeling a DirectQuery connection to SQL Server. To improve the performance of relationships and force the database to perform faster INNER JOINs instead of slow OUTER JOINs, which relationship property should be set?",
       "options_en": [
-        "Direção do filtro cruzado: Ambos (Both)",
+        "Cross filter direction: Both (Both)",
         "Assumir Integridade Referencial (Assume Referential Integrity)",
-        "Ativar filtro de segurança em ambas as direções",
-        "Marcar como relacionamento inativo"
+        "Enable security filter in both directions",
+        "Mark as inactive relationship"
       ],
-      "explanation_en": "Ao marcar 'Assumir Integridade Referencial', você garante ao Power BI que os valores de chave estrangeira na tabela de fatos sempre possuem um correspondente exato na tabela de dimensões. Isso permite que o motor gere consultas usando INNER JOIN, que é significativamente mais rápido que LEFT OUTER JOIN."
+      "explanation_en": "By checking 'Assume Referential Integrity', you guarantee Power BI that foreign key values ​​in the fact table always have an exact match in the dimension table. This allows the engine to generate queries using INNER JOIN, which is significantly faster than LEFT OUTER JOIN."
     },
     {
       "question": "Ao utilizar o recurso 'Mesclar Consultas' com correspondência difusa (Fuzzy Merge), qual parâmetro do Power Query define o quão parecidos dois termos textuais devem ser para que ocorra o cruzamento de linhas?",
@@ -2664,14 +2664,14 @@ const questionBank = {
         "Combinar por partes de palavras"
       ],
       "explanation_pt": "O 'Limiar de Similaridade' aceita valores de 0,00 a 1,00. O valor padrão de 0,80 significa que termos com pelo menos 80% de similaridade serão combinados. Valores menores são mais tolerantes a variações ortográficas, mas aumentam falsos positivos.",
-      "question_en": "Ao utilizar o recurso 'Mesclar Consultas' com correspondência difusa (Fuzzy Merge), qual parâmetro do Power Query define o quão parecidos dois termos textuais devem ser para que ocorra o cruzamento de linhas?",
+      "question_en": "When using the 'Merge Queries' feature with fuzzy matching (Fuzzy Merge), which Power Query parameter defines how similar two textual terms must be for line crossings to occur?",
       "options_en": [
-        "Tabela de transformação (Transformation Table)",
-        "Limiar de Similaridade (Similarity Threshold)",
+        "Transformation table",
+        "Similarity Threshold (Similarity Threshold)",
         "Ignorar maiúsculas e minúsculas",
-        "Combinar por partes de palavras"
+        "Combine by word parts"
       ],
-      "explanation_en": "O 'Limiar de Similaridade' (Similarity Threshold) aceita valores de 0,00 a 1,00. O valor padrão de 0,80 significa que termos com pelo menos 80% de similaridade serão combinados. Valores menores são mais tolerantes a variações ortográficas mas aumentam falsos positivos."
+      "explanation_en": "The 'Similarity Threshold' accepts values ​​from 0.00 to 1.00. The default value of 0.80 means that terms with at least 80% similarity will be matched. Smaller values ​​are more tolerant of spelling variations, but increase false positives."
     },
     {
       "question": "No Power Query Editor, sob a guia 'Exibição', as ferramentas de perfil mostram que uma coluna de ID de Cliente possui '12% Vazias' (Empty) e '3% de Erros' (Errors). Qual é a distinção de processamento entre esses dois estados de célula?",
@@ -2691,14 +2691,14 @@ const questionBank = {
         "Não há diferença, ambos são lidos como BLANK no DAX"
       ],
       "explanation_pt": "Células 'Vazias' contêm ausência de valor (valores nulos em banco de dados ou células de planilha sem conteúdo) e são perfeitamente normais. Células de 'Erro' indicam que uma importação ou uma conversão de tipo falhado (ex: tente ler o texto 'ABC' em uma coluna numérica).",
-      "question_en": "No Power Query Editor, sob a guia 'Exibição', as ferramentas de perfil mostram que uma coluna de ID de Cliente possui '12% Vazias' (Empty) e '3% de Erros' (Errors). Qual é a distinção de processamento entre esses dois estados de célula?",
+      "question_en": "In Power Query Editor, under the 'Display' tab, the profile tools show that a Customer ID column has '12% Empty' and '3% Errors'. What is the processing distinction between these two cell states?",
       "options_en": [
-        "Vazias são nulos ou strings sem texto; Erros são falhas críticas de conversão ou inconsistências de dados na fonte",
+        "Empty are null or strings without text; Errors are critical conversion failures or data inconsistencies at the source",
         "Erros são gerados por valores nulos; Vazias são strings em branco",
-        "Vazias impedem o carregamento do modelo; Erros são ignorados pelo VertiPaq",
-        "Não há diferença, ambos são lidos como BLANK no DAX"
+        "Empties prevent the model from loading; Errors are ignored by VertiPaq",
+        "There is no difference, both are read as BLANK in DAX"
       ],
-      "explanation_en": "Células 'Vazias' contêm ausência de valor (valores nulos em banco de dados ou células de planilha sem conteúdo) e são perfeitamente normais. Células de 'Erro' indicam que a importação ou a conversão de tipo falhou (ex: tentar ler o texto 'ABC' em uma coluna numérica)."
+      "explanation_en": "'Empty' cells contain no value (null values ​​in database or spreadsheet cells with no content) and are perfectly normal. 'Error' cells indicate that an import or type conversion failed (e.g. try to read the text 'ABC' in a numeric column)."
     },
     {
       "question": "Uma grande tabela fato de vendas em DirectQuery no SQL Server contém uma coluna de data e hora com alta precisão (segundos). Isso está deixando as consultas lentas. Qual é a melhor prática recomendada para esta modelagem?",
@@ -2718,14 +2718,14 @@ const questionBank = {
         "Remover completamente o relacionamento com a tabela Calendário"
       ],
       "explanation_pt": "Dividir DateTime em colunas de Data e Hora separadas reduz drasticamente a cardinalidade (valores únicos) da chave de relacionamento e melhora significativamente o desempenho de indexação no SQL e o comportamento de agrupamento e agregação no Power BI.",
-      "question_en": "Uma grande tabela fato de vendas em DirectQuery no SQL Server contém uma coluna de data e hora com alta precisão (segundos). Isso está deixando as consultas lentas. Qual é a melhor prática recomendada para esta modelagem?",
+      "question_en": "A large sales fact table in DirectQuery in SQL Server contains a data and time column with high precision (seconds). This is slowing down queries. What is the recommended best practice for this modeling?",
       "options_en": [
-        "Manter a coluna exatamente como está para preservar a granularidade",
-        "Dividir a coluna DateTime em duas: uma coluna apenas de Data (tipo Date) e outra coluna apenas de Hora (tipo Time)",
-        "Converter a coluna inteira para formato de Texto longo",
-        "Remover completamente o relacionamento com a tabela Calendário"
+        "Keep the column exactly as it is to preserve granularity",
+        "Split the DateTime column into two: a Date-only column (Date type) and another Time-only column (Time type)",
+        "Convert an entire column to long text format",
+        "Completely remove the relationship with the Calendar table"
       ],
-      "explanation_en": "Dividir DateTime em colunas de Data e Hora separadas reduz drasticamente a cardinalidade (valores únicos) da chave de relacionamento e melhora significativamente a performance de indexação no SQL e o comportamento de agrupamento e agregação no Power BI."
+      "explanation_en": "Splitting DateTime into separate Date and Time columns dramatically reduces the cardinality (unique values) of the relationship key and significantly improves indexing performance in SQL and grouping and aggregation behavior in Power BI."
     },
     {
       "question": "Ao desenvolver scripts ou etapas avançadas no Power Query Editor, um desenvolvedor digita 'table.selectrows' (minúsculo) na Barra de Fórmulas. O que ocorre quando a etapa tenta rodar?",
@@ -2745,14 +2745,14 @@ const questionBank = {
         "A transformação roda, mas em velocidade reduzida por não mapear o tipo nativo"
       ],
       "explanation_pt": "A linguagem M é sensível a maiúsculas e minúsculas (diferenciação de subsidiárias). Escrever funções nativas com letras incorretas (ex: 'table.selectrows' em vez de 'Table.SelectRows') resultará em erro de compilação ou 'NameNotFoundError'.",
-      "question_en": "Ao desenvolver scripts ou etapas avançadas no Power Query Editor, um desenvolvedor digita 'table.selectrows' (minúsculo) na Barra de Fórmulas. O que ocorre quando a etapa tenta rodar?",
+      "question_en": "When developing scripts or advanced steps in Power Query Editor, a digital developer 'table.selectrows' (lowercase) in the Formula Bar. What happens when the step tries to run?",
       "options_en": [
-        "O Power Query interpreta normalmente porque M é case-insensitive",
-        "Ocorre um erro indicando que a função 'table.selectrows' não foi encontrada, pois M é estritamente case-sensitive",
-        "O editor autocrashará o Power BI Desktop",
-        "A transformação roda, mas em velocidade reduzida por não mapear o tipo nativo"
+        "Power Query interprets normally because M is case insensitive",
+        "An error occurs below that function 'table.selectrows' was not found as M is case sensitive",
+        "Editor will autocrash Power BI Desktop",
+        "The transformation runs, but at a reduced speed because it does not map the native type"
       ],
-      "explanation_en": "A linguagem M é estritamente case-sensitive (diferencia maiúsculas de minúsculas). Escrever funções nativas com letras incorretas (ex: 'table.selectrows' em vez de 'Table.SelectRows') resultará em erro de compilação ou 'NameNotFoundError'."
+      "explanation_en": "The M language is case sensitive (subsidiary differentiation). Writing native functions with incorrect letters (e.g. 'table.selectrows' instead of 'Table.SelectRows') will result in a compilation error or 'NameNotFoundError'."
     },
     {
       "question": "Você publica um relatório no Power BI Service que utiliza a função M 'DateTime.LocalNow()' para carregar a data de atualização. Após o agendamento de refresh na nuvem, você percebe que a data exibida está algumas horas atrasada/adiantada. Por que ocorre essa divergência?",
@@ -2772,14 +2772,14 @@ const questionBank = {
         "A função DateTime.LocalNow() é incompatível com fontes locais"
       ],
       "explanation_pt": "O Power BI Service opera sob o fuso horário UTC padrão da nuvem Azure. Funções de hora local como 'DateTime.LocalNow()' serão avaliadas no servidor do Serviço como UTC. Para exibir a hora local correta, o desenvolvedor deve usar 'DateTimeZone.UtcNow()' e aplicar o deslocamento de horas (deslocamento de fuso horário) correto do fuso desejado.",
-      "question_en": "Você publica um relatório no Power BI Service que utiliza a função M 'DateTime.LocalNow()' para carregar a data de atualização. Após o agendamento de refresh na nuvem, você percebe que a data exibida está algumas horas atrasada/adiantada. Por que ocorre essa divergência?",
+      "question_en": "You publish a report to Power BI Service that uses the 'DateTime.LocalNow()' M function to load the update data. After scheduling the cloud update, you notice that the data displayed is a few hours behind/advance. Why does this divergence occur?",
       "options_en": [
-        "O gateway local alterou o relógio da máquina física",
-        "O Power BI Service executa a atualização no fuso horário UTC (tempo universal), ignorando o fuso horário local da máquina do criador",
-        "A licença Pro do workspace restringe a atualização em fusos dinâmicos",
-        "A função DateTime.LocalNow() é incompatível com fontes locais"
+        "Local gateway changed physical machine clock",
+        "The Power BI Service runs the update in the universal time (UTC) time zone, ignoring the creator machine's local time zone",
+        "Workspace Pro license restricts updating in sound zones",
+        "The DateTime.LocalNow() function is incompatible with local fonts"
       ],
-      "explanation_en": "O Power BI Service opera sob o fuso horário UTC padrão da nuvem Azure. Funções de hora local como 'DateTime.LocalNow()' serão avaliadas no servidor do Service como UTC. Para exibir a hora local correta, o desenvolvedor deve usar 'DateTimeZone.UtcNow()' e aplicar o deslocamento de horas (timezone offset) correto do fuso desejado."
+      "explanation_en": "Power BI Service operates under the standard Azure cloud UTC time zone. Local time functions such as 'DateTime.LocalNow()' will be evaluated on the Service server as UTC. To display the correct local time, the developer must use 'DateTimeZone.UtcNow()' and apply the correct hour offset (time zone offset) of the desired zone."
     },
     {
       "question": "Ao configurar 'Atualização Incremental' para uma tabela de vendas do SQL no Power BI Desktop, quais tipos de parâmetros do Power Query são estritamente obrigatórios em termos de nome e tipo de dado?",
@@ -2799,14 +2799,14 @@ const questionBank = {
         "StartDate e EndDate do tipo Número Inteiro (Int)"
       ],
       "explanation_pt": "A atualização incremental exige a criação de duas configurações chamadas exatamente 'RangeStart' e 'RangeEnd' (respeitando instruções) e configurações configuradas com o tipo de dados Data/Hora (DateTime). O Power BI usa essas configurações dinamicamente para particionar e atualizar os dados.",
-      "question_en": "Ao configurar 'Atualização Incremental' para uma tabela de vendas do SQL no Power BI Desktop, quais tipos de parâmetros do Power Query são estritamente obrigatórios em termos de nome e tipo de dado?",
+      "question_en": "When configuring 'Incremental Refresh' for a SQL sales table in Power BI Desktop, what types of Power Query settings are required in terms of name and data type?",
       "options_en": [
-        "RangeStart e RangeEnd do tipo Texto (Text)",
-        "RangeStart e RangeEnd do tipo Data/Hora (DateTime)",
-        "MinDate e MaxDate do tipo Data (Date)",
-        "StartDate e EndDate do tipo Número Inteiro (Int)"
+        "RangeStart and RangeEnd of type Text (Text)",
+        "RangeStart and RangeEnd of Date/Time type (DateTime)",
+        "MinDate and MaxDate of type Date (Date)",
+        "StartDate and EndDate of type Integer (Int)"
       ],
-      "explanation_en": "A atualização incremental exige a criação de dois parâmetros chamados exatamente 'RangeStart' e 'RangeEnd' (respeitando maiúsculas) e configurados estritamente com o tipo de dados Data/Hora (DateTime). O Power BI usa esses parâmetros dinamicamente para particionar e atualizar os dados."
+      "explanation_en": "The incremental update requires the creation of two configurations called exactly 'RangeStart' and 'RangeEnd' (respecting instructions) and configurations configured with the Date/Time data type (DateTime). Power BI uses these settings dynamically to partition and update data."
     },
     {
       "question": "Em ambientes corporativos, onde são armazenadas e gerenciadas as definições das tabelas resultantes do ETL de um Dataflow (Fluxo de Dados) criado no Power BI Service?",
@@ -2826,14 +2826,14 @@ const questionBank = {
         "Em pastas do OneDrive para Business do usuário proprietário"
       ],
       "explanation_pt": "Os fluxos de dados geram arquivos e metadados estruturados que são armazenados em estruturas de pastas do Azure Data Lake Storage Gen2 de propriedade gerenciada do Power BI (ou de propriedade da empresa), organizados seguindo as especificações do Common Data Model (CDM).",
-      "question_en": "Em ambientes corporativos, onde são armazenadas e gerenciadas as definições das tabelas resultantes do ETL de um Dataflow (Fluxo de Dados) criado no Power BI Service?",
+      "question_en": "In corporate environments, where are table definitions resulting from the ETL of a Data Flow (Data Flow) created in Power BI Service stored and managed?",
       "options_en": [
-        "Em um banco de dados SQL Server temporário na nuvem",
-        "Em contas de armazenamento Azure Blob ou Azure Data Lake Storage Gen2 no formato Common Data Model (CDM)",
-        "Diretamente no cache de memória RAM da capacidade Premium",
-        "Em pastas do OneDrive para Business do usuário proprietário"
+        "On a temporary SQL Server database in the cloud",
+        "In Azure Blob or Azure Data Lake Storage Gen2 storage accounts in Common Data Model (CDM) format",
+        "Directly into the Premium capacity RAM cache",
+        "In owning user's OneDrive for Business folders"
       ],
-      "explanation_en": "Dataflows geram arquivos e metadados estruturados que são armazenados em estruturas de pastas do Azure Data Lake Storage Gen2 de propriedade gerenciada do Power BI (ou de propriedade da empresa), organizados seguindo as especificações do Common Data Model (CDM)."
+      "explanation_en": "Dataflows generate structured files and metadata that are stored in Power BI-managed (or company-owned) Azure Data Lake Storage Gen2 folder structures, organized following Common Data Model (CDM) specifications."
     }
   ],
   "Modelar Dados": [
@@ -5123,14 +5123,14 @@ const questionBank = {
         "Habilitar RLS automaticamente"
       ],
       "explanation_pt": "O Star Schema melhorou a eficiência do motor VertiPaq (compactação por coluna), reduz o tamanho do modelo e simplifica a escrita de medidas DAX. É uma arquitetura recomendada para modelos Power BI.",
-      "question_en": "Por que é preferível usar um esquema estrela (Star Schema) com tabelas de fato e dimensão separadas em vez de uma única tabela desnormalizada no Power BI?",
+      "question_en": "Why is it preferable to use a Star Schema with separate fact and dimension tables rather than a single denormalized table in Power BI?",
       "options_en": [
-        "É obrigatório pelo Power BI, que não aceita tabelas desnormalizadas",
-        "Reduz a redundância de dados, melhora a compactação VertiPaq e a performance das medidas DAX",
-        "Permite usar o modo DirectQuery",
+        "It is mandatory by Power BI, which does not accept denormalized tables",
+        "Reduce data redundancy, improve VertiPaq compression and DAX measurement performance",
+        "Allows you to use DirectQuery mode",
         "Habilita RLS automaticamente"
       ],
-      "explanation_en": "O Star Schema melhora a eficiência do motor VertiPaq (compactação por coluna), reduz o tamanho do modelo, e simplifica a escrita de medidas DAX. É a arquitetura recomendada para modelos Power BI."
+      "explanation_en": "Star Schema has improved VertiPaq engine efficiency (column compression), reduces model size, and simplifies writing DAX measurements. It is a recommended architecture for Power BI models."
     },
     {
       "question": "Qual é a diferença fundamental entre uma Medida (Measure) e uma Coluna Calculada (Calculated Column) no DAX?",
@@ -5150,14 +5150,14 @@ const questionBank = {
         "Não há diferença funcional, apenas de sintaxe"
       ],
       "explanation_pt": "Colunas Calculadas são computadas durante o carregamento/atualização e seus valores ficam armazenados no modelo. As medidas são calculadas dinamicamente em cada consulta, respondendo ao contexto do filtro atual.",
-      "question_en": "Qual é a diferença fundamental entre uma Medida (Measure) e uma Coluna Calculada (Calculated Column) no DAX?",
+      "question_en": "What is the fundamental difference between a Measure and a Calculated Column in DAX?",
       "options_en": [
-        "Medidas são mais rápidas; Colunas Calculadas são mais lentas",
-        "Medidas são calculadas em tempo de consulta com contexto de filtro dinâmico; Colunas Calculadas são calculadas no carregamento e armazenadas no modelo",
-        "Colunas Calculadas suportam funções de inteligência de tempo; Medidas não",
-        "Não há diferença funcional, apenas de sintaxe"
+        "Measurements are faster; Calculated Columns are slower",
+        "Measurements are calculated at consultation time with sound filter context; Calculated Columns are calculated in the cartridge and stored in the model",
+        "Calculated Columns support time intelligence functions; Measures no",
+        "There is no functional difference, just syntax"
       ],
-      "explanation_en": "Colunas Calculadas são computadas durante o carregamento/atualização e seus valores ficam armazenados no modelo. Medidas são calculadas dinamicamente em cada consulta, respondendo ao contexto de filtro atual."
+      "explanation_en": "Calculated Columns are computed during loading/updating and their values ​​are stored in the model. Measures are dynamically calculated on each query, responding to the current filter context."
     },
     {
       "question": "Qual função DAX é utilizada para modificar o contexto de filtro de uma expressão?",
@@ -5177,14 +5177,14 @@ const questionBank = {
         "TUDO EXCETO()"
       ],
       "explanation_pt": "CALCULATE() é uma função central do DAX para modificar o contexto do filtro. Ela está disponível uma expressão no contexto modificado pelos filtros adicionais fornecidos como argumentos.",
-      "question_en": "Qual função DAX é utilizada para modificar o contexto de filtro de uma expressão?",
+      "question_en": "Which DAX function is used to modify the filter context of an expression?",
       "options_en": [
         "FILTER()",
         "CALCULATE()",
         "ALL()",
         "ALLEXCEPT()"
       ],
-      "explanation_en": "CALCULATE() é a função central do DAX para modificar o contexto de filtro. Ela avalia uma expressão no contexto modificado pelos filtros adicionais fornecidos como argumentos."
+      "explanation_en": "CALCULATE() is a core DAX function for modifying the filter context. An expression is available in the context modified by additional filters provided as arguments."
     },
     {
       "question": "Para que as funções de inteligência de tempo (TOTALYTD, SAMEPERIODLASTYEAR, etc.) funcionem corretamente, o que é necessário na tabela de datas?",
@@ -5204,14 +5204,14 @@ const questionBank = {
         "A coluna de dados deve ser chamada obrigatoriamente de 'Data'"
       ],
       "explanation_pt": "A tabela de dados precisa: (1) ser marcada como 'Tabela de Dados', (2) ter uma coluna do tipo Data, (3) conter dados contíguas sem lacunas para o período de análise.",
-      "question_en": "Para que as funções de inteligência de tempo (TOTALYTD, SAMEPERIODLASTYEAR, etc.) funcionem corretamente, o que é necessário na tabela de datas?",
+      "question_en": "For the time intelligence functions (TOTALYTD, SAMEPERIODLASTYEAR, etc.) to work correctly, what is needed in the data table?",
       "options_en": [
-        "A tabela deve ter exatamente 365 linhas por ano",
-        "A tabela deve ser marcada como 'Tabela de Data' (Mark as Date Table) e ter uma coluna de data sem lacunas",
-        "A tabela de datas deve estar em modo DirectQuery",
-        "A coluna de data deve se chamar 'Date' obrigatoriamente"
+        "The table must have exactly 365 rows per year",
+        "The table must be marked as 'Mark as Date Table' and have a data column without gaps",
+        "The data table must be in DirectQuery mode",
+        "The data column must be called 'Data'"
       ],
-      "explanation_en": "A tabela de datas precisa: (1) ser marcada como 'Tabela de Data', (2) ter uma coluna do tipo Date, (3) conter datas contíguas sem lacunas para o período de análise."
+      "explanation_en": "The data table must: (1) be marked as 'Data Table', (2) have a column of type Date, (3) contain contiguous data without gaps for the period of analysis."
     },
     {
       "question": "Você tem as tabelas: Vendas (N) relacionada com Produto (1) e Produto (1) relacionada com Categoria (1). Por padrão, um filtro em Categoria se propaga até Vendas automaticamente. Isso se chama:",
@@ -5231,14 +5231,14 @@ const questionBank = {
         "Contexto da linha"
       ],
       "explanation_pt": "Em um relacionamento 1:N, os filtros se propagam automaticamente do lado 1 (dimensão) para o lado N (fato), percorrendo toda a cadeia de relacionamentos. Esse comportamento é fundamental no Power BI.",
-      "question_en": "Você tem as tabelas: Vendas (N) relacionada com Produto (1) e Produto (1) relacionada com Categoria (1). Por padrão, um filtro em Categoria se propaga até Vendas automaticamente. Isso se chama:",
+      "question_en": "You have the tables: Sales (N) related to Product (1) and Product (1) related to Category (1). By default, a filter on Category propagates to Sales automatically. This is called:",
       "options_en": [
-        "Filtro bidirecional",
-        "Propagação de filtro em cadeia (Filter context propagation)",
-        "RLS em cascata",
-        "Contexto de linha"
+        "Bidirectional filter",
+        "Chain filter propagation",
+        "Cascaded RLS",
+        "Line context"
       ],
-      "explanation_en": "Em um relacionamento 1:N, os filtros se propagam automaticamente do lado 1 (dimensão) para o lado N (fato), percorrendo toda a cadeia de relacionamentos. Esse comportamento é fundamental no Power BI."
+      "explanation_en": "In a 1:N relationship, filters automatically propagate from side 1 (dimension) to side N (fact), traversing the entire chain of relationships. This behavior is fundamental in Power BI."
     },
     {
       "question": "Qual é a PRINCIPAL consequência negativa de habilitar o filtro bidirecional em relacionamentos de um modelo complexo?",
@@ -5258,14 +5258,14 @@ const questionBank = {
         "Desativar ou Query Folding"
       ],
       "explanation_pt": "Filtros bidirecionais podem criar múltiplos caminhos de filtro, gerando ambiguidade. O Power BI pode não saber qual caminho usar, causando resultados imprevistos. Devem ser usados ​​com cautela.",
-      "question_en": "Qual é a PRINCIPAL consequência negativa de habilitar o filtro bidirecional em relacionamentos de um modelo complexo?",
+      "question_en": "What is the MAIN negative consequence of enabling bidirectional filtering on relationships in a complex model?",
       "options_en": [
-        "Melhora a performance mas aumenta o tamanho do arquivo",
-        "Pode causar ambiguidade nos caminhos de filtro, resultados incorretos e degradação de performance",
-        "Impede o uso de RLS",
-        "Desativa o Query Folding"
+        "Improves performance but increases file size",
+        "May cause ambiguity in filter paths, incorrect results, and performance manipulation",
+        "Prevent the use of RLS",
+        "Disable or Query Folding"
       ],
-      "explanation_en": "Filtros bidirecionais podem criar múltiplos caminhos de filtro, gerando ambiguidade. O Power BI pode não saber qual caminho usar, causando resultados imprevistos. Devem ser usados com cautela."
+      "explanation_en": "Bidirectional filters can create multiple filter paths, creating ambiguity. Power BI may not know which path to use, causing unexpected results. They must be used with caution."
     },
     {
       "question": "Você deseja que cada usuário veja apenas os dados da sua região ao acessar um relatório. O email do usuário autenticado deve ser comparado com uma coluna Email na tabela Regiões. Qual função DAX usar na regra RLS?",
@@ -5285,14 +5285,14 @@ const questionBank = {
         "USERENV()"
       ],
       "explanation_pt": "USERPRINCIPALNAME() retorna o endereço de email do usuário autenticado no Power BI Service (formato user@domain.com), ideal para implementar RLS dinâmico comparando com dados da tabela.",
-      "question_en": "Você deseja que cada usuário veja apenas os dados da sua região ao acessar um relatório. O email do usuário autenticado deve ser comparado com uma coluna Email na tabela Regiões. Qual função DAX usar na regra RLS?",
+      "question_en": "You want each user to see only data for their region when accessing a report. The authenticated user's email must be compared to an Email column in the Regions table. Which DAX function to use in the RLS rule?",
       "options_en": [
         "USERNAME()",
         "USERPRINCIPALNAME()",
         "CURRENTUSER()",
         "USERENV()"
       ],
-      "explanation_en": "USERPRINCIPALNAME() retorna o endereço de email do usuário autenticado no Power BI Service (formato user@domain.com), ideal para implementar RLS dinâmico comparando com dados da tabela."
+      "explanation_en": "USERPRINCIPALNAME() returns the email address of the user authenticated in the Power BI Service (user@domain.com format), ideal for implementing dynamic RLS comparing with table data."
     },
     {
       "question": "Na tabela Vendas (lado N do relacionamento), você quer criar uma coluna calculada que traga o Nome da tabela Produto (lado 1). Qual função DAX usar?",
@@ -5312,14 +5312,14 @@ const questionBank = {
         "CALCULAR(VALOR SELECIONADO(...))"
       ],
       "explanation_pt": "RELATED() navega do lado N de um relacionamento para o lado 1, retornando um valor escalar da tabela relacionada. RELATEDTABLE() faz o oposto, retornando uma tabela do lado N para o lado 1.",
-      "question_en": "Na tabela Vendas (lado N do relacionamento), você quer criar uma coluna calculada que traga o Nome da tabela Produto (lado 1). Qual função DAX usar?",
+      "question_en": "In the Sales table (N side of the relationship), you want to create a calculated column that brings the Name from the Product table (side 1). Which DAX function to use?",
       "options_en": [
         "RELATEDTABLE()",
         "RELATED()",
         "LOOKUPVALUE()",
         "CALCULATE(SELECTEDVALUE(...))"
       ],
-      "explanation_en": "RELATED() navega do lado N de um relacionamento para o lado 1, retornando um valor escalar da tabela relacionada. RELATEDTABLE() faz o oposto, retornando uma tabela do lado N para o lado 1."
+      "explanation_en": "RELATED() navigates from side N of a relationship to side 1, returning a scalar value from the related table. RELATEDTABLE() does the opposite, returning a table from side N to side 1."
     },
     {
       "question": "Qual das seguintes expressões DAX calcula o Total de Vendas acumulado no ano (Year-to-Date)?",
@@ -5339,14 +5339,14 @@ const questionBank = {
         "Apenas a opção B está correta"
       ],
       "explanation_pt": "TOTALYTD([Medida], Tabela[Data]) é a forma mais direta de calcular YTD. Também é possível usar CALCULATE([Total Vendas], DATESYTD(Calendario[Date])), que é equivalente.",
-      "question_en": "Qual das seguintes expressões DAX calcula o Total de Vendas acumulado no ano (Year-to-Date)?",
+      "question_en": "Which of the following DAX expressions calculates Year-to-Date Total Sales?",
       "options_en": [
         "CALCULATE([Total Vendas], YEAR(Calendario[Date]) = YEAR(TODAY()))",
         "TOTALYTD([Total Vendas], Calendario[Date])",
         "SUMX(DATESYTD(Calendario[Date]), [Total Vendas])",
-        "Apenas a opção B está correta"
+        "Only option B is correct"
       ],
-      "explanation_en": "TOTALYTD([Medida], Tabela[Data]) é a forma mais direta de calcular YTD. Também é possível usar CALCULATE([Total Vendas], DATESYTD(Calendario[Date])), que é equivalente."
+      "explanation_en": "TOTALYTD([Measure], Table[Date]) is the most direct way to calculate YTD. It is also possible to use CALCULATE([Total Sales], DATESYTD(Calendar[Date])), which is equivalent."
     },
     {
       "question": "Por que é preferível usar DIVIDE(Numerador, Denominador, [AlternativeResult]) em vez do operador '/' no DAX?",
@@ -5366,14 +5366,14 @@ const questionBank = {
         "Não há diferença entre DIVIDE e o operador '/'"
       ],
       "explanation_pt": "O operador '/' retorna um erro quando o denominador é zero. DIVIDE() retorna BLANK() (ou um valor alternativo opcional), tornando as medidas mais robustas sem necessidade de verificações adicionais.",
-      "question_en": "Por que é preferível usar DIVIDE(Numerador, Denominador, [AlternativeResult]) em vez do operador '/' no DAX?",
+      "question_en": "Why is it preferable to use DIVIDE(Numerator, Denominator, [AlternativeResult]) instead of '/' operator in DAX?",
       "options_en": [
-        "DIVIDE é mais rápido que o operador '/'",
-        "DIVIDE trata automaticamente a divisão por zero, retornando BLANK() ou o resultado alternativo definido",
-        "DIVIDE é necessário para medidas visíveis no relatório",
-        "Não há diferença entre DIVIDE e o operador '/'"
+        "DIVIDE is faster than the '/' operator",
+        "DIVIDE automatically handles division by zero, returning BLANK() or the defined alternative result",
+        "DIVIDE is required for measurements visible in the report",
+        "There is no difference between DIVIDE and the '/' operator"
       ],
-      "explanation_en": "O operador '/' retorna um erro quando o denominador é zero. DIVIDE() retorna BLANK() (ou um valor alternativo opcional), tornando as medidas mais robustas sem necessidade de verificações adicionais."
+      "explanation_en": "The '/' operator returns an error when the denominator is zero. DIVIDE() returns BLANK() (or an optional alternative value), making measurements more robust without the need for additional checks."
     },
     {
       "question": "Você tem uma tabela Vendas com duas colunas de data: DataVenda e DataEntrega, ambas relacionadas à tabela Calendário. Apenas uma relação pode ser ativa. Como usar a relação inativa em uma medida DAX?",
@@ -5393,14 +5393,14 @@ const questionBank = {
         "Usar CROSSFILTER() na relação inativa"
       ],
       "explanation_pt": "USERELATIONSHIP(Tabela1[Coluna], Tabela2[Coluna]) dentro de CALCULATE() ativa temporariamente uma relação inativa para o escopo daquela medida, sem afetar outras medidas.",
-      "question_en": "Você tem uma tabela Vendas com duas colunas de data: DataVenda e DataEntrega, ambas relacionadas à tabela Calendário. Apenas uma relação pode ser ativa. Como usar a relação inativa em uma medida DAX?",
+      "question_en": "You have a Sales table with two data columns: SalesDate and DeliveryDate, both related to the Calendar table. Only one relationship can be active. How to use the inactive ratio in a DAX measure?",
       "options_en": [
-        "Criar uma segunda tabela Calendário duplicada",
-        "Usar USERELATIONSHIP() dentro de CALCULATE()",
-        "Deletar a relação ativa e ativar a inativa",
-        "Usar CROSSFILTER() na relação inativa"
+        "Create a second duplicate Calendar table",
+        "Use USERELATIONSHIP() inside CALCULATE()",
+        "Delete the active relationship and activate the inactive one",
+        "Use CROSSFILTER() on the inactive relationship"
       ],
-      "explanation_en": "USERELATIONSHIP(Tabela1[Coluna], Tabela2[Coluna]) dentro de CALCULATE() ativa temporariamente uma relação inativa para o escopo daquela medida, sem afetar outras medidas."
+      "explanation_en": "USERELATIONSHIP(Table1[Column], Table2[Column]) within CALCULATE() temporarily activates an inactive relationship for the scope of that measure, without affecting other measures."
     },
     {
       "question": "Qual é o cenário mais adequado para criar uma Tabela Calculada (Calculated Table) no DAX?",
@@ -5420,14 +5420,14 @@ const questionBank = {
         "Para melhorar o desempenho de medidas complexas"
       ],
       "explanation_pt": "Tabelas calculadas são criadas em DAX e são úteis para: tabela de dados (CALENDARAUTO), tabelas de parâmetros, tabelas auxiliares para cálculos específicos ou específicas de valores únicos (ALL/VALUES/DISTINCT).",
-      "question_en": "Qual é o cenário mais adequado para criar uma Tabela Calculada (Calculated Table) no DAX?",
+      "question_en": "What is the most suitable scenario for creating a Calculated Table in DAX?",
       "options_en": [
-        "Para realizar todas as transformações de dados, substituindo o Power Query",
-        "Para criar tabelas auxiliares como tabela de datas, tabelas de parâmetros What-if ou tabelas de suporte a cálculos",
-        "Sempre que precisar de uma nova dimensão",
-        "Para melhorar a performance de medidas complexas"
+        "To perform all data transformations by updating Power Query",
+        "To create auxiliary tables such as data tables, What-if parameter tables, or calculation support tables",
+        "Whenever I need a new dimension",
+        "To improve the performance of complex measurements"
       ],
-      "explanation_en": "Tabelas Calculadas são criadas em DAX e são úteis para: tabela de datas (CALENDARAUTO), tabelas de parâmetros, tabelas auxiliares para cálculos específicos ou seleções de valores únicos (ALL/VALUES/DISTINCT)."
+      "explanation_en": "Calculated tables are created in DAX and are useful for: data tables (CALENDARAUTO), parameter tables, auxiliary tables for specific calculations or specific single values ​​(ALL/VALUES/DISTINCT)."
     },
     {
       "question": "Qual é o resultado de CALCULATE([Total Vendas], ALL(Produto)) em um contexto onde Produto[Categoria] = 'Eletrônicos' está filtrado?",
@@ -5447,14 +5447,14 @@ const questionBank = {
         "Gera um erro de dependência circular"
       ],
       "explanation_pt": "ALL(Produto) remove todos os filtros aplicados na tabela Produto, fazendo CALCULATE() ignorar o contexto do filtro de Categoria. O resultado é o total geral de vendas, independente do produto/categoria.",
-      "question_en": "Qual é o resultado de CALCULATE([Total Vendas], ALL(Produto)) em um contexto onde Produto[Categoria] = 'Eletrônicos' está filtrado?",
+      "question_en": "What is the result of CALCULATE([Total Sales], ALL(Product)) in a context where Product[Category] = 'Electronics' is filtered?",
       "options_en": [
-        "Retorna o total de vendas apenas para Eletrônicos",
-        "Remove o filtro de Produto e retorna o total de vendas de todos os produtos",
-        "Retorna BLANK() pois ALL() remove todos os filtros",
-        "Gera um erro de circular dependency"
+        "Total sales return for Electronics only",
+        "Remove the Product filter and return total sales for all products",
+        "Returns BLANK() because ALL() removes all filters",
+        "Generates a circular dependency error"
       ],
-      "explanation_en": "ALL(Produto) remove todos os filtros aplicados na tabela Produto, fazendo CALCULATE() ignorar o contexto de filtro de Categoria. O resultado é o total geral de vendas, independente do produto/categoria."
+      "explanation_en": "ALL(Produto) removes all filters applied to the Product table, making CALCULATE() ignore the Category filter context. The result is the overall sales total, regardless of the product/category."
     },
     {
       "question": "Você precisa criar uma medida que calcule a porcentagem de vendas de cada produto em relação ao total geral. Qual é a fórmula correta?",
@@ -5474,14 +5474,14 @@ const questionBank = {
         "[Total Vendas] / TOTALYTD([Total Vendas], Calendário[Data])"
       ],
       "explanation_pt": "CALCULATE([Total Vendas], ALL(Produto)) calcula o total sem filtro de produto (total geral). DIVIDE(...) então calcula a proporção de cada produto, tratando divisão por zero.",
-      "question_en": "Você precisa criar uma medida que calcule a porcentagem de vendas de cada produto em relação ao total geral. Qual é a fórmula correta?",
+      "question_en": "You need to create a measure that calculates the percentage of sales for each product in relation to the overall total. What is the correct formula?",
       "options_en": [
         "[Total Vendas] / MAX([Total Vendas])",
         "DIVIDE([Total Vendas], CALCULATE([Total Vendas], ALL(Produto)))",
         "DIVIDE([Total Vendas], SUM(Vendas[Valor]))",
         "[Total Vendas] / TOTALYTD([Total Vendas], Calendario[Date])"
       ],
-      "explanation_en": "CALCULATE([Total Vendas], ALL(Produto)) calcula o total sem filtro de produto (total geral). DIVIDE(...) então calcula a proporção de cada produto, tratando divisão por zero."
+      "explanation_en": "CALCULATE([Total Sales], ALL(Product)) calculates the total without product filter (grand total). DIVIDE(...) then calculates the proportion of each product, treating division by zero."
     },
     {
       "question": "O que é 'contexto de iteração' (row context) no DAX e quando ele existe?",
@@ -5501,14 +5501,14 @@ const questionBank = {
         "É criado apenas por CALCULATE()"
       ],
       "explanation_pt": "O contexto de linha (row context) é criado automaticamente em colunas calculadas (para cada linha da tabela) e por funções iteradoras como SUMX, MINX, MAXX, FILTER, etc.",
-      "question_en": "O que é 'contexto de iteração' (row context) no DAX e quando ele existe?",
+      "question_en": "What is 'row context' in DAX and when does it exist?",
       "options_en": [
-        "É o filtro aplicado pelos slicers no relatório",
-        "É o contexto criado por funções iteradoras (SUMX, AVERAGEX, etc.) ou em colunas calculadas, onde cada linha da tabela é processada individualmente",
-        "É o contexto de filtro da sessão atual do usuário",
+        "It is the filter applied by slicers in the report",
+        "It is the context created by iterator functions (SUMX, AVERAGEX, etc.) or in calculated columns, where each row of the table is processed individually",
+        "It is the filter context of the user's current session",
         "É criado apenas pelo CALCULATE()"
       ],
-      "explanation_en": "O contexto de linha (row context) é criado automaticamente em colunas calculadas (para cada linha da tabela) e por funções iteradoras como SUMX, MINX, MAXX, FILTER, etc."
+      "explanation_en": "The row context is created automatically in calculated columns (for each table row) and by iterator functions such as SUMX, MINX, MAXX, FILTER, etc."
     },
     {
       "question": "Qual é a diferença entre FILTER(ALL(Tabela), condição) e FILTER(Tabela, condição) dentro de um CALCULATE()?",
@@ -5528,14 +5528,14 @@ const questionBank = {
         "FILTER(ALL) só funciona com tabelas de fato"
       ],
       "explanation_pt": "FILTER(ALL(Tabela), condição) sempre filtra toda a tabela, independente de filtros externos. FILTER(Tabela, condição) aplica a condição sobre os dados já filtrados pelo contexto, podendo retornar subconjuntos menores.",
-      "question_en": "Qual é a diferença entre FILTER(ALL(Tabela), condição) e FILTER(Tabela, condição) dentro de um CALCULATE()?",
+      "question_en": "What is the difference between FILTER(ALL(Table), condition) and FILTER(Table, condition) within a CALCULATE()?",
       "options_en": [
-        "Não há diferença funcional",
-        "FILTER(ALL(Tabela)) ignora filtros externos e filtra toda a tabela; FILTER(Tabela) respeita os filtros do contexto atual antes de aplicar a condição",
-        "FILTER(Tabela) é mais lento",
-        "FILTER(ALL) só funciona com tabelas de fato"
+        "There is no functional difference",
+        "FILTER(ALL(Table)) ignores external filters and filters the entire table; FILTER(Table) respects the filters in the current context before applying the condition",
+        "FILTER(Table) is slower",
+        "FILTER(ALL) only works with fact tables"
       ],
-      "explanation_en": "FILTER(ALL(Tabela), condição) sempre filtra toda a tabela, independente de filtros externos. FILTER(Tabela, condição) aplica a condição sobre os dados já filtrados pelo contexto, podendo retornar subconjuntos menores."
+      "explanation_en": "FILTER(ALL(Table), condition) always filters the entire table, regardless of external filters. FILTER(Table, condition) applies the condition to the data already filtered by the context, and can return smaller subsets."
     },
     {
       "question": "Você precisa criar uma medida que retorne as vendas do mesmo período do ano anterior. Qual função de inteligência de tempo usar?",
@@ -5555,14 +5555,14 @@ const questionBank = {
         "PARALLELPERIOD(Calendário[Data], -12, MÊS)"
       ],
       "explanation_pt": "SAMEPERIODLASTYEAR(Calendario[Date]) retorna uma tabela com os dados do mesmo período do ano anterior, usada dentro de CALCULATE() para calcular métricas comparativas com o ano anterior.",
-      "question_en": "Você precisa criar uma medida que retorne as vendas do mesmo período do ano anterior. Qual função de inteligência de tempo usar?",
+      "question_en": "You need to create a measure that returns sales from the same period in the previous year. Which time intelligence function to use?",
       "options_en": [
         "PREVIOUSYEAR()",
         "DATEADD(Calendario[Date], -1, YEAR)",
         "SAMEPERIODLASTYEAR(Calendario[Date])",
         "PARALLELPERIOD(Calendario[Date], -12, MONTH)"
       ],
-      "explanation_en": "SAMEPERIODLASTYEAR(Calendario[Date]) retorna uma tabela com as datas do mesmo período do ano anterior, usada dentro de CALCULATE() para calcular métricas comparativas com o ano anterior."
+      "explanation_en": "SAMEPERIODLASTYEAR(Calendario[Date]) returns a table with data from the same period of the previous year, used within CALCULATE() to calculate comparative metrics with the previous year."
     },
     {
       "question": "O que são Aggregations (Agregações) no Power BI e qual é o seu principal benefício?",
@@ -5582,14 +5582,14 @@ const questionBank = {
         "São índices criados no banco de dados fonte"
       ],
       "explanation_pt": "Agregações são tabelas com dados resumidos que o Power BI usa automaticamente quando uma consulta pode ser respondida por elas. Uma tabela de fato detalhado ainda existe e é usada quando necessário (drill-through).",
-      "question_en": "O que são Aggregations (Agregações) no Power BI e qual é o seu principal benefício?",
+      "question_en": "What are Aggregations (Aggregations) in Power BI and what is their main benefit?",
       "options_en": [
-        "São resumos automáticos criados pelo Power BI para gráficos",
-        "São tabelas pré-agregadas que o Power BI usa para responder consultas de alto nível sem varrer a tabela de fato completa, melhorando dramaticamente a performance",
-        "São medidas DAX que usam SUMMARIZE()",
-        "São índices criados no banco de dados fonte"
+        "These are automatic summaries created by Power BI for charts",
+        "These are pre-aggregated tables that Power BI uses to answer high-level queries without scanning the entire fact table, dramatically improving performance",
+        "These are DAX measures that use SUMMARIZE()",
+        "These are indexes created in the source database"
       ],
-      "explanation_en": "Agregações são tabelas com dados sumarizados que o Power BI usa automaticamente quando uma consulta pode ser respondida por elas. A tabela de fato detalhada ainda existe e é usada quando necessário (drill-through)."
+      "explanation_en": "Aggregations are tables with summarized data that Power BI automatically uses when a query can be answered by them. A detailed fact table still exists and is used when necessary (drill-through)."
     },
     {
       "question": "Quando é mais indicado usar uma Coluna Calculada em vez de uma Medida no DAX?",
@@ -5609,14 +5609,14 @@ const questionBank = {
         "Quando trabalho com DirectQuery"
       ],
       "explanation_pt": "Colunas Calculadas são armazenadas no modelo e podem ser usadas como campo em eixos de gráficos, filtros, slicers e legendas. As medidas são valores agregados e não podem ser usadas diretamente nessas posições.",
-      "question_en": "Quando é mais indicado usar uma Coluna Calculada em vez de uma Medida no DAX?",
+      "question_en": "When is it better to use a Calculated Column instead of a Measure in DAX?",
       "options_en": [
-        "Sempre que o cálculo for complexo",
-        "Quando você precisa usar o resultado como eixo, legenda, slicer ou filtro em visuais, pois medidas não podem ser usadas nesses contextos diretamente",
-        "Quando quer melhores resultados de performance",
-        "Quando trabalha com DirectQuery"
+        "Whenever the calculation for complex",
+        "When you need to use the result as an axis, legend, slicer or filter in visuals, as measures cannot be used in these contexts directly",
+        "When you want better performance results",
+        "When working with DirectQuery"
       ],
-      "explanation_en": "Colunas Calculadas são armazenadas no modelo e podem ser usadas como campo em eixos de gráficos, filtros, slicers e legendas. Medidas são valores agregados e não podem ser usados diretamente nessas posições."
+      "explanation_en": "Calculated Columns are stored in the model and can be used as fields in chart axes, filters, slicers, and legends. Measures are aggregated values ​​and cannot be used directly in these positions."
     },
     {
       "question": "O que é um modelo Composto (Composite Model) no Power BI?",
@@ -5636,14 +5636,14 @@ const questionBank = {
         "Um modelo que usa RLS em todas as tabelas"
       ],
       "explanation_pt": "Modelos Compostos permitem combinar Import e DirectQuery na mesma solução. Por exemplo: dimensões em importação (rápidas) e tabelas de fato em DirectQuery (sempre atualizadas), obtendo o melhor dos dois mundos.",
-      "question_en": "O que é um modelo Composto (Composite Model) no Power BI?",
+      "question_en": "What is a Composite model in Power BI?",
       "options_en": [
-        "Um modelo que usa apenas tabelas calculadas DAX",
-        "Um modelo que combina tabelas em modo Import e DirectQuery na mesma solução",
-        "Um modelo com mais de 100 tabelas",
-        "Um modelo que usa RLS em todas as tabelas"
+        "A model that uses only DAX calculated tables",
+        "A model that combines tables in Import and DirectQuery mode in the same solution",
+        "A template with more than 100 tables",
+        "A model that uses RLS on all tables"
       ],
-      "explanation_en": "Modelos Compostos permitem combinar Import e DirectQuery na mesma solução. Por exemplo: dimensões em Import (rápidas) e tabelas de fato em DirectQuery (sempre atualizadas), obtendo o melhor dos dois mundos."
+      "explanation_en": "Composite Models allow you to combine Import and DirectQuery in the same solution. For example: dimensions in import (fast) and fact tables in DirectQuery (always updated), getting the best of both worlds."
     },
     {
       "question": "Qual função DAX retorna o número de linhas de uma tabela, respeitando o contexto de filtro atual?",
@@ -5663,14 +5663,14 @@ const questionBank = {
         "DISTINCTCOUNT()"
       ],
       "explanation_pt": "COUNTROWS(Tabela) contém o número de linhas da tabela no contexto do filtro atual. COUNT() contém valores não vazios em uma coluna. DISTINCTCOUNT() conta valores únicos.",
-      "question_en": "Qual função DAX retorna o número de linhas de uma tabela, respeitando o contexto de filtro atual?",
+      "question_en": "Which DAX function returns the number of rows in a table, respecting the current filter context?",
       "options_en": [
         "COUNT()",
         "COUNTA()",
         "COUNTROWS()",
         "DISTINCTCOUNT()"
       ],
-      "explanation_en": "COUNTROWS(Tabela) conta o número de linhas da tabela no contexto de filtro atual. COUNT() conta valores não vazios em uma coluna. DISTINCTCOUNT() conta valores únicos."
+      "explanation_en": "COUNTROWS(Table) contains the number of table rows in the current filter context. COUNT() contains non-empty values ​​in a column. DISTINCTCOUNT() counts unique values."
     },
     {
       "question": "O que é 'Expanded Table' (tabela expandida) no contexto de relacionamentos DAX?",
@@ -5690,14 +5690,14 @@ const questionBank = {
         "Uma tabela com mais de 1 milhão de linhas"
       ],
       "explanation_pt": "No modelo DAX, cada tabela é 'expandida' para incluir as colunas das tabelas do lado '1' dos relacionamentos. Isso explica como os filtros se propagam automaticamente de dimensões para fatos.",
-      "question_en": "O que é 'Expanded Table' (tabela expandida) no contexto de relacionamentos DAX?",
+      "question_en": "What is 'Expanded Table' (expanded table) in the context of DAX relationships?",
       "options_en": [
-        "Uma tabela com colunas calculadas adicionais",
-        "Uma tabela que inclui implicitamente as colunas de todas as tabelas relacionadas a ela pelo lado '1', permitindo filtros em cadeia",
-        "Uma tabela após operação Unpivot",
-        "Uma tabela com mais de 1 milhão de linhas"
+        "A table with additional calculated columns",
+        "A table that implicitly includes the columns of all tables related to it on the '1' side, allowing chain filters",
+        "A table after Unpivot operation",
+        "A table with more than 1 million rows"
       ],
-      "explanation_en": "No modelo DAX, cada tabela é 'expandida' para incluir as colunas das tabelas do lado '1' dos relacionamentos. Isso explica como os filtros se propagam automaticamente de dimensões para fatos."
+      "explanation_en": "In the DAX model, each table is 'expanded' to include the columns from the tables on the '1' side of the relationships. This explains how filters automatically propagate from dimensions to facts."
     },
     {
       "question": "Qual é o objetivo da função ALLEXCEPT(Tabela, Coluna1, Coluna2) no DAX?",
@@ -5717,14 +5717,14 @@ const questionBank = {
         "Crie um contexto de linha para as colunas especificadas"
       ],
       "explanation_pt": "ALLEXCEPT(Tabela, Col1, Col2) remove todos os filtros da tabela, preservando apenas os filtros nas colunas especificadas. Útil para criar todos os parciais que ignoram alguns filtros, mas mantêm outros.",
-      "question_en": "Qual é o objetivo da função ALLEXCEPT(Tabela, Coluna1, Coluna2) no DAX?",
+      "question_en": "What is the purpose of the ALLEXCEPT(Table, Column1, Colum2) function in DAX?",
       "options_en": [
-        "Remove todos os filtros da tabela, exceto os especificados nas colunas indicadas",
-        "Filtra a tabela mantendo apenas as colunas especificadas",
-        "Remove duplicatas, mantendo apenas as colunas especificadas",
-        "Cria um contexto de linha para as colunas especificadas"
+        "Remove all filters from the table except those specified in the indicated columns",
+        "Filter the table keeping only the specified columns",
+        "Remove duplicates while keeping only specified columns",
+        "Create a row context for the specified columns"
       ],
-      "explanation_en": "ALLEXCEPT(Tabela, Col1, Col2) remove todos os filtros da tabela, preservando apenas os filtros nas colunas especificadas. Útil para criar totais parciais que ignoram alguns filtros mas mantêm outros."
+      "explanation_en": "ALLEXCEPT(Table, Col1, Col2) removes all filters from the table, preserving only filters on the specified columns. Useful for creating all partials that ignore some filters but keep others."
     },
     {
       "question": "Você precisa calcular o ranking de cada produto por vendas dentro de sua categoria. Qual função DAX usar?",
@@ -5744,14 +5744,14 @@ const questionBank = {
         "RANKX(TODOS(Produto), [Total de Vendas])"
       ],
       "explanation_pt": "RANKX() com um contexto de filtro adequado (usando FILTER para limitar o domínio de classificação desejado) é a forma correta de calcular classificação dentro de um grupo no DAX.",
-      "question_en": "Você precisa calcular o ranking de cada produto por vendas dentro de sua categoria. Qual função DAX usar?",
+      "question_en": "You need to calculate each product's ranking for sales within its category. Which DAX function to use?",
       "options_en": [
         "RANK.EQ()",
-        "RANKX(FILTER(ALL(Produto), Produto[Categoria] = MAX(Produto[Categoria])), [Total Vendas])",
+        "RANKX(FILTER(ALL(Product), Product[Category] = MAX(Product[Category])), [Total Sales])",
         "TOPN()",
         "RANKX(ALL(Produto), [Total Vendas])"
       ],
-      "explanation_en": "RANKX() com um contexto de filtro adequado (usando FILTER para limitar ao domínio de ranking desejado) é a forma correta de calcular ranking dentro de um grupo no DAX."
+      "explanation_en": "RANKX() with a proper filter context (using FILTER to narrow down the desired ranking domain) is the correct way to calculate rank within a group in DAX."
     },
     {
       "question": "O que são Grupos de Cálculo (Calculation Groups) no Power BI e qual problema eles resolvem?",
@@ -5771,14 +5771,14 @@ const questionBank = {
         "São conjuntos de regras RLS agrupadas"
       ],
       "explanation_pt": "Grupos de Cálculo permitem definir 'itens de cálculo' (ex.: Atual, YTD, Ano Anterior, % Variação) que se aplicam dinamicamente a qualquer medida. Evite criar descontos de medidas para cada combinação de KPI + período.",
-      "question_en": "O que são Grupos de Cálculo (Calculation Groups) no Power BI e qual problema eles resolvem?",
+      "question_en": "What are Calculation Groups in Power BI and what problem do they solve?",
       "options_en": [
-        "São grupos de medidas organizadas em pastas de exibição",
-        "Permitem criar uma dimensão dinâmica que aplica diferentes cálculos (YTD, MoM, PY etc.) a qualquer medida base, eliminando duplicação de medidas",
-        "São filtros avançados aplicados a grupos de visuais",
-        "São conjuntos de regras RLS agrupadas"
+        "These are groups of measures organized into display folders",
+        "They allow you to create a dynamic dimension that applies different calculations (year-to-date, month-to-date, year-to-date, etc.) to any base measure, eliminating duplication of measures",
+        "These are advanced filters applied to groups of visuals",
+        "These are sets of grouped RLS rules"
       ],
-      "explanation_en": "Grupos de Cálculo permitem definir 'itens de cálculo' (ex.: Atual, YTD, Ano Anterior, % Variação) que se aplicam dinamicamente a qualquer medida. Evitam criar dezenas de medidas para cada combinação de KPI + período."
+      "explanation_en": "Calculation Groups allow you to define 'calculation items' (e.g. Current, YTD, Previous Year, % Change) that dynamically apply to any measure. Avoid creating measure discounts for each KPI + period combination."
     },
     {
       "question": "Qual é a função do parâmetro 'What-if' no Power BI e como ele é implementado?",
@@ -5798,14 +5798,14 @@ const questionBank = {
         "Permite simular dados sem conexão com a fonte original"
       ],
       "explanation_pt": "O parâmetro What-if cria: (1) uma tabela calculada com valores (ex.: percentual de desconto de 0% a 30%), (2) uma medida de valor selecionado, e (3) um slicer. O usuário ajusta o slicer e as medidas que referenciam o parâmetro são recalculadas.",
-      "question_en": "Qual é a função do parâmetro 'What-if' no Power BI e como ele é implementado?",
+      "question_en": "What is the function of the 'What-if' parameter in Power BI and how is it implemented?",
       "options_en": [
-        "Simula diferentes cenários de dados conectando a fontes alternativas",
-        "Cria uma tabela calculada com uma sequência de valores e uma medida associada, permitindo que o usuário ajuste um valor via slicer e veja o impacto nos cálculos",
-        "É um recurso exclusivo do Power BI Premium",
-        "Permite simular dados sem conexão com a fonte original"
+        "Simulates different data scenarios by connecting to alternative sources",
+        "Create a calculated table with a sequence of values ​​and an associated measure, allowing the user to adjust a value via the slicer and see the impact on the calculations",
+        "It is an exclusive feature of Power BI Premium",
+        "Allows you to simulate data without connection to the original source"
       ],
-      "explanation_en": "O parâmetro What-if cria: (1) uma tabela calculada com valores (ex.: percentual de desconto de 0% a 30%), (2) uma medida de valor selecionado, e (3) um slicer. O usuário ajusta o slicer e as medidas que referenciam o parâmetro se recalculam."
+      "explanation_en": "The What-if parameter creates: (1) a calculated table with values ​​(e.g. discount percentage from 0% to 30%), (2) a measure of selected value, and (3) a slicer. The user adjusts the slicer and the measurements that reference the parameter are recalculated."
     },
     {
       "question": "Por que é importante que a tabela de calendário (Date Table) seja marcada explicitamente como 'Mark as Date Table' no Power BI?",
@@ -5825,14 +5825,14 @@ const questionBank = {
         "Para habilitar a formatação de dados nos visuais"
       ],
       "explanation_pt": "Marcar como 'Tabela de Dados' permite ao DAX validar que a tabela atenda aos requisitos (coluna Data, sem lacunas, sem duplicatas) e garantir o comportamento correto das funções de inteligência de tempo em cenários de filtro de dados.",
-      "question_en": "Por que é importante que a tabela de calendário (Date Table) seja marcada explicitamente como 'Mark as Date Table' no Power BI?",
+      "question_en": "Why is it important for the calendar table (Date Table) to be random like 'Mark as Date Table' in Power BI?",
       "options_en": [
-        "Para habilitar a interface de calendário nos slicers de data",
-        "Para garantir que as funções de inteligência de tempo funcionem corretamente, validando que a tabela tem datas contíguas sem lacunas",
-        "Para ativar o modo DirectQuery na tabela",
-        "Para habilitar a formatação de data nos visuais"
+        "To enable the calendar interface in data slicers",
+        "To ensure that time intelligence functions work correctly by validating that the data table is contiguous without gaps",
+        "To enable DirectQuery mode on the table",
+        "To enable data formatting in visuals"
       ],
-      "explanation_en": "Marcar como 'Tabela de Data' permite ao DAX validar que a tabela atende os requisitos (coluna Date, sem lacunas, sem duplicatas) e garante o comportamento correto das funções de inteligência de tempo em cenários de filtro de data."
+      "explanation_en": "Marking as 'Data Table' allows DAX to validate that the table meets the requirements (Data column, no gaps, no duplicates) and ensure correct behavior of time intelligence functions in data filter scenarios."
     },
     {
       "question": "Qual é a diferença entre relacionamentos 1:1 e N:N (muitos para muitos) no Power BI?",
@@ -5852,14 +5852,14 @@ const questionBank = {
         "1:1 requer RLS; N:N não"
       ],
       "explanation_pt": "Relacionamentos N:N (muitos para muitos) no Power BI são suportados diretamente (sem tabela ponte obrigatória), mas podem causar dupla contagem e comportamentos de filtro inesperados se não forem bem compreendidos.",
-      "question_en": "Qual é a diferença entre relacionamentos 1:1 e N:N (muitos para muitos) no Power BI?",
+      "question_en": "What is the difference between 1:1 and N:N (many-to-many) relationships in Power BI?",
       "options_en": [
-        "1:1 é mais eficiente; N:N é mais flexível para modelagem",
-        "Em 1:1 cada valor da coluna de junção aparece uma vez em ambas as tabelas; em N:N os valores podem aparecer múltiplas vezes em ambos os lados, requerendo tratamento especial de filtro",
-        "N:N não é suportado no Power BI",
-        "1:1 requer RLS; N:N não"
+        "1:1 is more efficient; N:N is more flexible for modeling",
+        "At 1:1 each specificity column value appears once in both tables; in N:N values ​​may appear multiple times on both sides, requiring special filter treatment",
+        "N:N is not supported in Power BI",
+        "1:1 requires RLS; N:N no"
       ],
-      "explanation_en": "Relacionamentos N:N (muitos para muitos) no Power BI são suportados diretamente (sem tabela ponte obrigatória), mas podem causar double-counting e comportamentos de filtro inesperados se não forem bem compreendidos."
+      "explanation_en": "N:N (many-to-many) relationships in Power BI are supported directly (no required bridge table), but can cause double counting and unexpected filter behaviors if not well understood."
     },
     {
       "question": "O que são Field Parameters (Parâmetros de Campo) no Power BI e qual é seu caso de uso principal?",
@@ -5879,14 +5879,14 @@ const questionBank = {
         "São filtros avançados aplicados por campos específicos"
       ],
       "explanation_pt": "Field Parameters cria um 'slicer de campos' que permite ao usuário escolher quais métricas ou dimensões ver em um gráfico. Por exemplo: alternância entre Vendas, Margem e Quantidade no eixo e de um gráfico de barras.",
-      "question_en": "O que são Field Parameters (Parâmetros de Campo) no Power BI e qual é seu caso de uso principal?",
+      "question_en": "What are field parameters in Power BI and what is their main use case?",
       "options_en": [
-        "São parâmetros para conexão com fontes de dados variáveis",
-        "Permitem que o usuário final selecione quais campos (colunas ou medidas) são exibidos em um visual via slicer, tornando o relatório mais interativo e flexível",
+        "These are parameters for connecting to variable data sources",
+        "Allows the end user to select which fields (columns or measures) are displayed in a visual via slicer, making the report more interactive and flexible",
         "São variáveis DAX reutilizáveis entre medidas",
-        "São filtros avançados aplicados por campos específicos"
+        "These are advanced filters applied by specific fields"
       ],
-      "explanation_en": "Field Parameters criam um 'slicer de campos' que permite ao usuário escolher quais métricas ou dimensões ver em um gráfico. Por exemplo: alternar entre Vendas, Margem e Quantidade no eixo Y de um gráfico de barras."
+      "explanation_en": "Field Parameters creates a 'field slicer' that allows the user to choose which metrics or dimensions to see in a chart. For example: switching between Sales, Margin and Quantity on the axis and of a bar chart."
     },
     {
       "question": "Qual é o impacto de ter muitas Colunas Calculadas no modelo do Power BI em termos de performance?",
@@ -5906,14 +5906,14 @@ const questionBank = {
         "Impactaram apenas o modo DirectQuery"
       ],
       "explanation_pt": "Colunas calculadas armazenam um valor por linha no modelo VertiPaq, aumentando o consumo de memória. Além disso, são recalculadas a cada atualização de dados, aumentando o tempo total da atualização.",
-      "question_en": "Qual é o impacto de ter muitas Colunas Calculadas no modelo do Power BI em termos de performance?",
+      "question_en": "What is the impact of many calculated columns in the Power BI model in terms of performance?",
       "options_en": [
-        "Nenhum impacto, pois são calculadas apenas uma vez no carregamento",
-        "Aumentam o tamanho do modelo em memória pois seus valores são armazenados no modelo VertiPaq, e aumentam o tempo de atualização pois precisam ser recalculadas a cada refresh",
-        "Diminuem a performance apenas de relatórios com muitas páginas",
-        "Impactam apenas o modo DirectQuery"
+        "No impact as they are only calculated once upon loading",
+        "They increased the size of the model in memory as its values ​​are stored in the VertiPaq model, and increased the update time as it needs to be recalculated with each update",
+        "Decrease performance only for reports with many pages",
+        "Only impacted DirectQuery mode"
       ],
-      "explanation_en": "Colunas Calculadas armazenam um valor por linha no modelo VertiPaq, aumentando o consumo de memória. Além disso, são recalculadas a cada atualização de dados, aumentando o tempo total do refresh."
+      "explanation_en": "Calculated columns store one value per row in the VertiPaq model, increasing memory consumption. Furthermore, they are recalculated with each data update, increasing the total update time."
     },
     {
       "question": "Considere as seguintes expressões DAX criadas em um modelo: Medida A = SUMX(Cliente, [Total Vendas]) e Medida B = SUMX(Cliente, SUM(Vendas[Valor])). Sabendo que [Total Vendas] é uma medida pré-existente definida por SUM(Vendas[Valor]), qual a diferença de comportamento entre as duas medidas em termos de contexto?",
@@ -5933,14 +5933,14 @@ const questionBank = {
         "A Medida A é prejudicial mais lenta porque chama uma submedida redundante"
       ],
       "explanation_pt": "Medidas chamadas dentro de funções iteradoras (como SUMX) ou colunas calculadas possuem um CALCULATE implícito em sua execução. Isso ativa a 'Transição de Contexto', que converte o contexto de linha (cada cliente atual) em contexto de filtro, isolando as vendas apenas do cliente atual. A Medida B usa a função bruta SUM, que não sofre transição de contexto e soma a tabela de vendas inteira para todas as iterações de cliente.",
-      "question_en": "Considere as seguintes expressões DAX criadas em um modelo: Medida A = SUMX(Cliente, [Total Vendas]) e Medida B = SUMX(Cliente, SUM(Vendas[Valor])). Sabendo que [Total Vendas] é uma medida pré-existente definida por SUM(Vendas[Valor]), qual a diferença de comportamento entre as duas medidas em termos de contexto?",
+      "question_en": "Consider the following DAX expressions created in a model: Measure A = SUMX(Customer, [Total Sales]) and Measure B = SUMX(Customer, SUM(Sales[Amount])). Knowing that [Total Sales] is a pre-existing measure defined by SUM(Sales[Value]), what is the difference in behavior between the two measures in terms of context?",
       "options_en": [
-        "Elas retornam exatamente o mesmo valor em qualquer contexto visual do relatório",
-        "A Medida A realiza uma transição de contexto, transformando o contexto de linha do SUMX em contexto de filtro para calcular as vendas de cada cliente; A Medida B calcula as vendas totais de todos os clientes para cada linha de iteração",
-        "A Medida B realiza transição de contexto; A Medida A gera um produto cartesiano",
-        "A Medida A é estritamente mais lenta porque chama uma submedida redundante"
+        "They return exactly the same value in any visual context of the report",
+        "Measure A performs a context transition, transforming the SUMX line context into a filter context to calculate sales for each customer; Measure B calculates the total sales of all customers for each iteration line",
+        "Measure B performs context transition; Measure A generates a Cartesian product",
+        "Measure A is slower harmful because it calls a redundant submeasure"
       ],
-      "explanation_en": "Medidas chamadas dentro de funções iteradoras (como SUMX) ou colunas calculadas possuem um CALCULATE implícito em sua execução. Isso ativa a 'Transição de Contexto', que converte o contexto de linha (cada cliente atual) em contexto de filtro, isolando as vendas apenas do cliente atual. A Medida B usa a função bruta SUM, que não sofre transição de contexto e soma a tabela de vendas inteira para todas as iterações de cliente."
+      "explanation_en": "Measures called within iterator functions (such as SUMX) or calculated columns have an implicit CALCULATE in their execution. This activates 'Context Transition', which converts the line context (each current customer) to filter context, isolating sales to just the current customer. Measure B uses the raw SUM function, which does not undergo context transition and sums the entire sales table for all customer iterations."
     },
     {
       "question": "Qual é o principal propósito da utilização da função DAX KEEPFILTERS() quando aplicada como argumento de filtro dentro de uma função CALCULATE()?",
@@ -5960,14 +5960,14 @@ const questionBank = {
         "Garantir RLS estático em colunas críticas"
       ],
       "explanation_pt": "Por padrão, se você filtrar um campo no CALCULATE (ex: CALCULATE([Total], Produto[Cor] = 'Azul')), esse filtro substitui qualquer outro filtro pré-existente de 'Cor' no contexto visual. Ao encapsular com KEEPFILTERS, as condições se mesclam (AND lógica), de modo que se o visual já estiver filtrado para 'Vermelho', o resultado será BLANK() em vez de 'Azul'.",
-      "question_en": "Qual é o principal propósito da utilização da função DAX KEEPFILTERS() quando aplicada como argumento de filtro dentro de uma função CALCULATE()?",
+      "question_en": "What is the main purpose of using the DAX KEEPFILTERS() function when applied as a filter argument within a CALCULATE() function?",
       "options_en": [
-        "Forçar o cálculo a rodar de forma síncrona no VertiPaq",
-        "Preservar e mesclar os filtros existentes no contexto visual (ex: filtros de slicer ou linhas de tabela) em vez de substituí-los completamente com a condição de filtro do CALCULATE",
-        "Impedir que usuários finais apliquem filtros no painel lateral de filtros",
-        "Garantir RLS estático em colunas críticas"
+        "Force wheel calculation synchronously on VertiPaq",
+        "Preserve and merge existing filters in the visual context (e.g. slicer filters or table rows) rather than completely replacing them with the CALCULATE filter condition",
+        "Prevent end users from applying filters in the filters side panel",
+        "Ensure static RLS on critical columns"
       ],
-      "explanation_en": "Por padrão, se você filtrar um campo no CALCULATE (ex: CALCULATE([Total], Produto[Cor] = 'Azul')), esse filtro substitui qualquer outro filtro pré-existente de 'Cor' no contexto visual. Ao encapsular com KEEPFILTERS, as condições se mesclam (AND lógica), de modo que se o visual já estiver filtrado para 'Vermelho', o resultado será BLANK() em vez de 'Azul'."
+      "explanation_en": "By default, if you filter a field in CALCULATE (e.g. CALCULATE([Total], Product[Color] = 'Blue')), this filter replaces any other pre-existing 'Color' filters in the visual context. When encapsulating with KEEPFILTERS, the conditions are mixed together (logical AND), so that if the visual is already filtered for 'Red', the result will be BLANK() instead of 'Blue'."
     },
     {
       "question": "Você possui três relacionamentos mapeados entre a tabela Fato_Vendas e a dimensão Dim_Calendario baseados nas colunas DataPedido, DataEnvio e DataVencimento. Apenas o de DataPedido é ativo. Como você calcula as vendas associadas à DataEnvio em uma medida DAX sem duplicar tabelas?",
@@ -5987,14 +5987,14 @@ const questionBank = {
         "Desativando a relação de DataPedido diretamente na visualização do modelo"
       ],
       "explanation_pt": "A função 'USERELATIONSHIP' dentro de 'CALCULATE' permite ativar temporariamente um relacionamento inativo para a duração exclusiva do cálculo daquela medida específica, desativando automaticamente o relacionamento ativo padrão.",
-      "question_en": "Você possui três relacionamentos mapeados entre a tabela Fato_Vendas e a dimensão Dim_Calendario baseados nas colunas DataPedido, DataEnvio e DataVencimento. Apenas o de DataPedido é ativo. Como você calcula as vendas associadas à DataEnvio em uma medida DAX sem duplicar tabelas?",
+      "question_en": "You have three relationships mapped between the Fato_Vendas table and the Dim_Calendario dimension based on the DataPedido, DateShipped and DateDue columns. Only the DataPedido is active. How do you calculate sales associated with Shipping Date in a DAX measure without duplicate tables?",
       "options_en": [
-        "Usando a função RELATED(Dim_Calendario[Date])",
+        "Using the RELATED(Dim_Calendario[Date]) function",
         "Usando CALCULATE([Total Vendas], USERELATIONSHIP(Fato_Vendas[DataEnvio], Dim_Calendario[Date]))",
-        "Usando TREATAS para criar uma relação virtual",
-        "Desativando a relação de DataPedido diretamente na visualização de modelo"
+        "Using TREATAS to create a virtual relationship",
+        "Disabling the DataOrder relationship directly in the model view"
       ],
-      "explanation_en": "A função 'USERELATIONSHIP' dentro de 'CALCULATE' permite ativar temporariamente um relacionamento inativo para a duração exclusiva do cálculo daquela medida específica, desativando automaticamente o relacionamento ativo padrão."
+      "explanation_en": "The 'USERELATIONSHIP' function within 'CALCULATE' allows you to temporarily activate an inactive relationship for the exclusive duration of the calculation of that specific measure, automatically disabling the default active relationship."
     },
     {
       "question": "Você precisa criar um cálculo de Acumulado Corrente (Running Total) que mostre o crescimento acumulado das vendas à medida que o usuário seleciona ou altera filtros de segmentação (slicers). Onde e como esse cálculo deve ser criado?",
@@ -6014,14 +6014,14 @@ const questionBank = {
         "Como uma etapa de agrupamento recursiva no Power Query Editor"
       ],
       "explanation_pt": "Colunas calculadas são estáticas e calculadas apenas durante a atualização dos dados. Como o cálculo de acumulador sonoro precisa mudar instantaneamente com base no que o usuário seleciona nos slicers em tempo real, ele deve ser criado como uma medida DAX.",
-      "question_en": "Você precisa criar um cálculo de Acumulado Corrente (Running Total) que mostre o crescimento acumulado das vendas à medida que o usuário seleciona ou altera filtros de segmentação (slicers). Onde e como esse cálculo deve ser criado?",
+      "question_en": "You need to create a Current Cumulative calculation that shows cumulative sales growth as the user selects or changes segmentation filters (slicers). Where and how should this calculation be created?",
       "options_en": [
-        "Como uma Coluna Calculada em DAX, pois colunas armazenam valores fisicamente no modelo",
-        "Como uma Medida DAX, porque as medidas respondem dinamicamente ao contexto de filtro ativo gerado pelas seleções dos slicers no relatório",
-        "Na fonte SQL usando a cláusula OVER (PARTITION BY)",
-        "Como uma etapa de agrupamento recursiva no Power Query Editor"
+        "As a Calculated Column in DAX, as columns physically store values ​​in the model",
+        "As a DAX Measure, because the measures dynamically respond to the active filter context generated by the slicer selections in the report",
+        "In SQL source using OVER (PARTITION BY) clause",
+        "As a recursive grouping step in Power Query Editor"
       ],
-      "explanation_en": "Colunas calculadas são estáticas e calculadas apenas durante o refresh de dados. Como o cálculo de acumulado dinâmico precisa mudar instantaneamente com base no que o usuário seleciona nos slicers em tempo real, ele deve ser criado estritamente como uma Medida DAX."
+      "explanation_en": "Calculated columns are static and calculated only when data is updated. Because the sound accumulator calculation needs to change instantly based on what the user selects in the real-time slicers, it must be created as a DAX measurement."
     },
     {
       "question": "Você configurou RLS (Segurança em Nível de Linha) em um modelo contendo tabelas de Dimensão e Fato. Ao testar as regras RLS, você percebe que filtros de segurança aplicados a tabelas Fato precisam se propagar 'de volta' para filtrar as opções disponíveis na dimensão de Produtos. Qual configuração de relacionamento é obrigatória?",
@@ -6041,14 +6041,14 @@ const questionBank = {
         "Marcar o relacionamento como inativo"
       ],
       "explanation_pt": "Por padrão, os filtros se propagam do lado 1 (Dimensão) para o lado N (Fato). Se você definir regras RLS que filtram a Fato e quiser que isso filtre a dimensão 1, deverá marcar explicitamente 'Aplicar filtro de segurança em ambas as opções de relacionamento do Power BI Desktop.",
-      "question_en": "Você configurou RLS (Segurança em Nível de Linha) em um modelo contendo tabelas de Dimensão e Fato. Ao testar as regras RLS, você percebe que filtros de segurança aplicados a tabelas Fato precisam se propagar 'de volta' para filtrar as opções disponíveis na dimensão de Produtos. Qual configuração de relacionamento é obrigatória?",
+      "question_en": "You have configured RLS (Row Level Security) in a Dimension and Fact table model. When testing RLS rules, you notice that security filters applied to Fact tables need to propagate 'back' to filter the options available in the Products dimension. Which relationship configuration is mandatory?",
       "options_en": [
-        "Direção do filtro cruzado configurado como Único (Single)",
-        "Marcar a opção 'Aplicar filtro de segurança em ambas as direções' (Apply security filter in both directions) nas propriedades do relacionamento",
-        "Habilitar o Query Folding de segurança",
-        "Marcar o relacionamento como inativo"
+        "Cross filter direction set to Single",
+        "Check the 'Apply security filter in both directions' option in the relationship properties",
+        "Enable Security Query Folding",
+        "Mark the relationship as inactive"
       ],
-      "explanation_en": "Por padrão, filtros se propagam do lado 1 (Dimensão) para o lado N (Fato). Se você define regras RLS que filtram a Fato e quer que isso filtre a dimensão 1, deve marcar explicitamente 'Aplicar filtro de segurança em ambas as direções' nas opções de relacionamento do Power BI Desktop."
+      "explanation_en": "By default, filters propagate from side 1 (Dimension) to side N (Fact). If you define RLS rules that filter Fact and you want this to filter dimension 1, you must explicitly check 'Apply security filter on both Power BI Desktop relationship options."
     },
     {
       "question": "Qual é o comportamento do escopo de avaliação de Variáveis (VAR) declaradas no corpo de uma medida ou coluna calculada DAX?",
@@ -6068,14 +6068,14 @@ const questionBank = {
         "São globais e podem ser referenciadas por outras medidas no modelo"
       ],
       "explanation_pt": "Em DAX, variáveis ​​(VAR) são estáticas no escopo do cálculo. Eles são computados uma única vez e armazenados o valor final resultante da etapa em que foram declaradas. O bloco RETURN apenas consome esse valor estático, ignorando quaisquer mudanças de contexto geradas posteriormente no código.",
-      "question_en": "Qual é o comportamento do escopo de avaliação de Variáveis (VAR) declaradas no corpo de uma medida ou coluna calculada DAX?",
+      "question_en": "What is the behavior of the Variable evaluation scope (VAR) declared in the body of a measure or DAX calculated column?",
       "options_en": [
-        "Elas são reavaliadas de forma lazy cada vez que são referenciadas no bloco RETURN",
-        "Elas são avaliadas exatamente uma vez no momento de sua definição, armazenando o valor resultante no contexto em que a variável foi declarada (contexto de avaliação imutável)",
-        "Elas mudam dinamicamente se encapsuladas por funções de modificação de filtro como CALCULATE",
-        "São globais e podem ser referenciadas por outras medidas no modelo"
+        "They are lazily re-evaluated each time they are referenced in the RETURN block",
+        "They are evaluated exactly once at the time of their definition, storing the resulting value in the context in which the variable was declared (immutable evaluation context)",
+        "They change dynamically if encapsulated by filter modification functions like CALCULATE",
+        "They are global and can be referenced by other measures in the model"
       ],
-      "explanation_en": "Em DAX, variáveis (VAR) são estáticas no escopo do cálculo. Elas são computadas uma única vez e armazenam o valor final resultante na etapa em que foram declaradas. O bloco RETURN apenas consome esse valor estático, ignorando quaisquer mudanças de contexto geradas posteriormente no código."
+      "explanation_en": "In DAX, variables (VAR) are static in the scope of the calculation. They are computed once and the final value resulting from the step in which they were declared is stored. The RETURN block just consumes this static value, ignoring any context changes generated later in the code."
     },
     {
       "question": "Duas tabelas em seu modelo de dados não compartilham um relacionamento físico físico na aba de visualização de Modelo do Power BI Desktop, mas você precisa fazer uma medida filtrar uma tabela com base nas chaves de outra. Qual função DAX permite criar esse relacionamento virtual de alta performance?",
@@ -6095,14 +6095,14 @@ const questionBank = {
         "INTERSETAR()"
       ],
       "explanation_pt": "A função 'TREATAS' mapeia virtualmente o resultado de uma expressão de tabela como filtros em colunas de outra tabela não relacionada fisicamente. É a maneira mais otimizada e limpa de criar heranças de filtro virtual em DAX.",
-      "question_en": "Duas tabelas em seu modelo de dados não compartilham um relacionamento físico físico na aba de visualização de Modelo do Power BI Desktop, mas você precisa fazer uma medida filtrar uma tabela com base nas chaves de outra. Qual função DAX permite criar esse relacionamento virtual de alta performance?",
+      "question_en": "Two in your data model don't protect a physical relationship in the table view tab of the Power BI Desktop Model, but you need to take action to filter one table based on the keys of another. Which DAX function allows you to create this high-performance virtual relationship?",
       "options_en": [
         "RELATEDTABLE()",
         "TREATAS()",
         "CROSSFILTER()",
         "INTERSECT()"
       ],
-      "explanation_en": "A função 'TREATAS' mapeia virtualmente o resultado de uma expressão de tabela como filtros em colunas de outra tabela não relacionada fisicamente. É a maneira mais otimizada e limpa de criar heranças de filtro virtuais em DAX."
+      "explanation_en": "The 'TREATAS' function virtually maps the result of a table expression as filters into columns of another physically unrelated table. It is the most optimized and clean way to create virtual filter inheritances in DAX."
     },
     {
       "question": "Para criar um relatório de análise financeira que exiba a Média Móvel de Vendas dos últimos 12 meses, qual função de inteligência de tempo DAX é ideal para gerar a janela temporal móvel?",
@@ -6122,14 +6122,14 @@ const questionBank = {
         "DATAADD()"
       ],
       "explanation_pt": "A função 'DATESINPERIOD(Dates, StartDate, NumberOfPeriods, Interval)' foi projetada para retornar uma tabela de dados que começa na data inicial indicada e se estende por um número e intervalo específico de períodos (ex: -12 meses, 30 dias), ideal para janelas móveis (cálculos rolantes/móveis).",
-      "question_en": "Para criar um relatório de análise financeira que exiba a Média Móvel de Vendas dos últimos 12 meses, qual função de inteligência de tempo DAX é ideal para gerar a janela temporal móvel?",
+      "question_en": "To create a financial analysis report that displays the Moving Average of Sales for the last 12 months, which DAX time intelligence function is ideal for generating a moving time window?",
       "options_en": [
         "DATESYTD()",
         "DATESINPERIOD()",
         "SAMEPERIODLASTYEAR()",
         "DATEADD()"
       ],
-      "explanation_en": "A função 'DATESINPERIOD(Dates, StartDate, NumberOfPeriods, Interval)' é projetada para retornar uma tabela de datas que começa na data inicial indicada e se estende por um número e intervalo específicos de períodos (ex: -12 meses, 30 dias), ideal para janelas móveis (rolling/moving calculations)."
+      "explanation_en": "The 'DATESINPERIOD(Dates, StartDate, NumberOfPeriods, Interval)' function is designed to return a table of data that starts from the given start date and spans a specific number and range of periods (e.g. -12 months, 30 days), ideal for moving windows (rolling/roaming calculations)."
     },
     {
       "question": "Qual das seguintes características técnicas de uma coluna de dados possui o maior impacto negativo na eficiência de compactação de dicionário do motor VertiPaq de armazenamento em memória do Power BI?",
@@ -6149,14 +6149,14 @@ const questionBank = {
         "O tipo de dados será configurado como Número Inteiro (Integer) em vez de Decimal"
       ],
       "explanation_pt": "O motor VertiPaq usa compactação orientada por coluna e constrói dicionários de termos exclusivos. Colunas com alta cardinalidade (muitos valores únicos, como IDs detalhados de transações ou carimbos de dados/hora exatos) excluem dicionários massivos e quebram a eficiência da compactação por execução de comprimento de linha (RLE).",
-      "question_en": "Qual das seguintes características técnicas de uma coluna de dados possui o maior impacto negativo na eficiência de compactação de dicionário do motor VertiPaq de armazenamento em memória do Power BI?",
+      "question_en": "Which of the following technical characteristics of a data column have the greatest negative impact on the dictionary compression efficiency of the Power BI VertiPaq in-memory storage engine?",
       "options_en": [
-        "O tamanho total das strings de texto em bytes",
-        "A alta Cardinalidade da coluna (número elevado de valores exclusivos/únicos)",
-        "O fato de a coluna possuir valores nulos (BLANKs)",
-        "O tipo de dados estar configurado como Número Inteiro (Integer) em vez de Decimal"
+        "The total size of text strings in bytes",
+        "The high Cardinality of the column (high number of exclusive/unique values)",
+        "The fact that the column has null values ​​(BLANKs)",
+        "The data type will be set to Integer instead of Decimal"
       ],
-      "explanation_en": "O motor VertiPaq usa compactação orientada por coluna e constrói dicionários de termos únicos. Colunas com alta cardinalidade (muitos valores únicos, como IDs detalhados de transações ou carimbos de data/hora exatos) exigem dicionários massivos e quebram a eficiência da compactação por execução de comprimento de linha (RLE)."
+      "explanation_en": "The VertiPaq engine uses column-oriented compression and builds dictionaries of unique terms. Columns with high cardinality (many unique values, such as detailed transaction IDs or exact timestamps) exclude massive dictionaries and break the efficiency of row-length execution (RLE) compression."
     },
     {
       "question": "Após configurar os papéis (Roles) e filtros RLS (Segurança em Nível de Linha) no Power BI Desktop e publicar o relatório no Power BI Service, qual é o próximo passo administrativo obrigatório para que a segurança funcione para os usuários?",
@@ -6176,14 +6176,14 @@ const questionBank = {
         "Não há etapas adicionais, o RLS é ativado automaticamente pelas credenciais de login dos usuários"
       ],
       "explanation_pt": "O RLS definido no Power BI Desktop apenas mapeia a lógica lógica lógica. Para funcionar na nuvem, o administrador ou proprietário do modelo deve ir nas configurações do conjunto de dados no Serviço (Segurança), selecionar os papéis e adicionar os usuários individuais ou grupos de segurança que devem pertencer a cada papel.",
-      "question_en": "Após configurar os papéis (Roles) e filtros RLS (Segurança em Nível de Linha) no Power BI Desktop e publicar o relatório no Power BI Service, qual é o próximo passo administrativo obrigatório para que a segurança funcione para os usuários?",
+      "question_en": "After configuring Roles and RLS (Row Level Security) filters in Power BI Desktop and publishing the report to Power BI Service, what is the next mandatory administrative step for security to work for users?",
       "options_en": [
-        "Mapear as funções no portal de administração do Tenant do Power BI",
-        "Acessar as configurações de Segurança do modelo de dados no Power BI Service e atribuir usuários ou grupos de segurança (Azure Active Directory / Entra ID) aos papéis definidos",
-        "Configurar regras de acesso de visualização RLS nas propriedades do workspace",
-        "Não há passos adicionais, o RLS é ativado automaticamente pelas credenciais de login dos usuários"
+        "Map roles in the Power BI Tenant admin portal",
+        "Access data model security settings in Power BI Service and grant users or security groups (Azure Active Directory / Entra ID) to defined roles",
+        "Configure RLS view access rules in workspace properties",
+        "There are no additional steps, RLS is automatically activated by users' login credentials"
       ],
-      "explanation_en": "O RLS definido no Power BI Desktop apenas mapeia a lógica lógica lógica. Para que funcione na nuvem, o administrador ou proprietário do modelo deve ir nas configurações do dataset no Service (Segurança), selecionar os papéis e adicionar os usuários individuais ou grupos de segurança que devem pertencer a cada papel."
+      "explanation_en": "The RLS defined in Power BI Desktop only maps logical logic. To work in the cloud, the administrator or model owner must go to the dataset settings in the Service (Security), select the roles and add the individual users or security groups that should belong to each role."
     },
     {
       "question": "Qual é a principal diferença técnica de comportamento entre as funções DAX ALL() e ALLNOBLANKROW() ao remover filtros de uma tabela do modelo de dados?",
@@ -6203,14 +6203,14 @@ const questionBank = {
         "Não há diferença prática, pois ambos removem 100% dos filtros da tabela referenciada"
       ],
       "explanation_pt": "Quando há inconsistência referencial no modelo (ex: uma linha na Fato aponta para um ID de produto que não existe na dimensão Produto), o Power BI cria uma linha em branco invisível na dimensão para associar esses órfãos. A função 'ALL' inclui essa linha especial no resultado retornado, enquanto 'ALLNOBLANKROW' a ignora.",
-      "question_en": "Qual é a principal diferença técnica de comportamento entre as funções DAX ALL() e ALLNOBLANKROW() ao remover filtros de uma tabela do modelo de dados?",
+      "question_en": "What is the main technical difference in behavior between the DAX functions ALL() and ALLNOBLANKROW() when removing filters from a data model table?",
       "options_en": [
-        "ALL() mantém a linha em branco automática gerada por inconsistência de integridade referencial; ALLNOBLANKROW() a ignora/remove",
-        "ALLNOBLANKROW() limpa filtros de segmentadores; ALL() limpa apenas de tabelas visuais",
-        "ALLNOBLANKROW() é obsoleta e foi descontinuada do DAX",
-        "Não há diferença prática, pois ambas removem 100% dos filtros da tabela referenciada"
+        "ALL() keeps the automatically generated blank line due to inconsistency of referential integrity; ALLNOBLANKROW() to ignore/remove",
+        "ALLNOBLANKROW() clears segmenter filters; ALL() clears visual tables only",
+        "ALLNOBLANKROW() is deprecated and has been deprecated from DAX",
+        "There is no practical difference, as both remove 100% of the filters from the referenced table"
       ],
-      "explanation_en": "Quando há inconsistência referencial no modelo (ex: uma linha na Fato aponta para um ID de produto que não existe na dimensão Produto), o Power BI cria uma linha em branco invisível na dimensão para associar esses órfãos. A função 'ALL' inclui essa linha especial no resultado retornado, enquanto 'ALLNOBLANKROW' a ignora."
+      "explanation_en": "When there is a referential inconsistency in the model (e.g. a line in the Fact points to a product ID that does not exist in the Product dimension), Power BI creates an invisible blank line in the dimension to associate these orphans. The 'ALL' function includes this special row in the returned result, while 'ALLNOBLANKROW' ignores it."
     },
     {
       "question": "O que ocorre quando a expressão CALCULATE(SUM(Vendas[Valor])) é avaliada no contexto de linha de uma Coluna Calculada de uma tabela de clientes?",
@@ -6230,14 +6230,14 @@ const questionBank = {
         "Retorna BLANK() porque colunas calculadas não aceitam funções agregadas encapsuladas"
       ],
       "explanation_pt": "Escrever CALCULATE no contexto de linha força o motor a realizar a transição de contexto. A linha atual da tabela é convertida em um conjunto equivalente de filtros de coluna, ou seja, filtra a tabela de vendas relacionada para mostrar apenas os dados desse cliente específico.",
-      "question_en": "O que ocorre quando a expressão CALCULATE(SUM(Vendas[Valor])) é avaliada no contexto de linha de uma Coluna Calculada de uma tabela de clientes?",
+      "question_en": "What happens when the expression CALCULATE(SUM(Sales[Valor])) is evaluated in the row context of a Calculated Column in a customer table?",
       "options_en": [
-        "Gera um erro de dependência circular imediato no modelo",
-        "Realiza uma Transição de Contexto, convertendo todas as colunas da linha atual do cliente em filtros e retornando a soma das vendas exclusivas desse cliente específico",
-        "Calcula a soma das vendas de todos os clientes sem qualquer restrição de linha",
+        "Raised a circular dependency error immediately in the model",
+        "Performs a Context Transition, converting all columns in the customer's current row into filters and returning the sum of exclusive sales for that specific customer",
+        "Calculate the sum of sales for all customers without any line restrictions",
         "Retorna BLANK() porque colunas calculadas não aceitam funções agregadoras encapsuladas"
       ],
-      "explanation_en": "Escrever CALCULATE no contexto de linha força o motor a realizar a transição de contexto. A linha atual da tabela é convertida em um conjunto equivalente de filtros de coluna, o que filtra a tabela de vendas relacionada para mostrar apenas os dados daquele cliente específico."
+      "explanation_en": "Writing CALCULATE in the line context forces the engine to perform the context transition. The current table row is converted to an equivalent set of column filters, that is, it filters the related sales table to only show data for that specific customer."
     },
     {
       "question": "Em uma modelagem estrela clássica, você possui uma tabela fato com duas chaves estrangeiras de data (DataVenda e DataEntrega) conectadas à mesma tabela dimensão Calendário. Qual é o limite de relacionamentos físicos ativos que você pode mapear entre essas duas tabelas?",
@@ -6257,14 +6257,14 @@ const questionBank = {
         "Ilimitados, pois o VertiPaq resolve caminhos de forma dinâmica"
       ],
       "explanation_pt": "O Power BI não permite caminhos de filtro ambíguos. Por isso, entre duas tabelas possíveis, apenas um relacionamento físico pode ser definido como 'Ativo' por vez. Relacionamentos adicionais serão marcados como 'Inativos' e ativados no DAX com USERRELATIONSHIP quando necessário.",
-      "question_en": "Em uma modelagem estrela clássica, você possui uma tabela fato com duas chaves estrangeiras de data (DataVenda e DataEntrega) conectadas à mesma tabela dimensão Calendário. Qual é o limite de relacionamentos físicos ativos que você pode mapear entre essas duas tabelas?",
+      "question_en": "In classic star modeling, you have a fact table with two foreign data keys (Sales Date and Delivery Date) connected to the same calendar dimension table. What is the limit of physical relationships you can map between these two tables?",
       "options_en": [
-        "Nenhum, pois múltiplos relacionamentos exigem uma tabela ponte intermediária",
-        "Exatamente um relacionamento ativo; os demais devem ser configurados como inativos nas propriedades",
-        "Dois relacionamentos ativos simultâneos, desde que possuam direções de filtro diferentes",
-        "Ilimitados, pois o VertiPaq resolve caminhos de forma dinâmica"
+        "None, because multiple interactions delete an interactive bridge table",
+        "Exactly an active relationship; the others must be configured as inactive in the properties",
+        "Two simultaneous active relationships, which had different filters",
+        "Unlimited, as VertiPaq dynamically resolves paths"
       ],
-      "explanation_en": "O Power BI não permite caminhos de filtro ambíguos. Por isso, entre duas tabelas quaisquer, apenas um relacionamento físico pode ser definido como 'Ativo' por vez. Relacionamentos adicionais devem ser marcados como 'Inativos' e ativados no DAX com USERRELATIONSHIP quando necessário."
+      "explanation_en": "Power BI doesn't allow ambiguous filter paths. Therefore, between two possible tables, only one physical relationship can be set as 'Active' at a time. Additional relationships will be marked as 'Inactive' and activated in DAX with USERRELATIONSHIP when necessary."
     },
     {
       "question": "Qual o benefício direto de desabilitar a opção 'Data/Hora Automática' (Auto Date/Time) nas configurações globais ou do arquivo atual do Power BI Desktop?",
@@ -6284,14 +6284,14 @@ const questionBank = {
         "Forçar a sincronização de fusos horários locais"
       ],
       "explanation_pt": "Quando 'Data/Hora Automática' está ativo, o Power BI cria silenciosamente uma tabela calendário oculta para cada coluna do tipo Date ou DateTime no modelo. Em modelos com muitas colunas de dados, isso aumenta desnecessariamente o tamanho do arquivo .pbix e deteriora o desempenho de processamento.",
-      "question_en": "Qual o benefício direto de desabilitar a opção 'Data/Hora Automática' (Auto Date/Time) nas configurações globais ou do arquivo atual do Power BI Desktop?",
+      "question_en": "What is the direct benefit of disabling the 'Auto Date/Time' option in the Power BI Desktop global or current file settings?",
       "options_en": [
-        "Melhorar a precisão de relatórios de IoT com dados em tempo real",
-        "Excluir tabelas de calendário ocultas criadas automaticamente pelo Power BI para cada coluna de data do modelo, reduzindo o tamanho do arquivo final e o consumo de memória RAM",
-        "Impedir que usuários digitem datas incorretas nos filtros de segmentação",
-        "Forçar a sincronização de fusos horários locais"
+        "Improve IoT reporting results with real-time data",
+        "Delete hidden calendar tables automatically created by Power BI for each model data column, reducing final file size and RAM consumption",
+        "Prevent users from incorrectly entering data into targeting filters",
+        "Force local time zones to sync"
       ],
-      "explanation_en": "Quando 'Data/Hora Automática' está ativa, o Power BI cria silenciosamente uma tabela calendário oculta para cada coluna do tipo Date ou DateTime no modelo. Em modelos com muitas colunas de data, isso aumenta desnecessariamente o tamanho do arquivo .pbix e deteriora a performance de processamento."
+      "explanation_en": "When 'Auto Date/Time' is on, Power BI silently creates a hidden calendar table for each Date or DateTime column in the model. In models with many data columns, this unnecessarily increases the size of the .pbix file and deteriorates processing performance."
     },
     {
       "question": "Qual é a principal vantagem de performance ao projetar uma tabela de relacionamento física intermediária (tabela ponte / bridge table) para resolver relações Muitos-para-Muitos (N:N) em um modelo com milhões de linhas?",
@@ -6311,14 +6311,14 @@ const questionBank = {
         "Reduzir o número total de relacionamentos para zero"
       ],
       "explanation_pt": "Relacionamentos Muitos-para-Muitos diretos na modelagem utilizam lógica de produto cruzado que consome muito processamento de CPU em grandes conjuntos de dados. O uso de uma tabela ponte contém valores distintos normalizados e filtros unidirecionais claros que simplificam a busca do VertiPaq e aceleram a renderização de gráficos.",
-      "question_en": "Qual é a principal vantagem de performance ao projetar uma tabela de relacionamento física intermediária (tabela ponte / bridge table) para resolver relações Muitos-para-Muitos (N:N) em um modelo com milhões de linhas?",
+      "question_en": "What is the main performance advantage when designing a communicated physical relationship table (bridge table) to resolve Many-to-Many (N:N) relationships in a model with millions of rows?",
       "options_en": [
-        "Diminuir a quantidade de medidas DAX necessárias",
-        "Eliminar caminhos de filtro ambíguos na propagação e otimizar as pesquisas internas no VertiPaq, evitando a deterioração de performance visual",
-        "Ativar o Query Folding automático na fonte de dados local",
-        "Reduzir o número total de relacionamentos para zero"
+        "Decrease the number of DAX measurements allowed",
+        "Eliminate ambiguous filter paths in seeding and improving internal searches in VertiPaq, avoiding visual performance disruptions",
+        "Enable automatic Query Folding on the local data source",
+        "Reduce the total number of relationships to zero"
       ],
-      "explanation_en": "Relacionamentos Muitos-para-Muitos diretos na modelagem utilizam lógica de produto cruzado que consome muito processamento de CPU em grandes datasets. O uso de uma tabela ponte contendo valores distintos normalizados e filtros unidirecionais claros simplifica a busca do VertiPaq e acelera a renderização de gráficos."
+      "explanation_en": "Direct Many-to-Many Relationships in modeling use cross-product logic that consumes a lot of CPU processing on large data sets. Using a bridge table contains normalized discrete values ​​and clear one-way filters that simplify VertiPaq searching and speed up graph rendering."
     },
     {
       "question": "No seu modelo de dados, uma única tabela dimensão de Calendário filtra a tabela fato de vendas em três datas distintas (Data do Pedido, Data do Envio, Data da Entrega) por meio de relacionamentos ativos e inativos. Essa dimensão é chamada tecnicamente de:",
@@ -6338,14 +6338,14 @@ const questionBank = {
         "Dimensão Lixo"
       ],
       "explanation_pt": "Uma dimensão que atua em múltiplos papéis no mesmo modelo filtrando diferentes chaves na fato é conhecida como dimensão de interpretação de papéis (Role-Playing Dimension).",
-      "question_en": "No seu modelo de dados, uma única tabela dimensão de Calendário filtra a tabela fato de vendas em três datas distintas (Data do Pedido, Data do Envio, Data da Entrega) por meio de relacionamentos ativos e inativos. Essa dimensão é chamada tecnicamente de:",
+      "question_en": "In your data model, a single Calendar dimension table filters the sales fact table into three separate pieces of data (Order Date, Ship Date, Delivery Date) through active and inactive relationships. This dimension is called technological:",
       "options_en": [
-        "Dimensão de Degenerada",
+        "Degenerate Dimension",
         "Dimensão Snowflake",
-        "Dimensão de Interpretação de Papéis (Role-Playing Dimension)",
+        "Role Playing Dimension",
         "Dimensão Junk"
       ],
-      "explanation_en": "Uma dimensão que atua em múltiplos papéis no mesmo modelo filtrando diferentes chaves na fato é conhecida como dimensão de interpretação de papéis (Role-Playing Dimension)."
+      "explanation_en": "A dimension that acts on multiple roles in the same model by filtering different keys in fact is known as the Role-Playing Dimension."
     },
     {
       "question": "Você está modelando as tabelas Customer (contendo o cadastro de clientes com IDs exclusivos) e Transaction (contendo as transações de compras dos clientes). Qual tipo de relacionamento e direção você deve configurar para vincular as tabelas?",
@@ -6365,14 +6365,14 @@ const questionBank = {
         "Um-para-um (1:1) entre Cliente e Transação"
       ],
       "explanation_pt": "Um cliente pode realizar diversas transações, mas cada transação pertence a um único cliente. Logo, o relacionamento correto é de Um-para-Muitos (1:N) com a direção de filtragem do lado 1 (Customer) para o lado N (Transaction).",
-      "question_en": "Você está modelando as tabelas Customer (contendo o cadastro de clientes com IDs exclusivos) e Transaction (contendo as transações de compras dos clientes). Qual tipo de relacionamento e direção você deve configurar para vincular as tabelas?",
+      "question_en": "You are modeling the Customer (containing customer records with unique IDs) and Transaction (containing customer purchase transactions) tables. What type of relationship and direction should you configure to link the tables?",
       "options_en": [
         "Muitos-para-muitos (N:N) entre Customer e Transaction",
-        "Um-para-muitos (1:N) de Transaction para Customer",
-        "Um-para-muitos (1:N) de Customer para Transaction",
+        "One-to-many (1:N) Transaction to Customer",
+        "One-to-many (1:N) Customer to Transaction",
         "Um-para-um (1:1) entre Customer e Transaction"
       ],
-      "explanation_en": "Um cliente pode realizar múltiplas transações, mas cada transação pertence a um único cliente. Logo, o relacionamento correto é de Um-para-Muitos (1:N) com a direção de filtragem do lado 1 (Customer) para o lado N (Transaction)."
+      "explanation_en": "A customer can carry out multiple transactions, but each transaction belongs to a single customer. Therefore, the correct relationship is One-to-Many (1:N) with the filtering direction from side 1 (Customer) to side N (Transaction)."
     },
     {
       "question": "Ao projetar um modelo de dados estrela (Star Schema) de alta performance, qual das seguintes práticas NÃO é considerada uma boa prática de modelagem recomendada?",
@@ -6392,14 +6392,14 @@ const questionBank = {
         "Importar apenas os dados e colunas necessárias para a análise"
       ],
       "explanation_pt": "Relacionamentos Muitos-para-Muitos bidirecionais ativos causam ambiguidade de filtragem, duplo design involuntário e manipulação drástica de desempenho. Devem ser evitados ou modelados com tabelas ponte e filtros unidirecionais.",
-      "question_en": "Ao projetar um modelo de dados estrela (Star Schema) de alta performance, qual das seguintes práticas NÃO é considerada uma boa prática de modelagem recomendada?",
+      "question_en": "When designing a high-performance Star Schema model, which of the following practices is NOT considered a recommended good modeling practice?",
       "options_en": [
         "Utilizar esquemas estrela complexos baseados fortemente em relacionamentos Muitos-para-Muitos (N:N) bidirecionais ativos",
-        "Configurar relacionamentos com filtros unidirecionais claros em vez de bidirecionais",
-        "Manter tabelas com propósitos específicos (Fato para métricas e Dimensão para atributos)",
-        "Importar apenas os dados e colunas estritamente necessários para a análise"
+        "Configure relationships with clear one-way rather than two-way filters",
+        "Maintain for specific purposes (Fact for metrics and Dimension for tables)",
+        "Import only the data and columns needed for analysis"
       ],
-      "explanation_en": "Relacionamentos Muitos-para-Muitos bidirecionais ativos causam ambiguidade de filtragem, duplo cálculo involuntário e degradação drástica de performance. Devem ser evitados ou modelados com tabelas ponte e filtros unidirecionais."
+      "explanation_en": "Active bidirectional Many-to-Many relationships cause filtering ambiguity, unintended double design, and drastic performance manipulation. They should be avoided or modeled with bridge tables and one-way filters."
     },
     {
       "question": "Em um relacionamento clássico de cardinalidade Um-para-Muitos (1:N) entre uma tabela de dimensão e uma fato, a qual tipo de coluna do banco o lado 'Muitos' (N) do relacionamento está vinculado na tabela fato?",
@@ -6419,14 +6419,14 @@ const questionBank = {
         "Tabela de Pesquisa"
       ],
       "explanation_pt": "O lado 1 (Dimensão) conecta-se por meio de sua Chave Primária (valores exclusivos). O lado N (Fato) conecta-se por meio de sua Chave Estrangeira (valores que podem se repetir).",
-      "question_en": "Em um relacionamento clássico de cardinalidade Um-para-Muitos (1:N) entre uma tabela de dimensão e uma fato, a qual tipo de coluna do banco o lado 'Muitos' (N) do relacionamento está vinculado na tabela fato?",
+      "question_en": "In a classic One-to-Many (1:N) cardinality relationship between a dimension table and a fact, which database column type is the 'Many' (N) side of the relationship linked to in the fact table?",
       "options_en": [
         "Chave Primária (Primary Key)",
         "Chave Estrangeira (Foreign Key)",
-        "Coluna de Índice Calculada",
-        "Tabela de Pesquisa"
+        "Calculated Index Column",
+        "Lookup Table"
       ],
-      "explanation_en": "O lado 1 (Dimensão) conecta-se por meio de sua Chave Primária (valores exclusivos). O lado N (Fato) conecta-se por meio de sua Chave Estrangeira (valores que podem se repetir)."
+      "explanation_en": "Side 1 (Dimension) connects via its Primary Key (unique values). The N (Fact) side connects through its Foreign Key (values ​​that can be repeated)."
     },
     {
       "question": "Em relação ao comportamento do fluxo de filtros em relacionamentos do Power BI, qual das seguintes afirmações é verdadeira?",
@@ -6446,14 +6446,14 @@ const questionBank = {
         "Todas as alternativas acima estão corretas"
       ],
       "explanation_pt": "Os filtros seguem o fluxo natural da dimensão para o fato (lado 1 para N). Propagam-se para tabelas dependentes e apenas sobem de volta para o lado 1 se o filtro for configurado explicitamente como bidirecional (Ambos).",
-      "question_en": "Em relação ao comportamento do fluxo de filtros em relacionamentos do Power BI, qual das seguintes afirmações é verdadeira?",
+      "question_en": "Regarding the behavior of filter flow in Power BI relationships, which of the following statements are true?",
       "options_en": [
-        "Por padrão, o filtro se propaga do lado 1 (Um) para o lado N (Muitos) do relacionamento",
-        "Ao filtrar uma tabela de dimensão, o contexto de filtro é passado automaticamente para as tabelas fato 'a jusante'",
-        "Os filtros não conseguem fluir 'rio acima' (do lado N para o lado 1) a menos que a filtragem bidirecional esteja ativa",
-        "Todas as alternativas acima estão corretas"
+        "By default, the filter propagates from side 1 (One) to side N (Many) of the relationship",
+        "When filtering a dimension table, the filter context is automatically passed to the 'downstream' fact tables",
+        "Filters do not provide 'upstream' flow (from side N to side 1) unless bi-directional filtering is active",
+        "All of the above are correct"
       ],
-      "explanation_en": "Os filtros seguem o fluxo natural da dimensão para a fato (lado 1 para N). Propagam-se para tabelas dependentes e apenas sobem de volta para o lado 1 se o filtro for configurado explicitamente como bidirecional (Ambos)."
+      "explanation_en": "Filters follow the natural flow from dimension to fact (side 1 to N). Propagate to dependent tables and only move back to side 1 if the filter is explicitly set to bidirectional (Both)."
     },
     {
       "question": "Se você decidir importar ou construir sua própria tabela de calendário (Date Table) no Power BI, quais requisitos técnicos ela deve cumprir obrigatoriamente para aceitar inteligência de tempo DAX?",
@@ -6473,14 +6473,14 @@ const questionBank = {
         "Todas as alternativas acima estão corretas"
       ],
       "explanation_pt": "Uma tabela de dados para inteligência de tempo requer uma coluna do tipo Date/DateTime, com valores únicos, contínuos (sem buracos) e cobrindo anos inteiros mapeados no modelo.",
-      "question_en": "Se você decidir importar ou construir sua própria tabela de calendário (Date Table) no Power BI, quais requisitos técnicos ela deve cumprir obrigatoriamente para aceitar inteligência de tempo DAX?",
+      "question_en": "If you decide to import or build your own calendar table (Date Table) in Power BI, what technical requirements must it meet to support DAX time intelligence?",
       "options_en": [
-        "Coneter datas contínuas sem lacunas que representem todos os dias de todos os anos do modelo",
-        "Não conter datas duplicadas na coluna de chave de data",
-        "Possuir pelo menos uma coluna configurada com o tipo de dado Data (Date) ou Data/Hora (DateTime)",
-        "Todas as alternativas acima estão corretas"
+        "Connect continuous data with no gaps representing every day of every model year",
+        "Does not contain duplicate data in data key column",
+        "Have at least one column configured with the Date or Date/Time data type",
+        "All of the above are correct"
       ],
-      "explanation_en": "Uma tabela de datas para inteligência de tempo requer uma coluna de tipo Date/DateTime, com valores únicos, contínuos (sem buracos) e cobrindo anos inteiros mapeados no modelo."
+      "explanation_en": "A data table for time intelligence requires a column of type Date/DateTime, with unique, continuous values ​​(no holes) and covering entire years mapped in the model."
     },
     {
       "question": "Você possui uma tabela FactSales com 50 milhões de linhas de dados diários de vendas abrangendo três anos. A sua necessidade de relatórios restringe-se a exibir vendas mensais por produto, sem necessidade de detalhes por dia. Como otimizar o tamanho do modelo sem afetar as entregas?",
@@ -6500,14 +6500,14 @@ const questionBank = {
         "Resumir a tabela fato para o nível trimestral"
       ],
       "explanation_pt": "Pré-agregar as vendas na Fato agrupando por mês e produto reduz ofertas de milhões de linhas diárias para um volume significativamente menor de linhas mensais, economizando memória e acelerando consultas DAX.",
-      "question_en": "Você possui uma tabela FactSales com 50 milhões de linhas de dados diários de vendas abrangendo três anos. A sua necessidade de relatórios restringe-se a exibir vendas mensais por produto, sem necessidade de detalhes por dia. Como otimizar o tamanho do modelo sem afetar as entregas?",
+      "question_en": "You have a FactSales table with 50 million rows of daily sales data spanning three years. Your reporting needs are restricted to displaying monthly sales by product, without the need for details by day. How to optimize the model size without varying deliveries?",
       "options_en": [
-        "Resumir/agrupar a tabela dimensão de datas para o nível mensal",
-        "Resumir/agrupar a tabela de fatos FactSales para o nível mensal e de produto no Power Query",
-        "Resumir a tabela FactSales para a categoria de produtos apenas",
-        "Resumir a tabela fato para o nível trimestral"
+        "Summarize/group data dimension table to monthly level",
+        "Summarize/group FactSales fact table for monthly and product level in Power Query",
+        "Summarize FactSales table for product category only",
+        "Summarize the fact table to the quarterly level"
       ],
-      "explanation_en": "Pré-agregar as vendas na Fato agrupando por mês e produto reduz dezenas de milhões de linhas diárias para um volume significativamente menor de linhas mensais, economizando memória e acelerando consultas DAX."
+      "explanation_en": "Pre-aggregating sales in Fato by grouping by month and product reduces offers from millions of daily lines to a significantly smaller volume of monthly lines, saving memory and accelerating DAX queries."
     },
     {
       "question": "No modelo tabular do Power BI, qual elemento de cálculo é computado dinamicamente em tempo de execução de consulta (on-demand), não consumindo espaço físico de armazenamento no arquivo de dados?",
@@ -6527,14 +6527,14 @@ const questionBank = {
         "Parâmetros de Campo"
       ],
       "explanation_pt": "Medidas DAX são puramente fórmulas matemáticas. Eles não armazenam valores fisicamente no arquivo e são calculados sob demanda pelo motor de consulta sempre que um visual for renderizado.",
-      "question_en": "No modelo tabular do Power BI, qual elemento de cálculo é computado dinamicamente em tempo de execução de consulta (on-demand), não consumindo espaço físico de armazenamento no arquivo de dados?",
+      "question_en": "In the Power BI tabular model, which calculation element is dynamically computed at query execution time (on-demand), not consuming physical storage space in the data file?",
       "options_en": [
         "Colunas Calculadas (Calculated Columns)",
         "Tabelas Calculadas (Calculated Tables)",
         "Medidas DAX (Measures)",
-        "Parâmetros de Campo"
+        "Field Parameters"
       ],
-      "explanation_en": "Medidas DAX são puramente fórmulas matemáticas. Elas não armazenam valores fisicamente no arquivo e são calculadas sob demanda pelo motor de consulta sempre que um visual é renderizado."
+      "explanation_en": "DAX measurements are purely mathematical formulas. They do not physically store values ​​in the file and are calculated on demand by the query engine whenever a visual is rendered."
     },
     {
       "question": "Qual tipo de cálculo em DAX responde diretamente e em tempo real aos filtros, segmentações de dados (slicers) e seleções ativas na tela do relatório feitas pelo usuário?",
@@ -6550,12 +6550,12 @@ const questionBank = {
         "Colunas Calculadas"
       ],
       "explanation_pt": "Medidas DAX operam dinamicamente sob o 'Contexto de Filtro' atual da página, recalculando-se instantaneamente para refletir qualquer segmentação ou filtro aplicado na tela.",
-      "question_en": "Qual tipo de cálculo em DAX responde diretamente e em tempo real aos filtros, segmentações de dados (slicers) e seleções ativas na tela do relatório feitas pelo usuário?",
+      "question_en": "What type of DAX design responds directly and in real time to the filters, data segmentations (slicers) and selections active on the report screen created by the user?",
       "options_en": [
-        "Medidas DAX",
-        "Colunas Calculadas"
+        "DAX Measurements",
+        "Calculated Columns"
       ],
-      "explanation_en": "Medidas DAX operam dinamicamente sob o 'Contexto de Filtro' atual da página, recalculando-se instantaneamente para refletir qualquer segmentação ou filtro aplicado em tela."
+      "explanation_en": "DAX measures operate dynamically under the current 'Filter Context' of the page, instantly recalculating themselves to reflect any targeting or filters applied to the screen."
     },
     {
       "question": "Como é classificada tecnicamente uma medida em DAX que soma valores normais ao longo de algumas dimensões (como clientes ou filiais), mas deve retornar o último valor disponível ao longo da dimensão de tempo (como saldos de estoque final)?",
@@ -6575,14 +6575,14 @@ const questionBank = {
         "Medida Não-aditiva"
       ],
       "explanation_pt": "Medidas semi-aditivas são medições que podem ser somadas em algumas dimensões (ex: somar estoque entre lojas A e B), mas não podem ser somadas na dimensão de dados (ex: somar estoque de Jan + Fev não faz sentido; o saldo correto é o último dia do período).",
-      "question_en": "Como é classificada tecnicamente uma medida em DAX que soma valores normais ao longo de algumas dimensões (como clientes ou filiais), mas deve retornar o último valor disponível ao longo da dimensão de tempo (como saldos de estoque final)?",
+      "question_en": "How is technology cooperation a measure in DAX that sums normal values ​​along some dimensions (such as customers or branches) but must return the last value along the available time dimension (such as ending inventory balances)?",
       "options_en": [
-        "Medida Aditiva",
-        "Medida Agregada",
-        "Medida Semi-aditiva",
-        "Medida Não-aditiva"
+        "Additive Measure",
+        "Aggregate Measure",
+        "Semi-additive measure",
+        "Non-Additive Measure"
       ],
-      "explanation_en": "Medidas semi-aditivas são métricas que podem ser somadas em algumas dimensões (ex: somar estoque entre lojas A e B), mas não podem ser somadas na dimensão de datas (ex: somar estoque de Jan + Fev não faz sentido; o saldo correto é o último dia do período)."
+      "explanation_en": "Semi-additive measures are measurements that can be added in some dimensions (e.g. adding stock between stores A and B), but cannot be added in the data dimension (e.g. adding stock from Jan + Feb does not make sense; the correct balance is the last day of the period)."
     }
   ],
   "Visualizar e Analisar": [
@@ -10716,14 +10716,14 @@ const questionBank = {
         "Fatiador Sincronizado"
       ],
       "explanation_pt": "Destaque cruzado realça os valores relacionados ao selecionado, mantendo os demais valores visíveis (em cinza). O Cross-filter efetivamente filtra os outros visuais, removendo os itens não selecionados.",
-      "question_en": "Ao clicar em uma barra de um gráfico, outro visual na mesma página exibe os demais valores em cinza semitransparente, mantendo todos os dados visíveis. Isso é um exemplo de:",
+      "question_en": "When you click on a chart bar, another visual on the same page displays the remaining values ​​in semi-transparent gray, keeping all data visible. This is an example of:",
       "options_en": [
         "Filtro Cruzado (Cross-filter)",
         "Realce Cruzado (Cross-highlight)",
         "Drillthrough",
         "Slicer Sincronizado"
       ],
-      "explanation_en": "Cross-highlight realça os valores relacionados ao selecionado, mantendo os demais valores visíveis (em cinza). Cross-filter efetivamente filtra os outros visuais, removendo os itens não selecionados."
+      "explanation_en": "Cross highlighting highlights the values ​​related to the selected one, keeping the other values ​​visible (in gray). The Cross-filter effectively filters the other visuals, removing unselected items."
     },
     {
       "question": "Você criou uma página de detalhes de pedidos. Ao clicar com o botão direito em qualquer visual do relatório e selecionar um pedido, o usuário navega para essa página com os dados filtrados. Isso é:",
@@ -10743,14 +10743,14 @@ const questionBank = {
         "Dica de relatório"
       ],
       "explanation_pt": "Drillthrough é uma navegação contextual que leva o usuário de um visual para uma página de detalhes, passando automaticamente os filtros do item selecionado. Está configurado nas Propriedades da página de destino.",
-      "question_en": "Você criou uma página de detalhes de pedidos. Ao clicar com o botão direito em qualquer visual do relatório e selecionar um pedido, o usuário navega para essa página com os dados filtrados. Isso é:",
+      "question_en": "You have created an order details page. By right-clicking on any visual in the report and selecting an order, the user navigates to that page with the filtered data. That's it:",
       "options_en": [
-        "Drill Down hierárquico",
+        "Hierarchical Drill Down",
         "Drillthrough",
-        "Bookmark de navegação",
-        "Tooltip de Relatório"
+        "Navigation marker",
+        "Report tip"
       ],
-      "explanation_en": "Drillthrough é uma navegação contextual que leva o usuário de um visual para uma página de detalhes, passando automaticamente os filtros do item selecionado. É configurado nas Propriedades da página de destino."
+      "explanation_en": "Drillthrough is a contextual navigation that takes the user from a visual to a details page, automatically passing filters for the selected item. It is configured in the landing page Properties."
     },
     {
       "question": "Você quer criar um botão que alterna entre exibir um gráfico de barras e um gráfico de pizza na mesma área do relatório. Qual é a abordagem correta?",
@@ -10770,14 +10770,14 @@ const questionBank = {
         "Usar Drillthrough entre os dois visuais"
       ],
       "explanation_pt": "Bookmarks capturaram o estado do relatório (incluindo quais visuais estão visíveis). Criando dois marcadores — um com o gráfico de barras visíveis e outro com a pizza visível — um botão pode alternar entre eles.",
-      "question_en": "Você quer criar um botão que alterna entre exibir um gráfico de barras e um gráfico de pizza na mesma área do relatório. Qual é a abordagem correta?",
+      "question_en": "You want to create a button that switches between displaying a bar chart and a pie chart in the same area of ​​the report. What is the correct approach?",
       "options_en": [
-        "Criar duas páginas separadas e adicionar botões de navegação",
-        "Usar Bookmarks combinados com a seleção de visibilidade de visuais",
-        "Usar o painel de Filtros para alternar os tipos de visual",
-        "Usar Drillthrough entre os dois visuais"
+        "Create two separate pages and add navigation buttons",
+        "Use markers combined with visual visibility selection",
+        "Use the Filters panel to switch visual types",
+        "Use Drillthrough between the two visuals"
       ],
-      "explanation_en": "Bookmarks capturam o estado do relatório (incluindo quais visuais estão visíveis). Criando dois bookmarks — um com o gráfico de barras visível e outro com a pizza visível — um botão pode alternar entre eles."
+      "explanation_en": "Bookmarks capture the state of the report (including which visuals are visible). By creating two markers — one with the bar graph visible and the other with the pie visible — a button can switch between them."
     },
     {
       "question": "Você criou uma página especial e a configurou como Tooltip (Dica de Ferramenta) de relatório. O que acontece quando o usuário passa o mouse sobre um ponto de dados?",
@@ -10797,14 +10797,14 @@ const questionBank = {
         "Uma página de dica de ferramenta filtra toda a tela atual"
       ],
       "explanation_pt": "Report Page Tooltips aparece como pop-up ao passar o mouse sobre pontos de dados, exibindo uma página completa de visuais contextualizados com os dados do ponto selecionado. São definidas nas Propriedades da página.",
-      "question_en": "Você criou uma página especial e a configurou como Tooltip (Dica de Ferramenta) de relatório. O que acontece quando o usuário passa o mouse sobre um ponto de dados?",
+      "question_en": "You have created a special page and configured it as a report Tooltip. What happens when the user hovers over a data point?",
       "options_en": [
-        "A página de tooltip aparece como pop-up com visualizações contextuais ricas",
-        "A página de tooltip substitui o visual principal",
-        "A página de tooltip é enviada por email para o usuário",
-        "A página de tooltip filtra toda a tela atual"
+        "A tooltip page appears as a popup with rich contextual views",
+        "A tooltip page replaces the main visual",
+        "A tooltip page is emailed to the user",
+        "A tooltip page filters the entire current screen"
       ],
-      "explanation_en": "Report Page Tooltips aparecem como pop-up ao passar o mouse sobre pontos de dados, exibindo uma página completa de visuais contextualizados com os dados do ponto selecionado. São configuradas nas Propriedades da página."
+      "explanation_en": "Report Page Tooltips appears as a pop-up when hovering over data points, displaying a full page of visuals contextualized with the data for the selected point. They are defined in the Page Properties."
     },
     {
       "question": "Você quer colorir células de uma tabela automaticamente: verde para metas atingidas e vermelho para abaixo da meta. Qual feature usar?",
@@ -10824,14 +10824,14 @@ const questionBank = {
         "Grupos de Cálculo de Cores"
       ],
       "explanation_pt": "A Formatação Condicional permite aplicar núcleos de fundo, núcleos de fonte, ícones ou barras de dados em tabelas e matrizes, com base em valores, regras ou campos. Está disponível nas configurações de formato do visual.",
-      "question_en": "Você quer colorir células de uma tabela automaticamente: verde para metas atingidas e vermelho para abaixo da meta. Qual feature usar?",
+      "question_en": "You want to automatically color cells in a table: green for goals reached and red for goals below the goal. Which resource to use?",
       "options_en": [
-        "Temas de Relatório (Report Themes)",
+        "Report Themes",
         "Formatação Condicional (Conditional Formatting)",
-        "Regras de RLS por cor",
-        "Grupos de Cálculo de Cores"
+        "RLS rules by color",
+        "Color Calculation Groups"
       ],
-      "explanation_en": "Formatação Condicional permite aplicar cores de fundo, cores de fonte, ícones ou barras de dados em tabelas e matrizes, com base em valores, regras ou campos. Está disponível nas configurações de formato do visual."
+      "explanation_en": "Conditional Formatting lets you apply background cores, font cores, icons, or data bars to tables and matrices, based on values, rules, or fields. It is available in the visual format settings."
     },
     {
       "question": "Qual visual do Power BI permite que usuários finais façam perguntas em linguagem natural (ex: 'vendas por estado em 2024') e recebam uma visualização automática?",
@@ -10851,14 +10851,14 @@ const questionBank = {
         "Narrativa Inteligente"
       ],
       "explanation_pt": "O Q&A visual usa processamento de linguagem natural (PNL) para interpretar perguntas em texto e gerar automaticamente a visualização mais adequada para a resposta. Pode ser personalizado com semelhanças e dados de treinamento.",
-      "question_en": "Qual visual do Power BI permite que usuários finais façam perguntas em linguagem natural (ex: 'vendas por estado em 2024') e recebam uma visualização automática?",
+      "question_en": "Which Power BI visual allows users to ask questions in natural language (e.g. 'sales by state in 2024') and receive an automatic preview?",
       "options_en": [
-        "Árvore de Decomposição (Decomposition Tree)",
+        "Decomposition Tree",
         "Visual Q&A",
         "Principais Influenciadores (Key Influencers)",
         "Narrativa Inteligente (Smart Narrative)"
       ],
-      "explanation_en": "O visual Q&A usa processamento de linguagem natural (NLP) para interpretar perguntas em texto e gerar automaticamente a visualização mais adequada para a resposta. Pode ser personalizado com sinônimos e dados de treinamento."
+      "explanation_en": "Visual Q&A uses natural language processing (NLP) to interpret text questions and automatically generate the most appropriate visualization for the answer. Can be customized with similarities and training data."
     },
     {
       "question": "Um gerente quer decompor a variação de vendas entendendo quais combinações de Região, Produto e Vendedor mais contribuíram. Qual visual é projetado para esse tipo de análise exploratória em árvore?",
@@ -10878,14 +10878,14 @@ const questionBank = {
         "Gráfico de Funil"
       ],
       "explanation_pt": "A Árvore de Decomposição permite ao usuário explorar hierarquicamente as contribuições de diferentes dimensões para um valor, com suporte a IA para encontrar automaticamente os maiores influenciadores em cada nível.",
-      "question_en": "Um gerente quer decompor a variação de vendas entendendo quais combinações de Região, Produto e Vendedor mais contribuíram. Qual visual é projetado para esse tipo de análise exploratória em árvore?",
+      "question_en": "A manager wants to decompose the sales variation by understanding which Region, Product and Salesperson molecules are most developed. What visual was designed for this type of exploratory tree analysis?",
       "options_en": [
-        "Gráfico de Cascata (Waterfall)",
-        "Árvore de Decomposição (Decomposition Tree)",
+        "Waterfall Chart",
+        "Decomposition Tree",
         "Principais Influenciadores (Key Influencers)",
-        "Gráfico de Funil (Funnel)"
+        "Funnel Chart"
       ],
-      "explanation_en": "A Árvore de Decomposição permite ao usuário explorar hierarquicamente as contribuições de diferentes dimensões para um valor, com suporte a IA para encontrar automaticamente os maiores influenciadores em cada nível."
+      "explanation_en": "The Decomposition Tree allows the user to hierarchically explore the contributions of different dimensions to a value, with AI support to automatically find the biggest influencers at each level."
     },
     {
       "question": "Você quer descobrir quais fatores aumentam a probabilidade de um cliente avaliar um produto negativamente. Qual visual do Power BI analisa estatisticamente esses influenciadores?",
@@ -10905,14 +10905,14 @@ const questionBank = {
         "Funil (Funil)"
       ],
       "explanation_pt": "O visual 'Principais Influenciadores' usa análise estatística para identificar quais variáveis ​​(campos) têm maior impacto sobre um resultado específico, mostrando a direção e magnitude da influência.",
-      "question_en": "Você quer descobrir quais fatores aumentam a probabilidade de um cliente avaliar um produto negativamente. Qual visual do Power BI analisa estatisticamente esses influenciadores?",
+      "question_en": "You want to find out which factors increase the likelihood that a customer will evaluate the product's qualities. Which Power BI visual statistically analyzes these influencers?",
       "options_en": [
-        "Árvore de Decomposição",
+        "Decomposition Tree",
         "Principais Influenciadores (Key Influencers)",
-        "Gráfico de Dispersão",
+        "Scatter Plot",
         "Funil (Funnel)"
       ],
-      "explanation_en": "O visual 'Principais Influenciadores' usa análise estatística para identificar quais variáveis (campos) têm maior impacto sobre um resultado específico, mostrando a direção e magnitude da influência."
+      "explanation_en": "The 'Top Influencers' visual uses statistical analysis to identify which variables (fields) have the greatest impact on a specific outcome, showing the direction and magnitude of influence."
     },
     {
       "question": "Você tem um slicer de Ano na Página 1 e quer que ele filtre automaticamente as Páginas 2 e 3 do mesmo relatório. O que usar?",
@@ -10932,14 +10932,14 @@ const questionBank = {
         "Marcadores de sincronização"
       ],
       "explanation_pt": "O painel 'Sincronizar Segmentações' (Exibir → Sincronizar Slicers) permite configurar quais páginas um slicer deve filtrar, com opções de visibilidade e sincronização independentes por página.",
-      "question_en": "Você tem um slicer de Ano na Página 1 e quer que ele filtre automaticamente as Páginas 2 e 3 do mesmo relatório. O que usar?",
+      "question_en": "You have a Year slicer on Page 1 and want it to automatically filter Pages 2 and 3 of the same report. What to use?",
       "options_en": [
-        "Duplicar o slicer em cada página manualmente",
+        "Duplicate or slice each page manually",
         "Painel 'Sincronizar Segmentações' (Sync Slicers)",
-        "Filtros de nível de relatório no painel de Filtros",
-        "Bookmarks de sincronização"
+        "Report-level filters in the Filters pane",
+        "Sync Bookmarks"
       ],
-      "explanation_en": "O painel 'Sincronizar Segmentações' (View → Sync Slicers) permite configurar quais páginas um slicer deve filtrar, com opções de visibilidade e sincronização independentes por página."
+      "explanation_en": "The 'Sync Slicers' panel (View → Sync Slicers) allows you to configure which pages a slicer should filter, with independent visibility and synchronization options per page."
     },
     {
       "question": "Como garantir uma experiência otimizada para usuários que acessam o relatório pelo aplicativo Power BI Mobile?",
@@ -10959,14 +10959,14 @@ const questionBank = {
         "Reduzir o número de visuais para menos de 5 por página"
       ],
       "explanation_pt": "O Layout Móvel permite reorganizar e redimensionar as visualizações do relatório para uma experiência otimizada em telas verticais de celular, sem criar um relatório separado.",
-      "question_en": "Como garantir uma experiência otimizada para usuários que acessam o relatório pelo aplicativo Power BI Mobile?",
+      "question_en": "How to ensure an optimized experience for users accessing the report through the Power BI Mobile app?",
       "options_en": [
-        "Criar um relatório separado com nome '_mobile'",
-        "Usar o Layout Móvel (Mobile Layout) no Power BI Desktop para reorganizar os visuais para tela vertical",
-        "Habilitar 'Responsividade' nas configurações avançadas do workspace",
-        "Reduzir o número de visuais para menos de 5 por página"
+        "Create a separate report named '_mobile'",
+        "Use Mobile Layout in Power BI Desktop to rearrange visuals for vertical screen",
+        "Enable ‘Responsiveness’ in advanced workspace settings",
+        "Reduce the number of visuals to less than 5 per page"
       ],
-      "explanation_en": "O Layout Móvel permite reorganizar e redimensionar os visuais do relatório para uma experiência otimizada em telas verticais de celular, sem criar um relatório separado."
+      "explanation_en": "Mobile Layout lets you rearrange and resize report views for an optimized experience on vertical mobile screens, without creating a separate report."
     },
     {
       "question": "Um visual específico no relatório carrega muito lentamente. Qual ferramenta do Power BI Desktop permite medir o tempo de carregamento de cada visual e identificar consultas DAX lentas?",
@@ -10986,14 +10986,14 @@ const questionBank = {
         "Monitor de gateway no serviço Power BI"
       ],
       "explanation_pt": "O Analisador de Performance (View → Performance Analyzer) registra o tempo que cada visual levou para renderizar, separando em tempo DAX, Visual e outro. Permite copiar uma consulta DAX para análise externa.",
-      "question_en": "Um visual específico no relatório carrega muito lentamente. Qual ferramenta do Power BI Desktop permite medir o tempo de carregamento de cada visual e identificar consultas DAX lentas?",
+      "question_en": "A specific visual in the report loads very slowly. Which Power BI Desktop tool allows you to measure the load time of each visual and identify slow DAX queries?",
       "options_en": [
-        "Query Diagnostics no Power Query",
-        "Analisador de Performance (Performance Analyzer)",
-        "DAX Studio (ferramenta externa)",
-        "Monitor de Gateway no Power BI Service"
+        "Query diagnostics without advanced query",
+        "Performance Analyzer",
+        "DAX Studio (external tool)",
+        "Gateway monitor in Power BI service"
       ],
-      "explanation_en": "O Analisador de Performance (View → Performance Analyzer) registra o tempo que cada visual levou para renderizar, separando em tempo DAX, Visual e outro. Permite copiar a consulta DAX para análise externa."
+      "explanation_en": "The Performance Analyzer (View → Performance Analyzer) records the time each visual took to render, separating DAX, Visual and other times. Allows you to copy a DAX query for external analysis."
     },
     {
       "question": "Você quer que todos os relatórios da empresa usem automaticamente as cores e fontes corporativas. Qual é a abordagem MAIS escalável?",
@@ -11013,14 +11013,14 @@ const questionBank = {
         "Configurar no portal de Administração do Power BI Service"
       ],
       "explanation_pt": "Temas de Relatório (JSON) definem núcleos, fontes, estilos padrão para todos os tipos de visual. O arquivo .json pode ser aplicado a qualquer relatório e distribuído pela organização.",
-      "question_en": "Você quer que todos os relatórios da empresa usem automaticamente as cores e fontes corporativas. Qual é a abordagem MAIS escalável?",
+      "question_en": "You want all company reports to be automatically used as corporate cores and sources. What is the MOST scalable approach?",
       "options_en": [
-        "Configurar cada visual manualmente em cada relatório",
-        "Criar um arquivo de Tema JSON personalizado e aplicar a todos os relatórios",
-        "Usar formatação condicional em cada relatório",
-        "Configurar no portal de Administração do Power BI Service"
+        "Configure each visual manually in each report",
+        "Create a custom JSON Theme file and apply to all reports",
+        "Use conditional formatting in each report",
+        "Configure in the Power BI Service Administration portal"
       ],
-      "explanation_en": "Temas de Relatório (JSON) definem cores, fontes, estilos padrão para todos os tipos de visual. O arquivo .json pode ser aplicado a qualquer relatório e distribuído pela organização."
+      "explanation_en": "Report Themes (JSON) define default cores, fonts, styles for all visual types. The .json file can be applied to any report and distributed across the organization."
     },
     {
       "question": "Você precisa exibir o gráfico de tendência de vendas separadamente para cada categoria de produto, com o mesmo eixo Y para facilitar a comparação. Qual feature usar?",
@@ -11040,14 +11040,14 @@ const questionBank = {
         "Filtro de Visual em cada gráfico"
       ],
       "explanation_pt": "Pequenos Múltiplos repetem o mesmo visual para cada valor de uma dimensão escolhida, com escala padronizada, facilitando a comparação visual entre grupos. Disponível em gráficos de barras, linhas, área e dispersão.",
-      "question_en": "Você precisa exibir o gráfico de tendência de vendas separadamente para cada categoria de produto, com o mesmo eixo Y para facilitar a comparação. Qual feature usar?",
+      "question_en": "You need to display sales trend charts separately for each product category, with the same axis, and for easy comparison. Which resource to use?",
       "options_en": [
-        "Criar um visual separado para cada categoria manualmente",
+        "Create a separate visual for each category manually",
         "Pequenos Múltiplos (Small Multiples)",
         "Drill Down por Categoria",
-        "Filtro de Visual em cada gráfico"
+        "Visual filter on each chart"
       ],
-      "explanation_en": "Pequenos Múltiplos repetem o mesmo visual para cada valor de uma dimensão escolhida, com escala padronizada, facilitando a comparação visual entre grupos. Disponível em gráficos de barras, linhas, área e dispersão."
+      "explanation_en": "Small Multiples repeat the same visual for each value of a chosen dimension, with a standardized scale, facilitating visual comparison between groups. Available in bar, line, area and scatter charts."
     },
     {
       "question": "Você precisa mostrar como o lucro líquido foi formado, exibindo receitas (positivas) e deduções/impostos (negativos) até chegar ao valor final. Qual visual é mais adequado?",
@@ -11067,14 +11067,14 @@ const questionBank = {
         "Gráfico de Rosca (Donut)"
       ],
       "explanation_pt": "O Gráfico Cascata foi projetado para mostrar como um valor inicial é afetado por uma série de valores positivos e negativos ao longo de uma sequência, chegando ao valor final.",
-      "question_en": "Você precisa mostrar como o lucro líquido foi formado, exibindo receitas (positivas) e deduções/impostos (negativos) até chegar ao valor final. Qual visual é mais adequado?",
+      "question_en": "You need to show how the net profit was formed, showing income (positive) and deductions/taxes (negative) until you reach the final value. Which look is most suitable?",
       "options_en": [
-        "Gráfico de Barras Empilhadas",
+        "Stacked Bar Chart",
         "Gráfico Cascata (Waterfall Chart)",
-        "Gráfico de Área",
-        "Gráfico de Rosca (Donut)"
+        "Area Chart",
+        "Donut Chart"
       ],
-      "explanation_en": "O Gráfico Cascata (Waterfall) é projetado para mostrar como um valor inicial é afetado por uma série de valores positivos e negativos ao longo de uma sequência, chegando ao valor final."
+      "explanation_en": "The Waterfall Chart is designed to show how an initial value is affected by a series of positive and negative values ​​throughout a sequence, reaching the final value."
     },
     {
       "question": "Qual é a diferença entre Modo Foco (Focus Mode) e Destaque (Spotlight) em um visual do Power BI?",
@@ -11094,14 +11094,14 @@ const questionBank = {
         "Modo Foco é exclusivo para tabelas e matrizes"
       ],
       "explanation_pt": "Modo Foco: o visual ocupa toda a tela (outros visuais ficam ocultos). Destaque: o visual fica iluminado e os demais ficam escurecidos, mas todos permanecem visíveis na mesma página.",
-      "question_en": "Qual é a diferença entre Modo Foco (Focus Mode) e Destaque (Spotlight) em um visual do Power BI?",
+      "question_en": "What is the difference between Focus Mode and Spotlight in a Power BI visual?",
       "options_en": [
-        "Não há diferença, são sinônimos",
-        "Modo Foco expande o visual para ocupar toda a tela de relatório; Spotlight ilumina o visual enquanto escurece os demais, mantendo o contexto da página",
-        "Spotlight remove os outros visuais da página; Modo Foco os mantém",
-        "Modo Foco é exclusivo para tabelas e matrizes"
+        "There is no difference, they are synonyms",
+        "Focus Mode expands the visual to occupy the entire report screen; Spotlight brightens the visuals while darkening the rest, maintaining the context of the page",
+        "Spotlight removes other visuals from the page; Focus Mode keeps them",
+        "Focus Mode is exclusive to tables and matrices"
       ],
-      "explanation_en": "Modo Foco: o visual ocupa toda a tela (outros visuais ficam ocultos). Spotlight: o visual fica iluminado e os demais ficam escurecidos, mas todos permanecem visíveis na mesma página."
+      "explanation_en": "Focus Mode: the visual occupies the entire screen (other visuals are hidden). Highlight: the visual is illuminated and the others are darkened, but they all remain visible on the same page."
     },
     {
       "question": "Você quer impedir que visuais de uma página se filtrem mutuamente quando o usuário clica neles. Como configurar isso para um visual específico?",
@@ -11121,14 +11121,14 @@ const questionBank = {
         "Crie uma página no modo 'Leitura'"
       ],
       "explanation_pt": "'Editar Interações' (Formato → Editar Interações) permite controlar como cada visual responde às seletivas nos outros visuais, podendo definir: Filtro, Realce ou Nenhum para cada par de visuais.",
-      "question_en": "Você quer impedir que visuais de uma página se filtrem mutuamente quando o usuário clica neles. Como configurar isso para um visual específico?",
+      "question_en": "You want to prevent views of a page from being filtered separately when the user clicks them. How do I configure this for a specific look?",
       "options_en": [
-        "Desabilitar 'Interações Visuais' no menu Formatar Visual",
-        "Em 'Editar Interações', selecionar o ícone de 'sem filtro' para o visual desejado",
-        "Usar RLS para bloquear o filtro cruzado",
-        "Criar a página em modo de 'Leitura'"
+        "Disable 'Visual Interactions' in the Visual Format menu",
+        "Under 'Edit Interactions', select the 'no filter' icon for the desired look",
+        "Use RLS to block the cross filter",
+        "Create a page in 'Reading' mode"
       ],
-      "explanation_en": "'Editar Interações' (Format → Edit Interactions) permite controlar como cada visual responde às seleções nos outros visuais, podendo definir: Filtro, Realce ou Nenhum para cada par de visuais."
+      "explanation_en": "'Edit Interactions' (Format → Edit Interactions) allows you to control how each visual responds to selections in other visuals, being able to define: Filter, Highlight or None for each pair of visuals."
     },
     {
       "question": "Um relatório tem 10 páginas e você quer criar um índice/menu de navegação visual. Qual recurso usar para criar botões que levam o usuário a páginas específicas?",
@@ -11148,14 +11148,14 @@ const questionBank = {
         "Adicionar o visual 'Navegador de Páginas'"
       ],
       "explanation_pt": "O visual ‘Navegador de Páginas’ (inserido como botão ou visual) cria automaticamente botões de navegação para todas as páginas visíveis do relatório. Botões individuais com ação 'Navegação de Página' também funcionam para páginas específicas.",
-      "question_en": "Um relatório tem 10 páginas e você quer criar um índice/menu de navegação visual. Qual recurso usar para criar botões que levam o usuário a páginas específicas?",
+      "question_en": "A report has 10 pages and you want to create a table of contents/visual navigation menu. What resource to use to create buttons that take the user to specific pages?",
       "options_en": [
-        "Criar links de texto em uma caixa de texto",
-        "Usar Botões (Buttons) com a Ação configurada para 'Navegação de Página'",
-        "Usar o painel de Bookmarks para navegar",
-        "Adicionar o visual 'Navegador de Páginas' (Page Navigator)"
+        "Create text links in a text box",
+        "Use Buttons with the Action set to 'Page Navigation'",
+        "Use the Favorites panel to navigate",
+        "Add the 'Page Navigator' visual"
       ],
-      "explanation_en": "O visual 'Navegador de Páginas' (inserido como botão ou visual) cria automaticamente botões de navegação para todas as páginas visíveis do relatório. Botões individuais com ação 'Navegação de Página' também funcionam para páginas específicas."
+      "explanation_en": "The ‘Page Navigator’ visual (inserted as a button or visual) automatically creates navigation buttons for all visible pages in the report. Individual buttons with 'Page Navigation' action also work for specific pages."
     },
     {
       "question": "Qual é o comportamento padrão ao usar um Slicer (Segmentador de Dados) com o tipo 'Lista' no Power BI?",
@@ -11175,14 +11175,14 @@ const questionBank = {
         "Cria um filtro de nível de relatório automaticamente"
       ],
       "explanation_pt": "Por padrão, os Slicers do Power BI permitem seleção múltipla via Ctrl+Clique ou ativando o botão ‘Selecionar tudo’. A seleção única pode ser restrita nas configurações do fatiador.",
-      "question_en": "Qual é o comportamento padrão ao usar um Slicer (Segmentador de Dados) com o tipo 'Lista' no Power BI?",
+      "question_en": "What is the default behavior when using a Slicer with the 'List' type in Power BI?",
       "options_en": [
-        "Permite selecionar apenas um item por vez (seleção única)",
-        "Permite selecionar múltiplos itens usando Ctrl+Clique; a seleção única requer desabilitar 'Seleção Múltipla'",
-        "Filtra automaticamente todos os outros slicers da página",
-        "Cria um filtro de nível de relatório automaticamente"
+        "Allows you to select only one item at a time (single selection)",
+        "Allows you to select multiple items using Ctrl+Click; single selection requires disabling 'Multiple Selection'",
+        "Automatically filter all other slicers on the page",
+        "Automatically creates a report level filter"
       ],
-      "explanation_en": "Por padrão, os Slicers do Power BI permitem múltipla seleção via Ctrl+Clique ou ativando o botão 'Selecionar tudo'. A seleção única pode ser forçada nas configurações do slicer."
+      "explanation_en": "By default, Power BI Slicers allow multiple selection via Ctrl+Click or by activating the ‘Select All’ button. Single selection can be restricted in the slicer settings."
     },
     {
       "question": "Você precisa exibir informações detalhadas ao passar o mouse sobre um ponto de um gráfico de dispersão, mostrando mais de 3 campos. Qual é a melhor abordagem?",
@@ -11202,14 +11202,14 @@ const questionBank = {
         "Habilitar a opção ‘Detalhes Expandidos’ nas configurações do visual"
       ],
       "explanation_pt": "As páginas de Tooltip de Relatório permitem criar uma exibição rica e personalizada com vários visuais que aparecem ao passar o mouse sobre qualquer ponto de dados, sem limitações de campos.",
-      "question_en": "Você precisa exibir informações detalhadas ao passar o mouse sobre um ponto de um gráfico de dispersão, mostrando mais de 3 campos. Qual é a melhor abordagem?",
+      "question_en": "You need to display information provided when you hover over a point on a scatter plot showing more than 3 fields. What is the best approach?",
       "options_en": [
-        "Adicionar mais colunas ao visual até o limite máximo de campos",
-        "Criar uma Página de Tooltip de Relatório com múltiplos visuais e associá-la ao gráfico",
-        "Usar o visual de Tabela ao lado do gráfico",
-        "Habilitar a opção 'Detalhes Expandidos' nas configurações do visual"
+        "Add more columns to the visual up to the maximum field limit",
+        "Create a Report Tooltip page with multiple visuals and associated charts",
+        "Use the Table visual alongside the chart",
+        "Enable the ‘Expanded Details’ option in the visual settings"
       ],
-      "explanation_en": "Páginas de Tooltip de Relatório permitem criar uma exibição rica e personalizada com múltiplos visuais que aparecem ao passar o mouse sobre qualquer ponto de dados, sem limitação de campos."
+      "explanation_en": "Report Tooltip pages let you create a rich, customized view with multiple visuals that appear when you hover over any data point, without field limitations."
     },
     {
       "question": "Qual visual é mais adequado para mostrar a distribuição de frequência de valores numéricos (ex.: distribuição de idades de clientes)?",
@@ -11229,14 +11229,14 @@ const questionBank = {
         "Gráfico de Cascata"
       ],
       "explanation_pt": "Histogramas mostram a distribuição de frequências de uma variável numérica contínua. No Power BI, são criados usando o Gráfico de Colunas com uma coluna de dados agrupados em intervalos (bins).",
-      "question_en": "Qual visual é mais adequado para mostrar a distribuição de frequência de valores numéricos (ex.: distribuição de idades de clientes)?",
+      "question_en": "Which visual is most suitable for showing the frequency distribution of numerical values ​​(e.g. customer age distribution)?",
       "options_en": [
-        "Gráfico de Barras Clusterizado",
-        "Histograma (criado com agrupamento no Gráfico de Colunas)",
-        "Gráfico de Pizza",
-        "Gráfico de Cascata"
+        "Clustered Bar Chart",
+        "Histogram (created with grouping in Column Chart)",
+        "Pie Chart",
+        "Waterfall Chart"
       ],
-      "explanation_en": "Histogramas mostram a distribuição de frequências de uma variável numérica contínua. No Power BI, são criados usando o Gráfico de Colunas com a coluna de dados agrupada em intervalos (bins)."
+      "explanation_en": "Histograms show the frequency distribution of a continuous numerical variable. In Power BI, they are created using the Column Chart with a column of data grouped into ranges (bins)."
     },
     {
       "question": "Você criou um relatório com dados de vendas e quer adicionar um 'Resumo Automático' em linguagem natural que descreve os insights principais. Qual visual usar?",
@@ -11256,14 +11256,14 @@ const questionBank = {
         "Visual de Cartão"
       ],
       "explanation_pt": "A Narrativa Visual Inteligente gera automaticamente um resumo em linguagem natural baseado nos dados do relatório, identificando tendências, outliers e comparações. O texto pode ser personalizado com valores sonoros.",
-      "question_en": "Você criou um relatório com dados de vendas e quer adicionar um 'Resumo Automático' em linguagem natural que descreve os insights principais. Qual visual usar?",
+      "question_en": "You've created a report with sales data and want to add an 'Automatic Summary' in natural language that describes key insights. Which look to use?",
       "options_en": [
         "Q&A Visual",
         "Narrativa Inteligente (Smart Narrative)",
-        "Caixa de Texto com fórmulas DAX",
-        "Visual de Cartão (Card)"
+        "Text Box with DAX Formulas",
+        "Card Look"
       ],
-      "explanation_en": "O visual Narrativa Inteligente gera automaticamente um resumo em linguagem natural baseado nos dados do relatório, identificando tendências, outliers e comparações. O texto pode ser personalizado com valores dinâmicos."
+      "explanation_en": "Intelligent Visual Narrative automatically generates a natural language summary based on the report data, identifying trends, outliers and comparisons. The text can be customized with sound values."
     },
     {
       "question": "Em um gráfico de linhas com hierarquia de datas (Ano > Trimestre > Mês > Dia), qual é a função de 'Drill Down'?",
@@ -11283,14 +11283,14 @@ const questionBank = {
         "Veja uma dica de ferramenta com detalhes adicionais"
       ],
       "explanation_pt": "Drill Down desce um nível na manutenção mantendo o contexto do item clicado. Por exemplo: clicar em '2024' no gráfico anual, o gráfico passa a mostrar os trimestres de 2024. É diferente de Drill Through.",
-      "question_en": "Em um gráfico de linhas com hierarquia de datas (Ano > Trimestre > Mês > Dia), qual é a função de 'Drill Down'?",
+      "question_en": "In a line chart with data classification (Year > Quarter > Month > Day), what is the function of 'Drill Down'?",
       "options_en": [
-        "Filtra o gráfico para mostrar apenas os dados do período clicado",
-        "Expande o nível atual da hierarquia para o próximo nível mais detalhado para o item clicado, mantendo o filtro contextual",
-        "Navega para outra página com detalhes (drillthrough)",
-        "Exibe uma tooltip com detalhes adicionais"
+        "Filter the chart to only show data from the clicked period",
+        "Expand the current statement level to the next more detailed level for the clicked item while maintaining the contextual filter",
+        "Navigate to another page with details (drillthrough)",
+        "See a tooltip with additional details"
       ],
-      "explanation_en": "Drill Down desce um nível na hierarquia mantendo o contexto do item clicado. Por exemplo: clicando em '2024' no gráfico anual, o gráfico passa a mostrar os trimestres de 2024. É diferente de Drill Through."
+      "explanation_en": "Drill Down takes maintenance down one level while maintaining the context of the clicked item. For example: clicking on '2024' in the annual chart, the chart starts showing the quarters of 2024. This is different from Drill Through."
     },
     {
       "question": "Qual é o propósito do painel 'Seleção' (Selection Pane) no Power BI Desktop?",
@@ -11310,14 +11310,14 @@ const questionBank = {
         "Lista de todas as medidas DAX disponíveis"
       ],
       "explanation_pt": "O Painel de Seleção (Exibir → Seleção) mostra todos os objetos da página, permitindo: renomeá-los (importante para marcadores), ocultar/mostrar individualmente, e controlar a ordem de empilhamento (ordem Z).",
-      "question_en": "Qual é o propósito do painel 'Seleção' (Selection Pane) no Power BI Desktop?",
+      "question_en": "What is the purpose of the 'Selection' panel in Power BI Desktop?",
       "options_en": [
-        "Permite selecionar e filtrar dados de múltiplas fontes simultaneamente",
-        "Gerencia a visibilidade, a ordem de empilhamento e os nomes de todos os visuais e objetos na página do relatório",
-        "Configura as interações entre os visuais",
-        "Lista todas as medidas DAX disponíveis"
+        "Allows you to select and filter data from multiple sources simultaneously",
+        "Manage the visibility, stacking order, and names of all visuals and objects on the report page",
+        "Configure interactions between visuals",
+        "List of all available DAX measures"
       ],
-      "explanation_en": "O Painel de Seleção (View → Selection) mostra todos os objetos da página, permitindo: renomeá-los (importante para bookmarks), ocultar/mostrar individualmente, e controlar a ordem de empilhamento (Z-order)."
+      "explanation_en": "The Selection Panel (View → Selection) shows all objects on the page, allowing you to: rename them (important for markers), hide/show them individually, and control the stacking order (Z order)."
     },
     {
       "question": "Você quer que um gráfico de linhas exiba automaticamente uma linha de tendência estatística. Como adicionar isso no Power BI?",
@@ -11337,14 +11337,14 @@ const questionBank = {
         "Adicionar uma coluna calculada com os valores previstos"
       ],
       "explanation_pt": "O painel 'Análise' dos visuais de gráficos de linhas e dispersão oferece linhas automáticas de: Tendência, Média, Mediana, Percentil, Máximo, Mínimo, entre outras, sem necessidade de DAX.",
-      "question_en": "Você quer que um gráfico de linhas exiba automaticamente uma linha de tendência estatística. Como adicionar isso no Power BI?",
+      "question_en": "You want a line chart to automatically display a statistical trend line. How to add this in Power BI?",
       "options_en": [
-        "Criar uma medida de Regressão Linear no DAX",
-        "Usar a opção 'Linha de Tendência' em Analytics (Análise) do painel de formatação do visual",
-        "Usar o visual Python Script para plotar a tendência",
-        "Adicionar uma coluna calculada com os valores previstos"
+        "Create a Linear Regression measure in DAX",
+        "Use the 'Trendline' option in Analytics in the visual formatting panel",
+        "Using Visual Python Script to Plot the Trend",
+        "Add a calculated column with predicted values"
       ],
-      "explanation_en": "O painel 'Análise' (Analytics) dos visuais de gráfico de linhas e dispersão oferece linhas automáticas de: Tendência, Média, Mediana, Percentil, Máximo, Mínimo, entre outras, sem necessidade de DAX."
+      "explanation_en": "The 'Analysis' panel of line and scatter chart visuals offers automatic lines of: Trend, Average, Median, Percentile, Maximum, Minimum, among others, without the need for DAX."
     },
     {
       "question": "Qual é a diferença entre um Dashboard e um Relatório no Power BI Service?",
@@ -11364,14 +11364,14 @@ const questionBank = {
         "Relatórios que suportam RLS; Painéis não"
       ],
       "explanation_pt": "Dashboards: tela única, blocos (recortes) de múltiplas fontes, alertas de dados, sem filtros por página. Relatórios: múltiplas páginas, visuais interativos com filtros, drillthrough, bookmarks — editáveis ​​no Desktop.",
-      "question_en": "Qual é a diferença entre um Dashboard e um Relatório no Power BI Service?",
+      "question_en": "What is the difference between a Dashboard and a Report in Power BI Service?",
       "options_en": [
-        "Dashboards têm mais páginas que relatórios",
-        "Dashboards são telas únicas com tiles de múltiplos relatórios/datasets, sem filtros interativos; Relatórios têm múltiplas páginas com visuais interativos e filtros",
-        "Dashboards são criados no Power BI Desktop; Relatórios no Service",
+        "Dashboards have more pages than reports",
+        "Dashboards are single screens with blocks of multiple reports/data sets, without interactive filters; Reports have multiple pages with interactive visuals and filters",
+        "Dashboards are created in Power BI Desktop; Non-service reports",
         "Relatórios suportam RLS; Dashboards não"
       ],
-      "explanation_en": "Dashboards: tela única, tiles (recortes) de múltiplas fontes, alertas de dados, sem filtros por página. Relatórios: múltiplas páginas, visuais interativos com filtros, drillthrough, bookmarks — editáveis no Desktop."
+      "explanation_en": "Dashboards: single screen, blocks (snippets) from multiple sources, data alerts, no filters per page. Reports: multiple pages, interactive visuals with filters, drillthrough, bookmarks — editable on Desktop."
     },
     {
       "question": "Como configurar um visual para que ele seja excluído de todas as interações de outros visuais na página (nem filtrado, nem realçado)?",
@@ -11391,14 +11391,14 @@ const questionBank = {
         "Mover o visual para outra página"
       ],
       "explanation_pt": "'Editar Interações' permite definir para cada par de visuais a seleção em um deve Filtrar, Realçar ou Não afetar o outro. Definindo 'Nenhum' para todos os outros visuais em relação ao visual protegido.",
-      "question_en": "Como configurar um visual para que ele seja excluído de todas as interações de outros visuais na página (nem filtrado, nem realçado)?",
+      "question_en": "How can I configure a visual so that it is excluded from all interactions of other visitors on the page (neither filtered nor highlighted)?",
       "options_en": [
-        "Bloquear o visual no painel de Seleção",
-        "Em 'Editar Interações', definir o tipo de interação como 'Nenhum' para esse visual em relação a todos os outros",
-        "Usar RLS para proteger o visual",
-        "Mover o visual para outra página"
+        "Lock the visual in the Selection panel",
+        "Under 'Edit Interactions', set the interaction type to 'None' for this visual over all others",
+        "Use RLS to protect your look",
+        "Move the visual to another page"
       ],
-      "explanation_en": "'Editar Interações' permite definir para cada par de visuais se a seleção em um deve Filtrar, Realçar ou Não afetar o outro. Definindo 'Nenhum' (None) para todos os outros visuais em relação ao visual protegido."
+      "explanation_en": "'Edit Interactions' allows you to define for each pair of visuals the selection on one should Filter, Highlight or Not affect the other. Setting 'None' for all other visuals relative to the protected visual."
     },
     {
       "question": "Qual é a finalidade dos 'Grupos' (Grouping) e 'Compartimentos' (Binning) no Power BI Desktop?",
@@ -11418,14 +11418,14 @@ const questionBank = {
         "Agrupar medidas em pastas de exibição"
       ],
       "explanation_pt": "O agrupamento permite agrupar valores categóricos (ex.: 'SP', 'RJ' → 'Sudeste'). Binning divide valores numéricos ou dados em intervalos (ex.: idades em grupos 0-18, 18-30, 30-50), criando novas categorias para análise.",
-      "question_en": "Qual é a finalidade dos 'Grupos' (Grouping) e 'Compartimentos' (Binning) no Power BI Desktop?",
+      "question_en": "What is the purpose of 'Groups' (Grouping) and 'Binning' in Power BI Desktop?",
       "options_en": [
-        "Agrupar visuais no canvas para facilitar o layout",
-        "Agrupar valores de colunas categóricas em grupos personalizados ou criar intervalos numéricos, simplificando a análise de dados granulares",
+        "Group visuals on the canvas for easier layout",
+        "Group categorical column values ​​into custom groups or create numeric ranges, simplifying granular data analysis",
         "Compartimentar relatórios em workspaces separados",
-        "Agrupar medidas em pastas de exibição"
+        "Group measures into display folders"
       ],
-      "explanation_en": "Grouping permite agrupar valores categóricos (ex.: 'SP', 'RJ' → 'Sudeste'). Binning divide valores numéricos ou datas em intervalos (ex.: idades em grupos 0-18, 18-30, 30-50), criando novas categorias para análise."
+      "explanation_en": "Grouping allows you to group categorical values ​​(e.g. 'SP', 'RJ' → 'Southeast'). Binning divides numeric values ​​or data into ranges (e.g., ages into groups 0-18, 18-30, 30-50), creating new categories for analysis."
     },
     {
       "question": "Você quer adicionar uma imagem de logotipo corporativo que seja clicável e navegue para o site da empresa. Como fazer isso no Power BI Desktop?",
@@ -11445,14 +11445,14 @@ const questionBank = {
         "Não é possível adicionar links externos no Power BI Desktop"
       ],
       "explanation_pt": "Botões no Power BI Desktop suportam ações como: Bookmark, Navegação de Página, Q&A, Drillthrough e URL da Web. Usando uma imagem como fundo do botão e configurando a ação como 'URL da Web', crie um logotipo clicável.",
-      "question_en": "Você quer adicionar uma imagem de logotipo corporativo que seja clicável e navegue para o site da empresa. Como fazer isso no Power BI Desktop?",
+      "question_en": "You want to add a corporate logo image that is clickable and navigates to your company website. How to do this in Power BI Desktop?",
       "options_en": [
-        "Inserir uma imagem comum e adicionar uma URL no campo 'Página de Destino'",
-        "Adicionar um botão com uma imagem como fundo e configurar a Ação para 'URL da Web'",
-        "Usar uma caixa de texto com link hiperlink",
-        "Não é possível adicionar links externos no Power BI Desktop"
+        "Insert a common image and add a URL in the 'Landing Page' field",
+        "a button with an image like Add background and set the Action to 'Web URL'",
+        "Using a hyperlinked text box",
+        "Can't add external links in Power BI Desktop"
       ],
-      "explanation_en": "Botões no Power BI Desktop suportam ações como: Bookmark, Navegação de Página, Q&A, Drillthrough e URL da Web. Usando uma imagem como fundo do botão e configurando a ação como 'URL da Web', cria-se um logo clicável."
+      "explanation_en": "Buttons in Power BI Desktop support actions such as: Bookmark, Page Navigation, Q&A, Drillthrough, and Web URL. Using an image as the button background and setting the action to 'Web URL', create a clickable logo."
     },
     {
       "question": "Qual visual do Power BI é mais indicado para mostrar a correlação entre duas variáveis numéricas?",
@@ -11472,14 +11472,14 @@ const questionBank = {
         "Mapa de árvore"
       ],
       "explanation_pt": "O Gráfico de Dispersão posiciona pontos em um eixo X e Y numérico, mostrando visualmente a clareza (positiva, negativa ou ausente) entre duas variáveis. Pode incluir uma terceira dimensão pelo tamanho das bolhas.",
-      "question_en": "Qual visual do Power BI é mais indicado para mostrar a correlação entre duas variáveis numéricas?",
+      "question_en": "Which Power BI visual is best used to show the brightness between two numeric variables?",
       "options_en": [
-        "Gráfico de Linhas",
-        "Gráfico de Dispersão (Scatter Chart)",
-        "Gráfico de Barras Clusterizado",
+        "Line Chart",
+        "Scatter Plot",
+        "Clustered Bar Chart",
         "Treemap"
       ],
-      "explanation_en": "O Gráfico de Dispersão posiciona pontos em um eixo X e Y numérico, mostrando visualmente a correlação (positiva, negativa ou ausente) entre duas variáveis. Pode incluir uma terceira dimensão pelo tamanho das bolhas."
+      "explanation_en": "The Scatter Plot positions points on a numeric X and Y axis, visually showing the clarity (positive, negative, or absent) between two variables. It can include a third dimension due to the size of the bubbles."
     },
     {
       "question": "Como um desenvolvedor pode testar como um relatório será exibido para diferentes perfis de RLS sem precisar compartilhar com cada usuário?",
@@ -11499,14 +11499,14 @@ const questionBank = {
         "Usando o modo de depuração do Power BI Desktop"
       ],
       "explanation_pt": "'Exibir Como' (View As Role) permite que administradores e relatórios visualizem o conteúdo como criadores se fossem um usuário pertencente a um papel RLS específico, sem precisar das credenciais desse usuário.",
-      "question_en": "Como um desenvolvedor pode testar como um relatório será exibido para diferentes perfis de RLS sem precisar compartilhar com cada usuário?",
+      "question_en": "How can a developer test how a report will be presented for different RLS profiles without having to share it with each user?",
       "options_en": [
-        "Publicar no Service e logar com credenciais de cada usuário",
-        "Usar 'Exibir Como' (View As) com o papel RLS desejado diretamente no Power BI Desktop ou Service",
-        "Criar relatórios separados para cada perfil",
-        "Usar o modo de Depuração do Power BI Desktop"
+        "Publish to the Service and record each user's credentials",
+        "Use 'View As' with the desired RLS role directly in Power BI Desktop or Service",
+        "Create separate reports for each profile",
+        "Using Power BI Desktop debug mode"
       ],
-      "explanation_en": "'Exibir Como' (View As Role) permite que administradores e criadores de relatório visualizem o conteúdo como se fossem um usuário pertencente a um papel RLS específico, sem precisar das credenciais desse usuário."
+      "explanation_en": "'View As Role' allows administrators and reports to view content as if they were a user belonging to a specific RLS role, without needing that user's credentials."
     },
     {
       "question": "Qual é o propósito do visual 'Medidor' (Gauge) no Power BI e quando é mais adequado usá-lo?",
@@ -11526,14 +11526,14 @@ const questionBank = {
         "Para exibir tendências ao longo do tempo"
       ],
       "explanation_pt": "O Medidor visual é ideal para exibir um único KPI em relação a um meta de valor, como '% de atingimento de meta de vendas'. Para mostrar apenas um valor, deve ser usado com parcimônia — prefira KPIs ou cartões para diversas métricas.",
-      "question_en": "Qual é o propósito do visual 'Medidor' (Gauge) no Power BI e quando é mais adequado usá-lo?",
+      "question_en": "What is the purpose of the 'Gauge' visual in Power BI and when is it most appropriate to use it?",
       "options_en": [
-        "Para mostrar a distribuição de valores em uma escala",
-        "Para mostrar o progresso de um único valor em relação a um mínimo, máximo e meta, como um velocímetro",
-        "Para comparar múltiplas métricas simultaneamente",
-        "Para exibir tendências ao longo do tempo"
+        "To show the distribution of values ​​on a scale",
+        "To show progress of a single value against a minimum, maximum and target, like a speedometer",
+        "To compare multiple metrics simultaneously",
+        "To view trends over time"
       ],
-      "explanation_en": "O visual Medidor é ideal para exibir um único KPI em relação a um valor meta, como '% de atingimento de meta de vendas'. Por mostrar apenas um valor, deve ser usado com parcimônia — prefira KPIs ou cartões para múltiplas métricas."
+      "explanation_en": "The Visual Gauge is ideal for displaying a single KPI against a target value, such as 'Sales Target Achievement %'. To show just one value, it should be used sparingly — prefer KPIs or cards for different metrics."
     },
     {
       "question": "Ao selecionar uma categoria em um gráfico de barras, você percebe que os outros visuais da tela mantêm os itens não relacionados visíveis, mas com uma transparência cinza. Você quer que os visuais ocultem completamente os dados não selecionados. Como configurar isso?",
@@ -11553,14 +11553,14 @@ const questionBank = {
         "Mapear todos os gráficos em um único grupo de segmentação de dados sincronizado"
       ],
       "explanation_pt": "Por padrão, o Power BI usa 'Destaque cruzado' (Realce cruzado) para interações visuais. Ao ativar o 'Editar Interações' (guia Formato), você pode selecionar um visual e definir, nossos pequenos ícones no topo dos demais visuais, se eles devem Filtrar completamente (ícone de funil), Realçar parcialmente (ícone de gráficos) ou Não interagir (ícone de bloqueio).",
-      "question_en": "Ao selecionar uma categoria em um gráfico de barras, você percebe que os outros visuais da tela mantêm os itens não relacionados visíveis, mas com uma transparência cinza. Você quer que os visuais ocultem completamente os dados não selecionados. Como configurar isso?",
+      "question_en": "When you select a category in a bar chart, you notice that the other visuals on the screen keep unrelated items visible, but with a gray transparency. You want visualizations to completely hide unselected data. How to configure this?",
       "options_en": [
-        "Aumentar a transparência dos elementos na folha de temas JSON",
-        "Habilitar a edição de interações (Format → Edit Interactions) e mudar o ícone de interação do visual selecionado de 'Realçar' (Highlight) para 'Filtrar' (Filter)",
-        "Configurar a RLS visual dos elementos de gráfico",
-        "Mapear todos os gráficos em um único grupo de segmentação de dados sincronizado"
+        "Increase transparency of elements in the JSON theme sheet",
+        "Enable editing interactions (Format → Edit Interactions) and change the interaction icon of the selected visual from 'Highlight' to 'Filter'",
+        "Configure a visual RLS of graphics",
+        "Map all charts into a single synchronized slicer group"
       ],
-      "explanation_en": "Por padrão, o Power BI usa 'Cross-highlight' (Realce cruzado) para interações visuais. Ao ativar 'Editar Interações' (guia Formato), você pode selecionar um visual e definir, nos pequenos ícones no topo dos demais visuais, se eles devem Filtrar completamente (ícone de funil), Realçar parcialmente (ícone de gráfico) ou Não interagir (ícone de bloqueio)."
+      "explanation_en": "By default, Power BI uses 'Cross Highlight' for visual interactions. When activating 'Edit Interactions' (Format tab), you can select a visual and define, our little icons on top of the other visuals, whether they should Filter completely (funnel icon), Partially highlight (charts icon) or Do not interact (lock icon)."
     },
     {
       "question": "Você desenvolveu uma página de destino detalhada configurada para Drillthrough. Para garantir que apenas a categoria exata selecionada no visual de origem seja passada como filtro para a página de Drillthrough, ignorando outros filtros ativos na página de origem, qual propriedade deve ser alterada?",
@@ -11580,14 +11580,14 @@ const questionBank = {
         "Converter uma página de destino para o tipo Dica de Ferramenta (Tooltip)"
       ],
       "explanation_pt": "A opção 'Manter todos os filtros' vem ativa por padrão nas páginas de Drillthrough. Se você deseja ignorar quaisquer outros filtros ativos na página de origem (ex: filtros de ano, região) e passar exclusivamente o campo de promoções selecionado, deve desativá-la.",
-      "question_en": "Você desenvolveu uma página de destino detalhada configurada para Drillthrough. Para garantir que apenas a categoria exata selecionada no visual de origem seja passada como filtro para a página de Drillthrough, ignorando outros filtros ativos na página de origem, qual propriedade deve ser alterada?",
+      "question_en": "You've developed a specific landing page tailored for Drillthrough. To ensure that only the exact category specified in the source visual is passed as a filter to the Drillthrough page, ignoring other active filters on the source page, which property should be changed?",
       "options_en": [
-        "Marcar a opção 'Sincronizar filtros na página'",
-        "Desativar a opção 'Manter todos os filtros' (Keep all filters) nas propriedades de configuração do campo de Drillthrough da página de destino",
-        "Bloquear os filtros do painel lateral de filtragem do relatório",
-        "Converter a página de destino para o tipo Dica de Ferramenta (Tooltip)"
+        "Check the option 'Synchronize filters on page'",
+        "Disable 'Keep all filters' option in landing page Drillthrough field configuration properties",
+        "Lock filters in the report filtering side panel",
+        "Convert a landing page to Tooltip type"
       ],
-      "explanation_en": "A opção 'Manter todos os filtros' (Keep all filters) vem ativa por padrão nas páginas de Drillthrough. Se você deseja ignorar quaisquer outros filtros ativos na página de origem (ex: filtros de ano, região) e passar exclusivamente o campo de cruzamento selecionado, deve desativá-la."
+      "explanation_en": "The 'Keep all filters' option is enabled by default on Drillthrough pages. If you want to ignore any other active filters on the source page (e.g. year, region filters) and pass exclusively the selected promotions field, you must deactivate it."
     },
     {
       "question": "Qual funcionalidade analítica de Inteligência Artificial integrada ao Power BI gera textos automatizados de síntese explicativa sobre o comportamento, tendências e anomalias de um conjunto de gráficos, além de aceitar a inclusão de medidas dinâmicas criadas pelo usuário?",
@@ -11607,14 +11607,14 @@ const questionBank = {
         "Principais Influenciadores"
       ],
       "explanation_pt": "O visual de Narrativa Inteligente analisa os dados selecionados na tela e redige de forma automática um resumo textual inteligente. O analista pode editar o texto bruto e inserir perguntas ou medidas dinâmicas DAX dentro dos parágrafos, que se recalculam conforme filtros de tela são acionados.",
-      "question_en": "Qual funcionalidade analítica de Inteligência Artificial integrada ao Power BI gera textos automatizados de síntese explicativa sobre o comportamento, tendências e anomalias de um conjunto de gráficos, além de aceitar a inclusão de medidas dinâmicas criadas pelo usuário?",
+      "question_en": "Which Artificial Intelligence analysis functionality integrated with Power BI generates automated explanatory summary texts about the behavior, trends and anomalies of a set of graphs, in addition to accepting the inclusion of dynamic measures created by the user?",
       "options_en": [
         "Visual Q&A (Perguntas e Respostas)",
         "Narrativa Inteligente (Smart Narrative)",
-        "Árvore de Decomposição (Decomposition Tree)",
+        "Decomposition Tree",
         "Principais Influenciadores (Key Influencers)"
       ],
-      "explanation_en": "O visual de Narrativa Inteligente analisa os dados selecionados em tela e redige de forma automática um sumário textual inteligente. O analista pode editar o texto bruto e inserir perguntas ou medidas DAX dinâmicas dentro dos parágrafos, que se recalculam conforme filtros de tela são acionados."
+      "explanation_en": "The Intelligent Narrative visual analyzes the data selected on the screen and automatically composes an intelligent textual summary. The analyst can edit the raw text and insert questions or dynamic DAX measures within paragraphs, which recalculate as screen filters are triggered."
     },
     {
       "question": "Ao utilizar o visual analítico de IA 'Principais Influenciadores' (Key Influencers) para investigar uma métrica que possui comportamento contínuo (por exemplo, Valor de Venda em números decimais), qual método estatístico de análise é executado silenciosamente por trás do gráfico?",
@@ -11634,14 +11634,14 @@ const questionBank = {
         "Agrupamento de K-means"
       ],
       "explanation_pt": "Para resultados categóricos (ex: Cliente Cancelou = Sim/Não), o visual Key Influencers executa uma Regressão Logística. Para resultados numéricos contínuos (ex: Valor da Venda), ele calcula uma Regressão Linear para identificar o quanto cada variável altera a média da métrica comprovada.",
-      "question_en": "Ao utilizar o visual analítico de IA 'Principais Influenciadores' (Key Influencers) para investigar uma métrica que possui comportamento contínuo (por exemplo, Valor de Venda em números decimais), qual método estatístico de análise é executado silenciosamente por trás do gráfico?",
+      "question_en": "When using 'Key Influencers' AI visual analysis to investigate a metric that has continuous behavior (e.g. Sales Value in decimal numbers), which statistical method of analysis runs silently behind the chart?",
       "options_en": [
-        "Regressão Logística",
-        "Regressão Linear",
-        "Árvores de Decisão baseadas em entropia",
-        "Agrupamento de K-means"
+        "Logistic Regression",
+        "Linear Regression",
+        "Entropy-Based Decision Trees",
+        "K-means clustering"
       ],
-      "explanation_en": "Para resultados categóricos (ex: Cliente Cancelou = Sim/Não), o visual Key Influencers executa uma Regressão Logística. Para resultados numéricos contínuos (ex: Valor da Venda), ele computa uma Regressão Linear para identificar o quanto cada variável altera a média da métrica analisada."
+      "explanation_en": "For categorical results (e.g. Customer Canceled = Yes/No), the Key Influencers visual runs a Logistic Regression. For continuous numerical results (e.g. Sales Value), it calculates a Linear Regression to identify how much each variable changes the average of the proven metric."
     },
     {
       "question": "Você precisa criar botões de navegação para todas as 10 páginas de um relatório corporativo. Qual é a abordagem recomendada visando facilitar alterações futuras de layout e evitar retrabalho manual?",
@@ -11661,14 +11661,14 @@ const questionBank = {
         "Escrever bookmarks específicos para transições e atribuir botões a botões"
       ],
       "explanation_pt": "O visual ‘Navegador de Páginas’ (Inserir → Botões → Navegador) gera automaticamente uma barra com botões para as páginas do relatório. Se você adicionar, remover, renomear ou reordenar páginas posteriormente, o visual se atualizará automaticamente, eliminando o manual de manutenção.",
-      "question_en": "Você precisa criar botões de navegação para todas as 10 páginas de um relatório corporativo. Qual é a abordagem recomendada visando facilitar alterações futuras de layout e evitar retrabalho manual?",
+      "question_en": "You need to create navigation buttons for all 10 pages of a corporate report. What is the recommended approach to facilitate future layout changes and avoid manual rework?",
       "options_en": [
-        "Criar botões manuais usando imagens personalizadas copiadas página por página",
-        "Inserir um visual nativo de 'Navegador de Páginas' (Page Navigator), que lê automaticamente a estrutura de páginas do arquivo e se atualiza de forma autônoma",
-        "Usar código JavaScript embutido em um visual de HTML customizado",
-        "Escrever bookmarks específicos para transições e atribuí-los a botões"
+        "Create manual buttons using custom images copied page by page",
+        "Insert a native 'Page Navigator' look, which automatically reads the page structure of the file and updates itself autonomously",
+        "Using JavaScript code embedded in a custom HTML visual",
+        "Write specific bookmarks for transitions and assign buttons to buttons"
       ],
-      "explanation_en": "O visual 'Navegador de Páginas' (Inserir → Botões → Navegador) gera automaticamente uma barra com botões para as páginas do relatório. Se você adicionar, remover, renomear ou reordenar páginas posteriormente, o visual se atualiza automaticamente, eliminando a manutenção manual."
+      "explanation_en": "The ‘Page Navigator’ visual (Insert → Buttons → Navigator) automatically generates a bar with buttons for the report pages. If you add, remove, rename, or reorder pages later, the look updates automatically, eliminating manual maintenance."
     },
     {
       "question": "Ao criar um layout de visualização otimizado para Dispositivos Móveis (Mobile Layout) no Power BI Desktop, qual é a flexibilidade de formatação dada ao designer no editor de celular?",
@@ -11688,14 +11688,14 @@ const questionBank = {
         "A edição móvel exige duplicar e criar visuais exclusivos para celular na aba desktop"
       ],
       "explanation_pt": "O Power BI Desktop suporta formatação independente para o Layout Móvel. Propriedades de texto, tamanho de fonte, alinhamentos, núcleos de fundo e formatações de notas/títulos podem ser alterados exclusivamente na visualização móvel sem afetar a versão clássica do relatório desktop.",
-      "question_en": "Ao criar um layout de visualização otimizado para Dispositivos Móveis (Mobile Layout) no Power BI Desktop, qual é a flexibilidade de formatação dada ao designer no editor de celular?",
+      "question_en": "When creating a Mobile Layout visualization layout in Power BI Desktop, how much formatting flexibility is given to the designer in the mobile editor?",
       "options_en": [
-        "Nenhuma, as configurações visuais do desktop são replicadas idênticamente sem personalização de estilo",
-        "É possível alterar tamanhos de fontes, alinhamentos, bordas e cores de elementos visuais específicos para celular, sem alterar o visual no layout padrão de computador",
-        "Apenas a posição e ordem dos visuais podem ser ajustadas; qualquer alteração de cor é replicada de volta ao desktop",
-        "A edição móvel exige duplicar e criar visuais exclusivos para celular na aba desktop"
+        "None, desktop visual settings are replicated identically without style customization",
+        "You can change font sizes, alignments, borders and cores of mobile-specific elements, without changing the look of the default desktop layout",
+        "Only the position and order of visuals can be adjusted; any color change is replicated back to the desktop",
+        "Mobile editing requires duplicating and creating mobile-only visuals in the desktop tab"
       ],
-      "explanation_en": "O Power BI Desktop suporta formatação independente para o Layout Móvel. Propriedades de texto, tamanho de fonte, alinhamentos, cores de fundo e formatações de grades/títulos podem ser alteradas exclusivamente na visualização móvel sem afetar a versão clássica do relatório desktop."
+      "explanation_en": "Power BI Desktop supports independent formatting for Mobile Layout. Text properties, font sizes, alignments, background colors, and note/title formatting can be changed exclusively in mobile view without affecting the classic version of the desktop report."
     },
     {
       "question": "Ao utilizar a ferramenta de 'Analisador de Performance' (Performance Analyzer) no Power BI Desktop, qual é o principal benefício de utilizar o botão 'Copiar Consulta' (Copy Query) em um visual de matriz lento?",
@@ -11715,14 +11715,14 @@ const questionBank = {
         "Enviar o relatório visual direto para análise de desempenho na nuvem"
       ],
       "explanation_pt": "O 'Copiar Consulta' extrai a instrução DAX bruta gerada pelo motor do Power BI para renderizar aquele visual específico na página. Colar essa consulta no DAX Studio permite rodar análises de plano de execução (Server Timings / Query Plan) para mapear o porquê de o cálculo estar lento.",
-      "question_en": "Ao utilizar a ferramenta de 'Analisador de Performance' (Performance Analyzer) no Power BI Desktop, qual é o principal benefício de utilizar o botão 'Copiar Consulta' (Copy Query) em um visual de matriz lento?",
+      "question_en": "When using the 'Performance Analyzer' tool in Power BI Desktop, what is the main benefit of using the 'Copy Query' button in a slow matrix visual?",
       "options_en": [
-        "Copiar a planilha Excel resultante do visual para o clipboard",
-        "Obter o código de consulta DAX exato executado pelo visual, permitindo que você o analise, debuge e otimize em ferramentas externas como o DAX Studio ou Tabular Editor",
-        "Copiar o estilo de cores CSS do visual para aplicar em outros cards",
-        "Enviar o relatório visual direto para análise de desempenho na nuvem"
+        "Copy a resulting Excel spreadsheet from the visual to the clipboard",
+        "Get the exact DAX query code executed by the visual, allowing you to analyze, debug, and optimize in external tools like DAX Studio or Tabular Editor",
+        "Copy the visual's CSS color style to apply to other cards",
+        "Send visual reporting straight to cloud performance analysis"
       ],
-      "explanation_en": "O 'Copiar Consulta' extrai a instrução DAX bruta gerada pelo motor do Power BI para renderizar aquele visual específico na página. Colar essa consulta no DAX Studio permite rodar análises de plano de execução (Server Timings / Query Plan) para mapear o porquê de o cálculo estar lento."
+      "explanation_en": "'Copy Query' extracts the raw DAX statement generated by the Power BI engine to render that specific visual on the page. Pasting this query into DAX Studio allows you to run execution plan analyzes (Server Timings / Query Plan) to map out why the calculation is slow."
     },
     {
       "question": "Para configurar com sucesso uma página personalizada de relatório para atuar como dica de ferramenta visual (Report Page Tooltip) ao passar o mouse em pontos de dados de outros visuais, quais duas ações de formatação de página de destino são requeridas?",
@@ -11742,14 +11742,14 @@ const questionBank = {
         "Crie um marcador com uma página invisível"
       ],
       "explanation_pt": "Uma página que atuará como pop-up deve ter configurações de página ou tipo configurado como 'Dica de ferramenta' (Tooltip) e ter seu tamanho de tela reduzido (o tamanho padrão do modelo Tooltip é 320x240 pixels) para que o pop-up não oclua acidentalmente o gráfico principal.",
-      "question_en": "Para configurar com sucesso uma página personalizada de relatório para atuar como dica de ferramenta visual (Report Page Tooltip) ao passar o mouse em pontos de dados de outros visuais, quais duas ações de formatação de página de destino são requeridas?",
+      "question_en": "To successfully configure a custom report page to act as a Report Page Tooltip when hovering over data points in other visuals, what two landing page formatting actions are required?",
       "options_en": [
-        "Configurar o Tipo de Página como 'Dica de ferramenta' (Tooltip) sob as informações da página e ajustar o tamanho do papel para dimensões reduzidas (ex: tamanho Tooltip)",
-        "Deixar a página com tamanho padrão 16:9 e ativar RLS nas propriedades",
-        "Definir a página como oculta e marcar a opção 'Drillthrough cruzado'",
-        "Criar um bookmark com a página invisível"
+        "Set the Page Type to 'Tooltip' under the page information and adjust the paper size to smaller dimensions (e.g. Tooltip size)",
+        "Leave the page at the default size of 16:9 and activate RLS in the properties",
+        "Set the page to hide and check the 'Cross Drillthrough' option",
+        "Create a bookmark with an invisible page"
       ],
-      "explanation_en": "A página que atuará como pop-up deve ter nas configurações de página o tipo configurado como 'Dica de ferramenta' (Tooltip) e ter seu tamanho de tela reduzido (o tamanho padrão do modelo Tooltip é 320x240 pixels) para que o pop-up não oclua excessivamente o gráfico principal."
+      "explanation_en": "A page that will act as a pop-up must have page settings or type set to 'Tooltip' and have its screen size reduced (the default size of the Tooltip template is 320x240 pixels) so that the pop-up does not accidentally occlude the main graphic."
     },
     {
       "question": "Você deseja criar um Bookmark (Indicador) no Power BI que oculte temporariamente um visual de detalhe na tela quando ativado, mas quer garantir que qualquer filtro de dados ou seleção de slicer atual feita pelo usuário não seja perdida ou reiniciada ao clicar no botão do Bookmark. Qual opção do Bookmark deve ser desmarcada?",
@@ -11769,14 +11769,14 @@ const questionBank = {
         "Visuais selecionados"
       ],
       "explanation_pt": "Cada bookmark grava três estados principais: Dados (filtros, segmentações), Exibição (visibilidade, modo de foco) e Página. Se você deseja que o marcador apenas controle quais visualizações estão escondidas/exibidas na tela, mas respeite as seleções de filtro atuais do usuário, deve desmarcar a propriedade 'Dados' nas opções do marcador.",
-      "question_en": "Você deseja criar um Bookmark (Indicador) no Power BI que oculte temporariamente um visual de detalhe na tela quando ativado, mas quer garantir que qualquer filtro de dados ou seleção de slicer atual feita pelo usuário não seja perdida ou reiniciada ao clicar no botão do Bookmark. Qual opção do Bookmark deve ser desmarcada?",
+      "question_en": "You want to create a Bookmark in Power BI that temporarily hides an on-screen detail visual when activated, but you want to ensure that any current data filter or slicer selections made by the user are not lost or reset when clicking the Bookmark button. Which Bookmark option should be deselected?",
       "options_en": [
-        "Exibição (Display)",
+        "Display",
         "Dados (Data)",
         "Página atual (Page)",
         "Visuais selecionados (Selected visuals)"
       ],
-      "explanation_en": "Cada bookmark grava três estados principais: Dados (filtros, segmentações), Exibição (visibilidade, modo de foco) e Página. Se você quer que o bookmark apenas controle quais visuais estão escondidos/exibidos em tela, mas respeite as seleções de filtro atuais do usuário, deve desmarcar a propriedade 'Dados' nas opções do bookmark."
+      "explanation_en": "Each bookmark records three main states: Data (filters, segmentations), Display (visibility, focus mode) and Page. If you want the marker to only control which views are hidden/shown on the screen, but respect the user's current filter selections, you must uncheck the 'Data' property in the marker options."
     },
     {
       "question": "Um analista precisa exibir graficamente o fluxo de receitas corporativas, partindo do Faturamento Bruto e deduzindo passo a passo impostos, custos e despesas até atingir o Lucro Líquido final. Qual tipo de visual nativo atende perfeitamente este caso de uso?",
@@ -11796,14 +11796,14 @@ const questionBank = {
         "Mapa de árvore"
       ],
       "explanation_pt": "O gráfico de Cascata é projetado especificamente para ilustrar como um valor inicial é modificado por incrementos positivos e decrementos negativos cumulativos até atingir um saldo final, exibindo pilares flutuantes de conciliação.",
-      "question_en": "Um analista precisa exibir graficamente o fluxo de receitas corporativas, partindo do Faturamento Bruto e deduzindo passo a passo impostos, custos e despesas até atingir o Lucro Líquido final. Qual tipo de visual nativo atende perfeitamente este caso de uso?",
+      "question_en": "An analyst needs to graphically display the flow of corporate revenues, starting from Gross Revenue and deducting taxes, costs and expenses step by step until reaching the final Net Profit. Which type of native visual perfectly suits this use case?",
       "options_en": [
-        "Gráfico de Dispersão (Scatter Chart)",
-        "Gráfico de Cascata (Waterfall Chart)",
-        "Gráfico de Funil (Funnel Chart)",
+        "Scatter Plot",
+        "Waterfall Chart",
+        "Funnel Chart",
         "Treemap"
       ],
-      "explanation_en": "O gráfico de Cascata (Waterfall) é projetado especificamente para ilustrar como um valor inicial é modificado por incrementos positivos e decrementos negativos cumulativos até atingir um saldo final, exibindo pilares flutuantes de conciliação."
+      "explanation_en": "The Waterfall chart is specifically designed to illustrate how an initial value is modified by cumulative positive increments and negative decrements until reaching a final balance, displaying floating pillars of reconciliation."
     },
     {
       "question": "Você deseja construir um gráfico interativo no Power BI que exiba o histórico de evolução anual das vendas e das margens de lucro dos seus concorrentes no mesmo plano cartesiano, rodando uma animação que trace o caminho ano a ano de forma fluida. Qual visual nativo e recurso específico atende esta necessidade?",
@@ -11823,14 +11823,14 @@ const questionBank = {
         "Gráfico de Velocímetro sonoro"
       ],
       "explanation_pt": "O gráfico de Dispersão aceita um campo no campo 'Eixo de reprodução' (Play Axis). Quando utilizado com uma dimensão de tempo (como Ano ou Mês), ele habilita um painel multimídia no relatório (com botão Play). Ao clicar, as bolhas de dispersão se movem deixando um rastro histórico dinâmico de sua trajetória.",
-      "question_en": "Você deseja construir um gráfico interativo no Power BI que exiba o histórico de evolução anual das vendas e das margens de lucro dos seus concorrentes no mesmo plano cartesiano, rodando uma animação que trace o caminho ano a ano de forma fluida. Qual visual nativo e recurso específico atende esta necessidade?",
+      "question_en": "You want to build an interactive graph in Power BI that displays the historical evolution of your competitors' annual sales and profit margins on the same Cartesian plane, running an animation that traces the path year by year in a fluid way. What specific, native visual resource meets this need?",
       "options_en": [
-        "Gráfico de Linha com múltiplos níveis de hierarquia de datas",
-        "Gráfico de Dispersão (Scatter Chart) associado ao recurso de Eixo de Reprodução (Play Axis) contendo a coluna de Anos",
-        "Árvore de Decomposição visualizada em cascata",
-        "Gráfico de Velocímetro dinâmico"
+        "Line Chart with multiple levels of data classification",
+        "Scatter Chart associated with the Play Axis feature containing the Years column",
+        "Decomposition Tree visualized in cascade",
+        "Sound Speedometer Chart"
       ],
-      "explanation_en": "O gráfico de Dispersão aceita um campo no campo 'Eixo de reprodução' (Play Axis). Quando preenchido com uma dimensão de tempo (como Ano ou Mês), ele habilita um painel multimídia no relatório (com botão Play). Ao clicar, as bolhas de dispersão se movem deixando um rastro histórico dinâmico de sua trajetória."
+      "explanation_en": "The Scatter chart accepts a field in the 'Play Axis' field. When used with a time dimension (such as Year or Month), it enables a multimedia panel in the report (with Play button). When you click, the scatter bubbles move, leaving a dynamic historical trail of their trajectory."
     },
     {
       "question": "Um desenvolvedor aplica uma restrição de dados no painel de filtragem do relatório na seção 'Filtros neste visual'. Onde este filtro atuará quando o relatório for publicado?",
@@ -11850,14 +11850,14 @@ const questionBank = {
         "Filtrarão apenas os segmentadores de dados (slicers)"
       ],
       "explanation_pt": "O painel de filtros do Power BI possui três níveis clássicos: Filtros neste visual (afeta apenas o gráfico selecionado), Filtros nesta página (afeta todos os elementos da página atual) e Filtros em todas as páginas (afeta o relatório completo).",
-      "question_en": "Um desenvolvedor aplica uma restrição de dados no painel de filtragem do relatório na seção 'Filtros neste visual'. Onde este filtro atuará quando o relatório for publicado?",
+      "question_en": "A developer applies data restrictions in the report's filtering pane in the 'Filters in this visual' section. Where will this filter act when the report is published?",
       "options_en": [
-        "Filtrará todas as páginas do relatório para todos os visuais",
-        "Filtrará todos os visuais da página atual",
-        "Atuará exclusivamente no visual específico que estava selecionado no momento da criação do filtro",
-        "Filtrará apenas os segmentadores de dados (slicers)"
+        "Will filter all report pages for all visitors",
+        "Will filter all images on the current page",
+        "It will act exclusively on the specific look that was selected when creating the filter",
+        "Only data segmenters (slicers) will be filtered"
       ],
-      "explanation_en": "O painel de filtros do Power BI possui três níveis clássicos: Filtros neste visual (afeta apenas o gráfico selecionado), Filtros nesta página (afeta todos os elementos da página atual) e Filtros em todas as páginas (afeta o relatório completo)."
+      "explanation_en": "The Power BI filters panel has three classic levels: Filters on this visual (affects only the selected chart), Filters on this page (affects all elements on the current page), and Filters on all pages (affects the entire report)."
     },
     {
       "question": "Você possui duas páginas em seu relatório com layouts diferentes de segmentadores de dados (uma página usa um slicer no formato Lista e a outra no formato Menu Suspenso), mas ambos filtram a coluna Região. Como você garante que ao alterar o filtro em um deles, o outro seja atualizado automaticamente para manter a sincronia?",
@@ -11877,14 +11877,14 @@ const questionBank = {
         "Duplicando as páginas e aplicando RLS nas mesmas"
       ],
       "explanation_pt": "Ao abrir a Exibição → Sincronizar Segmentações, você pode acessar as Opções Avançadas de cada slicer e especificar um 'Nome de Grupo' personalizado. Qualquer slicer que compartilhe o mesmo nome de grupo ficará sincronizado de forma bidirecional, mesmo que pertença a páginas separadas ou use layouts visuais diferentes.",
-      "question_en": "Você possui duas páginas em seu relatório com layouts diferentes de segmentadores de dados (uma página usa um slicer no formato Lista e a outra no formato Menu Suspenso), mas ambos filtram a coluna Região. Como você garante que ao alterar o filtro em um deles, o outro seja atualizado automaticamente para manter a sincronia?",
+      "question_en": "You have two pages in your report with different slicer layouts (one page uses a slicer in List format and the other in Dropdown format), but both pages filter the Region column. How do you ensure that when you change the filter on one of them, the other is automatically updated to stay in sync?",
       "options_en": [
-        "Os slicers de formatos diferentes são incompatíveis e não podem ser sincronizados",
-        "Configurando o mesmo Nome de Grupo de Sincronização (Sync Group Name) nas Opções Avançadas do painel 'Sincronizar Segmentações' para ambos os slicers",
-        "Agrupando ambos os slicers em um único Bookmark de dados",
-        "Duplicando as páginas e aplicando RLS nas mesmas"
+        "Slicers of different formats are incompatible and cannot be synchronized",
+        "Configuring the same Sync Group Name in the Advanced Options of the 'Synchronize Segments' panel for both slicers",
+        "Grouping both slicers into a single Data Bookmark",
+        "Duplicating pages and applying RLS to them"
       ],
-      "explanation_en": "Ao abrir a Exibição → Sincronizar Segmentações, você pode acessar as Opções Avançadas de cada slicer e atribuir um 'Nome de Grupo' personalizado. Qualquer slicer que compartilhe o mesmo nome de grupo ficará sincronizado de forma bidirecional, mesmo que pertença a páginas distintas ou use layouts visuais diferentes."
+      "explanation_en": "By opening View → Sync Slicers, you can access the Advanced Options for each slicer and specify a custom 'Group Name'. Any slicer that shares the same group name will be synchronized bidirectionally, even if it belongs to separate pages or uses different visual layouts."
     },
     {
       "question": "Você quer destacar o background das células de uma coluna de Lucro em sua tabela com cores customizadas, baseando-se estritamente em códigos hexadecimais de cor (ex: '#00FF00' para lucro, '#FF0000' para prejuízo) gerados e armazenados diretamente em uma coluna calculada no seu modelo de dados. Qual estilo de Formatação Condicional aplicar?",
@@ -11904,14 +11904,14 @@ const questionBank = {
         "Escala de núcleos automática"
       ],
       "explanation_pt": "Ao escolher 'Valor do Campo' como base de formatação nas opções de Formatação Condicional, o Power BI lê os códigos hexadecimais textuais armazenados na coluna selecionada do modelo e os aplicativos diretamente como fonte ou estilo (background ou banco), garantindo flexibilidade total controlada por DAX ou banco.",
-      "question_en": "Você quer destacar o background das células de uma coluna de Lucro em sua tabela com cores customizadas, baseando-se estritamente em códigos hexadecimais de cor (ex: '#00FF00' para lucro, '#FF0000' para prejuízo) gerados e armazenados diretamente em uma coluna calculada no seu modelo de dados. Qual estilo de Formatação Condicional aplicar?",
+      "question_en": "You want to highlight the background of the cells of a Profit column in your table with custom cores, based on the xaxdecimal color codes (e.g. '#00FF00' for profit, '#FF0000' for loss) generated and stored directly in a calculated column in your data model. Which Conditional Formatting style to apply?",
       "options_en": [
-        "Gradiente de cores",
-        "Regras estáticas",
-        "Valor do Campo (Field Value)",
-        "Escala de cores automática"
+        "Core gradient",
+        "Static rules",
+        "Field Value (Field Value)",
+        "Automatic core scaling"
       ],
-      "explanation_en": "Ao escolher 'Valor do Campo' (Field Value) como a base de formatação nas opções de Formatação Condicional, o Power BI lê os códigos hexadecimais textuais armazenados na coluna selecionada do modelo e os aplica diretamente como estilo (background ou fonte), garantindo flexibilidade total controlada por DAX ou banco."
+      "explanation_en": "When choosing 'Field Value' as the formatting base in the Conditional Formatting options, Power BI reads the textual hexadecimal codes stored in the selected column of the model and applications directly as a font or style (background or bank), ensuring full flexibility controlled by DAX or bank."
     },
     {
       "question": "Um relatório corporativo plota mais de 50.000 localizações geográficas detalhadas de lojas em um visual de Mapa. O carregamento de renderização está extremamente lento e o visual apresenta avisos de limite de plotagem. Qual é a melhor prática recomendada para contornar essa falha de alta cardinalidade?",
@@ -11931,14 +11931,14 @@ const questionBank = {
         "Conversor de colunas espaciais para tipo Decimal de alta precisão"
       ],
       "explanation_pt": "Plotar milhares de coordenadas individuais, saturação visual do mapa e memória do navegador. Agrupar os pontos em níveis hierárquicos (ex: Cidade, Estado) permite fazer o detalhamento conforme necessário. Habilitar o 'Clustering' (agrupamento de bolhas) consolida pontos próximos em um único círculo numérico, aliviando a performance visual.",
-      "question_en": "Um relatório corporativo plota mais de 50.000 localizações geográficas detalhadas de lojas em um visual de Mapa. O carregamento de renderização está extremamente lento e o visual apresenta avisos de limite de plotagem. Qual é a melhor prática recomendada para contornar essa falha de alta cardinalidade?",
+      "question_en": "A corporate report plots more than 50,000 planned geographic store locations on a Map visual. Render loading is extremely slow and the visual has plot limit warnings. What is the recommended best practice to work around this high cardinality flaw?",
       "options_en": [
-        "Mudar a conexão de todos os dados do mapa para DirectQuery",
-        "Preencher o mapa usando agregações de hierarquia (ex: agrupar por Estado ou Código Postal) em vez de coordenadas de latitude/longitude detalhadas individuais, e ativar o agrupamento de bolhas (clustering)",
-        "Remover completamente o mapa e usar tabelas estáticas de texto",
-        "Converter as colunas geográficas para tipo Decimal de alta precisão"
+        "Change connection of all map data to DirectQuery",
+        "Populate the map using classification aggregations (e.g., group by State or Zip Code) rather than individual composite latitude/longitude coordinates, and enable clustering.",
+        "Completely remove the map and use static text tables",
+        "High Precision Spatial Column to Decimal Type Converter"
       ],
-      "explanation_en": "Plotar milhares de coordenadas individuais satura o visual do mapa e a memória do navegador. Agrupar os pontos em níveis hierárquicos (ex: Cidade, Estado) permite fazer drill-down conforme necessário. Habilitar o 'Clustering' (agrupamento de bolhas) consolida pontos próximos em um único círculo numérico, aliviando a performance visual."
+      "explanation_en": "Plot thousands of individual coordinates, map visual saturation and browser memory. Grouping the points into hierarchical levels (e.g. City, State) allows you to drill down as necessary. Enabling 'Clustering' consolidates nearby points into a single numerical circle, relieving visual performance."
     },
     {
       "question": "Você possui uma tabela de Vendas e cria um visual de mapa contendo a coluna 'Zone' (que armazena nomes de estados norte-americanos). O mapa plota incorretamente bolhas em cidades aleatórias do mundo. Como garantir que as bolhas representem estados corretamente?",
@@ -11958,14 +11958,14 @@ const questionBank = {
         "Alterar o tipo de dados da coluna para Inteiro"
       ],
       "explanation_pt": "Alterar a Categoria de Dados de uma coluna de texto para termos geográficos específicos (como Estado ou Província, Cidade, Código Postal) ajuda o serviço de mapas do Bing a geolocalizar corretamente as localizações.",
-      "question_en": "Você possui uma tabela de Vendas e cria um visual de mapa contendo a coluna 'Zone' (que armazena nomes de estados norte-americanos). O mapa plota incorretamente bolhas em cidades aleatórias do mundo. Como garantir que as bolhas representem estados corretamente?",
+      "question_en": "You have a Sales table and create a map visual containing the 'Zone' column (which stores US state names). The map incorrectly plots bubbles in speculated world cities. How to ensure that bubbles represent states correctly?",
       "options_en": [
-        "Adicionar uma coluna contendo o termo 'Estados Unidos' em todas as linhas",
-        "Obter coordenadas exatas de latitude e longitude para cada zona e adicioná-las no mapa",
-        "Selecionar o campo 'Zone' e, na guia de Modelagem, alterar a Categoria de Dados para 'Estado ou Província'",
-        "Alterar o tipo de dados da coluna para Inteiro"
+        "Add a column containing the term 'United States' in every row",
+        "Get exact latitude and longitude coordinates for each zone and add them to the map",
+        "Select the 'Zone' field and, in the Modeling tab, change the Data Category to 'State or Province'",
+        "Change the column data type to Integer"
       ],
-      "explanation_en": "Alterar a Categoria de Dados (Data Category) de uma coluna de texto para termos geográficos específicos (como Estado ou Província, Cidade, Código Postal) ajuda o serviço de mapas do Bing a geolocalizar corretamente as localizações."
+      "explanation_en": "Changing the Data Category of a text column to specific geographic terms (such as State or Province, City, Zip Code) helps the Bing map service correctly geolocate locations."
     },
     {
       "question": "Você cria um gráfico de colunas empilhadas contendo a coluna 'Data'. O gráfico exibe todas as datas diárias individuais no eixo X, o que deixa o visual poluído. Você quer que exiba dados consolidados por Ano e que o usuário possa fazer Drill down para ver por Semana e Dia. O que fazer?",
@@ -11985,14 +11985,14 @@ const questionBank = {
         "um filtro visual avançado para adicionar coluna de dados"
       ],
       "explanation_pt": "Usar uma tabela calendário adequada contendo os níveis hierárquicos e adicioná-los em sequência no campo de 'Eixo' do gráfico uma posição de detalhamento limpa e profissional.",
-      "question_en": "Você cria um gráfico de colunas empilhadas contendo a coluna 'Data'. O gráfico exibe todas as datas diárias individuais no eixo X, o que deixa o visual poluído. Você quer que exiba dados consolidados por Ano e que o usuário possa fazer Drill down para ver por Semana e Dia. O que fazer?",
+      "question_en": "You create a stacked column chart containing the 'Date' column. The chart displays all individual daily data on the X-axis, which makes the look cluttered. You want it to display consolidated data by Year and the user can drill down to see it by Week and Day. What to do?",
       "options_en": [
-        "Criar uma nova tabela de calendário com colunas de data, ano, semana e dia, e usá-las para criar uma hierarquia no eixo X do gráfico",
-        "Criar uma nova hierarquia de data diretamente dentro da tabela fato de vendas",
-        "Alterar o eixo X para o tipo Categórico nas propriedades do gráfico",
-        "Adicionar um filtro visual avançado para a coluna de data"
+        "Create a new calendar table with data columns, year, week, and day, and use them to create a position on the X axis of the chart",
+        "Create a new data sheet directly within the sales fact table",
+        "Change the X axis to the Categorical type in the chart properties",
+        "an advanced visual filter to add data column"
       ],
-      "explanation_en": "Usar uma tabela calendário adequada contendo os níveis hierárquicos e adicioná-los em sequência no campo de 'Eixo' do gráfico cria uma hierarquia de drill-down limpa e profissional."
+      "explanation_en": "Using a suitable calendar table containing the hierarchical levels and adding them in sequence in the 'Axis' field of the chart provides a clean and professional breakdown position."
     },
     {
       "question": "Ao estruturar relatórios corporativos na plataforma Power BI, quais são considerados os blocos de construção essenciais da arquitetura do serviço?",
@@ -12012,14 +12012,14 @@ const questionBank = {
         "Arquivos PBIX, Arquivos RDL, Temas JSON e arquivos CSV"
       ],
       "explanation_pt": "A rotina de entrega clássica do Power BI Service é baseada em importar/modelar dados (Datasets) -> criar visuais individuais (Visualizations) -> reunir-los em abas (Reports) -> fixar visuais importantes em telas únicas (Dashboards) contendo blocos interativos (Tiles).",
-      "question_en": "Ao estruturar relatórios corporativos na plataforma Power BI, quais são considerados os blocos de construção essenciais da arquitetura do serviço?",
+      "question_en": "When structuring enterprise reports on the Power BI platform, what are considered the essential building blocks of the service architecture?",
       "options_en": [
-        "Linguagem M, Scripts R, HTML e consultas SQL",
-        "Workspaces, Fluxos de dados, Gateways e conexões locais",
-        "Conjuntos de Dados (Datasets), Visualizações, Relatórios, Painéis (Dashboards) e Blocos (Tiles)",
-        "Arquivos PBIX, Arquivos RDL, Temas JSON e arquivos CSV"
+        "M language, R scripts, HTML and SQL queries",
+        "Workspaces, Dataflows, Gateways, and on-premises connections",
+        "Datasets, Visualizations, Reports, Dashboards and Tiles",
+        "PBIX files, RDL files, JSON themes and CSV files"
       ],
-      "explanation_en": "A hierarquia clássica de entrega do Power BI Service é baseada em importar/modelar dados (Datasets) -> criar visuais individuais (Visualizations) -> reuni-los em abas (Reports) -> fixar visuais importantes em telas únicas (Dashboards) contendo blocos interativos (Tiles)."
+      "explanation_en": "The classic Power BI Service delivery routine is based on importing/modeling data (Datasets) -> creating individual visuals (Visualizations) -> gathering them into tabs (Reports) -> pinning important visuals to single screens (Dashboards) containing interactive blocks (Tiles)."
     },
     {
       "question": "No Power BI Service, qual é a diferença de comportamento interativo quando um usuário clica em um visual fixado em um Dashboard (painel) corporativo, comparado a clicar em um gráfico dentro de um Relatório?",
@@ -12039,14 +12039,14 @@ const questionBank = {
         "O visual do relatório é estatístico"
       ],
       "explanation_pt": "Dashboards são painéis executivos de monitoramento estáticos e rápidos. Seus blocos são como links rápidos. Ao clicar nele, você é direcionado para o relatório interativo de origem, onde os filtros cruzados funcionam dinamicamente.",
-      "question_en": "No Power BI Service, qual é a diferença de comportamento interativo quando um usuário clica em um visual fixado em um Dashboard (painel) corporativo, comparado a clicar em um gráfico dentro de um Relatório?",
+      "question_en": "In Power BI Service, what is the difference in interactive behavior when a user clicks on a visual defined in a corporate Dashboard, compared to clicking on a chart within a Report?",
       "options_en": [
-        "Clicar em um visual do Dashboard navega o usuário de volta ao relatório de origem correspondente; clicar em um gráfico no relatório aplica filtros e realça dados em outros visuais da mesma página",
+        "Click on a Dashboard visual to navigate the user back to the corresponding source report; clicking a chart in the report applies filters and highlights data in other visuals on the same page",
         "Ambos realizam filtros cruzados dinâmicos nas respectivas telas",
-        "O visual do Dashboard abre o editor de consultas M",
-        "O visual de relatório é estático"
+        "The Dashboard visual opens the M query editor",
+        "The look of the report is statistical"
       ],
-      "explanation_en": "Dashboards são painéis executivos de monitoramento estáticos e rápidos. Seus blocos (tiles) agem como links rápidos. Ao clicar nele, você é direcionado para o relatório interativo de origem, onde os filtros cruzados funcionam dinamicamente."
+      "explanation_en": "Dashboards are fast, static executive monitoring panels. Your blocks are like quick links. When you click on it, you are taken to the source interactive report, where cross filters work dynamically."
     },
     {
       "question": "Você precisa padronizar as cores, fontes, estilos e margens padrão de todos os visuais corporativos para que sigam estritamente o manual de marca da empresa. Qual é a melhor prática para aplicar essa formatação?",
@@ -12066,14 +12066,14 @@ const questionBank = {
         "Publicar um espaço de trabalho público e mudar o tema corporativo no Service"
       ],
       "explanation_pt": "Os arquivos de tema JSON contêm especificações de paleta de cores e configurações padrão para os visuais. Ao importar o JSON, o Power BI ou aplicar instantaneamente a todos os gráficos, mantendo a consistência de marca.",
-      "question_en": "Você precisa padronizar as cores, fontes, estilos e margens padrão de todos os visuais corporativos para que sigam estritamente o manual de marca da empresa. Qual é a melhor prática para aplicar essa formatação?",
+      "question_en": "You need to standardize the default colors, fonts, styles, and margins of all corporate visuals so that they follow the company's brand playbook. What is the best practice for applying this formatting?",
       "options_en": [
-        "Modificar as cores manualmente em cada gráfico de todas as páginas dos relatórios",
-        "Importar um arquivo de tema JSON personalizado que define os estilos visuais globais para o relatório atual",
-        "Escrever regras CSS customizadas na aba de opções avançadas",
-        "Publicar um workspace público e mudar o tema corporativo no Service"
+        "Manually modify cores on each chart on all report pages",
+        "Import a custom JSON theme file that defines global visual styles for the current report",
+        "Write custom CSS rules in the advanced options tab",
+        "Publish a public workspace and change the corporate theme in Service"
       ],
-      "explanation_en": "Os arquivos de tema JSON contêm especificações de paleta de cores e configurações padrão para os visuais. Ao importar o JSON, o Power BI o aplica instantaneamente a todos os gráficos, mantendo consistência de marca."
+      "explanation_en": "JSON theme files contain color palette specifications and default settings for visuals. By importing JSON, Power BI or instantly apply it to all charts, maintaining brand consistency."
     },
     {
       "question": "Você configurou uma página de dica de ferramenta visual de relatório (Tooltip) com detalhes adicionais de vendas. Como vincular essa página para que apareça automaticamente ao passar o mouse em um gráfico de barras na página principal?",
@@ -12093,14 +12093,14 @@ const questionBank = {
         "Ativar sincronização de segmentadores"
       ],
       "explanation_pt": "O gráfico principal utiliza o tooltip configurando a seção 'Dica de ferramenta' (Tooltip) nas propriedades visuais: Tipo = Página de Relatório, e selecionando a página de destino que foi marcada como Tooltip.",
-      "question_en": "Você configurou uma página de dica de ferramenta visual de relatório (Tooltip) com detalhes adicionais de vendas. Como vincular essa página para que apareça automaticamente ao passar o mouse em um gráfico de barras na página principal?",
+      "question_en": "You have configured a visual reporting tooltip page (Tooltip) with additional sales details. How can I link this page so that it automatically appears when hovering over a bar chart on the main page?",
       "options_en": [
-        "Arrastar o nome da página de tooltip para o campo de legenda do gráfico",
-        "Habilitar dicas de ferramentas nas propriedades de formato do gráfico de destino, alterar o tipo para Página de Relatório e selecionar o nome da página criada",
-        "Mapear a página de tooltip como uma ação de botão de navegação",
-        "Ativar a sincronização de segmentadores"
+        "Drag the tooltip page name into the chart legend field",
+        "Enable tooltips in target charts format properties, change the Report Page type, and select the name of the created page",
+        "Map a tooltip page as a navigation button action",
+        "Enable segmenter synchronization"
       ],
-      "explanation_en": "O gráfico principal consome o tooltip configurando a seção 'Dica de ferramenta' (Tooltip) nas propriedades visuais: Tipo = Página de Relatório, e selecionando a página de destino que foi marcada como Tooltip."
+      "explanation_en": "The main chart uses the tooltip by setting the 'Tooltip' section in the visual properties: Type = Report Page, and selecting the target page that has been marked as Tooltip."
     },
     {
       "question": "Um visual de matriz complexo demora mais de 10 segundos para carregar no relatório do Power BI Desktop. Como você identifica se o atraso se deve a uma consulta DAX ineficiente, tempo de renderização gráfica ou processamento na fonte?",
@@ -12120,14 +12120,14 @@ const questionBank = {
         "Mudar a conexão de importação para DirectQuery"
       ],
       "explanation_pt": "O Analisador de Performance registra logs milissegundo a milissegundo de cada visual em tela, identificando gargalos exatos divididos em Consulta DAX, Renderização Visual e tempo de espera interno (Outros).",
-      "question_en": "Um visual de matriz complexo demora mais de 10 segundos para carregar no relatório do Power BI Desktop. Como você identifica se o atraso se deve a uma consulta DAX ineficiente, tempo de renderização gráfica ou processamento na fonte?",
+      "question_en": "A complex matrix visual takes more than 10 seconds to load in the Power BI Desktop report. How do you identify whether the delay is due to an inefficient DAX query, graphics rendering time, or processing at the source?",
       "options_en": [
-        "Executar o Diagnóstico de Consulta do Power Query",
-        "Utilizar o Analisador de Performance (Performance Analyzer) e analisar os tempos detalhados de DAX, Renderização e Outros para o visual",
-        "Criar um alerta de dados no Service",
-        "Mudar a conexão de import para DirectQuery"
+        "Run Power Query Query Diagnostics",
+        "Use Performance Analyzer and analyze detailed DAX, Render and Other times for the visual",
+        "Create a data alert in the service",
+        "Change the import connection to DirectQuery"
       ],
-      "explanation_en": "O Analisador de Performance registra logs milissegundo a milissegundo de cada visual em tela, identificando gargalos exatos divididos em Consulta DAX, Renderização Visual e tempo de espera interno (Outros)."
+      "explanation_en": "The Performance Analyzer records millisecond-by-millisecond logs of each visual on screen, identifying exact bottlenecks divided into DAX Query, Visual Rendering and internal waiting time (Others)."
     },
     {
       "question": "Você está analisando a correlação entre Vendas e Lucratividade de milhares de produtos usando um gráfico de Dispersão (Scatter Chart). Para identificar agrupamentos naturais de comportamento sem definir regras manuais, qual recurso usar?",
@@ -12147,14 +12147,14 @@ const questionBank = {
         "Usar RLS por clusters"
       ],
       "explanation_pt": "O Power BI possui algoritmo de K-means nativo no painel de análise de gráficos de dispersão e tabelas. O recurso de clusterização cria colunas de agrupamento automaticamente baseando-se em padrões matemáticos dos eixos.",
-      "question_en": "Você está analisando a correlação entre Vendas e Lucratividade de milhares de produtos usando um gráfico de Dispersão (Scatter Chart). Para identificar agrupamentos naturais de comportamento sem definir regras manuais, qual recurso usar?",
+      "question_en": "You are analyzing the window between sales and profitability of thousands of products using a Scatter Chart. To identify natural clusters of behavior without defining manual rules, which resource to use?",
       "options_en": [
-        "Aplicar filtros visuais de categoria",
-        "Executar o recurso de Agrupamento Automático (Clustering / Localizar Clusters) integrado no painel de análise do gráfico",
-        "Criar um parâmetro de What-if de cor",
-        "Usar RLS por clusters"
+        "Apply category visual filters",
+        "Run the Auto Grouping feature (Clustering / Find Clusters) integrated in the chart analysis panel",
+        "Create a color What-if parameter",
+        "Use RLS for clusters"
       ],
-      "explanation_en": "O Power BI possui algoritmo de K-means nativo no painel de análise de gráficos de dispersão e tabelas. O recurso de clusterização cria colunas de agrupamento automaticamente baseando-se em padrões matemáticos dos eixos."
+      "explanation_en": "Power BI has native K-means algorithm in the scatterplot and table analysis dashboard. The clustering feature automatically creates cluster columns based on mathematical axis patterns."
     },
     {
       "question": "Ao criar um painel de filtros retrátil no relatório (que abre e fecha ao clicar em ícones), você usa Bookmarks. Quais dois painéis auxiliares do Power BI Desktop devem estar ativos para configurar essa interatividade de ocultar e exibir visuais?",
@@ -12174,14 +12174,14 @@ const questionBank = {
         "Painel de Gateway e Painel de Campos"
       ],
       "explanation_pt": "O painel de seleção é crucial porque permite alternar a visibilidade (ícone de olho) de cada gráfico individualmente. O painel de Indicadores grava esses estados de exibição para criar a interatividade.",
-      "question_en": "Ao criar um painel de filtros retrátil no relatório (que abre e fecha ao clicar em ícones), você usa Bookmarks. Quais dois painéis auxiliares do Power BI Desktop devem estar ativos para configurar essa interatividade de ocultar e exibir visuais?",
+      "question_en": "When you create a collapsible filter panel in your report (which opens and closes when you click icons), you use Favorites. Which two Power BI Desktop helper panels should be active to configure this interactivity of hiding and showing visuals?",
       "options_en": [
-        "Painel de Indicadores (Bookmarks) e Painel de Seleção (Selection)",
-        "Painel de Filtros e Painel de Modelagem",
-        "Painel de Propriedades e Visualização de Dados",
-        "Painel de Gateway e Painel de Campos"
+        "Bookmarks Panel and Selection Panel (Selection)",
+        "Filter Panel and Modeling Panel",
+        "Properties Panel and Data Visualization",
+        "Gateway Panel and Fields Panel"
       ],
-      "explanation_en": "O painel de Seleção é crucial porque permite alternar a visibilidade (ícone de olho) de cada gráfico individualmente. O painel de Indicadores grava esses estados de exibição para criar a interatividade."
+      "explanation_en": "The selection panel is crucial because it allows you to toggle the visibility (eye icon) of each chart individually. The Bookmarks panel records these display states to create interactivity."
     },
     {
       "question": "Você está desenhando um relatório corporativo focado em ser exibido exclusivamente em TVs de monitoramento na recepção da empresa. Como configurar a visualização da tela para preencher 100% do monitor sem barras de rolagem?",
@@ -12201,14 +12201,14 @@ const questionBank = {
         "Usar visualização móvel"
       ],
       "explanation_pt": "Configure a exibição como 'Ajustar à Página' dimensiona dinamicamente a área de desenho do Power BI para caber nas dimensões físicas do monitor, garantindo uma apresentação limpa.",
-      "question_en": "Você está desenhando um relatório corporativo focado em ser exibido exclusivamente em TVs de monitoramento na recepção da empresa. Como configurar a visualização da tela para preencher 100% do monitor sem barras de rolagem?",
+      "question_en": "You are designing a corporate report focused on being specific exclusively on monitoring TVs at the company's reception. How to configure the screen view to fill 100% of the monitor without scroll bars?",
       "options_en": [
-        "Ajustar a visualização da página para 'Ajustar à Página' (Fit to Page) nas opções de exibição e configurar o tamanho de tela adequado nas propriedades da página",
-        "Reduzir a resolução das imagens",
-        "Configurar o layout de tela como Tooltip",
+        "Adjust the page view to 'Fit to Page' in the display options and set the appropriate screen size in the page properties",
+        "Reduce image resolution",
+        "Configure the screen layout as Tooltip",
         "Usar visualização mobile"
       ],
-      "explanation_en": "Configurar a exibição como 'Ajustar à Página' (Fit to Page) dimensiona dinamicamente a área de desenho do Power BI para caber nas dimensões físicas do monitor, garantindo apresentação limpa."
+      "explanation_en": "Setting the display to 'Fit to Page' dynamically scales the Power BI drawing area to fit the physical dimensions of the monitor, ensuring a clean presentation."
     }
   ],
   "Implementar e Manter": [
@@ -13210,14 +13210,14 @@ const questionBank = {
         "Servidor de relatórios do Power BI"
       ],
       "explanation_pt": "Deployment Pipelines (Power BI Premium) permitem criar ambientes separados de Dev/Test/Prod com um clique para promover conteúdo entre projeções, comparar diferenças e definir regras de dados por ambiente.",
-      "question_en": "A empresa quer um processo formal para promover relatórios por ambientes: Desenvolvimento → Teste → Produção no Power BI Service, com controle de versão e comparação de conteúdo. Qual feature implementa isso?",
+      "question_en": "The company wants a formal process to promote reports by environments: Development → Test → Production in Power BI Service, with version control and content comparison. Which feature implements this?",
       "options_en": [
-        "Power BI Embedded com controle de versão Git",
-        "Pipelines de Implantação (Deployment Pipelines)",
-        "Workspaces Clássicos com permissões diferenciadas",
+        "Power BI Embedded with Git versioning",
+        "Deployment Pipelines",
+        "Classic workspaces with different permissions",
         "Power BI Report Server"
       ],
-      "explanation_en": "Deployment Pipelines (Power BI Premium) permitem criar ambientes separados de Dev/Test/Prod com um clique para promover conteúdo entre estágios, comparar diferenças e definir regras de dados por ambiente."
+      "explanation_en": "Deployment Pipelines (Power BI Premium) let you create separate Dev/Test/Prod environments with one click to promote content between projections, compare differences, and define data rules per environment."
     },
     {
       "question": "Um analista publicou um relatório conectado a um arquivo Excel no próprio computador pessoal. Qual tipo de gateway permite atualização agendada nesse cenário?",
@@ -13237,14 +13237,14 @@ const questionBank = {
         "Não é necessário gateway para arquivos locais"
       ],
       "explanation_pt": "O Gateway Pessoal é instalado no computador do usuário e permite que o Power BI Service acesse arquivos locais daquela máquina. Não suporta múltiplos usuários — é para uso individual.",
-      "question_en": "Um analista publicou um relatório conectado a um arquivo Excel no próprio computador pessoal. Qual tipo de gateway permite atualização agendada nesse cenário?",
+      "question_en": "An analyst published a report linked to an Excel file on his personal computer. Which type of gateway allows scheduled update in this scenario?",
       "options_en": [
-        "Data Gateway (modo Padrão/Corporativo)",
+        "Data Gateway (Standard/Enterprise mode)",
         "Gateway Pessoal (Personal Mode)",
         "Gateway VPN",
-        "Não é necessário gateway para arquivos locais"
+        "No gateway required for local files"
       ],
-      "explanation_en": "O Gateway Pessoal é instalado no computador do usuário e permite que o Power BI Service acesse arquivos locais daquela máquina. Não suporta múltiplos usuários — é para uso individual."
+      "explanation_en": "The Personal Gateway is installed on the user's computer and allows the Power BI Service to access local files on that machine. Does not support multiple users — it is for individual use."
     },
     {
       "question": "Com uma licença Power BI Pro (sem Premium), quantas atualizações agendadas diárias são permitidas por dataset?",
@@ -13264,14 +13264,14 @@ const questionBank = {
         "48 por dia"
       ],
       "explanation_pt": "Com licença Pro sem Premium, o limite é de 8 atualizações agendadas por dia por dataset. Com Power BI Premium, o limite sobe para 48 atualizações por dia.",
-      "question_en": "Com uma licença Power BI Pro (sem Premium), quantas atualizações agendadas diárias são permitidas por dataset?",
+      "question_en": "With a Power BI Pro (non-Premium) license, how many daily scheduled updates are allowed per dataset?",
       "options_en": [
-        "Ilimitadas",
-        "8 por dia",
-        "24 por dia",
-        "48 por dia"
+        "Unlimited",
+        "8 per day",
+        "24 a day",
+        "48 per day"
       ],
-      "explanation_en": "Com licença Pro sem Premium, o limite é 8 atualizações agendadas por dia por dataset. Com Power BI Premium, o limite sobe para 48 atualizações por dia."
+      "explanation_en": "With a Pro license without Premium, the limit is 8 scheduled updates per day per dataset. With Power BI Premium, the limit increases to 48 updates per day."
     },
     {
       "question": "Você precisa distribuir um pacote de relatórios para 300 usuários que devem ver apenas a versão publicada (sem editar). Qual é a abordagem MAIS adequada?",
@@ -13291,14 +13291,14 @@ const questionBank = {
         "Habilitar 'Publicar na Web' para acesso público"
       ],
       "explanation_pt": "Power BI Apps empacota relatórios e dashboards de um espaço de trabalho para consumo controlado. Os usuários veem apenas a versão publicada e não têm acesso direto ao espaço de trabalho de edição.",
-      "question_en": "Você precisa distribuir um pacote de relatórios para 300 usuários que devem ver apenas a versão publicada (sem editar). Qual é a abordagem MAIS adequada?",
+      "question_en": "You need to distribute a report package to 300 users who should only see the published version (without editing). What is the MOST appropriate approach?",
       "options_en": [
-        "Compartilhar cada relatório individualmente via link para cada usuário",
-        "Publicar um Power BI App a partir de um Workspace e conceder acesso ao App",
-        "Exportar para PDF e distribuir por email",
-        "Habilitar 'Publicar na Web' (Publish to Web) para acesso público"
+        "Share each report individually via link for each user",
+        "Publish a Power BI app from a Workspace and grant access to the app",
+        "Export to PDF and distribute via email",
+        "Enable 'Publish to Web' for Public Access"
       ],
-      "explanation_en": "Power BI Apps empacotam relatórios e dashboards de um workspace para consumo controlado. Os usuários veem apenas a versão publicada e não têm acesso direto ao workspace de edição."
+      "explanation_en": "Power BI Apps packages reports and dashboards from a workspace for controlled consumption. Users only see the published version and do not have direct access to the editing workspace."
     },
     {
       "question": "Qual é a diferença entre o papel de 'Colaborador' (Contributor) e 'Membro' (Member) em um Workspace do Power BI Service?",
@@ -13318,14 +13318,14 @@ const questionBank = {
         "Colaborador tem acesso apenas de leitura; Membro tem acesso à edição"
       ],
       "explanation_pt": "Colaborador: publica, edita e exclui conteúdo. Membro: tudo do Colaborador + gerenciamento de membros do nível Colaborador para baixo e pode publicar Apps. Administrador: controle total, incluindo excluir o espaço de trabalho.",
-      "question_en": "Qual é a diferença entre o papel de 'Colaborador' (Contributor) e 'Membro' (Member) em um Workspace do Power BI Service?",
+      "question_en": "What is the difference between the 'Contributor' and 'Member' roles in a Power BI Service Workspace?",
       "options_en": [
-        "Não há diferença prática entre os dois papéis",
-        "Colaborador pode publicar e editar conteúdo no workspace, mas não pode gerenciar permissões de acesso; Membro pode gerenciar permissões e convidar outros colaboradores",
+        "There is no practical difference between the two roles",
+        "The Contributor can publish and edit content in the workspace, but cannot manage access controls; Member can manage teams and invite other collaborators",
         "Membro pode criar workspaces; Colaborador não",
-        "Colaborador tem acesso apenas de leitura; Membro tem acesso de edição"
+        "Collaborator has read-only access; Member has access to the edition"
       ],
-      "explanation_en": "Colaborador: publica, edita e exclui conteúdo. Membro: tudo do Colaborador + gerencia membros do nível Colaborador para baixo e pode publicar Apps. Administrador: controle total, incluindo excluir o workspace."
+      "explanation_en": "Contributor: publishes, edits and deletes content. Member: everything from Contributor + member management from Contributor level down and can publish Apps. Administrator: Full control, including deleting the workspace."
     },
     {
       "question": "Você implementou RLS estático com uma regra [Região] = 'Sul'. Ao testar no Power BI Service como Administrador do workspace, os dados não aparecem filtrados. Por quê?",
@@ -13345,14 +13345,14 @@ const questionBank = {
         "O RLS só funciona no modo DirectQuery"
       ],
       "explanation_pt": "Administradores do workspace e do dataset são isentos de RLS automaticamente — eles sempre veem todos os dados. Para testar o RLS, use 'Exibir como função' nas configurações do dataset.",
-      "question_en": "Você implementou RLS estático com uma regra [Região] = 'Sul'. Ao testar no Power BI Service como Administrador do workspace, os dados não aparecem filtrados. Por quê?",
+      "question_en": "You have implemented static RLS with a [Region] = 'South' rule. When testing in Power BI Service as a workspace Administrator, the data does not appear filtered. Why?",
       "options_en": [
-        "Administradores são isentos de RLS no Power BI Service",
-        "O RLS não foi publicado corretamente",
-        "Administradores precisam aceitar o RLS manualmente",
-        "O RLS só funciona em modo DirectQuery"
+        "Administrators are exempt from RLS in Power BI Service",
+        "The RLS was not published correctly",
+        "Administrators need to manually accept RLS",
+        "RLS only works in DirectQuery mode"
       ],
-      "explanation_en": "Administradores do workspace e do dataset são isentos de RLS automaticamente — eles sempre veem todos os dados. Para testar o RLS, use 'Exibir como função' (View as Role) nas configurações do dataset."
+      "explanation_en": "Workspace and dataset administrators are automatically exempt from RLS — they always see all data. To test RLS, use 'Display as function' in the dataset settings."
     },
     {
       "question": "No Power BI Service, qual é a diferença entre um dataset 'Promovido' (Promoted) e 'Certificado' (Certified)?",
@@ -13372,14 +13372,14 @@ const questionBank = {
         "Promovido requer RLS; Certificado não exige"
       ],
       "explanation_pt": "Endosso tem dois níveis: Promovido (proprietário do conjunto de dados de marca como confiável) e Certificado (administrador ou designado valida o conjunto de dados como autoritativo). Certificado tem mais restrições e restrições de quem pode conceder.",
-      "question_en": "No Power BI Service, qual é a diferença entre um dataset 'Promovido' (Promoted) e 'Certificado' (Certified)?",
+      "question_en": "In the Power BI service, what is the difference between a 'Promoted' and a 'Certified' dataset?",
       "options_en": [
         "Não há diferença; são termos sinônimos",
-        "Promovido é marcado pelo próprio proprietário do dataset; Certificado requer aprovação formal por administradores ou pessoa designada da organização",
-        "Certificado é exclusivo para Power BI Premium; Promovido é para Pro",
-        "Promovido requer RLS; Certificado não exige"
+        "Promoted is marked by the dataset owner; Certificate requires formal approval by administrators or designee of the organization",
+        "Exclusive certificate for Power BI Premium; Promoted is to Pro",
+        "Promoted requires RLS; Certificate does not require"
       ],
-      "explanation_en": "Endosso tem dois níveis: Promoted (proprietário do dataset marca como confiável) e Certified (administrador ou designado valida o dataset como autoritativo). Certified tem mais credibilidade e restrições de quem pode conceder."
+      "explanation_en": "Endorsement has two levels: Promoted (owner of the dataset marks as authoritative) and Certified (administrator or designee validates the dataset as authoritative). Certificate has more restrictions and restrictions on who can grant it."
     },
     {
       "question": "A organização precisa classificar relatórios com dados pessoais (LGPD) para que os usuários sejam alertados ao exportar para Excel. Qual recurso do Power BI Service implementa isso?",
@@ -13399,14 +13399,14 @@ const questionBank = {
         "Espaços de trabalho com acesso restrito"
       ],
       "explanation_pt": "Rótulos de Sensibilidade (integrados ao Microsoft Purview/MIP) classificam e protegem o conteúdo do Power BI. Quando um usuário exporta conteúdo com rótulo 'Confidencial', o Excel/PDF recebe o mesmo rótulo automaticamente.",
-      "question_en": "A organização precisa classificar relatórios com dados pessoais (LGPD) para que os usuários sejam alertados ao exportar para Excel. Qual recurso do Power BI Service implementa isso?",
+      "question_en": "The organization needs to classify reports with personal data (LGPD) so that users are alerted when exporting to Excel. Which Power BI Service feature implements this?",
       "options_en": [
-        "RLS em nível de coluna",
-        "Rótulos de Sensibilidade (Sensitivity Labels) integrados ao Microsoft Purview",
-        "Endosso de Dataset",
-        "Workspaces com acesso restrito"
+        "Column-level RLS",
+        "Sensitivity Labels integrated into Microsoft Purview",
+        "Dataset endorsement",
+        "Workspaces with restricted access"
       ],
-      "explanation_en": "Rótulos de Sensibilidade (integrados ao Microsoft Purview/MIP) classificam e protegem conteúdo do Power BI. Quando um usuário exporta conteúdo com rótulo 'Confidencial', o Excel/PDF recebe o mesmo rótulo automaticamente."
+      "explanation_en": "Sensitivity Labels (built into Microsoft Purview/MIP) classify and protect Power BI content. When a user exports content labeled 'Confidential', Excel/PDF receives the same label automatically."
     },
     {
       "question": "Quais são as principais vantagens de usar Dataflows (Fluxos de Dados) no Power BI Service?",
@@ -13426,14 +13426,14 @@ const questionBank = {
         "São exclusivos do Power BI Premium"
       ],
       "explanation_pt": "Dataflows centralizam transformações no Power BI Service, permitindo: reutilização entre datasets, colaboração entre equipes, tabelas computadas (Premium), integração com Azure Data Lake, e redução de duplicação de lógica ETL.",
-      "question_en": "Quais são as principais vantagens de usar Dataflows (Fluxos de Dados) no Power BI Service?",
+      "question_en": "What are the main advantages of using dataflows in Power BI Service?",
       "options_en": [
-        "São mais rápidos que o Power Query Desktop e não precisam de Gateway",
-        "Permitem reutilizar lógica de transformação entre múltiplos datasets, suportam tabelas computadas e podem ser usados por diferentes equipes",
-        "Substituem completamente o modelo de dados (dataset)",
-        "São exclusivos do Power BI Premium"
+        "They are faster than Power Query Desktop and do not require a Gateway",
+        "They allow reusing transformation logic between multiple data sets, support computed tables and can be used by different teams",
+        "Completely replace the data model (dataset)",
+        "They are exclusive to Power BI Premium"
       ],
-      "explanation_en": "Dataflows centralizam transformações no Power BI Service, permitindo: reutilização entre datasets, colaboração entre equipes, tabelas computadas (Premium), integração com Azure Data Lake, e redução de duplicação de lógica ETL."
+      "explanation_en": "Dataflows centralize transformations in Power BI Service, allowing: reuse between datasets, collaboration between teams, computed tables (Premium), integration with Azure Data Lake, and reduction of duplication of ETL logic."
     },
     {
       "question": "Um sistema de RH precisa de um relatório com layout de formulário preciso, exportação perfeita para PDF com quebras de página controladas e suporte a sub-relatórios. Qual tipo usar?",
@@ -13453,14 +13453,14 @@ const questionBank = {
         "Relatório publicado via 'Publicar na Web'"
       ],
       "explanation_pt": "Relatórios Paginados (criados no Power BI Report Builder, baseado no SSRS) são projetados para: impressão/PDF perfeito, controle de quebra de página, formulários, faturas e dados que se estendem por centenas de páginas.",
-      "question_en": "Um sistema de RH precisa de um relatório com layout de formulário preciso, exportação perfeita para PDF com quebras de página controladas e suporte a sub-relatórios. Qual tipo usar?",
+      "question_en": "An HR system needs a report with accurate form layout, seamless PDF submission with controlled page breaks, and sub-report support. Which type to use?",
       "options_en": [
-        "Relatório Power BI padrão com muitas páginas",
+        "Standard Power BI report with many pages",
         "Relatório Paginado (Paginated Report / SSRS)",
-        "Dashboard do Power BI Service",
-        "Relatório publicado via 'Publicar na Web'"
+        "Power BI service dashboard",
+        "Report published via 'Publish to Web'"
       ],
-      "explanation_en": "Relatórios Paginados (criados no Power BI Report Builder, baseados no SSRS) são projetados para: impressão/PDF perfeito, controle de quebra de página, formulários, faturas, e dados que se estendem por centenas de páginas."
+      "explanation_en": "Paginated Reports (created in Power BI Report Builder, based on SSRS) are designed for: seamless printing/PDF, page break control, forms, invoices, and data that spans hundreds of pages."
     },
     {
       "question": "Qual é o principal caso de uso do Endpoint XMLA (XML for Analysis) no Power BI Premium?",
@@ -13480,14 +13480,14 @@ const questionBank = {
         "Conectar o Power BI a fontes OLAP externas"
       ],
       "explanation_pt": "O Endpoint XMLA expõe os datasets do Power BI Premium como modelos tabulares SSAS, permitindo que ferramentas como Tabular Editor, DAX Studio e SSMS se conectem para administração avançada, scripting, e análise de desempenho.",
-      "question_en": "Qual é o principal caso de uso do Endpoint XMLA (XML for Analysis) no Power BI Premium?",
+      "question_en": "What is the main use case for Endpoint XMLA (XML for Analysis) in Power BI Premium?",
       "options_en": [
-        "Publicar relatórios do Power BI Desktop sem o botão Publicar",
-        "Permitir conexões de ferramentas externas (Tabular Editor, SSMS, DAX Studio) ao dataset para administração, desenvolvimento e consulta avançada do modelo tabular",
-        "Habilitar a exportação de dados para XML",
-        "Conectar o Power BI a fontes OLAP externas"
+        "Publish Power BI Desktop reports without the Publish button",
+        "Allow connections from external tools (Tabular Editor, SSMS, DAX Studio) to the dataset for administration, development and advanced querying of the tabular model",
+        "Enable data export to XML",
+        "Connect Power BI to external OLAP sources"
       ],
-      "explanation_en": "O Endpoint XMLA expõe os datasets do Power BI Premium como modelos tabulares SSAS, permitindo que ferramentas como Tabular Editor, DAX Studio e SSMS se conectem para administração avançada, scripting, e análise de performance."
+      "explanation_en": "Endpoint XMLA exposes Power BI Premium datasets as SSAS tabular models, allowing tools like Tabular Editor, DAX Studio, and SSMS to connect for advanced administration, scripting, and performance analysis."
     },
     {
       "question": "Qual é o risco principal de usar a opção 'Publicar na Web' (Publish to Web) para compartilhar um relatório?",
@@ -13507,14 +13507,14 @@ const questionBank = {
         "O relatório fica disponível apenas por 30 dias"
       ],
       "explanation_pt": "'Publicar na Web' gera um link e código de incorporação público, sem autenticação. Qualquer pessoa com o link (ou que encontre o iframe) vê todos os dados do relatório. Nunca use dados sensíveis ou protegidos.",
-      "question_en": "Qual é o risco principal de usar a opção 'Publicar na Web' (Publish to Web) para compartilhar um relatório?",
+      "question_en": "What is the main risk of using the 'Publish to Web' option to share a report?",
       "options_en": [
-        "O relatório pode ser editado por qualquer pessoa que tenha o link",
-        "O relatório fica publicamente acessível na internet sem qualquer autenticação, expondo todos os dados visíveis para qualquer pessoa",
-        "O RLS passa a ser ignorado apenas para usuários internos",
-        "O relatório fica disponível apenas por 30 dias"
+        "The report can be edited by anyone who has the link",
+        "The report is publicly accessible on the internet without any authentication, exposing all data visible to anyone",
+        "RLS is now ignored only for internal users",
+        "The report is only available for 30 days"
       ],
-      "explanation_en": "'Publicar na Web' gera um link e código de incorporação público, sem autenticação. Qualquer pessoa com o link (ou que encontre o iframe) vê todos os dados do relatório. Nunca use para dados sensíveis ou confidenciais."
+      "explanation_en": "'Publish to Web' generates a public link and embed code, without authentication. Anyone with the link (or who finds the iframe) sees all of the report data. Never use sensitive or protected data."
     },
     {
       "question": "Uma organização tem usuários sem licença Power BI Pro. Em qual cenário esses usuários podem acessar relatórios publicados no Power BI Service?",
@@ -13534,14 +13534,14 @@ const questionBank = {
         "Quando o administrador desabilita a verificação de licença"
       ],
       "explanation_pt": "Em capacidades Premium, os usuários sem licença Pro podem consumir (apenas ler) relatórios publicados no workspace Premium. Para editar, a licença Pro ainda é necessária. PPU requer licença PPU individual.",
-      "question_en": "Uma organização tem usuários sem licença Power BI Pro. Em qual cenário esses usuários podem acessar relatórios publicados no Power BI Service?",
+      "question_en": "An organization has users without a Power BI Pro license. In what scenario can these users access reports published in the Power BI Service?",
       "options_en": [
-        "Nunca — a licença Pro é sempre obrigatória para consumo",
-        "Quando o workspace está em uma Capacidade Power BI Premium ou Premium Per User (PPU)",
-        "Quando o relatório é compartilhado via link público",
-        "Quando o administrador desabilita a verificação de licença"
+        "Never — Pro license is always required for consumption",
+        "When the workspace is in a Power BI Premium or Premium Per User (PPU) Capacity",
+        "When the report is shared via public link",
+        "When the administrator disables license verification"
       ],
-      "explanation_en": "Em capacidades Premium, os usuários sem licença Pro podem consumir (apenas ler) relatórios publicados no workspace Premium. Para editar, a licença Pro ainda é necessária. PPU requer licença PPU individual."
+      "explanation_en": "In Premium capabilities, users without a Pro license can consume (only read) reports published in the Premium workspace. To edit, the Pro license is still required. PPU requires individual PPU license."
     },
     {
       "question": "No Power BI Service, em qual tipo de visual é possível configurar Alertas de Dados (Data Alerts) para notificação por email?",
@@ -13561,14 +13561,14 @@ const questionBank = {
         "Qualquer visual em qualquer painel"
       ],
       "explanation_pt": "Alertas de Dados funcionam apenas em blocos de dashboards do tipo: Cartão (Card), KPI e Medidor (Gauge). Não funciona em gráficos nem em relatórios — apenas em dashboards, e apenas nos tipos de referência.",
-      "question_en": "No Power BI Service, em qual tipo de visual é possível configurar Alertas de Dados (Data Alerts) para notificação por email?",
+      "question_en": "In Power BI Service, in what type of visual can you configure Data Alerts to be sent by email?",
       "options_en": [
-        "Gráficos de Barras e Linhas em Relatórios",
-        "Tiles de Cartão (Card), KPI e Medidores (Gauge) em Dashboards",
-        "Tabelas e Matrizes em Relatórios",
+        "Bar and Line Charts in Reports",
+        "Card Tiles, KPI and Gauge in Dashboards",
+        "Tables and Matrices in Reports",
         "Qualquer visual em qualquer dashboard"
       ],
-      "explanation_en": "Alertas de Dados funcionam apenas em tiles de dashboards do tipo: Cartão (Card), KPI e Medidor (Gauge). Não funcionam em gráficos nem em relatórios — apenas em dashboards, e apenas nos tipos mencionados."
+      "explanation_en": "Data Alerts only work in dashboard blocks of the type: Card, KPI and Gauge. It doesn't work on charts or reports — only on dashboards, and only on reference types."
     },
     {
       "question": "Qual é a função de um 'Gateway de Dados' (Data Gateway) no modo Padrão/Corporativo?",
@@ -13588,14 +13588,14 @@ const questionBank = {
         "Servir como proxy para acessar o Azure de dentro da empresa"
       ],
       "explanation_pt": "O Data Gateway (modo Padrão) está instalado na rede corporativa e permite que o Power BI Service acesse dados locais de forma segura. Suporta múltiplas fontes, múltiplos usuários e gerenciados centralmente.",
-      "question_en": "Qual é a função de um 'Gateway de Dados' (Data Gateway) no modo Padrão/Corporativo?",
+      "question_en": "What is the role of a 'Data Gateway' in Standard/Enterprise mode?",
       "options_en": [
-        "Criptografar dados do Power BI armazenados no Service",
-        "Criar uma ponte segura entre o Power BI Service e fontes de dados locais ou em redes privadas, permitindo atualização agendada sem expor as fontes à internet",
-        "Gerenciar licenças de usuários no Power BI Service",
-        "Servir como proxy para acessar o Azure de dentro da empresa"
+        "Encrypt Power BI data stored on the service",
+        "Create a secure bridge between Power BI Service and data sources on-premises or on private networks, enabling scheduled refresh without exporting sources to the internet",
+        "Manage user licenses in Power BI Service",
+        "Serve as a proxy to access Azure from within the company"
       ],
-      "explanation_en": "O Data Gateway (modo Padrão) é instalado na rede corporativa e permite que o Power BI Service acesse dados locais de forma segura. Suporta múltiplas fontes, múltiplos usuários e é gerenciado centralmente."
+      "explanation_en": "Data Gateway (Standard mode) is installed on the corporate network and allows the Power BI Service to securely access local data. Supports multiple sources, multiple users and centrally managed."
     },
     {
       "question": "Como um Administrador do Power BI pode monitorar quais relatórios são mais acessados e por quais usuários na organização?",
@@ -13615,14 +13615,14 @@ const questionBank = {
         "Consultando diretamente os logs do Azure Active Directory"
       ],
       "explanation_pt": "O Log de Atividades (disponível via API Admin ou exportação) registra todas as atividades no locatário. As Métricas de Uso de cada workspace mostram visualizações, usuários ativos e relatórios mais acessados.",
-      "question_en": "Como um Administrador do Power BI pode monitorar quais relatórios são mais acessados e por quais usuários na organização?",
+      "question_en": "How can a Power BI Administrator monitor which reports are accessed most and by which users in the organization?",
       "options_en": [
-        "Através do Analisador de Performance no Power BI Desktop",
-        "Usando o Log de Atividades (Activity Log) ou a API Admin e o relatório de Métricas de Uso do workspace",
-        "Verificando o histórico de atualizações no Gateway",
-        "Consultando diretamente os logs do Azure Active Directory"
+        "Using Performance Analyzer in Power BI Desktop",
+        "Using the Activity Log or Admin API and the workspace Usage Metrics report",
+        "Checking the update history on the Gateway",
+        "Directly querying Azure Active Directory logs"
       ],
-      "explanation_en": "O Log de Atividades (disponível via API Admin ou exportação) registra todas as atividades no tenant. As Métricas de Uso (Usage Metrics) de cada workspace mostram visualizações, usuários ativos e relatórios mais acessados."
+      "explanation_en": "The Activity Log (available via the Admin API or export) records all activity in the tenant. Usage Metrics for each workspace show views, active users, and most accessed reports."
     },
     {
       "question": "Qual é a diferença entre 'Compartilhar Relatório' diretamente e publicar um 'Power BI App'?",
@@ -13642,14 +13642,14 @@ const questionBank = {
         "Compartilhamento suporte RLS; Aplicativos não"
       ],
       "explanation_pt": "Compartilhamento direto pode exportar o espaço de trabalho ao usuário. Apps isolados do consumidor do workspace, permitem personalizar a navegação, incluir múltiplos relatórios/dashboards, e atualizações do workspace não afetam o App até nova publicação.",
-      "question_en": "Qual é a diferença entre 'Compartilhar Relatório' diretamente e publicar um 'Power BI App'?",
+      "question_en": "What is the difference between 'Share Report' directly and publishing a 'Power BI App'?",
       "options_en": [
-        "Não há diferença, são abordagens equivalentes",
-        "Compartilhar dá acesso direto ao relatório individual com possível acesso ao workspace; App empacota múltiplos relatórios para consumo controlado sem expor o workspace",
-        "Apps são mais rápidos de criar que o compartilhamento direto",
+        "There is no difference, they are equivalent approaches",
+        "Sharing gives direct access to the individual report with possible access to the workspace; App packed with reports for controlled consumption without exporting the workspace",
+        "Apps are faster to create than direct sharing",
         "Compartilhamento suporta RLS; Apps não"
       ],
-      "explanation_en": "Compartilhamento direto pode expor o workspace ao usuário. Apps isolam o consumidor do workspace, permitem personalizar a navegação, incluir múltiplos relatórios/dashboards, e atualizações do workspace não afetam o App até nova publicação."
+      "explanation_en": "Direct sharing can export the workspace to the user. Apps isolated from the workspace consumer allow you to customize navigation, include multiple reports/dashboards, and workspace updates do not affect the App until further publication."
     },
     {
       "question": "Você precisa que usuários externos (fora do tenant Azure AD da empresa) acessem um relatório do Power BI Service. Qual é o mecanismo mais seguro?",
@@ -13669,14 +13669,14 @@ const questionBank = {
         "Criar uma cópia do relatório em uma conta pública"
       ],
       "explanation_pt": "O Azure AD B2B permite convidar usuários externos como 'Usuários Convidados' no locatário, mantendo o controle de autenticação e autorização (incluindo RLS). É a forma mais segura de compartilhar com exterior.",
-      "question_en": "Você precisa que usuários externos (fora do tenant Azure AD da empresa) acessem um relatório do Power BI Service. Qual é o mecanismo mais seguro?",
+      "question_en": "You need external users (outside your company's Azure AD tenant) to access a Power BI Service report. What is the safest mechanism?",
       "options_en": [
-        "Publicar na Web (Publish to Web)",
-        "Compartilhar via Azure AD B2B (convidar como usuário convidado)",
-        "Exportar para PDF e compartilhar por email",
-        "Criar uma cópia do relatório em uma conta pública"
+        "Publish to the Web (Publish to the Web)",
+        "Share via Azure AD B2B (invite as guest user)",
+        "Export to PDF and share via email",
+        "Create a copy of the report in a public account"
       ],
-      "explanation_en": "Azure AD B2B permite convidar usuários externos como 'Guest Users' no tenant, mantendo o controle de autenticação e autorização (incluindo RLS). É a forma mais segura de compartilhar com externos."
+      "explanation_en": "Azure AD B2B allows you to invite external users as 'Guest Users' into your tenant while maintaining control over authentication and authorization (including RLS). It's the safest way to share abroad."
     },
     {
       "question": "Qual é o comportamento de um Pipeline de Implantação (Deployment Pipeline) ao comparar estágios Dev e Teste?",
@@ -13696,14 +13696,14 @@ const questionBank = {
         "Compara apenas as medidas DAX, ignorando layouts"
       ],
       "explanation_pt": "A comparação de estágios do Deployment Pipeline mostra o status de cada item: novo (existe apenas em um estágio), idêntico (mesmo conteúdo) ou diferente (modificado). O administrador escolhe o que implantar.",
-      "question_en": "Qual é o comportamento de um Pipeline de Implantação (Deployment Pipeline) ao comparar estágios Dev e Teste?",
+      "question_en": "What is the behavior of a Deployment Pipeline when comparing Dev and Test futures?",
       "options_en": [
-        "Exibe apenas uma lista de relatórios diferentes entre os estágios",
-        "Mostra quais itens existem apenas em um estágio, quais são idênticos e quais são diferentes, permitindo implantar seletivamente",
-        "Sincroniza automaticamente todos os itens sem necessidade de revisão",
-        "Compara apenas as medidas DAX, ignorando layouts"
+        "Only displays a list of different reports between stages",
+        "Shows which items only exist in one stage, which are identical, and which are different, allowing you to deploy selectively",
+        "Automatically syncs all items with no need for review",
+        "Compares only DAX measurements, ignoring layouts"
       ],
-      "explanation_en": "O comparador de estágios do Deployment Pipeline mostra o status de cada item: novo (existe apenas em um estágio), idêntico (mesmo conteúdo) ou diferente (modificado). O administrador escolhe o que implantar."
+      "explanation_en": "The Deployment Pipeline stage comparison shows the status of each item: new (only exists in one stage), identical (same content), or different (modified). The administrator chooses what to deploy."
     },
     {
       "question": "Uma empresa quer que o departamento de TI gerencie centralmente os datasets (modelos de dados) enquanto os analistas criam seus próprios relatórios conectados a esses datasets. Como isso é habilitado?",
@@ -13723,14 +13723,14 @@ const questionBank = {
         "Usando Power BI Embedded para cada analista"
       ],
       "explanation_pt": "Live Connection para datasets do Service (Shared Datasets) permite que analistas criem relatórios conectados a datasets gerenciados centralmente, sem precisar recriar o modelo. Uma única fonte de verdade para todos os relatórios.",
-      "question_en": "Uma empresa quer que o departamento de TI gerencie centralmente os datasets (modelos de dados) enquanto os analistas criam seus próprios relatórios conectados a esses datasets. Como isso é habilitado?",
+      "question_en": "A company wants the IT department to centrally manage data sets (data models) while analysts create their own reports connected to these data sets. How is this enabled?",
       "options_en": [
-        "Usando o modo DirectQuery em todos os relatórios",
-        "Habilitando 'Conjuntos de Dados Compartilhados' (Shared Datasets / Live Connection) — analistas conectam relatórios novos a datasets publicados no Service",
-        "Exportando os dados para Excel e compartilhando com os analistas",
-        "Usando Power BI Embedded para cada analista"
+        "Using DirectQuery mode in all reports",
+        "Enabling 'Shared Datasets / Live Connection' — analysts connect new reports to datasets published on the Service",
+        "Exporting data to Excel and sharing with analysts",
+        "Using Power BI Embedded for each analyst"
       ],
-      "explanation_en": "Live Connection para datasets do Service (Shared Datasets) permite que analistas criem relatórios conectados a datasets gerenciados centralmente, sem precisar recriar o modelo. Uma única fonte de verdade para todos os relatórios."
+      "explanation_en": "Live Connection for Service datasets (Shared Datasets) allows analysts to create reports connected to centrally managed datasets, without having to recreate the model. A single source of truth for all reports."
     },
     {
       "question": "O que é 'Row-Level Security Dinâmica' (Dynamic RLS) e qual é a principal diferença para o RLS Estático?",
@@ -13750,14 +13750,14 @@ const questionBank = {
         "RLS Estático suporta tabelas maiores que o Dinâmico"
       ],
       "explanation_pt": "RLS Estático: regras com valores fixos (ex: [Região] = 'Sul') — requer atualização manual quando mudam papéis. RLS Dinâmico: usa USERPRINCIPALNAME() para comparar com uma tabela de mapeamento usuário-permissão, escalando automaticamente.",
-      "question_en": "O que é 'Row-Level Security Dinâmica' (Dynamic RLS) e qual é a principal diferença para o RLS Estático?",
+      "question_en": "What is 'Dynamic Row-Level Security' (Dynamic RLS) and what is the main difference to Static RLS?",
       "options_en": [
-        "RLS Dinâmico usa filtros que mudam com o horário do dia; Estático usa filtros fixos",
-        "RLS Dinâmico usa funções DAX como USERPRINCIPALNAME() para filtrar dados baseado no usuário logado; Estático usa valores fixos na regra que exigem manutenção manual quando usuários mudam",
-        "RLS Dinâmico é mais rápido que o Estático",
-        "RLS Estático suporta tabelas maiores que o Dinâmico"
+        "Dynamic RLS uses filters that change with the time of day; Static uses fixed filters",
+        "Dynamic RLS uses DAX functions like USERPRINCIPALNAME() to filter data based on the logged in user; Static uses fixed values ​​in rule that disable maintenance manual when users change",
+        "Dynamic RLS is faster than Static",
+        "Static RLS supports larger tables than Dynamic"
       ],
-      "explanation_en": "RLS Estático: regras com valores fixos (ex: [Região] = 'Sul') — requer atualização manual quando papéis mudam. RLS Dinâmico: usa USERPRINCIPALNAME() para comparar com uma tabela de mapeamento usuário-permissão, escalando automaticamente."
+      "explanation_en": "Static RLS: rules with fixed values ​​(e.g. [Region] = 'South') — requires manual updating when roles change. Dynamic RLS: uses USERPRINCIPALNAME() to compare with a user-permission mapping table, automatically scaling."
     },
     {
       "question": "Qual é o papel do 'Administrador de Capacidade' (Capacity Administrator) no Power BI Premium?",
@@ -13777,14 +13777,14 @@ const questionBank = {
         "Gerenciar as credenciais de todos os gateways"
       ],
       "explanation_pt": "O Administrador de Capacidade gerencia a infraestrutura de uma capacidade Premium específica: quais espaços de trabalho têm essa capacidade, configurações de desempenho, cargas de trabalho habilitadas e monitoramento via aplicativo de métricas.",
-      "question_en": "Qual é o papel do 'Administrador de Capacidade' (Capacity Administrator) no Power BI Premium?",
+      "question_en": "What is the role of 'Capacity Administrator' in Power BI Premium?",
       "options_en": [
-        "Gerenciar licenças Pro de todos os usuários do tenant",
-        "Controlar recursos da capacidade Premium: atribuir workspaces, configurar limites de memória, monitorar uso e gerenciar cargas de trabalho (Paginated Reports, AI, Dataflows)",
-        "Publicar relatórios em todos os workspaces do tenant",
-        "Gerenciar as credenciais de todos os gateways"
+        "Manage Pro licenses for all users in the tenant",
+        "Control Premium capacity resources: reserve workspaces, configure memory limits, monitor usage, and manage workloads (Paginated Reports, AI, Data Flows)",
+        "Publish reports to all tenant workspaces",
+        "Manage credentials for all gateways"
       ],
-      "explanation_en": "O Administrador de Capacidade gerencia a infraestrutura de uma capacidade Premium específica: quais workspaces estão nessa capacidade, configurações de performance, cargas de trabalho habilitadas e monitoramento via app de métricas."
+      "explanation_en": "The Capacity Administrator manages the infrastructure for a specific Premium capacity: which workspaces have that capacity, performance settings, enabled workloads, and monitoring via the metrics app."
     },
     {
       "question": "Ao configurar 'Atualização Incremental' em um dataset, quais dois parâmetros do Power Query são obrigatórios?",
@@ -13804,14 +13804,14 @@ const questionBank = {
         "PeriodStart e PeriodEnd"
       ],
       "explanation_pt": "A Atualização Incremental requer as parâmetros do Power Query chamadas exatamente 'RangeStart' e 'RangeEnd' do tipo DateTime. O Power BI os usa para definir as partições e filtrar quais dados recarregar.",
-      "question_en": "Ao configurar 'Atualização Incremental' em um dataset, quais dois parâmetros do Power Query são obrigatórios?",
+      "question_en": "When configuring 'Incremental Refresh' on a dataset, which two Power Query settings are mandatory?",
       "options_en": [
-        "StartDate e EndDate (ou RangeStart e RangeEnd)",
-        "MinDate e MaxDate",
-        "DateFrom e DateTo",
-        "PeriodStart e PeriodEnd"
+        "StartDate and EndDate (or RangeStart and RangeEnd)",
+        "MinDate and MaxDate",
+        "DateFrom and DateTo",
+        "PeriodStart and PeriodEnd"
       ],
-      "explanation_en": "A Atualização Incremental requer os parâmetros do Power Query chamados exatamente 'RangeStart' e 'RangeEnd' do tipo DateTime. O Power BI os usa para definir as partições e filtrar quais dados recarregar."
+      "explanation_en": "Incremental Update requires Power Query parameters named exactly 'RangeStart' and 'RangeEnd' of type DateTime. Power BI uses them to define partitions and filter which data to reload."
     },
     {
       "question": "Qual é a diferença entre 'Dataset' e 'Dataflow' no Power BI Service?",
@@ -13831,14 +13831,14 @@ const questionBank = {
         "Os fluxos de dados são exclusivos do Power BI Premium; Conjuntos de dados disponíveis estão no Pro"
       ],
       "explanation_pt": "Os fluxos de dados são a camada ETL no Service (equivalente ao Power Query), produzindo tabelas de dados que podem ser consumidas por múltiplos conjuntos de dados. Conjuntos de dados são modelos analíticos com relacionamentos, DAX e RLS usados ​​pelos relatórios.",
-      "question_en": "Qual é a diferença entre 'Dataset' e 'Dataflow' no Power BI Service?",
+      "question_en": "What is the difference between 'Dataset' and 'Dataflow' in Power BI Service?",
       "options_en": [
-        "São termos diferentes para a mesma coisa",
-        "Dataflow: camada de preparação/transformação de dados (ETL) que produz tabelas reutilizáveis; Dataset: modelo de dados com relacionamentos, medidas DAX e RLS, usado diretamente pelos relatórios",
-        "Dataset contém os dados brutos; Dataflow contém as medidas DAX",
-        "Dataflows são exclusivos do Power BI Premium; Datasets estão disponíveis no Pro"
+        "They are different terms for the same thing",
+        "Dataflow: data preparation/transformation layer (ETL) that produces reusable tables; Dataset: Data model with relationships, DAX and RLS measures, used directly by reports",
+        "Dataset contains the raw data; Dataflow contains DAX measures",
+        "Dataflows are exclusive to Power BI Premium; Available datasets are in Pro"
       ],
-      "explanation_en": "Dataflows são a camada ETL no Service (equivalente ao Power Query), produzindo tabelas de dados que podem ser consumidas por múltiplos datasets. Datasets são modelos analíticos com relacionamentos, DAX e RLS usados pelos relatórios."
+      "explanation_en": "Dataflows are the ETL layer in the Service (equivalent to Power Query), producing data tables that can be consumed by multiple datasets. Datasets are analytical models with relationships, DAX, and RLS used by reports."
     },
     {
       "question": "Um desenvolvedor precisa editar um dataset publicado no Power BI Service (adicionar medidas, alterar relacionamentos) sem usar o Power BI Desktop. Qual ferramenta permite isso via Endpoint XMLA?",
@@ -13858,14 +13858,14 @@ const questionBank = {
         "Power BI Premium apenas via interface web"
       ],
       "explanation_pt": "O Tabular Editor (versão 2 gratuita ou versão 3 paga) conecta ao Endpoint XMLA do Power BI Premium e permite editar o modelo tabular diretamente no Serviço: adicionar medidas, tabelas, colunas calculadas, grupos de cálculo, etc.",
-      "question_en": "Um desenvolvedor precisa editar um dataset publicado no Power BI Service (adicionar medidas, alterar relacionamentos) sem usar o Power BI Desktop. Qual ferramenta permite isso via Endpoint XMLA?",
+      "question_en": "A developer needs to edit a published dataset in Power BI Service (add measures, change relationships) without using Power BI Desktop. Which tool allows this via Endpoint XMLA?",
       "options_en": [
         "Power BI Report Builder",
-        "Tabular Editor (ferramenta de terceiros)",
-        "DAX Studio apenas para consultas, não edição",
-        "Power BI Premium apenas via interface web"
+        "Tabular Editor (3rd party tool)",
+        "DAX Studio for consultation only, not editing",
+        "Power BI Premium via web interface only"
       ],
-      "explanation_en": "O Tabular Editor (versão 2 gratuita ou versão 3 paga) conecta ao Endpoint XMLA do Power BI Premium e permite editar o modelo tabular diretamente no Service: adicionar medidas, tabelas, colunas calculadas, grupos de cálculo, etc."
+      "explanation_en": "The Tabular Editor (free version 2 or paid version 3) connects to the Power BI Premium XMLA Endpoint and allows you to edit the tabular model directly in the Service: add measures, tables, calculated columns, calculation groups, etc."
     },
     {
       "question": "Como funciona o recurso 'Assinaturas de Email' (Email Subscriptions) no Power BI Service?",
@@ -13885,14 +13885,14 @@ const questionBank = {
         "Funciona apenas com relatórios paginados"
       ],
       "explanation_pt": "Assinaturas de Email enviam uma captura (snapshot) do relatório ou dashboard por email no local configurado. Podem incluir um link para o relatório ao vivo e apoiar filtros para personalizar o conteúdo enviado.",
-      "question_en": "Como funciona o recurso 'Assinaturas de Email' (Email Subscriptions) no Power BI Service?",
+      "question_en": "How does the 'Email Subscriptions' feature work in Power BI Service?",
       "options_en": [
-        "Enviam alertas apenas quando um valor ultrapassa um limite",
-        "Permitem que usuários ou administradores agendem o envio automático de capturas de relatórios ou dashboards por email em horários definidos",
-        "Substituem a necessidade de atualização agendada do dataset",
-        "Funcionam apenas com relatórios paginados"
+        "We only send alerts when a value exceeds a threshold",
+        "Allows users or administrators to schedule snapshots of reports or dashboards to be automatically sent via email at defined times",
+        "Replace the need to update the dataset schedule",
+        "Only works with paginated reports"
       ],
-      "explanation_en": "Assinaturas de Email enviam uma captura (snapshot) do relatório ou dashboard por email no horário configurado. Podem incluir um link para o relatório ao vivo e suportam filtros para personalizar o conteúdo enviado."
+      "explanation_en": "Email subscriptions send a snapshot of the report or dashboard via email to the configured location. They can include a link to the live report and support filters to personalize the content sent."
     },
     {
       "question": "Qual é o impacto de mover um workspace para uma Capacidade Power BI Premium?",
@@ -13912,14 +13912,14 @@ const questionBank = {
         "Os dados ficam armazenados no servidor local da empresa"
       ],
       "explanation_pt": "Premium habilitado no workspace: acesso para usuários sem Pro (apenas leitura), Deployment Pipelines, Relatórios Paginados, Dataflows com tabelas computadas e IA, XMLA Endpoint, até 48 atualizações/dia e maior capacidade de memória.",
-      "question_en": "Qual é o impacto de mover um workspace para uma Capacidade Power BI Premium?",
+      "question_en": "What is the impact of moving a workspace to a Power BI Premium capacity?",
       "options_en": [
-        "Todos os usuários do workspace ganham licença Pro automaticamente",
-        "O conteúdo do workspace pode ser acessado por usuários sem licença Pro, suporte a Relatórios Paginados, Dataflows com tabelas computadas, atualizações mais frequentes e recursos de IA",
-        "O workspace passa a ser público automaticamente",
-        "Os dados ficam armazenados no servidor local da empresa"
+        "All workspace users automatically gain a Pro license",
+        "Workspace content can be accessed by users without a Pro license, support for Paginated Reports, Dataflows with computed tables, more frequent updates and AI features",
+        "The workspace automatically becomes public",
+        "The data is stored on the company's local server"
       ],
-      "explanation_en": "Premium habilita no workspace: acesso para usuários sem Pro (apenas leitura), Deployment Pipelines, Relatórios Paginados, Dataflows com tabelas computadas e IA, XMLA Endpoint, até 48 atualizações/dia e maior capacidade de memória."
+      "explanation_en": "Premium enabled in the workspace: access for users without Pro (read only), Deployment Pipelines, Paginated Reports, Dataflows with computed tables and AI, XMLA Endpoint, up to 48 updates/day and greater memory capacity."
     },
     {
       "question": "Qual recurso permite automatizar ações no Power BI Service com base em eventos, como enviar um Teams message quando um dataset falha na atualização?",
@@ -13939,14 +13939,14 @@ const questionBank = {
         "Alertas de Dados"
       ],
       "explanation_pt": "O Power Automate tem conectores nativos para o Power BI que permitem criar fluxos automatizados acionados por eventos como: falha de atualização, atualização concluída, alerta de dado disparado, etc.",
-      "question_en": "Qual recurso permite automatizar ações no Power BI Service com base em eventos, como enviar um Teams message quando um dataset falha na atualização?",
+      "question_en": "Which feature allows you to automate actions in Power BI Service based on events, such as sending a Teams message when a dataset fails to refresh?",
       "options_en": [
         "Power BI Admin Portal → Automation",
-        "Power Automate integrado com conectores do Power BI",
+        "Power Automate integrated with Power BI connectors",
         "Power BI REST API diretamente via script",
-        "Alertas de Dados (Data Alerts)"
+        "Data Alerts"
       ],
-      "explanation_en": "O Power Automate tem conectores nativos para o Power BI que permitem criar fluxos automatizados acionados por eventos como: falha de atualização, refresh concluído, alerta de dado disparado, etc."
+      "explanation_en": "Power Automate has native connectors for Power BI that allow you to create automated flows triggered by events such as: update failure, update completed, data alert triggered, etc."
     },
     {
       "question": "O que é 'Lineage View' (Exibição de Linhagem) no Power BI Service e para que serve?",
@@ -13966,14 +13966,14 @@ const questionBank = {
         "Mostra o fluxo de dados entre tabelas dentro de um conjunto de dados"
       ],
       "explanation_pt": "A Lineage View (disponível em espaços de trabalho) mostra um diagrama mostrando como os dados fluem de fontes → fluxos de dados → conjuntos de dados → relatórios → painéis, ajudando a entender o impacto das mudanças em qualquer ponto da cadeia.",
-      "question_en": "O que é 'Lineage View' (Exibição de Linhagem) no Power BI Service e para que serve?",
+      "question_en": "What is 'Lineage View' in Power BI Service and what is it for?",
       "options_en": [
-        "Exibe o histórico de alterações em um relatório",
-        "Mostra graficamente as dependências entre fontes de dados, dataflows, datasets e relatórios, facilitando o impacto de análise de mudanças",
-        "Lista todos os usuários que acessaram um relatório",
-        "Mostra o fluxo de dados entre tabelas dentro de um dataset"
+        "Display change history in a report",
+        "Graphically shows dependencies between data sources, data flows, datasets, and reports, making impact analysis easier",
+        "Lists all users who have accessed a report",
+        "Shows data flow between tables within a dataset"
       ],
-      "explanation_en": "A Lineage View (disponível em workspaces) exibe um diagrama mostrando como os dados fluem de fontes → dataflows → datasets → relatórios → dashboards, ajudando a entender o impacto de mudanças em qualquer ponto da cadeia."
+      "explanation_en": "Lineage View (available in workspaces) displays a diagram showing how data flows from sources → data flows → datasets → reports → dashboards, helping you understand the impact of changes at any point in the chain."
     },
     {
       "question": "Em qual situação o uso do 'Power BI Report Server' (servidor local) é mais adequado em relação ao Power BI Service (nuvem)?",
@@ -13993,14 +13993,14 @@ const questionBank = {
         "Quando os relatórios precisam de atualização em tempo real"
       ],
       "explanation_pt": "O Power BI Report Server é uma versão on-premises para organizações com requisitos regulatórios ou de segurança que impedem o uso de serviços em nuvem. Tem menos recursos que o Power BI Service mas mantém os dados localmente.",
-      "question_en": "Em qual situação o uso do 'Power BI Report Server' (servidor local) é mais adequado em relação ao Power BI Service (nuvem)?",
+      "question_en": "In which situation is the use of 'Power BI Report Server' (on-premises server) more appropriate in relation to Power BI Service (cloud)?",
       "options_en": [
-        "Quando a empresa quer relatórios mais bonitos",
-        "Quando regulamentações ou políticas de segurança impedem que os dados saiam da rede interna da organização, exigindo hospedagem on-premises",
-        "Quando a empresa tem mais de 1.000 usuários",
-        "Quando os relatórios precisam de atualização em tempo real"
+        "When the company wants more beautiful reports",
+        "When security regulations or policies prevent data from leaving the organization's internal network, requiring on-premises hosting",
+        "When the company has more than 1,000 users",
+        "When reports need real-time updating"
       ],
-      "explanation_en": "O Power BI Report Server é a versão on-premises para organizações com requisitos regulatórios ou de segurança que impedem o uso de serviços em nuvem. Tem menos recursos que o Power BI Service mas mantém os dados localmente."
+      "explanation_en": "Power BI Report Server is an on-premises version for organizations with regulatory or security requirements that prevent the use of cloud services. It has fewer features than Power BI Service but keeps data locally."
     },
     {
       "question": "Você precisa configurar o acesso de um analista em um Workspace no Power BI Service. Ele deve ter permissões para publicar novos relatórios, editar modelos e atualizar dados, mas não deve ter direitos para alterar membros do Workspace, modificar permissões de segurança ou publicar Aplicativos (Apps) corporativos. Qual papel (Role) atribuir?",
@@ -14020,14 +14020,14 @@ const questionBank = {
         "Leitor (Visualizador)"
       ],
       "explanation_pt": "O papel 'Contribuidor' é ideal para criadores e analistas técnicos de relatórios. Ele concede permissões completas de desenvolvimento e publicação de conteúdo no workspace, mas impede ações administrativas como gerenciar o acesso a membros, alterar papéis de workspace ou criar/publicar Apps (que é um direito de Administradores e Membros).",
-      "question_en": "Você precisa configurar o acesso de um analista em um Workspace no Power BI Service. Ele deve ter permissões para publicar novos relatórios, editar modelos e atualizar dados, mas não deve ter direitos para alterar membros do Workspace, modificar permissões de segurança ou publicar Aplicativos (Apps) corporativos. Qual papel (Role) atribuir?",
+      "question_en": "You need to configure an analyst's access to a Workspace in Power BI Service. They must have permissions to publish new reports, edit models, and update data, but they must not have rights to change Workspace members, modify security permissions, or publish enterprise applications (Apps). What role do you expect?",
       "options_en": [
         "Administrador (Admin)",
         "Membro (Member)",
         "Contribuidor (Contributor)",
         "Leitor (Viewer)"
       ],
-      "explanation_en": "O papel 'Contribuidor' (Contributor) é ideal para criadores e analistas técnicos de relatórios. Ele concede permissões completas de desenvolvimento e publicação de conteúdo no workspace, mas impede ações administrativas como gerenciar acesso a membros, alterar papéis de workspace ou criar/publicar Apps (que é um direito de Administradores e Membros)."
+      "explanation_en": "The 'Contributor' role is ideal for technical report creators and analysts. It grants full content development and publishing permissions to the workspace, but prevents administrative actions such as managing member access, changing workspace roles, or creating/publishing Apps (which is an Admin and Member right)."
     },
     {
       "question": "O recurso de 'Audiências de Aplicativo' (App Audiences) no Power BI Service permite que criadores realizem qual ação específica ao distribuir conteúdo corporativo?",
@@ -14047,14 +14047,14 @@ const questionBank = {
         "Limitar o acesso apenas para usuários com celulares homologados"
       ],
       "explanation_pt": "A funcionalidade de Audiências em Aplicativos do Power BI permite criar subgrupos de distribuição dentro de um único App publicado no Serviço. Você pode definir que a Audiência A (Diretores) veja todas as páginas do relatório, enquanto a Audiência B (Vendedores) veja apenas páginas selecionadas, evitando espaços de trabalho e aplicativos duplicados.",
-      "question_en": "O recurso de 'Audiências de Aplicativo' (App Audiences) no Power BI Service permite que criadores realizem qual ação específica ao distribuir conteúdo corporativo?",
+      "question_en": "The 'App Audiences' feature in Power BI Service allows creators to take which specific action when distributing enterprise content?",
       "options_en": [
-        "Acompanhar estatísticas de acesso e audiência de visualização do aplicativo em tempo real",
-        "Criar diferentes caminhos de acesso dentro do mesmo Aplicativo, determinando quais páginas, relatórios ou painéis estarão visíveis ou ocultos para diferentes grupos de usuários do AD",
-        "Converter relatórios interativos em transmissões de vídeo ao vivo",
-        "Limitar o acesso apenas para usuários com celulares homologados"
+        "Monitor access statistics and app viewing audience in real time",
+        "Create different access paths within the same Application, determining which pages, reports or dashboards will be displayed or hidden for different groups of AD users",
+        "Convert interactive reports to live video specific",
+        "Limit access only to users with approved cell phones"
       ],
-      "explanation_en": "A funcionalidade de Audiências em Aplicativos do Power BI permite criar subgrupos de distribuição dentro de um único App publicado no Service. Você pode definir que a Audiência A (Diretores) veja todas as páginas do relatório, enquanto a Audiência B (Vendedores) veja apenas páginas selecionadas, evitando duplicar workspaces e apps."
+      "explanation_en": "The Audiences functionality in Power BI Apps allows you to create distribution subgroups within a single App published on the Service. You can set Audience A (Directors) to see all report pages, while Audience B (Salespeople) to see only selected pages, avoiding duplicate workspaces and applications."
     },
     {
       "question": "Qual é a principal limitação técnica de segurança e arquitetura do Data Gateway configurado em 'Modo Pessoal' (Personal Mode) comparado ao 'Modo Padrão' (Standard/Enterprise Mode)?",
@@ -14074,14 +14074,14 @@ const questionBank = {
         "O modo Pessoal é limitado a conexões com arquivos TXT ou CSV locais"
       ],
       "explanation_pt": "O Personal Gateway roda sob a sessão do Windows do usuário que o instalou. Se o usuário deslogar da máquina, o gateway fecha. Além disso, ele não suporta DirectQuery e não pode ser compartilhado com outros membros da organização, sendo útil apenas para cenários individuais simples.",
-      "question_en": "Qual é a principal limitação técnica de segurança e arquitetura do Data Gateway configurado em 'Modo Pessoal' (Personal Mode) comparado ao 'Modo Padrão' (Standard/Enterprise Mode)?",
+      "question_en": "What is the main technical security and architectural limitation of the Data Gateway configured in 'Personal Mode' (Personal Mode) compared to 'Standard Mode' (Standard/Enterprise Mode)?",
       "options_en": [
-        "O modo Pessoal não suporta atualizações agendadas automáticas",
-        "O modo Pessoal executa como um aplicativo associado estritamente ao login de um usuário específico, não rodando como serviço em segundo plano, e não oferece suporte a conexões DirectQuery compartilhadas ou RLS no banco",
-        "O modo Pessoal requer licenciamento Premium de capacidade",
-        "O modo Pessoal é limitado a conexões com arquivos TXT ou CSV locais"
+        "Personal mode does not support automatic scheduled updates",
+        "Personal mode runs as an application associated with a specific user's login, does not run as a background service, and does not support shared DirectQuery connections or RLS in the database",
+        "Personal mode requires Premium capacity licensing",
+        "Personal mode is limited to connections to local TXT or CSV files"
       ],
-      "explanation_en": "O Personal Gateway roda sob a sessão do Windows do usuário que o instalou. Se o usuário deslogar da máquina, o gateway fecha. Além disso, ele não suporta DirectQuery e não pode ser compartilhado com outros membros da organização, sendo útil apenas para cenários individuais simples."
+      "explanation_en": "Personal Gateway runs under the Windows session of the user who installed it. If the user logs out of the machine, the gateway closes. Additionally, it does not support DirectQuery and cannot be shared with other members of the organization, making it only useful for simple one-on-one scenarios."
     },
     {
       "question": "Qual o limite máximo diário de atualizações agendadas (Scheduled Refresh) permitido pelo Power BI Service para um conjunto de dados residente em um Workspace compartilhado de licença Pro clássica, comparado a um dataset em capacidade Premium?",
@@ -14101,14 +14101,14 @@ const questionBank = {
         "Não há limites diários de atualização para nenhum tipo de licença corporativa"
       ],
       "explanation_pt": "Conjuntos de dados sob licenças compartilhadas padrão do Power BI Pro podem ser atualizados automaticamente até 8 vezes ao dia. Ao migrar o modelo para um workspace contendo recursos do Power BI Premium (seja capacidade dedicada ou Premium por Usuário - PPU), o limite é ampliado para até 48 atualizações diárias agendadas.",
-      "question_en": "Qual o limite máximo diário de atualizações agendadas (Scheduled Refresh) permitido pelo Power BI Service para um conjunto de dados residente em um Workspace compartilhado de licença Pro clássica, comparado a um dataset em capacidade Premium?",
+      "question_en": "What is the maximum daily scheduled refresh limit (Scheduled Refresh) allowed by the Power BI Service for a dataset residing in a classic Pro license Shared Workspace, compared to a dataset in Premium capacity?",
       "options_en": [
-        "8 vezes ao dia para Pro; 48 vezes ao dia para Premium",
-        "1 vez ao dia para Pro; 8 vezes ao dia para Premium",
-        "10 vezes ao dia para Pro; Atualização contínua infinita para Premium",
-        "Não há limites diários de atualização para nenhum tipo de licença corporativa"
+        "8 times a day for Pro; 48 times a day for Premium",
+        "1 time per day for Pro; 8 times a day for Premium",
+        "10 times a day for Pro; Infinite continuous upgrade to Premium",
+        "There are no daily update limits for any type of enterprise license"
       ],
-      "explanation_en": "Conjuntos de dados sob licenças compartilhadas padrão do Power BI Pro podem ser atualizados automaticamente até 8 vezes ao dia. Ao migrar o modelo para um workspace contendo recursos do Power BI Premium (seja capacidade dedicada ou Premium por Usuário - PPU), o limite é ampliado para até 48 atualizações diárias agendadas."
+      "explanation_en": "Datasets under standard Power BI Pro shared licenses can be automatically updated up to 8 times a day. When migrating the model to a workspace containing Power BI Premium resources (either dedicated capacity or Premium Per User - PPU), the limit is increased to up to 48 daily scheduled updates."
     },
     {
       "question": "Em um pipeline de implantação de ciclo de vida (Deployment Pipelines) no Power BI Service, quais são as três etapas padrão recomendadas e quais artefatos analíticos podem ser promovidos entre essas fases?",
@@ -14128,14 +14128,14 @@ const questionBank = {
         "Desenho → Aprovação → Arquivamento; Apoio apenas medidas organizacionais"
       ],
       "explanation_pt": "Os Deployment Pipelines criam três ambientes sequenciais no Serviço: Desenvolvimento (para novos recursos), Teste (para validação e RLS) e Produção (para consumo final). Ele gerencia a migração controlada de conjuntos de dados, relatórios, dashboards e fluxos de dados entre espaços de trabalho irmãos mapeados para cada etapa.",
-      "question_en": "Em um pipeline de implantação de ciclo de vida (Deployment Pipelines) no Power BI Service, quais são as três etapas padrão recomendadas e quais artefatos analíticos podem ser promovidos entre essas fases?",
+      "question_en": "In a lifecycle deployment pipeline (Deployment Pipelines) in Power BI Service, what are the three recommended standard steps, and which analytics tutorials can be promoted between these phases?",
       "options_en": [
         "Início → Teste → Fim; Suporta apenas relatórios paginados",
-        "Desenvolvimento → Teste → Produção; Suporta a transição de conjuntos de dados (datasets), relatórios, painéis (dashboards) e fluxos de dados (dataflows)",
+        "Development → Test → Production; Supports the transition of datasets, reports, dashboards and dataflows",
         "Local → Nuvem → Externo; Suporta apenas arquivos .pbix brutos",
         "Desenho → Aprovação → Arquivamento; Suporta apenas métricas organizacionais"
       ],
-      "explanation_en": "Os Deployment Pipelines criam três ambientes sequenciais no Service: Desenvolvimento (para novos recursos), Teste (para validação e RLS) e Produção (para consumo final). Ele gerencia a migração controlada de Datasets, Reports, Dashboards e Dataflows entre workspaces irmãos mapeados para cada etapa."
+      "explanation_en": "Deployment Pipelines create three sequential environments in the Service: Development (for new features), Test (for validation and RLS), and Production (for final consumption). It manages the controlled migration of datasets, reports, dashboards, and data flows between sibling workspaces mapped to each step."
     },
     {
       "question": "Quando você aplica um Rótulo de Sensibilidade (Sensitivity Label) configurado com políticas de proteção e criptografia corporativas a um relatório do Power BI, o que ocorre quando um usuário faz o download desse relatório ou exporta seus dados para Excel, PDF ou PowerPoint?",
@@ -14155,14 +14155,14 @@ const questionBank = {
         "O rótulo atua apenas na interface web, não afetando arquivos exportados"
       ],
       "explanation_pt": "A integração com o Microsoft Purview garante conformidade e segurança ponta a ponta. Se um relatório possui rótulo 'Confidencial', qualquer exportação (PDF, PPTX ou arquivos de dados do Excel) carregará a marca d'água e aplicará a criptografia de arquivos do Office, exigindo autenticação do usuário para leitura.",
-      "question_en": "Quando você aplica um Rótulo de Sensibilidade (Sensitivity Label) configurado com políticas de proteção e criptografia corporativas a um relatório do Power BI, o que ocorre quando um usuário faz o download desse relatório ou exporta seus dados para Excel, PDF ou PowerPoint?",
+      "question_en": "When you apply a Sensitivity Label configured with corporate protection and encryption policies to a Power BI report, what happens when a user downloads that report or exports their data to Excel, PDF, or PowerPoint?",
       "options_en": [
-        "A segurança é removida para facilitar a visualização local no Office",
-        "O rótulo e as políticas de proteção criptográfica integradas do Microsoft Purview / Information Protection são mantidos e continuam protegendo o arquivo resultante exportado",
-        "A exportação de dados é bloqueada e o arquivo .pbix local é deletado por segurança",
-        "O rótulo apenas atua na interface web, não afetando arquivos exportados"
+        "Security is removed for easier local viewing in Office",
+        "Microsoft Purview/Information Protection's built-in cryptographic protection label and policies stop and continue protecting the resulting exported file",
+        "Data export is blocked and the local .pbix file is deleted for security",
+        "The label only works in the web interface and does not affect exported files"
       ],
-      "explanation_en": "A integração com o Microsoft Purview garante conformidade e segurança ponta a ponta. Se um relatório possui rótulo 'Confidencial', qualquer exportação (PDF, PPTX ou arquivos de dados do Excel) carregará a marca d'água e aplicará a criptografia de arquivos do Office, exigindo autenticação do usuário para leitura."
+      "explanation_en": "Integration with Microsoft Purview ensures end-to-end compliance and security. If a report has a 'Confidential' label, any export (PDF, PPTX or Excel data files) will carry the watermark and apply Office file encryption, requiring user authentication to read."
     },
     {
       "question": "Para publicar alterações de modelo de dados diretamente do Tabular Editor para o Power BI Service por meio do Ponto de Extremidade XMLA (XMLA Endpoint), qual configuração deve ser habilitada no portal de capacidade Premium corporativo?",
@@ -14182,14 +14182,14 @@ const questionBank = {
         "Ativar Principal de Serviço nas opções de desenvolvimento do Azure"
       ],
       "explanation_pt": "Por padrão, o Endpoint XMLA do Premium vem definido como Apenas Leitura (permitindo apenas ler metadados ou rodar consultas). Para permitir modificações de modelo, implemente diretamente ou crie grupos de design usando ferramentas externas (como Tabular Editor, ALM Toolkit), o XMLA Endpoint deve ser configurado como 'Ler/Gravar' (Read-Write).",
-      "question_en": "Para publicar alterações de modelo de dados diretamente do Tabular Editor para o Power BI Service por meio do Ponto de Extremidade XMLA (XMLA Endpoint), qual configuração deve ser habilitada no portal de capacidade Premium corporativo?",
+      "question_en": "To publish data model changes directly from Tabular Editor to Power BI Service via XMLA Endpoint, what setting must be enabled in the enterprise Premium capacity portal?",
       "options_en": [
         "XMLA Endpoint desativado",
         "XMLA Endpoint configurado como Apenas Leitura (Read Only)",
         "XMLA Endpoint configurado como Ler/Gravar (Read Write)",
-        "Ativar Principal de Serviço nas opções de desenvolvimento do Azure"
+        "Enable Service Principal in Azure development options"
       ],
-      "explanation_en": "Por padrão, o Endpoint XMLA do Premium vem definido como Apenas Leitura (permitindo apenas ler metadados ou rodar queries). Para permitir modificações de modelo, deploys diretos ou criação de grupos de cálculo usando ferramentas externas (como Tabular Editor, ALM Toolkit), o XMLA Endpoint deve ser configurado como 'Ler/Gravar' (Read-Write)."
+      "explanation_en": "By default, the Premium XMLA Endpoint is set to Read Only (allowing only to read metadata or run queries). To allow model modifications, directly deploy or create design groups using external tools (such as Tabular Editor, ALM Toolkit), the XMLA Endpoint must be configured as 'Read-Write'."
     },
     {
       "question": "Qual é a principal diferença de propósito arquitetural entre Relatórios Paginados (Paginated Reports) e Relatórios Interativos padrão do Power BI?",
@@ -14209,14 +14209,14 @@ const questionBank = {
         "Relatórios Paginados não utilizam o motor VertiPaq sob hipóteses alguma"
       ],
       "explanation_pt": "Relatórios Interativos (.pbix) limitam a rolagem vertical de tabelas e focam em interatividade visual em tela única. Relatórios paginados (.rdl) são otimizados para relatórios de tabelas 'pixel-perfect' (como faturas, extratos ou listas fiscais longas) que precisam de páginas incrivelmente perfeitas para impressão ou relatórios em anexo de e-mail.",
-      "question_en": "Qual é a principal diferença de propósito arquitetural entre Relatórios Paginados (Paginated Reports) e Relatórios Interativos padrão do Power BI?",
+      "question_en": "What is the main architectural purpose difference between standard Power BI Paginated Reports and Interactive Reports?",
       "options_en": [
-        "Relatórios Paginados são exclusivos para dispositivos móveis; Interativos para monitores desktop",
-        "Relatórios Interativos são focados em visualizações gráficas e exploração dinâmica de dados; Relatórios Paginados são desenvolvidos no Report Builder e focam em tabelas extensas e altamente formatadas para impressão ou geração de PDFs, onde as páginas se estendem verticalmente até exibir todas as linhas",
-        "Relatórios Paginados não aceitam conexões com bancos SQL locais; Interativos aceitam",
-        "Relatórios Paginados não utilizam o motor VertiPaq sob hipótese alguma"
+        "Paginated Reports are exclusive to mobile devices; Interactives for desktop monitors",
+        "Interactive Reports are focused on graphical visualizations and dynamic data exploration; Paginated Reports are developed in Report Builder and focus on extensive, highly formatted tables for printing or generating PDFs, where pages extend vertically to display all rows",
+        "Paginated Reports do not accept connections to local SQL databases; We accept interactives",
+        "Paginated Reports do not use the VertiPaq engine under any circumstances"
       ],
-      "explanation_en": "Interactive Reports (.pbix) limitam rolagem vertical de tabelas e focam em interatividade visual em tela única. Paginated Reports (.rdl) são otimizados para relatórios de tabelas 'pixel-perfect' (como faturas, extratos ou listas fiscais longas) que precisam quebrar páginas perfeitamente para impressão ou relatórios em anexo de email."
+      "explanation_en": "Interactive Reports (.pbix) limit vertical scrolling of tables and focus on visual interactivity on a single screen. Paginated reports (.rdl) are optimized for 'pixel-perfect' table reports (such as invoices, statements, or long tax lists) that require incredibly perfect pages for printing or email attachment reports."
     },
     {
       "question": "Ao tentar gerar um link público para compartilhamento de relatório usando 'Publicar na Web' (Publish to Web), um usuário recebe a mensagem de que a opção está cinza ou bloqueada. Onde essa permissão deve ser liberada?",
@@ -14236,14 +14236,14 @@ const questionBank = {
         "Nenhum console do Azure Active Directory da empresa"
       ],
       "explanation_pt": "Como 'Publicar na Web' criar links que não desativem autenticação (públicos na internet), é uma funcionalidade com alto risco de vazamento de dados desativados. Por isso, a liberação ou restrição deste recurso é gerenciada de forma centralizada pelo Administrador de TI no painel Admin Portal nas Configurações do Locatário.",
-      "question_en": "Ao tentar gerar um link público para compartilhamento de relatório usando 'Publicar na Web' (Publish to Web), um usuário recebe a mensagem de que a opção está cinza ou bloqueada. Onde essa permissão deve ser liberada?",
+      "question_en": "When trying to generate a public report sharing link using 'Publish to Web', a user receives a message that the option is grayed out or blocked. Where should this permission be released?",
       "options_en": [
-        "Nas configurações de propriedades da página atual no Power BI Desktop",
-        "Nas Configurações de Locatário (Tenant Settings) do Portal de Administração (Admin Portal) pelo Administrador de Power BI da empresa",
-        "Nas permissões de licença Pro do workspace de desenvolvimento",
-        "No console do Azure Active Directory da empresa"
+        "In the properties settings of the current page in Power BI Desktop",
+        "In the Tenant Settings of the Admin Portal by the company's Power BI Administrator",
+        "In development workspace Pro license permissions",
+        "No company Azure Active Directory console"
       ],
-      "explanation_en": "Como 'Publicar na Web' cria links que não exigem autenticação (públicos na internet), é uma funcionalidade com alto risco de vazamento de dados confidenciais. Por isso, a liberação ou restrição deste recurso é gerida de forma centralizada pelo Administrador de TI no painel Admin Portal nas Tenant Settings."
+      "explanation_en": "As 'Publish on the Web' creates links that do not disable authentication (public on the internet), it is a functionality with a high risk of deactivated data leakage. Therefore, the release or restriction of this resource is centrally managed by the IT Administrator in the Admin Portal panel in Tenant Settings."
     },
     {
       "question": "Você deseja criar uma automação que envie um email e notificação no celular para o Diretor Financeiro imediatamente e de forma exclusiva quando a taxa de inadimplência corporativa superar 5%. Qual recurso do Power BI Service deve ser utilizado?",
@@ -14263,14 +14263,14 @@ const questionBank = {
         "Escrever uma rotina em linguagem M acionada no update de dados"
       ],
       "explanation_pt": "Alertas de dados são recursos exclusivos do Power BI Service que atuam sobre cartões ou medidores definidos em Dashboards. Você pode definir a métrica, a regra de corte (ex: maior que 0,05) e a frequência de envio. Você também pode integrar os alertas com o Power Automate para disparar fluxos corporativos externos.",
-      "question_en": "Você deseja criar uma automação que envie um email e notificação no celular para o Diretor Financeiro imediatamente e de forma exclusiva quando a taxa de inadimplência corporativa superar 5%. Qual recurso do Power BI Service deve ser utilizado?",
+      "question_en": "You want to create an automation that sends an email and phone notification to the CFO immediately and exclusively when the corporate default rate exceeds 5%. Which Power BI service feature should be used?",
       "options_en": [
-        "Criar uma assinatura de email comum do relatório completo",
-        "Configurar um Alerta de Dados (Data Alert) associado a um visual de Cartão, Medidor (Gauge) ou KPI fixado em um Painel (Dashboard) corporativo",
-        "Mapear filtros de nível de relatório em uma exibição de aplicativo móvel",
-        "Escrever uma rotina em linguagem M acionada no refresh de dados"
+        "Create a common full report email signature",
+        "Configure a Data Alert associated with a Card, Gauge or KPI visual pinned to a corporate Dashboard",
+        "Map report-level filters to a mobile app view",
+        "Write a routine in M ​​language triggered on data update"
       ],
-      "explanation_en": "Alertas de dados são recursos exclusivos do Power BI Service que atuam sobre cards ou gauges fixados em Dashboards. Você pode definir a métrica, a regra de corte (ex: maior que 0.05) e a frequência de envio. Também pode integrar os alertas com o Power Automate para disparar fluxos externos corporativos."
+      "explanation_en": "Data alerts are exclusive features of the Power BI Service that act on cards or meters defined in Dashboards. You can define the metric, the cutoff rule (ex: greater than 0.05) and the sending frequency. You can also integrate alerts with Power Automate to trigger external enterprise flows."
     },
     {
       "question": "Para permitir que um analista de outra área da empresa crie seus próprios relatórios customizados no Power BI Desktop conectando-se diretamente a um Dataset central homologado e publicado em seu workspace, qual permissão específica do conjunto de dados deve ser atribuída a ele?",
@@ -14290,14 +14290,14 @@ const questionBank = {
         "Acesso de Gravação no modelo (Write)"
       ],
       "explanation_pt": "A permissão de 'Compilar' (Build) no dataset permite que os usuários criem novos relatórios baseados no modelo publicado (via Live Connection/DirectQuery). Isso evita que eles baixem arquivos locais brutos e mantenham as fontes de dados em um repositório central unificado.",
-      "question_en": "Para permitir que um analista de outra área da empresa crie seus próprios relatórios customizados no Power BI Desktop conectando-se diretamente a um Dataset central homologado e publicado em seu workspace, qual permissão específica do conjunto de dados deve ser atribuída a ele?",
+      "question_en": "To allow an analyst from another area of ​​the company to create their own customized reports in Power BI Desktop by connecting directly to a central Dataset approved and published in their workspace, what dataset-specific permission should they be assigned?",
       "options_en": [
-        "Acesso de Leitura simples (Read)",
-        "Permissão de Compilar/Construir (Build Permission)",
-        "Direito de Recompartilhamento avançado (Reshare)",
-        "Acesso de Gravação no modelo (Write)"
+        "Simple read access (Read)",
+        "Compile/Build Permission (Build Permission)",
+        "Advanced Reshare Right",
+        "Write Access to the model (Write)"
       ],
-      "explanation_en": "A permissão de 'Compilar' (Build) no dataset permite que usuários criem novos relatórios baseados no modelo publicado (via Live Connection/DirectQuery). Isso evita que eles baixem arquivos locais brutos e mantém as fontes de dados em um repositório central unificado."
+      "explanation_en": "The 'Build' permission on the dataset allows users to create new reports based on the published model (via Live Connection/DirectQuery). This prevents them from downloading raw local files and maintains data sources in a unified central repository."
     },
     {
       "question": "Qual é o principal valor administrativo da funcionalidade de 'Análise de Impacto' (Impact Analysis) disponível ao examinar a Linhagem de Dados (Lineage View) de um conjunto de dados?",
@@ -14317,14 +14317,14 @@ const questionBank = {
         "Criar cópias automáticas de backup seguro"
       ],
       "explanation_pt": "A Análise de Impacto varre o ecossistema corporativo do Power BI e mapeia quais relatórios e painéis (inclusive de outros espaços de trabalho) dependem desse conjunto de dados. Isso evita que atualizações estruturais de tabelas corrompam as previsões de outros analistas sem aviso prévio.",
-      "question_en": "Qual é o principal valor administrativo da funcionalidade de 'Análise de Impacto' (Impact Analysis) disponível ao examinar a Linhagem de Dados (Lineage View) de um conjunto de dados?",
+      "question_en": "What is the main administrative value of the 'Impact Analysis' functionality available when examining the Lineage View of a dataset?",
       "options_en": [
-        "Calcular se a velocidade das medidas DAX prejudica a performance da nuvem",
-        "Listar e analisar todos os relatórios, painéis e workspaces impactados se você alterar a estrutura, renomear colunas ou deletar aquele dataset específico, com a capacidade de notificar os proprietários afetados diretamente por email",
-        "Identificar anomalias e erros de dados importados",
-        "Criar automaticamente cópias de backup seguras"
+        "Calculate whether the speed of DAX measurements harms cloud performance",
+        "List and analyze all impacted reports, dashboards, and workspaces if you change the structure, rename columns, or delete that specific dataset, with the ability to notify those affected directly via email",
+        "identify anomalies and errors in imported data",
+        "Create automatic secure backup copies"
       ],
-      "explanation_en": "A Análise de Impacto varre o ecossistema corporativo do Power BI e mapeia quais relatórios e painéis (inclusive de outros workspaces) dependem daquele dataset. Isso evita que atualizações estruturais de tabelas corrompam visuais de outros analistas sem aviso prévio."
+      "explanation_en": "Impact Analysis scans the enterprise Power BI ecosystem and maps which reports and dashboards (including from other workspaces) depend on this dataset. This prevents structural table updates from corrupting other analysts' forecasts without prior notice."
     },
     {
       "question": "Um usuário quer fixar relatórios de alta prioridade ou painéis na página inicial (Home Page) do Power BI Service de todos os membros de seu workspace para acesso fácil e rápido. Qual recurso deve ser acionado pelo criador nas propriedades do item?",
@@ -14344,14 +14344,14 @@ const questionBank = {
         "Configurar assinaturas automáticas de hora em hora"
       ],
       "explanation_pt": "Ao marcar um conteúdo (relatório ou painel) como 'Destaque' nas opções avançadas, o Power BI Service posicionará esses recursos em destaque no topo do guia de boas-vindas do portal web de todos os usuários que possuem direitos de leitura sobre o workspace.",
-      "question_en": "Um usuário quer fixar relatórios de alta prioridade ou painéis na página inicial (Home Page) do Power BI Service de todos os membros de seu workspace para acesso fácil e rápido. Qual recurso deve ser acionado pelo criador nas propriedades do item?",
+      "question_en": "A user wants to pin high-priority reports or dashboards to the Power BI Service Home Page of all members of their workspace for quick and easy access. Which feature should be triggered by the creator in the item properties?",
       "options_en": [
-        "Mapear o item como Marcador global",
-        "Ativar a opção 'Destaque' (Featured / Feature Content) nas configurações do relatório/painel",
-        "Publicar o workspace como público no portal administrativo",
-        "Configurar assinaturas automáticas de hora em hora"
+        "Map item as Global Tag",
+        "Enable 'Featured' option in report/dashboard settings",
+        "Publish the workspace as public in the administrative portal",
+        "Set up automatic hourly subscriptions"
       ],
-      "explanation_en": "Ao marcar um conteúdo (relatório ou painel) como 'Destaque' (Feature Content) nas opções avançadas, o Power BI Service posicionará esse artefato em destaque no topo da guia de boas-vindas do portal web de todos os usuários que tiverem direitos de leitura sobre o workspace."
+      "explanation_en": "When you mark content (report or dashboard) as 'Featured' in advanced options, the Power BI Service will position those features prominently at the top of the web portal welcome guide for all users who have read rights to the workspace."
     },
     {
       "question": "Qual é o principal benefício de segurança ao utilizar um 'Principal de Serviço' (Service Principal / aplicativo registrado no Azure AD) para autenticar conexões locais corporativas no Data Gateway, em vez de usar as credenciais de um usuário específico?",
@@ -14371,14 +14371,14 @@ const questionBank = {
         "Elimine a necessidade física de instalar um software de gateway"
       ],
       "explanation_pt": "Usar o Service Principal cria uma identidade de nuvem sem dependência de usuários humanos. Credenciais de colaboradores expiram, desativam troca de senhas ou são inativadas no desligamento corporativo, interrompendo atualizações cruciais de relatórios. O Diretor de Serviço soluciona isso.",
-      "question_en": "Qual é o principal benefício de segurança ao utilizar um 'Principal de Serviço' (Service Principal / aplicativo registrado no Azure AD) para autenticar conexões locais corporativas no Data Gateway, em vez de usar as credenciais de um usuário específico?",
+      "question_en": "What is the main security benefit of using a 'Service Principal' (Azure AD registered Service Principal/application) to authenticate on-premises corporate connections to Data Gateway, rather than using a specific user's credentials?",
       "options_en": [
-        "Otimizar a compactação de dados no gateway",
-        "Eliminar a dependência de contas e senhas individuais de colaboradores, garantindo que as atualizações agendadas não falhem no futuro se o funcionário mudar de senha ou sair da empresa",
-        "Aumentar o limite diário de atualizações de 8 para 48",
-        "Eliminar a necessidade física de instalar um software de gateway"
+        "hidden data compression in the gateway",
+        "Eliminate dependence on individual employee accounts and passwords, ensuring that scheduled updates do not fail in the future if the employee changes their password or leaves the company",
+        "Increase daily update limit from 8 to 48",
+        "Eliminate the physical need to install gateway software"
       ],
-      "explanation_en": "Usar o Service Principal cria uma identidade de nuvem sem dependência de usuários humanos. Credenciais de colaboradores expiram, exigem troca de senhas ou são inativadas no desligamento corporativo, interrompendo refreshes cruciais de relatórios. O Service Principal soluciona isso."
+      "explanation_en": "Using Service Principal creates a cloud identity without dependency on human users. Employee credentials expire, disable password change, or are inactivated upon corporate shutdown, interrupting crucial reporting updates. The Service Director resolves this."
     },
     {
       "question": "Ao configurar a atualização agendada (Scheduled Refresh) no Power BI Service, quem recebe por padrão a notificação automática em caso de falhas na atualização dos dados?",
@@ -14398,14 +14398,14 @@ const questionBank = {
         "Nenhum e-mail é gerado para evitar a saturação das caixas de correio"
       ],
       "explanation_pt": "Por padrão, o Power BI envia o alerta de falha de atualização diretamente ao proprietário do conjunto de dados. Na interface de configuração de atualização, o proprietário pode marcar a caixa para expandir as notificações para outros usuários do espaço de trabalho ou grupos de segurança para gerenciamento de falhas corporativas.",
-      "question_en": "Ao configurar a atualização agendada (Scheduled Refresh) no Power BI Service, quem recebe por padrão a notificação automática em caso de falhas na atualização dos dados?",
+      "question_en": "When configuring scheduled refresh (Scheduled refresh) in Power BI Service, who receives automatic notification by default in case of data refresh failures?",
       "options_en": [
-        "Todos os visualizadores do aplicativo associado",
-        "O Proprietário do Dataset (usuário cujas credenciais configuram o refresh), com a opção de adicionar contatos ou grupos adicionais na interface",
-        "Todos os administradores da capacidade Premium corporativa",
-        "Nenhum email é gerado para evitar saturação de caixas de correio"
+        "All associated app viewers",
+        "The Dataset Owner (user whose credentials configure the update), with the option to add additional contacts or groups in the interface",
+        "All Enterprise Premium Capacity Admins",
+        "No emails are generated to avoid mailbox saturation"
       ],
-      "explanation_en": "Por padrão, o Power BI envia o alerta de falha de refresh diretamente ao proprietário do dataset. Na interface de configuração de atualização, o proprietário pode marcar a caixa para expandir as notificações para outros usuários do workspace ou grupos de segurança para gerenciamento de falhas corporativo."
+      "explanation_en": "By default, Power BI sends the update failure alert directly to the dataset owner. In the update configuration interface, the owner can check the box to expand notifications to other workspace users or security groups for enterprise fault management."
     },
     {
       "question": "Você planeja publicar um modelo de dados conectado localmente via Conexão Dinâmica (Live Connection) ao SQL Server Analysis Services (SSAS) Tabular para o Power BI Service. O que deve ser configurado obrigatoriamente para possibilitar as consultas aos dados?",
@@ -14425,14 +14425,14 @@ const questionBank = {
         "Ativar permissões de administrador de locatário para todos os usuários"
       ],
       "explanation_pt": "Conexões em DirectQuery ou Live Connection a servidores locais como SSAS ou SQL Server desabilitam o Data Gateway em modo Standard configurado na rede local para intermediar com segurança as requisições sob demanda recebidas do Power BI Service.",
-      "question_en": "Você planeja publicar um modelo de dados conectado localmente via Conexão Dinâmica (Live Connection) ao SQL Server Analysis Services (SSAS) Tabular para o Power BI Service. O que deve ser configurado obrigatoriamente para possibilitar as consultas aos dados?",
+      "question_en": "You plan to publish a data model locally connected via Live Connection to SQL Server Analysis Services (SSAS) Tabular for Power BI Service. What must be configured to enable data queries?",
       "options_en": [
-        "Instalar e configurar um Data Gateway (Gateway de Dados local) na rede corporativa com acesso ao servidor SSAS",
-        "Ativar o modo de armazenamento Duplo nas tabelas do modelo",
-        "Adicionar parâmetros de conexão dinâmica M",
-        "Ativar permissões de administrador de tenant para todos os usuários"
+        "Install and configure a Data Gateway on the corporate network with access to the SSAS server",
+        "Enable Dual storage mode in model tables",
+        "Add M dynamic connection parameters",
+        "Enable tenant admin permissions for all users"
       ],
-      "explanation_en": "Conexões em DirectQuery ou Live Connection a servidores locais como SSAS ou SQL Server exigem o Data Gateway em modo Standard configurado na rede local para intermediar com segurança as requisições sob demanda vindas do Power BI Service."
+      "explanation_en": "DirectQuery or Live Connection connections to local servers such as SSAS or SQL Server disable the Data Gateway in Standard mode configured on the local network to securely intermediate on-demand requests received from the Power BI Service."
     },
     {
       "question": "No Power BI Desktop, você precisa criar uma regra de Segurança em Nível de Linha (RLS) para o papel 'EUA_Clothing'. A regra deve limitar os dados das tabelas de vendas de forma que os usuários vejam apenas registros que possuam País/Região igual a 'United States' E categoria de produto igual a 'Clothing'. Qual expressão DAX deve ser definida na regra RLS da tabela?",
@@ -14452,14 +14452,14 @@ const questionBank = {
         "[CountryRegionName] = \"Estados Unidos\" || [ProductCategory] = \"Roupas\""
       ],
       "explanation_pt": "O operador lógico 'E' em DAX é representado por `&&`. Portanto, a expressão correta para importar que ambas as condições sejam específicas ao mesmo tempo é `&&`.",
-      "question_en": "No Power BI Desktop, você precisa criar uma regra de Segurança em Nível de Linha (RLS) para o papel 'EUA_Clothing'. A regra deve limitar os dados das tabelas de vendas de forma que os usuários vejam apenas registros que possuam País/Região igual a 'United States' E categoria de produto igual a 'Clothing'. Qual expressão DAX deve ser definida na regra RLS da tabela?",
+      "question_en": "In Power BI Desktop, you need to create a Row Level Security (RLS) rule for the 'USA_Clothing' role. The rule should limit sales table data so that users only see records that have Country/Region equal to 'United States' AND product category equal to 'Clothing'. Which DAX expression should be defined in the table's RLS rule?",
       "options_en": [
         "[CountryRegionName] = \"United States\" OR [ProductCategory] = \"Clothing\"",
         "[CountryRegionName] = \"United States\" , [ProductCategory] = \"Clothing\"",
         "[CountryRegionName] = \"United States\" && [ProductCategory] = \"Clothing\"",
         "[CountryRegionName] = \"United States\" || [ProductCategory] = \"Clothing\""
       ],
-      "explanation_en": "O operador lógico 'E' em DAX é representado por `&&`. Portanto, a expressão correta para impor que ambas as condições sejam estritamente verdadeiras ao mesmo tempo é `&&`."
+      "explanation_en": "The logical operator 'AND' in DAX is represented by `&&`. Therefore, the correct expression to import that both conditions are specific at the same time is `&&`."
     },
     {
       "question": "No Power BI Service, você precisa distribuir um aplicativo corporativo contendo 5 relatórios diferentes para a equipe de vendas e a de finanças. A equipe de finanças não deve ver os relatórios de vendas. Qual é a melhor prática administrativa?",
@@ -14479,14 +14479,14 @@ const questionBank = {
         "Utilização de gateways separados para cada relatório"
       ],
       "explanation_pt": "As Audiências de Aplicativos permitem personalizar a exibição do mesmo app. Você cria uma audiência de Vendas (ocultando páginas de finanças) e outra de Finanças (ocultando páginas de vendas), distribuindo tudo sob um único espaço de trabalho gerenciável.",
-      "question_en": "No Power BI Service, você precisa distribuir um aplicativo corporativo contendo 5 relatórios diferentes para a equipe de vendas e a de finanças. A equipe de finanças não deve ver os relatórios de vendas. Qual é a melhor prática administrativa?",
+      "question_en": "In Power BI Service, you need to distribute an enterprise application containing 5 different reports to the sales and finance team. The finance team should not check sales reports. What is the best administrative practice?",
       "options_en": [
         "Criar dois workspaces distintos e publicar dois aplicativos separados",
-        "Publicar um único Aplicativo e criar dois grupos de Audiência distintos, configurando a visibilidade de páginas de relatório específica para cada grupo",
-        "Configurar permissões de segurança RLS para cada página do relatório",
-        "Utilizar gateways separados para cada relatório"
+        "Publish a single app and create two different audience groups, configuring the display of specific report pages for each group",
+        "Configure RLS security settings for each report page",
+        "Using separate gateways for each report"
       ],
-      "explanation_en": "As Audiências de Aplicativos permitem personalizar a exibição do mesmo app. Você cria uma audiência de Vendas (ocultando páginas de finanças) e outra de Finanças (ocultando páginas de vendas), distribuindo tudo sob um único workspace gerenciável."
+      "explanation_en": "App Audiences allow you to customize the display of the same app. You create a Sales audience (hiding finance pages) and a Finance audience (hiding sales pages), distributing everything under a single manageable workspace."
     },
     {
       "question": "O seu relatório corporativo em capacidade Pro corporativa está agendado para atualizar às 08:00 todos os dias. Você percebe que a atualização ocasionalmente inicia às 08:15 ou 08:20. Por que essa discrepância ocorre?",
@@ -14506,14 +14506,14 @@ const questionBank = {
         "O gateway de dados local foi desligado"
       ],
       "explanation_pt": "Em espaços de trabalho Pro compartilhados, as atualizações concorrem por recursos globais na fila de processamento da Microsoft. A atualização inicia o mais próximo possível da hora agendada, mas pode haver pequenas variações de tempo.",
-      "question_en": "O seu relatório corporativo em capacidade Pro corporativa está agendado para atualizar às 08:00 todos os dias. Você percebe que a atualização ocasionalmente inicia às 08:15 ou 08:20. Por que essa discrepância ocorre?",
+      "question_en": "Your corporate report in Corporate Pro capacity is scheduled to update at 08:00 every day. You notice that the occasional update starts at 08:15 or 08:20. Why does this discrepancy occur?",
       "options_en": [
-        "O servidor de banco de dados atrasa o envio de dados",
-        "Em capacidades compartilhadas (Pro), a atualização agendada inicia conforme disponibilidade de recursos em fila na infraestrutura Microsoft, com uma margem de início de até 2 horas",
-        "A licença Pro restringe atualizações com precisão de minutos",
-        "O gateway de dados local foi desligado"
+        "Database server delays or sending data",
+        "In shared capabilities (Pro), the scheduled update starts depending on the availability of queued resources on the Microsoft infrastructure, with a start margin of up to 2 hours",
+        "Pro license restriction updated with minute accuracy",
+        "On-premises data gateway has been turned off"
       ],
-      "explanation_en": "Em workspaces Pro compartilhados, as atualizações concorrem por recursos globais em fila de processamento da Microsoft. A atualização inicia o mais próximo possível da hora agendada, mas pode haver pequenas variações de tempo."
+      "explanation_en": "In shared Pro workspaces, updates compete for global resources in the Microsoft processing queue. The update starts as close to the scheduled time as possible, but there may be slight timing variations."
     },
     {
       "question": "Como garantir alta disponibilidade e tolerância a falhas (failover) para o seu servidor de Gateway de Dados local corporativo que atende a dezenas de relatórios críticos da empresa?",
@@ -14533,14 +14533,14 @@ const questionBank = {
         "Habilitar o endpoint XMLA para gravação"
       ],
       "explanation_pt": "Clusters de gateways em múltiplos computadores físicos rodando o software gateway. Se um servidor falhar ou tiver sem conectividade, as atualizações são redirecionadas automaticamente para as demais máquinas ativas do cluster.",
-      "question_en": "Como garantir alta disponibilidade e tolerância a falhas (failover) para o seu servidor de Gateway de Dados local corporativo que atende a dezenas de relatórios críticos da empresa?",
+      "question_en": "How do you ensure high availability and failover for your on-premises Enterprise Data Gateway server serving critical company reporting shipments?",
       "options_en": [
-        "Duplicar o arquivo do gateway em várias pastas locais",
-        "Criar um Cluster de Gateways, adicionando múltiplos servidores físicos de gateway ao mesmo grupo administrativo",
-        "Mudar a conexão de todos os relatórios para Import sem gateway",
-        "Habilitar o endpoint XMLA em gravação"
+        "Duplicate the gateway file to multiple local folders",
+        "Create a Gateway Cluster by adding multiple physical gateway servers to the same administrative group",
+        "Change the connection of all reports to Import without a gateway",
+        "Enable the XMLA endpoint for recording"
       ],
-      "explanation_en": "Clusters de gateways unem múltiplos computadores físicos rodando o software gateway. Se um servidor falhar ou estiver sem conectividade, as atualizações são redirecionadas automaticamente para as demais máquinas ativas del cluster."
+      "explanation_en": "Clusters of gateways on multiple physical computers running the gateway software. If a server fails or has no connectivity, updates are automatically redirected to the other active machines in the cluster."
     },
     {
       "question": "Um usuário possui a função de 'Membro' (Member) em um workspace do Power BI Service. Qual ação administrativa ele pode realizar que um usuário com a função de 'Contribuidor' (Contributor) é bloqueado de fazer?",
@@ -14560,14 +14560,14 @@ const questionBank = {
         "Deletar painéis compostos por ele mesmo"
       ],
       "explanation_pt": "Os membros têm direitos de curadoria e compartilhamento de conteúdo. Eles podem publicar, atualizar e gerenciar o aplicativo do workspace, enquanto os colaboradores focam apenas no desenvolvimento do conteúdo técnico das tabelas e relatórios.",
-      "question_en": "Um usuário possui a função de 'Membro' (Member) em um workspace do Power BI Service. Qual ação administrativa ele pode realizar que um usuário com a função de 'Contribuidor' (Contributor) é bloqueado de fazer?",
+      "question_en": "A user has the 'Member' role in a Power BI Service workspace. What administrative action can he take that a user with the role of 'Contributor' (Contributor) would be blocked from doing?",
       "options_en": [
-        "Adicionar novos relatórios e editar modelos de dados existentes",
+        "New reports and edit existing data addition templates",
         "Atualizar dados manualmente e agendar refreshes",
-        "Compartilhar itens do workspace e publicar/atualizar o Aplicativo (App) do workspace",
+        "Share workspace items and publish/update the workspace App",
         "Deletar painéis criados por ele mesmo"
       ],
-      "explanation_en": "Membros têm direitos de curadoria e compartilhamento de conteúdo. Eles podem publicar, atualizar e gerenciar o Aplicativo do workspace, enquanto Contribuidores focam apenas no desenvolvimento do conteúdo técnico das tabelas e relatórios."
+      "explanation_en": "Members have rights to curate and share content. Eles podem publicar, atualizar e gerenciar o aplicativo do workspace, enquanto os colaboradores focam apenas no desenvolvimento do conteúdo técnico das tabelas e relatórios."
     },
     {
       "question": "Você precisa alterar a estrutura de dados de uma tabela central em seu dataset no Power BI Service. Como você avalia previamente quais relatórios e painéis da empresa serão afetados (e possivelmente quebrados) com essa alteração?",
@@ -14587,14 +14587,14 @@ const questionBank = {
         "Excluir o conjunto de dados e ver quem relatou erro"
       ],
       "explanation_pt": "A Análise de Impacto na Visualização de Linhagem exibe detalhadamente todos os artefatos de dados e relatórios dependentes desse conjunto de dados em múltiplos espaços de trabalho, gerando um mapa claro do impacto de mudanças estruturais.",
-      "question_en": "Você precisa alterar a estrutura de dados de uma tabela central em seu dataset no Power BI Service. Como você avalia previamente quais relatórios e painéis da empresa serão afetados (e possivelmente quebrados) com essa alteração?",
+      "question_en": "You need to change the data structure of a central table in your dataset in Power BI Service. How have you previously assessed which company reports and dashboards will be affected (and possibly broken) by this change?",
       "options_en": [
-        "Acessar o Performance Analyzer no Power BI Desktop",
-        "Exibir a Linhagem de Dados (Lineage View) no workspace e clicar em 'Análise de Impacto' (Impact Analysis) no dataset desejado",
-        "Enviar um email para todos os administradores do Tenant",
-        "Deletar o dataset e ver quem reporta erro"
+        "Access Performance Analyzer in Power BI Desktop",
+        "View the Data Lineage in the workspace and click 'Impact Analysis' on the desired dataset",
+        "Send an email to all Tenant admins",
+        "Delete the dataset and see who reported an error"
       ],
-      "explanation_en": "A Análise de Impacto na Visualização de Linhagem exibe detalhadamente todos os artefatos de dados e relatórios dependentes daquele dataset em múltiplos workspaces, gerando um mapa claro do impacto de mudanças estruturais."
+      "explanation_en": "Impact Analysis in Lineage Visualization displays in detail all data artifacts and reports dependent on this dataset across multiple workspaces, generating a clear map of the impact of structural changes."
     },
     {
       "question": "Como configurar para que a equipe de suporte de TI (e não apenas o proprietário do dataset) receba um email de notificação imediato se a atualização agendada de um dataset crítico falhar?",
@@ -14614,14 +14614,14 @@ const questionBank = {
         "Criar um alerta de dados no dashboard"
       ],
       "explanation_pt": "Nas configurações avançadas do conjunto de dados sob agendamento de atualização, há um campo específico para inserir e-mails de contatos adicionais que devem receber alertas em caso de falha de atualização.",
-      "question_en": "Como configurar para que a equipe de suporte de TI (e não apenas o proprietário do dataset) receba um email de notificação imediato se a atualização agendada de um dataset crítico falhar?",
+      "question_en": "How do I configure so that an IT support team (not just the dataset owner) receives an email notification immediately if a scheduled update of a critical dataset fails?",
       "options_en": [
-        "Mapear a TI como RLS administrativo",
-        "Adicionar os endereços de email da equipe ou grupos de email de TI nas configurações de notificação de falha de atualização do dataset nas opções do Service",
-        "Instalar o gateway na máquina da equipe de TI",
-        "Criar um alerta de dados no dashboard"
+        "Map IT as administrative RLS",
+        "Add IT team or email group email addresses to dataset update failure notification settings in Service options",
+        "Install the gateway on the IT team's machine",
+        "Create a data alert on the dashboard"
       ],
-      "explanation_en": "Nas configurações avançadas do dataset sob agendamento de refresh, há um campo específico para inserir emails de contatos adicionais que devem receber alertas em caso de falha de atualização."
+      "explanation_en": "In the advanced dataset settings under update schedule, there is a specific field to enter additional contact emails that should receive alerts in case of update failure."
     },
     {
       "question": "Ao exportar dados de um relatório corporativo protegido por um Rótulo de Sensibilidade (Sensitivity Label) 'Altamente Confidencial' para o Excel, qual comportamento de segurança ocorre no arquivo local gerado?",
@@ -14641,14 +14641,14 @@ const questionBank = {
         "O arquivo é excluído automaticamente após 5 minutos"
       ],
       "explanation_pt": "A integração do Power BI com o Microsoft Information Protection garante que rótulos e restrições criptográficas sejam herdados em qualquer exportação externa, mantendo a confidencialidade dos dados.",
-      "question_en": "Ao exportar dados de um relatório corporativo protegido por um Rótulo de Sensibilidade (Sensitivity Label) 'Altamente Confidencial' para o Excel, qual comportamento de segurança ocorre no arquivo local gerado?",
+      "question_en": "When exporting data from a corporate report protected by a 'Highly Confidential' Sensitivity Label to Excel, what security behavior occurs in the generated local file?",
       "options_en": [
-        "A criptografia é removida e qualquer pessoa pode ler os dados no Excel",
-        "O arquivo Excel herda o rótulo de sensibilidade e as políticas de proteção criptográficas integradas, exigindo autenticação do usuário para leitura",
-        "A exportação falha com erro de restrição de proxy",
-        "O arquivo é automaticamente excluído após 5 minutos"
+        "Encryption is removed and anyone can read the data in Excel",
+        "Excel file inherits sensitivity label and built-in cryptographic protection policies, requiring user authentication to read",
+        "A transmission failure with proxy restriction error",
+        "The file is automatically deleted after 5 minutes"
       ],
-      "explanation_en": "A integração do Power BI com o Microsoft Information Protection garante que rótulos e restrições criptográficas sejam herdados em qualquer exportação externa, mantendo a confidencialidade dos dados."
+      "explanation_en": "Power BI's integration with Microsoft Information Protection ensures that labels and cryptographic restrictions are inherited on any external exports, maintaining data confidentiality."
     },
     {
       "question": "Com o ponto de extremidade XMLA (XMLA Endpoint) configurado como Ler/Gravar (Read-Write) na capacidade Premium, qual ferramenta externa pode ser usada para implantar novas medidas e modelos tabulares diretamente na nuvem de forma síncrona?",
@@ -14668,17 +14668,18 @@ const questionBank = {
         "Automatização de energia"
       ],
       "explanation_pt": "O Tabular Editor conecta-se ao XMLA Endpoint do Service como se fosse um servidor do Analysis Services local, permitindo gravação e implantação sincronizada de metadados, medidas, tabelas calculadas e grupos de design.",
-      "question_en": "Com o ponto de extremidade XMLA (XMLA Endpoint) configurado como Ler/Gravar (Read-Write) na capacidade Premium, qual ferramenta externa pode ser usada para implantar novas medidas e modelos tabulares diretamente na nuvem de forma síncrona?",
+      "question_en": "With the XMLA Endpoint configured as Read-Write in Premium capacity, what external tool can be used to deploy new measures and tabular models directly to the cloud synchronously?",
       "options_en": [
         "DAX Studio",
         "Tabular Editor",
         "Power Query Editor",
         "Power Automate"
       ],
-      "explanation_en": "O Tabular Editor conecta-se ao XMLA Endpoint do Service como se fosse um servidor do Analysis Services local, permitindo gravação e implantação síncrona de metadados, medidas, tabelas calculadas e grupos de cálculo."
+      "explanation_en": "The Tabular Editor connects to the XMLA Service Endpoint as if it were a local Analysis Services server, enabling synchronous recording and deployment of metadata, measures, calculated tables, and design groups."
     }
   ]
 };
+
 
 // ============================================================
 //  STATE
