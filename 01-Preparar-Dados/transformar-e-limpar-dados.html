@@ -16,128 +16,326 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>transformar-e-limpar-dados</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; }
-        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; }
-        code { font-family: "Courier New", Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: var(--bg-main); color: var(--text-primary); }
+        .container { max-width: 800px; margin: auto; background: var(--surface-card); padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        pre { background-color: var(--bg-secondary); padding: 10px; border-radius: 5px; overflow-x: auto; }
+        code { font-family: "Courier New", Courier, monospace; background-color: var(--bg-secondary); padding: 2px 4px; border-radius: 3px; }
         img { max-width: 100%; height: auto; display: block; margin: 10px 0; }
         table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
+        th, td { border: 1px solid var(--border-color); padding: 8px; text-align: left; }
+        th { background-color: var(--bg-secondary); }
+    
+        
+        
+    
+        
+        
+        /* Settings Panel */
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        
+        /* Language Utilities */
+        [lang-content] { display: none; }
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
+        
+    
+        
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
+        
     
         /* Sidebar Styles */
-        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: #f4f4f4; }
+        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: var(--bg-main); color: var(--text-primary); }
         .layout-wrapper { display: flex; width: 100%; height: 100vh; }
-        .sidebar { width: 280px; background: #2c3e50; color: #ecf0f1; padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; }
-        .sidebar a { color: #ecf0f1; text-decoration: none; display: block; padding: 8px 0; }
-        .sidebar a:hover, .sidebar a.active { color: #3498db; font-weight: bold; }
-        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid #34495e; padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: #bdc3c7; }
-        .sidebar .back-btn { font-weight: 500; color: #ecf0f1; display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.15); background-color: rgba(255, 255, 255, 0.05); margin-bottom: 20px; }
+        .sidebar { width: 280px; background: var(--bg-secondary); color: var(--text-primary); padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; border-right: 1px solid var(--border-color); }
+        .sidebar a { color: var(--text-primary); text-decoration: none; display: block; padding: 8px 0; opacity: 0.8; }
+        .sidebar a:hover, .sidebar a.active { color: var(--primary-color); font-weight: bold; opacity: 1; }
+        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary); }
+        .sidebar .back-btn { font-weight: bold; color: #e74c3c; display: flex; align-items: center; gap: 5px; margin-bottom: 20px; }
         .sidebar .back-btn:hover { color: #c0392b; text-decoration: none; }
         .sidebar ul { list-style: none; padding: 0; margin: 0; }
-        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: #f4f4f4; }
-        .container { margin: 0 auto; max-width: 800px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: var(--bg-main); }
+        .container { margin: 0 auto; max-width: 900px; background: var(--surface-card); padding: 30px; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border-color); }
+        
+        /* Settings Panel */
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        
+        /* Language Utilities */
+        [lang-content] { display: none; }
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
         
     </style>
+    <link rel="stylesheet" href="../portal-style.css">
+    <script src="../portal-core.js?v=2"></script>
 </head>
 <body>
+    
+    <div class="settings-panel" id="settings-panel">
+      <button class="settings-btn" id="btn-lang" onclick="toggleLang()" title="Switch language / Alternar idioma">
+        <span class="btn-icon" id="lang-icon">🇧🇷</span>
+        <span id="lang-label">PT</span>
+      </button>
+      <button class="settings-btn" id="btn-theme" onclick="toggleTheme()" title="Toggle dark/light mode">
+        <span class="btn-icon" id="theme-icon">🌙</span>
+        <span id="theme-label">Dark</span>
+      </button>
+    </div>
     <div class="layout-wrapper">
         <aside class="sidebar">
-            <a href="../index.html" class="back-btn">🏠 Voltar ao Portal</a>
-            <h3>Navegacao</h3>
+            <a href="../index.html" class="back-btn">
+                <span lang-content="pt">&omacr; Voltar para Tela Principal</span>
+                <span lang-content="en">&omacr; Back to Main Portal</span>
+            </a>
+            <h3 lang-content="pt">Navegação</h3>
+            <h3 lang-content="en">Navigation</h3>
             <ul class="nav-links">
-                <li><a href="carregar-dados.html">Carregar Dados</a></li>
-                <li><a href="obter-dados-power-bi.html">Obter Dados Power Bi</a></li>
-                <li><a href="resumo.html">Resumo</a></li>
-                <li><a href="transformar-e-limpar-dados.html" class="active">Transformar E Limpar Dados</a></li>
+                <li><a href="carregar-dados.html">
+                <span lang-content="pt">Carregar Dados</span>
+                <span lang-content="en">Load Data</span>
+            </a></li>
+                <li><a href="obter-dados-power-bi.html">
+                <span lang-content="pt">Obter Dados Power Bi</span>
+                <span lang-content="en">Get Data Power BI</span>
+            </a></li>
+                <li><a href="resumo.html">
+                <span lang-content="pt">Resumo</span>
+                <span lang-content="en">Summary</span>
+            </a></li>
+                <li><a href="transformar-e-limpar-dados.html" class="active">
+                <span lang-content="pt">Transformar E Limpar Dados</span>
+                <span lang-content="en">Transform & Clean Data</span>
+            </a></li>
             </ul>
         </aside>
         <div class="content-area">
-    <div class="container">
-        <h1>🔧 Transformar e Limpar Dados com Power Query</h1>
-<p>Este módulo aborda a etapa de <strong>transformação</strong>, fundamental para garantir qualidade, consistência e estrutura do dataset.</p>
+    
+    
+    
+    
+    
+    
+    <div class="container"><h1 lang-content="pt">🔧 Transformar e Limpar Dados com Power Query</h1>
+<h1 lang-content="en">🔧 Transform and Clean Data with Power Query</h1>
+
+<p lang-content="pt">Este módulo aborda a etapa de <strong>transformação</strong>, fundamental para garantir qualidade, consistência e estrutura do dataset.</p>
+<p lang-content="en">This module covers the <strong>transformation</strong> step, essential to ensure quality, consistency, and structure of the dataset.</p>
+
 <hr />
-<h2>🔹 Categorias de Transformações</h2>
-<h3>✔ Estrutura</h3>
+
+<h2 lang-content="pt">🔹 Categorias de Transformações</h2>
+<h2 lang-content="en">🔹 Categories of Transformations</h2>
+
+<h3 lang-content="pt">✔ Estrutura</h3>
+<h3 lang-content="en">✔ Structure</h3>
 <ul>
-<li>Remover linhas  </li>
-<li>Remover colunas  </li>
-<li>Dividir colunas  </li>
-<li>Transpor dados  </li>
-<li>Agrupar por  </li>
+  <li lang-content="pt">Remover linhas  </li>
+  <li lang-content="en">Remove rows  </li>
+  <li lang-content="pt">Remover colunas  </li>
+  <li lang-content="en">Remove columns  </li>
+  <li lang-content="pt">Dividir colunas  </li>
+  <li lang-content="en">Split columns  </li>
+  <li lang-content="pt">Transpor dados  </li>
+  <li lang-content="en">Transpose data  </li>
+  <li lang-content="pt">Agrupar por  </li>
+  <li lang-content="en">Group by  </li>
 </ul>
-<h3>✔ Qualidade</h3>
+
+<h3 lang-content="pt">✔ Qualidade</h3>
+<h3 lang-content="en">✔ Quality</h3>
 <ul>
-<li>Remover duplicatas  </li>
-<li>Detectar e corrigir erros  </li>
-<li>Substituir valores  </li>
-<li>Preencher valores  </li>
+  <li lang-content="pt">Remover duplicatas  </li>
+  <li lang-content="en">Remove duplicates  </li>
+  <li lang-content="pt">Detectar e corrigir erros  </li>
+  <li lang-content="en">Detect and fix errors  </li>
+  <li lang-content="pt">Substituir valores  </li>
+  <li lang-content="en">Replace values  </li>
+  <li lang-content="pt">Preencher valores  </li>
+  <li lang-content="en">Fill values  </li>
 </ul>
-<h3>✔ Tipos de dados</h3>
+
+<h3 lang-content="pt">✔ Tipos de dados</h3>
+<h3 lang-content="en">✔ Data types</h3>
 <ul>
-<li>Conversão para inteiro, decimal, data, texto  </li>
-<li>Detecção automática x manual  </li>
+  <li lang-content="pt">Conversão para inteiro, decimal, data, texto  </li>
+  <li lang-content="en">Conversion to integer, decimal, date, text  </li>
+  <li lang-content="pt">Detecção automática x manual  </li>
+  <li lang-content="en">Automatic vs manual detection  </li>
 </ul>
+
 <hr />
-<h2>🔹 Ferramentas importantes</h2>
-<h3><strong>Column Profile</strong></h3>
-<p>Exibe estatísticas detalhadas:
+
+<h2 lang-content="pt">🔹 Ferramentas importantes</h2>
+<h2 lang-content="en">🔹 Important Tools</h2>
+
+<h3 lang-content="pt"><strong>Column Profile</strong></h3>
+<h3 lang-content="en"><strong>Column Profile</strong></h3>
+<p lang-content="pt">Exibe estatísticas detalhadas:
 - Valores distintos<br />
 - Valores vazios<br />
 - Mínimo/máximo<br />
 - Distribuição  </p>
-<h3><strong>Column Quality</strong></h3>
-<p>Mostra:
+<p lang-content="en">Displays detailed statistics:
+- Distinct values<br />
+- Empty values<br />
+- Minimum/maximum<br />
+- Distribution  </p>
+
+<h3 lang-content="pt"><strong>Column Quality</strong></h3>
+<h3 lang-content="en"><strong>Column Quality</strong></h3>
+<p lang-content="pt">Mostra:
 - Porcentagem válida<br />
 - Erros<br />
 - Valores vazios  </p>
-<h3><strong>Column Distribution</strong></h3>
-<p>Histograma por coluna  </p>
+<p lang-content="en">Shows:
+- Valid percentage<br />
+- Errors<br />
+- Empty values  </p>
+
+<h3 lang-content="pt"><strong>Column Distribution</strong></h3>
+<h3 lang-content="en"><strong>Column Distribution</strong></h3>
+<p lang-content="pt">Histograma por coluna  </p>
+<p lang-content="en">Histogram per column  </p>
+
 <hr />
-<h2>🔹 Mesclar Tabelas (JOIN)</h2>
-<p>Power Query suporta:</p>
+
+<h2 lang-content="pt">🔹 Mesclar Tabelas (JOIN)</h2>
+<h2 lang-content="en">🔹 Merge Tables (JOIN)</h2>
+
+<p lang-content="pt">Power Query suporta:</p>
+<p lang-content="en">Power Query supports:</p>
 <ul>
-<li>Left Outer (mais comum)  </li>
-<li>Right Outer  </li>
-<li>Inner  </li>
-<li>Full Outer  </li>
-<li>Anti Joins  </li>
+  <li lang-content="pt">Left Outer (mais comum)  </li>
+  <li lang-content="en">Left Outer (most common)  </li>
+  <li lang-content="pt">Right Outer  </li>
+  <li lang-content="en">Right Outer  </li>
+  <li lang-content="pt">Inner  </li>
+  <li lang-content="en">Inner  </li>
+  <li lang-content="pt">Full Outer  </li>
+  <li lang-content="en">Full Outer  </li>
+  <li lang-content="pt">Anti Joins  </li>
+  <li lang-content="en">Anti Joins  </li>
 </ul>
-<p>Aplicações típicas:
+<p lang-content="pt">Aplicações típicas:
 - Unir tabelas fato e dimensão<br />
 - Acrescentar parâmetros externos<br />
 - Substituir <em>VLOOKUP</em> do Excel  </p>
+<p lang-content="en">Typical applications:
+- Join fact and dimension tables<br />
+- Add external parameters<br />
+- Replace Excel <em>VLOOKUP</em>  </p>
+
 <hr />
-<h2>🔹 Anexar Tabelas (APPEND)</h2>
-<p>Usado para empilhar tabelas com <strong>mesma estrutura</strong>, como:</p>
+
+<h2 lang-content="pt">🔹 Anexar Tabelas (APPEND)</h2>
+<h2 lang-content="en">🔹 Append Tables (APPEND)</h2>
+
+<p lang-content="pt">Usado para empilhar tabelas com <strong>mesma estrutura</strong>, como:</p>
+<p lang-content="en">Used to stack tables with the <strong>same structure</strong>, such as:</p>
 <ul>
-<li>Múltiplos arquivos CSV de meses diferentes  </li>
-<li>Logs diários  </li>
-<li>Exportações de sistemas  </li>
+  <li lang-content="pt">Múltiplos arquivos CSV de meses diferentes  </li>
+  <li lang-content="en">Multiple CSV files from different months  </li>
+  <li lang-content="pt">Logs diários  </li>
+  <li lang-content="en">Daily logs  </li>
+  <li lang-content="pt">Exportações de sistemas  </li>
+  <li lang-content="en">System exports  </li>
 </ul>
+
 <hr />
-<h2>🔹 Query Folding</h2>
-<p>Folding é quando o Power Query <strong>empurra transformações para a fonte de dados</strong>.</p>
-<p>Transformações que geralmente mantêm folding:</p>
+
+<h2 lang-content="pt">🔹 Query Folding</h2>
+<h2 lang-content="en">🔹 Query Folding</h2>
+
+<p lang-content="pt">Folding é quando o Power Query <strong>empurra transformações para a fonte de dados</strong>.</p>
+<p lang-content="en">Folding is when Power Query <strong>pushes transformations to the data source</strong>.</p>
+
+<p lang-content="pt">Transformações que geralmente mantêm folding:</p>
+<p lang-content="en">Transformations that usually preserve folding:</p>
 <ul>
-<li>Filtrar linhas  </li>
-<li>Selecionar colunas  </li>
-<li>Agrupar  </li>
-<li>Join  </li>
-<li>Alterar tipos  </li>
+  <li lang-content="pt">Filtrar linhas  </li>
+  <li lang-content="en">Filter rows  </li>
+  <li lang-content="pt">Selecionar colunas  </li>
+  <li lang-content="en">Select columns  </li>
+  <li lang-content="pt">Agrupar  </li>
+  <li lang-content="en">Group  </li>
+  <li lang-content="pt">Join  </li>
+  <li lang-content="en">Join  </li>
+  <li lang-content="pt">Alterar tipos  </li>
+  <li lang-content="en">Change types  </li>
 </ul>
-<p>Transformações que quebram folding:</p>
+
+<p lang-content="pt">Transformações que quebram folding:</p>
+<p lang-content="en">Transformations that break folding:</p>
 <ul>
-<li>Colunas personalizadas complexas  </li>
-<li>Passos que exigem processamento local  </li>
+  <li lang-content="pt">Colunas personalizadas complexas  </li>
+  <li lang-content="en">Complex custom columns  </li>
+  <li lang-content="pt">Passos que exigem processamento local  </li>
+  <li lang-content="en">Steps requiring local processing  </li>
 </ul>
+
 <hr />
-<h2>📚 Links Oficiais</h2>
+
+<h2 lang-content="pt">📚 Links Oficiais</h2>
+<h2 lang-content="en">📚 Official Links</h2>
+
 <ul>
-<li>Power Query transformations:<br />
-  https://learn.microsoft.com/power-query/transformation-section  </li>
+  <li lang-content="pt">Power Query transformations:<br />
+    https://learn.microsoft.com/power-query/transformation-section  </li>
+  <li lang-content="en">Power Query transformations:<br />
+    https://learn.microsoft.com/power-query/transformation-section  </li>
 </ul>
+
 <hr />
+<!-- PROGRESSO DO TÓPICO -->
+<div class="topic-completion" style="text-align:center; padding: 30px 0; margin-top: 40px; border-top: 1px solid var(--border-color);">
+    <button id="btn-complete-topic" onclick="toggleTopicCompletion()" style="padding: 12px 24px; border-radius: 8px; border: 2px solid var(--border-color); background: transparent; color: var(--text-primary); font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;">
+        <span id="completion-icon">⭕</span> <span id="completion-text">Marcar como Concluído</span>
+    </button>
+</div>
+<script>
+    const topicKey = window.location.pathname.split('/').pop().replace('.html', '');
+    function toggleTopicCompletion() {
+        const prog = window.getTopicProgress ? window.getTopicProgress() : {};
+        const isNowCompleted = !prog[topicKey];
+        if (window.markTopicCompleted) window.markTopicCompleted(topicKey, isNowCompleted);
+        updateCompletionUI(isNowCompleted);
+    }
+    function updateCompletionUI(isCompleted) {
+        const btn = document.getElementById('btn-complete-topic');
+        const icon = document.getElementById('completion-icon');
+        const text = document.getElementById('completion-text');
+        if(!btn) return;
+        if(isCompleted) {
+            btn.style.borderColor = "var(--success, #2EA043)";
+            btn.style.color = "var(--success, #2EA043)";
+            btn.style.background = "rgba(46, 160, 67, 0.1)";
+            icon.innerText = "✅";
+            text.innerText = "Concluído";
+        } else {
+            btn.style.borderColor = "var(--border-color)";
+            btn.style.color = "var(--text-primary)";
+            btn.style.background = "transparent";
+            icon.innerText = "⭕";
+            text.innerText = "Marcar como Concluído";
+        }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        const prog = window.getTopicProgress ? window.getTopicProgress() : {};
+        updateCompletionUI(!!prog[topicKey]);
+    });
+</script>
+</div>
+    </div>
     </div>
     </div>
     </div>

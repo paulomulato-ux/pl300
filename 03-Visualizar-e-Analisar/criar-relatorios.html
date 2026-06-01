@@ -16,127 +16,291 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>criar-relatorios</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; }
-        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; }
-        code { font-family: "Courier New", Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: var(--bg-main); color: var(--text-primary); }
+        .container { max-width: 800px; margin: auto; background: var(--surface-card); padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        pre { background-color: var(--bg-secondary); padding: 10px; border-radius: 5px; overflow-x: auto; }
+        code { font-family: "Courier New", Courier, monospace; background-color: var(--bg-secondary); padding: 2px 4px; border-radius: 3px; }
         img { max-width: 100%; height: auto; display: block; margin: 10px 0; }
         table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
+        th, td { border: 1px solid var(--border-color); padding: 8px; text-align: left; }
+        th { background-color: var(--bg-secondary); }
+    
+        
+        
+    
+        
+        
+        /* Settings Panel */
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        
+        /* Language Utilities */
+        [lang-content] { display: none; }
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
+        
+    
+        
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
+        
     
         /* Sidebar Styles */
-        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: #f4f4f4; }
+        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: var(--bg-main); color: var(--text-primary); }
         .layout-wrapper { display: flex; width: 100%; height: 100vh; }
-        .sidebar { width: 280px; background: #2c3e50; color: #ecf0f1; padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; }
-        .sidebar a { color: #ecf0f1; text-decoration: none; display: block; padding: 8px 0; }
-        .sidebar a:hover, .sidebar a.active { color: #3498db; font-weight: bold; }
-        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid #34495e; padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: #bdc3c7; }
-        .sidebar .back-btn { font-weight: 500; color: #ecf0f1; display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.15); background-color: rgba(255, 255, 255, 0.05); margin-bottom: 20px; }
+        .sidebar { width: 280px; background: var(--bg-secondary); color: var(--text-primary); padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; border-right: 1px solid var(--border-color); }
+        .sidebar a { color: var(--text-primary); text-decoration: none; display: block; padding: 8px 0; opacity: 0.8; }
+        .sidebar a:hover, .sidebar a.active { color: var(--primary-color); font-weight: bold; opacity: 1; }
+        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary); }
+        .sidebar .back-btn { font-weight: bold; color: #e74c3c; display: flex; align-items: center; gap: 5px; margin-bottom: 20px; }
         .sidebar .back-btn:hover { color: #c0392b; text-decoration: none; }
         .sidebar ul { list-style: none; padding: 0; margin: 0; }
-        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: #f4f4f4; }
-        .container { margin: 0 auto; max-width: 800px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: var(--bg-main); }
+        .container { margin: 0 auto; max-width: 900px; background: var(--surface-card); padding: 30px; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border-color); }
+        
+        /* Settings Panel */
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        
+        /* Language Utilities */
+        [lang-content] { display: none; }
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
         
     </style>
+    <link rel="stylesheet" href="../portal-style.css">
+    <script src="../portal-core.js?v=2"></script>
 </head>
 <body>
+    
+    <div class="settings-panel" id="settings-panel">
+      <button class="settings-btn" id="btn-lang" onclick="toggleLang()" title="Switch language / Alternar idioma">
+        <span class="btn-icon" id="lang-icon">🇧🇷</span>
+        <span id="lang-label">PT</span>
+      </button>
+      <button class="settings-btn" id="btn-theme" onclick="toggleTheme()" title="Toggle dark/light mode">
+        <span class="btn-icon" id="theme-icon">🌙</span>
+        <span id="theme-label">Dark</span>
+      </button>
+    </div>
     <div class="layout-wrapper">
         <aside class="sidebar">
-            <a href="../index.html" class="back-btn">🏠 Voltar ao Portal</a>
-            <h3>Navegacao</h3>
+            <a href="../index.html" class="back-btn">
+                <span lang-content="pt">&omacr; Voltar para Tela Principal</span>
+                <span lang-content="en">&omacr; Back to Main Portal</span>
+            </a>
+            <h3 lang-content="pt">Navegação</h3>
+            <h3 lang-content="en">Navigation</h3>
             <ul class="nav-links">
-                <li><a href="analisar-performance-relatorios.html">Analisar Performance Relatorios</a></li>
-                <li><a href="criar-relatorios.html" class="active">Criar Relatorios</a></li>
-                <li><a href="resumo.html">Resumo</a></li>
-                <li><a href="visualizacoes-avancadas.html">Visualizacoes Avancadas</a></li>
+                <li><a href="analisar-performance-relatorios.html">
+                <span lang-content="pt">Analisar Performance Relatorios</span>
+                <span lang-content="en">Analyze Report Performance</span>
+            </a></li>
+                <li><a href="criar-relatorios.html" class="active">
+                <span lang-content="pt">Criar Relatorios</span>
+                <span lang-content="en">Create Reports</span>
+            </a></li>
+                <li><a href="resumo.html">
+                <span lang-content="pt">Resumo</span>
+                <span lang-content="en">Summary</span>
+            </a></li>
+                <li><a href="visualizacoes-avancadas.html">
+                <span lang-content="pt">Visualizacoes Avancadas</span>
+                <span lang-content="en">Advanced Visualizations</span>
+            </a></li>
             </ul>
         </aside>
         <div class="content-area">
-    <div class="container">
-        <h1>📊 Criar Relatórios no Power BI</h1>
-<p>Este módulo cobre a criação de relatórios claros, consistentes e orientados a insights.</p>
+    
+    
+    
+    
+    
+    
+    <div class="container"><h1 lang-content="pt">📊 Criar Relatórios no Power BI</h1>
+<h1 lang-content="en">📊 Creating Reports in Power BI</h1>
+<p lang-content="pt">Este módulo cobre a criação de relatórios claros, consistentes e orientados a insights.</p>
+<p lang-content="en">This module covers the creation of clear, consistent, and insight-driven reports.</p>
 <hr />
-<h2>🔹 Layout e Design</h2>
-<h3>✔ Grade de alinhamento</h3>
-<p>Utilizar:
+<h2 lang-content="pt">🔹 Layout e Design</h2>
+<h2 lang-content="en">🔹 Layout and Design</h2>
+<h3 lang-content="pt">✔ Grade de alinhamento</h3>
+<h3 lang-content="en">✔ Alignment Grid</h3>
+<p lang-content="pt">Utilizar:
 - Grade de 8 px
 - Snapping
 - Margens e espaçamentos consistentes</p>
-<h3>✔ Temas</h3>
-<p>Permite padronizar:
+<p lang-content="en">Use:
+- 8 px Grid
+- Snapping
+- Consistent margins and spacing</p>
+<h3 lang-content="pt">✔ Temas</h3>
+<h3 lang-content="en">✔ Themes</h3>
+<p lang-content="pt">Permite padronizar:
 - Cores
 - Tipografia
 - Formatos numéricos</p>
-<p>Temas podem ser importados em JSON.</p>
+<p lang-content="en">Allows standardization of:
+- Colors
+- Typography
+- Numeric formats</p>
+<p lang-content="pt">Temas podem ser importados em JSON.</p>
+<p lang-content="en">Themes can be imported in JSON.</p>
 <hr />
-<h2>🔹 Escolha de Visualizações</h2>
+<h2 lang-content="pt">🔹 Escolha de Visualizações</h2>
+<h2 lang-content="en">🔹 Selection of Visualizations</h2>
 <table>
 <thead>
 <tr>
-<th>Tipo de Análise</th>
-<th>Visualização Recomendada</th>
+<th lang-content="pt">Tipo de Análise</th>
+<th lang-content="en">Type of Analysis</th>
+<th lang-content="pt">Visualização Recomendada</th>
+<th lang-content="en">Recommended Visualization</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Comparação</td>
-<td>Colunas, Barras, Linhas</td>
+<td lang-content="pt">Comparação</td>
+<td lang-content="en">Comparison</td>
+<td lang-content="pt">Colunas, Barras, Linhas</td>
+<td lang-content="en">Columns, Bars, Lines</td>
 </tr>
 <tr>
-<td>Tendência</td>
-<td>Linha, Área</td>
+<td lang-content="pt">Tendência</td>
+<td lang-content="en">Trend</td>
+<td lang-content="pt">Linha, Área</td>
+<td lang-content="en">Line, Area</td>
 </tr>
 <tr>
-<td>Distribuição</td>
-<td>Histograma, Boxplot</td>
+<td lang-content="pt">Distribuição</td>
+<td lang-content="en">Distribution</td>
+<td lang-content="pt">Histograma, Boxplot</td>
+<td lang-content="en">Histogram, Boxplot</td>
 </tr>
 <tr>
-<td>Correlação</td>
-<td>Dispersão</td>
+<td lang-content="pt">Correlação</td>
+<td lang-content="en">Correlation</td>
+<td lang-content="pt">Dispersão</td>
+<td lang-content="en">Scatter</td>
 </tr>
 <tr>
-<td>Parte do todo</td>
-<td>Pizza (com cautela), Donut, Treemap</td>
+<td lang-content="pt">Parte do todo</td>
+<td lang-content="en">Part of the Whole</td>
+<td lang-content="pt">Pizza (com cautela), Donut, Treemap</td>
+<td lang-content="en">Pie (with caution), Donut, Treemap</td>
 </tr>
 <tr>
-<td>Detalhamento</td>
-<td>Tabela, Matriz</td>
+<td lang-content="pt">Detalhamento</td>
+<td lang-content="en">Detailing</td>
+<td lang-content="pt">Tabela, Matriz</td>
+<td lang-content="en">Table, Matrix</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2>🔹 Filtros e Interações</h2>
+<h2 lang-content="pt">🔹 Filtros e Interações</h2>
+<h2 lang-content="en">🔹 Filters and Interactions</h2>
 <ul>
-<li>Edit Interactions: controlar como visuais se afetam</li>
-<li>Sync Slicers: sincronizar segmentações entre páginas</li>
-<li>Filtros de nível:</li>
-<li>Visual</li>
-<li>Página</li>
-<li>Relatório</li>
+<li lang-content="pt">Edit Interactions: controlar como visuais se afetam</li>
+<li lang-content="en">Edit Interactions: control how visuals affect each other</li>
+<li lang-content="pt">Sync Slicers: sincronizar segmentações entre páginas</li>
+<li lang-content="en">Sync Slicers: synchronize slicers across pages</li>
+<li lang-content="pt">Filtros de nível:</li>
+<li lang-content="en">Level filters:</li>
+<li lang-content="pt">Visual</li>
+<li lang-content="en">Visual</li>
+<li lang-content="pt">Página</li>
+<li lang-content="en">Page</li>
+<li lang-content="pt">Relatório</li>
+<li lang-content="en">Report</li>
 </ul>
 <hr />
-<h2>🔹 Drill-down e Hierarquias</h2>
-<h3>✔ Drill-down</h3>
-<p>Expandir níveis de detalhe (Ano → Mês → Dia).</p>
-<h3>✔ Drill-through</h3>
-<p>Criar página específica de detalhes:
+<h2 lang-content="pt">🔹 Drill-down e Hierarquias</h2>
+<h2 lang-content="en">🔹 Drill-down and Hierarchies</h2>
+<h3 lang-content="pt">✔ Drill-down</h3>
+<h3 lang-content="en">✔ Drill-down</h3>
+<p lang-content="pt">Expandir níveis de detalhe (Ano → Mês → Dia).</p>
+<p lang-content="en">Expand detail levels (Year → Month → Day).</p>
+<h3 lang-content="pt">✔ Drill-through</h3>
+<h3 lang-content="en">✔ Drill-through</h3>
+<p lang-content="pt">Criar página específica de detalhes:
 - Perfil de cliente
 - Detalhes de venda
 - Análises específicas</p>
+<p lang-content="en">Create specific detail page:
+- Customer profile
+- Sales details
+- Specific analyses</p>
 <hr />
-<h2>🔹 Tooltips Personalizados</h2>
-<p>Permitem exibir uma página personalizada ao passar o mouse sobre um visual.</p>
-<p>Recomendações:
+<h2 lang-content="pt">🔹 Tooltips Personalizados</h2>
+<h2 lang-content="en">🔹 Custom Tooltips</h2>
+<p lang-content="pt">Permitem exibir uma página personalizada ao passar o mouse sobre um visual.</p>
+<p lang-content="en">Allow displaying a custom page when hovering over a visual.</p>
+<p lang-content="pt">Recomendações:
 - Manter páginas pequenas
 - Utilizar texto claro
 - Mostrar KPIs relevantes</p>
+<p lang-content="en">Recommendations:
+- Keep pages small
+- Use clear text
+- Show relevant KPIs</p>
 <hr />
-<h2>📚 Links Oficiais</h2>
+<h2 lang-content="pt">📚 Links Oficiais</h2>
+<h2 lang-content="en">📚 Official Links</h2>
 <ul>
-<li>Design guidelines:
+<li lang-content="pt">Design guidelines:
+  https://learn.microsoft.com/power-bi/create-reports/desktop-report-layers</li>
+<li lang-content="en">Design guidelines:
   https://learn.microsoft.com/power-bi/create-reports/desktop-report-layers</li>
 </ul>
+<!-- PROGRESSO DO TÓPICO -->
+<div class="topic-completion" style="text-align:center; padding: 30px 0; margin-top: 40px; border-top: 1px solid var(--border-color);">
+    <button id="btn-complete-topic" onclick="toggleTopicCompletion()" style="padding: 12px 24px; border-radius: 8px; border: 2px solid var(--border-color); background: transparent; color: var(--text-primary); font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;">
+        <span id="completion-icon">⭕</span> <span id="completion-text">Marcar como Concluído</span>
+    </button>
+</div>
+<script>
+    const topicKey = window.location.pathname.split('/').pop().replace('.html', '');
+    function toggleTopicCompletion() {
+        const prog = window.getTopicProgress ? window.getTopicProgress() : {};
+        const isNowCompleted = !prog[topicKey];
+        if (window.markTopicCompleted) window.markTopicCompleted(topicKey, isNowCompleted);
+        updateCompletionUI(isNowCompleted);
+    }
+    function updateCompletionUI(isCompleted) {
+        const btn = document.getElementById('btn-complete-topic');
+        const icon = document.getElementById('completion-icon');
+        const text = document.getElementById('completion-text');
+        if(!btn) return;
+        if(isCompleted) {
+            btn.style.borderColor = "var(--success, #2EA043)";
+            btn.style.color = "var(--success, #2EA043)";
+            btn.style.background = "rgba(46, 160, 67, 0.1)";
+            icon.innerText = "✅";
+            text.innerText = "Concluído";
+        } else {
+            btn.style.borderColor = "var(--border-color)";
+            btn.style.color = "var(--text-primary)";
+            btn.style.background = "transparent";
+            icon.innerText = "⭕";
+            text.innerText = "Marcar como Concluído";
+        }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        const prog = window.getTopicProgress ? window.getTopicProgress() : {};
+        updateCompletionUI(!!prog[topicKey]);
+    });
+</script>
+</div>\n</div>
+    </div>
     </div>
     </div>
     </div>

@@ -7,7 +7,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-RPBVGEK9RD');
 </script>
 
@@ -18,6 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="simulado.css">
+  <link rel="stylesheet" href="../portal-style.css">
+  <script src="../portal-core.js"></script>
 </head>
 <body>
 
@@ -129,9 +130,21 @@
         <span id="q-current">1</span>/<span id="q-total">30</span>
         <div class="domain-badge" id="q-domain-badge">Preparar Dados</div>
       </div>
-      <div class="timer-display hidden" id="timer-display">
-        <span>⏱</span>
-        <span id="timer-text">110:00</span>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div class="timer-display hidden" id="timer-display">
+          <span>⏱</span>
+          <span id="timer-text">110:00</span>
+        </div>
+        <div class="quiz-topbar-settings">
+          <button class="settings-btn" onclick="window.toggleLang()" title="Switch language / Alternar idioma">
+            <span class="btn-icon" id="lang-icon-quiz">🇧🇷</span>
+            <span id="lang-label-quiz">PT</span>
+          </button>
+          <button class="settings-btn" onclick="window.toggleTheme()" title="Toggle dark/light mode">
+            <span class="btn-icon" id="theme-icon-quiz">🌙</span>
+            <span id="theme-label-quiz">Dark</span>
+          </button>
+        </div>
       </div>
     </div>
 
@@ -265,13 +278,13 @@
   </div>
 </div>
 
-<!-- ===================== SETTINGS PANEL ===================== -->
+<!-- ===================== SETTINGS PANEL (telas fora do quiz) ===================== -->
 <div class="settings-panel" id="settings-panel">
-  <button class="settings-btn" id="btn-lang" onclick="toggleLang()" title="Switch language / Alternar idioma">
+  <button class="settings-btn" id="btn-lang" onclick="window.toggleLang()" title="Switch language / Alternar idioma">
     <span class="btn-icon" id="lang-icon">🇧🇷</span>
     <span id="lang-label">PT</span>
   </button>
-  <button class="settings-btn" id="btn-theme" onclick="toggleTheme()" title="Toggle dark/light mode">
+  <button class="settings-btn" id="btn-theme" onclick="window.toggleTheme()" title="Toggle dark/light mode">
     <span class="btn-icon" id="theme-icon">🌙</span>
     <span id="theme-label">Dark</span>
   </button>

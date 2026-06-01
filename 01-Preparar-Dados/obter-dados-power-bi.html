@@ -16,144 +16,343 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>obter-dados-power-bi</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; }
-        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; }
-        code { font-family: "Courier New", Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: var(--bg-main); color: var(--text-primary); }
+        .container { max-width: 800px; margin: auto; background: var(--surface-card); padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        pre { background-color: var(--bg-secondary); padding: 10px; border-radius: 5px; overflow-x: auto; }
+        code { font-family: "Courier New", Courier, monospace; background-color: var(--bg-secondary); padding: 2px 4px; border-radius: 3px; }
         img { max-width: 100%; height: auto; display: block; margin: 10px 0; }
         table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
+        th, td { border: 1px solid var(--border-color); padding: 8px; text-align: left; }
+        th { background-color: var(--bg-secondary); }
+    
+        
+        
+    
+        
+        
+        /* Settings Panel */
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        
+        /* Language Utilities */
+        [lang-content] { display: none; }
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
+        
+    
+        
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
+        
     
         /* Sidebar Styles */
-        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: #f4f4f4; }
+        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: var(--bg-main); color: var(--text-primary); }
         .layout-wrapper { display: flex; width: 100%; height: 100vh; }
-        .sidebar { width: 280px; background: #2c3e50; color: #ecf0f1; padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; }
-        .sidebar a { color: #ecf0f1; text-decoration: none; display: block; padding: 8px 0; }
-        .sidebar a:hover, .sidebar a.active { color: #3498db; font-weight: bold; }
-        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid #34495e; padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: #bdc3c7; }
-        .sidebar .back-btn { font-weight: 500; color: #ecf0f1; display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.15); background-color: rgba(255, 255, 255, 0.05); margin-bottom: 20px; }
+        .sidebar { width: 280px; background: var(--bg-secondary); color: var(--text-primary); padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; border-right: 1px solid var(--border-color); }
+        .sidebar a { color: var(--text-primary); text-decoration: none; display: block; padding: 8px 0; opacity: 0.8; }
+        .sidebar a:hover, .sidebar a.active { color: var(--primary-color); font-weight: bold; opacity: 1; }
+        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary); }
+        .sidebar .back-btn { font-weight: bold; color: #e74c3c; display: flex; align-items: center; gap: 5px; margin-bottom: 20px; }
         .sidebar .back-btn:hover { color: #c0392b; text-decoration: none; }
         .sidebar ul { list-style: none; padding: 0; margin: 0; }
-        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: #f4f4f4; }
-        .container { margin: 0 auto; max-width: 800px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: var(--bg-main); }
+        .container { margin: 0 auto; max-width: 900px; background: var(--surface-card); padding: 30px; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border-color); }
+        
+        /* Settings Panel */
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        
+        /* Language Utilities */
+        [lang-content] { display: none; }
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
         
     </style>
+    <link rel="stylesheet" href="../portal-style.css">
+    <script src="../portal-core.js?v=2"></script>
 </head>
 <body>
+    
+    <div class="settings-panel" id="settings-panel">
+      <button class="settings-btn" id="btn-lang" onclick="toggleLang()" title="Switch language / Alternar idioma">
+        <span class="btn-icon" id="lang-icon">🇧🇷</span>
+        <span id="lang-label">PT</span>
+      </button>
+      <button class="settings-btn" id="btn-theme" onclick="toggleTheme()" title="Toggle dark/light mode">
+        <span class="btn-icon" id="theme-icon">🌙</span>
+        <span id="theme-label">Dark</span>
+      </button>
+    </div>
     <div class="layout-wrapper">
         <aside class="sidebar">
-            <a href="../index.html" class="back-btn">🏠 Voltar ao Portal</a>
-            <h3>Navegacao</h3>
+            <a href="../index.html" class="back-btn">
+                <span lang-content="pt">&omacr; Voltar para Tela Principal</span>
+                <span lang-content="en">&omacr; Back to Main Portal</span>
+            </a>
+            <h3 lang-content="pt">Navegação</h3>
+            <h3 lang-content="en">Navigation</h3>
             <ul class="nav-links">
-                <li><a href="carregar-dados.html">Carregar Dados</a></li>
-                <li><a href="obter-dados-power-bi.html" class="active">Obter Dados Power Bi</a></li>
-                <li><a href="resumo.html">Resumo</a></li>
-                <li><a href="transformar-e-limpar-dados.html">Transformar E Limpar Dados</a></li>
+                <li><a href="carregar-dados.html">
+                <span lang-content="pt">Carregar Dados</span>
+                <span lang-content="en">Load Data</span>
+            </a></li>
+                <li><a href="obter-dados-power-bi.html" class="active">
+                <span lang-content="pt">Obter Dados Power Bi</span>
+                <span lang-content="en">Get Data Power BI</span>
+            </a></li>
+                <li><a href="resumo.html">
+                <span lang-content="pt">Resumo</span>
+                <span lang-content="en">Summary</span>
+            </a></li>
+                <li><a href="transformar-e-limpar-dados.html">
+                <span lang-content="pt">Transformar E Limpar Dados</span>
+                <span lang-content="en">Transform & Clean Data</span>
+            </a></li>
             </ul>
         </aside>
         <div class="content-area">
-    <div class="container">
-        <h1>📘 Obter Dados no Power BI</h1>
-<p>Este arquivo reúne o conteúdo essencial sobre <strong>conexão e importação de dados</strong>, conforme os requisitos da certificação PL-300.</p>
+    
+    
+    
+    
+    
+    
+    <div class="container"><h1 lang-content="pt">📘 Obter Dados no Power BI</h1>
+<h1 lang-content="en">📘 Getting Data in Power BI</h1>
+
+<p lang-content="pt">Este arquivo reúne o conteúdo essencial sobre <strong>conexão e importação de dados</strong>, conforme os requisitos da certificação PL-300.</p>
+<p lang-content="en">This file gathers the essential content about <strong>data connection and import</strong>, according to the requirements of the PL-300 certification.</p>
+
 <hr />
-<h2>🔹 Tipos de Conexão</h2>
-<h3><strong>1. Arquivos</strong></h3>
+
+<h2 lang-content="pt">🔹 Tipos de Conexão</h2>
+<h2 lang-content="en">🔹 Types of Connection</h2>
+
+<h3 lang-content="pt"><strong>1. Arquivos</strong></h3>
+<h3 lang-content="en"><strong>1. Files</strong></h3>
 <ul>
-<li>Excel (.xlsx)  </li>
-<li>CSV/TXT  </li>
-<li>JSON  </li>
-<li>XML  </li>
-<li>Parquet  </li>
+  <li lang-content="pt">Excel (.xlsx)  </li>
+  <li lang-content="en">Excel (.xlsx)  </li>
+  <li lang-content="pt">CSV/TXT  </li>
+  <li lang-content="en">CSV/TXT  </li>
+  <li lang-content="pt">JSON  </li>
+  <li lang-content="en">JSON  </li>
+  <li lang-content="pt">XML  </li>
+  <li lang-content="en">XML  </li>
+  <li lang-content="pt">Parquet  </li>
+  <li lang-content="en">Parquet  </li>
 </ul>
-<h3><strong>2. Bancos de Dados</strong></h3>
+
+<h3 lang-content="pt"><strong>2. Bancos de Dados</strong></h3>
+<h3 lang-content="en"><strong>2. Databases</strong></h3>
 <ul>
-<li>SQL Server  </li>
-<li>Oracle  </li>
-<li>PostgreSQL  </li>
-<li>MySQL  </li>
-<li>Azure SQL  </li>
-<li>Fabric Lakehouse / Warehouse  </li>
+  <li lang-content="pt">SQL Server  </li>
+  <li lang-content="en">SQL Server  </li>
+  <li lang-content="pt">Oracle  </li>
+  <li lang-content="en">Oracle  </li>
+  <li lang-content="pt">PostgreSQL  </li>
+  <li lang-content="en">PostgreSQL  </li>
+  <li lang-content="pt">MySQL  </li>
+  <li lang-content="en">MySQL  </li>
+  <li lang-content="pt">Azure SQL  </li>
+  <li lang-content="en">Azure SQL  </li>
+  <li lang-content="pt">Fabric Lakehouse / Warehouse  </li>
+  <li lang-content="en">Fabric Lakehouse / Warehouse  </li>
 </ul>
-<h3><strong>3. Serviços Online</strong></h3>
+
+<h3 lang-content="pt"><strong>3. Serviços Online</strong></h3>
+<h3 lang-content="en"><strong>3. Online Services</strong></h3>
 <ul>
-<li>SharePoint  </li>
-<li>OneDrive  </li>
-<li>OData Feed  </li>
-<li>Microsoft Exchange  </li>
-<li>Dynamics 365  </li>
-<li>Dataverse  </li>
+  <li lang-content="pt">SharePoint  </li>
+  <li lang-content="en">SharePoint  </li>
+  <li lang-content="pt">OneDrive  </li>
+  <li lang-content="en">OneDrive  </li>
+  <li lang-content="pt">OData Feed  </li>
+  <li lang-content="en">OData Feed  </li>
+  <li lang-content="pt">Microsoft Exchange  </li>
+  <li lang-content="en">Microsoft Exchange  </li>
+  <li lang-content="pt">Dynamics 365  </li>
+  <li lang-content="en">Dynamics 365  </li>
+  <li lang-content="pt">Dataverse  </li>
+  <li lang-content="en">Dataverse  </li>
 </ul>
-<h3><strong>4. Outros</strong></h3>
+
+<h3 lang-content="pt"><strong>4. Outros</strong></h3>
+<h3 lang-content="en"><strong>4. Others</strong></h3>
 <ul>
-<li>Web scraping (Get data &gt; Web)  </li>
-<li>APIs REST  </li>
-<li>Pastas ("Folder") para ingestão em lote  </li>
+  <li lang-content="pt">Web scraping (Get data &gt; Web)  </li>
+  <li lang-content="en">Web scraping (Get data &gt; Web)  </li>
+  <li lang-content="pt">APIs REST  </li>
+  <li lang-content="en">REST APIs  </li>
+  <li lang-content="pt">Pastas ("Folder") para ingestão em lote  </li>
+  <li lang-content="en">Folders ("Folder") for batch ingestion  </li>
 </ul>
+
 <hr />
-<h2>🔹 Import x DirectQuery x Live Connection</h2>
+
+<h2 lang-content="pt">🔹 Import x DirectQuery x Live Connection</h2>
+<h2 lang-content="en">🔹 Import vs DirectQuery vs Live Connection</h2>
+
 <table>
-<thead>
-<tr>
-<th>Método</th>
-<th>Características</th>
-<th>Quando usar</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Import</strong></td>
-<td>Dados ficam no modelo</td>
-<td>Melhor desempenho; datasets pequenos/médios</td>
-</tr>
-<tr>
-<td><strong>DirectQuery</strong></td>
-<td>Dados permanecem na fonte</td>
-<td>Dados muito grandes ou quase em tempo real</td>
-</tr>
-<tr>
-<td><strong>Live Connection</strong></td>
-<td>Conexão com SSAS, Fabric ou Power BI semantic model</td>
-<td>Modelos centralizados, governança</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th lang-content="pt">Método</th>
+      <th lang-content="en">Method</th>
+      <th lang-content="pt">Características</th>
+      <th lang-content="en">Characteristics</th>
+      <th lang-content="pt">Quando usar</th>
+      <th lang-content="en">When to use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td lang-content="pt"><strong>Import</strong></td>
+      <td lang-content="en"><strong>Import</strong></td>
+      <td lang-content="pt">Dados ficam no modelo</td>
+      <td lang-content="en">Data remains in the model</td>
+      <td lang-content="pt">Melhor desempenho; datasets pequenos/médios</td>
+      <td lang-content="en">Better performance; small/medium datasets</td>
+    </tr>
+    <tr>
+      <td lang-content="pt"><strong>DirectQuery</strong></td>
+      <td lang-content="en"><strong>DirectQuery</strong></td>
+      <td lang-content="pt">Dados permanecem na fonte</td>
+      <td lang-content="en">Data remains at the source</td>
+      <td lang-content="pt">Dados muito grandes ou quase em tempo real</td>
+      <td lang-content="en">Very large data or near real-time</td>
+    </tr>
+    <tr>
+      <td lang-content="pt"><strong>Live Connection</strong></td>
+      <td lang-content="en"><strong>Live Connection</strong></td>
+      <td lang-content="pt">Conexão com SSAS, Fabric ou Power BI semantic model</td>
+      <td lang-content="en">Connection with SSAS, Fabric or Power BI semantic model</td>
+      <td lang-content="pt">Modelos centralizados, governança</td>
+      <td lang-content="en">Centralized models, governance</td>
+    </tr>
+  </tbody>
 </table>
+
 <hr />
-<h2>🔹 Conectando a pastas (Folder)</h2>
-<p>Recurso útil para carregar múltiplos arquivos com a mesma estrutura. Passos:</p>
+
+<h2 lang-content="pt">🔹 Conectando a pastas (Folder)</h2>
+<h2 lang-content="en">🔹 Connecting to folders (Folder)</h2>
+
+<p lang-content="pt">Recurso útil para carregar múltiplos arquivos com a mesma estrutura. Passos:</p>
+<p lang-content="en">Useful feature to load multiple files with the same structure. Steps:</p>
+
 <ol>
-<li>Get Data → Folder  </li>
-<li><strong>Combine &amp; Transform</strong>  </li>
-<li>Aplicar filtros sobre metadados se necessário  </li>
-<li>Limpar e padronizar colunas  </li>
+  <li lang-content="pt">Get Data → Folder  </li>
+  <li lang-content="en">Get Data → Folder  </li>
+  <li lang-content="pt"><strong>Combine &amp; Transform</strong>  </li>
+  <li lang-content="en"><strong>Combine &amp; Transform</strong>  </li>
+  <li lang-content="pt">Aplicar filtros sobre metadados se necessário  </li>
+  <li lang-content="en">Apply filters on metadata if necessary  </li>
+  <li lang-content="pt">Limpar e padronizar colunas  </li>
+  <li lang-content="en">Clean and standardize columns  </li>
 </ol>
+
 <hr />
-<h2>🔹 Conexão com Web/API</h2>
-<p>No Power BI Desktop:</p>
+
+<h2 lang-content="pt">🔹 Conexão com Web/API</h2>
+<h2 lang-content="en">🔹 Connection with Web/API</h2>
+
+<p lang-content="pt">No Power BI Desktop:</p>
+<p lang-content="en">In Power BI Desktop:</p>
+
 <ol>
-<li>Get Data → Web  </li>
-<li>Informar URL  </li>
-<li>Lidar com autenticação (Anonymous, Basic, OAuth)  </li>
-<li>Converter JSON → tabelas  </li>
+  <li lang-content="pt">Get Data → Web  </li>
+  <li lang-content="en">Get Data → Web  </li>
+  <li lang-content="pt">Informar URL  </li>
+  <li lang-content="en">Enter URL  </li>
+  <li lang-content="pt">Lidar com autenticação (Anonymous, Basic, OAuth)  </li>
+  <li lang-content="en">Handle authentication (Anonymous, Basic, OAuth)  </li>
+  <li lang-content="pt">Converter JSON → tabelas  </li>
+  <li lang-content="en">Convert JSON → tables  </li>
 </ol>
+
 <hr />
-<h2>🔹 Boas Práticas ao Obter Dados</h2>
+
+<h2 lang-content="pt">🔹 Boas Práticas ao Obter Dados</h2>
+<h2 lang-content="en">🔹 Best Practices when Getting Data</h2>
+
 <ul>
-<li>Sempre revisar tipos de dados  </li>
-<li>Evitar colunas desnecessárias  </li>
-<li>Centralizar parâmetros (URL, pastas, datas, tokens)  </li>
-<li>Utilizar <em>Query folding</em> sempre que possível  </li>
-<li>Documentar transformações importantes  </li>
+  <li lang-content="pt">Sempre revisar tipos de dados  </li>
+  <li lang-content="en">Always review data types  </li>
+  <li lang-content="pt">Evitar colunas desnecessárias  </li>
+  <li lang-content="en">Avoid unnecessary columns  </li>
+  <li lang-content="pt">Centralizar parâmetros (URL, pastas, datas, tokens)  </li>
+  <li lang-content="en">Centralize parameters (URL, folders, dates, tokens)  </li>
+  <li lang-content="pt">Utilizar <em>Query folding</em> sempre que possível  </li>
+  <li lang-content="en">Use <em>Query folding</em> whenever possible  </li>
+  <li lang-content="pt">Documentar transformações importantes  </li>
+  <li lang-content="en">Document important transformations  </li>
 </ul>
+
 <hr />
-<h2>📚 Links Oficiais</h2>
+
+<h2 lang-content="pt">📚 Links Oficiais</h2>
+<h2 lang-content="en">📚 Official Links</h2>
+
 <ul>
-<li>Supported data sources:<br />
-  https://learn.microsoft.com/power-bi/connect-data/desktop-data-sources  </li>
-<li>DirectQuery:<br />
-  https://learn.microsoft.com/power-bi/connect-data/desktop-directquery-about  </li>
+  <li lang-content="pt">Supported data sources:<br />
+    https://learn.microsoft.com/power-bi/connect-data/desktop-data-sources  </li>
+  <li lang-content="en">Supported data sources:<br />
+    https://learn.microsoft.com/power-bi/connect-data/desktop-data-sources  </li>
+  <li lang-content="pt">DirectQuery:<br />
+    https://learn.microsoft.com/power-bi/connect-data/desktop-directquery-about  </li>
+  <li lang-content="en">DirectQuery:<br />
+    https://learn.microsoft.com/power-bi/connect-data/desktop-directquery-about  </li>
 </ul>
+
 <hr />
+<!-- PROGRESSO DO TÓPICO -->
+<div class="topic-completion" style="text-align:center; padding: 30px 0; margin-top: 40px; border-top: 1px solid var(--border-color);">
+    <button id="btn-complete-topic" onclick="toggleTopicCompletion()" style="padding: 12px 24px; border-radius: 8px; border: 2px solid var(--border-color); background: transparent; color: var(--text-primary); font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;">
+        <span id="completion-icon">⭕</span> <span id="completion-text">Marcar como Concluído</span>
+    </button>
+</div>
+<script>
+    const topicKey = window.location.pathname.split('/').pop().replace('.html', '');
+    function toggleTopicCompletion() {
+        const prog = window.getTopicProgress ? window.getTopicProgress() : {};
+        const isNowCompleted = !prog[topicKey];
+        if (window.markTopicCompleted) window.markTopicCompleted(topicKey, isNowCompleted);
+        updateCompletionUI(isNowCompleted);
+    }
+    function updateCompletionUI(isCompleted) {
+        const btn = document.getElementById('btn-complete-topic');
+        const icon = document.getElementById('completion-icon');
+        const text = document.getElementById('completion-text');
+        if(!btn) return;
+        if(isCompleted) {
+            btn.style.borderColor = "var(--success, #2EA043)";
+            btn.style.color = "var(--success, #2EA043)";
+            btn.style.background = "rgba(46, 160, 67, 0.1)";
+            icon.innerText = "✅";
+            text.innerText = "Concluído";
+        } else {
+            btn.style.borderColor = "var(--border-color)";
+            btn.style.color = "var(--text-primary)";
+            btn.style.background = "transparent";
+            icon.innerText = "⭕";
+            text.innerText = "Marcar como Concluído";
+        }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        const prog = window.getTopicProgress ? window.getTopicProgress() : {};
+        updateCompletionUI(!!prog[topicKey]);
+    });
+</script>
+</div>
+    </div>
     </div>
     </div>
     </div>

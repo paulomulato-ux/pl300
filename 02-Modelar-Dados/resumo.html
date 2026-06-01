@@ -16,109 +16,262 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>resumo</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; }
-        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; }
-        code { font-family: "Courier New", Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: var(--bg-main); color: var(--text-primary); }
+        .container { max-width: 800px; margin: auto; background: var(--surface-card); padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        pre { background-color: var(--bg-secondary); padding: 10px; border-radius: 5px; overflow-x: auto; }
+        code { font-family: "Courier New", Courier, monospace; background-color: var(--bg-secondary); padding: 2px 4px; border-radius: 3px; }
         img { max-width: 100%; height: auto; display: block; margin: 10px 0; }
         table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
+        th, td { border: 1px solid var(--border-color); padding: 8px; text-align: left; }
+        th { background-color: var(--bg-secondary); }
+    
+        
+        
+    
+        
+        
+        /* Settings Panel */
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        
+        /* Language Utilities */
+        [lang-content] { display: none; }
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
+        
+    
+        
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
+        
     
         /* Sidebar Styles */
-        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: #f4f4f4; }
+        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: var(--bg-main); color: var(--text-primary); }
         .layout-wrapper { display: flex; width: 100%; height: 100vh; }
-        .sidebar { width: 280px; background: #2c3e50; color: #ecf0f1; padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; }
-        .sidebar a { color: #ecf0f1; text-decoration: none; display: block; padding: 8px 0; }
-        .sidebar a:hover, .sidebar a.active { color: #3498db; font-weight: bold; }
-        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid #34495e; padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: #bdc3c7; }
-        .sidebar .back-btn { font-weight: 500; color: #ecf0f1; display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.15); background-color: rgba(255, 255, 255, 0.05); margin-bottom: 20px; }
+        .sidebar { width: 280px; background: var(--bg-secondary); color: var(--text-primary); padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; border-right: 1px solid var(--border-color); }
+        .sidebar a { color: var(--text-primary); text-decoration: none; display: block; padding: 8px 0; opacity: 0.8; }
+        .sidebar a:hover, .sidebar a.active { color: var(--primary-color); font-weight: bold; opacity: 1; }
+        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary); }
+        .sidebar .back-btn { font-weight: bold; color: #e74c3c; display: flex; align-items: center; gap: 5px; margin-bottom: 20px; }
         .sidebar .back-btn:hover { color: #c0392b; text-decoration: none; }
         .sidebar ul { list-style: none; padding: 0; margin: 0; }
-        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: #f4f4f4; }
-        .container { margin: 0 auto; max-width: 800px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: var(--bg-main); }
+        .container { margin: 0 auto; max-width: 900px; background: var(--surface-card); padding: 30px; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border-color); }
+        
+        /* Settings Panel */
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        
+        /* Language Utilities */
+        [lang-content] { display: none; }
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
         
     </style>
+    <link rel="stylesheet" href="../portal-style.css">
+    <script src="../portal-core.js?v=2"></script>
 </head>
 <body>
+    
+    <div class="settings-panel" id="settings-panel">
+      <button class="settings-btn" id="btn-lang" onclick="toggleLang()" title="Switch language / Alternar idioma">
+        <span class="btn-icon" id="lang-icon">🇧🇷</span>
+        <span id="lang-label">PT</span>
+      </button>
+      <button class="settings-btn" id="btn-theme" onclick="toggleTheme()" title="Toggle dark/light mode">
+        <span class="btn-icon" id="theme-icon">🌙</span>
+        <span id="theme-label">Dark</span>
+      </button>
+    </div>
     <div class="layout-wrapper">
         <aside class="sidebar">
-            <a href="../index.html" class="back-btn">🏠 Voltar ao Portal</a>
-            <h3>Navegacao</h3>
+            <a href="../index.html" class="back-btn">
+                <span lang-content="pt">&omacr; Voltar para Tela Principal</span>
+                <span lang-content="en">&omacr; Back to Main Portal</span>
+            </a>
+            <h3 lang-content="pt">Navegação</h3>
+            <h3 lang-content="en">Navigation</h3>
             <ul class="nav-links">
-                <li><a href="boas-praticas-modelagem.html">Boas Praticas Modelagem</a></li>
-                <li><a href="design-modelo-de-dados.html">Design Modelo De Dados</a></li>
-                <li><a href="resumo.html" class="active">Resumo</a></li>
+                <li><a href="boas-praticas-modelagem.html">
+                <span lang-content="pt">Boas Praticas Modelagem</span>
+                <span lang-content="en">Modeling Best Practices</span>
+            </a></li>
+                <li><a href="design-modelo-de-dados.html">
+                <span lang-content="pt">Design Modelo De Dados</span>
+                <span lang-content="en">Data Model Design</span>
+            </a></li>
+                <li><a href="resumo.html" class="active">
+                <span lang-content="pt">Resumo</span>
+                <span lang-content="en">Summary</span>
+            </a></li>
             </ul>
         </aside>
         <div class="content-area">
-    <div class="container">
-        <h1>🧩 Resumo – Modelar Dados</h1>
-<p>Este módulo aborda os princípios essenciais de <strong>modelagem dimensional</strong>, relações entre tabelas, DAX, desempenho e estruturação de modelos eficientes no Power BI.</p>
+    
+    
+    
+    
+    
+    
+    <div class="container"><h1 lang-content="pt">🧩 Resumo – Modelar Dados</h1>
+<h1 lang-content="en">🧩 Summary – Data Modeling</h1>
+<p lang-content="pt">Este módulo aborda os princípios essenciais de <strong>modelagem dimensional</strong>, relações entre tabelas, DAX, desempenho e estruturação de modelos eficientes no Power BI.</p>
+<p lang-content="en">This module covers the essential principles of <strong>dimensional modeling</strong>, relationships between tables, DAX, performance, and structuring efficient models in Power BI.</p>
 <hr />
-<h2>🎯 Objetivos do módulo</h2>
+<h2 lang-content="pt">🎯 Objetivos do módulo</h2>
+<h2 lang-content="en">🎯 Module Objectives</h2>
 <ul>
-<li>Construir modelos eficientes baseados em <strong>tabelas fato e dimensões</strong>  </li>
-<li>Configurar relacionamentos e cardinalidades  </li>
-<li>Criar medidas com DAX  </li>
-<li>Implementar hierarquias  </li>
-<li>Controlar direcionalidade de filtros  </li>
-<li>Otimizar desempenho do modelo  </li>
+<li lang-content="pt">Construir modelos eficientes baseados em <strong>tabelas fato e dimensões</strong>  </li>
+<li lang-content="en">Build efficient models based on <strong>fact and dimension tables</strong></li>
+<li lang-content="pt">Configurar relacionamentos e cardinalidades  </li>
+<li lang-content="en">Configure relationships and cardinalities</li>
+<li lang-content="pt">Criar medidas com DAX  </li>
+<li lang-content="en">Create measures using DAX</li>
+<li lang-content="pt">Implementar hierarquias  </li>
+<li lang-content="en">Implement hierarchies</li>
+<li lang-content="pt">Controlar direcionalidade de filtros  </li>
+<li lang-content="en">Control filter directionality</li>
+<li lang-content="pt">Otimizar desempenho do modelo  </li>
+<li lang-content="en">Optimize model performance</li>
 </ul>
 <hr />
-<h2>🔹 Tópicos Principais</h2>
-<h3>1. Modelo Estrela (Star Schema)</h3>
-<p>Estrutura padrão recomendada pela Microsoft:</p>
+<h2 lang-content="pt">🔹 Tópicos Principais</h2>
+<h2 lang-content="en">🔹 Main Topics</h2>
+<h3 lang-content="pt">1. Modelo Estrela (Star Schema)</h3>
+<h3 lang-content="en">1. Star Schema</h3>
+<p lang-content="pt">Estrutura padrão recomendada pela Microsoft:</p>
+<p lang-content="en">Standard structure recommended by Microsoft:</p>
 <ul>
-<li>Tabelas fato → métricas, granularidade definida  </li>
-<li>Tabelas dimensão → atributos descritivos  </li>
-<li>Minimiza duplicidades, melhora performance e compressão</li>
+<li lang-content="pt">Tabelas fato → métricas, granularidade definida  </li>
+<li lang-content="en">Fact tables → metrics, defined granularity</li>
+<li lang-content="pt">Tabelas dimensão → atributos descritivos  </li>
+<li lang-content="en">Dimension tables → descriptive attributes</li>
+<li lang-content="pt">Minimiza duplicidades, melhora performance e compressão</li>
+<li lang-content="en">Minimizes duplicates, improves performance and compression</li>
 </ul>
 <hr />
-<h3>2. Relacionamentos</h3>
-<p>Propriedades:</p>
+<h3 lang-content="pt">2. Relacionamentos</h3>
+<h3 lang-content="en">2. Relationships</h3>
+<p lang-content="pt">Propriedades:</p>
+<p lang-content="en">Properties:</p>
 <ul>
-<li>Cardinalidade: 1:<em>, </em>:1, <em>:</em>  </li>
-<li>Direcionalidade: single vs. both  </li>
-<li>Cross-filtering  </li>
-<li>Relacionamentos ativos e inativos (USERELATIONSHIP)  </li>
+<li lang-content="pt">Cardinalidade: 1:<em>, </em>:1, <em>:</em>  </li>
+<li lang-content="en">Cardinality: 1:<em>, </em>:1, <em>:</em>  </li>
+<li lang-content="pt">Direcionalidade: single vs. both  </li>
+<li lang-content="en">Directionality: single vs. both</li>
+<li lang-content="pt">Cross-filtering  </li>
+<li lang-content="en">Cross-filtering</li>
+<li lang-content="pt">Relacionamentos ativos e inativos (USERELATIONSHIP)  </li>
+<li lang-content="en">Active and inactive relationships (USERELATIONSHIP)</li>
 </ul>
 <hr />
-<h3>3. DAX – medidas e cálculos</h3>
-<p>Tipos comuns:</p>
+<h3 lang-content="pt">3. DAX – medidas e cálculos</h3>
+<h3 lang-content="en">3. DAX – Measures and Calculations</h3>
+<p lang-content="pt">Tipos comuns:</p>
+<p lang-content="en">Common types:</p>
 <ul>
-<li>Medidas implícitas vs. explícitas  </li>
-<li>Funções de agregação  </li>
-<li>Time intelligence  </li>
-<li>Contextos: linha, filtro e avaliação  </li>
+<li lang-content="pt">Medidas implícitas vs. explícitas  </li>
+<li lang-content="en">Implicit vs. explicit measures</li>
+<li lang-content="pt">Funções de agregação  </li>
+<li lang-content="en">Aggregation functions</li>
+<li lang-content="pt">Time intelligence  </li>
+<li lang-content="en">Time intelligence</li>
+<li lang-content="pt">Contextos: linha, filtro e avaliação  </li>
+<li lang-content="en">Contexts: row, filter, and evaluation</li>
 </ul>
 <hr />
-<h3>4. Otimização de Modelos</h3>
-<p>Inclui:</p>
+<h3 lang-content="pt">4. Otimização de Modelos</h3>
+<h3 lang-content="en">4. Model Optimization</h3>
+<p lang-content="pt">Inclui:</p>
+<p lang-content="en">Includes:</p>
 <ul>
-<li>Remoção de colunas irrelevantes  </li>
-<li>Minimização de cardinalidade  </li>
-<li>Redução de relacionamentos desnecessários  </li>
-<li>Gerenciamento de tabelas intermediárias  </li>
-<li>Uso correto de data table  </li>
+<li lang-content="pt">Remoção de colunas irrelevantes  </li>
+<li lang-content="en">Removal of irrelevant columns</li>
+<li lang-content="pt">Minimização de cardinalidade  </li>
+<li lang-content="en">Minimization of cardinality</li>
+<li lang-content="pt">Redução de relacionamentos desnecessários  </li>
+<li lang-content="en">Reduction of unnecessary relationships</li>
+<li lang-content="pt">Gerenciamento de tabelas intermediárias  </li>
+<li lang-content="en">Management of intermediate tables</li>
+<li lang-content="pt">Uso correto de data table  </li>
+<li lang-content="en">Proper use of data table</li>
 </ul>
 <hr />
-<h2>📚 Links Oficiais</h2>
+<h2 lang-content="pt">📚 Links Oficiais</h2>
+<h2 lang-content="en">📚 Official Links</h2>
 <ul>
-<li>Data modeling best practices<br />
+<li lang-content="pt">Data modeling best practices<br />
   https://learn.microsoft.com/power-bi/guidance/star-schema  </li>
-<li>Relationships in Power BI<br />
+<li lang-content="en">Data modeling best practices<br />
+  https://learn.microsoft.com/power-bi/guidance/star-schema  </li>
+<li lang-content="pt">Relationships in Power BI<br />
+  https://learn.microsoft.com/power-bi/transform-model/desktop-relationships  </li>
+<li lang-content="en">Relationships in Power BI<br />
   https://learn.microsoft.com/power-bi/transform-model/desktop-relationships  </li>
 </ul>
 <hr />
-<h2>✅ Checklist de Estudos</h2>
+<h2 lang-content="pt">✅ Checklist de Estudos</h2>
+<h2 lang-content="en">✅ Study Checklist</h2>
 <ul>
-<li>[ ] Criar um modelo estrela com fato e dimensões  </li>
-<li>[ ] Configurar relacionamentos corretamente  </li>
-<li>[ ] Criar medidas básicas e avançadas em DAX  </li>
-<li>[ ] Utilizar funções de time intelligence  </li>
-<li>[ ] Reduzir cardinalidade de colunas pesadas  </li>
+<li lang-content="pt">[ ] Criar um modelo estrela com fato e dimensões  </li>
+<li lang-content="en">[ ] Create a star schema model with fact and dimensions</li>
+<li lang-content="pt">[ ] Configurar relacionamentos corretamente  </li>
+<li lang-content="en">[ ] Configure relationships correctly</li>
+<li lang-content="pt">[ ] Criar medidas básicas e avançadas em DAX  </li>
+<li lang-content="en">[ ] Create basic and advanced measures in DAX</li>
+<li lang-content="pt">[ ] Utilizar funções de time intelligence  </li>
+<li lang-content="en">[ ] Use time intelligence functions</li>
+<li lang-content="pt">[ ] Reduzir cardinalidade de colunas pesadas  </li>
+<li lang-content="en">[ ] Reduce cardinality of heavy columns</li>
 </ul>
+<!-- PROGRESSO DO TÓPICO -->
+<div class="topic-completion" style="text-align:center; padding: 30px 0; margin-top: 40px; border-top: 1px solid var(--border-color);">
+    <button id="btn-complete-topic" onclick="toggleTopicCompletion()" style="padding: 12px 24px; border-radius: 8px; border: 2px solid var(--border-color); background: transparent; color: var(--text-primary); font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;">
+        <span id="completion-icon">⭕</span> <span id="completion-text">Marcar como Concluído</span>
+    </button>
+</div>
+<script>
+    const topicKey = window.location.pathname.split('/').pop().replace('.html', '');
+    function toggleTopicCompletion() {
+        const prog = window.getTopicProgress ? window.getTopicProgress() : {};
+        const isNowCompleted = !prog[topicKey];
+        if (window.markTopicCompleted) window.markTopicCompleted(topicKey, isNowCompleted);
+        updateCompletionUI(isNowCompleted);
+    }
+    function updateCompletionUI(isCompleted) {
+        const btn = document.getElementById('btn-complete-topic');
+        const icon = document.getElementById('completion-icon');
+        const text = document.getElementById('completion-text');
+        if(!btn) return;
+        if(isCompleted) {
+            btn.style.borderColor = "var(--success, #2EA043)";
+            btn.style.color = "var(--success, #2EA043)";
+            btn.style.background = "rgba(46, 160, 67, 0.1)";
+            icon.innerText = "✅";
+            text.innerText = "Concluído";
+        } else {
+            btn.style.borderColor = "var(--border-color)";
+            btn.style.color = "var(--text-primary)";
+            btn.style.background = "transparent";
+            icon.innerText = "⭕";
+            text.innerText = "Marcar como Concluído";
+        }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        const prog = window.getTopicProgress ? window.getTopicProgress() : {};
+        updateCompletionUI(!!prog[topicKey]);
+    });
+</script>
+</div>\n</div>
+    </div>
     </div>
     </div>
     </div>

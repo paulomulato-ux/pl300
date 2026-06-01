@@ -16,113 +16,263 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>carregar-dados</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; }
-        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; }
-        code { font-family: "Courier New", Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: var(--bg-main); color: var(--text-primary); }
+        .container { max-width: 800px; margin: auto; background: var(--surface-card); padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        pre { background-color: var(--bg-secondary); padding: 10px; border-radius: 5px; overflow-x: auto; }
+        code { font-family: "Courier New", Courier, monospace; background-color: var(--bg-secondary); padding: 2px 4px; border-radius: 3px; }
         img { max-width: 100%; height: auto; display: block; margin: 10px 0; }
         table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
+        th, td { border: 1px solid var(--border-color); padding: 8px; text-align: left; }
+        th { background-color: var(--bg-secondary); }
+    
+        
+        
+    
+        
+        
+        /* Settings Panel */
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        
+        /* Language Utilities */
+        [lang-content] { display: none; }
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
+        
+    
+        
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
+        
     
         /* Sidebar Styles */
-        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: #f4f4f4; }
+        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: var(--bg-main); color: var(--text-primary); }
         .layout-wrapper { display: flex; width: 100%; height: 100vh; }
-        .sidebar { width: 280px; background: #2c3e50; color: #ecf0f1; padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; }
-        .sidebar a { color: #ecf0f1; text-decoration: none; display: block; padding: 8px 0; }
-        .sidebar a:hover, .sidebar a.active { color: #3498db; font-weight: bold; }
-        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid #34495e; padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: #bdc3c7; }
-        .sidebar .back-btn { font-weight: 500; color: #ecf0f1; display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.15); background-color: rgba(255, 255, 255, 0.05); margin-bottom: 20px; }
+        .sidebar { width: 280px; background: var(--bg-secondary); color: var(--text-primary); padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; border-right: 1px solid var(--border-color); }
+        .sidebar a { color: var(--text-primary); text-decoration: none; display: block; padding: 8px 0; opacity: 0.8; }
+        .sidebar a:hover, .sidebar a.active { color: var(--primary-color); font-weight: bold; opacity: 1; }
+        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary); }
+        .sidebar .back-btn { font-weight: bold; color: #e74c3c; display: flex; align-items: center; gap: 5px; margin-bottom: 20px; }
         .sidebar .back-btn:hover { color: #c0392b; text-decoration: none; }
         .sidebar ul { list-style: none; padding: 0; margin: 0; }
-        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: #f4f4f4; }
-        .container { margin: 0 auto; max-width: 800px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: var(--bg-main); }
+        .container { margin: 0 auto; max-width: 900px; background: var(--surface-card); padding: 30px; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border-color); }
+        
+        /* Settings Panel */
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        
+        /* Language Utilities */
+        [lang-content] { display: none; }
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
         
     </style>
+    <link rel="stylesheet" href="../portal-style.css">
+    <script src="../portal-core.js?v=2"></script>
 </head>
 <body>
+    
+    <div class="settings-panel" id="settings-panel">
+      <button class="settings-btn" id="btn-lang" onclick="toggleLang()" title="Switch language / Alternar idioma">
+        <span class="btn-icon" id="lang-icon">🇧🇷</span>
+        <span id="lang-label">PT</span>
+      </button>
+      <button class="settings-btn" id="btn-theme" onclick="toggleTheme()" title="Toggle dark/light mode">
+        <span class="btn-icon" id="theme-icon">🌙</span>
+        <span id="theme-label">Dark</span>
+      </button>
+    </div>
     <div class="layout-wrapper">
         <aside class="sidebar">
-            <a href="../index.html" class="back-btn">🏠 Voltar ao Portal</a>
-            <h3>Navegacao</h3>
+            <a href="../index.html" class="back-btn">
+                <span lang-content="pt">&omacr; Voltar para Tela Principal</span>
+                <span lang-content="en">&omacr; Back to Main Portal</span>
+            </a>
+            <h3 lang-content="pt">Navegação</h3>
+            <h3 lang-content="en">Navigation</h3>
             <ul class="nav-links">
-                <li><a href="carregar-dados.html" class="active">Carregar Dados</a></li>
-                <li><a href="obter-dados-power-bi.html">Obter Dados Power Bi</a></li>
-                <li><a href="resumo.html">Resumo</a></li>
-                <li><a href="transformar-e-limpar-dados.html">Transformar E Limpar Dados</a></li>
+                <li><a href="carregar-dados.html" class="active">
+                <span lang-content="pt">Carregar Dados</span>
+                <span lang-content="en">Load Data</span>
+            </a></li>
+                <li><a href="obter-dados-power-bi.html">
+                <span lang-content="pt">Obter Dados Power Bi</span>
+                <span lang-content="en">Get Data Power BI</span>
+            </a></li>
+                <li><a href="resumo.html">
+                <span lang-content="pt">Resumo</span>
+                <span lang-content="en">Summary</span>
+            </a></li>
+                <li><a href="transformar-e-limpar-dados.html">
+                <span lang-content="pt">Transformar E Limpar Dados</span>
+                <span lang-content="en">Transform & Clean Data</span>
+            </a></li>
             </ul>
         </aside>
         <div class="content-area">
-    <div class="container">
-        <h1>📥 Carregar Dados no Power BI</h1>
-<p>Depois de conectar e transformar os dados no Power Query, o próximo passo é <strong>carregar os dados no modelo</strong>.</p>
+    
+    
+    
+    
+    
+    
+    <div class="container"><h1 lang-content="pt">📥 Carregar Dados no Power BI</h1>
+<h1 lang-content="en">📥 Load Data into Power BI</h1>
+<p lang-content="pt">Depois de conectar e transformar os dados no Power Query, o próximo passo é <strong>carregar os dados no modelo</strong>.</p>
+<p lang-content="en">After connecting and transforming data in Power Query, the next step is to <strong>load the data into the model</strong>.</p>
 <hr />
-<h2>🔹 Métodos de Carga</h2>
+<h2 lang-content="pt">🔹 Métodos de Carga</h2>
+<h2 lang-content="en">🔹 Loading Methods</h2>
 <table>
 <thead>
 <tr>
-<th>Método</th>
-<th>Descrição</th>
-<th>Uso Ideal</th>
+<th lang-content="pt">Método</th>
+<th lang-content="en">Method</th>
+<th lang-content="pt">Descrição</th>
+<th lang-content="en">Description</th>
+<th lang-content="pt">Uso Ideal</th>
+<th lang-content="en">Ideal Use</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Import</strong></td>
-<td>Dados são carregados no modelo</td>
-<td>Melhor performance</td>
+<td lang-content="pt"><strong>Import</strong></td>
+<td lang-content="en"><strong>Import</strong></td>
+<td lang-content="pt">Dados são carregados no modelo</td>
+<td lang-content="en">Data is loaded into the model</td>
+<td lang-content="pt">Melhor performance</td>
+<td lang-content="en">Better performance</td>
 </tr>
 <tr>
-<td><strong>DirectQuery</strong></td>
-<td>Consulta sempre a fonte</td>
-<td>Dados grandes ou atualizados frequentemente</td>
+<td lang-content="pt"><strong>DirectQuery</strong></td>
+<td lang-content="en"><strong>DirectQuery</strong></td>
+<td lang-content="pt">Consulta sempre a fonte</td>
+<td lang-content="en">Always queries the source</td>
+<td lang-content="pt">Dados grandes ou atualizados frequentemente</td>
+<td lang-content="en">Large or frequently updated data</td>
 </tr>
 <tr>
-<td><strong>Dual</strong></td>
-<td>Pode atuar como Import ou DirectQuery</td>
-<td>Modelos compostos</td>
+<td lang-content="pt"><strong>Dual</strong></td>
+<td lang-content="en"><strong>Dual</strong></td>
+<td lang-content="pt">Pode atuar como Import ou DirectQuery</td>
+<td lang-content="en">Can act as Import or DirectQuery</td>
+<td lang-content="pt">Modelos compostos</td>
+<td lang-content="en">Composite models</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2>🔹 Atualização de Dados</h2>
-<h3><strong>Refresh Manual</strong></h3>
-<p>Via Power BI Desktop ou serviço.</p>
-<h3><strong>Agendamento de Atualização</strong></h3>
+<h2 lang-content="pt">🔹 Atualização de Dados</h2>
+<h2 lang-content="en">🔹 Data Refresh</h2>
+<h3 lang-content="pt"><strong>Refresh Manual</strong></h3>
+<h3 lang-content="en"><strong>Manual Refresh</strong></h3>
+<p lang-content="pt">Via Power BI Desktop ou serviço.</p>
+<p lang-content="en">Via Power BI Desktop or service.</p>
+<h3 lang-content="pt"><strong>Agendamento de Atualização</strong></h3>
+<h3 lang-content="en"><strong>Refresh Scheduling</strong></h3>
 <ul>
-<li>Requer gateway se fonte estiver on-premises  </li>
-<li>Necessário Premium para frequências maiores  </li>
+<li lang-content="pt">Requer gateway se fonte estiver on-premises  </li>
+<li lang-content="en">Requires gateway if source is on-premises  </li>
+<li lang-content="pt">Necessário Premium para frequências maiores  </li>
+<li lang-content="en">Premium needed for higher frequencies  </li>
 </ul>
 <hr />
-<h2>🔹 Incremental Refresh</h2>
-<p>Ideal para grandes volumes de dados. Permite:</p>
+<h2 lang-content="pt">🔹 Incremental Refresh</h2>
+<h2 lang-content="en">🔹 Incremental Refresh</h2>
+<p lang-content="pt">Ideal para grandes volumes de dados. Permite:</p>
+<p lang-content="en">Ideal for large volumes of data. Allows:</p>
 <ul>
-<li>Atualizar apenas partições recentes  </li>
-<li>Reduzir tempo de atualização  </li>
-<li>Otimizar armazenamento  </li>
+<li lang-content="pt">Atualizar apenas partições recentes  </li>
+<li lang-content="en">Refresh only recent partitions  </li>
+<li lang-content="pt">Reduzir tempo de atualização  </li>
+<li lang-content="en">Reduce refresh time  </li>
+<li lang-content="pt">Otimizar armazenamento  </li>
+<li lang-content="en">Optimize storage  </li>
 </ul>
-<p>Pré-requisitos:</p>
+<p lang-content="pt">Pré-requisitos:</p>
+<p lang-content="en">Prerequisites:</p>
 <ul>
-<li>Parâmetros RangeStart / RangeEnd  </li>
-<li>Filtro na data de fato  </li>
-<li>Dataset publicado em workspace Pro ou Premium  </li>
+<li lang-content="pt">Parâmetros RangeStart / RangeEnd  </li>
+<li lang-content="en">RangeStart / RangeEnd parameters  </li>
+<li lang-content="pt">Filtro na data de fato  </li>
+<li lang-content="en">Filter on the fact date  </li>
+<li lang-content="pt">Dataset publicado em workspace Pro ou Premium  </li>
+<li lang-content="en">Dataset published in Pro or Premium workspace  </li>
 </ul>
 <hr />
-<h2>🔹 Boas Práticas de Carga</h2>
+<h2 lang-content="pt">🔹 Boas Práticas de Carga</h2>
+<h2 lang-content="en">🔹 Loading Best Practices</h2>
 <ul>
-<li>Remover colunas inúteis antes de carregar  </li>
-<li>Evitar tipos de dados textuais pesados  </li>
-<li>Conferir cardinalidade das colunas  </li>
-<li>Revisar dependências de consultas  </li>
-<li>Evitar colunas calculadas no modelo quando possível  </li>
+<li lang-content="pt">Remover colunas inúteis antes de carregar  </li>
+<li lang-content="en">Remove unnecessary columns before loading  </li>
+<li lang-content="pt">Evitar tipos de dados textuais pesados  </li>
+<li lang-content="en">Avoid heavy textual data types  </li>
+<li lang-content="pt">Conferir cardinalidade das colunas  </li>
+<li lang-content="en">Check column cardinality  </li>
+<li lang-content="pt">Revisar dependências de consultas  </li>
+<li lang-content="en">Review query dependencies  </li>
+<li lang-content="pt">Evitar colunas calculadas no modelo quando possível  </li>
+<li lang-content="en">Avoid calculated columns in the model when possible  </li>
 </ul>
 <hr />
-<h2>📚 Links Oficiais</h2>
+<h2 lang-content="pt">📚 Links Oficiais</h2>
+<h2 lang-content="en">📚 Official Links</h2>
 <ul>
-<li>Incremental refresh:<br />
+<li lang-content="pt">Incremental refresh:<br />
+  https://learn.microsoft.com/power-bi/connect-data/incremental-refresh-overview  </li>
+<li lang-content="en">Incremental refresh:<br />
   https://learn.microsoft.com/power-bi/connect-data/incremental-refresh-overview  </li>
 </ul>
 <hr />
+<!-- PROGRESSO DO TÓPICO -->
+<div class="topic-completion" style="text-align:center; padding: 30px 0; margin-top: 40px; border-top: 1px solid var(--border-color);">
+    <button id="btn-complete-topic" onclick="toggleTopicCompletion()" style="padding: 12px 24px; border-radius: 8px; border: 2px solid var(--border-color); background: transparent; color: var(--text-primary); font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;">
+        <span id="completion-icon">⭕</span> <span id="completion-text">Marcar como Concluído</span>
+    </button>
+</div>
+<script>
+    const topicKey = window.location.pathname.split('/').pop().replace('.html', '');
+    function toggleTopicCompletion() {
+        const prog = window.getTopicProgress ? window.getTopicProgress() : {};
+        const isNowCompleted = !prog[topicKey];
+        if (window.markTopicCompleted) window.markTopicCompleted(topicKey, isNowCompleted);
+        updateCompletionUI(isNowCompleted);
+    }
+    function updateCompletionUI(isCompleted) {
+        const btn = document.getElementById('btn-complete-topic');
+        const icon = document.getElementById('completion-icon');
+        const text = document.getElementById('completion-text');
+        if(!btn) return;
+        if(isCompleted) {
+            btn.style.borderColor = "var(--success, #2EA043)";
+            btn.style.color = "var(--success, #2EA043)";
+            btn.style.background = "rgba(46, 160, 67, 0.1)";
+            icon.innerText = "✅";
+            text.innerText = "Concluído";
+        } else {
+            btn.style.borderColor = "var(--border-color)";
+            btn.style.color = "var(--text-primary)";
+            btn.style.background = "transparent";
+            icon.innerText = "⭕";
+            text.innerText = "Marcar como Concluído";
+        }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        const prog = window.getTopicProgress ? window.getTopicProgress() : {};
+        updateCompletionUI(!!prog[topicKey]);
+    });
+</script>
+</div>
+    </div>
     </div>
     </div>
     </div>

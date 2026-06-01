@@ -16,86 +16,252 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>compartilhamento-e-governanca</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; }
-        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; }
-        code { font-family: "Courier New", Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: var(--bg-main); color: var(--text-primary); }
+        .container { max-width: 800px; margin: auto; background: var(--surface-card); padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        pre { background-color: var(--bg-secondary); padding: 10px; border-radius: 5px; overflow-x: auto; }
+        code { font-family: "Courier New", Courier, monospace; background-color: var(--bg-secondary); padding: 2px 4px; border-radius: 3px; }
         img { max-width: 100%; height: auto; display: block; margin: 10px 0; }
         table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
+        th, td { border: 1px solid var(--border-color); padding: 8px; text-align: left; }
+        th { background-color: var(--bg-secondary); }
+    
+        
+        
+    
+        
+        
+        /* Settings Panel */
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        
+        /* Language Utilities */
+        [lang-content] { display: none; }
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
+        
+    
+        
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
+        
     
         /* Sidebar Styles */
-        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: #f4f4f4; }
+        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: var(--bg-main); color: var(--text-primary); }
         .layout-wrapper { display: flex; width: 100%; height: 100vh; }
-        .sidebar { width: 280px; background: #2c3e50; color: #ecf0f1; padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; }
-        .sidebar a { color: #ecf0f1; text-decoration: none; display: block; padding: 8px 0; }
-        .sidebar a:hover, .sidebar a.active { color: #3498db; font-weight: bold; }
-        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid #34495e; padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: #bdc3c7; }
-        .sidebar .back-btn { font-weight: 500; color: #ecf0f1; display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.15); background-color: rgba(255, 255, 255, 0.05); margin-bottom: 20px; }
+        .sidebar { width: 280px; background: var(--bg-secondary); color: var(--text-primary); padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; border-right: 1px solid var(--border-color); }
+        .sidebar a { color: var(--text-primary); text-decoration: none; display: block; padding: 8px 0; opacity: 0.8; }
+        .sidebar a:hover, .sidebar a.active { color: var(--primary-color); font-weight: bold; opacity: 1; }
+        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary); }
+        .sidebar .back-btn { font-weight: bold; color: #e74c3c; display: flex; align-items: center; gap: 5px; margin-bottom: 20px; }
         .sidebar .back-btn:hover { color: #c0392b; text-decoration: none; }
         .sidebar ul { list-style: none; padding: 0; margin: 0; }
-        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: #f4f4f4; }
-        .container { margin: 0 auto; max-width: 800px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: var(--bg-main); }
+        .container { margin: 0 auto; max-width: 900px; background: var(--surface-card); padding: 30px; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border-color); }
+        
+        /* Settings Panel */
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        
+        /* Language Utilities */
+        [lang-content] { display: none; }
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
         
     </style>
+    <link rel="stylesheet" href="../portal-style.css">
+    <script src="../portal-core.js?v=2"></script>
 </head>
 <body>
+    
+    <div class="settings-panel" id="settings-panel">
+      <button class="settings-btn" id="btn-lang" onclick="toggleLang()" title="Switch language / Alternar idioma">
+        <span class="btn-icon" id="lang-icon">🇧🇷</span>
+        <span id="lang-label">PT</span>
+      </button>
+      <button class="settings-btn" id="btn-theme" onclick="toggleTheme()" title="Toggle dark/light mode">
+        <span class="btn-icon" id="theme-icon">🌙</span>
+        <span id="theme-label">Dark</span>
+      </button>
+    </div>
     <div class="layout-wrapper">
         <aside class="sidebar">
-            <a href="../index.html" class="back-btn">🏠 Voltar ao Portal</a>
-            <h3>Navegacao</h3>
+            <a href="../index.html" class="back-btn">
+                <span lang-content="pt">&omacr; Voltar para Tela Principal</span>
+                <span lang-content="en">&omacr; Back to Main Portal</span>
+            </a>
+            <h3 lang-content="pt">Navegação</h3>
+            <h3 lang-content="en">Navigation</h3>
             <ul class="nav-links">
-                <li><a href="compartilhamento-e-governanca.html" class="active">Compartilhamento E Governanca</a></li>
-                <li><a href="gerenciar-workspaces.html">Gerenciar Workspaces</a></li>
-                <li><a href="resumo.html">Resumo</a></li>
-                <li><a href="seguranca-RLS.html">Seguranca RLS</a></li>
+                <li><a href="compartilhamento-e-governanca.html" class="active">
+                <span lang-content="pt">Compartilhamento E Governanca</span>
+                <span lang-content="en">Sharing & Governance</span>
+            </a></li>
+                <li><a href="gerenciar-workspaces.html">
+                <span lang-content="pt">Gerenciar Workspaces</span>
+                <span lang-content="en">Manage Workspaces</span>
+            </a></li>
+                <li><a href="resumo.html">
+                <span lang-content="pt">Resumo</span>
+                <span lang-content="en">Summary</span>
+            </a></li>
+                <li><a href="seguranca-RLS.html">
+                <span lang-content="pt">Seguranca RLS</span>
+                <span lang-content="en">Seguranca RLS</span>
+            </a></li>
             </ul>
         </aside>
         <div class="content-area">
-    <div class="container">
-        <h1>🔗 Compartilhamento e Governança</h1>
-<p>Este módulo aborda como distribuir conteúdo, aplicar políticas de governança e gerenciar permissões de forma segura no Power BI.</p>
+    
+    
+    
+    
+    
+    
+    <div class="container"><h1 lang-content="pt">🔗 Compartilhamento e Governança</h1>
+<h1 lang-content="en">🔗 Sharing and Governance</h1>
+
+<p lang-content="pt">Este módulo aborda como distribuir conteúdo, aplicar políticas de governança e gerenciar permissões de forma segura no Power BI.</p>
+<p lang-content="en">This module covers how to distribute content, apply governance policies, and manage permissions securely in Power BI.</p>
+
 <hr />
-<h2>🔹 Maneiras de Compartilhar Conteúdo</h2>
-<h3>✔ Compartilhamento direto</h3>
-<p>Permite enviar o relatório ou dashboard diretamente ao usuário.</p>
-<h3>✔ Publicar App</h3>
-<p>Melhor opção para empresas:
-- Layout consistente<br />
-- Controle centralizado<br />
-- Atualizações sem impactar versões antigas  </p>
-<h3>✔ Permissões no Dataset</h3>
-<ul>
-<li>Build Permission  </li>
-<li>Read  </li>
-<li>Reshare  </li>
+
+<h2 lang-content="pt">🔹 Maneiras de Compartilhar Conteúdo</h2>
+<h2 lang-content="en">🔹 Ways to Share Content</h2>
+
+<h3 lang-content="pt">✔ Compartilhamento direto</h3>
+<h3 lang-content="en">✔ Direct Sharing</h3>
+
+<p lang-content="pt">Permite enviar o relatório ou dashboard diretamente ao usuário.</p>
+<p lang-content="en">Allows sending the report or dashboard directly to the user.</p>
+
+<h3 lang-content="pt">✔ Publicar App</h3>
+<h3 lang-content="en">✔ Publish App</h3>
+
+<p lang-content="pt">Melhor opção para empresas:<br />- Layout consistente<br />- Controle centralizado<br />- Atualizações sem impactar versões antigas</p>
+<p lang-content="en">Best option for companies:<br />- Consistent layout<br />- Centralized control<br />- Updates without impacting older versions</p>
+
+<h3 lang-content="pt">✔ Permissões no Dataset</h3>
+<h3 lang-content="en">✔ Dataset Permissions</h3>
+
+<ul lang-content="pt">
+  <li>Build Permission</li>
+  <li>Read</li>
+  <li>Reshare</li>
 </ul>
-<hr />
-<h2>🔹 Governança no Power BI</h2>
-<h3>✔ Data Lineage</h3>
-<p>Mostra a origem dos dados e onde eles são usados.</p>
-<h3>✔ Impact Analysis</h3>
-<p>Permite avaliar risco antes de editar um dataset.</p>
-<h3>✔ Certificação e Promoção de Datasets</h3>
-<ul>
-<li><strong>Promoted</strong> → recomendado pela equipe  </li>
-<li><strong>Certified</strong> → dataset oficial corporativo  </li>
+<ul lang-content="en">
+  <li>Build Permission</li>
+  <li>Read</li>
+  <li>Reshare</li>
 </ul>
+
 <hr />
-<h2>🔹 Auditoria e Segurança de Acesso</h2>
-<ul>
-<li>Monitoramento de uso  </li>
-<li>Logs de atividade (Premium)  </li>
-<li>Bloqueios por IP (Admin)  </li>
-<li>Sensibilidade (Microsoft Purview)  </li>
+
+<h2 lang-content="pt">🔹 Governança no Power BI</h2>
+<h2 lang-content="en">🔹 Governance in Power BI</h2>
+
+<h3 lang-content="pt">✔ Data Lineage</h3>
+<h3 lang-content="en">✔ Data Lineage</h3>
+
+<p lang-content="pt">Mostra a origem dos dados e onde eles são usados.</p>
+<p lang-content="en">Shows the origin of the data and where it is used.</p>
+
+<h3 lang-content="pt">✔ Impact Analysis</h3>
+<h3 lang-content="en">✔ Impact Analysis</h3>
+
+<p lang-content="pt">Permite avaliar risco antes de editar um dataset.</p>
+<p lang-content="en">Allows assessing risk before editing a dataset.</p>
+
+<h3 lang-content="pt">✔ Certificação e Promoção de Datasets</h3>
+<h3 lang-content="en">✔ Certification and Promotion of Datasets</h3>
+
+<ul lang-content="pt">
+  <li><strong>Promoted</strong> → recomendado pela equipe</li>
+  <li><strong>Certified</strong> → dataset oficial corporativo</li>
 </ul>
+<ul lang-content="en">
+  <li><strong>Promoted</strong> → recommended by the team</li>
+  <li><strong>Certified</strong> → official corporate dataset</li>
+</ul>
+
 <hr />
-<h2>📚 Links Oficiais</h2>
-<ul>
-<li>Collaboration and governance:<br />
+
+<h2 lang-content="pt">🔹 Auditoria e Segurança de Acesso</h2>
+<h2 lang-content="en">🔹 Audit and Access Security</h2>
+
+<ul lang-content="pt">
+  <li>Monitoramento de uso</li>
+  <li>Logs de atividade (Premium)</li>
+  <li>Bloqueios por IP (Admin)</li>
+  <li>Sensibilidade (Microsoft Purview)</li>
+</ul>
+<ul lang-content="en">
+  <li>Usage monitoring</li>
+  <li>Activity logs (Premium)</li>
+  <li>IP blocks (Admin)</li>
+  <li>Sensitivity (Microsoft Purview)</li>
+</ul>
+
+<hr />
+
+<h2 lang-content="pt">📚 Links Oficiais</h2>
+<h2 lang-content="en">📚 Official Links</h2>
+
+<ul lang-content="pt">
+  <li>Collaboration and governance:<br />
   https://learn.microsoft.com/power-bi/guidance/power-bi-governance</li>
 </ul>
+<ul lang-content="en">
+  <li>Collaboration and governance:<br />
+  https://learn.microsoft.com/power-bi/guidance/power-bi-governance</li>
+</ul>
+<!-- PROGRESSO DO TÓPICO -->
+<div class="topic-completion" style="text-align:center; padding: 30px 0; margin-top: 40px; border-top: 1px solid var(--border-color);">
+    <button id="btn-complete-topic" onclick="toggleTopicCompletion()" style="padding: 12px 24px; border-radius: 8px; border: 2px solid var(--border-color); background: transparent; color: var(--text-primary); font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;">
+        <span id="completion-icon">⭕</span> <span id="completion-text">Marcar como Concluído</span>
+    </button>
+</div>
+<script>
+    const topicKey = window.location.pathname.split('/').pop().replace('.html', '');
+    function toggleTopicCompletion() {
+        const prog = window.getTopicProgress ? window.getTopicProgress() : {};
+        const isNowCompleted = !prog[topicKey];
+        if (window.markTopicCompleted) window.markTopicCompleted(topicKey, isNowCompleted);
+        updateCompletionUI(isNowCompleted);
+    }
+    function updateCompletionUI(isCompleted) {
+        const btn = document.getElementById('btn-complete-topic');
+        const icon = document.getElementById('completion-icon');
+        const text = document.getElementById('completion-text');
+        if(!btn) return;
+        if(isCompleted) {
+            btn.style.borderColor = "var(--success, #2EA043)";
+            btn.style.color = "var(--success, #2EA043)";
+            btn.style.background = "rgba(46, 160, 67, 0.1)";
+            icon.innerText = "✅";
+            text.innerText = "Concluído";
+        } else {
+            btn.style.borderColor = "var(--border-color)";
+            btn.style.color = "var(--text-primary)";
+            btn.style.background = "transparent";
+            icon.innerText = "⭕";
+            text.innerText = "Marcar como Concluído";
+        }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        const prog = window.getTopicProgress ? window.getTopicProgress() : {};
+        updateCompletionUI(!!prog[topicKey]);
+    });
+</script>
+</div>\n</div>
+    </div>
     </div>
     </div>
     </div>

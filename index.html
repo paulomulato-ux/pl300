@@ -1,786 +1,561 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RPBVGEK9RD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RPBVGEK9RD');
-</script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Estudo - Certificação PL-300 Power BI Data Analyst</title>
-        <style>
+    <title>PL-300 Portal | Microsoft Power BI Data Analyst</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <script src="portal-core.js?v=2"></script>
+
+    <style>
+        /* =========================================================
+           CSS CUSTOM PROPERTIES — Vêm do portal-style.css, 
+           mas definimos aqui para a página autônoma também.
+           ========================================================= */
         :root {
-            --bg-body: #f8fafc;
-            --bg-card: #ffffff;
-            --text-main: #1e293b;
-            --text-muted: #475569;
-            --border-light: #e2e8f0;
-            
-            --accent-primary: #667eea;
-            --accent-secondary: #764ba2;
-            --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            
-            --shadow-md: 0 10px 30px rgba(0,0,0,0.1);
-            --shadow-lg: 0 15px 40px rgba(0,0,0,0.15);
-            
-            --table-header-bg: #667eea;
-            --table-header-text: #ffffff;
-            --table-stripe: #f1f5f9;
-            --table-hover: #e2e8f0;
-            
-            --header-text: #ffffff;
+            --bg-main:    #1B2530;
+            --bg-sub:     #121A23;
+            --bg-surface: #232E3C;
+            --text-main:  #FFFFFF;
+            --text-sub:   #8F9CAE;
+            --accent:     #C1A26A;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --btn-cta:    #1A4CB0;
+            --btn-primary-bg: #FFFFFF;
+            --btn-primary-text: #1B2530;
+            --success:    #2EA043;
+            --sh-sm:      0 2px 8px rgba(0,0,0,0.35);
+            --sh-md:      0 4px 24px rgba(0,0,0,0.45);
+            --ease:       all 0.3s ease;
         }
 
-        [data-theme="dark"] {
-            --bg-body: #0f172a;
-            --bg-card: #1e293b;
-            --text-main: #f8fafc;
-            --text-muted: #cbd5e1;
-            --border-light: #334155;
-            
-            --accent-primary: #818cf8;
-            --accent-secondary: #a5b4fc;
-            --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-            
-            --shadow-md: 0 10px 30px rgba(0,0,0,0.5);
-            --shadow-lg: 0 15px 40px rgba(0,0,0,0.6);
-            
-            --table-header-bg: #334155;
-            --table-header-text: #f8fafc;
-            --table-stripe: #0f172a;
-            --table-hover: #475569;
-            
-            --header-text: #f8fafc;
+        [data-theme="light"] {
+            --bg-main:    #F6F5F0;
+            --bg-sub:     #EBE9DF;
+            --bg-surface: #FFFFFF;
+            --text-main:  #1F262E;
+            --text-sub:   #616D7E;
+            --accent:     #A68446;
+            --border-color: rgba(31, 38, 46, 0.06);
+            --btn-cta:    #1A4CB0;
+            --btn-primary-bg: #1A4CB0;
+            --btn-primary-text: #FFFFFF;
+            --success:    #1F7A33;
+            --sh-sm:      0 2px 8px rgba(0,0,0,0.06);
+            --sh-md:      0 4px 24px rgba(0,0,0,0.09);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* =========================================================
+           RESET & BASE
+           ========================================================= */
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; scroll-padding-top:68px; }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: var(--bg-body);
-            color: var(--text-main);
-            min-height: 100vh;
-            padding: 20px;
-            transition: background 0.3s ease, color 0.3s ease;
+            font-family:'DM Sans', sans-serif;
+            background:var(--bg-main);
+            color:var(--text-main);
+            line-height:1.65;
+            min-height:100vh;
+            overflow-x:hidden;
+            transition:var(--ease);
         }
+        h1, h2, h3, h4 { font-family:'Inter', sans-serif; font-weight:800; }
+        a { color:var(--accent); text-decoration:none; transition:var(--ease); }
+        a:hover { opacity:.8; }
+        ul { list-style:none; }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
+        /* =========================================================
+           HEADER
+           ========================================================= */
+        .site-header {
+            position:fixed; top:0; left:0; right:0; height:56px;
+            background:rgba(27,37,48,0.93);
+            backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+            border-bottom:1px solid var(--border-color);
+            z-index:1000; display:flex; align-items:center; justify-content:space-between;
+            padding:0 5%;
         }
-
-        header {
-            text-align: center;
-            color: var(--header-text);
-            background: var(--accent-gradient);
-            border-radius: 16px;
-            margin-bottom: 40px;
-            padding: 40px 20px;
-            box-shadow: var(--shadow-md);
-        }
-
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        header p {
-            font-size: 1.1em;
-            opacity: 0.9;
-        }
-
-        /* --- HERO BANNER CTA --- */
-        .hero-cta {
-            background: var(--accent-gradient);
-            border-radius: 16px;
-            padding: 40px;
-            text-align: center;
-            color: #ffffff;
-            margin-bottom: 40px;
-            box-shadow: var(--shadow-md);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        
-        .hero-cta h2 {
-            font-size: 2.2em;
-            margin-bottom: 5px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-        }
-
-        .hero-cta p {
-            font-size: 1.1em;
-            max-width: 600px;
-            opacity: 0.95;
-            margin-bottom: 10px;
-            line-height: 1.5;
-        }
-
-        .btn-cta {
-            display: inline-block;
-            background: #ffffff;
-            color: var(--accent-secondary);
-            font-size: 1.2em;
-            font-weight: bold;
-            padding: 16px 32px;
-            border-radius: 50px;
-            text-decoration: none;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .btn-cta:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-            color: var(--accent-primary);
-        }
-
-        /* --- MODULES --- */
-        .modules-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .module-card {
-            background: var(--bg-card);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .module-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .module-header {
-            background: var(--accent-gradient);
-            color: #ffffff;
-            padding: 20px;
-            font-size: 1.3em;
-            font-weight: bold;
-        }
-        
-        [data-theme="dark"] .module-header {
-            background: var(--table-header-bg);
-            color: var(--table-header-text);
-        }
-
-        .module-content {
-            padding: 20px;
-        }
-
-        .module-content ul {
-            list-style: none;
-        }
-
-        .module-content li {
-            padding: 10px 0;
-            border-bottom: 1px solid var(--border-light);
-        }
-
-        .module-content li:last-child {
-            border-bottom: none;
-        }
-
-        .module-content a {
-            color: var(--accent-primary);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        .module-content a:hover {
-            color: var(--accent-secondary);
-            text-decoration: underline;
-        }
-
-        /* --- INFO & PROGRESS --- */
-        .info-section, .progress-section, .links-section {
-            background: var(--bg-card);
-            border-radius: 10px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: var(--shadow-md);
-        }
-
-        .info-section h2, .progress-section h2, .links-section h2 {
-            color: var(--accent-primary);
-            margin-bottom: 15px;
-            font-size: 1.5em;
-        }
-
-        .info-section p, .progress-item label {
-            line-height: 1.8;
-            color: var(--text-muted);
-            margin-bottom: 10px;
-        }
-
-        /* --- TABLE --- */
-        .domains-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-
-        .domains-table th,
-        .domains-table td {
-            border: 1px solid var(--border-light);
-            padding: 12px;
-            text-align: left;
-        }
-
-        .domains-table th {
-            background-color: var(--table-header-bg);
-            color: var(--table-header-text);
-            font-weight: bold;
-        }
-
-        .domains-table tr:nth-child(even) td {
-            background-color: var(--table-stripe);
-        }
-        
-        .domains-table tr td {
-            background-color: var(--bg-card);
-        }
-
-        .domains-table tr:hover td {
-            background-color: var(--table-hover);
-        }
-
-        /* --- LINKS --- */
-        .links-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
-
-        .link-card {
-            background: var(--table-stripe);
-            border-left: 4px solid var(--accent-primary);
-            padding: 15px;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .link-card:hover {
-            background: var(--table-hover);
-            border-left-color: var(--accent-secondary);
-        }
-
-        .link-card a {
-            color: var(--accent-primary);
-            text-decoration: none;
-            font-weight: 500;
-            display: block;
-            word-break: break-word;
-            margin-top: 4px;
-        }
-
-        .link-card a:hover {
-            color: var(--accent-secondary);
-        }
-        
-        .link-card strong {
-            color: var(--text-main);
-        }
-
-        footer {
-            text-align: center;
-            color: var(--text-muted);
-            padding: 20px;
-            margin-top: 40px;
-            opacity: 0.8;
-        }
-
-        /* --- SETTINGS PANEL --- */
-        .settings-panel {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 9999;
-            display: flex;
-            gap: 10px;
-        }
-
+        [data-theme="light"] .site-header { background:rgba(246,245,240,0.93); }
+        .logo { font-size:1.1rem; font-weight:700; color:var(--text-main); display:flex; align-items:center; gap:8px; }
+        .header-controls { display:flex; gap:24px; align-items:center; }
+        .header-nav { display:flex; gap:16px; }
+        .header-nav a { font-size:0.9rem; font-weight:600; color:var(--text-sub); }
+        .header-nav a:hover { color:var(--text-main); }
+        .settings-panel { display:flex; gap:8px; align-items:center; }
         .settings-btn {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 16px;
-            border-radius: 100px;
-            border: 1px solid var(--border-light);
-            background: var(--bg-card);
-            color: var(--text-main);
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            background:var(--bg-surface); border:1px solid var(--border-color);
+            padding:4px 12px; border-radius:100px; color:var(--text-main);
+            font-size:0.8rem; font-weight:600; cursor:pointer; display:flex; align-items:center; gap:6px;
         }
 
-        .settings-btn:hover {
-            background: var(--table-stripe);
-            transform: translateY(-2px);
-            border-color: var(--accent-primary);
-        }
+        /* =========================================================
+           LAYOUT WRAPPER
+           ========================================================= */
+        .main-container { max-width:1200px; margin:0 auto; padding:80px 5% 60px; }
 
-        [data-theme="dark"] .settings-btn {
-            background: rgba(255,255,255,0.05);
-            border-color: rgba(255,255,255,0.1);
-        }
+        /* =========================================================
+           HERO SECTION
+           ========================================================= */
+        .hero { display:flex; gap:40px; align-items:center; padding:40px 0 80px; }
+        .hero-text { flex:1; }
+        .hero-badge { display:inline-block; padding:4px 12px; background:rgba(26,76,176,0.1); border:1px solid rgba(26,76,176,0.3); border-radius:100px; color:var(--btn-cta); font-size:0.8rem; font-weight:700; margin-bottom:20px; text-transform:uppercase; letter-spacing:1px; }
+        [data-theme="light"] .hero-badge { background:rgba(26,76,176,0.1); border-color:rgba(26,76,176,0.2); }
+        
+        .hero h1 { font-size:3rem; line-height:1.1; margin-bottom:16px; letter-spacing:-1px; }
+        .hero h1 span { color:var(--accent); }
+        .hero p { font-size:1.1rem; color:var(--text-sub); margin-bottom:32px; max-width:480px; }
+        
+        .btn-primary { display:inline-flex; align-items:center; gap:8px; padding:14px 32px; background:var(--btn-primary-bg); color:var(--btn-primary-text); border-radius:100px; font-weight:700; font-size:1rem; border:none; cursor:pointer; box-shadow:0 8px 24px rgba(0,0,0,0.15); transition:all 0.3s; }
+        .btn-primary:hover { transform:translateY(-2px); box-shadow:0 12px 32px rgba(0,0,0,0.25); }
 
-        [data-theme="dark"] .settings-btn:hover {
-            background: rgba(255,255,255,0.1);
-            border-color: var(--accent-primary);
+        /* MINI DASHBOARD DECORATIVO */
+        .hero-visual { flex:1; display:flex; justify-content:flex-end; }
+        .mini-dashboard {
+            background:var(--bg-surface); border:1px solid var(--border-color);
+            border-radius:16px; padding:24px; box-shadow:var(--sh-md);
+            width:100%; max-width:440px;
         }
+        .md-header { display:flex; justify-content:space-between; margin-bottom:20px; align-items:center; }
+        .md-title { font-size:0.8rem; font-weight:700; color:var(--text-sub); text-transform:uppercase; letter-spacing:1px; }
+        .md-tag { background:var(--bg-sub); border:1px solid var(--border-color); padding:2px 10px; border-radius:100px; font-size:0.75rem; color:var(--accent); }
+        
+        .md-stats { display:flex; gap:12px; margin-bottom:24px; }
+        .md-stat-box { flex:1; background:var(--bg-sub); border-radius:8px; padding:16px; border:1px solid var(--border-color); }
+        .md-stat-value { font-size:1.5rem; font-weight:800; color:var(--accent); margin-bottom:4px; }
+        .md-stat-label { font-size:0.75rem; color:var(--text-sub); }
+        
+        .md-chart { display:flex; align-items:flex-end; gap:8px; height:80px; padding-bottom:16px; border-bottom:1px solid var(--border-color); margin-bottom:16px; }
+        .md-bar { flex:1; background:var(--bg-sub); border-radius:4px 4px 0 0; position:relative; }
+        .md-bar.active { background:var(--accent); }
+        .md-bar-label { position:absolute; bottom:-18px; left:50%; transform:translateX(-50%); font-size:0.6rem; color:var(--text-sub); }
+        
+        .md-footer { display:flex; justify-content:space-between; font-size:0.8rem; }
+        .md-footer-trend { color:var(--success); font-weight:700; }
 
-        @media (max-width: 768px) {
-            header h1 { font-size: 1.8em; }
-            .hero-cta h2 { font-size: 1.8em; }
-            .modules-grid { grid-template-columns: 1fr; }
-            .settings-panel { top: auto; bottom: 20px; right: 20px; }
+        /* =========================================================
+           PROGRESS TRACKER
+           ========================================================= */
+        .progress-wrapper { background:var(--bg-surface); border:1px solid var(--border-color); border-radius:16px; padding:32px; margin-bottom:60px; box-shadow:var(--sh-sm); }
+        .pw-header { display:flex; justify-content:space-between; margin-bottom:20px; }
+        .pw-title { font-weight:700; font-size:1.2rem; }
+        .pw-pct { color:var(--accent); font-weight:800; font-size:1.2rem; }
+        .pw-track { display:flex; height:12px; border-radius:100px; background:var(--bg-sub); overflow:hidden; gap:2px; }
+        .pw-segment { flex:1; background:var(--bg-sub); cursor:pointer; transition:var(--ease); }
+        .pw-segment.completed { background:var(--accent); }
+
+        /* =========================================================
+           DOMAINS TABLE
+           ========================================================= */
+        .section-title { font-size:1.8rem; margin-bottom:24px; display:flex; align-items:center; gap:12px; }
+        
+        .domains-table { width:100%; border-collapse:collapse; margin-bottom:60px; background:var(--bg-surface); border-radius:16px; overflow:hidden; border:1px solid var(--border-color); box-shadow:var(--sh-sm); }
+        .domains-table th, .domains-table td { padding:16px 24px; text-align:left; border-bottom:1px solid var(--border-color); }
+        .domains-table th { background:var(--bg-sub); font-size:0.85rem; color:var(--text-sub); text-transform:uppercase; letter-spacing:1px; }
+        .domains-table tr:last-child td { border-bottom:none; }
+        .domain-badge { display:inline-block; padding:4px 12px; border-radius:100px; font-size:0.8rem; font-weight:700; background:rgba(193,162,106,0.1); color:var(--accent); border:1px solid rgba(193,162,106,0.3); }
+        
+        /* =========================================================
+           MODULES GRID
+           ========================================================= */
+        .modules-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:24px; margin-bottom:60px; }
+        .mod-card { background:var(--bg-surface); border:1px solid var(--border-color); border-radius:16px; padding:32px; position:relative; overflow:hidden; transition:var(--ease); display:flex; flex-direction:column; box-shadow:var(--sh-sm); }
+        .mod-card:hover { transform:translateY(-4px); border-color:var(--accent); box-shadow:var(--sh-md); }
+        .mod-number { position:absolute; right:-10px; top:-20px; font-size:8rem; font-weight:800; color:var(--bg-sub); opacity:0.5; z-index:0; line-height:1; }
+        .mod-content { position:relative; z-index:1; flex:1; display:flex; flex-direction:column; }
+        .mod-content h3 { font-size:1.2rem; margin-bottom:12px; color:var(--text-main); }
+        .mod-meta { display:flex; gap:12px; margin-bottom:20px; }
+        .meta-tag { font-size:0.75rem; padding:2px 8px; background:var(--bg-main); border:1px solid var(--border-color); border-radius:4px; color:var(--text-sub); font-family:'JetBrains Mono', monospace; }
+        .mod-links { display:flex; flex-direction:column; gap:8px; margin-top:auto; }
+        .mod-links a { font-size:0.9rem; padding:8px 12px; background:var(--bg-sub); border-radius:6px; color:var(--text-main); display:flex; justify-content:space-between; align-items:center; }
+        .mod-links a:hover { background:var(--accent); color:#fff; }
+
+        /* =========================================================
+           SIMULATOR CTA
+           ========================================================= */
+        .sim-cta { background:linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-sub) 100%); border:1px solid var(--border-color); border-left:4px solid var(--accent); border-radius:16px; padding:40px; display:flex; justify-content:space-between; align-items:center; margin-bottom:60px; box-shadow:var(--sh-md); }
+        .sim-cta-text h2 { font-size:1.8rem; margin-bottom:8px; }
+        .sim-cta-text p { color:var(--text-sub); font-size:1.1rem; }
+
+        /* =========================================================
+           MATERIALS
+           ========================================================= */
+        .materials-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:20px; margin-bottom:60px; }
+        .mat-card { background:var(--bg-surface); padding:24px; border-radius:12px; border:1px solid var(--border-color); text-align:center; transition:var(--ease); }
+        .mat-card:hover { background:var(--bg-sub); border-color:var(--accent); }
+        .mat-icon { font-size:2rem; margin-bottom:16px; }
+        .mat-title { font-size:1rem; font-weight:700; margin-bottom:8px; }
+
+        @media(max-width:900px) {
+            .hero { flex-direction:column; text-align:center; }
+            .hero p { margin:0 auto 32px; }
+            .hero-visual { justify-content:center; }
+            .header-nav { display:none; }
+            .sim-cta { flex-direction:column; text-align:center; gap:24px; }
         }
     </style>
 </head>
 <body>
-    <!-- ===================== SETTINGS PANEL ===================== -->
-    <div class="settings-panel" id="settings-panel">
-      <button class="settings-btn" id="btn-lang" onclick="toggleLang()" title="Switch language / Alternar idioma">
-        <span class="btn-icon" id="lang-icon">🇧🇷</span>
-        <span id="lang-label">PT</span>
-      </button>
-      <button class="settings-btn" id="btn-theme" onclick="toggleTheme()" title="Toggle dark/light mode">
-        <span class="btn-icon" id="theme-icon">☀️</span>
-        <span id="theme-label">Light</span>
-      </button>
-    </div>
-    <div class="container">
-        <header>
-            <h1>📘 Portal de Estudo</h1>
-            <p>Certificação PL-300: Microsoft Power BI Data Analyst</p>
-        </header>
 
-        <div style="display:flex; align-items:center; gap:14px; background:#f8f9fa; border:1px solid #e0e0e0; border-radius:10px; padding:14px 18px; margin: 1.5rem 0;">
-          <div style="width:46px;height:46px;border-radius:50%;background:#0A66C2;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;flex-shrink:0;">PM</div>
-          <div style="flex:1;">
-            <p style="margin:0;font-weight:600;font-size:14px;">Paulo Mulato</p>
-            <p style="margin:2px 0 0;font-size:12px;color:#555;">BI & Data Consultant</p>
-          </div>
-          <a href="https://www.linkedin.com/in/paulomulato" target="_blank" style="background:#0A66C2;color:#fff;padding:7px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;white-space:nowrap;">+ Seguir no LinkedIn</a>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="logo">
+            <span>📊</span> <span data-i18n="header_logo">PL-300 Portal</span>
         </div>
-
-        <div class="info-section">
-            <h2>🎯 Bem-vindo ao seu Portal de Estudos!</h2>
-            <p>Este portal reúne um guia estruturado de estudos para a certificação <strong>PL-300</strong>, utilizando materiais oficiais da Microsoft, anotações pessoais, exercícios e resumos dos principais tópicos cobrados no exame.</p>
-            <p>Navegue pelos módulos abaixo para começar seus estudos. Cada módulo contém resumos, conteúdo detalhado, exemplos práticos e questões de revisão.</p>
+        <div class="header-controls">
+            <nav class="header-nav">
+                <a href="#modulos" data-i18n="nav_modules">Módulos</a>
+                <a href="#simulado" data-i18n="nav_sim">Simulado</a>
+                <a href="#materiais" data-i18n="nav_materials">Materiais</a>
+            </nav>
+            <div class="settings-panel">
+                <button class="settings-btn" onclick="toggleLang()" id="btn-lang">
+                    <span id="lang-icon">PT</span>
+                </button>
+                <button class="settings-btn" onclick="toggleTheme()" id="btn-theme">
+                    <span id="theme-icon">🌙</span>
+                </button>
+            </div>
         </div>
+    </header>
 
-        <div class="progress-section">
-            <h2>📊 Domínios da Prova e Peso</h2>
-            <table class="domains-table">
-                <thead>
-                    <tr>
-                        <th>Domínio</th>
-                        <th>Peso no Exame</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Preparar dados</strong></td>
-                        <td>25–30%</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Modelar dados</strong></td>
-                        <td>25–30%</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Visualizar e analisar dados</strong></td>
-                        <td>25–30%</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Implantar e manter entregáveis</strong></td>
-                        <td>15–20%</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
+    <div class="main-container">
         
-        <div class="hero-cta">
-            <h2 id="cta-title">🏆 Preparado para o Desafio?</h2>
-            <p id="cta-desc">Teste seus conhecimentos agora mesmo com o nosso simulador completo. Questões bilingues (PT/EN) para você treinar e gabaritar a prova PL-300.</p>
-            <a href="simulado/simulado.html" id="cta-btn" class="btn-cta">🚀 Iniciar Simulado Agora</a>
-        </div>
-        
-<h2 id="mod-title" style="color: var(--text-main); margin-bottom: 20px; text-align: center; font-size: 1.8em;">📚 Módulos de Estudo</h2>
+        <!-- HERO (Com o Dashboard Decorativo) -->
+        <section class="hero">
+            <div class="hero-text">
+                <div class="hero-badge" data-i18n="hero_badge">PREMIUM SAAS</div>
+                <h1 data-i18n="hero_title">Simulado <span>Power BI</span><br>Data Analyst</h1>
+                <p data-i18n="hero_subtitle">O portal de estudos mais completo e elegante para dominar a certificação Microsoft PL-300.</p>
+                <a href="simulado/simulado.html" class="btn-primary">
+                    <span data-i18n="btn_start">Acessar Simulado</span> →
+                </a>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="mini-dashboard">
+                    <div class="md-header">
+                        <span class="md-title">PL-300 DASHBOARD</span>
+                        <span class="md-tag">Power BI</span>
+                    </div>
+                    <div class="md-stats">
+                        <div class="md-stat-box">
+                            <div class="md-stat-value">340+</div>
+                            <div class="md-stat-label" data-i18n="stat_q">Questões</div>
+                        </div>
+                        <div class="md-stat-box">
+                            <div class="md-stat-value">4</div>
+                            <div class="md-stat-label" data-i18n="stat_d">Domínios</div>
+                        </div>
+                        <div class="md-stat-box">
+                            <div class="md-stat-value">70%</div>
+                            <div class="md-stat-label" data-i18n="stat_a">Aprovação</div>
+                        </div>
+                    </div>
+                    <div class="md-stats" style="margin-bottom:0; gap: 16px;">
+                        <div class="md-stat-box" style="display:flex; justify-content:space-between; align-items:center;">
+                            <div>
+                                <div class="md-stat-label" data-i18n="stat_solved">Questões Resolvidas</div>
+                                <div class="md-stat-value" id="stats-solved" style="font-size:1.2rem;">0</div>
+                            </div>
+                            <span style="font-size:1.5rem;">✅</span>
+                        </div>
+                        <div class="md-stat-box" style="display:flex; justify-content:space-between; align-items:center;">
+                            <div>
+                                <div class="md-stat-label" data-i18n="stat_review">Para Revisão</div>
+                                <div class="md-stat-value" id="stats-review" style="font-size:1.2rem; color:var(--text-sub);">0</div>
+                            </div>
+                            <span style="font-size:1.5rem;">⭐</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRESS TRACKER -->
+        <section class="progress-wrapper">
+            <div class="pw-header">
+                <div class="pw-title" data-i18n="prog_title">Meu Progresso</div>
+                <div class="pw-pct" id="prog-pct">0%</div>
+            </div>
+            <div class="pw-track">
+                <div class="pw-segment" data-domain="0"></div>
+                <div class="pw-segment" data-domain="1"></div>
+                <div class="pw-segment" data-domain="2"></div>
+                <div class="pw-segment" data-domain="3"></div>
+            </div>
+        </section>
+
+        <!-- DOMAINS TABLE -->
+        <h2 class="section-title" data-i18n="table_title">Domínios Oficiais da Prova</h2>
+        <table class="domains-table">
+            <thead>
+                <tr>
+                    <th data-i18n="th_domain">Domínio</th>
+                    <th data-i18n="th_weight">Peso no Exame</th>
+                    <th data-i18n="th_topics">Tópicos Chave</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-i18n="td_d1">Preparar Dados</td>
+                    <td><span class="domain-badge">25-30%</span></td>
+                    <td data-i18n="td_t1">Power Query, Data Types, Limpeza</td>
+                </tr>
+                <tr>
+                    <td data-i18n="td_d2">Modelar Dados</td>
+                    <td><span class="domain-badge">25-30%</span></td>
+                    <td data-i18n="td_t2">DAX, Relacionamentos, Star Schema</td>
+                </tr>
+                <tr>
+                    <td data-i18n="td_d3">Visualizar e Analisar</td>
+                    <td><span class="domain-badge">25-30%</span></td>
+                    <td data-i18n="td_t3">Gráficos, Filtros, Bookmarks</td>
+                </tr>
+                <tr>
+                    <td data-i18n="td_d4">Implementar e Manter</td>
+                    <td><span class="domain-badge">15-20%</span></td>
+                    <td data-i18n="td_t4">Workspaces, RLS, Refresh</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- MODULES GRID -->
+        <h2 class="section-title" id="modulos" data-i18n="mod_title">Módulos de Estudo</h2>
         <div class="modules-grid">
-            <div class="module-card">
-                <div class="module-header">01 - Preparar Dados</div>
-                <div class="module-content">
-                    <ul>
-                        <li><a href="01-Preparar-Dados/resumo.html">📋 Resumo</a></li>
-                        <li><a href="01-Preparar-Dados/obter-dados-power-bi.html">📥 Obter Dados no Power BI</a></li>
-                        <li><a href="01-Preparar-Dados/transformar-e-limpar-dados.html">🔄 Transformar e Limpar Dados</a></li>
-                        <li><a href="01-Preparar-Dados/carregar-dados.html">📤 Carregar Dados</a></li>
-                    </ul>
+            
+            <div class="mod-card">
+                <div class="mod-number">01</div>
+                <div class="mod-content">
+                    <h3 data-i18n="mod1_title">Preparar Dados</h3>
+                    <div class="mod-meta">
+                        <span class="meta-tag">4 Tópicos</span>
+                        <span class="meta-tag">Power Query</span>
+                    </div>
+                    <div class="mod-links">
+                        <a href="01-Preparar-Dados/obter-dados-power-bi.html"><span data-i18n="m1_l1">Obter Dados</span> <span>→</span></a>
+                        <a href="01-Preparar-Dados/transformar-e-limpar-dados.html"><span data-i18n="m1_l2">Transformar & Limpar</span> <span>→</span></a>
+                        <a href="01-Preparar-Dados/carregar-dados.html"><span data-i18n="m1_l3">Carregar Dados</span> <span>→</span></a>
+                        <a href="01-Preparar-Dados/resumo.html"><span data-i18n="m1_l4">Resumo do Módulo</span> <span>→</span></a>
+                    </div>
                 </div>
             </div>
 
-            <div class="module-card">
-                <div class="module-header">02 - Modelar Dados</div>
-                <div class="module-content">
-                    <ul>
-                        <li><a href="02-Modelar-Dados/resumo.html">📋 Resumo</a></li>
-                        <li><a href="02-Modelar-Dados/design-modelo-de-dados.html">🏗️ Design do Modelo de Dados</a></li>
-                        <li><a href="02-Modelar-Dados/criar-medidas-dax.html">📐 Criar Medidas DAX</a></li>
-                        <li><a href="02-Modelar-Dados/boas-praticas-modelagem.html">✅ Boas Práticas de Modelagem</a></li>
-                    </ul>
+            <div class="mod-card">
+                <div class="mod-number">02</div>
+                <div class="mod-content">
+                    <h3 data-i18n="mod2_title">Modelar Dados</h3>
+                    <div class="mod-meta">
+                        <span class="meta-tag">3 Tópicos</span>
+                        <span class="meta-tag">DAX & Schema</span>
+                    </div>
+                    <div class="mod-links">
+                        <a href="02-Modelar-Dados/design-modelo-de-dados.html"><span data-i18n="m2_l1">Design do Modelo</span> <span>→</span></a>
+                        <a href="02-Modelar-Dados/boas-praticas-modelagem.html"><span data-i18n="m2_l2">Boas Práticas</span> <span>→</span></a>
+                        <a href="02-Modelar-Dados/resumo.html"><span data-i18n="m2_l3">Resumo do Módulo</span> <span>→</span></a>
+                    </div>
                 </div>
             </div>
 
-            <div class="module-card">
-                <div class="module-header">03 - Visualizar e Analisar</div>
-                <div class="module-content">
-                    <ul>
-                        <li><a href="03-Visualizar-e-Analisar/resumo.html">📋 Resumo</a></li>
-                        <li><a href="03-Visualizar-e-Analisar/criar-relatorios.html">📊 Criar Relatórios</a></li>
-                        <li><a href="03-Visualizar-e-Analisar/visualizacoes-avancadas.html">🎨 Visualizações Avançadas</a></li>
-                        <li><a href="03-Visualizar-e-Analisar/analisar-performance-relatorios.html">⚡ Analisar Performance</a></li>
-                    </ul>
+            <div class="mod-card">
+                <div class="mod-number">03</div>
+                <div class="mod-content">
+                    <h3 data-i18n="mod3_title">Visualizar e Analisar</h3>
+                    <div class="mod-meta">
+                        <span class="meta-tag">4 Tópicos</span>
+                        <span class="meta-tag">Visuais</span>
+                    </div>
+                    <div class="mod-links">
+                        <a href="03-Visualizar-e-Analisar/criar-relatorios.html"><span data-i18n="m3_l1">Criar Relatórios</span> <span>→</span></a>
+                        <a href="03-Visualizar-e-Analisar/visualizacoes-avancadas.html"><span data-i18n="m3_l2">Visuais Avançados</span> <span>→</span></a>
+                        <a href="03-Visualizar-e-Analisar/analisar-performance-relatorios.html"><span data-i18n="m3_l3">Analisar Performance</span> <span>→</span></a>
+                        <a href="03-Visualizar-e-Analisar/resumo.html"><span data-i18n="m3_l4">Resumo do Módulo</span> <span>→</span></a>
+                    </div>
                 </div>
             </div>
 
-            <div class="module-card">
-                <div class="module-header">04 - Implementar e Manter</div>
-                <div class="module-content">
-                    <ul>
-                        <li><a href="04-Implementar-e-Manter-Entregaveis/resumo.html">📋 Resumo</a></li>
-                        <li><a href="04-Implementar-e-Manter-Entregaveis/gerenciar-workspaces.html">🏢 Gerenciar Workspaces</a></li>
-                        <li><a href="04-Implementar-e-Manter-Entregaveis/compartilhamento-e-governanca.html">🔐 Compartilhamento e Governança</a></li>
-                        <li><a href="04-Implementar-e-Manter-Entregaveis/seguranca-RLS.html">🛡️ Segurança (RLS)</a></li>
-                    </ul>
+            <div class="mod-card">
+                <div class="mod-number">04</div>
+                <div class="mod-content">
+                    <h3 data-i18n="mod4_title">Implementar e Manter</h3>
+                    <div class="mod-meta">
+                        <span class="meta-tag">4 Tópicos</span>
+                        <span class="meta-tag">Power BI Service</span>
+                    </div>
+                    <div class="mod-links">
+                        <a href="04-Implementar-e-Manter-Entregaveis/gerenciar-workspaces.html"><span data-i18n="m4_l1">Workspaces</span> <span>→</span></a>
+                        <a href="04-Implementar-e-Manter-Entregaveis/compartilhamento-e-governanca.html"><span data-i18n="m4_l2">Compartilhamento</span> <span>→</span></a>
+                        <a href="04-Implementar-e-Manter-Entregaveis/seguranca-RLS.html"><span data-i18n="m4_l3">Segurança RLS</span> <span>→</span></a>
+                        <a href="04-Implementar-e-Manter-Entregaveis/resumo.html"><span data-i18n="m4_l4">Resumo do Módulo</span> <span>→</span></a>
+                    </div>
                 </div>
             </div>
 
-            <div class="module-card">
-                <div class="module-header">05 - Labs Oficiais</div>
-                <div class="module-content">
-                    <ul>
-                        <li><a href="05-Labs-Oficiais/guia-labs.html">🧪 Guia de Labs</a></li>
-                        <li><a href="05-Labs-Oficiais/links-uteis.html">🔗 Links Úteis</a></li>
-                    </ul>
-                </div>
-            </div>
         </div>
 
-        <div class="links-section">
-            <h2>🔗 Materiais Oficiais da Microsoft</h2>
-            <div class="links-grid">
-                <div class="link-card">
-                    <strong>Microsoft Learn - Roteiro Oficial</strong>
-                    <a href="https://learn.microsoft.com/certifications/exams/pl-300" target="_blank">
-                        https://learn.microsoft.com/certifications/exams/pl-300
-                    </a>
-                </div>
-                <div class="link-card">
-                    <strong>Exam Skills Outline (PDF)</strong>
-                    <a href="https://learn.microsoft.com/certifications/resources/study-guide-pl-300" target="_blank">
-                        https://learn.microsoft.com/certifications/resources/study-guide-pl-300
-                    </a>
-                </div>
-                <div class="link-card">
-                    <strong>Laboratórios Oficiais</strong>
-                    <a href="https://github.com/MicrosoftLearning/PL-300-Microsoft-Power-BI-Data-Analyst" target="_blank">
-                        GitHub - Microsoft Learning Labs
-                    </a>
-                </div>
-                <div class="link-card">
-                    <strong>Documentação do Power BI</strong>
-                    <a href="https://learn.microsoft.com/power-bi/" target="_blank">
-                        https://learn.microsoft.com/power-bi/
-                    </a>
-                </div>
+        <!-- SIMULATOR CTA -->
+        <div class="sim-cta" id="simulado">
+            <div class="sim-cta-text">
+                <h2 data-i18n="cta_title">Pronto para testar seus conhecimentos?</h2>
+                <p data-i18n="cta_desc">Acesse o simulador bilingue com ambiente idêntico à prova oficial.</p>
             </div>
+            <a href="simulado/simulado.html" class="btn-primary" style="background:var(--accent); color:#fff;">
+                <span data-i18n="btn_start">Acessar Simulado</span>
+            </a>
         </div>
 
-        <div class="info-section">
-            <h2>🚀 Como Utilizar Este Portal</h2>
-            <ol style="line-height: 2; color: var(--text-muted);">
-                <li><strong>Estude seguindo a ordem dos módulos</strong> (de 01 a 04) para uma progressão lógica.</li>
-                <li><strong>Faça os laboratórios práticos</strong> utilizando os arquivos oficiais da Microsoft.</li>
-                <li><strong>Use os resumos como reforço</strong> antes da prova.</li>
-                <li><strong>Compare seu progresso</strong> com o Skills Outline oficial.</li>
-                <li><strong>Crie exemplos próprios</strong> em Power BI Desktop para consolidar o aprendizado.</li>
-            </ol>
+        <!-- MATERIALS -->
+        <h2 class="section-title" id="materiais" data-i18n="mat_title">Materiais Complementares</h2>
+        <div class="materials-grid">
+            <a href="05-Labs-Oficiais/guia-labs.html" class="mat-card">
+                <div class="mat-icon">🔬</div>
+                <div class="mat-title" data-i18n="mat1">Labs Oficiais</div>
+            </a>
+            <a href="05-Labs-Oficiais/links-uteis.html" class="mat-card">
+                <div class="mat-icon">🔗</div>
+                <div class="mat-title" data-i18n="mat2">Links Úteis</div>
+            </a>
+            <a href="Questoes_Traduzidas_Agrupadas.md" class="mat-card">
+                <div class="mat-icon">📝</div>
+                <div class="mat-title" data-i18n="mat3">Questões PDF</div>
+            </a>
+            <a href="README.html" class="mat-card">
+                <div class="mat-icon">📖</div>
+                <div class="mat-title" data-i18n="mat4">README</div>
+            </a>
         </div>
 
-        <footer>
-            <p id="footer-text-1">Portal de Estudo - Certificação PL-300 | Criado com ❤️ para sua jornada de aprendizado</p>
-            <p id="footer-text-2" style="font-size: 0.9em; margin-top: 10px;">Baseado no material de <strong>Renan Oliveira Andrade</strong> | GitHub: axlrn</p>
-        </footer>
     </div>
+
+    <!-- SCRIPT I18N + PROGRESS -->
     <script>
-        const state = {
-            lang: 'pt',
-            theme: 'light' // default on index
+        const LOCAL_DICT = {
+            header_logo: { pt: "PL-300 Portal", en: "PL-300 Portal" },
+            nav_modules: { pt: "Módulos", en: "Modules" },
+            nav_sim: { pt: "Simulado", en: "Simulator" },
+            nav_materials: { pt: "Materiais", en: "Materials" },
+            hero_badge: { pt: "PREMIUM SAAS", en: "PREMIUM SAAS" },
+            hero_title: { pt: "Simulado <span>Power BI</span><br>Data Analyst", en: "Practice <span>Power BI</span><br>Data Analyst" },
+            hero_subtitle: { pt: "O portal de estudos mais completo e elegante para dominar a certificação Microsoft PL-300.", en: "The most complete and elegant study portal to master the Microsoft PL-300 certification." },
+            btn_start: { pt: "Acessar Simulado", en: "Start Simulator" },
+            stat_q: { pt: "Questões", en: "Questions" },
+            stat_d: { pt: "Domínios", en: "Domains" },
+            stat_a: { pt: "Aprovação", en: "Passing" },
+            md_trend_text: { pt: "▲ Aprovação média", en: "▲ Average score" },
+            prog_title: { pt: "Meu Progresso", en: "My Progress" },
+            table_title: { pt: "Domínios Oficiais da Prova", en: "Official Exam Domains" },
+            th_domain: { pt: "Domínio", en: "Domain" },
+            th_weight: { pt: "Peso no Exame", en: "Exam Weight" },
+            th_topics: { pt: "Tópicos Chave", en: "Key Topics" },
+            td_d1: { pt: "Preparar Dados", en: "Prepare the Data" },
+            td_d2: { pt: "Modelar Dados", en: "Model the Data" },
+            td_d3: { pt: "Visualizar e Analisar", en: "Visualize & Analyze" },
+            td_d4: { pt: "Implementar e Manter", en: "Deploy & Maintain" },
+            stat_solved: { pt: "Questões Resolvidas", en: "Questions Solved" },
+            stat_review: { pt: "Para Revisão", en: "For Review" },
+            td_t1: { pt: "Power Query, Data Types, Limpeza", en: "Power Query, Data Types, Clean" },
+            td_t2: { pt: "DAX, Relacionamentos, Star Schema", en: "DAX, Relationships, Star Schema" },
+            td_t3: { pt: "Gráficos, Filtros, Bookmarks", en: "Charts, Filters, Bookmarks" },
+            td_t4: { pt: "Workspaces, RLS, Refresh", en: "Workspaces, RLS, Refresh" },
+            mod_title: { pt: "Módulos de Estudo", en: "Study Modules" },
+            mod1_title: { pt: "Preparar Dados", en: "Prepare the Data" },
+            mod2_title: { pt: "Modelar Dados", en: "Model the Data" },
+            mod3_title: { pt: "Visualizar e Analisar", en: "Visualize & Analyze" },
+            mod4_title: { pt: "Implementar e Manter", en: "Deploy & Maintain" },
+            m1_l1: { pt: "Obter Dados", en: "Get Data" },
+            m1_l2: { pt: "Transformar & Limpar", en: "Transform & Clean" },
+            m1_l3: { pt: "Carregar Dados", en: "Load Data" },
+            m1_l4: { pt: "Resumo do Módulo", en: "Module Summary" },
+            m2_l1: { pt: "Design do Modelo", en: "Model Design" },
+            m2_l2: { pt: "Boas Práticas", en: "Best Practices" },
+            m2_l3: { pt: "Resumo do Módulo", en: "Module Summary" },
+            m3_l1: { pt: "Criar Relatórios", en: "Create Reports" },
+            m3_l2: { pt: "Visuais Avançados", en: "Advanced Visuals" },
+            m3_l3: { pt: "Analisar Performance", en: "Analyze Performance" },
+            m3_l4: { pt: "Resumo do Módulo", en: "Module Summary" },
+            m4_l1: { pt: "Workspaces", en: "Workspaces" },
+            m4_l2: { pt: "Compartilhamento", en: "Sharing" },
+            m4_l3: { pt: "Segurança RLS", en: "RLS Security" },
+            m4_l4: { pt: "Resumo do Módulo", en: "Module Summary" },
+            cta_title: { pt: "Pronto para testar seus conhecimentos?", en: "Ready to test your knowledge?" },
+            cta_desc: { pt: "Acesse o simulador bilingue com ambiente idêntico à prova oficial.", en: "Access the bilingual simulator with an environment identical to the official exam." },
+            mat_title: { pt: "Materiais Complementares", en: "Complementary Materials" },
+            mat1: { pt: "Labs Oficiais", en: "Official Labs" },
+            mat2: { pt: "Links Úteis", en: "Useful Links" },
+            mat3: { pt: "Questões PDF", en: "PDF Questions" },
+            mat4: { pt: "README", en: "README" }
         };
 
-        const i18n = {
-            pt: {
-                pageTitle: "📘 Portal de Estudo",
-                pageSub: "Certificação PL-300: Microsoft Power BI Data Analyst",
-                followIn: "+ Seguir no LinkedIn",
-                welcomeTitle: "🎯 Bem-vindo ao seu Portal de Estudos!",
-                welcome1: "Este portal reúne um guia estruturado de estudos para a certificação <strong>PL-300</strong>, utilizando materiais oficiais da Microsoft, anotações pessoais, exercícios e resumos dos principais tópicos cobrados no exame.",
-                welcome2: "Navegue pelos módulos abaixo para começar seus estudos. Cada módulo contém resumos, conteúdo detalhado, exemplos práticos e questões de revisão.",
-                domTitle: "📊 Domínios da Prova e Peso",
-                domHeader: "Domínio",
-                weightHeader: "Peso no Exame",
-                dom1: "<strong>Preparar dados</strong>",
-                dom2: "<strong>Modelar dados</strong>",
-                dom3: "<strong>Visualizar e analisar dados</strong>",
-                dom4: "<strong>Implantar e manter entregáveis</strong>",
-                modTitle: "📚 Módulos de Estudo",
-                mod1Title: "01 - Preparar Dados",
-                mod2Title: "02 - Modelar Dados",
-                mod3Title: "03 - Visualizar e Analisar",
-                mod4Title: "04 - Implementar e Manter",
-                mod5Title: "05 - Labs Oficiais",
-                mod1Res: "📋 Resumo", mod1L1: "📥 Obter Dados no Power BI", mod1L2: "🔄 Transformar e Limpar Dados", mod1L3: "📤 Carregar Dados",
-                mod2Res: "📋 Resumo", mod2L1: "🏗️ Design do Modelo de Dados", mod2L2: "📐 Criar Medidas DAX", mod2L3: "✅ Boas Práticas de Modelagem",
-                mod3Res: "📋 Resumo", mod3L1: "📊 Criar Relatórios", mod3L2: "🎨 Visualizações Avançadas", mod3L3: "⚡ Analisar Performance",
-                mod4Res: "📋 Resumo", mod4L1: "🏢 Gerenciar Workspaces", mod4L2: "🔐 Compartilhamento e Governança", mod4L3: "🛡️ Segurança (RLS)",
-                mod5L1: "🧪 Guia de Labs", mod5L2: "🔗 Links Úteis",
-                ctaTitle: "🏆 Preparado para o Desafio?",
-                ctaDesc: "Teste seus conhecimentos agora mesmo com o nosso simulador completo. Questões bilingues (PT/EN) para você treinar e gabaritar a prova PL-300.",
-                ctaBtn: "🚀 Iniciar Simulado Agora",
+        function updateLocalTranslations() {
+            const currentLang = localStorage.getItem('pl300_lang') || 'pt';
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (LOCAL_DICT[key] && LOCAL_DICT[key][currentLang]) {
+                    el.innerHTML = LOCAL_DICT[key][currentLang];
+                }
+            });
+        }
 
-                linksTitle: "🔗 Materiais Oficiais da Microsoft",
-                link1Title: "<strong>Microsoft Learn - Roteiro Oficial</strong>",
-                link3Title: "<strong>Laboratórios Oficiais</strong>",
-                link4Title: "<strong>Documentação do Power BI</strong>",
-                howToTitle: "🚀 Como Utilizar Este Portal",
-                ht1: "<strong>Estude seguindo a ordem dos módulos</strong> (de 01 a 04) para uma progressão lógica.",
-                ht2: "<strong>Faça os laboratórios práticos</strong> utilizando os arquivos oficiais da Microsoft.",
-                ht3: "<strong>Use os resumos como reforço</strong> antes da prova.",
-                ht4: "<strong>Compare seu progresso</strong> com o Skills Outline oficial.",
-                ht5: "<strong>Crie exemplos próprios</strong> em Power BI Desktop para consolidar o aprendizado.",
-                ft1: "Portal de Estudo - Certificação PL-300 | Criado com ❤️ para sua jornada de aprendizado",
-                ft2: "Baseado no material de <strong>Renan Oliveira Andrade</strong> | GitHub: axlrn"
-            },
-            en: {
-                pageTitle: "📘 Study Portal",
-                pageSub: "PL-300 Certification: Microsoft Power BI Data Analyst",
-                followIn: "+ Follow on LinkedIn",
-                welcomeTitle: "🎯 Welcome to your Study Portal!",
-                welcome1: "This portal brings together a structured study guide for the <strong>PL-300</strong> certification, using official Microsoft materials, personal notes, exercises, and summaries of the main topics covered in the exam.",
-                welcome2: "Navigate through the modules below to begin your studies. Each module contains summaries, detailed content, practical examples, and review questions.",
-                domTitle: "📊 Exam Domains & Weights",
-                domHeader: "Domain",
-                weightHeader: "Exam Weight",
-                dom1: "<strong>Prepare Data</strong>",
-                dom2: "<strong>Model Data</strong>",
-                dom3: "<strong>Visualize & Analyze Data</strong>",
-                dom4: "<strong>Deploy & Maintain Deliverables</strong>",
-                modTitle: "📚 Study Modules",
-                mod1Title: "01 - Prepare Data",
-                mod2Title: "02 - Model Data",
-                mod3Title: "03 - Visualize & Analyze",
-                mod4Title: "04 - Deploy & Maintain",
-                mod5Title: "05 - Official Labs",
-                mod1Res: "📋 Summary", mod1L1: "📥 Get Data in Power BI", mod1L2: "🔄 Transform & Clean Data", mod1L3: "📤 Load Data",
-                mod2Res: "📋 Summary", mod2L1: "🏗️ Data Model Design", mod2L2: "📐 Create DAX Measures", mod2L3: "✅ Modeling Best Practices",
-                mod3Res: "📋 Summary", mod3L1: "📊 Create Reports", mod3L2: "🎨 Advanced Visualizations", mod3L3: "⚡ Analyze Performance",
-                mod4Res: "📋 Summary", mod4L1: "🏢 Manage Workspaces", mod4L2: "🔐 Sharing & Governance", mod4L3: "🛡️ Security (RLS)",
-                mod5L1: "🧪 Labs Guide", mod5L2: "🔗 Useful Links",
-                ctaTitle: "🏆 Ready for the Challenge?",
-                ctaDesc: "Test your knowledge right now with our complete simulator. Bilingual questions (PT/EN) for you to train and ace the PL-300 exam.",
-                ctaBtn: "🚀 Start Simulator Now",
+        window.addEventListener('portalLangChanged', () => {
+            updateLocalTranslations();
+            updateLangUI();
+        });
 
-                linksTitle: "🔗 Official Microsoft Materials",
-                link1Title: "<strong>Microsoft Learn - Official Path</strong>",
-                link3Title: "<strong>Official Labs</strong>",
-                link4Title: "<strong>Power BI Documentation</strong>",
-                howToTitle: "🚀 How to Use This Portal",
-                ht1: "<strong>Study following the module order</strong> (from 01 to 04) for a logical progression.",
-                ht2: "<strong>Do the practical labs</strong> using the official Microsoft files.",
-                ht3: "<strong>Use the summaries as reinforcement</strong> before the exam.",
-                ht4: "<strong>Compare your progress</strong> with the official Skills Outline.",
-                ht5: "<strong>Create your own examples</strong> in Power BI Desktop to consolidate learning.",
-                ft1: "Study Portal - PL-300 Certification | Created with ❤️ for your learning journey",
-                ft2: "Based on material by <strong>Renan Oliveira Andrade</strong> | GitHub: axlrn"
-            }
+        window.addEventListener('portalThemeChanged', () => {
+            updateThemeUI();
+        });
+
+        function updateThemeUI() {
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            document.getElementById('theme-icon').innerText = isLight ? '☀️' : '🌙';
+        }
+
+        function updateLangUI() {
+            const lang = localStorage.getItem('pl300_lang') || 'pt';
+            document.getElementById('lang-icon').innerText = lang === 'pt' ? 'PT' : 'EN';
+        }
+
+        const topicsByModule = {
+            0: ['obter-dados-power-bi', 'transformar-e-limpar-dados', 'carregar-dados', 'resumo'],
+            1: ['design-modelo-de-dados', 'boas-praticas-modelagem', 'resumo'],
+            2: ['criar-relatorios', 'visualizacoes-avancadas', 'analisar-performance-relatorios', 'resumo'],
+            3: ['gerenciar-workspaces', 'compartilhamento-e-governanca', 'seguranca-RLS', 'resumo']
         };
 
-        function toggleTheme() {
-            state.theme = state.theme === 'dark' ? 'light' : 'dark';
-            applyTheme();
-            localStorage.setItem('pl300_theme', state.theme);
-        }
-
-        function applyTheme() {
-            document.documentElement.setAttribute('data-theme', state.theme);
-            const icon = document.getElementById('theme-icon');
-            const label = document.getElementById('theme-label');
-            if (icon) icon.textContent = state.theme === 'dark' ? '🌙' : '☀️';
-            if (label) label.textContent = state.theme === 'dark' ? 'Dark' : 'Light';
-        }
-
-        function toggleLang() {
-            state.lang = state.lang === 'pt' ? 'en' : 'pt';
-            applyLang();
-            localStorage.setItem('pl300_lang', state.lang);
-        }
-
-        function applyLang() {
-            const icon = document.getElementById('lang-icon');
-            const label = document.getElementById('lang-label');
-            if (icon) icon.textContent = state.lang === 'pt' ? '🇧🇷' : '🇺🇸';
-            if (label) label.textContent = state.lang === 'pt' ? 'PT' : 'EN';
-            applyTranslations();
-        }
-
-        function applyTranslations() {
-            const t = i18n[state.lang] || i18n['pt'];
+        function renderProgress() {
+            const prog = window.getTopicProgress ? window.getTopicProgress() : {};
+            const segments = document.querySelectorAll('.pw-segment');
+            let globalTotal = 0;
             
-            // Header
-            const header = document.querySelector('header');
-            if(header) {
-                header.querySelector('h1').innerHTML = t.pageTitle;
-                header.querySelector('p').innerHTML = t.pageSub;
-            }
-            const followBtn = document.querySelector('a[href*="linkedin.com"]');
-            if(followBtn) followBtn.innerHTML = t.followIn;
-
-            // Welcome
-            const infoSections = document.querySelectorAll('.info-section');
-            if(infoSections[0]) {
-                infoSections[0].querySelector('h2').innerHTML = t.welcomeTitle;
-                const ps = infoSections[0].querySelectorAll('p');
-                if(ps[0]) ps[0].innerHTML = t.welcome1;
-                if(ps[1]) ps[1].innerHTML = t.welcome2;
-            }
-
-            // Domains table
-            const domSec = document.querySelector('.progress-section');
-            if(domSec) {
-                domSec.querySelector('h2').innerHTML = t.domTitle;
-                const ths = domSec.querySelectorAll('th');
-                if(ths[0]) ths[0].innerHTML = t.domHeader;
-                if(ths[1]) ths[1].innerHTML = t.weightHeader;
-                const tds = domSec.querySelectorAll('td:first-child');
-                if(tds[0]) tds[0].innerHTML = t.dom1;
-                if(tds[1]) tds[1].innerHTML = t.dom2;
-                if(tds[2]) tds[2].innerHTML = t.dom3;
-                if(tds[3]) tds[3].innerHTML = t.dom4;
-            }
-
-
-            // Hero CTA
-            const ctaTitle = document.getElementById('cta-title');
-            if(ctaTitle) ctaTitle.innerHTML = t.ctaTitle;
-            const ctaDesc = document.getElementById('cta-desc');
-            if(ctaDesc) ctaDesc.innerHTML = t.ctaDesc;
-            const ctaBtn = document.getElementById('cta-btn');
-            if(ctaBtn) ctaBtn.innerHTML = t.ctaBtn;
-
-            // Modules
-            const modTitle = document.querySelector('h2[style*="text-align: center"]');
-            if(modTitle) modTitle.innerHTML = t.modTitle;
-
-            const modHeaders = document.querySelectorAll('.module-header');
-            if(modHeaders[0]) modHeaders[0].innerHTML = t.mod1Title;
-            if(modHeaders[1]) modHeaders[1].innerHTML = t.mod2Title;
-            if(modHeaders[2]) modHeaders[2].innerHTML = t.mod3Title;
-            if(modHeaders[3]) modHeaders[3].innerHTML = t.mod4Title;
-            if(modHeaders[4]) modHeaders[4].innerHTML = t.mod5Title;
-
-            const modLinks = document.querySelectorAll('.module-content a');
-            // mod 1
-            if(modLinks[0]) modLinks[0].innerHTML = t.mod1Res;
-            if(modLinks[1]) modLinks[1].innerHTML = t.mod1L1;
-            if(modLinks[2]) modLinks[2].innerHTML = t.mod1L2;
-            if(modLinks[3]) modLinks[3].innerHTML = t.mod1L3;
-            // mod 2
-            if(modLinks[4]) modLinks[4].innerHTML = t.mod2Res;
-            if(modLinks[5]) modLinks[5].innerHTML = t.mod2L1;
-            if(modLinks[6]) modLinks[6].innerHTML = t.mod2L2;
-            if(modLinks[7]) modLinks[7].innerHTML = t.mod2L3;
-            // mod 3
-            if(modLinks[8]) modLinks[8].innerHTML = t.mod3Res;
-            if(modLinks[9]) modLinks[9].innerHTML = t.mod3L1;
-            if(modLinks[10]) modLinks[10].innerHTML = t.mod3L2;
-            if(modLinks[11]) modLinks[11].innerHTML = t.mod3L3;
-            // mod 4
-            if(modLinks[12]) modLinks[12].innerHTML = t.mod4Res;
-            if(modLinks[13]) modLinks[13].innerHTML = t.mod4L1;
-            if(modLinks[14]) modLinks[14].innerHTML = t.mod4L2;
-            if(modLinks[15]) modLinks[15].innerHTML = t.mod4L3;
-            // mod 5
-            if(modLinks[16]) modLinks[16].innerHTML = t.mod5L1;
-            if(modLinks[17]) modLinks[17].innerHTML = t.mod5L2;
-
-            // Links section
-            const linksSec = document.querySelector('.links-section');
-            if(linksSec) {
-                linksSec.querySelector('h2').innerHTML = t.linksTitle;
-                const linkStrs = linksSec.querySelectorAll('.link-card strong');
-                if(linkStrs[0]) linkStrs[0].innerHTML = t.link1Title;
-                if(linkStrs[2]) linkStrs[2].innerHTML = t.link3Title;
-                if(linkStrs[3]) linkStrs[3].innerHTML = t.link4Title;
-            }
-
-            // How to
-            if(infoSections[1]) {
-                infoSections[1].querySelector('h2').innerHTML = t.howToTitle;
-                const lis = infoSections[1].querySelectorAll('li');
-                if(lis[0]) lis[0].innerHTML = t.ht1;
-                if(lis[1]) lis[1].innerHTML = t.ht2;
-                if(lis[2]) lis[2].innerHTML = t.ht3;
-                if(lis[3]) lis[3].innerHTML = t.ht4;
-                if(lis[4]) lis[4].innerHTML = t.ht5;
-            }
-
-            // Footer
-            const ft1 = document.getElementById('footer-text-1');
-            const ft2 = document.getElementById('footer-text-2');
-            if(ft1) ft1.innerHTML = t.ft1;
-            if(ft2) ft2.innerHTML = t.ft2;
+            segments.forEach((seg, idx) => {
+                const topics = topicsByModule[idx];
+                if (!topics) return;
+                let completedCount = 0;
+                topics.forEach(t => {
+                    if (prog[t]) completedCount++;
+                });
+                
+                const modulePct = (completedCount / topics.length) * 100;
+                seg.innerHTML = `<div style="height:100%; background:var(--accent); width:${modulePct}%; transition:var(--ease);"></div>`;
+                
+                globalTotal += (completedCount / topics.length) * 25;
+            });
+            
+            document.getElementById('prog-pct').innerText = Math.round(globalTotal) + '%';
         }
 
-        // Initialize settings on page load
+        window.addEventListener('portalProgressChanged', renderProgress);
+
         document.addEventListener('DOMContentLoaded', () => {
-            const savedTheme = localStorage.getItem('pl300_theme');
-            // If there's no saved theme, index.html defaults to light
-            state.theme = savedTheme ? savedTheme : 'light';
-            
-            const savedLang = localStorage.getItem('pl300_lang');
-            state.lang = savedLang ? savedLang : 'pt';
-            
-            applyTheme();
-            applyLang();
+            if(typeof updateTheme === 'function') updateTheme();
+            if(typeof applyTranslations === 'function') applyTranslations();
+            updateLocalTranslations();
+            updateThemeUI();
+            updateLangUI();
+            renderProgress();
         });
     </script>
 </body>

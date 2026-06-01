@@ -6,6 +6,42 @@
 // ============================================================
 //  BANCO DE QUESTÕES
 // ============================================================
+
+/**
+ * Normaliza a questão para o formato bilíngue
+ */
+function getQText(q) {
+    const lang = localStorage.getItem('pl300_lang') || 'pt';
+    
+    // Se já for bilíngue
+    if (q.question_pt) {
+        return {
+            question: lang === 'pt' ? q.question_pt : q.question_en,
+            options: lang === 'pt' ? q.options_pt : q.options_en,
+            explanation: lang === 'pt' ? q.explanation_pt : q.explanation_en,
+            answer: q.answer
+        };
+    }
+    
+    // Se for legado PT
+    if (q.pergunta) {
+        return {
+            question: q.pergunta,
+            options: q.opcoes,
+            explanation: q.explicacao,
+            answer: q.correta
+        };
+    }
+    
+    // Se for moderno EN
+    return {
+        question: q.question,
+        options: q.options,
+        explanation: q.explanation,
+        answer: q.answer
+    };
+}
+
 const questionBank = {
 
   /* ==================== DOMÍNIO 1 ==================== */
@@ -3582,37 +3618,27 @@ function t(key) { return UI_TEXT[state.lang]?.[key] ?? UI_TEXT['pt'][key] ?? key
 // ============================================================
 //  THEME & LANGUAGE
 // ============================================================
-function toggleTheme() {
-  state.theme = state.theme === 'dark' ? 'light' : 'dark';
-  applyTheme();
-  localStorage.setItem('pl300_theme', state.theme);
-}
-
-function applyTheme() {
-  document.documentElement.setAttribute('data-theme', state.theme);
-  const icon = document.getElementById('theme-icon');
-  const label = document.getElementById('theme-label');
-  if (icon) icon.textContent = state.theme === 'dark' ? '🌙' : '☀️';
-  if (label) label.textContent = state.theme === 'dark' ? 'Dark' : 'Light';
-}
-
-function toggleLang() {
-  state.lang = state.lang === 'pt' ? 'en' : 'pt';
-  applyLang();
-  localStorage.setItem('pl300_lang', state.lang);
+// Theme and Language are now handled by portal-core.js
+const originalSetLang = window.setLang;
+window.setLang = function(lang) {
+  if (typeof originalSetLang === 'function') originalSetLang(lang);
+  state.lang = lang;
+  applyUITexts();
   // If quiz is running, reload current question
-  if (document.getElementById('screen-quiz').classList.contains('active') && state.questions.length > 0) {
+  if (document.getElementById('screen-quiz') && document.getElementById('screen-quiz').classList.contains('active') && state.questions && state.questions.length > 0) {
     loadQuestion(state.currentIndex);
   }
-}
+};
 
-function applyLang() {
-  const icon = document.getElementById('lang-icon');
-  const label = document.getElementById('lang-label');
-  if (icon) icon.textContent = state.lang === 'pt' ? '🇧🇷' : '🇺🇸';
-  if (label) label.textContent = state.lang === 'pt' ? 'PT' : 'EN';
-  applyUITexts();
-}
+const originalSetTheme = window.setTheme;
+window.setTheme = function(theme) {
+  if (typeof originalSetTheme === 'function') originalSetTheme(theme);
+  state.theme = theme;
+};
+
+// toggleTheme e toggleLang são fornecidos pelo portal-core.js
+function applyTheme() { /* handled by portal-core */ }
+function applyLang() { /* handled by portal-core */ }
 
 function applyUITexts() {
   // Welcome screen
@@ -3740,10 +3766,13 @@ function applyUITexts() {
 }
 
 function initSettings() {
-  state.theme = localStorage.getItem('pl300_theme') || 'dark';
-  state.lang = localStorage.getItem('pl300_lang') || 'pt';
-  applyTheme();
-  applyLang();
+  const savedTheme = localStorage.getItem('pl300_theme') || 'dark';
+  const savedLang  = localStorage.getItem('pl300_lang')  || 'pt';
+  // Chamar via window.setLang/setTheme garante que o interceptor acima
+  // (que atualiza state e chama applyUITexts) seja executado na ordem certa
+  if (typeof window.setTheme === 'function') window.setTheme(savedTheme);
+  if (typeof window.setLang  === 'function') window.setLang(savedLang);
+  else { state.lang = savedLang; state.theme = savedTheme; applyUITexts(); }
 }
 
 // Auto-init on load
@@ -3994,10 +4023,10 @@ function loadQuestion(index) {
     if (answered) {
       div.classList.add('disabled');
       if (answered.selected.includes(i)) {
-        const correctAnswers = Array.isArray(question.answer) ? question.answer : [question.answer];
+        const correctAnswers = Array.isArray(qText.answer) ? qText.answer : [qText.answer];
         div.classList.add(correctAnswers.includes(i) ? 'correct' : 'incorrect');
       } else {
-        const correctAnswers = Array.isArray(question.answer) ? question.answer : [question.answer];
+        const correctAnswers = Array.isArray(qText.answer) ? qText.answer : [qText.answer];
         if (correctAnswers.includes(i) && state.mode === 'treino') {
           div.classList.add('correct'); // show correct answer
         }
@@ -4102,7 +4131,7 @@ function submitAnswer() {
 function showFeedback(q, isCorrect) {
   const box = document.getElementById('feedback-box');
   const qText = getQText(q);
-  const correctAnswers = Array.isArray(q.answer) ? q.answer : [q.answer];
+  const correctAnswers = Array.isArray(qText.answer) ? qText.answer : [qText.answer];
   const correctTexts = correctAnswers.map(i => qText.options[i]).join(', ');
   box.className = `feedback-box ${isCorrect ? 'correct' : 'incorrect'}`;
   box.innerHTML = isCorrect
@@ -4293,7 +4322,7 @@ function renderReview(filter) {
     if (filter === 'wrong' && ans.correct) return;
 
     const qText = getQText(q);
-    const correctAnswers = Array.isArray(q.answer) ? q.answer : [q.answer];
+    const correctAnswers = Array.isArray(qText.answer) ? qText.answer : [qText.answer];
     const correctTexts = correctAnswers.map(ci => qText.options[ci]).join(', ');
     const selectedTexts = ans.selected.map(si => qText.options[si]).join(', ') || t('noAnswer');
 

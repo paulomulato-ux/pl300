@@ -16,134 +16,316 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>seguranca-RLS</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; }
-        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; }
-        code { font-family: "Courier New", Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: var(--bg-main); color: var(--text-primary); }
+        .container { max-width: 800px; margin: auto; background: var(--surface-card); padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        pre { background-color: var(--bg-secondary); padding: 10px; border-radius: 5px; overflow-x: auto; }
+        code { font-family: "Courier New", Courier, monospace; background-color: var(--bg-secondary); padding: 2px 4px; border-radius: 3px; }
         img { max-width: 100%; height: auto; display: block; margin: 10px 0; }
         table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
+        th, td { border: 1px solid var(--border-color); padding: 8px; text-align: left; }
+        th { background-color: var(--bg-secondary); }
+    
+        
+        
+    
+        
+        
+        /* Settings Panel */
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        
+        /* Language Utilities */
+        [lang-content] { display: none; }
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
+        
+    
+        
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
+        
     
         /* Sidebar Styles */
-        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: #f4f4f4; }
+        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: var(--bg-main); color: var(--text-primary); }
         .layout-wrapper { display: flex; width: 100%; height: 100vh; }
-        .sidebar { width: 280px; background: #2c3e50; color: #ecf0f1; padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; }
-        .sidebar a { color: #ecf0f1; text-decoration: none; display: block; padding: 8px 0; }
-        .sidebar a:hover, .sidebar a.active { color: #3498db; font-weight: bold; }
-        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid #34495e; padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: #bdc3c7; }
-        .sidebar .back-btn { font-weight: 500; color: #ecf0f1; display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.15); background-color: rgba(255, 255, 255, 0.05); margin-bottom: 20px; }
+        .sidebar { width: 280px; background: var(--bg-secondary); color: var(--text-primary); padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; border-right: 1px solid var(--border-color); }
+        .sidebar a { color: var(--text-primary); text-decoration: none; display: block; padding: 8px 0; opacity: 0.8; }
+        .sidebar a:hover, .sidebar a.active { color: var(--primary-color); font-weight: bold; opacity: 1; }
+        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary); }
+        .sidebar .back-btn { font-weight: bold; color: #e74c3c; display: flex; align-items: center; gap: 5px; margin-bottom: 20px; }
         .sidebar .back-btn:hover { color: #c0392b; text-decoration: none; }
         .sidebar ul { list-style: none; padding: 0; margin: 0; }
-        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: #f4f4f4; }
-        .container { margin: 0 auto; max-width: 800px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: var(--bg-main); }
+        .container { margin: 0 auto; max-width: 900px; background: var(--surface-card); padding: 30px; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border-color); }
+        
+        /* Settings Panel */
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        
+        /* Language Utilities */
+        [lang-content] { display: none; }
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
         
     </style>
+    <link rel="stylesheet" href="../portal-style.css">
+    <script src="../portal-core.js?v=2"></script>
 </head>
 <body>
+    
+    <div class="settings-panel" id="settings-panel">
+      <button class="settings-btn" id="btn-lang" onclick="toggleLang()" title="Switch language / Alternar idioma">
+        <span class="btn-icon" id="lang-icon">🇧🇷</span>
+        <span id="lang-label">PT</span>
+      </button>
+      <button class="settings-btn" id="btn-theme" onclick="toggleTheme()" title="Toggle dark/light mode">
+        <span class="btn-icon" id="theme-icon">🌙</span>
+        <span id="theme-label">Dark</span>
+      </button>
+    </div>
     <div class="layout-wrapper">
         <aside class="sidebar">
-            <a href="../index.html" class="back-btn">🏠 Voltar ao Portal</a>
-            <h3>Navegacao</h3>
+            <a href="../index.html" class="back-btn">
+                <span lang-content="pt">&omacr; Voltar para Tela Principal</span>
+                <span lang-content="en">&omacr; Back to Main Portal</span>
+            </a>
+            <h3 lang-content="pt">Navegação</h3>
+            <h3 lang-content="en">Navigation</h3>
             <ul class="nav-links">
-                <li><a href="compartilhamento-e-governanca.html">Compartilhamento E Governanca</a></li>
-                <li><a href="gerenciar-workspaces.html">Gerenciar Workspaces</a></li>
-                <li><a href="resumo.html">Resumo</a></li>
-                <li><a href="seguranca-RLS.html" class="active">Seguranca RLS</a></li>
+                <li><a href="compartilhamento-e-governanca.html">
+                <span lang-content="pt">Compartilhamento E Governanca</span>
+                <span lang-content="en">Sharing & Governance</span>
+            </a></li>
+                <li><a href="gerenciar-workspaces.html">
+                <span lang-content="pt">Gerenciar Workspaces</span>
+                <span lang-content="en">Manage Workspaces</span>
+            </a></li>
+                <li><a href="resumo.html">
+                <span lang-content="pt">Resumo</span>
+                <span lang-content="en">Summary</span>
+            </a></li>
+                <li><a href="seguranca-RLS.html" class="active">
+                <span lang-content="pt">Seguranca RLS</span>
+                <span lang-content="en">Seguranca RLS</span>
+            </a></li>
             </ul>
         </aside>
         <div class="content-area">
-    <div class="container">
-        <h1>🔐 Segurança em Nível de Linha (RLS)</h1>
-<p>Row-Level Security (RLS) permite que diferentes usuários vejam apenas os dados autorizados, com base em filtros definidos diretamente no modelo semântico do Power BI.</p>
+    
+    
+    
+    
+    
+    
+    <div class="container"><h1 lang-content="pt">🔐 Segurança em Nível de Linha (RLS)</h1>
+<h1 lang-content="en">🔐 Row-Level Security (RLS)</h1>
+<p lang-content="pt">Row-Level Security (RLS) permite que diferentes usuários vejam apenas os dados autorizados, com base em filtros definidos diretamente no modelo semântico do Power BI.</p>
+<p lang-content="en">Row-Level Security (RLS) allows different users to view only authorized data, based on filters defined directly in the Power BI semantic model.</p>
 <hr />
-<h2>🔹 Tipos de RLS</h2>
-<h3>✔ Estática</h3>
-<p>Os filtros são fixos dentro da função criada no modelo.</p>
-<p>Exemplo:</p>
-<pre><code class="language-DAX">DimRegiao[Estado] = &quot;SP&quot;
+<h2 lang-content="pt">🔹 Tipos de RLS</h2>
+<h2 lang-content="en">🔹 Types of RLS</h2>
+<h3 lang-content="pt">✔ Estática</h3>
+<h3 lang-content="en">✔ Static</h3>
+<p lang-content="pt">Os filtros são fixos dentro da função criada no modelo.</p>
+<p lang-content="en">Filters are fixed within the role created in the model.</p>
+<p lang-content="pt">Exemplo:</p>
+<p lang-content="en">Example:</p>
+<pre><code class="language-DAX" lang-content="pt">DimRegiao[Estado] = &quot;SP&quot;
 </code></pre>
-<h3>✔ Dinâmica</h3>
-<p>Os filtros dependem do usuário conectado, usando funções como <code>USERPRINCIPALNAME()</code>.</p>
-<p>Exemplo:</p>
-<pre><code class="language-DAX">DimVendedor[Email] = USERPRINCIPALNAME()
+<pre><code class="language-DAX" lang-content="en">DimRegiao[Estado] = "SP"
+</code></pre>
+<h3 lang-content="pt">✔ Dinâmica</h3>
+<h3 lang-content="en">✔ Dynamic</h3>
+<p lang-content="pt">Os filtros dependem do usuário conectado, usando funções como <code>USERPRINCIPALNAME()</code>.</p>
+<p lang-content="en">Filters depend on the logged-in user, using functions like <code>USERPRINCIPALNAME()</code>.</p>
+<p lang-content="pt">Exemplo:</p>
+<p lang-content="en">Example:</p>
+<pre><code class="language-DAX" lang-content="pt">DimVendedor[Email] = USERPRINCIPALNAME()
+</code></pre>
+<pre><code class="language-DAX" lang-content="en">DimVendedor[Email] = USERPRINCIPALNAME()
 </code></pre>
 <hr />
-<h2>🔹 Como Criar Funções de Segurança</h2>
-<ol>
+<h2 lang-content="pt">🔹 Como Criar Funções de Segurança</h2>
+<h2 lang-content="en">🔹 How to Create Security Roles</h2>
+<ol lang-content="pt">
 <li>No Power BI Desktop, vá em <strong>Modeling → Manage Roles</strong>  </li>
 <li>Clique em <strong>Create</strong>  </li>
 <li>Defina o nome da função (ex.: "Vendedores_SP")  </li>
 <li>Aplique o filtro DAX na tabela correspondente  </li>
 </ol>
-<p>Exemplo de regra:</p>
-<pre><code class="language-DAX">FatoVendas[Estado] = &quot;SP&quot;
+<ol lang-content="en">
+<li>In Power BI Desktop, go to <strong>Modeling → Manage Roles</strong>  </li>
+<li>Click <strong>Create</strong>  </li>
+<li>Set the role name (e.g., "Vendedores_SP")  </li>
+<li>Apply the DAX filter to the corresponding table  </li>
+</ol>
+<p lang-content="pt">Exemplo de regra:</p>
+<p lang-content="en">Example of a rule:</p>
+<pre><code class="language-DAX" lang-content="pt">FatoVendas[Estado] = &quot;SP&quot;
+</code></pre>
+<pre><code class="language-DAX" lang-content="en">FatoVendas[Estado] = "SP"
 </code></pre>
 <hr />
-<h2>🔹 RLS Dinâmico – Exemplo Completo</h2>
-<p>Imagine uma dimensão de vendedores:</p>
+<h2 lang-content="pt">🔹 RLS Dinâmico – Exemplo Completo</h2>
+<h2 lang-content="en">🔹 Dynamic RLS – Complete Example</h2>
+<p lang-content="pt">Imagine uma dimensão de vendedores:</p>
+<p lang-content="en">Imagine a sellers dimension:</p>
 <table>
 <thead>
 <tr>
-<th>Vendedor</th>
-<th>Email</th>
-<th>Região</th>
+<th lang-content="pt">Vendedor</th>
+<th lang-content="en">Seller</th>
+<th lang-content="pt">Email</th>
+<th lang-content="en">Email</th>
+<th lang-content="pt">Região</th>
+<th lang-content="en">Region</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>João</td>
-<td>joao@empresa.com</td>
-<td>Sul</td>
+<td lang-content="pt">João</td>
+<td lang-content="en">João</td>
+<td lang-content="pt">joao@empresa.com</td>
+<td lang-content="en">joao@empresa.com</td>
+<td lang-content="pt">Sul</td>
+<td lang-content="en">South</td>
 </tr>
 <tr>
-<td>Maria</td>
-<td>maria@empresa.com</td>
-<td>Norte</td>
+<td lang-content="pt">Maria</td>
+<td lang-content="en">Maria</td>
+<td lang-content="pt">maria@empresa.com</td>
+<td lang-content="en">maria@empresa.com</td>
+<td lang-content="pt">Norte</td>
+<td lang-content="en">North</td>
 </tr>
 </tbody>
 </table>
-<p>Regra dinâmica:</p>
-<pre><code class="language-DAX">DimVendedor[Email] = USERPRINCIPALNAME()
+<p lang-content="pt">Regra dinâmica:</p>
+<p lang-content="en">Dynamic rule:</p>
+<pre><code class="language-DAX" lang-content="pt">DimVendedor[Email] = USERPRINCIPALNAME()
 </code></pre>
-<p>O Power BI fará automaticamente o filtro para o usuário conectado no serviço.</p>
+<pre><code class="language-DAX" lang-content="en">DimVendedor[Email] = USERPRINCIPALNAME()
+</code></pre>
+<p lang-content="pt">O Power BI fará automaticamente o filtro para o usuário conectado no serviço.</p>
+<p lang-content="en">Power BI will automatically apply the filter for the logged-in user in the service.</p>
 <hr />
-<h2>🔹 Testar RLS no Power BI Desktop</h2>
-<ol>
+<h2 lang-content="pt">🔹 Testar RLS no Power BI Desktop</h2>
+<h2 lang-content="en">🔹 Test RLS in Power BI Desktop</h2>
+<ol lang-content="pt">
 <li>Vá em <strong>Modeling → View As</strong>  </li>
 <li>Escolha a função a ser testada  </li>
 <li>Verifique se o relatório mostra os dados esperados  </li>
 </ol>
-<p>Isso evita erros antes da publicação.</p>
+<ol lang-content="en">
+<li>Go to <strong>Modeling → View As</strong>  </li>
+<li>Select the role to be tested  </li>
+<li>Check if the report shows the expected data  </li>
+</ol>
+<p lang-content="pt">Isso evita erros antes da publicação.</p>
+<p lang-content="en">This helps avoid errors before publishing.</p>
 <hr />
-<h2>🔹 Configuração no Power BI Service</h2>
-<p>Após publicar o dataset:</p>
-<ol>
+<h2 lang-content="pt">🔹 Configuração no Power BI Service</h2>
+<h2 lang-content="en">🔹 Configuration in Power BI Service</h2>
+<p lang-content="pt">Após publicar o dataset:</p>
+<p lang-content="en">After publishing the dataset:</p>
+<ol lang-content="pt">
 <li>Acesse o workspace  </li>
 <li>Vá em <strong>Datasets → Security</strong>  </li>
 <li>Escolha a função criada  </li>
 <li>Adicione usuários ou grupos correspondentes  </li>
 </ol>
-<p>Lembre-se:</p>
-<ul>
+<ol lang-content="en">
+<li>Access the workspace  </li>
+<li>Go to <strong>Datasets → Security</strong>  </li>
+<li>Select the created role  </li>
+<li>Add corresponding users or groups  </li>
+</ol>
+<p lang-content="pt">Lembre-se:</p>
+<p lang-content="en">Remember:</p>
+<ul lang-content="pt">
 <li><strong>RLS não funciona no “Meu Workspace”</strong>  </li>
 <li>Para apps corporativos, recomenda-se workspaces dedicados e governança ativa  </li>
 </ul>
+<ul lang-content="en">
+<li><strong>RLS does not work in “My Workspace”</strong>  </li>
+<li>For corporate apps, dedicated workspaces and active governance are recommended  </li>
+</ul>
 <hr />
-<h2>🔹 Recomendações Importantes</h2>
-<ul>
+<h2 lang-content="pt">🔹 Recomendações Importantes</h2>
+<h2 lang-content="en">🔹 Important Recommendations</h2>
+<ul lang-content="pt">
 <li>Armazene usuários em uma tabela de dimensão quando usar RLS dinâmico  </li>
 <li>Evite relacionamentos bidirecionais  </li>
 <li>Certifique-se de que a coluna usada no filtro está corretamente relacionada às tabelas fato  </li>
 <li>Teste sempre antes de publicar  </li>
 <li>Combine RLS com governança e sensibilidade de dados  </li>
 </ul>
+<ul lang-content="en">
+<li>Store users in a dimension table when using dynamic RLS  </li>
+<li>Avoid bidirectional relationships  </li>
+<li>Make sure the column used in the filter is properly related to fact tables  </li>
+<li>Always test before publishing  </li>
+<li>Combine RLS with governance and data sensitivity  </li>
+</ul>
 <hr />
-<h2>📚 Links Oficiais</h2>
-<ul>
+<h2 lang-content="pt">📚 Links Oficiais</h2>
+<h2 lang-content="en">📚 Official Links</h2>
+<ul lang-content="pt">
 <li>Documentação RLS:<br />
   https://learn.microsoft.com/power-bi/enterprise/service-admin-row-level-security  </li>
 </ul>
+<ul lang-content="en">
+<li>RLS Documentation:<br />
+  https://learn.microsoft.com/power-bi/enterprise/service-admin-row-level-security  </li>
+</ul>
+<!-- PROGRESSO DO TÓPICO -->
+<div class="topic-completion" style="text-align:center; padding: 30px 0; margin-top: 40px; border-top: 1px solid var(--border-color);">
+    <button id="btn-complete-topic" onclick="toggleTopicCompletion()" style="padding: 12px 24px; border-radius: 8px; border: 2px solid var(--border-color); background: transparent; color: var(--text-primary); font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;">
+        <span id="completion-icon">⭕</span> <span id="completion-text">Marcar como Concluído</span>
+    </button>
+</div>
+<script>
+    const topicKey = window.location.pathname.split('/').pop().replace('.html', '');
+    function toggleTopicCompletion() {
+        const prog = window.getTopicProgress ? window.getTopicProgress() : {};
+        const isNowCompleted = !prog[topicKey];
+        if (window.markTopicCompleted) window.markTopicCompleted(topicKey, isNowCompleted);
+        updateCompletionUI(isNowCompleted);
+    }
+    function updateCompletionUI(isCompleted) {
+        const btn = document.getElementById('btn-complete-topic');
+        const icon = document.getElementById('completion-icon');
+        const text = document.getElementById('completion-text');
+        if(!btn) return;
+        if(isCompleted) {
+            btn.style.borderColor = "var(--success, #2EA043)";
+            btn.style.color = "var(--success, #2EA043)";
+            btn.style.background = "rgba(46, 160, 67, 0.1)";
+            icon.innerText = "✅";
+            text.innerText = "Concluído";
+        } else {
+            btn.style.borderColor = "var(--border-color)";
+            btn.style.color = "var(--text-primary)";
+            btn.style.background = "transparent";
+            icon.innerText = "⭕";
+            text.innerText = "Marcar como Concluído";
+        }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        const prog = window.getTopicProgress ? window.getTopicProgress() : {};
+        updateCompletionUI(!!prog[topicKey]);
+    });
+</script>
+</div>\n</div>
+    </div>
     </div>
     </div>
     </div>

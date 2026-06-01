@@ -16,103 +16,249 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>boas-praticas-modelagem</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; }
-        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; }
-        code { font-family: "Courier New", Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: var(--bg-main); color: var(--text-primary); }
+        .container { max-width: 800px; margin: auto; background: var(--surface-card); padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        pre { background-color: var(--bg-secondary); padding: 10px; border-radius: 5px; overflow-x: auto; }
+        code { font-family: "Courier New", Courier, monospace; background-color: var(--bg-secondary); padding: 2px 4px; border-radius: 3px; }
         img { max-width: 100%; height: auto; display: block; margin: 10px 0; }
         table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
+        th, td { border: 1px solid var(--border-color); padding: 8px; text-align: left; }
+        th { background-color: var(--bg-secondary); }
+    
+        
+        
+    
+        
+        
+        /* Settings Panel */
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        
+        /* Language Utilities */
+        [lang-content] { display: none; }
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
+        
+    
+        
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
+        
     
         /* Sidebar Styles */
-        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: #f4f4f4; }
+        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: var(--bg-main); color: var(--text-primary); }
         .layout-wrapper { display: flex; width: 100%; height: 100vh; }
-        .sidebar { width: 280px; background: #2c3e50; color: #ecf0f1; padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; }
-        .sidebar a { color: #ecf0f1; text-decoration: none; display: block; padding: 8px 0; }
-        .sidebar a:hover, .sidebar a.active { color: #3498db; font-weight: bold; }
-        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid #34495e; padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: #bdc3c7; }
-        .sidebar .back-btn { font-weight: 500; color: #ecf0f1; display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.15); background-color: rgba(255, 255, 255, 0.05); margin-bottom: 20px; }
+        .sidebar { width: 280px; background: var(--bg-secondary); color: var(--text-primary); padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; border-right: 1px solid var(--border-color); }
+        .sidebar a { color: var(--text-primary); text-decoration: none; display: block; padding: 8px 0; opacity: 0.8; }
+        .sidebar a:hover, .sidebar a.active { color: var(--primary-color); font-weight: bold; opacity: 1; }
+        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary); }
+        .sidebar .back-btn { font-weight: bold; color: #e74c3c; display: flex; align-items: center; gap: 5px; margin-bottom: 20px; }
         .sidebar .back-btn:hover { color: #c0392b; text-decoration: none; }
         .sidebar ul { list-style: none; padding: 0; margin: 0; }
-        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: #f4f4f4; }
-        .container { margin: 0 auto; max-width: 800px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: var(--bg-main); }
+        .container { margin: 0 auto; max-width: 900px; background: var(--surface-card); padding: 30px; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border-color); }
+        
+        /* Settings Panel */
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        
+        /* Language Utilities */
+        [lang-content] { display: none; }
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
         
     </style>
+    <link rel="stylesheet" href="../portal-style.css">
+    <script src="../portal-core.js?v=2"></script>
 </head>
 <body>
+    
+    <div class="settings-panel" id="settings-panel">
+      <button class="settings-btn" id="btn-lang" onclick="toggleLang()" title="Switch language / Alternar idioma">
+        <span class="btn-icon" id="lang-icon">🇧🇷</span>
+        <span id="lang-label">PT</span>
+      </button>
+      <button class="settings-btn" id="btn-theme" onclick="toggleTheme()" title="Toggle dark/light mode">
+        <span class="btn-icon" id="theme-icon">🌙</span>
+        <span id="theme-label">Dark</span>
+      </button>
+    </div>
     <div class="layout-wrapper">
         <aside class="sidebar">
-            <a href="../index.html" class="back-btn">🏠 Voltar ao Portal</a>
-            <h3>Navegacao</h3>
+            <a href="../index.html" class="back-btn">
+                <span lang-content="pt">&omacr; Voltar para Tela Principal</span>
+                <span lang-content="en">&omacr; Back to Main Portal</span>
+            </a>
+            <h3 lang-content="pt">Navegação</h3>
+            <h3 lang-content="en">Navigation</h3>
             <ul class="nav-links">
-                <li><a href="boas-praticas-modelagem.html" class="active">Boas Praticas Modelagem</a></li>
-                <li><a href="design-modelo-de-dados.html">Design Modelo De Dados</a></li>
-                <li><a href="resumo.html">Resumo</a></li>
+                <li><a href="boas-praticas-modelagem.html" class="active">
+                <span lang-content="pt">Boas Praticas Modelagem</span>
+                <span lang-content="en">Modeling Best Practices</span>
+            </a></li>
+                <li><a href="design-modelo-de-dados.html">
+                <span lang-content="pt">Design Modelo De Dados</span>
+                <span lang-content="en">Data Model Design</span>
+            </a></li>
+                <li><a href="resumo.html">
+                <span lang-content="pt">Resumo</span>
+                <span lang-content="en">Summary</span>
+            </a></li>
             </ul>
         </aside>
         <div class="content-area">
-    <div class="container">
-        <h1>⭐ Boas Práticas de Modelagem</h1>
-<p>Estas práticas garantem um modelo limpo, eficiente e fácil de manter.</p>
+    
+    
+    
+    
+    
+    
+    <div class="container"><h1 lang-content="pt">⭐ Boas Práticas de Modelagem</h1>
+<h1 lang-content="en">⭐ Best Modeling Practices</h1>
+<p lang-content="pt">Estas práticas garantem um modelo limpo, eficiente e fácil de manter.</p>
+<p lang-content="en">These practices ensure a clean, efficient, and easy-to-maintain model.</p>
 <hr />
-<h2>✔ Usar Modelo Estrela</h2>
+<h2 lang-content="pt">✔ Usar Modelo Estrela</h2>
+<h2 lang-content="en">✔ Use Star Schema</h2>
 <ul>
-<li>Tabelas fato no centro  </li>
-<li>Dimensões ao redor  </li>
-<li>Evitar snowflake (normalização excessiva)  </li>
+  <li lang-content="pt">Tabelas fato no centro  </li>
+  <li lang-content="en">Fact tables at the center</li>
+  <li lang-content="pt">Dimensões ao redor  </li>
+  <li lang-content="en">Dimensions around</li>
+  <li lang-content="pt">Evitar snowflake (normalização excessiva)  </li>
+  <li lang-content="en">Avoid snowflake (excessive normalization)</li>
 </ul>
 <hr />
-<h2>✔ Criar Medidas Explícitas</h2>
-<p>Evitar medidas automáticas (implícitas). Sempre crie medidas no painel <strong>Modeling &gt; New Measure</strong>.</p>
+<h2 lang-content="pt">✔ Criar Medidas Explícitas</h2>
+<h2 lang-content="en">✔ Create Explicit Measures</h2>
+<p lang-content="pt">Evitar medidas automáticas (implícitas). Sempre crie medidas no painel <strong>Modeling &gt; New Measure</strong>.</p>
+<p lang-content="en">Avoid automatic (implicit) measures. Always create measures in the <strong>Modeling &gt; New Measure</strong> pane.</p>
 <hr />
-<h2>✔ Nomear Tabelas e Medidas Claramente</h2>
-<p>Exemplos:</p>
+<h2 lang-content="pt">✔ Nomear Tabelas e Medidas Claramente</h2>
+<h2 lang-content="en">✔ Name Tables and Measures Clearly</h2>
+<p lang-content="pt">Exemplos:</p>
+<p lang-content="en">Examples:</p>
 <ul>
-<li><code>Fato Vendas</code>  </li>
-<li><code>Dim Produto</code>  </li>
-<li><code>[Total Vendas]</code>  </li>
-<li><code>[Qtd Clientes Ativos]</code>  </li>
+  <li lang-content="pt"><code>Fato Vendas</code>  </li>
+  <li lang-content="en"><code>Fact Sales</code></li>
+  <li lang-content="pt"><code>Dim Produto</code>  </li>
+  <li lang-content="en"><code>Dim Product</code></li>
+  <li lang-content="pt"><code>[Total Vendas]</code>  </li>
+  <li lang-content="en"><code>[Total Sales]</code></li>
+  <li lang-content="pt"><code>[Qtd Clientes Ativos]</code>  </li>
+  <li lang-content="en"><code>[Active Customers Qty]</code></li>
 </ul>
 <hr />
-<h2>✔ Criar Pastas de Exibição (Display Folders)</h2>
-<p>Organizar medidas:</p>
+<h2 lang-content="pt">✔ Criar Pastas de Exibição (Display Folders)</h2>
+<h2 lang-content="en">✔ Create Display Folders (Display Folders)</h2>
+<p lang-content="pt">Organizar medidas:</p>
+<p lang-content="en">Organize measures:</p>
 <ul>
-<li>_01 KPIs  </li>
-<li>_02 Time Intelligence  </li>
-<li>_03 Métricas Financeiras  </li>
+  <li lang-content="pt">_01 KPIs  </li>
+  <li lang-content="en">_01 KPIs</li>
+  <li lang-content="pt">_02 Time Intelligence  </li>
+  <li lang-content="en">_02 Time Intelligence</li>
+  <li lang-content="pt">_03 Métricas Financeiras  </li>
+  <li lang-content="en">_03 Financial Metrics</li>
 </ul>
 <hr />
-<h2>✔ Evitar Colunas Calculadas (quando possível)</h2>
-<p>Preferir medidas:</p>
+<h2 lang-content="pt">✔ Evitar Colunas Calculadas (quando possível)</h2>
+<h2 lang-content="en">✔ Avoid Calculated Columns (when possible)</h2>
+<p lang-content="pt">Preferir medidas:</p>
+<p lang-content="en">Prefer measures:</p>
 <ul>
-<li>consumem menos memória  </li>
-<li>não aumentam tamanho do modelo  </li>
+  <li lang-content="pt">consumem menos memória  </li>
+  <li lang-content="en">consume less memory</li>
+  <li lang-content="pt">não aumentam tamanho do modelo  </li>
+  <li lang-content="en">do not increase model size</li>
 </ul>
 <hr />
-<h2>✔ Usar Tabela de Datas Oficial</h2>
-<p>Com colunas:</p>
+<h2 lang-content="pt">✔ Usar Tabela de Datas Oficial</h2>
+<h2 lang-content="en">✔ Use Official Date Table</h2>
+<p lang-content="pt">Com colunas:</p>
+<p lang-content="en">With columns:</p>
 <ul>
-<li>Data  </li>
-<li>Ano  </li>
-<li>Mês  </li>
-<li>Trimestre  </li>
-<li>Semana ISO  </li>
+  <li lang-content="pt">Data  </li>
+  <li lang-content="en">Date</li>
+  <li lang-content="pt">Ano  </li>
+  <li lang-content="en">Year</li>
+  <li lang-content="pt">Mês  </li>
+  <li lang-content="en">Month</li>
+  <li lang-content="pt">Trimestre  </li>
+  <li lang-content="en">Quarter</li>
+  <li lang-content="pt">Semana ISO  </li>
+  <li lang-content="en">ISO Week</li>
 </ul>
 <hr />
-<h2>✔ Documentar o Modelo</h2>
-<p>Utilizar:</p>
+<h2 lang-content="pt">✔ Documentar o Modelo</h2>
+<h2 lang-content="en">✔ Document the Model</h2>
+<p lang-content="pt">Utilizar:</p>
+<p lang-content="en">Use:</p>
 <ul>
-<li>Descrições  </li>
-<li>Linhas de anotação  </li>
-<li>Notas no GitHub  </li>
+  <li lang-content="pt">Descrições  </li>
+  <li lang-content="en">Descriptions</li>
+  <li lang-content="pt">Linhas de anotação  </li>
+  <li lang-content="en">Annotation lines</li>
+  <li lang-content="pt">Notas no GitHub  </li>
+  <li lang-content="en">Notes on GitHub</li>
 </ul>
 <hr />
-<h2>📚 Links Oficiais</h2>
+<h2 lang-content="pt">📚 Links Oficiais</h2>
+<h2 lang-content="en">📚 Official Links</h2>
 <ul>
-<li>Data Modeling Guidance:<br />
-  https://learn.microsoft.com/power-bi/guidance/  </li>
+  <li lang-content="pt">Data Modeling Guidance:<br />
+    https://learn.microsoft.com/power-bi/guidance/  </li>
+  <li lang-content="en">Data Modeling Guidance:<br />
+    https://learn.microsoft.com/power-bi/guidance/ </li>
 </ul>
+<!-- PROGRESSO DO TÓPICO -->
+<div class="topic-completion" style="text-align:center; padding: 30px 0; margin-top: 40px; border-top: 1px solid var(--border-color);">
+    <button id="btn-complete-topic" onclick="toggleTopicCompletion()" style="padding: 12px 24px; border-radius: 8px; border: 2px solid var(--border-color); background: transparent; color: var(--text-primary); font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;">
+        <span id="completion-icon">⭕</span> <span id="completion-text">Marcar como Concluído</span>
+    </button>
+</div>
+<script>
+    const topicKey = window.location.pathname.split('/').pop().replace('.html', '');
+    function toggleTopicCompletion() {
+        const prog = window.getTopicProgress ? window.getTopicProgress() : {};
+        const isNowCompleted = !prog[topicKey];
+        if (window.markTopicCompleted) window.markTopicCompleted(topicKey, isNowCompleted);
+        updateCompletionUI(isNowCompleted);
+    }
+    function updateCompletionUI(isCompleted) {
+        const btn = document.getElementById('btn-complete-topic');
+        const icon = document.getElementById('completion-icon');
+        const text = document.getElementById('completion-text');
+        if(!btn) return;
+        if(isCompleted) {
+            btn.style.borderColor = "var(--success, #2EA043)";
+            btn.style.color = "var(--success, #2EA043)";
+            btn.style.background = "rgba(46, 160, 67, 0.1)";
+            icon.innerText = "✅";
+            text.innerText = "Concluído";
+        } else {
+            btn.style.borderColor = "var(--border-color)";
+            btn.style.color = "var(--text-primary)";
+            btn.style.background = "transparent";
+            icon.innerText = "⭕";
+            text.innerText = "Marcar como Concluído";
+        }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        const prog = window.getTopicProgress ? window.getTopicProgress() : {};
+        updateCompletionUI(!!prog[topicKey]);
+    });
+</script>
+</div>\n</div>
+    </div>
     </div>
     </div>
     </div>

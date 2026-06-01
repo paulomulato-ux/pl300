@@ -16,111 +16,269 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>guia-labs</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; }
-        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; }
-        code { font-family: "Courier New", Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: var(--bg-main); color: var(--text-primary); }
+        .container { max-width: 800px; margin: auto; background: var(--surface-card); padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        pre { background-color: var(--bg-secondary); padding: 10px; border-radius: 5px; overflow-x: auto; }
+        code { font-family: "Courier New", Courier, monospace; background-color: var(--bg-secondary); padding: 2px 4px; border-radius: 3px; }
         img { max-width: 100%; height: auto; display: block; margin: 10px 0; }
         table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
+        th, td { border: 1px solid var(--border-color); padding: 8px; text-align: left; }
+        th { background-color: var(--bg-secondary); }
+    
+        
+        
+    
+        
+        
+        /* Settings Panel */
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        
+        /* Language Utilities */
+        [lang-content] { display: none; }
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
+        
+    
+        
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
+        
     
         /* Sidebar Styles */
-        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: #f4f4f4; }
+        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: var(--bg-main); color: var(--text-primary); }
         .layout-wrapper { display: flex; width: 100%; height: 100vh; }
-        .sidebar { width: 280px; background: #2c3e50; color: #ecf0f1; padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; }
-        .sidebar a { color: #ecf0f1; text-decoration: none; display: block; padding: 8px 0; }
-        .sidebar a:hover, .sidebar a.active { color: #3498db; font-weight: bold; }
-        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid #34495e; padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: #bdc3c7; }
-        .sidebar .back-btn { font-weight: 500; color: #ecf0f1; display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.15); background-color: rgba(255, 255, 255, 0.05); margin-bottom: 20px; }
+        .sidebar { width: 280px; background: var(--bg-secondary); color: var(--text-primary); padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; border-right: 1px solid var(--border-color); }
+        .sidebar a { color: var(--text-primary); text-decoration: none; display: block; padding: 8px 0; opacity: 0.8; }
+        .sidebar a:hover, .sidebar a.active { color: var(--primary-color); font-weight: bold; opacity: 1; }
+        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary); }
+        .sidebar .back-btn { font-weight: bold; color: #e74c3c; display: flex; align-items: center; gap: 5px; margin-bottom: 20px; }
         .sidebar .back-btn:hover { color: #c0392b; text-decoration: none; }
         .sidebar ul { list-style: none; padding: 0; margin: 0; }
-        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: #f4f4f4; }
-        .container { margin: 0 auto; max-width: 800px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: var(--bg-main); }
+        .container { margin: 0 auto; max-width: 900px; background: var(--surface-card); padding: 30px; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border-color); }
+        
+        /* Settings Panel */
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        
+        /* Language Utilities */
+        [lang-content] { display: none; }
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
         
     </style>
+    <link rel="stylesheet" href="../portal-style.css">
+    <script src="../portal-core.js"></script>
 </head>
 <body>
+    
+    <div class="settings-panel" id="settings-panel">
+      <button class="settings-btn" id="btn-lang" onclick="toggleLang()" title="Switch language / Alternar idioma">
+        <span class="btn-icon" id="lang-icon">🇧🇷</span>
+        <span id="lang-label">PT</span>
+      </button>
+      <button class="settings-btn" id="btn-theme" onclick="toggleTheme()" title="Toggle dark/light mode">
+        <span class="btn-icon" id="theme-icon">🌙</span>
+        <span id="theme-label">Dark</span>
+      </button>
+    </div>
     <div class="layout-wrapper">
         <aside class="sidebar">
-            <a href="../index.html" class="back-btn">🏠 Voltar ao Portal</a>
-            <h3>Navegacao</h3>
+            <a href="../index.html" class="back-btn">
+                <span lang-content="pt">&omacr; Voltar para Tela Principal</span>
+                <span lang-content="en">&omacr; Back to Main Portal</span>
+            </a>
+            <h3 lang-content="pt">Navegação</h3>
+            <h3 lang-content="en">Navigation</h3>
             <ul class="nav-links">
-                <li><a href="guia-labs.html" class="active">Guia Labs</a></li>
-                <li><a href="links-uteis.html">Links Uteis</a></li>
+                <li><a href="guia-labs.html" class="active">
+                <span lang-content="pt">Guia Labs</span>
+                <span lang-content="en">Labs Guide</span>
+            </a></li>
+                <li><a href="links-uteis.html">
+                <span lang-content="pt">Links Uteis</span>
+                <span lang-content="en">Useful Links</span>
+            </a></li>
             </ul>
         </aside>
         <div class="content-area">
-    <div class="container">
-        <h1>🧪 Guia dos Laboratórios Oficiais – PL-300</h1>
-<p>Os laboratórios oficiais da certificação PL-300 ajudam a praticar todas as etapas do processo analítico no Power BI: ingestão, transformação, modelagem, visualização, publicação e segurança.</p>
-<p>Os labs são fornecidos pela Microsoft através do repositório oficial <strong>MicrosoftLearning</strong>.</p>
+    
+    
+    
+    
+    
+    
+    <div class="container"><h1 lang-content="pt">🧪 Guia dos Laboratórios Oficiais – PL-300</h1>
+<h1 lang-content="en">🧪 Official Labs Guide – PL-300</h1>
+
+<p lang-content="pt">Os laboratórios oficiais da certificação PL-300 ajudam a praticar todas as etapas do processo analítico no Power BI: ingestão, transformação, modelagem, visualização, publicação e segurança.</p>
+<p lang-content="en">The official PL-300 certification labs help practice all stages of the analytical process in Power BI: ingestion, transformation, modeling, visualization, publishing, and security.</p>
+
+<p lang-content="pt">Os labs são fornecidos pela Microsoft através do repositório oficial <strong>MicrosoftLearning</strong>.</p>
+<p lang-content="en">The labs are provided by Microsoft through the official <strong>MicrosoftLearning</strong> repository.</p>
+
 <hr />
-<h2>📁 Repositório Oficial dos Labs</h2>
-<p>🔗 https://github.com/MicrosoftLearning/PL-300-Microsoft-Power-BI-Data-Analyst</p>
-<p>Nele você encontra:</p>
-<ul>
+
+<h2 lang-content="pt">📁 Repositório Oficial dos Labs</h2>
+<h2 lang-content="en">📁 Official Labs Repository</h2>
+
+<p lang-content="pt">🔗 https://github.com/MicrosoftLearning/PL-300-Microsoft-Power-BI-Data-Analyst</p>
+<p lang-content="en">🔗 https://github.com/MicrosoftLearning/PL-300-Microsoft-Power-BI-Data-Analyst</p>
+
+<p lang-content="pt">Nele você encontra:</p>
+<p lang-content="en">In it you will find:</p>
+
+<ul lang-content="pt">
 <li>Arquivos <strong>.pbix</strong> iniciais  </li>
 <li>Arquivos finais para referência  </li>
 <li>Arquivos de dados (Excel, CSV, JSON)  </li>
 <li>Instruções passo a passo em PDF ou Markdown  </li>
 </ul>
+<ul lang-content="en">
+<li>Initial <strong>.pbix</strong> files  </li>
+<li>Final files for reference  </li>
+<li>Data files (Excel, CSV, JSON)  </li>
+<li>Step-by-step instructions in PDF or Markdown  </li>
+</ul>
+
 <hr />
-<h2>🧭 Estrutura Geral dos Laboratórios</h2>
-<p>Os labs costumam seguir a seguinte lógica:</p>
-<h3><strong>1. Preparar Dados</strong></h3>
-<ul>
+
+<h2 lang-content="pt">🧭 Estrutura Geral dos Laboratórios</h2>
+<h2 lang-content="en">🧭 General Structure of the Labs</h2>
+
+<p lang-content="pt">Os labs costumam seguir a seguinte lógica:</p>
+<p lang-content="en">The labs usually follow the following logic:</p>
+
+<h3 lang-content="pt"><strong>1. Preparar Dados</strong></h3>
+<h3 lang-content="en"><strong>1. Prepare Data</strong></h3>
+
+<ul lang-content="pt">
 <li>Conectar-se a múltiplas fontes  </li>
 <li>Usar Power Query  </li>
 <li>Aplicar transformações  </li>
 <li>Avaliar qualidade dos dados  </li>
 </ul>
-<h3><strong>2. Modelar Dados</strong></h3>
-<ul>
+<ul lang-content="en">
+<li>Connect to multiple sources  </li>
+<li>Use Power Query  </li>
+<li>Apply transformations  </li>
+<li>Assess data quality  </li>
+</ul>
+
+<h3 lang-content="pt"><strong>2. Modelar Dados</strong></h3>
+<h3 lang-content="en"><strong>2. Model Data</strong></h3>
+
+<ul lang-content="pt">
 <li>Criar tabelas fato e dimensão  </li>
 <li>Criar relacionamentos  </li>
 <li>Criar colunas e medidas  </li>
 <li>Implementar hierarquias  </li>
 </ul>
-<h3><strong>3. Visualizar e Analisar Dados</strong></h3>
-<ul>
+<ul lang-content="en">
+<li>Create fact and dimension tables  </li>
+<li>Create relationships  </li>
+<li>Create columns and measures  </li>
+<li>Implement hierarchies  </li>
+</ul>
+
+<h3 lang-content="pt"><strong>3. Visualizar e Analisar Dados</strong></h3>
+<h3 lang-content="en"><strong>3. Visualize and Analyze Data</strong></h3>
+
+<ul lang-content="pt">
 <li>Criar relatórios  </li>
 <li>Escolher visualizações  </li>
 <li>Configurar interações  </li>
 <li>Criar KPIs  </li>
 <li>Usar drill-down e drill-through  </li>
 </ul>
-<h3><strong>4. Implementar e Manter Entregáveis</strong></h3>
-<ul>
+<ul lang-content="en">
+<li>Create reports  </li>
+<li>Choose visualizations  </li>
+<li>Configure interactions  </li>
+<li>Create KPIs  </li>
+<li>Use drill-down and drill-through  </li>
+</ul>
+
+<h3 lang-content="pt"><strong>4. Implementar e Manter Entregáveis</strong></h3>
+<h3 lang-content="en"><strong>4. Implement and Maintain Deliverables</strong></h3>
+
+<ul lang-content="pt">
 <li>Publicar no Power BI Service  </li>
 <li>Configurar RLS  </li>
 <li>Criar Apps  </li>
 <li>Agendar atualizações  </li>
 </ul>
+<ul lang-content="en">
+<li>Publish to Power BI Service  </li>
+<li>Configure RLS  </li>
+<li>Create Apps  </li>
+<li>Schedule refreshes  </li>
+</ul>
+
 <hr />
-<h2>🧑‍💻 Recomendações ao Executar os Labs</h2>
-<ul>
+
+<h2 lang-content="pt">🧑‍💻 Recomendações ao Executar os Labs</h2>
+<h2 lang-content="en">🧑‍💻 Recommendations When Running the Labs</h2>
+
+<ul lang-content="pt">
 <li>Execute em ordem para manter consistência  </li>
 <li>Mantenha o Power BI Desktop sempre atualizado  </li>
 <li>Leia atentamente os passos antes de executar  </li>
 <li>Compare com os arquivos finais disponibilizados  </li>
 <li>Refatore as soluções criando suas próprias versões  </li>
 </ul>
+<ul lang-content="en">
+<li>Execute in order to maintain consistency  </li>
+<li>Keep Power BI Desktop always updated  </li>
+<li>Carefully read the steps before executing  </li>
+<li>Compare with the provided final files  </li>
+<li>Refactor solutions by creating your own versions  </li>
+</ul>
+
 <hr />
-<h2>📚 Recursos Complementares</h2>
-<ul>
+
+<h2 lang-content="pt">📚 Recursos Complementares</h2>
+<h2 lang-content="en">📚 Additional Resources</h2>
+
+<ul lang-content="pt">
 <li>Documentação Power BI: https://learn.microsoft.com/power-bi  </li>
 <li>DAX Guide: https://dax.guide/  </li>
 <li>Referência Power Query: https://learn.microsoft.com/power-query/  </li>
 </ul>
+<ul lang-content="en">
+<li>Power BI Documentation: https://learn.microsoft.com/power-bi  </li>
+<li>DAX Guide: https://dax.guide/  </li>
+<li>Power Query Reference: https://learn.microsoft.com/power-query/  </li>
+</ul>
+
 <hr />
-<h2>🏁 Objetivo Geral</h2>
-<p>Ao concluir todos os laboratórios, o candidato terá:</p>
-<p>✔ Experiência prática completa no ciclo de vida analítico<br />
+
+<h2 lang-content="pt">🏁 Objetivo Geral</h2>
+<h2 lang-content="en">🏁 Overall Objective</h2>
+
+<p lang-content="pt">Ao concluir todos os laboratórios, o candidato terá:</p>
+<p lang-content="en">Upon completing all the labs, the candidate will have:</p>
+
+<p lang-content="pt">✔ Experiência prática completa no ciclo de vida analítico<br />
 ✔ Domínio das ferramentas essenciais do Power BI<br />
 ✔ Segurança para realizar o exame PL-300<br />
 ✔ Base sólida para atuar como Power BI Data Analyst  </p>
-<hr />
+<p lang-content="en">✔ Complete hands-on experience in the analytical life cycle<br />
+✔ Mastery of the essential Power BI tools<br />
+✔ Confidence to take the PL-300 exam<br />
+✔ Solid foundation to work as a Power BI Data Analyst  </p>
+
+<hr /></div>
+    </div>
     </div>
     </div>
     </div>

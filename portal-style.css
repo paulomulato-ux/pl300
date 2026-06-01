@@ -1,0 +1,77 @@
+/* Variáveis de Tema (SaaS Redesign) */
+:root {
+    /* Novas Variáveis SaaS (Slate Dark) */
+    --bg-main:    #1B2530;
+    --bg-sub:     #121A23;
+    --bg-surface: #232E3C;
+    --text-main:  #FFFFFF;
+    --text-sub:   #8F9CAE;
+    --accent:     #C1A26A;
+    --border:     rgba(255, 255, 255, 0.08);
+    --btn-cta:    #1A4CB0;
+    --success:    #2EA043;
+    --sh-sm:      0 2px 8px rgba(0,0,0,0.35);
+
+    /* Compatibilidade para páginas de módulos */
+    --primary-color: var(--accent);
+    --bg-secondary: var(--bg-sub);
+    --surface-card: var(--bg-surface);
+    --text-primary: var(--text-main);
+    --text-secondary: var(--text-sub);
+    --border-color: var(--border);
+    --shadow: var(--sh-sm);
+}
+
+[data-theme="light"] {
+    /* Novas Variáveis SaaS (Light Cream) */
+    --bg-main:    #F6F5F0;
+    --bg-sub:     #EBE9DF;
+    --bg-surface: #FFFFFF;
+    --text-main:  #1F262E;
+    --text-sub:   #616D7E;
+    --accent:     #A68446;
+    --border:     rgba(31, 38, 46, 0.06);
+    --btn-cta:    #1A4CB0;
+    --success:    #1F7A33;
+    --sh-sm:      0 2px 8px rgba(0,0,0,0.06);
+
+    /* Compatibilidade para páginas de módulos */
+    --primary-color: var(--accent);
+    --bg-secondary: var(--bg-sub);
+    --surface-card: var(--bg-surface);
+    --text-primary: var(--text-main);
+    --text-secondary: var(--text-sub);
+    --border-color: var(--border);
+    --shadow: var(--sh-sm);
+}
+
+/* Estilos Globais */
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card, .module-card, .container {
+    background-color: var(--surface-card);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+/* Utilitários de Idioma */
+[lang-content] {
+    display: none;
+}
+
+body.lang-pt [lang-content="pt"],
+body.lang-en [lang-content="en"] {
+    display: inline;
+}
+
+/* Caso seja um bloco (div, p, etc) */
+body.lang-pt div[lang-content="pt"],
+body.lang-pt p[lang-content="pt"],
+body.lang-en div[lang-content="en"],
+body.lang-en p[lang-content="en"] {
+    display: block;
+}

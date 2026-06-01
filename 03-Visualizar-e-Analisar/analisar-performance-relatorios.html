@@ -16,118 +16,338 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>analisar-performance-relatorios</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; }
-        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        pre { background-color: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; }
-        code { font-family: "Courier New", Courier, monospace; background-color: #eee; padding: 2px 4px; border-radius: 3px; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: var(--bg-main); color: var(--text-primary); }
+        .container { max-width: 800px; margin: auto; background: var(--surface-card); padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        pre { background-color: var(--bg-secondary); padding: 10px; border-radius: 5px; overflow-x: auto; }
+        code { font-family: "Courier New", Courier, monospace; background-color: var(--bg-secondary); padding: 2px 4px; border-radius: 3px; }
         img { max-width: 100%; height: auto; display: block; margin: 10px 0; }
         table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
+        th, td { border: 1px solid var(--border-color); padding: 8px; text-align: left; }
+        th { background-color: var(--bg-secondary); }
+    
+        
+        
+    
+        
+        
+        /* Settings Panel */
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        
+        /* Language Utilities */
+        [lang-content] { display: none; }
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
+        
+    
+        
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
+        
     
         /* Sidebar Styles */
-        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: #f4f4f4; }
+        body { margin: 0 !important; padding: 0 !important; display: flex; height: 100vh; overflow: hidden; background-color: var(--bg-main); color: var(--text-primary); }
         .layout-wrapper { display: flex; width: 100%; height: 100vh; }
-        .sidebar { width: 280px; background: #2c3e50; color: #ecf0f1; padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; }
-        .sidebar a { color: #ecf0f1; text-decoration: none; display: block; padding: 8px 0; }
-        .sidebar a:hover, .sidebar a.active { color: #3498db; font-weight: bold; }
-        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid #34495e; padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: #bdc3c7; }
-        .sidebar .back-btn { font-weight: 500; color: #ecf0f1; display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.15); background-color: rgba(255, 255, 255, 0.05); margin-bottom: 20px; }
+        .sidebar { width: 280px; background: var(--bg-secondary); color: var(--text-primary); padding: 20px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; border-right: 1px solid var(--border-color); }
+        .sidebar a { color: var(--text-primary); text-decoration: none; display: block; padding: 8px 0; opacity: 0.8; }
+        .sidebar a:hover, .sidebar a.active { color: var(--primary-color); font-weight: bold; opacity: 1; }
+        .sidebar h3 { margin-top: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary); }
+        .sidebar .back-btn { font-weight: bold; color: #e74c3c; display: flex; align-items: center; gap: 5px; margin-bottom: 20px; }
         .sidebar .back-btn:hover { color: #c0392b; text-decoration: none; }
         .sidebar ul { list-style: none; padding: 0; margin: 0; }
-        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: #f4f4f4; }
-        .container { margin: 0 auto; max-width: 800px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: var(--bg-main); }
+        .container { margin: 0 auto; max-width: 900px; background: var(--surface-card); padding: 30px; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border-color); }
+        
+        /* Settings Panel */
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        
+        /* Language Utilities */
+        [lang-content] { display: none; }
+        body.lang-pt [lang-content="pt"] { display: inline; }
+        body.lang-en [lang-content="en"] { display: inline; }
+        body.lang-pt div[lang-content="pt"], body.lang-pt p[lang-content="pt"], body.lang-pt h1[lang-content="pt"], body.lang-pt h2[lang-content="pt"], body.lang-pt h3[lang-content="pt"] { display: block; }
+        body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
         
     </style>
+    <link rel="stylesheet" href="../portal-style.css">
+    <script src="../portal-core.js?v=2"></script>
 </head>
 <body>
+    
+    <div class="settings-panel" id="settings-panel">
+      <button class="settings-btn" id="btn-lang" onclick="toggleLang()" title="Switch language / Alternar idioma">
+        <span class="btn-icon" id="lang-icon">🇧🇷</span>
+        <span id="lang-label">PT</span>
+      </button>
+      <button class="settings-btn" id="btn-theme" onclick="toggleTheme()" title="Toggle dark/light mode">
+        <span class="btn-icon" id="theme-icon">🌙</span>
+        <span id="theme-label">Dark</span>
+      </button>
+    </div>
     <div class="layout-wrapper">
         <aside class="sidebar">
-            <a href="../index.html" class="back-btn">🏠 Voltar ao Portal</a>
-            <h3>Navegacao</h3>
+            <a href="../index.html" class="back-btn">
+                <span lang-content="pt">&omacr; Voltar para Tela Principal</span>
+                <span lang-content="en">&omacr; Back to Main Portal</span>
+            </a>
+            <h3 lang-content="pt">Navegação</h3>
+            <h3 lang-content="en">Navigation</h3>
             <ul class="nav-links">
-                <li><a href="analisar-performance-relatorios.html" class="active">Analisar Performance Relatorios</a></li>
-                <li><a href="criar-relatorios.html">Criar Relatorios</a></li>
-                <li><a href="resumo.html">Resumo</a></li>
-                <li><a href="visualizacoes-avancadas.html">Visualizacoes Avancadas</a></li>
+                <li><a href="analisar-performance-relatorios.html" class="active">
+                <span lang-content="pt">Analisar Performance Relatorios</span>
+                <span lang-content="en">Analyze Report Performance</span>
+            </a></li>
+                <li><a href="criar-relatorios.html">
+                <span lang-content="pt">Criar Relatorios</span>
+                <span lang-content="en">Create Reports</span>
+            </a></li>
+                <li><a href="resumo.html">
+                <span lang-content="pt">Resumo</span>
+                <span lang-content="en">Summary</span>
+            </a></li>
+                <li><a href="visualizacoes-avancadas.html">
+                <span lang-content="pt">Visualizacoes Avancadas</span>
+                <span lang-content="en">Advanced Visualizations</span>
+            </a></li>
             </ul>
         </aside>
         <div class="content-area">
-    <div class="container">
-        <h1>🚀 Analisar Performance de Relatórios</h1>
-<p>O desempenho de um relatório impacta diretamente a experiência do usuário e pode influenciar o tempo de carregamento de cada visual no Power BI. Este módulo apresenta as práticas essenciais para identificar e resolver gargalos de performance.</p>
+    
+    
+    
+    
+    
+    
+    <div class="container"><h1 lang-content="pt">🚀 Analisar Performance de Relatórios</h1>
+<h1 lang-content="en">🚀 Analyze Report Performance</h1>
+
+<p lang-content="pt">O desempenho de um relatório impacta diretamente a experiência do usuário e pode influenciar o tempo de carregamento de cada visual no Power BI. Este módulo apresenta as práticas essenciais para identificar e resolver gargalos de performance.</p>
+<p lang-content="en">The performance of a report directly impacts the user experience and can influence the loading time of each visual in Power BI. This module presents the essential practices to identify and resolve performance bottlenecks.</p>
+
 <hr />
-<h2>🔹 Performance Analyzer</h2>
-<p>A ferramenta <strong>Performance Analyzer</strong> permite medir:</p>
-<ul>
+
+<h2 lang-content="pt">🔹 Performance Analyzer</h2>
+<h2 lang-content="en">🔹 Performance Analyzer</h2>
+
+<p lang-content="pt">A ferramenta <strong>Performance Analyzer</strong> permite medir:</p>
+<p lang-content="en">The <strong>Performance Analyzer</strong> tool allows you to measure:</p>
+
+<ul lang-content="pt">
 <li>Tempo de renderização do visual  </li>
 <li>Tempo de execução de DAX  </li>
 <li>Tempo de consulta à fonte  </li>
 <li>Fatores que contribuem para lentidão  </li>
 </ul>
-<h3>✔ Como utilizar</h3>
-<ol>
+<ul lang-content="en">
+<li>Visual rendering time  </li>
+<li>DAX execution time  </li>
+<li>Data source query time  </li>
+<li>Factors contributing to slowness  </li>
+</ul>
+
+<h3 lang-content="pt">✔ Como utilizar</h3>
+<h3 lang-content="en">✔ How to use</h3>
+
+<ol lang-content="pt">
 <li>Acesse: <strong>View → Performance Analyzer</strong>  </li>
 <li>Clique em <strong>Start recording</strong>  </li>
 <li>Interaja com os visuais  </li>
 <li>Avalie o tempo gasto por cada componente  </li>
 <li>Acesse detalhes e copie a consulta DAX se necessário  </li>
 </ol>
+<ol lang-content="en">
+<li>Go to: <strong>View → Performance Analyzer</strong>  </li>
+<li>Click <strong>Start recording</strong>  </li>
+<li>Interact with the visuals  </li>
+<li>Evaluate the time spent by each component  </li>
+<li>Access details and copy the DAX query if necessary  </li>
+</ol>
+
 <hr />
-<h2>🔹 Otimização de DAX</h2>
-<p>Recomendações gerais:</p>
-<h3>✔ Usar variáveis (VAR)</h3>
-<p>Melhora legibilidade e evita cálculos repetidos.</p>
-<pre><code class="language-DAX">Total Com Desconto =
+
+<h2 lang-content="pt">🔹 Otimização de DAX</h2>
+<h2 lang-content="en">🔹 DAX Optimization</h2>
+
+<p lang-content="pt">Recomendações gerais:</p>
+<p lang-content="en">General recommendations:</p>
+
+<h3 lang-content="pt">✔ Usar variáveis (VAR)</h3>
+<h3 lang-content="en">✔ Use variables (VAR)</h3>
+
+<p lang-content="pt">Melhora legibilidade e evita cálculos repetidos.</p>
+<p lang-content="en">Improves readability and avoids repeated calculations.</p>
+
+<pre lang-content="pt"><code class="language-DAX">Total Com Desconto =
 VAR vBase = [Total Vendas]
 RETURN vBase * 0.9
 </code></pre>
-<h3>✔ Evitar FILTER sobre tabelas grandes</h3>
-<p>Sempre que possível filtrar colunas, não tabelas.</p>
-<pre><code class="language-DAX">-- Evitar
+<pre lang-content="en"><code class="language-DAX">Total Com Desconto =
+VAR vBase = [Total Vendas]
+RETURN vBase * 0.9
+</code></pre>
+
+<h3 lang-content="pt">✔ Evitar FILTER sobre tabelas grandes</h3>
+<h3 lang-content="en">✔ Avoid FILTER on large tables</h3>
+
+<p lang-content="pt">Sempre que possível filtrar colunas, não tabelas.</p>
+<p lang-content="en">Whenever possible, filter columns instead of tables.</p>
+
+<pre lang-content="pt"><code class="language-DAX">-- Evitar
 CALCULATE([Total Vendas], FILTER(FatoVendas, FatoVendas[Categoria] = &quot;A&quot;))
 
 -- Preferir
 CALCULATE([Total Vendas], FatoVendas[Categoria] = &quot;A&quot;)
 </code></pre>
-<h3>✔ Evitar funções iterativas desnecessárias</h3>
-<p>Ex.: SUMX sobre tabelas muito grandes quando SUM simples resolve.</p>
+<pre lang-content="en"><code class="language-DAX">-- Avoid
+CALCULATE([Total Vendas], FILTER(FatoVendas, FatoVendas[Categoria] = &quot;A&quot;))
+
+-- Prefer
+CALCULATE([Total Vendas], FatoVendas[Categoria] = &quot;A&quot;)
+</code></pre>
+
+<h3 lang-content="pt">✔ Evitar funções iterativas desnecessárias</h3>
+<h3 lang-content="en">✔ Avoid unnecessary iterative functions</h3>
+
+<p lang-content="pt">Ex.: SUMX sobre tabelas muito grandes quando SUM simples resolve.</p>
+<p lang-content="en">Example: SUMX on very large tables when a simple SUM suffices.</p>
+
 <hr />
-<h2>🔹 Otimizar o Layout e a Página do Relatório</h2>
-<h3>✔ Reduzir número de visuais</h3>
-<p>Acima de <strong>20 visuais em uma mesma página</strong>, o desempenho normalmente cai.</p>
-<h3>✔ Minimizar segmentadores</h3>
-<p>Segmentadores (especially dropdowns complexos) consomem muita memória.</p>
-<h3>✔ Reduzir elementos gráficos pesados</h3>
-<ul>
+
+<h2 lang-content="pt">🔹 Otimizar o Layout e a Página do Relatório</h2>
+<h2 lang-content="en">🔹 Optimize the Report Layout and Page</h2>
+
+<h3 lang-content="pt">✔ Reduzir número de visuais</h3>
+<h3 lang-content="en">✔ Reduce number of visuals</h3>
+
+<p lang-content="pt">Acima de <strong>20 visuais em uma mesma página</strong>, o desempenho normalmente cai.</p>
+<p lang-content="en">Above <strong>20 visuals on the same page</strong>, performance usually drops.</p>
+
+<h3 lang-content="pt">✔ Minimizar segmentadores</h3>
+<h3 lang-content="en">✔ Minimize slicers</h3>
+
+<p lang-content="pt">Segmentadores (especially dropdowns complexos) consomem muita memória.</p>
+<p lang-content="en">Slicers (especially complex dropdowns) consume a lot of memory.</p>
+
+<h3 lang-content="pt">✔ Reduzir elementos gráficos pesados</h3>
+<h3 lang-content="en">✔ Reduce heavy graphic elements</h3>
+
+<ul lang-content="pt">
 <li>Imagens pesadas  </li>
 <li>Mapas detalhados  </li>
 <li>Visualizações customizadas mal otimizadas  </li>
 </ul>
+<ul lang-content="en">
+<li>Heavy images  </li>
+<li>Detailed maps  </li>
+<li>Poorly optimized custom visuals  </li>
+</ul>
+
 <hr />
-<h2>🔹 Melhorar Consultas e Interações</h2>
-<ul>
+
+<h2 lang-content="pt">🔹 Melhorar Consultas e Interações</h2>
+<h2 lang-content="en">🔹 Improve Queries and Interactions</h2>
+
+<ul lang-content="pt">
 <li>Desativar interações desnecessárias entre visuais  </li>
 <li>Usar botões no lugar de muitos segmentadores  </li>
 <li>Substituir joins complexos feitos em DAX por modelagem melhorada  </li>
 <li>Usar agregações para tabelas grandes (Premium ou otimização avançada)  </li>
 </ul>
+<ul lang-content="en">
+<li>Disable unnecessary interactions between visuals  </li>
+<li>Use buttons instead of many slicers  </li>
+<li>Replace complex joins made in DAX with improved modeling  </li>
+<li>Use aggregations for large tables (Premium or advanced optimization)  </li>
+</ul>
+
 <hr />
-<h2>🔹 Boas Práticas Adicionais</h2>
-<h3>✔ Usar medidas em vez de colunas calculadas</h3>
-<p>Medidas são mais leves e calculadas sob demanda.</p>
-<h3>✔ Ajustar cardinalidade</h3>
-<p>Menos valores distintos = melhor compressão e performance.</p>
-<h3>✔ Evitar <em>bidirectional relationships</em></h3>
-<p>Usar apenas quando absolutamente necessário.</p>
+
+<h2 lang-content="pt">🔹 Boas Práticas Adicionais</h2>
+<h2 lang-content="en">🔹 Additional Best Practices</h2>
+
+<h3 lang-content="pt">✔ Usar medidas em vez de colunas calculadas</h3>
+<h3 lang-content="en">✔ Use measures instead of calculated columns</h3>
+
+<p lang-content="pt">Medidas são mais leves e calculadas sob demanda.</p>
+<p lang-content="en">Measures are lighter and calculated on demand.</p>
+
+<h3 lang-content="pt">✔ Ajustar cardinalidade</h3>
+<h3 lang-content="en">✔ Adjust cardinality</h3>
+
+<p lang-content="pt">Menos valores distintos = melhor compressão e performance.</p>
+<p lang-content="en">Fewer distinct values = better compression and performance.</p>
+
+<h3 lang-content="pt">✔ Evitar <em>bidirectional relationships</em></h3>
+<h3 lang-content="en">✔ Avoid <em>bidirectional relationships</em></h3>
+
+<p lang-content="pt">Usar apenas quando absolutamente necessário.</p>
+<p lang-content="en">Use only when absolutely necessary.</p>
+
 <hr />
-<h2>📚 Links Oficiais</h2>
-<ul>
+
+<h2 lang-content="pt">📚 Links Oficiais</h2>
+<h2 lang-content="en">📚 Official Links</h2>
+
+<ul lang-content="pt">
 <li>Power BI Performance Best Practices:<br />
   https://learn.microsoft.com/power-bi/guidance/power-bi-performance-best-practices</li>
 </ul>
+<ul lang-content="en">
+<li>Power BI Performance Best Practices:<br />
+  https://learn.microsoft.com/power-bi/guidance/power-bi-performance-best-practices</li>
+</ul>
+
 <hr />
-<p>Este material resume as principais técnicas de diagnóstico e otimização de desempenho, fundamentais para a certificação PL-300 e para criação de relatórios de alta performance no Power BI.</p>
+
+<p lang-content="pt">Este material resume as principais técnicas de diagnóstico e otimização de desempenho, fundamentais para a certificação PL-300 e para criação de relatórios de alta performance no Power BI.</p>
+<p lang-content="en">This material summarizes the main techniques for diagnosing and optimizing performance, essential for the PL-300 certification and for creating high-performance reports in Power BI.</p>
+<!-- PROGRESSO DO TÓPICO -->
+<div class="topic-completion" style="text-align:center; padding: 30px 0; margin-top: 40px; border-top: 1px solid var(--border-color);">
+    <button id="btn-complete-topic" onclick="toggleTopicCompletion()" style="padding: 12px 24px; border-radius: 8px; border: 2px solid var(--border-color); background: transparent; color: var(--text-primary); font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;">
+        <span id="completion-icon">⭕</span> <span id="completion-text">Marcar como Concluído</span>
+    </button>
+</div>
+<script>
+    const topicKey = window.location.pathname.split('/').pop().replace('.html', '');
+    function toggleTopicCompletion() {
+        const prog = window.getTopicProgress ? window.getTopicProgress() : {};
+        const isNowCompleted = !prog[topicKey];
+        if (window.markTopicCompleted) window.markTopicCompleted(topicKey, isNowCompleted);
+        updateCompletionUI(isNowCompleted);
+    }
+    function updateCompletionUI(isCompleted) {
+        const btn = document.getElementById('btn-complete-topic');
+        const icon = document.getElementById('completion-icon');
+        const text = document.getElementById('completion-text');
+        if(!btn) return;
+        if(isCompleted) {
+            btn.style.borderColor = "var(--success, #2EA043)";
+            btn.style.color = "var(--success, #2EA043)";
+            btn.style.background = "rgba(46, 160, 67, 0.1)";
+            icon.innerText = "✅";
+            text.innerText = "Concluído";
+        } else {
+            btn.style.borderColor = "var(--border-color)";
+            btn.style.color = "var(--text-primary)";
+            btn.style.background = "transparent";
+            icon.innerText = "⭕";
+            text.innerText = "Marcar como Concluído";
+        }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        const prog = window.getTopicProgress ? window.getTopicProgress() : {};
+        updateCompletionUI(!!prog[topicKey]);
+    });
+</script>
+</div>\n</div>
+    </div>
     </div>
     </div>
     </div>
