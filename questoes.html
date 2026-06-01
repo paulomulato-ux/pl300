@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões Traduzidas</title>
+    <link rel="stylesheet" href="portal-style.css">
+    <script src="portal-core.js?v=2"></script>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; background-color: var(--bg-main); color: var(--text-primary); margin: 0; padding: 0; }
+        .container { max-width: 900px; margin: 60px auto; background: var(--surface-card); padding: 30px; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border-color); }
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        .back-btn { display: inline-block; margin-bottom: 20px; color: var(--primary-color); text-decoration: none; font-weight: bold; }
+        .question { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid var(--border-color); }
+        .options { list-style: none; padding: 0; }
+        .options li { margin-bottom: 10px; }
+        .correct-mark { color: var(--success); font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="settings-panel" id="settings-panel">
+      <button class="settings-btn" id="btn-lang" onclick="toggleLang()" title="Switch language / Alternar idioma">
+        <span class="btn-icon" id="lang-icon">🇧🇷</span>
+        <span id="lang-label">PT</span>
+      </button>
+      <button class="settings-btn" id="btn-theme" onclick="toggleTheme()" title="Toggle dark/light mode">
+        <span class="btn-icon" id="theme-icon">🌙</span>
+        <span id="theme-label">Dark</span>
+      </button>
+    </div>
+
+    <div class="container">
+        <a href="index.html" class="back-btn">
+            <span lang-content="pt">&larr; Voltar para Tela Principal</span>
+            <span lang-content="en">&larr; Back to Main Portal</span>
+        </a>
+
+        <h1 lang-content="pt">Questões PL-300 Agrupadas e Traduzidas</h1>
+        <h1 lang-content="en">PL-300 Grouped and Translated Questions</h1>
+        <div class="question">
+            <h2 lang-content="pt">Questão 1</h2>
+            <h2 lang-content="en">Question 1</h2>
+            <div lang-content="pt"><strong>Cenário:</strong><br>Você é um especialista em Power BI na sua organização. Na sua tabela financeira, você tem uma coluna chamada margem, que é definida como 'margem = receita – custo dos produtos vendidos'. Na sua empresa, existem diversas maneiras pelas quais as pessoas se referem à margem. Algumas pessoas chamam margem por outros termos, como renda, lucro ou margem de lucro. Para usar o recurso de perguntas e respostas com êxito em seu painel, você precisa configurar as colunas do conjunto de dados para permitir que os usuários digitem variações de margem.</div>
+            <div lang-content="en"><strong>Scenario:</strong><br>You are a Power BI specialist at your organization. In your finance table, you have a column called margin, which is defined as 'margin = revenue – cost of goods sold.' In your company, there are several different ways people refer to margin. Some people call margin by other terms such as income, profit or profit margin. To use the Q&A feature successfully in your dashboard, you need to configure your dataset columns to enable users to type in variations for margin.</div>
+            <p lang-content="pt"><strong>Qual solução atende ao objetivo?</strong></p>
+            <p lang-content="en"><strong>Which solution meets the goal?</strong></p>
+            <ul class="options">
+                <li>
+                    <span lang-content="pt"><strong>A)</strong> Adicione sinônimos à tabela financeira <span class="correct-mark">(CORRETA)</span></span>
+                    <span lang-content="en"><strong>A)</strong> Add Synonyms to the finance table <span class="correct-mark">(CORRECT)</span></span>
+                </li>
+                <li>
+                    <span lang-content="pt"><strong>B)</strong> Adicione uma descrição detalhada de como você definiu a margem</span>
+                    <span lang-content="en"><strong>B)</strong> Add a detailed description of how you defined margin</span>
+                </li>
+            </ul>
+        </div>
+        <div class="question">
+            <h2 lang-content="pt">Questão 2</h2>
+            <h2 lang-content="en">Question 2</h2>
+            <div lang-content="pt"><strong>Cenário:</strong><br>Você é um especialista em Power BI na sua organização. Na sua tabela de inventário, há diversas maneiras diferentes pelas quais as pessoas se referem ao inventário. Algumas pessoas chamam estoque por outros termos, como estoque, suprimentos, peças ou suprimentos. Para usar o recurso de perguntas e respostas com êxito em seu painel, você precisa configurar sua tabela e colunas de inventário.</div>
+            <div lang-content="en"><strong>Scenario:</strong><br>You are a Power BI specialist at your organization. In your inventory table, there are several different ways people refer to inventory. Some people call inventory by other terms such as stock, supply, parts or supply. To use the Q&A feature successfully in your dashboard, you need to configure your inventory table and columns.</div>
+            <p lang-content="pt"><strong>Qual solução atende ao objetivo?</strong></p>
+            <p lang-content="en"><strong>Which solution meets the goal?</strong></p>
+            <ul class="options">
+                <li>
+                    <span lang-content="pt"><strong>A)</strong> Defina o rótulo da linha na tabela de inventário <span class="correct-mark">(CORRETA)</span></span>
+                    <span lang-content="en"><strong>A)</strong> Set the row label on the inventory table <span class="correct-mark">(CORRECT)</span></span>
+                </li>
+                <li>
+                    <span lang-content="pt"><strong>B)</strong> Use as perguntas e respostas do Ensine <span class="correct-mark">(CORRETA)</span></span>
+                    <span lang-content="en"><strong>B)</strong> Use Teach Q&A <span class="correct-mark">(CORRECT)</span></span>
+                </li>
+            </ul>
+        </div>
+        <div class="question">
+            <h2 lang-content="pt">Questão 3</h2>
+            <h2 lang-content="en">Question 3</h2>
+            <div lang-content="pt"><strong>Cenário:</strong><br>Você trabalha como profissional do Power BI no grupo de RH da sua empresa. O relatório que você criou para análise de retenção funcionou bem no ambiente de desenvolvimento, mas quando implantado apresenta problemas de desempenho.</div>
+            <div lang-content="en"><strong>Scenario:</strong><br>You work as a Power BI professional within your company's HR group. The report you created for retention analysis worked fine in the development environment, but when deployed has performance issues.</div>
+            <p lang-content="pt"><strong>Qual solução atende ao objetivo?</strong></p>
+            <p lang-content="en"><strong>Which solution meets the goal?</strong></p>
+            <ul class="options">
+                <li>
+                    <span lang-content="pt"><strong>A)</strong> Remover colunas do modelo de dados não usadas em relatórios <span class="correct-mark">(CORRETA)</span></span>
+                    <span lang-content="en"><strong>A)</strong> Remove columns from the data model not used in reports <span class="correct-mark">(CORRECT)</span></span>
+                </li>
+                <li>
+                    <span lang-content="pt"><strong>B)</strong> Ocultar colunas e tabelas do modelo de dados não usado em relatórios</span>
+                    <span lang-content="en"><strong>B)</strong> Hide columns and tables from the data model not used in reports</span>
+                </li>
+            </ul>
+        </div>
+        <div class="question">
+            <h2 lang-content="pt">Questão 4</h2>
+            <h2 lang-content="en">Question 4</h2>
+            <div lang-content="pt"><strong>Cenário:</strong><br>2022 Microsoft PL-300 Exam Data Analyst Associate QA-168 Perguntas e respostas PDF 1/101 Pergunta: 1 Você é um especialista em Power BI em sua organização. Na sua tabela financeira, você tem uma coluna chamada margem, que é definida como 'margem = receita – custo dos produtos vendidos'. Na sua empresa, existem diversas maneiras pelas quais as pessoas se referem à margem. Algumas pessoas chamam margem por outros termos, como renda, lucro ou margem de lucro. Para usar o recurso de perguntas e respostas com êxito em seu painel, você precisa configurar as colunas do conjunto de dados para permitir que os usuários digitem variações de margem.</div>
+            <div lang-content="en"><strong>Scenario:</strong><br>2022 Microsoft PL-300 Exam Data Analyst Associate QA-168 Questions and Answers PDF 1/101 Question: 1 You are a Power BI specialist at your organization. In your finance table, you have a column called margin, which is defined as 'margin = revenue – cost of goods sold.' In your company, there are several different ways people refer to margin. Some people call margin by other terms such as income, profit or profit margin. To use the Q&A feature successfully in your dashboard, you need to configure your dataset columns to enable users to type in variations for margin.</div>
+            <p lang-content="pt"><strong>Qual solução atende ao objetivo?</strong></p>
+            <p lang-content="en"><strong>Which solution meets the goal?</strong></p>
+            <ul class="options">
+                <li>
+                    <span lang-content="pt"><strong>A)</strong> Adicione sinônimos à tabela financeira</span>
+                    <span lang-content="en"><strong>A)</strong> Add Synonyms to the finance table</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

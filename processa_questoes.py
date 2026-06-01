@@ -61,29 +61,88 @@ def main():
             print(f"  [Aviso] Falha ao traduzir trecho: {e}")
             return text
 
-    output_file = 'Questoes_Traduzidas_Agrupadas.md'
+    output_file = 'questoes.html'
     with open(output_file, 'w', encoding='utf-8') as f:
-        f.write("# Questões PL-300 Agrupadas e Traduzidas\n\n")
-        f.write("Este arquivo foi gerado automaticamente agrupando as questões originais 'Yes/No' em perguntas de múltipla escolha.\n\n---\n\n")
+        f.write('''<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões Traduzidas</title>
+    <link rel="stylesheet" href="portal-style.css">
+    <script src="portal-core.js?v=2"></script>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; background-color: var(--bg-main); color: var(--text-primary); margin: 0; padding: 0; }
+        .container { max-width: 900px; margin: 60px auto; background: var(--surface-card); padding: 30px; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border-color); }
+        .settings-panel { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-btn { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .settings-btn:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        .back-btn { display: inline-block; margin-bottom: 20px; color: var(--primary-color); text-decoration: none; font-weight: bold; }
+        .question { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid var(--border-color); }
+        .options { list-style: none; padding: 0; }
+        .options li { margin-bottom: 10px; }
+        .correct-mark { color: var(--success); font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="settings-panel" id="settings-panel">
+      <button class="settings-btn" id="btn-lang" onclick="toggleLang()" title="Switch language / Alternar idioma">
+        <span class="btn-icon" id="lang-icon">🇧🇷</span>
+        <span id="lang-label">PT</span>
+      </button>
+      <button class="settings-btn" id="btn-theme" onclick="toggleTheme()" title="Toggle dark/light mode">
+        <span class="btn-icon" id="theme-icon">🌙</span>
+        <span id="theme-label">Dark</span>
+      </button>
+    </div>
+
+    <div class="container">
+        <a href="index.html" class="back-btn">
+            <span lang-content="pt">&larr; Voltar para Tela Principal</span>
+            <span lang-content="en">&larr; Back to Main Portal</span>
+        </a>
+
+        <h1 lang-content="pt">Questões PL-300 Agrupadas e Traduzidas</h1>
+        <h1 lang-content="en">PL-300 Grouped and Translated Questions</h1>
+''')
         
         for i, (scenario, options) in enumerate(grouped.items(), 1):
             print(f"Traduzindo cenário {i} de {len(grouped)}...")
             
             translated_scenario = safe_translate(scenario)
             
-            f.write(f"## Questão {i}\n\n")
-            f.write(f"**Cenário:**\n{translated_scenario}\n\n")
-            f.write("**Qual solução atende ao objetivo?**\n\n")
+            f.write(f'        <div class="question">\n')
+            f.write(f'            <h2 lang-content="pt">Questão {i}</h2>\n')
+            f.write(f'            <h2 lang-content="en">Question {i}</h2>\n')
+            
+            f.write(f'            <div lang-content="pt"><strong>Cenário:</strong><br>{translated_scenario}</div>\n')
+            f.write(f'            <div lang-content="en"><strong>Scenario:</strong><br>{scenario}</div>\n')
+            
+            f.write(f'            <p lang-content="pt"><strong>Qual solução atende ao objetivo?</strong></p>\n')
+            f.write(f'            <p lang-content="en"><strong>Which solution meets the goal?</strong></p>\n')
+            
+            f.write('            <ul class="options">\n')
             
             letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
             for idx, opt in enumerate(options):
                 translated_opt = safe_translate(opt['solution'])
-                correct_mark = "**(CORRETA)**" if opt['is_correct'] else "(Incorreta)"
+                
+                correct_mark_pt = ' <span class="correct-mark">(CORRETA)</span>' if opt['is_correct'] else ''
+                correct_mark_en = ' <span class="correct-mark">(CORRECT)</span>' if opt['is_correct'] else ''
+                
                 letter = letters[idx] if idx < len(letters) else str(idx+1)
                 
-                f.write(f"- **{letter})** {translated_opt} {correct_mark}\n")
+                f.write(f'                <li>\n')
+                f.write(f'                    <span lang-content="pt"><strong>{letter})</strong> {translated_opt}{correct_mark_pt}</span>\n')
+                f.write(f'                    <span lang-content="en"><strong>{letter})</strong> {opt["solution"]}{correct_mark_en}</span>\n')
+                f.write(f'                </li>\n')
+                
+            f.write('            </ul>\n')
+            f.write('        </div>\n')
             
-            f.write("\n---\n\n")
+        f.write('''    </div>
+</body>
+</html>''')
 
     print(f"Concluído! Arquivo salvo em: {output_file}")
 
