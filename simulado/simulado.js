@@ -42,14 +42,7 @@ const questionBank = {
       ],
       "correta": 1,
       "explicacao": "Remover as colunas na etapa de transformação (Power Query) impede permanentemente o acesso aos textos (segurança) e evita armazenar dados de texto longos, o que reduz radicalmente o tamanho (10M * colunas de texto livres gastam muita memória).",
-      "question_en": "A connector brings emails from the last year (more than 10 million). Analysis is about internal networks (From whom, To whom). You must prevent email texts from being read and reduce the template. As?",
-      "options_en": [
-        "Implement sender-based Row-Level Security (RLS).",
-        "Remove Subject and Body columns during import (in Power Query).",
-        "Hide the Subject and Body columns in the model view.",
-        "Mask email texts using DAX."
-      ],
-      "explanation_en": "Removing the columns in the transformation step (Power Query) permanently prevents access to the texts (security) and avoids storing long text data, which radically reduces the size (10M * free text columns uses a lot of memory).",
+      "answer": 1,
       "question_pt": "Um conector traz emails do último ano (mais de 10 milhões). Análise é sobre redes internas (De quem, Para quem). Você deve impedir leitura dos textos dos emails e reduzir modelo. Como?",
       "options_pt": [
         "Implementar Row-Level Security (RLS) baseada no remetente.",
@@ -58,7 +51,14 @@ const questionBank = {
         "Mascarar os textos dos e-mails usando DAX."
       ],
       "explanation_pt": "Remover as colunas na etapa de transformação (Power Query) impede permanentemente o acesso aos textos (segurança) e evita armazenar dados de texto longos, o que reduz radicalmente o tamanho (10M * colunas de texto livres gastam muita memória).",
-      "answer": 1
+      "question_en": "A connector brings emails from the last year (more than 10 million). Analysis is about internal networks (From whom, To whom). You must prevent email texts from being read and reduce the template. As?",
+      "options_en": [
+        "Implement sender-based Row-Level Security (RLS).",
+        "Remove Subject and Body columns during import (in Power Query).",
+        "Hide the Subject and Body columns in the model view.",
+        "Mask email texts using DAX."
+      ],
+      "explanation_en": "Removing the columns in the transformation step (Power Query) permanently prevents access to the texts (security) and avoids storing long text data, which radically reduces the size (10M * free text columns uses a lot of memory)."
     },
     {
       "pergunta": "Modelo de 950 MB, 5 milhões de linhas de vendas dos últimos 5 anos. Requisito: analisar apenas vendas ativas do ano ATUAL e do ano ANTERIOR. O que você deve fazer para reduzir o modelo?",
@@ -70,14 +70,7 @@ const questionBank = {
       ],
       "correta": 2,
       "explicacao": "Se o requisito comercial pede apenas vendas do ano atual e do anterior, manter vendas de 5 anos é um desperdício de memória. Filtrar no Power Query para descartar as linhas velhas minimiza muito o modelo.",
-      "question_en": "950 MB model, 5 million sales lines from the last 5 years. Requirement: analyze only active sales from the CURRENT year and the PREVIOUS year. What should you do to reduce the model?",
-      "options_en": [
-        "Remove the Product Status column.",
-        "Remove inactive product lines.",
-        "Remove lines referring to sales that occurred more than two years ago.",
-        "Hide unused columns in report view."
-      ],
-      "explanation_en": "If the business requirement only asks for sales from the current and previous year, keeping sales from 5 years is a waste of memory. Filtering in Power Query to discard old rows greatly minimizes the model.",
+      "answer": 2,
       "question_pt": "Modelo de 950 MB, 5 milhões de linhas de vendas dos últimos 5 anos. Requisito: analisar apenas vendas ativas do ano ATUAL e do ano ANTERIOR. O que você deve fazer para reduzir o modelo?",
       "options_pt": [
         "Remover a coluna de Status do Produto.",
@@ -86,7 +79,14 @@ const questionBank = {
         "Ocultar as colunas não usadas na exibição de relatório."
       ],
       "explanation_pt": "Se o requisito comercial pede apenas vendas do ano atual e do anterior, manter vendas de 5 anos é um desperdício de memória. Filtrar no Power Query para descartar as linhas velhas minimiza muito o modelo.",
-      "answer": 2
+      "question_en": "950 MB model, 5 million sales lines from the last 5 years. Requirement: analyze only active sales from the CURRENT year and the PREVIOUS year. What should you do to reduce the model?",
+      "options_en": [
+        "Remove the Product Status column.",
+        "Remove inactive product lines.",
+        "Remove lines referring to sales that occurred more than two years ago.",
+        "Hide unused columns in report view."
+      ],
+      "explanation_en": "If the business requirement only asks for sales from the current and previous year, keeping sales from 5 years is a waste of memory. Filtering in Power Query to discard old rows greatly minimizes the model."
     },
     {
       "pergunta": "Você tem um dataset de 1 milhão de linhas com uma coluna DateTime. Como reduzir o tamanho do modelo de dados sem perder dados?",
@@ -98,14 +98,7 @@ const questionBank = {
       ],
       "correta": 3,
       "explicacao": "Dividir DateTime em duas colunas reduz drasticamente a cardinalidade. Uma coluna DateTime tem milhares de valores únicos (um para cada segundo do ano). Uma coluna de Data terá 365 valores únicos, e a de tempo 86.400 valores.",
-      "question_en": "You have a 1 million row dataset with a DateTime column. How to reduce data model size without losing data?",
-      "options_en": [
-        "Round the time to the beginning of the hour.",
-        "Change the data type to Text.",
-        "Trim the date column.",
-        "Split the DateTime column into two columns: one for Date and one for Time (Time)."
-      ],
-      "explanation_en": "Splitting DateTime into two columns drastically reduces cardinality. A DateTime column has thousands of unique values ​​(one for each second of the year). A Date column will have 365 unique values, and a Time column will have 86,400 values.",
+      "answer": 3,
       "question_pt": "Você tem um dataset de 1 milhão de linhas com uma coluna DateTime. Como reduzir o tamanho do modelo de dados sem perder dados?",
       "options_pt": [
         "Arredondar a hora para o início da hora.",
@@ -114,7 +107,14 @@ const questionBank = {
         "Dividir a coluna DateTime em duas colunas: uma de Data e outra de Tempo (Hora)."
       ],
       "explanation_pt": "Dividir DateTime em duas colunas reduz drasticamente a cardinalidade. Uma coluna DateTime tem milhares de valores únicos (um para cada segundo do ano). Uma coluna de Data terá 365 valores únicos, e a de tempo 86.400 valores.",
-      "answer": 3
+      "question_en": "You have a 1 million row dataset with a DateTime column. How to reduce data model size without losing data?",
+      "options_en": [
+        "Round the time to the beginning of the hour.",
+        "Change the data type to Text.",
+        "Trim the date column.",
+        "Split the DateTime column into two columns: one for Date and one for Time (Time)."
+      ],
+      "explanation_en": "Splitting DateTime into two columns drastically reduces cardinality. A DateTime column has thousands of unique values ​​(one for each second of the year). A Date column will have 365 unique values, and a Time column will have 86,400 values."
     },
     {
       "pergunta": "Além do próprio Power BI, onde é o melhor lugar para realizar otimização de desempenho?",
@@ -126,14 +126,7 @@ const questionBank = {
       ],
       "correta": 0,
       "explicacao": "Filtrar, transformar e agregar dados na própria fonte (ex: criando Views no SQL Server ou executando transformações no banco) tira a carga do Power BI e do Power Query (Query Folding).",
-      "question_en": "Besides Power BI itself, where is the best place to perform performance optimization?",
-      "options_en": [
-        "At the data source",
-        "In the Power BI service",
-        "In Microsoft SharePoint",
-        "On the on-premises data gateway"
-      ],
-      "explanation_en": "Filtering, transforming and aggregating data at the source itself (e.g. creating Views in SQL Server or executing transformations in the database) takes the burden off Power BI and Power Query (Query Folding).",
+      "answer": 0,
       "question_pt": "Além do próprio Power BI, onde é o melhor lugar para realizar otimização de desempenho?",
       "options_pt": [
         "Na fonte de dados (At the data source)",
@@ -142,7 +135,14 @@ const questionBank = {
         "No gateway de dados local"
       ],
       "explanation_pt": "Filtrar, transformar e agregar dados na própria fonte (ex: criando Views no SQL Server ou executando transformações no banco) tira a carga do Power BI e do Power Query (Query Folding).",
-      "answer": 0
+      "question_en": "Besides Power BI itself, where is the best place to perform performance optimization?",
+      "options_en": [
+        "At the data source",
+        "In the Power BI service",
+        "In Microsoft SharePoint",
+        "On the on-premises data gateway"
+      ],
+      "explanation_en": "Filtering, transforming and aggregating data at the source itself (e.g. creating Views in SQL Server or executing transformations in the database) takes the burden off Power BI and Power Query (Query Folding)."
     },
     {
       "pergunta": "Qual o benefício de analisar metadados (metadata) no Power Query?",
@@ -154,14 +154,7 @@ const questionBank = {
       ],
       "correta": 1,
       "explicacao": "A análise de metadados no Power Query (ex: Qualidade da coluna, Distribuição de coluna, Perfil de coluna) ajuda a identificar valores nulos, erros e anomalias rapidamente antes de carregar o modelo.",
-      "question_en": "What is the benefit of analyzing metadata (metadata) in Power Query?",
-      "options_en": [
-        "Know the number of rows and columns loaded.",
-        "Clearly identify data inconsistencies in your dataset.",
-        "Reduce PBIX file size.",
-        "Create relationships automatically."
-      ],
-      "explanation_en": "Metadata analysis in Power Query (e.g. Column Quality, Column Distribution, Column Profile) helps you quickly identify null values, errors, and anomalies before loading the model.",
+      "answer": 1,
       "question_pt": "Qual o benefício de analisar metadados (metadata) no Power Query?",
       "options_pt": [
         "Saber o número de linhas e colunas carregadas.",
@@ -170,7 +163,14 @@ const questionBank = {
         "Criar relações automaticamente."
       ],
       "explanation_pt": "A análise de metadados no Power Query (ex: Qualidade da coluna, Distribuição de coluna, Perfil de coluna) ajuda a identificar valores nulos, erros e anomalias rapidamente antes de carregar o modelo.",
-      "answer": 1
+      "question_en": "What is the benefit of analyzing metadata (metadata) in Power Query?",
+      "options_en": [
+        "Know the number of rows and columns loaded.",
+        "Clearly identify data inconsistencies in your dataset.",
+        "Reduce PBIX file size.",
+        "Create relationships automatically."
+      ],
+      "explanation_en": "Metadata analysis in Power Query (e.g. Column Quality, Column Distribution, Column Profile) helps you quickly identify null values, errors, and anomalies before loading the model."
     },
     {
       "pergunta": "Você tem uma API que retorna mais de 100 colunas e precisa remover todas as colunas com sufixo 'sourceid'. Qual combinação de funções M você usaria para completar esse código Power Query?",
@@ -182,14 +182,7 @@ const questionBank = {
       ],
       "correta": 0,
       "explicacao": "Para remover colunas com base em um padrão de sufixo no Power Query M: Table.RemoveColumns remove as colunas, List.Select filtra a lista de colunas para encontrar as que atendem ao critério, e Text.EndsWith verifica se o nome da coluna termina com o sufixo desejado.",
-      "question_en": "You have an API that returns more than 100 columns and you need to remove all columns with 'sourceid' suffix. What combination of M functions would you use to complete this Power Query code?",
-      "options_en": [
-        "Table.RemoveColumns, List.Select and Text.EndsWith",
-        "Table.SelectColumns, List.Filter and Text.StartsWith",
-        "Table.DeleteColumns, List.Contains and Text.Contains",
-        "Table.TransformColumns, List.Generate and Text.Replace"
-      ],
-      "explanation_en": "To remove columns based on a suffix pattern in Power Query M: Table.RemoveColumns removes the columns, List.Select filters the list of columns to find those that meet the criteria, and Text.EndsWith checks whether the column name ends with the desired suffix.",
+      "answer": 0,
       "question_pt": "Você tem uma API que retorna mais de 100 colunas e precisa remover todas as colunas com sufixo 'sourceid'. Qual combinação de funções M você usaria para completar esse código Power Query?",
       "options_pt": [
         "Table.RemoveColumns, List.Select e Text.EndsWith",
@@ -198,7 +191,14 @@ const questionBank = {
         "Table.TransformColumns, List.Generate e Text.Replace"
       ],
       "explanation_pt": "Para remover colunas com base em um padrão de sufixo no Power Query M: Table.RemoveColumns remove as colunas, List.Select filtra a lista de colunas para encontrar as que atendem ao critério, e Text.EndsWith verifica se o nome da coluna termina com o sufixo desejado.",
-      "answer": 0
+      "question_en": "You have an API that returns more than 100 columns and you need to remove all columns with 'sourceid' suffix. What combination of M functions would you use to complete this Power Query code?",
+      "options_en": [
+        "Table.RemoveColumns, List.Select and Text.EndsWith",
+        "Table.SelectColumns, List.Filter and Text.StartsWith",
+        "Table.DeleteColumns, List.Contains and Text.Contains",
+        "Table.TransformColumns, List.Generate and Text.Replace"
+      ],
+      "explanation_en": "To remove columns based on a suffix pattern in Power Query M: Table.RemoveColumns removes the columns, List.Select filters the list of columns to find those that meet the criteria, and Text.EndsWith checks whether the column name ends with the desired suffix."
     },
     {
       "pergunta": "Você está mesclando as consultas Orders e Order Details no Editor do Power Query. Devido a problemas de qualidade de dados, algumas linhas da consulta Orders NÃO têm uma linha correspondente na consulta Order Details. Você precisa garantir que todas as linhas da consulta Orders sejam exibidas. Qual tipo de junção deve usar?",
@@ -210,14 +210,7 @@ const questionBank = {
       ],
       "correta": 2,
       "explicacao": "Left Outer (Externa Esquerda) retorna TODAS as linhas da tabela da esquerda (Orders) e apenas as linhas correspondentes da tabela da direita (Order Details). Linhas de Orders sem correspondência em Order Details aparecem com valores nulos. Inner Join excluiria as linhas sem correspondência.",
-      "question_en": "You are merging Orders and Order Details queries in the Power Query Editor. Due to data quality issues, some rows in the Orders query DO NOT have a corresponding row in the Order Details query. You need to ensure that all rows from the Orders query are displayed. What type of join should you use?",
-      "options_en": [
-        "Full Outer",
-        "Inner",
-        "Left Outer",
-        "Anti Right (Right Anti)"
-      ],
-      "explanation_en": "Left Outer returns ALL rows from the left table (Orders) and only the corresponding rows from the right table (Order Details). Unmatched Order Lines in Order Details appear with null values. Inner Join would delete the unmatched rows.",
+      "answer": 2,
       "question_pt": "Você está mesclando as consultas Orders e Order Details no Editor do Power Query. Devido a problemas de qualidade de dados, algumas linhas da consulta Orders NÃO têm uma linha correspondente na consulta Order Details. Você precisa garantir que todas as linhas da consulta Orders sejam exibidas. Qual tipo de junção deve usar?",
       "options_pt": [
         "Externa Completa (Full Outer)",
@@ -226,7 +219,14 @@ const questionBank = {
         "Anti Direita (Right Anti)"
       ],
       "explanation_pt": "Left Outer (Externa Esquerda) retorna TODAS as linhas da tabela da esquerda (Orders) e apenas as linhas correspondentes da tabela da direita (Order Details). Linhas de Orders sem correspondência em Order Details aparecem com valores nulos. Inner Join excluiria as linhas sem correspondência.",
-      "answer": 2
+      "question_en": "You are merging Orders and Order Details queries in the Power Query Editor. Due to data quality issues, some rows in the Orders query DO NOT have a corresponding row in the Order Details query. You need to ensure that all rows from the Orders query are displayed. What type of join should you use?",
+      "options_en": [
+        "Full Outer",
+        "Inner",
+        "Left Outer",
+        "Anti Right (Right Anti)"
+      ],
+      "explanation_en": "Left Outer returns ALL rows from the left table (Orders) and only the corresponding rows from the right table (Order Details). Unmatched Order Lines in Order Details appear with null values. Inner Join would delete the unmatched rows."
     },
     {
       "pergunta": "Você visualiza uma consulta no Editor do Power Query. Nota que a Coluna A contém valores em branco (blank) e valores nulos (null). Você precisa converter todos os valores em branco para null. Qual opção deve selecionar na Coluna A?",
@@ -238,14 +238,7 @@ const questionBank = {
       ],
       "correta": 3,
       "explicacao": "Substituir Valores (Replace Values) permite especificar um valor de origem (em branco/string vazia) e um valor de destino (null). Esta é a única opção que permite converter especificamente valores em branco para null sem afetar outros dados.",
-      "question_en": "You preview a query in the Power Query Editor. Note that Column A contains blank values ​​and null values. You need to convert all blank values ​​to null. Which option should you select in Column A?",
-      "options_en": [
-        "Clean",
-        "Fill Down",
-        "Replace Errors",
-        "Replace Values"
-      ],
-      "explanation_en": "Replace Values ​​allows you to specify a source value (blank/empty string) and a destination value (null). This is the only option that allows you to specifically convert blank values ​​to null without affecting other data.",
+      "answer": 3,
       "question_pt": "Você visualiza uma consulta no Editor do Power Query. Nota que a Coluna A contém valores em branco (blank) e valores nulos (null). Você precisa converter todos os valores em branco para null. Qual opção deve selecionar na Coluna A?",
       "options_pt": [
         "Limpar (Clean)",
@@ -254,7 +247,14 @@ const questionBank = {
         "Substituir Valores (Replace Values)"
       ],
       "explanation_pt": "Substituir Valores (Replace Values) permite especificar um valor de origem (em branco/string vazia) e um valor de destino (null). Esta é a única opção que permite converter especificamente valores em branco para null sem afetar outros dados.",
-      "answer": 3
+      "question_en": "You preview a query in the Power Query Editor. Note that Column A contains blank values ​​and null values. You need to convert all blank values ​​to null. Which option should you select in Column A?",
+      "options_en": [
+        "Clean",
+        "Fill Down",
+        "Replace Errors",
+        "Replace Values"
+      ],
+      "explanation_en": "Replace Values ​​allows you to specify a source value (blank/empty string) and a destination value (null). This is the only option that allows you to specifically convert blank values ​​to null without affecting other data."
     },
     {
       "pergunta": "Você está usando o Editor do Power Query para importar um arquivo Excel onde os dados começam com nomes de colunas na linha 5 da planilha. Há valores em branco ocasionais na coluna A. Você precisa remover as linhas em branco do topo e usar a 5ª linha como cabeçalhos. O que deve fazer PRIMEIRO?",
@@ -266,14 +266,7 @@ const questionBank = {
       ],
       "correta": 1,
       "explicacao": "A ordem correta é: primeiro remover as 4 linhas superiores (que não contêm dados), depois usar a primeira linha como cabeçalhos. Se você usasse 'Remover valores vazios' primeiro, poderia remover linhas de dados legítimas que têm valores em branco na coluna A.",
-      "question_en": "You are using the Power Query Editor to import an Excel file where the data begins with column names in row 5 of the worksheet. There are occasional blank values ​​in column A. You need to remove the top blank rows and use the 5th row as headers. What should you do FIRST?",
-      "options_en": [
-        "Remove empty values ​​from first column",
-        "Remove the first 4 lines",
-        "Use current headers as first line",
-        "Use the first line as headers"
-      ],
-      "explanation_en": "The correct order is: first remove the top 4 lines (which contain no data), then use the first line as headers. If you used 'Remove empty values' first, you could remove legitimate data rows that have blank values ​​in column A.",
+      "answer": 1,
       "question_pt": "Você está usando o Editor do Power Query para importar um arquivo Excel onde os dados começam com nomes de colunas na linha 5 da planilha. Há valores em branco ocasionais na coluna A. Você precisa remover as linhas em branco do topo e usar a 5ª linha como cabeçalhos. O que deve fazer PRIMEIRO?",
       "options_pt": [
         "Remover valores vazios da primeira coluna",
@@ -282,7 +275,14 @@ const questionBank = {
         "Usar a primeira linha como cabeçalhos"
       ],
       "explanation_pt": "A ordem correta é: primeiro remover as 4 linhas superiores (que não contêm dados), depois usar a primeira linha como cabeçalhos. Se você usasse 'Remover valores vazios' primeiro, poderia remover linhas de dados legítimas que têm valores em branco na coluna A.",
-      "answer": 1
+      "question_en": "You are using the Power Query Editor to import an Excel file where the data begins with column names in row 5 of the worksheet. There are occasional blank values ​​in column A. You need to remove the top blank rows and use the 5th row as headers. What should you do FIRST?",
+      "options_en": [
+        "Remove empty values ​​from first column",
+        "Remove the first 4 lines",
+        "Use current headers as first line",
+        "Use the first line as headers"
+      ],
+      "explanation_en": "The correct order is: first remove the top 4 lines (which contain no data), then use the first line as headers. If you used 'Remove empty values' first, you could remove legitimate data rows that have blank values ​​in column A."
     },
     {
       "pergunta": "Você tem um modelo Power BI com dados de sensores de 500 sensores que retornam leituras de temperatura a cada minuto. Os relatórios precisam calcular a temperatura média por sensor a cada hora e NÃO mostram os dados brutos por minuto. Você precisa reduzir o tamanho do modelo para melhorar o desempenho. O que deve fazer?",
@@ -294,14 +294,7 @@ const questionBank = {
       ],
       "correta": 1,
       "explicacao": "Agrupar os dados por hora no Power Query reduz drasticamente o número de linhas do modelo (de 1 leitura/minuto para 1 leitura/hora = 60x menos dados). Isso melhora o desempenho pois os dados já chegam agregados ao modelo, sem precisar processar os dados brutos durante a visualização.",
-      "question_en": "You have a Power BI model with sensor data from 500 sensors that return temperature readings every minute. Reports must calculate the average temperature per sensor every hour and do NOT show raw data per minute. You need to reduce the model size to improve performance. What should you do?",
-      "options_en": [
-        "Create visuals that group data by hour",
-        "Use Power Query to group sensor data by hour",
-        "Add a report filter for the Time column",
-        "Remove lines that contain readings"
-      ],
-      "explanation_en": "Grouping data by hour in Power Query drastically reduces the number of rows in the model (from 1 read/minute to 1 read/hour = 60x less data). This improves performance as the data arrives already aggregated to the model, without having to process the raw data during visualization.",
+      "answer": 1,
       "question_pt": "Você tem um modelo Power BI com dados de sensores de 500 sensores que retornam leituras de temperatura a cada minuto. Os relatórios precisam calcular a temperatura média por sensor a cada hora e NÃO mostram os dados brutos por minuto. Você precisa reduzir o tamanho do modelo para melhorar o desempenho. O que deve fazer?",
       "options_pt": [
         "Criar visuais que agrupem os dados por hora",
@@ -310,7 +303,14 @@ const questionBank = {
         "Remover as linhas que contêm leituras"
       ],
       "explanation_pt": "Agrupar os dados por hora no Power Query reduz drasticamente o número de linhas do modelo (de 1 leitura/minuto para 1 leitura/hora = 60x menos dados). Isso melhora o desempenho pois os dados já chegam agregados ao modelo, sem precisar processar os dados brutos durante a visualização.",
-      "answer": 1
+      "question_en": "You have a Power BI model with sensor data from 500 sensors that return temperature readings every minute. Reports must calculate the average temperature per sensor every hour and do NOT show raw data per minute. You need to reduce the model size to improve performance. What should you do?",
+      "options_en": [
+        "Create visuals that group data by hour",
+        "Use Power Query to group sensor data by hour",
+        "Add a report filter for the Time column",
+        "Remove lines that contain readings"
+      ],
+      "explanation_en": "Grouping data by hour in Power Query drastically reduces the number of rows in the model (from 1 read/minute to 1 read/hour = 60x less data). This improves performance as the data arrives already aggregated to the model, without having to process the raw data during visualization."
     },
     {
       "pergunta": "Você tem duas consultas: Query1 recupera a tabela SMB_Customers de um SQL Server e Query2 recupera Enterprise_Customers de um Oracle Server. Ambas as tabelas têm as mesmas colunas. Você precisa combinar os dados. Qual comando deve usar?",
@@ -322,14 +322,7 @@ const questionBank = {
       ],
       "correta": 3,
       "explicacao": "Acrescentar Consultas (Append) é usado para combinar tabelas com a mesma estrutura de colunas verticalmente (empilhando linhas). Mesclar Consultas é como um JOIN, combinando colunas horizontalmente. Como ambas as tabelas têm as mesmas colunas e queremos unir os clientes, Acrescentar é a escolha correta.",
-      "question_en": "You have two queries: Query1 retrieves the SMB_Customers table from a SQL Server and Query2 retrieves Enterprise_Customers from an Oracle Server. Both tables have the same columns. You need to combine the data. Which command should you use?",
-      "options_en": [
-        "Combine Files",
-        "Merge Queries",
-        "Merge Columns",
-        "Add Queries"
-      ],
-      "explanation_en": "Append is used to combine tables with the same column structure vertically (stacking rows). Merging Queries is like a JOIN, combining columns horizontally. Since both tables have the same columns and we want to merge customers, Append is the correct choice.",
+      "answer": 3,
       "question_pt": "Você tem duas consultas: Query1 recupera a tabela SMB_Customers de um SQL Server e Query2 recupera Enterprise_Customers de um Oracle Server. Ambas as tabelas têm as mesmas colunas. Você precisa combinar os dados. Qual comando deve usar?",
       "options_pt": [
         "Combinar Arquivos",
@@ -338,7 +331,14 @@ const questionBank = {
         "Acrescentar Consultas"
       ],
       "explanation_pt": "Acrescentar Consultas (Append) é usado para combinar tabelas com a mesma estrutura de colunas verticalmente (empilhando linhas). Mesclar Consultas é como um JOIN, combinando colunas horizontalmente. Como ambas as tabelas têm as mesmas colunas e queremos unir os clientes, Acrescentar é a escolha correta.",
-      "answer": 3
+      "question_en": "You have two queries: Query1 retrieves the SMB_Customers table from a SQL Server and Query2 retrieves Enterprise_Customers from an Oracle Server. Both tables have the same columns. You need to combine the data. Which command should you use?",
+      "options_en": [
+        "Combine Files",
+        "Merge Queries",
+        "Merge Columns",
+        "Add Queries"
+      ],
+      "explanation_en": "Append is used to combine tables with the same column structure vertically (stacking rows). Merging Queries is like a JOIN, combining columns horizontally. Since both tables have the same columns and we want to merge customers, Append is the correct choice."
     },
     {
       "pergunta": "Você planeja usar o Power BI Desktop para importar 100 arquivos CSV de diferentes lojas, todos com a mesma estrutura, armazenados em um compartilhamento de rede. Você precisa importá-los em uma única tabela com o mínimo de esforço administrativo. O que deve fazer?",
@@ -350,14 +350,7 @@ const questionBank = {
       ],
       "correta": 0,
       "explicacao": "Adicionar uma fonte de dados de Pasta e usar 'Combinar Arquivos' é a forma mais eficiente de consolidar múltiplos arquivos com a mesma estrutura. O Power Query cria automaticamente uma função de combinação que processa todos os arquivos na pasta.",
-      "question_en": "You plan to use Power BI Desktop to import 100 CSV files from different stores, all with the same structure, stored on a network share. You need to import them into a single table with minimal administrative effort. What should you do?",
-      "options_en": [
-        "Add a Folder data source and use the Combine Files command",
-        "Add a Folder data source and use the Merge Queries command",
-        "Add an Excel data source and use the Merge Queries command",
-        "Add individual text/CSV data sources and use the Add Queries command"
-      ],
-      "explanation_en": "Adding a Folder data source and using 'Combine Files' is the most efficient way to consolidate multiple files with the same structure. Power Query automatically creates a combine function that processes all files in the folder.",
+      "answer": 0,
       "question_pt": "Você planeja usar o Power BI Desktop para importar 100 arquivos CSV de diferentes lojas, todos com a mesma estrutura, armazenados em um compartilhamento de rede. Você precisa importá-los em uma única tabela com o mínimo de esforço administrativo. O que deve fazer?",
       "options_pt": [
         "Adicionar uma fonte de dados de Pasta e usar o comando Combinar Arquivos",
@@ -366,7 +359,14 @@ const questionBank = {
         "Adicionar fontes de dados texto/CSV individuais e usar o comando Acrescentar Consultas"
       ],
       "explanation_pt": "Adicionar uma fonte de dados de Pasta e usar 'Combinar Arquivos' é a forma mais eficiente de consolidar múltiplos arquivos com a mesma estrutura. O Power Query cria automaticamente uma função de combinação que processa todos os arquivos na pasta.",
-      "answer": 0
+      "question_en": "You plan to use Power BI Desktop to import 100 CSV files from different stores, all with the same structure, stored on a network share. You need to import them into a single table with minimal administrative effort. What should you do?",
+      "options_en": [
+        "Add a Folder data source and use the Combine Files command",
+        "Add a Folder data source and use the Merge Queries command",
+        "Add an Excel data source and use the Merge Queries command",
+        "Add individual text/CSV data sources and use the Add Queries command"
+      ],
+      "explanation_en": "Adding a Folder data source and using 'Combine Files' is the most efficient way to consolidate multiple files with the same structure. Power Query automatically creates a combine function that processes all files in the folder."
     },
     {
       "pergunta": "Você tem um cubo SSAS com dados históricos. A consulta retorna 25.499 registros, mas o data warehouse de origem tem 26.423 registros. Você precisa garantir que a consulta retorne todos os registros. O que deve fazer?",
@@ -378,14 +378,7 @@ const questionBank = {
       ],
       "correta": 2,
       "explicacao": "A diferença entre 25.499 e 26.423 indica que uma etapa 'Remover Duplicatas' foi aplicada incorretamente. Como os registros de fatos (como rastreamento de pedidos) podem ter valores repetidos em colunas individuais, remover 'duplicatas' com base em uma única coluna exclui registros legítimos.",
-      "question_en": "You have an SSAS cube with historical data. The query returns 25,499 records, but the source data warehouse has 26,423 records. You need to ensure that the query returns all records. What should you do?",
-      "options_en": [
-        "In the Query Editor, update all data",
-        "Change the query to dynamic connection mode (Live Connection)",
-        "Delete the Remove Duplicates step",
-        "Add a Unpivot Columns step"
-      ],
-      "explanation_en": "The difference between 25,499 and 26,423 indicates that a 'Remove Duplicates' step was applied incorrectly. Because fact records (such as order tracking) can have repeating values ​​in individual columns, removing 'duplicates' based on a single column excludes legitimate records.",
+      "answer": 2,
       "question_pt": "Você tem um cubo SSAS com dados históricos. A consulta retorna 25.499 registros, mas o data warehouse de origem tem 26.423 registros. Você precisa garantir que a consulta retorne todos os registros. O que deve fazer?",
       "options_pt": [
         "No Editor de Consultas, atualizar todos os dados",
@@ -394,7 +387,14 @@ const questionBank = {
         "Adicionar uma etapa Desdinamizar Colunas"
       ],
       "explanation_pt": "A diferença entre 25.499 e 26.423 indica que uma etapa 'Remover Duplicatas' foi aplicada incorretamente. Como os registros de fatos (como rastreamento de pedidos) podem ter valores repetidos em colunas individuais, remover 'duplicatas' com base em uma única coluna exclui registros legítimos.",
-      "answer": 2
+      "question_en": "You have an SSAS cube with historical data. The query returns 25,499 records, but the source data warehouse has 26,423 records. You need to ensure that the query returns all records. What should you do?",
+      "options_en": [
+        "In the Query Editor, update all data",
+        "Change the query to dynamic connection mode (Live Connection)",
+        "Delete the Remove Duplicates step",
+        "Add a Unpivot Columns step"
+      ],
+      "explanation_en": "The difference between 25,499 and 26,423 indicates that a 'Remove Duplicates' step was applied incorrectly. Because fact records (such as order tracking) can have repeating values ​​in individual columns, removing 'duplicates' based on a single column excludes legitimate records."
     },
     {
       "pergunta": "Você está importando dados de vendas de um arquivo Excel. Ao criar um gráfico de barras, as regiões aparecem corretamente, mas o valor de vendas exibe a contagem em vez da soma. Como você deve modificar a consulta para garantir que os dados apareçam corretamente?",
@@ -406,14 +406,7 @@ const questionBank = {
       ],
       "correta": 2,
       "explicacao": "Quando o Power BI exibe contagem em vez de soma, geralmente significa que a coluna foi importada como texto em vez de número. Alterar o tipo de dados para Numérico (Decimal ou Número Inteiro) resolve o problema, permitindo que o DAX agregue corretamente.",
-      "question_en": "You are importing sales data from an Excel file. When creating a bar chart, the regions appear correctly, but the sales value displays the count instead of the sum. How should you modify the query to ensure the data appears correctly?",
-      "options_en": [
-        "Delete the query, import the data into SQL Server, and then reimport",
-        "In the Query Editor, add a calculated column that totals the sales value column",
-        "Change the data type of the sales value column to Numeric",
-        "Update the data model"
-      ],
-      "explanation_en": "When Power BI displays count instead of sum, it usually means the column was imported as text instead of a number. Changing the data type to Numeric (Decimal or Whole Number) resolves the issue, allowing DAX to aggregate correctly.",
+      "answer": 2,
       "question_pt": "Você está importando dados de vendas de um arquivo Excel. Ao criar um gráfico de barras, as regiões aparecem corretamente, mas o valor de vendas exibe a contagem em vez da soma. Como você deve modificar a consulta para garantir que os dados apareçam corretamente?",
       "options_pt": [
         "Excluir a consulta, importar os dados para o SQL Server e depois reimportar",
@@ -422,7 +415,14 @@ const questionBank = {
         "Atualizar o modelo de dados"
       ],
       "explanation_pt": "Quando o Power BI exibe contagem em vez de soma, geralmente significa que a coluna foi importada como texto em vez de número. Alterar o tipo de dados para Numérico (Decimal ou Número Inteiro) resolve o problema, permitindo que o DAX agregue corretamente.",
-      "answer": 2
+      "question_en": "You are importing sales data from an Excel file. When creating a bar chart, the regions appear correctly, but the sales value displays the count instead of the sum. How should you modify the query to ensure the data appears correctly?",
+      "options_en": [
+        "Delete the query, import the data into SQL Server, and then reimport",
+        "In the Query Editor, add a calculated column that totals the sales value column",
+        "Change the data type of the sales value column to Numeric",
+        "Update the data model"
+      ],
+      "explanation_en": "When Power BI displays count instead of sum, it usually means the column was imported as text instead of a number. Changing the data type to Numeric (Decimal or Whole Number) resolves the issue, allowing DAX to aggregate correctly."
     },
     {
       "pergunta": "Você importa uma tabela no Power BI Desktop. Precisa configurar a tabela para extrair apenas o texto após um delimitador em uma coluna. O que deve fazer?",
@@ -434,14 +434,7 @@ const questionBank = {
       ],
       "correta": 3,
       "explicacao": "A opção 'Texto Após Delimitador' no menu Extrair permite extrair apenas o texto que aparece após um caractere delimitador específico em uma coluna, mantendo a coluna em uma única coluna resultante.",
-      "question_en": "You import a table into Power BI Desktop. You need to configure the table to extract only the text after a delimiter in a column. What should you do?",
-      "options_en": [
-        "In the Format menu, click Trim",
-        "In the Extract menu, click Last Characters",
-        "On the Split Column menu, click By Delimiter",
-        "In the Extract menu, click Text After Delimiter"
-      ],
-      "explanation_en": "The 'Text After Delimiter' option in the Extract menu allows you to extract only the text that appears after a specific delimiter character in a column, keeping the column in a single resulting column.",
+      "answer": 3,
       "question_pt": "Você importa uma tabela no Power BI Desktop. Precisa configurar a tabela para extrair apenas o texto após um delimitador em uma coluna. O que deve fazer?",
       "options_pt": [
         "No menu Formato, clicar em Aparar",
@@ -450,7 +443,14 @@ const questionBank = {
         "No menu Extrair, clicar em Texto Após Delimitador"
       ],
       "explanation_pt": "A opção 'Texto Após Delimitador' no menu Extrair permite extrair apenas o texto que aparece após um caractere delimitador específico em uma coluna, mantendo a coluna em uma única coluna resultante.",
-      "answer": 3
+      "question_en": "You import a table into Power BI Desktop. You need to configure the table to extract only the text after a delimiter in a column. What should you do?",
+      "options_en": [
+        "In the Format menu, click Trim",
+        "In the Extract menu, click Last Characters",
+        "On the Split Column menu, click By Delimiter",
+        "In the Extract menu, click Text After Delimiter"
+      ],
+      "explanation_en": "The 'Text After Delimiter' option in the Extract menu allows you to extract only the text that appears after a specific delimiter character in a column, keeping the column in a single resulting column."
     },
     {
       "pergunta": "Você tem uma consulta de um banco de dados SQL Azure. Descobre que a coluna 'ErrorCode' tem valores com espaço no início e a coluna 'SubStatus' contém caracteres não imprimíveis. Você precisa remover os espaços iniciais de ErrorCode e os caracteres não imprimíveis de SubStatus. O que deve fazer em cada coluna?",
@@ -462,14 +462,7 @@ const questionBank = {
       ],
       "correta": 0,
       "explicacao": "Trim remove espaços iniciais e finais de uma coluna de texto. Clean remove caracteres não imprimíveis. Ambas as funções estão disponíveis na guia Transformar > Formato do Power Query Editor.",
-      "question_en": "You have a query from a SQL Azure database. You discover that the 'ErrorCode' column has values ​​with leading spaces and the 'SubStatus' column contains non-printable characters. You need to remove leading spaces from ErrorCode and non-printable characters from SubStatus. What should you do in each column?",
-      "options_en": [
-        "Trim and Clean",
-        "Replace Values ​​and Clear",
-        "Extract and Format",
-        "Split Column and Trim"
-      ],
-      "explanation_en": "Trim removes leading and trailing spaces from a column of text. Clean removes unprintable characters. Both functions are available in the Transform > Format tab of the Power Query Editor.",
+      "answer": 0,
       "question_pt": "Você tem uma consulta de um banco de dados SQL Azure. Descobre que a coluna 'ErrorCode' tem valores com espaço no início e a coluna 'SubStatus' contém caracteres não imprimíveis. Você precisa remover os espaços iniciais de ErrorCode e os caracteres não imprimíveis de SubStatus. O que deve fazer em cada coluna?",
       "options_pt": [
         "Trim e Clean",
@@ -478,7 +471,14 @@ const questionBank = {
         "Dividir coluna e Aparar"
       ],
       "explanation_pt": "Trim remove espaços iniciais e finais de uma coluna de texto. Clean remove caracteres não imprimíveis. Ambas as funções estão disponíveis na guia Transformar > Formato do Power Query Editor.",
-      "answer": 0
+      "question_en": "You have a query from a SQL Azure database. You discover that the 'ErrorCode' column has values ​​with leading spaces and the 'SubStatus' column contains non-printable characters. You need to remove leading spaces from ErrorCode and non-printable characters from SubStatus. What should you do in each column?",
+      "options_en": [
+        "Trim and Clean",
+        "Replace Values ​​and Clear",
+        "Extract and Format",
+        "Split Column and Trim"
+      ],
+      "explanation_en": "Trim removes leading and trailing spaces from a column of text. Clean removes unprintable characters. Both functions are available in the Transform > Format tab of the Power Query Editor."
     },
     {
       "pergunta": "Durante o processo de QA dos dados, você percebe que há valores nulos na coluna 'Return type' (Returned, No return e null). Após conversar com seu gerente, você decide substituir os valores nulos por 'No return'. Qual ação você deve executar?",
@@ -490,14 +490,7 @@ const questionBank = {
       ],
       "correta": 0,
       "explicacao": "Para substituir valores nulos por um valor específico, use Transformar > Substituir valores. Isso permite definir exatamente qual valor deve substituir os nulos, mantendo todos os outros dados intactos.",
-      "question_en": "During the data QA process, you notice that there are null values ​​in the 'Return type' column (Returned, No return and null). After talking to your manager, you decide to replace null values ​​with 'No return'. What action should you take?",
-      "options_en": [
-        "Select the Return type column > Transform > Replace values",
-        "Select column Return type > Transform > Fill below",
-        "Select column Return type > Add column > Column by examples",
-        "Select the Return type column > Home > Remove rows"
-      ],
-      "explanation_en": "To replace null values ​​with a specific value, use Transform > Replace Values. This allows you to define exactly which value should replace nulls while keeping all other data intact.",
+      "answer": 0,
       "question_pt": "Durante o processo de QA dos dados, você percebe que há valores nulos na coluna 'Return type' (Returned, No return e null). Após conversar com seu gerente, você decide substituir os valores nulos por 'No return'. Qual ação você deve executar?",
       "options_pt": [
         "Selecionar a coluna Return type > Transformar > Substituir valores",
@@ -506,7 +499,14 @@ const questionBank = {
         "Selecionar a coluna Return type > Início > Remover linhas"
       ],
       "explanation_pt": "Para substituir valores nulos por um valor específico, use Transformar > Substituir valores. Isso permite definir exatamente qual valor deve substituir os nulos, mantendo todos os outros dados intactos.",
-      "answer": 0
+      "question_en": "During the data QA process, you notice that there are null values ​​in the 'Return type' column (Returned, No return and null). After talking to your manager, you decide to replace null values ​​with 'No return'. What action should you take?",
+      "options_en": [
+        "Select the Return type column > Transform > Replace values",
+        "Select column Return type > Transform > Fill below",
+        "Select column Return type > Add column > Column by examples",
+        "Select the Return type column > Home > Remove rows"
+      ],
+      "explanation_en": "To replace null values ​​with a specific value, use Transform > Replace Values. This allows you to define exactly which value should replace nulls while keeping all other data intact."
     },
     {
       "pergunta": "Quais dois blocos formam o código M que executa sua consulta no Power Query?",
@@ -518,14 +518,7 @@ const questionBank = {
       ],
       "correta": 3,
       "explicacao": "O código M de uma consulta consiste em dois blocos: 'let' (onde todas as variáveis e etapas são definidas) e 'in' (que especifica a saída final da consulta). Você pode ver isso no Editor Avançado.",
-      "question_en": "Which two blocks make up the M code that runs your query in Power Query?",
-      "options_en": [
-        "do and while",
-        "if and then",
-        "for and each",
-        "let and in"
-      ],
-      "explanation_en": "The M code of a query consists of two blocks: 'let' (where all variables and steps are defined) and 'in' (which specifies the final output of the query). You can see this in the Advanced Editor.",
+      "answer": 3,
       "question_pt": "Quais dois blocos formam o código M que executa sua consulta no Power Query?",
       "options_pt": [
         "do e while",
@@ -534,7 +527,14 @@ const questionBank = {
         "let e in"
       ],
       "explanation_pt": "O código M de uma consulta consiste em dois blocos: 'let' (onde todas as variáveis e etapas são definidas) e 'in' (que especifica a saída final da consulta). Você pode ver isso no Editor Avançado.",
-      "answer": 3
+      "question_en": "Which two blocks make up the M code that runs your query in Power Query?",
+      "options_en": [
+        "do and while",
+        "if and then",
+        "for and each",
+        "let and in"
+      ],
+      "explanation_en": "The M code of a query consists of two blocks: 'let' (where all variables and steps are defined) and 'in' (which specifies the final output of the query). You can see this in the Advanced Editor."
     },
     {
       "pergunta": "O que acontece internamente cada vez que você aplica uma transformação no Power Query?",
@@ -546,14 +546,7 @@ const questionBank = {
       ],
       "correta": 3,
       "explicacao": "Data Mashup, ou código M, é a linguagem de fórmula que impulsiona o Power Query. Sempre que você usa as ferramentas de UI para aplicar uma transformação, o código M correspondente é gerado automaticamente.",
-      "question_en": "What happens internally each time you apply a transformation in Power Query?",
-      "options_en": [
-        "The same transformation is applied to the source data",
-        "Changes are permanent and cannot be modified",
-        "The Query Editor writes the corresponding DAX code for the applied step",
-        "The Query Editor writes the corresponding M code for the applied step"
-      ],
-      "explanation_en": "Data Mashup, or M-code, is the formula language that powers Power Query. Whenever you use the UI tools to apply a transformation, the corresponding M code is automatically generated.",
+      "answer": 3,
       "question_pt": "O que acontece internamente cada vez que você aplica uma transformação no Power Query?",
       "options_pt": [
         "A mesma transformação é aplicada aos dados de origem",
@@ -562,7 +555,14 @@ const questionBank = {
         "O Editor de Consultas escreve o código M correspondente para a etapa aplicada"
       ],
       "explanation_pt": "Data Mashup, ou código M, é a linguagem de fórmula que impulsiona o Power Query. Sempre que você usa as ferramentas de UI para aplicar uma transformação, o código M correspondente é gerado automaticamente.",
-      "answer": 3
+      "question_en": "What happens internally each time you apply a transformation in Power Query?",
+      "options_en": [
+        "The same transformation is applied to the source data",
+        "Changes are permanent and cannot be modified",
+        "The Query Editor writes the corresponding DAX code for the applied step",
+        "The Query Editor writes the corresponding M code for the applied step"
+      ],
+      "explanation_en": "Data Mashup, or M-code, is the formula language that powers Power Query. Whenever you use the UI tools to apply a transformation, the corresponding M code is automatically generated."
     },
     {
       "pergunta": "Qual operação do Power Query adiciona linhas a uma tabela existente combinando tabelas com a mesma estrutura de colunas?",
@@ -574,14 +574,7 @@ const questionBank = {
       ],
       "correta": 3,
       "explicacao": "Acrescentar consultas (Append queries) combina tabelas que compartilham exatamente a mesma estrutura de colunas e tipos de dados, adicionando as linhas de uma tabela ao final da outra.",
-      "question_en": "Which Power Query operation adds rows to an existing table by combining tables with the same column structure?",
-      "options_en": [
-        "Group by",
-        "Streamline",
-        "Merge queries",
-        "Add queries"
-      ],
-      "explanation_en": "Append queries combine tables that share exactly the same column structure and data types, adding rows from one table to the end of the other.",
+      "answer": 3,
       "question_pt": "Qual operação do Power Query adiciona linhas a uma tabela existente combinando tabelas com a mesma estrutura de colunas?",
       "options_pt": [
         "Agrupar por",
@@ -590,7 +583,14 @@ const questionBank = {
         "Acrescentar consultas"
       ],
       "explanation_pt": "Acrescentar consultas (Append queries) combina tabelas que compartilham exatamente a mesma estrutura de colunas e tipos de dados, adicionando as linhas de uma tabela ao final da outra.",
-      "answer": 3
+      "question_en": "Which Power Query operation adds rows to an existing table by combining tables with the same column structure?",
+      "options_en": [
+        "Group by",
+        "Streamline",
+        "Merge queries",
+        "Add queries"
+      ],
+      "explanation_en": "Append queries combine tables that share exactly the same column structure and data types, adding rows from one table to the end of the other."
     },
     {
       "pergunta": "Você tem dados de vendas anuais por departamento onde cada ano tem sua própria coluna. Qual ferramenta do Power Query converte as múltiplas colunas 'Ano' em linhas?",
@@ -602,14 +602,7 @@ const questionBank = {
       ],
       "correta": 1,
       "explicacao": "Desdinamizar (Unpivot) converte colunas em linhas. No exemplo dado, as colunas de ano seriam convertidas em valores de linha, criando uma estrutura mais adequada para análise no Power BI.",
-      "question_en": "You have annual sales data by department where each year has its own column. Which Power Query tool converts multiple 'Year' columns to rows?",
-      "options_en": [
-        "Pivot",
-        "Unpivot",
-        "Transpose",
-        "Group by"
-      ],
-      "explanation_en": "Unpivot converts columns to rows. In the example given, the year columns would be converted to row values, creating a structure more suitable for analysis in Power BI.",
+      "answer": 1,
       "question_pt": "Você tem dados de vendas anuais por departamento onde cada ano tem sua própria coluna. Qual ferramenta do Power Query converte as múltiplas colunas 'Ano' em linhas?",
       "options_pt": [
         "Dinamizar (Pivot)",
@@ -618,7 +611,14 @@ const questionBank = {
         "Agrupar por"
       ],
       "explanation_pt": "Desdinamizar (Unpivot) converte colunas em linhas. No exemplo dado, as colunas de ano seriam convertidas em valores de linha, criando uma estrutura mais adequada para análise no Power BI.",
-      "answer": 1
+      "question_en": "You have annual sales data by department where each year has its own column. Which Power Query tool converts multiple 'Year' columns to rows?",
+      "options_en": [
+        "Pivot",
+        "Unpivot",
+        "Transpose",
+        "Group by"
+      ],
+      "explanation_en": "Unpivot converts columns to rows. In the example given, the year columns would be converted to row values, creating a structure more suitable for analysis in Power BI."
     },
     {
       "pergunta": "Qual ferramenta do Power Query você usaria para consolidar dados diários de transações em transações mensais?",
@@ -630,14 +630,7 @@ const questionBank = {
       ],
       "correta": 2,
       "explicacao": "Agrupar por (Group By) permite agregar dados em um nível diferente de granularidade, como consolidar dados diários em mensais. Você pode especificar a coluna de agrupamento (mês) e a agregação (soma, média, etc.).",
-      "question_en": "Which Power Query tool would you use to consolidate daily transaction data into monthly transactions?",
-      "options_en": [
-        "Merge queries",
-        "Add queries",
-        "Group by (Group By)",
-        "Pivot Columns"
-      ],
-      "explanation_en": "Group By allows you to aggregate data at a different level of granularity, such as consolidating daily data into monthly data. You can specify the grouping column (month) and aggregation (sum, average, etc.).",
+      "answer": 2,
       "question_pt": "Qual ferramenta do Power Query você usaria para consolidar dados diários de transações em transações mensais?",
       "options_pt": [
         "Mesclar consultas",
@@ -646,7 +639,14 @@ const questionBank = {
         "Dinamizar colunas (Pivot Columns)"
       ],
       "explanation_pt": "Agrupar por (Group By) permite agregar dados em um nível diferente de granularidade, como consolidar dados diários em mensais. Você pode especificar a coluna de agrupamento (mês) e a agregação (soma, média, etc.).",
-      "answer": 2
+      "question_en": "Which Power Query tool would you use to consolidate daily transaction data into monthly transactions?",
+      "options_en": [
+        "Merge queries",
+        "Add queries",
+        "Group by (Group By)",
+        "Pivot Columns"
+      ],
+      "explanation_en": "Group By allows you to aggregate data at a different level of granularity, such as consolidating daily data into monthly data. You can specify the grouping column (month) and aggregation (sum, average, etc.)."
     },
     {
       "pergunta": "Qual ferramenta do Power Query você usaria quando sabe o resultado desejado de uma coluna, mas não sabe quais transformações usar?",
@@ -658,14 +658,7 @@ const questionBank = {
       ],
       "correta": 0,
       "explicacao": "Coluna por exemplos permite adicionar novas colunas fornecendo apenas um valor de exemplo do resultado desejado. O Power Query infere automaticamente as transformações necessárias para gerar esse resultado.",
-      "question_en": "Which Power Query tool would you use when you know the desired result for a column but don't know which transformations to use?",
-      "options_en": [
-        "Column by examples",
-        "Conditional column",
-        "Custom column",
-        "Index Column"
-      ],
-      "explanation_en": "Column by Examples allows you to add new columns by providing just an example value of the desired result. Power Query automatically infers the transformations required to generate this result.",
+      "answer": 0,
       "question_pt": "Qual ferramenta do Power Query você usaria quando sabe o resultado desejado de uma coluna, mas não sabe quais transformações usar?",
       "options_pt": [
         "Coluna por exemplos",
@@ -674,7 +667,14 @@ const questionBank = {
         "Coluna de índice"
       ],
       "explanation_pt": "Coluna por exemplos permite adicionar novas colunas fornecendo apenas um valor de exemplo do resultado desejado. O Power Query infere automaticamente as transformações necessárias para gerar esse resultado.",
-      "answer": 0
+      "question_en": "Which Power Query tool would you use when you know the desired result for a column but don't know which transformations to use?",
+      "options_en": [
+        "Column by examples",
+        "Conditional column",
+        "Custom column",
+        "Index Column"
+      ],
+      "explanation_en": "Column by Examples allows you to add new columns by providing just an example value of the desired result. Power Query automatically infers the transformations required to generate this result."
     },
     {
       "pergunta": "O que pode ser útil para criar IDs únicos e formar relacionamentos entre tabelas no Power Query?",
@@ -686,14 +686,7 @@ const questionBank = {
       ],
       "correta": 2,
       "explicacao": "Colunas de índice contêm uma lista de valores sequenciais que podem identificar cada linha única em uma tabela, sendo frequentemente usadas para criar IDs únicos e formar relacionamentos entre tabelas.",
-      "question_en": "What can be useful for creating unique IDs and forming relationships between tables in Power Query?",
-      "options_en": [
-        "Add a column by examples",
-        "Group data",
-        "Add an index column",
-        "Add queries"
-      ],
-      "explanation_en": "Index columns contain a list of sequential values ​​that can identify each unique row in a table, and are often used to create unique IDs and form relationships between tables.",
+      "answer": 2,
       "question_pt": "O que pode ser útil para criar IDs únicos e formar relacionamentos entre tabelas no Power Query?",
       "options_pt": [
         "Adicionar uma coluna por exemplos",
@@ -702,7 +695,14 @@ const questionBank = {
         "Acrescentar consultas"
       ],
       "explanation_pt": "Colunas de índice contêm uma lista de valores sequenciais que podem identificar cada linha única em uma tabela, sendo frequentemente usadas para criar IDs únicos e formar relacionamentos entre tabelas.",
-      "answer": 2
+      "question_en": "What can be useful for creating unique IDs and forming relationships between tables in Power Query?",
+      "options_en": [
+        "Add a column by examples",
+        "Group data",
+        "Add an index column",
+        "Add queries"
+      ],
+      "explanation_en": "Index columns contain a list of sequential values ​​that can identify each unique row in a table, and are often used to create unique IDs and form relationships between tables."
     },
     {
       "pergunta": "Quando você usaria uma ferramenta da guia Transformar em vez da guia Adicionar Coluna no Power Query?",
@@ -714,14 +714,7 @@ const questionBank = {
       ],
       "correta": 0,
       "explicacao": "A guia Transformar modifica os valores da coluna existente (sobrescreve), enquanto a guia Adicionar Coluna cria uma nova coluna mantendo a original intacta. Use Transformar quando quiser modificar os dados da coluna atual.",
-      "question_en": "When would you use a tool from the Transform tab instead of the Add Column tab in Power Query?",
-      "options_en": [
-        "When you want to overwrite existing column values",
-        "When you want to keep existing column values",
-        "When you want to create new columns",
-        "When you want to add an index column"
-      ],
-      "explanation_en": "The Transform tab modifies the existing column values ​​(overwrites), while the Add Column tab creates a new column while keeping the original intact. Use Transform when you want to modify the data in the current column.",
+      "answer": 0,
       "question_pt": "Quando você usaria uma ferramenta da guia Transformar em vez da guia Adicionar Coluna no Power Query?",
       "options_pt": [
         "Quando você deseja sobrescrever os valores das colunas existentes",
@@ -730,7 +723,14 @@ const questionBank = {
         "Quando você quer adicionar uma coluna de índice"
       ],
       "explanation_pt": "A guia Transformar modifica os valores da coluna existente (sobrescreve), enquanto a guia Adicionar Coluna cria uma nova coluna mantendo a original intacta. Use Transformar quando quiser modificar os dados da coluna atual.",
-      "answer": 0
+      "question_en": "When would you use a tool from the Transform tab instead of the Add Column tab in Power Query?",
+      "options_en": [
+        "When you want to overwrite existing column values",
+        "When you want to keep existing column values",
+        "When you want to create new columns",
+        "When you want to add an index column"
+      ],
+      "explanation_en": "The Transform tab modifies the existing column values ​​(overwrites), while the Add Column tab creates a new column while keeping the original intact. Use Transform when you want to modify the data in the current column."
     },
     {
       "pergunta": "Qual ferramenta de perfil de dados fornece estatísticas detalhadas de coluna e distribuição de valores para uma coluna selecionada?",
@@ -742,14 +742,7 @@ const questionBank = {
       ],
       "correta": 2,
       "explicacao": "O Perfil da coluna fornece uma visão mais holística dos dados de uma coluna selecionada, incluindo distribuição de amostra dos dados e estatísticas de coluna como min, max, média, contagem de valores distintos e únicos.",
-      "question_en": "Which data profiling tool provides detailed column statistics and value distribution for a selected column?",
-      "options_en": [
-        "Column quality",
-        "Column distribution",
-        "Column Profile",
-        "Column Statistics"
-      ],
-      "explanation_en": "Column Profile provides a more holistic view of the data for a selected column, including sample distribution of the data and column statistics such as min, max, average, count of distinct and unique values.",
+      "answer": 2,
       "question_pt": "Qual ferramenta de perfil de dados fornece estatísticas detalhadas de coluna e distribuição de valores para uma coluna selecionada?",
       "options_pt": [
         "Qualidade da coluna",
@@ -758,7 +751,14 @@ const questionBank = {
         "Estatísticas da coluna"
       ],
       "explanation_pt": "O Perfil da coluna fornece uma visão mais holística dos dados de uma coluna selecionada, incluindo distribuição de amostra dos dados e estatísticas de coluna como min, max, média, contagem de valores distintos e únicos.",
-      "answer": 2
+      "question_en": "Which data profiling tool provides detailed column statistics and value distribution for a selected column?",
+      "options_en": [
+        "Column quality",
+        "Column distribution",
+        "Column Profile",
+        "Column Statistics"
+      ],
+      "explanation_en": "Column Profile provides a more holistic view of the data for a selected column, including sample distribution of the data and column statistics such as min, max, average, count of distinct and unique values."
     },
     {
       "pergunta": "Qual é o propósito do perfil de dados (data profiling) no Power Query?",
@@ -770,14 +770,7 @@ const questionBank = {
       ],
       "correta": 3,
       "explicacao": "O perfil de dados no Power Query serve para tudo isso: explorar visualmente os dados, entender a composição do dataset (tipos de dados, distribuição) e identificar e resolver problemas de qualidade como erros, nulos e inconsistências.",
-      "question_en": "What is the purpose of data profiling in Power Query?",
-      "options_en": [
-        "Provide a visual way to explore data",
-        "Get an idea of ​​the composition of the dataset",
-        "Troubleshoot data quality issues in columns",
-        "All of the above"
-      ],
-      "explanation_en": "Data profiling in Power Query does all of this: visually explore the data, understand the composition of the dataset (data types, distribution) and identify and resolve quality issues such as errors, nulls and inconsistencies.",
+      "answer": 3,
       "question_pt": "Qual é o propósito do perfil de dados (data profiling) no Power Query?",
       "options_pt": [
         "Fornecer uma forma visual de explorar dados",
@@ -786,7 +779,14 @@ const questionBank = {
         "Todas as opções acima"
       ],
       "explanation_pt": "O perfil de dados no Power Query serve para tudo isso: explorar visualmente os dados, entender a composição do dataset (tipos de dados, distribuição) e identificar e resolver problemas de qualidade como erros, nulos e inconsistências.",
-      "answer": 3
+      "question_en": "What is the purpose of data profiling in Power Query?",
+      "options_en": [
+        "Provide a visual way to explore data",
+        "Get an idea of ​​the composition of the dataset",
+        "Troubleshoot data quality issues in columns",
+        "All of the above"
+      ],
+      "explanation_en": "Data profiling in Power Query does all of this: visually explore the data, understand the composition of the dataset (data types, distribution) and identify and resolve quality issues such as errors, nulls and inconsistencies."
     },
     {
       "pergunta": "Qual ferramenta de perfil de dados pode ser usada para verificar o número de erros em uma coluna no Power Query?",
@@ -798,14 +798,7 @@ const questionBank = {
       ],
       "correta": 3,
       "explicacao": "Tanto a Qualidade da coluna (que mostra a porcentagem de erros) quanto o Perfil da coluna (que fornece estatísticas detalhadas incluindo contagem de erros) podem ser usadas para verificar erros em uma coluna.",
-      "question_en": "Which data profiling tool can be used to check the number of errors in a column in Power Query?",
-      "options_en": [
-        "Column quality",
-        "Column distribution",
-        "Column Profile",
-        "Column Quality and Column Profile"
-      ],
-      "explanation_en": "Both Column Quality (which shows the percentage of errors) and Column Profile (which provides detailed statistics including error counts) can be used to check for errors in a column.",
+      "answer": 3,
       "question_pt": "Qual ferramenta de perfil de dados pode ser usada para verificar o número de erros em uma coluna no Power Query?",
       "options_pt": [
         "Qualidade da coluna",
@@ -814,7 +807,14 @@ const questionBank = {
         "Qualidade da coluna e Perfil da coluna"
       ],
       "explanation_pt": "Tanto a Qualidade da coluna (que mostra a porcentagem de erros) quanto o Perfil da coluna (que fornece estatísticas detalhadas incluindo contagem de erros) podem ser usadas para verificar erros em uma coluna.",
-      "answer": 3
+      "question_en": "Which data profiling tool can be used to check the number of errors in a column in Power Query?",
+      "options_en": [
+        "Column quality",
+        "Column distribution",
+        "Column Profile",
+        "Column Quality and Column Profile"
+      ],
+      "explanation_en": "Both Column Quality (which shows the percentage of errors) and Column Profile (which provides detailed statistics including error counts) can be used to check for errors in a column."
     },
     {
       "pergunta": "Quais ferramentas de perfil de dados o Power Query possui?",
@@ -826,14 +826,7 @@ const questionBank = {
       ],
       "correta": 1,
       "explicacao": "A guia EXIBIÇÃO do Power Query inclui ferramentas de perfil de dados: Qualidade da coluna (mostra % de válidos, erros e vazios), Distribuição da coluna (mostra distribuição dos valores) e Perfil da coluna (estatísticas detalhadas).",
-      "question_en": "What data profiling tools does Power Query have?",
-      "options_en": [
-        "Column by examples, custom column and conditional column",
-        "Column Quality, Column Distribution, and Column Profile",
-        "Index column and duplicate column",
-        "Format, extract and analyze"
-      ],
-      "explanation_en": "The Power Query VIEW tab includes data profiling tools: Column Quality (shows % valid, errors, and blanks), Column Distribution (shows distribution of values), and Column Profile (detailed statistics).",
+      "answer": 1,
       "question_pt": "Quais ferramentas de perfil de dados o Power Query possui?",
       "options_pt": [
         "Coluna por exemplos, coluna personalizada e coluna condicional",
@@ -842,7 +835,14 @@ const questionBank = {
         "Formato, extrair e analisar"
       ],
       "explanation_pt": "A guia EXIBIÇÃO do Power Query inclui ferramentas de perfil de dados: Qualidade da coluna (mostra % de válidos, erros e vazios), Distribuição da coluna (mostra distribuição dos valores) e Perfil da coluna (estatísticas detalhadas).",
-      "answer": 1
+      "question_en": "What data profiling tools does Power Query have?",
+      "options_en": [
+        "Column by examples, custom column and conditional column",
+        "Column Quality, Column Distribution, and Column Profile",
+        "Index column and duplicate column",
+        "Format, extract and analyze"
+      ],
+      "explanation_en": "The Power Query VIEW tab includes data profiling tools: Column Quality (shows % valid, errors, and blanks), Column Distribution (shows distribution of values), and Column Profile (detailed statistics)."
     },
     {
       "pergunta": "Você tem um site SharePoint Online com várias bibliotecas de documentos. Uma delas contém relatórios de fabricação salvos como arquivos Excel com a mesma estrutura. Você precisa carregar apenas esses relatórios em uma tabela no Power BI Desktop. O que você deve fazer?",
@@ -854,14 +854,7 @@ const questionBank = {
       ],
       "correta": 2,
       "explicacao": "Para carregar apenas arquivos de uma biblioteca específica: use 'Pasta do SharePoint Online' (não Lista), selecione 'Combinar e Transformar' (não Carregar direto) para poder filtrar pelo caminho da pasta desejada antes de carregar.",
-      "question_en": "You have a SharePoint Online site with multiple document libraries. One of them contains manufacturing reports saved as Excel files with the same structure. You only need to load these reports into a table in Power BI Desktop. What should you do?",
-      "options_en": [
-        "Get data from a SharePoint Online Folder, enter the site URL, and select Combine and Upload",
-        "Get data from a SharePoint Online List and enter the site URL. Select Combine and Transform and filter by library path",
-        "Get data from a SharePoint Online Folder, enter the site URL, select Combine and Transform, and filter by the manufacturing report library path",
-        "Get data from a SharePoint Online List, enter the URL, and select Combine and Load"
-      ],
-      "explanation_en": "To only upload files from a specific library: use 'SharePoint Online Folder' (not List), select 'Combine and Transform' (not Direct Upload) so you can filter by the desired folder path before uploading.",
+      "answer": 2,
       "question_pt": "Você tem um site SharePoint Online com várias bibliotecas de documentos. Uma delas contém relatórios de fabricação salvos como arquivos Excel com a mesma estrutura. Você precisa carregar apenas esses relatórios em uma tabela no Power BI Desktop. O que você deve fazer?",
       "options_pt": [
         "Obter dados de uma Pasta do SharePoint Online, inserir a URL do site e selecionar Combinar e Carregar",
@@ -870,7 +863,14 @@ const questionBank = {
         "Obter dados de uma Lista do SharePoint Online, inserir a URL e selecionar Combinar e Carregar"
       ],
       "explanation_pt": "Para carregar apenas arquivos de uma biblioteca específica: use 'Pasta do SharePoint Online' (não Lista), selecione 'Combinar e Transformar' (não Carregar direto) para poder filtrar pelo caminho da pasta desejada antes de carregar.",
-      "answer": 2
+      "question_en": "You have a SharePoint Online site with multiple document libraries. One of them contains manufacturing reports saved as Excel files with the same structure. You only need to load these reports into a table in Power BI Desktop. What should you do?",
+      "options_en": [
+        "Get data from a SharePoint Online Folder, enter the site URL, and select Combine and Upload",
+        "Get data from a SharePoint Online List and enter the site URL. Select Combine and Transform and filter by library path",
+        "Get data from a SharePoint Online Folder, enter the site URL, select Combine and Transform, and filter by the manufacturing report library path",
+        "Get data from a SharePoint Online List, enter the URL, and select Combine and Load"
+      ],
+      "explanation_en": "To only upload files from a specific library: use 'SharePoint Online Folder' (not List), select 'Combine and Transform' (not Direct Upload) so you can filter by the desired folder path before uploading."
     },
     {
       "pergunta": "Você tem um arquivo CSV com uma coluna de data no formato '2018-12-31 at 08:59'. Você precisa analisar as reclamações por data e usar uma hierarquia de data integrada. O que você deve fazer?",
@@ -882,14 +882,7 @@ const questionBank = {
       ],
       "correta": 2,
       "explicacao": "Como o formato inclui texto 'at', você precisa criar uma coluna por exemplo para extrair apenas a data, e depois definir o tipo como Data para habilitar a hierarquia de data integrada do Power BI.",
-      "question_en": "You have a CSV file with a date column in the format '2018-12-31 at 08:59'. You need to analyze complaints by date and use a built-in date hierarchy. What should you do?",
-      "options_en": [
-        "Change the column data type to Date",
-        "Apply the Parse function of Date transformations to the column",
-        "Create a column for example that starts with 2018-12-31 and set the data type of the new column to Date",
-        "Apply a transformation to extract the first 11 characters of the column"
-      ],
-      "explanation_en": "Since the format includes 'at' text, you need to create a column for example to extract just the date, and then set the type to Date to enable Power BI's built-in date hierarchy.",
+      "answer": 2,
       "question_pt": "Você tem um arquivo CSV com uma coluna de data no formato '2018-12-31 at 08:59'. Você precisa analisar as reclamações por data e usar uma hierarquia de data integrada. O que você deve fazer?",
       "options_pt": [
         "Alterar o tipo de dados da coluna para Data",
@@ -898,7 +891,14 @@ const questionBank = {
         "Aplicar uma transformação para extrair os primeiros 11 caracteres da coluna"
       ],
       "explanation_pt": "Como o formato inclui texto 'at', você precisa criar uma coluna por exemplo para extrair apenas a data, e depois definir o tipo como Data para habilitar a hierarquia de data integrada do Power BI.",
-      "answer": 2
+      "question_en": "You have a CSV file with a date column in the format '2018-12-31 at 08:59'. You need to analyze complaints by date and use a built-in date hierarchy. What should you do?",
+      "options_en": [
+        "Change the column data type to Date",
+        "Apply the Parse function of Date transformations to the column",
+        "Create a column for example that starts with 2018-12-31 and set the data type of the new column to Date",
+        "Apply a transformation to extract the first 11 characters of the column"
+      ],
+      "explanation_en": "Since the format includes 'at' text, you need to create a column for example to extract just the date, and then set the type to Date to enable Power BI's built-in date hierarchy."
     },
     {
       "pergunta": "Você tem uma lista de clientes em potencial com 1.500 linhas. Você precisa garantir que a lista contém registros para cada Estado/Região. Quais duas ações você deve realizar no Editor do Power Query?",
@@ -910,14 +910,7 @@ const questionBank = {
       ],
       "correta": 1,
       "explicacao": "Como o dataset tem 1.500 linhas, você precisa primeiro habilitar o perfil de coluna para todo o dataset (padrão é apenas as primeiras 1.000 linhas) e depois usar Perfil de coluna para ver os valores distintos de Estado/Região.",
-      "question_en": "You have a 1,500-line prospect list. You need to ensure that the list contains records for each State/Region. Which two actions should you perform in the Power Query Editor?",
-      "options_en": [
-        "Open the Advanced Editor and select Column Quality",
-        "Enable column profile based on complete dataset and select Column profile",
-        "Select Column Distribution and Column Quality",
-        "Filter by State/Region and export to Excel"
-      ],
-      "explanation_en": "Since the dataset has 1500 rows, you need to first enable column profiling for the entire dataset (default is only the first 1000 rows) and then use Column Profile to see the distinct State/Region values.",
+      "answer": 1,
       "question_pt": "Você tem uma lista de clientes em potencial com 1.500 linhas. Você precisa garantir que a lista contém registros para cada Estado/Região. Quais duas ações você deve realizar no Editor do Power Query?",
       "options_pt": [
         "Abrir o Editor Avançado e selecionar Qualidade da coluna",
@@ -926,7 +919,14 @@ const questionBank = {
         "Filtrar por Estado/Região e exportar para Excel"
       ],
       "explanation_pt": "Como o dataset tem 1.500 linhas, você precisa primeiro habilitar o perfil de coluna para todo o dataset (padrão é apenas as primeiras 1.000 linhas) e depois usar Perfil de coluna para ver os valores distintos de Estado/Região.",
-      "answer": 1
+      "question_en": "You have a 1,500-line prospect list. You need to ensure that the list contains records for each State/Region. Which two actions should you perform in the Power Query Editor?",
+      "options_en": [
+        "Open the Advanced Editor and select Column Quality",
+        "Enable column profile based on complete dataset and select Column profile",
+        "Select Column Distribution and Column Quality",
+        "Filter by State/Region and export to Excel"
+      ],
+      "explanation_en": "Since the dataset has 1500 rows, you need to first enable column profiling for the entire dataset (default is only the first 1000 rows) and then use Column Profile to see the distinct State/Region values."
     },
     {
       "pergunta": "Qual funcionalidade do Power Query permite visualizar o código M gerado por cada etapa de transformação?",
@@ -938,14 +938,7 @@ const questionBank = {
       ],
       "correta": 0,
       "explicacao": "O Editor Avançado permite visualizar e editar o código M completo gerado por cada etapa de transformação aplicada no Power Query.",
-      "question_en": "Which Power Query functionality allows you to view the M code generated by each transformation step?",
-      "options_en": [
-        "Advanced Editor",
-        "Data profile",
-        "Query panel",
-        "Query Settings"
-      ],
-      "explanation_en": "The Advanced Editor allows you to view and edit the complete M code generated by each transformation step applied in Power Query.",
+      "answer": 0,
       "question_pt": "Qual funcionalidade do Power Query permite visualizar o código M gerado por cada etapa de transformação?",
       "options_pt": [
         "Editor Avançado",
@@ -954,7 +947,14 @@ const questionBank = {
         "Configurações de consulta"
       ],
       "explanation_pt": "O Editor Avançado permite visualizar e editar o código M completo gerado por cada etapa de transformação aplicada no Power Query.",
-      "answer": 0
+      "question_en": "Which Power Query functionality allows you to view the M code generated by each transformation step?",
+      "options_en": [
+        "Advanced Editor",
+        "Data profile",
+        "Query panel",
+        "Query Settings"
+      ],
+      "explanation_en": "The Advanced Editor allows you to view and edit the complete M code generated by each transformation step applied in Power Query."
     },
     {
       "pergunta": "Qual é o risco de ter valores nulos em uma coluna numérica no Power BI?",
@@ -966,14 +966,7 @@ const questionBank = {
       ],
       "correta": 2,
       "explicacao": "Valores nulos em colunas numéricas afetam principalmente as expressões DAX de AVERAGE (média), pois o Power BI pode excluir os nulos do denominador, resultando em médias incorretas se você não tratar os valores nulos adequadamente.",
-      "question_en": "What is the risk of having null values ​​in a numeric column in Power BI?",
-      "options_en": [
-        "DAX expressions that calculate MAX on the data will be incorrect",
-        "DAX expressions that calculate SUM on data will be incorrect",
-        "DAX expressions that calculate AVERAGE on data will be incorrect",
-        "Data cannot be imported"
-      ],
-      "explanation_en": "Null values ​​in numeric columns primarily affect AVERAGE (average) DAX expressions, as Power BI may exclude nulls from the denominator, resulting in incorrect averages if you don't handle nulls appropriately.",
+      "answer": 2,
       "question_pt": "Qual é o risco de ter valores nulos em uma coluna numérica no Power BI?",
       "options_pt": [
         "Expressões DAX que calculam MAX nos dados serão incorretas",
@@ -982,7 +975,14 @@ const questionBank = {
         "Os dados não poderão ser importados"
       ],
       "explanation_pt": "Valores nulos em colunas numéricas afetam principalmente as expressões DAX de AVERAGE (média), pois o Power BI pode excluir os nulos do denominador, resultando em médias incorretas se você não tratar os valores nulos adequadamente.",
-      "answer": 2
+      "question_en": "What is the risk of having null values ​​in a numeric column in Power BI?",
+      "options_en": [
+        "DAX expressions that calculate MAX on the data will be incorrect",
+        "DAX expressions that calculate SUM on data will be incorrect",
+        "DAX expressions that calculate AVERAGE on data will be incorrect",
+        "Data cannot be imported"
+      ],
+      "explanation_en": "Null values ​​in numeric columns primarily affect AVERAGE (average) DAX expressions, as Power BI may exclude nulls from the denominator, resulting in incorrect averages if you don't handle nulls appropriately."
     },
     {
       "pergunta": "Você planeja preencher uma tabela em um conjunto de dados do Power BI com dados de uma lista do SharePoint Online. Qual modo de armazenamento será usado?",
@@ -994,14 +994,7 @@ const questionBank = {
       ],
       "correta": 3,
       "explicacao": "Quando dados são conectados de fontes como SharePoint Online, o modo padrão é Importado, onde os dados são copiados para o cache do modelo do Power BI.",
-      "question_en": "You plan to populate a table in a Power BI dataset with data from a SharePoint Online list. Which storage mode will be used?",
-      "options_en": [
-        "DirectQuery",
-        "Dynamic connection (Live connection)",
-        "Composite",
-        "Imported"
-      ],
-      "explanation_en": "When data is connected from sources like SharePoint Online, the default mode is Imported, where the data is copied to the Power BI model cache.",
+      "answer": 3,
       "question_pt": "Você planeja preencher uma tabela em um conjunto de dados do Power BI com dados de uma lista do SharePoint Online. Qual modo de armazenamento será usado?",
       "options_pt": [
         "DirectQuery",
@@ -1010,7 +1003,14 @@ const questionBank = {
         "Importado (Import)"
       ],
       "explanation_pt": "Quando dados são conectados de fontes como SharePoint Online, o modo padrão é Importado, onde os dados são copiados para o cache do modelo do Power BI.",
-      "answer": 3
+      "question_en": "You plan to populate a table in a Power BI dataset with data from a SharePoint Online list. Which storage mode will be used?",
+      "options_en": [
+        "DirectQuery",
+        "Dynamic connection (Live connection)",
+        "Composite",
+        "Imported"
+      ],
+      "explanation_en": "When data is connected from sources like SharePoint Online, the default mode is Imported, where the data is copied to the Power BI model cache."
     },
     {
       "pergunta": "No Power BI Desktop, você está atualizando um relatório que se conecta a um banco de dados SQL Server usando autenticação de banco de dados. As credenciais anteriores expiraram. Quais dois procedimentos você deve realizar para atualizar as credenciais?",
@@ -1022,14 +1022,7 @@ const questionBank = {
       ],
       "correta": 0,
       "explicacao": "Para atualizar credenciais expiradas: 1) Abra Configurações de Fonte de Dados e localize a fonte, 2) Selecione Editar Permissões e insira as novas credenciais.",
-      "question_en": "In Power BI Desktop, you are updating a report that connects to a SQL Server database using database authentication. Previous credentials have expired. Which two procedures must you perform to update credentials?",
-      "options_en": [
-        "Open the Data Source Settings dialog box and locate the data source, then select Edit Permissions and enter new credentials",
-        "Open the Get Data dialog box and make a new connection to the database",
-        "Open the Options dialog and allow data visualizations to download in the background",
-        "Delete the report and create a new one with the correct credentials"
-      ],
-      "explanation_en": "To update expired credentials: 1) Open Data Source Settings and locate the source, 2) Select Edit Permissions and enter the new credentials.",
+      "answer": 0,
       "question_pt": "No Power BI Desktop, você está atualizando um relatório que se conecta a um banco de dados SQL Server usando autenticação de banco de dados. As credenciais anteriores expiraram. Quais dois procedimentos você deve realizar para atualizar as credenciais?",
       "options_pt": [
         "Abrir a caixa de diálogo Configurações de Fonte de Dados e localizar a fonte de dados, depois selecionar Editar Permissões e inserir novas credenciais",
@@ -1038,7 +1031,14 @@ const questionBank = {
         "Excluir o relatório e criar um novo com as credenciais corretas"
       ],
       "explanation_pt": "Para atualizar credenciais expiradas: 1) Abra Configurações de Fonte de Dados e localize a fonte, 2) Selecione Editar Permissões e insira as novas credenciais.",
-      "answer": 0
+      "question_en": "In Power BI Desktop, you are updating a report that connects to a SQL Server database using database authentication. Previous credentials have expired. Which two procedures must you perform to update credentials?",
+      "options_en": [
+        "Open the Data Source Settings dialog box and locate the data source, then select Edit Permissions and enter new credentials",
+        "Open the Get Data dialog box and make a new connection to the database",
+        "Open the Options dialog and allow data visualizations to download in the background",
+        "Delete the report and create a new one with the correct credentials"
+      ],
+      "explanation_en": "To update expired credentials: 1) Open Data Source Settings and locate the source, 2) Select Edit Permissions and enter the new credentials."
     },
     {
       "pergunta": "O que é perfil de dados (data profiling) no Power BI?",
@@ -1050,14 +1050,7 @@ const questionBank = {
       ],
       "correta": 1,
       "explicacao": "O perfil de dados (data profiling) é o processo de estudar as nuances dos dados – suas características, qualidade, distribuição e anomalias – para entender melhor o conjunto de dados.",
-      "question_en": "What is data profiling in Power BI?",
-      "options_en": [
-        "Aggregate columns containing numeric data",
-        "Study the nuances of data to understand its structure and quality",
-        "Data modeling",
-        "Creating calculated metrics"
-      ],
-      "explanation_en": "Data profiling is the process of studying the nuances of data – its characteristics, quality, distribution and anomalies – to better understand the data set.",
+      "answer": 1,
       "question_pt": "O que é perfil de dados (data profiling) no Power BI?",
       "options_pt": [
         "Agregar colunas contendo dados numéricos",
@@ -1066,7 +1059,14 @@ const questionBank = {
         "Criação de métricas calculadas"
       ],
       "explanation_pt": "O perfil de dados (data profiling) é o processo de estudar as nuances dos dados – suas características, qualidade, distribuição e anomalias – para entender melhor o conjunto de dados.",
-      "answer": 1
+      "question_en": "What is data profiling in Power BI?",
+      "options_en": [
+        "Aggregate columns containing numeric data",
+        "Study the nuances of data to understand its structure and quality",
+        "Data modeling",
+        "Creating calculated metrics"
+      ],
+      "explanation_en": "Data profiling is the process of studying the nuances of data – its characteristics, quality, distribution and anomalies – to better understand the data set."
     },
     {
       "pergunta": "Quantas linhas o Power Query verifica para detectar o tipo de dados nas colunas?",
@@ -1078,14 +1078,7 @@ const questionBank = {
       ],
       "correta": 1,
       "explicacao": "O Power Query verifica as primeiras 1.000 linhas para detectar automaticamente o tipo de dados nas colunas.",
-      "question_en": "How many rows does Power Query scan to detect the type of data in the columns?",
-      "options_en": [
-        "10,000",
-        "1,000",
-        "100",
-        "5,000"
-      ],
-      "explanation_en": "Power Query scans the first 1,000 rows to automatically detect the data type in the columns.",
+      "answer": 1,
       "question_pt": "Quantas linhas o Power Query verifica para detectar o tipo de dados nas colunas?",
       "options_pt": [
         "10.000",
@@ -1094,7 +1087,14 @@ const questionBank = {
         "5.000"
       ],
       "explanation_pt": "O Power Query verifica as primeiras 1.000 linhas para detectar automaticamente o tipo de dados nas colunas.",
-      "answer": 1
+      "question_en": "How many rows does Power Query scan to detect the type of data in the columns?",
+      "options_en": [
+        "10,000",
+        "1,000",
+        "100",
+        "5,000"
+      ],
+      "explanation_en": "Power Query scans the first 1,000 rows to automatically detect the data type in the columns."
     },
     {
       "pergunta": "O processo de transformar dados simples em uma tabela que contém um valor de agregação para cada valor único em uma coluna é chamado de quê?",
@@ -1106,14 +1106,7 @@ const questionBank = {
       ],
       "correta": 1,
       "explicacao": "Dinamizar (pivoting) uma coluna converte dados simples em uma tabela de referência cruzada contendo um valor de agregação para cada valor único em uma coluna.",
-      "question_en": "The process of transforming simple data into a table that contains an aggregate value for each unique value in a column is called what?",
-      "options_en": [
-        "Group by columns",
-        "Pivot (pivot a column)",
-        "Manage aggregations",
-        "Merge queries"
-      ],
-      "explanation_en": "Pivoting a column converts simple data into a crosstab containing an aggregate value for each unique value in a column.",
+      "answer": 1,
       "question_pt": "O processo de transformar dados simples em uma tabela que contém um valor de agregação para cada valor único em uma coluna é chamado de quê?",
       "options_pt": [
         "Agrupar por colunas",
@@ -1122,7 +1115,14 @@ const questionBank = {
         "Mesclar consultas"
       ],
       "explanation_pt": "Dinamizar (pivoting) uma coluna converte dados simples em uma tabela de referência cruzada contendo um valor de agregação para cada valor único em uma coluna.",
-      "answer": 1
+      "question_en": "The process of transforming simple data into a table that contains an aggregate value for each unique value in a column is called what?",
+      "options_en": [
+        "Group by columns",
+        "Pivot (pivot a column)",
+        "Manage aggregations",
+        "Merge queries"
+      ],
+      "explanation_en": "Pivoting a column converts simple data into a crosstab containing an aggregate value for each unique value in a column."
     },
     {
       "pergunta": "Qual é a ferramenta principal de preparação de dados no Power BI Desktop?",
@@ -1134,14 +1134,7 @@ const questionBank = {
       ],
       "correta": 1,
       "explicacao": "O Editor do Power Query (também chamado de Editor de Consultas) é a ferramenta principal de preparação de dados no Power BI Desktop.",
-      "question_en": "What is the primary data preparation tool in Power BI Desktop?",
-      "options_en": [
-        "Report editor",
-        "Power Query Editor",
-        "Data Editor",
-        "Template Designer"
-      ],
-      "explanation_en": "The Power Query Editor (also called Query Editor) is the primary data preparation tool in Power BI Desktop.",
+      "answer": 1,
       "question_pt": "Qual é a ferramenta principal de preparação de dados no Power BI Desktop?",
       "options_pt": [
         "Editor de relatórios",
@@ -1150,7 +1143,14 @@ const questionBank = {
         "Designer de modelo"
       ],
       "explanation_pt": "O Editor do Power Query (também chamado de Editor de Consultas) é a ferramenta principal de preparação de dados no Power BI Desktop.",
-      "answer": 1
+      "question_en": "What is the primary data preparation tool in Power BI Desktop?",
+      "options_en": [
+        "Report editor",
+        "Power Query Editor",
+        "Data Editor",
+        "Template Designer"
+      ],
+      "explanation_en": "The Power Query Editor (also called Query Editor) is the primary data preparation tool in Power BI Desktop."
     },
     {
       "pergunta": "Qual fonte de dados no Power BI organiza as informações em sites, bibliotecas de documentos, pastas e arquivos?",
@@ -1162,14 +1162,7 @@ const questionBank = {
       ],
       "correta": 0,
       "explicacao": "O SharePoint Online organiza informações em sites, bibliotecas de documentos, pastas e arquivos dentro de pastas.",
-      "question_en": "Which data source in Power BI organizes information into sites, document libraries, folders, and files?",
-      "options_en": [
-        "SharePoint Online",
-        "Microsoft Dataverse",
-        "Power BI Libraries",
-        "OneDrive for Business"
-      ],
-      "explanation_en": "SharePoint Online organizes information into sites, document libraries, folders, and files within folders.",
+      "answer": 0,
       "question_pt": "Qual fonte de dados no Power BI organiza as informações em sites, bibliotecas de documentos, pastas e arquivos?",
       "options_pt": [
         "SharePoint Online",
@@ -1178,7 +1171,14 @@ const questionBank = {
         "OneDrive for Business"
       ],
       "explanation_pt": "O SharePoint Online organiza informações em sites, bibliotecas de documentos, pastas e arquivos dentro de pastas.",
-      "answer": 0
+      "question_en": "Which data source in Power BI organizes information into sites, document libraries, folders, and files?",
+      "options_en": [
+        "SharePoint Online",
+        "Microsoft Dataverse",
+        "Power BI Libraries",
+        "OneDrive for Business"
+      ],
+      "explanation_en": "SharePoint Online organizes information into sites, document libraries, folders, and files within folders."
     },
     {
       "pergunta": "Você tem um serviço publicado em um website que retorna dados em formato OData com coleções de Categorias e Clientes. Qual tipo de fonte você deve usar para criar uma consulta que recupere esses dados?",
@@ -1190,14 +1190,7 @@ const questionBank = {
       ],
       "correta": 2,
       "explicacao": "O OData suporta dois formatos para representar recursos: o formato Atom baseado em XML e o formato JSON. Quando um serviço retorna dados como coleções OData, use o conector 'OData Feed'.",
-      "question_en": "You have a service published on a website that returns data in OData format with collections of Categories and Customers. What type of source should you use to create a query that retrieves this data?",
-      "options_en": [
-        "JSON",
-        "Text/CSV",
-        "OData Feed",
-        "XML"
-      ],
-      "explanation_en": "OData supports two formats for representing resources: the XML-based Atom format and the JSON format. When a service returns data as OData collections, use the 'OData Feed' connector.",
+      "answer": 2,
       "question_pt": "Você tem um serviço publicado em um website que retorna dados em formato OData com coleções de Categorias e Clientes. Qual tipo de fonte você deve usar para criar uma consulta que recupere esses dados?",
       "options_pt": [
         "JSON",
@@ -1206,7 +1199,14 @@ const questionBank = {
         "XML"
       ],
       "explanation_pt": "O OData suporta dois formatos para representar recursos: o formato Atom baseado em XML e o formato JSON. Quando um serviço retorna dados como coleções OData, use o conector 'OData Feed'.",
-      "answer": 2
+      "question_en": "You have a service published on a website that returns data in OData format with collections of Categories and Customers. What type of source should you use to create a query that retrieves this data?",
+      "options_en": [
+        "JSON",
+        "Text/CSV",
+        "OData Feed",
+        "XML"
+      ],
+      "explanation_en": "OData supports two formats for representing resources: the XML-based Atom format and the JSON format. When a service returns data as OData collections, use the 'OData Feed' connector."
     },
     {
       "pergunta": "Você tem dois servidores SQL Server chamados SQLProd e SQLDev. O SQLDev contém as mesmas tabelas que o SQLProd, mas apenas um subconjunto dos dados. Você cria um modelo com 120 tabelas do SQLDev e precisa conectar ao SQLProd com esforço administrativo mínimo. O que você deve fazer no Editor de Consultas antes de publicar?",
@@ -1218,14 +1218,7 @@ const questionBank = {
       ],
       "correta": 2,
       "explicacao": "Configurar as Configurações de Fonte de Dados permite alterar a fonte de dados de todas as consultas de uma vez, minimizando o esforço administrativo em comparação com editar cada consulta individualmente.",
-      "question_en": "You have two SQL Server servers called SQLProd and SQLDev. SQLDev contains the same tables as SQLProd, but only a subset of the data. You create a model with 120 SQLDev tables and need to connect to SQLProd with minimal administrative effort. What should you do in the Query Editor before publishing?",
-      "options_en": [
-        "Create a new connection to SQLProd and import the tables",
-        "Delete existing queries and add new data sources",
-        "Configure Data Source settings",
-        "Edit the source of each table query individually"
-      ],
-      "explanation_en": "Configuring Data Source Settings allows you to change the data source for all queries at once, minimizing administrative effort compared to editing each query individually.",
+      "answer": 2,
       "question_pt": "Você tem dois servidores SQL Server chamados SQLProd e SQLDev. O SQLDev contém as mesmas tabelas que o SQLProd, mas apenas um subconjunto dos dados. Você cria um modelo com 120 tabelas do SQLDev e precisa conectar ao SQLProd com esforço administrativo mínimo. O que você deve fazer no Editor de Consultas antes de publicar?",
       "options_pt": [
         "Criar uma nova conexão ao SQLProd e importar as tabelas",
@@ -1234,7 +1227,14 @@ const questionBank = {
         "Editar a origem de cada consulta de tabela individualmente"
       ],
       "explanation_pt": "Configurar as Configurações de Fonte de Dados permite alterar a fonte de dados de todas as consultas de uma vez, minimizando o esforço administrativo em comparação com editar cada consulta individualmente.",
-      "answer": 2
+      "question_en": "You have two SQL Server servers called SQLProd and SQLDev. SQLDev contains the same tables as SQLProd, but only a subset of the data. You create a model with 120 SQLDev tables and need to connect to SQLProd with minimal administrative effort. What should you do in the Query Editor before publishing?",
+      "options_en": [
+        "Create a new connection to SQLProd and import the tables",
+        "Delete existing queries and add new data sources",
+        "Configure Data Source settings",
+        "Edit the source of each table query individually"
+      ],
+      "explanation_en": "Configuring Data Source Settings allows you to change the data source for all queries at once, minimizing administrative effort compared to editing each query individually."
     },
     {
       "pergunta": "Você tem uma planilha do Microsoft Excel que contém uma tabela chamada Vendas. Você precisa adicionar a tabela Vendas a um dashboard do Power BI como um bloco. Como você deve configurar o bloco?",
@@ -1246,14 +1246,7 @@ const questionBank = {
       ],
       "correta": 2,
       "explicacao": "Para adicionar uma tabela do Excel como bloco em um dashboard do Power BI, você deve usar a guia Power BI no Excel para fixar a tabela diretamente.",
-      "question_en": "You have a Microsoft Excel spreadsheet that contains a table called Sales. You need to add the Sales table to a Power BI dashboard as a tile. How should you configure the block?",
-      "options_en": [
-        "In the Power BI service, import the Excel workbook data",
-        "In Excel, publish the workbook to the Power BI service",
-        "In Excel's Power BI tab, pin the table",
-        "In the Power BI service, upload the Excel workbook"
-      ],
-      "explanation_en": "To add an Excel table as a tile in a Power BI dashboard, you must use the Power BI tab in Excel to pin the table directly.",
+      "answer": 2,
       "question_pt": "Você tem uma planilha do Microsoft Excel que contém uma tabela chamada Vendas. Você precisa adicionar a tabela Vendas a um dashboard do Power BI como um bloco. Como você deve configurar o bloco?",
       "options_pt": [
         "No serviço Power BI, importe os dados da pasta de trabalho do Excel",
@@ -1262,7 +1255,14 @@ const questionBank = {
         "No serviço Power BI, faça o upload da pasta de trabalho do Excel"
       ],
       "explanation_pt": "Para adicionar uma tabela do Excel como bloco em um dashboard do Power BI, você deve usar a guia Power BI no Excel para fixar a tabela diretamente.",
-      "answer": 2
+      "question_en": "You have a Microsoft Excel spreadsheet that contains a table called Sales. You need to add the Sales table to a Power BI dashboard as a tile. How should you configure the block?",
+      "options_en": [
+        "In the Power BI service, import the Excel workbook data",
+        "In Excel, publish the workbook to the Power BI service",
+        "In Excel's Power BI tab, pin the table",
+        "In the Power BI service, upload the Excel workbook"
+      ],
+      "explanation_en": "To add an Excel table as a tile in a Power BI dashboard, you must use the Power BI tab in Excel to pin the table directly."
     },
     {
       "pergunta": "Qual fonte de dados permite conectar seus dados a outros aplicativos de negócios como Power Apps e Power Automate?",
@@ -1274,14 +1274,7 @@ const questionBank = {
       ],
       "correta": 0,
       "explicacao": "O Dataverse é uma opção de armazenamento em nuvem para dados da organização que pode ser conectado a aplicativos de negócios como Power Apps, Power Automate e Power Virtual Agents.",
-      "question_en": "Which data source allows you to connect your data to other business applications like Power Apps and Power Automate?",
-      "options_en": [
-        "Microsoft Dataverse",
-        "Microsoft Dataplatform",
-        "Microsoft Dataflows",
-        "Microsoft Excel"
-      ],
-      "explanation_en": "Dataverse is a cloud storage option for your organization's data that can be connected to business applications like Power Apps, Power Automate, and Power Virtual Agents.",
+      "answer": 0,
       "question_pt": "Qual fonte de dados permite conectar seus dados a outros aplicativos de negócios como Power Apps e Power Automate?",
       "options_pt": [
         "Microsoft Dataverse",
@@ -1290,7 +1283,14 @@ const questionBank = {
         "Microsoft Excel"
       ],
       "explanation_pt": "O Dataverse é uma opção de armazenamento em nuvem para dados da organização que pode ser conectado a aplicativos de negócios como Power Apps, Power Automate e Power Virtual Agents.",
-      "answer": 0
+      "question_en": "Which data source allows you to connect your data to other business applications like Power Apps and Power Automate?",
+      "options_en": [
+        "Microsoft Dataverse",
+        "Microsoft Dataplatform",
+        "Microsoft Dataflows",
+        "Microsoft Excel"
+      ],
+      "explanation_en": "Dataverse is a cloud storage option for your organization's data that can be connected to business applications like Power Apps, Power Automate, and Power Virtual Agents."
     },
     {
       "pergunta": "Como os parâmetros podem ser usados ao conectar-se a dados no Power Query?",
@@ -1302,14 +1302,7 @@ const questionBank = {
       ],
       "correta": 1,
       "explicacao": "Parâmetros são uma forma útil de alterar valores de fonte de dados dinamicamente no Power Query. Esses parâmetros são diferentes dos parâmetros 'E se' criados no front-end do Power BI Desktop.",
-      "question_en": "How can parameters be used when connecting to data in Power Query?",
-      "options_en": [
-        "To connect to a JSON file",
-        "To change data source values ​​dynamically",
-        "To Create 'What If' Scenarios",
-        "To format and transform data in the Query Editor"
-      ],
-      "explanation_en": "Parameters are a useful way to dynamically change data source values ​​in Power Query. These parameters are different from the 'What if' parameters created in the Power BI Desktop front end.",
+      "answer": 1,
       "question_pt": "Como os parâmetros podem ser usados ao conectar-se a dados no Power Query?",
       "options_pt": [
         "Para conectar a um arquivo JSON",
@@ -1318,7 +1311,14 @@ const questionBank = {
         "Para formatar e transformar dados no Editor de Consultas"
       ],
       "explanation_pt": "Parâmetros são uma forma útil de alterar valores de fonte de dados dinamicamente no Power Query. Esses parâmetros são diferentes dos parâmetros 'E se' criados no front-end do Power BI Desktop.",
-      "answer": 1
+      "question_en": "How can parameters be used when connecting to data in Power Query?",
+      "options_en": [
+        "To connect to a JSON file",
+        "To change data source values ​​dynamically",
+        "To Create 'What If' Scenarios",
+        "To format and transform data in the Query Editor"
+      ],
+      "explanation_en": "Parameters are a useful way to dynamically change data source values ​​in Power Query. These parameters are different from the 'What if' parameters created in the Power BI Desktop front end."
     },
     {
       "question": "Você se conecta a uma tabela SQL com 100 milhões de linhas que cresce diariamente. A atualização completa demora 3 horas. Qual recurso do Power BI permite importar apenas registros novos ou modificados?",
@@ -1330,22 +1330,22 @@ const questionBank = {
       ],
       "answer": 1,
       "explanation": "A Atualização Incremental divide a tabela em partições e recarrega apenas os dados novos ou alterados dentro de um intervalo de datas definido, reduzindo drasticamente o tempo de atualização.",
-      "question_pt": "Você se conecta a uma tabela SQL com 100 milhões de linhas que crescem diariamente. A atualização completa demora 3 horas. Qual recurso do Power BI permite importar apenas registros novos ou modificados?",
+      "question_pt": "Você se conecta a uma tabela SQL com 100 milhões de linhas que cresce diariamente. A atualização completa demora 3 horas. Qual recurso do Power BI permite importar apenas registros novos ou modificados?",
       "options_pt": [
-        "Modo DirectQuery",
-        "Atualização Incremental (Atualização Incremental)",
-        "Atualização Manual agendada",
-        "Tabela de Partições DAX"
-      ],
-      "explanation_pt": "A Atualização Incremental divide a tabela em partições e recarrega apenas os dados novos ou alterados dentro de um intervalo de dados definido, reduzindo significativamente o tempo de atualização.",
-      "question_en": "Você se conecta a uma tabela SQL com 100 milhões de linhas que cresce diariamente. A atualização completa demora 3 horas. Qual recurso do Power BI permite importar apenas registros novos ou modificados?",
-      "options_en": [
         "Modo DirectQuery",
         "Atualização Incremental (Incremental Refresh)",
         "Atualização Manual agendada",
         "Tabela de Partições DAX"
       ],
-      "explanation_en": "A Atualização Incremental divide a tabela em partições e recarrega apenas os dados novos ou alterados dentro de um intervalo de datas definido, reduzindo drasticamente o tempo de atualização."
+      "explanation_pt": "A Atualização Incremental divide a tabela em partições e recarrega apenas os dados novos ou alterados dentro de um intervalo de datas definido, reduzindo drasticamente o tempo de atualização.",
+      "question_en": "You connect to a SQL table with 100 million rows that grows daily. The complete update takes 3 hours. Which Power BI feature allows you to import only new or modified records?",
+      "options_en": [
+        "DirectQuery mode",
+        "Incremental Refresh",
+        "Scheduled Manual Update",
+        "DAX Partition Table"
+      ],
+      "explanation_en": "Incremental Refresh divides the table into partitions and reloads only new or changed data within a defined date range, drastically reducing refresh time."
     },
     {
       "question": "Você importa uma tabela com 60 colunas, mas usa apenas 10 no relatório. Onde é a MELHOR prática remover as colunas desnecessárias?",
@@ -1359,20 +1359,20 @@ const questionBank = {
       "explanation": "Remover colunas no Power Query impede que elas cheguem ao modelo de dados, economizando memória e melhorando a performance. Ocultar colunas no relatório ainda as mantém no modelo.",
       "question_pt": "Você importa uma tabela com 60 colunas, mas usa apenas 10 no relatório. Onde é a MELHOR prática remover as colunas desnecessárias?",
       "options_pt": [
-        "Na visualização do Relatório, ocultando as colunas",
-        "No Power Query Editor, antes de carregar para o modelo",
-        "Em uma coluna calculada DAX",
-        "Nenhum serviço do Power BI após publicação"
-      ],
-      "explanation_pt": "Remover colunas no Power Query impede que elas cheguem ao modelo de dados, economizando memória e melhorando o desempenho. Ocultar colunas no relatório ainda as mantém no modelo.",
-      "question_en": "Você importa uma tabela com 60 colunas, mas usa apenas 10 no relatório. Onde é a MELHOR prática remover as colunas desnecessárias?",
-      "options_en": [
         "Na visualização de Relatório, ocultando as colunas",
         "No Power Query Editor, antes de carregar para o modelo",
         "Em uma coluna calculada DAX",
         "No Power BI Service após publicar"
       ],
-      "explanation_en": "Remover colunas no Power Query impede que elas cheguem ao modelo de dados, economizando memória e melhorando a performance. Ocultar colunas no relatório ainda as mantém no modelo."
+      "explanation_pt": "Remover colunas no Power Query impede que elas cheguem ao modelo de dados, economizando memória e melhorando a performance. Ocultar colunas no relatório ainda as mantém no modelo.",
+      "question_en": "You import a table with 60 columns, but only use 10 in the report. Where is the BEST practice to remove unnecessary columns?",
+      "options_en": [
+        "In Report view, hiding columns",
+        "In Power Query Editor, before uploading to the model",
+        "In a DAX calculated column",
+        "In Power BI Service after publishing"
+      ],
+      "explanation_en": "Removing columns in Power Query prevents them from reaching the data model, saving memory and improving performance. Hiding columns in the report still keeps them in the model."
     },
     {
       "question": "No Power Query Editor, qual guia contém as opções 'Perfil de Coluna', 'Distribuição de Coluna' e 'Qualidade de Coluna'?",
@@ -1387,19 +1387,19 @@ const questionBank = {
       "question_pt": "No Power Query Editor, qual guia contém as opções 'Perfil de Coluna', 'Distribuição de Coluna' e 'Qualidade de Coluna'?",
       "options_pt": [
         "Guia Página Inicial (Home)",
-        "Guia Transformar (Transformar)",
-        "Guia Exibição (Ver)",
-        "Guia Adicionar Coluna"
-      ],
-      "explanation_pt": "As ferramentas de Data Profiling (Perfil de Dados) estão na guia 'Exibição' (View) do Power Query Editor, na seção 'Visualização de Dados'.",
-      "question_en": "No Power Query Editor, qual guia contém as opções 'Perfil de Coluna', 'Distribuição de Coluna' e 'Qualidade de Coluna'?",
-      "options_en": [
-        "Guia Página Inicial (Home)",
         "Guia Transformar (Transform)",
         "Guia Exibição (View)",
         "Guia Adicionar Coluna (Add Column)"
       ],
-      "explanation_en": "As ferramentas de Data Profiling (Perfil de Dados) estão na guia 'Exibição' (View) do Power Query Editor, na seção 'Visualização de Dados'."
+      "explanation_pt": "As ferramentas de Data Profiling (Perfil de Dados) estão na guia 'Exibição' (View) do Power Query Editor, na seção 'Visualização de Dados'.",
+      "question_en": "In Power Query Editor, which tab contains the 'Column Profile', 'Column Distribution' and 'Column Quality' options?",
+      "options_en": [
+        "Home Tab",
+        "Transform Tab",
+        "View tab",
+        "Add Column Tab"
+      ],
+      "explanation_en": "The Data Profiling tools are in the 'View' tab of the Power Query Editor, in the 'Data Visualization' section."
     },
     {
       "question": "O que é Query Folding no Power Query?",
@@ -1413,20 +1413,20 @@ const questionBank = {
       "explanation": "Query Folding (ou query pushdown) ocorre quando o Power Query converte suas etapas de transformação em uma consulta nativa (ex.: SQL) executada na fonte, aproveitando o poder de processamento do servidor.",
       "question_pt": "O que é Query Folding no Power Query?",
       "options_pt": [
-        "Combinar múltiplas consultas em uma única consulta consolidada",
-        "Converter as etapas do Power Query em consultas nativas realizadas na fonte de dados",
-        "Comprima os dados durante o carregamento para economizar espaço",
-        "Criar uma função M reutilizável a partir de uma consulta existente"
-      ],
-      "explanation_pt": "Query Folding (ou query pushdown) ocorre quando o Power Query converte suas etapas de transformação em uma consulta nativa (ex.: SQL) realizada na fonte, aproveitando o poder de processamento do servidor.",
-      "question_en": "O que é Query Folding no Power Query?",
-      "options_en": [
         "Combinar múltiplas queries em uma única query consolidada",
         "Converter as etapas do Power Query em consultas nativas executadas na fonte de dados",
         "Comprimir os dados durante o carregamento para economizar espaço",
         "Criar uma função M reutilizável a partir de uma query existente"
       ],
-      "explanation_en": "Query Folding (ou query pushdown) ocorre quando o Power Query converte suas etapas de transformação em uma consulta nativa (ex.: SQL) executada na fonte, aproveitando o poder de processamento do servidor."
+      "explanation_pt": "Query Folding (ou query pushdown) ocorre quando o Power Query converte suas etapas de transformação em uma consulta nativa (ex.: SQL) executada na fonte, aproveitando o poder de processamento do servidor.",
+      "question_en": "What is Query Folding in Power Query?",
+      "options_en": [
+        "Combine multiple queries into a single consolidated query",
+        "Convert Power Query steps to native queries running against the data source",
+        "Compress data during loading to save space",
+        "Create a reusable M function from an existing query"
+      ],
+      "explanation_en": "Query Folding (or query pushdown) occurs when Power Query converts your transformation steps into a native query (e.g. SQL) executed at the source, taking advantage of the server's processing power."
     },
     {
       "question": "Uma coluna de valores numéricos está armazenada como Texto. Qual é a MELHOR abordagem para corrigir este problema?",
@@ -1438,22 +1438,22 @@ const questionBank = {
       ],
       "answer": 1,
       "explanation": "Alterar o tipo de dado na fonte (Power Query) é a melhor prática. Garante integridade dos dados e evita a necessidade de conversões repetidas em DAX.",
-      "question_pt": "Uma coluna de valores numéricos é armazenada como Texto. Qual é a MELHOR abordagem para resolver este problema?",
+      "question_pt": "Uma coluna de valores numéricos está armazenada como Texto. Qual é a MELHOR abordagem para corrigir este problema?",
       "options_pt": [
-        "Conversor usando uma coluna calculada DAX com VALUE()",
-        "Alterar o tipo de dado no Power Query Editor",
-        "Usar FORMAT() em cada medida que referenciar uma coluna",
-        "Deixar como Texto e conversor apenas nas visualizações"
-      ],
-      "explanation_pt": "Alterar o tipo de dado na fonte (Power Query) é a melhor prática. Garanta a integridade dos dados e evite a necessidade de complicações repetidas no DAX.",
-      "question_en": "Uma coluna de valores numéricos está armazenada como Texto. Qual é a MELHOR abordagem para corrigir este problema?",
-      "options_en": [
         "Converter usando uma coluna calculada DAX com VALUE()",
         "Alterar o tipo de dado no Power Query Editor",
         "Usar FORMAT() em cada medida que referenciar a coluna",
         "Deixar como Texto e converter apenas nas visualizações"
       ],
-      "explanation_en": "Alterar o tipo de dado na fonte (Power Query) é a melhor prática. Garante integridade dos dados e evita a necessidade de conversões repetidas em DAX."
+      "explanation_pt": "Alterar o tipo de dado na fonte (Power Query) é a melhor prática. Garante integridade dos dados e evita a necessidade de conversões repetidas em DAX.",
+      "question_en": "A column of numeric values ​​is stored as Text. What is the BEST approach to fix this problem?",
+      "options_en": [
+        "Convert using a DAX calculated column with VALUE()",
+        "Change data type in Power Query Editor",
+        "Use FORMAT() on each measure that references the column",
+        "Leave it as Text and convert only in views"
+      ],
+      "explanation_en": "Changing the data type in the source (Power Query) is the best practice. Ensures data integrity and avoids the need for repeated conversions to DAX."
     },
     {
       "question": "Você precisa: (1) Remover linhas onde CustomerID é nulo e (2) Substituir células vazias em Country por 'Desconhecido'. Quais duas etapas do Power Query atendem esses requisitos? (Selecione duas)",
@@ -1468,22 +1468,22 @@ const questionBank = {
         1
       ],
       "explanation": "'Filtrar Linhas' remove registros com base em condições (incluindo nulos). 'Substituir Valores' troca valores específicos, como strings vazias, por um valor padrão.",
-      "question_pt": "Você precisa: (1) Remover linhas onde CustomerID é nulo e (2) Substituir células vazias em País por 'Desconhecido'. Quais duas etapas do Power Query atendem a esses requisitos? (Seleção duas)",
+      "question_pt": "Você precisa: (1) Remover linhas onde CustomerID é nulo e (2) Substituir células vazias em Country por 'Desconhecido'. Quais duas etapas do Power Query atendem esses requisitos? (Selecione duas)",
       "options_pt": [
-        "Filtrar Linhas",
-        "Substituir Valores (Substituir Valores)",
-        "Remover Erros (Remover Erros)",
-        "Coluna Condicional (Coluna Condicional)"
-      ],
-      "explanation_pt": "'Filtrar Linhas' remove registros com base em condições (incluindo nulos). 'Substituir Valores' troca valores específicos, como strings vazias, por um valor padrão.",
-      "question_en": "Você precisa: (1) Remover linhas onde CustomerID é nulo e (2) Substituir células vazias em Country por 'Desconhecido'. Quais duas etapas do Power Query atendem esses requisitos? (Selecione duas)",
-      "options_en": [
         "Filtrar Linhas (Filter Rows)",
         "Substituir Valores (Replace Values)",
         "Remover Erros (Remove Errors)",
         "Coluna Condicional (Conditional Column)"
       ],
-      "explanation_en": "'Filtrar Linhas' remove registros com base em condições (incluindo nulos). 'Substituir Valores' troca valores específicos, como strings vazias, por um valor padrão."
+      "explanation_pt": "'Filtrar Linhas' remove registros com base em condições (incluindo nulos). 'Substituir Valores' troca valores específicos, como strings vazias, por um valor padrão.",
+      "question_en": "You need to: (1) Remove rows where CustomerID is null and (2) Replace empty cells in Country with 'Unknown'. Which two Power Query steps meet these requirements? (Select two)",
+      "options_en": [
+        "Filter Rows",
+        "Replace Values",
+        "Remove Errors",
+        "Conditional Column"
+      ],
+      "explanation_en": "'Filter Rows' removes records based on conditions (including nulls). 'Replace Values' exchanges specific values, such as empty strings, with a default value."
     },
     {
       "question": "Você tem as tabelas Vendas_2024 e Vendas_2025, com as mesmas colunas. Qual operação do Power Query combina essas tabelas verticalmente (empilhando as linhas)?",
@@ -1497,20 +1497,20 @@ const questionBank = {
       "explanation": "'Acrescentar' (Append) empilha tabelas com a mesma estrutura verticalmente. 'Mesclar' (Merge) combina tabelas horizontalmente com base em uma coluna-chave (equivalente ao JOIN do SQL).",
       "question_pt": "Você tem as tabelas Vendas_2024 e Vendas_2025, com as mesmas colunas. Qual operação do Power Query combina essas tabelas verticalmente (empilhando as linhas)?",
       "options_pt": [
-        "Mesclar Consultas (Mesclar Consultas)",
-        "Acrescentar Consultas (Anexar Consultas)",
-        "Junção Cruzada",
-        "Expandir Coluna (Expandir Coluna)"
-      ],
-      "explanation_pt": "'Acrescentar' (Anexar) empilha tabelas com a mesma estrutura verticalmente. 'Mesclar' (Merge) combina tabelas horizontalmente com base em uma coluna-chave (equivalente ao JOIN do SQL).",
-      "question_en": "Você tem as tabelas Vendas_2024 e Vendas_2025, com as mesmas colunas. Qual operação do Power Query combina essas tabelas verticalmente (empilhando as linhas)?",
-      "options_en": [
         "Mesclar Consultas (Merge Queries)",
         "Acrescentar Consultas (Append Queries)",
         "Junção Cruzada (Cross Join)",
         "Expandir Coluna (Expand Column)"
       ],
-      "explanation_en": "'Acrescentar' (Append) empilha tabelas com a mesma estrutura verticalmente. 'Mesclar' (Merge) combina tabelas horizontalmente com base em uma coluna-chave (equivalente ao JOIN do SQL)."
+      "explanation_pt": "'Acrescentar' (Append) empilha tabelas com a mesma estrutura verticalmente. 'Mesclar' (Merge) combina tabelas horizontalmente com base em uma coluna-chave (equivalente ao JOIN do SQL).",
+      "question_en": "You have the Sales_2024 and Sales_2025 tables, with the same columns. Which Power Query operation combines these tables vertically (stacking the rows)?",
+      "options_en": [
+        "Merge Queries",
+        "Add Queries (Append Queries)",
+        "Cross Join",
+        "Expand Column"
+      ],
+      "explanation_en": "'Append' stacks tables with the same structure vertically. 'Merge' combines tables horizontally based on a key column (equivalent to SQL JOIN)."
     },
     {
       "question": "Uma planilha tem colunas: Produto, Jan, Fev, Mar...Dez, onde cada mês é uma coluna com o valor de vendas. Para análises temporais, você precisa transformar para: Produto, Mês, Valor. Qual transformação usar?",
@@ -1524,20 +1524,20 @@ const questionBank = {
       "explanation": "Unpivot transforma colunas em linhas, convertendo uma tabela 'wide' (larga) em uma tabela 'tall' (alta), ideal para análises por período no Power BI.",
       "question_pt": "Uma planilha tem colunas: Produto, Jan, Fev, Mar...Dez, onde cada mês é uma coluna com o valor de vendas. Para análises temporais, você precisa transformar para: Produto, Mês, Valor. Qual transformação usar?",
       "options_pt": [
-        "Colunas Dinâmicas (Colunas Dinâmicas)",
-        "Colunas Despivotar (colunas não dinâmicas)",
-        "Transporte (Transpor)",
-        "Dividir Coluna (coluna dividida)"
-      ],
-      "explanation_pt": "Unpivot transforma colunas em linhas, convertendo uma tabela 'wide' (larga) em uma tabela 'tall' (alta), ideal para análises por período no Power BI.",
-      "question_en": "Uma planilha tem colunas: Produto, Jan, Fev, Mar...Dez, onde cada mês é uma coluna com o valor de vendas. Para análises temporais, você precisa transformar para: Produto, Mês, Valor. Qual transformação usar?",
-      "options_en": [
         "Pivotar Colunas (Pivot Columns)",
         "Despivotar Colunas (Unpivot Columns)",
         "Transpor (Transpose)",
         "Dividir Coluna (Split Column)"
       ],
-      "explanation_en": "Unpivot transforma colunas em linhas, convertendo uma tabela 'wide' (larga) em uma tabela 'tall' (alta), ideal para análises por período no Power BI."
+      "explanation_pt": "Unpivot transforma colunas em linhas, convertendo uma tabela 'wide' (larga) em uma tabela 'tall' (alta), ideal para análises por período no Power BI.",
+      "question_en": "A spreadsheet has columns: Product, Jan, Feb, Mar...Dec, where each month is a column with the sales value. For temporal analysis, you need to transform to: Product, Month, Value. Which transformation to use?",
+      "options_en": [
+        "Pivot Columns",
+        "Unpivot Columns",
+        "Transpose",
+        "Split Column"
+      ],
+      "explanation_en": "Unpivot transforms columns into rows, converting a 'wide' table into a 'tall' table, ideal for analysis by period in Power BI."
     },
     {
       "question": "Você deseja criar uma conexão parametrizada no Power Query para alternar entre ambientes (Dev, QA, Prod) sem editar a query manualmente. O que usar?",
@@ -1549,22 +1549,22 @@ const questionBank = {
       ],
       "answer": 1,
       "explanation": "Os Parâmetros do Power Query são valores configuráveis que podem ser referenciados nas etapas das queries, permitindo alternar entre fontes ou configurações sem editar a lógica manualmente.",
-      "question_pt": "Você deseja criar uma conexão parametrizada no Power Query para alternar entre ambientes (Dev, QA, Prod) sem editar a consulta manualmente. O que usar?",
+      "question_pt": "Você deseja criar uma conexão parametrizada no Power Query para alternar entre ambientes (Dev, QA, Prod) sem editar a query manualmente. O que usar?",
       "options_pt": [
-        "Variáveis ​​DAX (VAR)",
-        "Parâmetros do Power Query (Parâmetros de Consulta)",
-        "Filtros de Relatório",
-        "Grupos de Cálculo"
-      ],
-      "explanation_pt": "Os Parâmetros do Power Query são valores configuráveis ​​que podem ser referenciados nas etapas das consultas, permitindo alternar entre fontes ou configurações sem editar a lógica manualmente.",
-      "question_en": "Você deseja criar uma conexão parametrizada no Power Query para alternar entre ambientes (Dev, QA, Prod) sem editar a query manualmente. O que usar?",
-      "options_en": [
         "Variáveis DAX (VAR)",
         "Parâmetros do Power Query (Query Parameters)",
         "Filtros de Relatório",
         "Grupos de Cálculo"
       ],
-      "explanation_en": "Os Parâmetros do Power Query são valores configuráveis que podem ser referenciados nas etapas das queries, permitindo alternar entre fontes ou configurações sem editar a lógica manualmente."
+      "explanation_pt": "Os Parâmetros do Power Query são valores configuráveis que podem ser referenciados nas etapas das queries, permitindo alternar entre fontes ou configurações sem editar a lógica manualmente.",
+      "question_en": "You want to create a parameterized connection in Power Query to switch between environments (Dev, QA, Prod) without manually editing the query. What to use?",
+      "options_en": [
+        "DAX variables (VAR)",
+        "Power Query Parameters",
+        "Report Filters",
+        "Calculation Groups"
+      ],
+      "explanation_en": "Power Query Parameters are configurable values ​​that can be referenced in query steps, allowing you to switch between sources or configurations without manually editing the logic."
     },
     {
       "question": "Qual é a diferença entre criar uma Referência (Reference) e uma Duplicata (Duplicate) de uma query no Power Query?",
@@ -1576,22 +1576,22 @@ const questionBank = {
       ],
       "answer": 2,
       "explanation": "Uma Referência cria uma nova query que parte do resultado da original (como um 'ponteiro'). Uma Duplicata copia todos os passos da query de forma independente.",
-      "question_pt": "Qual é a diferença entre criar uma Referência (Reference) e uma Duplicata (Duplicate) de uma consulta no Power Query?",
+      "question_pt": "Qual é a diferença entre criar uma Referência (Reference) e uma Duplicata (Duplicate) de uma query no Power Query?",
       "options_pt": [
-        "Não há diferença prática entre as duas opções",
-        "Uma Referência criação cópia independente; uma duplicata depende do original",
-        "Uma Referência depende da consulta original e reflete suas mudanças; uma Duplicata é independente",
-        "Referência é usada apenas para fontes SQL Server"
-      ],
-      "explanation_pt": "Uma Referência cria uma nova consulta que parte do resultado da original (como um 'ponteiro'). Uma Duplicata copia todos os passos da consulta de forma independente.",
-      "question_en": "Qual é a diferença entre criar uma Referência (Reference) e uma Duplicata (Duplicate) de uma query no Power Query?",
-      "options_en": [
         "Não há diferença prática entre as duas opções",
         "Uma Referência cria cópia independente; uma Duplicata depende da original",
         "Uma Referência depende da query original e reflete suas mudanças; uma Duplicata é independente",
         "Referência é usada apenas para fontes SQL Server"
       ],
-      "explanation_en": "Uma Referência cria uma nova query que parte do resultado da original (como um 'ponteiro'). Uma Duplicata copia todos os passos da query de forma independente."
+      "explanation_pt": "Uma Referência cria uma nova query que parte do resultado da original (como um 'ponteiro'). Uma Duplicata copia todos os passos da query de forma independente.",
+      "question_en": "What is the difference between creating a Reference and a Duplicate of a query in Power Query?",
+      "options_en": [
+        "There is no practical difference between the two options",
+        "A Reference creates independent copy; a Duplicate depends on the original",
+        "A Reference depends on the original query and reflects its changes; a Duplicate is independent",
+        "Reference is only used for SQL Server fonts"
+      ],
+      "explanation_en": "A Reference creates a new query that starts from the result of the original (as a 'pointer'). A Duplicate copies all query steps independently."
     },
     {
       "question": "Uma pasta compartilhada contém 12 arquivos CSV (um por mês). Você precisa combinar todos em uma única tabela no Power BI. Qual é a abordagem MAIS eficiente?",
@@ -1608,17 +1608,17 @@ const questionBank = {
         "Importar cada arquivo individualmente e usar Append depois",
         "Usar o conector de Pasta (Folder) para combinar arquivos automaticamente",
         "Criar 12 conexões separadas e unir via DAX",
-        "Usando o conector Web para ler a pasta"
-      ],
-      "explanation_pt": "O conector de Pasta (Folder) do Power Query detecta automaticamente todos os arquivos na pasta e cria uma função para combiná-los, inclusive adicionar novos arquivos automaticamente nas atualizações futuras.",
-      "question_en": "Uma pasta compartilhada contém 12 arquivos CSV (um por mês). Você precisa combinar todos em uma única tabela no Power BI. Qual é a abordagem MAIS eficiente?",
-      "options_en": [
-        "Importar cada arquivo individualmente e usar Append depois",
-        "Usar o conector de Pasta (Folder) para combinar arquivos automaticamente",
-        "Criar 12 conexões separadas e unir via DAX",
         "Usar o conector Web para ler a pasta"
       ],
-      "explanation_en": "O conector de Pasta (Folder) do Power Query detecta automaticamente todos os arquivos na pasta e cria uma função para combiná-los, inclusive adicionando novos arquivos automaticamente nas atualizações futuras."
+      "explanation_pt": "O conector de Pasta (Folder) do Power Query detecta automaticamente todos os arquivos na pasta e cria uma função para combiná-los, inclusive adicionando novos arquivos automaticamente nas atualizações futuras.",
+      "question_en": "A shared folder contains 12 CSV files (one per month). You need to combine them all into a single table in Power BI. What is the MOST efficient approach?",
+      "options_en": [
+        "Import each file individually and use Append later",
+        "Use the Folder connector to automatically combine files",
+        "Create 12 separate connections and join via DAX",
+        "Use the web connector to read the folder"
+      ],
+      "explanation_en": "The Power Query Folder connector automatically detects all files in the folder and creates a function to combine them, including automatically adding new files on future updates."
     },
     {
       "question": "Uma coluna DateTime tem alta cardinalidade e prejudica a performance do modelo. Qual transformação no Power Query resolve isso preservando a informação de data?",
@@ -1630,22 +1630,22 @@ const questionBank = {
       ],
       "answer": 1,
       "explanation": "Extrair somente a parte da data reduz a cardinalidade (de valores únicos por segundo para valores únicos por dia), melhorando a compactação e a performance do modelo VertiPaq.",
-      "question_pt": "Uma coluna DateTime tem alta cardinalidade e prejudica o desempenho do modelo. Qual transformação no Power Query resolve isso preservando a informação de dados?",
+      "question_pt": "Uma coluna DateTime tem alta cardinalidade e prejudica a performance do modelo. Qual transformação no Power Query resolve isso preservando a informação de data?",
       "options_pt": [
-        "Conversor para texto no formato dd/mm/aaaa",
-        "Extrair apenas os dados (Date Only), removendo o horário",
-        "Removendo completamente a coluna",
-        "Criar um índice numérico"
-      ],
-      "explanation_pt": "Extrair somente a parte dos dados reduz a cardinalidade (de valores únicos por segundo para valores únicos por dia), melhorando a compactação e o desempenho do modelo VertiPaq.",
-      "question_en": "Uma coluna DateTime tem alta cardinalidade e prejudica a performance do modelo. Qual transformação no Power Query resolve isso preservando a informação de data?",
-      "options_en": [
         "Converter para texto no formato dd/mm/yyyy",
         "Extrair apenas a data (Date Only), removendo o horário",
         "Remover completamente a coluna",
         "Criar um índice numérico"
       ],
-      "explanation_en": "Extrair somente a parte da data reduz a cardinalidade (de valores únicos por segundo para valores únicos por dia), melhorando a compactação e a performance do modelo VertiPaq."
+      "explanation_pt": "Extrair somente a parte da data reduz a cardinalidade (de valores únicos por segundo para valores únicos por dia), melhorando a compactação e a performance do modelo VertiPaq.",
+      "question_en": "A DateTime column has high cardinality and impairs model performance. Which transformation in Power Query solves this while preserving date information?",
+      "options_en": [
+        "Convert to text in dd/mm/yyyy format",
+        "Extract only the date (Date Only), removing the time",
+        "Completely remove the column",
+        "Create a numeric index"
+      ],
+      "explanation_en": "Extracting only the date portion reduces cardinality (from unique values ​​per second to unique values ​​per day), improving compression and performance of the VertiPaq model."
     },
     {
       "question": "Você criou uma query auxiliar no Power Query que é usada como passo intermediário por outras queries. Você NÃO quer que ela apareça como tabela no modelo. O que fazer?",
@@ -1657,22 +1657,22 @@ const questionBank = {
       ],
       "answer": 1,
       "explanation": "Desabilitar o carregamento (botão direito na query → 'Habilitar Carregamento') mantém a query ativa como etapa intermediária, mas impede que ela seja carregada como tabela no modelo de dados.",
-      "question_pt": "Você criou uma consulta auxiliar no Power Query que é usada como passo intermediário para outras consultas. Você NÃO quer que ela seja aplicada como tabela no modelo. O que fazer?",
+      "question_pt": "Você criou uma query auxiliar no Power Query que é usada como passo intermediário por outras queries. Você NÃO quer que ela apareça como tabela no modelo. O que fazer?",
       "options_pt": [
-        "Deletar uma consulta e recriar a lógica em cada consulta filha",
-        "Desativar o Carregamento da consulta auxiliar",
-        "Marcar a tabela como ocultar as configurações do modelo",
-        "Converter em uma Função M"
-      ],
-      "explanation_pt": "Desabilitar o carregamento (botão direito na consulta → 'Habilitar Carregamento') mantém a consulta ativa como etapa interativa, mas impede que ela seja fornecida como tabela no modelo de dados.",
-      "question_en": "Você criou uma query auxiliar no Power Query que é usada como passo intermediário por outras queries. Você NÃO quer que ela apareça como tabela no modelo. O que fazer?",
-      "options_en": [
         "Deletar a query e recriar a lógica em cada query filha",
         "Desabilitar o Carregamento (Disable Load) da query auxiliar",
         "Marcar a tabela como oculta nas configurações do modelo",
         "Converter em uma Função M"
       ],
-      "explanation_en": "Desabilitar o carregamento (botão direito na query → 'Habilitar Carregamento') mantém a query ativa como etapa intermediária, mas impede que ela seja carregada como tabela no modelo de dados."
+      "explanation_pt": "Desabilitar o carregamento (botão direito na query → 'Habilitar Carregamento') mantém a query ativa como etapa intermediária, mas impede que ela seja carregada como tabela no modelo de dados.",
+      "question_en": "You have created a helper query in Power Query that is used as an intermediate step by other queries. You do NOT want it to appear as a table in the model. What to do?",
+      "options_en": [
+        "Delete the query and recreate the logic in each child query",
+        "Disable Loading of the auxiliary query",
+        "Mark table as hidden in model settings",
+        "Convert to an M Function"
+      ],
+      "explanation_en": "Disabling loading (right click on the query → 'Enable Loading') keeps the query active as an intermediate step, but prevents it from being loaded as a table in the data model."
     },
     {
       "question": "Uma coluna importada de um CSV contém células com erro (#ERROR). Você deseja substituir esses erros por 0. Qual etapa usar?",
@@ -1687,19 +1687,19 @@ const questionBank = {
       "question_pt": "Uma coluna importada de um CSV contém células com erro (#ERROR). Você deseja substituir esses erros por 0. Qual etapa usar?",
       "options_pt": [
         "Filtrar Linhas para excluir os erros",
-        "Remover Erros (Remover Erros)",
-        "Substituir Erros",
-        "Substituir Valores (Substituir Valores)"
-      ],
-      "explanation_pt": "'Substituir Erros' permite definir um valor de substituição para células com erro, mantendo a linha no dataset. 'Remover Erros' exclui as linhas com erro.",
-      "question_en": "Uma coluna importada de um CSV contém células com erro (#ERROR). Você deseja substituir esses erros por 0. Qual etapa usar?",
-      "options_en": [
-        "Filtrar Linhas para excluir os erros",
         "Remover Erros (Remove Errors)",
         "Substituir Erros (Replace Errors)",
         "Substituir Valores (Replace Values)"
       ],
-      "explanation_en": "'Substituir Erros' (Replace Errors) permite definir um valor de substituição para células com erro, mantendo a linha no dataset. 'Remover Erros' deleta as linhas com erro."
+      "explanation_pt": "'Substituir Erros' (Replace Errors) permite definir um valor de substituição para células com erro, mantendo a linha no dataset. 'Remover Erros' deleta as linhas com erro.",
+      "question_en": "A column imported from a CSV contains cells with an error (#ERROR). You want to replace these errors with 0. Which step to use?",
+      "options_en": [
+        "Filter Rows to exclude errors",
+        "Remove Errors",
+        "Replace Errors",
+        "Replace Values"
+      ],
+      "explanation_en": "'Replace Errors' allows you to define a replacement value for cells with an error, keeping the row in the dataset. 'Remove Errors' deletes lines with errors."
     },
     {
       "question": "Você publicou um relatório no Power BI Service conectado a um banco SQL Server local. Para configurar a atualização agendada, o que é obrigatório?",
