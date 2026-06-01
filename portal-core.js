@@ -117,7 +117,8 @@
                 body { padding-top: 76px !important; }
                 .settings-panel { top: 91px !important; }
                 .layout-wrapper { height: calc(100vh - 76px) !important; }
-                .header { top: 76px !important; } 
+                .header, .site-header, .quiz-topbar { top: 76px !important; } 
+                .main-container { padding-top: 156px !important; }
                 
                 @media(max-width:700px) {
                     .cta-banner-content { flex-direction: column; gap: 16px; text-align: center; }
@@ -127,7 +128,8 @@
                     body { padding-top: 160px !important; }
                     .settings-panel { top: 175px !important; }
                     .layout-wrapper { height: calc(100vh - 160px) !important; }
-                    .header { top: 160px !important; }
+                    .header, .site-header, .quiz-topbar { top: 160px !important; }
+                    .main-container { padding-top: 240px !important; }
                 }
             </style>
             <div class="cta-banner-content">
