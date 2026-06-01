@@ -14885,7 +14885,6 @@ function applyUITexts() {
   // Welcome actions
   const welcomeActions = document.querySelectorAll('.welcome-actions .btn-ghost');
   if (welcomeActions[0]) welcomeActions[0].textContent = t('viewHistory');
-  if (welcomeActions[1]) welcomeActions[1].textContent = t('backToPortal');
 
   // Domain screen
   const domTitle = qs('#screen-domain .screen-title');

@@ -94,7 +94,9 @@
         }
         
         const isPt = localStorage.getItem(STORAGE_LANG) !== 'en';
-        const bioText = isPt ? "Ajudo empresas na transformação de dados em informações estratégicas para apoiar a tomada de decisão." : "I help companies transform data into strategic information to support decision-making.";
+        const bioText = isPt
+            ? "Ajudo organizações a converter dados em inteligência de negócio, apoiando decisões estratégicas com análises, indicadores e dashboards orientados a resultados."
+            : "I help organizations convert data into business intelligence, supporting strategic decisions with results-oriented analytics, indicators and dashboards.";
         const connectText = isPt ? "Conectar no LinkedIn" : "Connect on LinkedIn";
 
         const banner = document.createElement('div');
