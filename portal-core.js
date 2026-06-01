@@ -38,13 +38,13 @@
     function updateThemeUI(theme) {
         const icon = document.getElementById('theme-icon');
         const label = document.getElementById('theme-label');
-        if (icon) icon.textContent = theme === 'dark' ? '🌙' : '☀️';
-        if (label) label.textContent = theme === 'dark' ? 'Dark' : 'Light';
+        if (icon) icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+        if (label) label.textContent = theme === 'dark' ? 'Light' : 'Dark';
         // quiz topbar duplicate
         const icon2 = document.getElementById('theme-icon-quiz');
         const label2 = document.getElementById('theme-label-quiz');
-        if (icon2) icon2.textContent = theme === 'dark' ? '🌙' : '☀️';
-        if (label2) label2.textContent = theme === 'dark' ? 'Dark' : 'Light';
+        if (icon2) icon2.textContent = theme === 'dark' ? '☀️' : '🌙';
+        if (label2) label2.textContent = theme === 'dark' ? 'Light' : 'Dark';
     }
 
     function updateLangUI(lang) {
