@@ -14,7 +14,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal de Estudo - Certificação PL-300 Power BI Data Analyst</title>
-    <style>
+        <style>
+        :root {
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #475569;
+            --border-light: #e2e8f0;
+            
+            --accent-primary: #667eea;
+            --accent-secondary: #764ba2;
+            --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            
+            --shadow-md: 0 10px 30px rgba(0,0,0,0.1);
+            --shadow-lg: 0 15px 40px rgba(0,0,0,0.15);
+            
+            --table-header-bg: #667eea;
+            --table-header-text: #ffffff;
+            --table-stripe: #f1f5f9;
+            --table-hover: #e2e8f0;
+            
+            --header-text: #ffffff;
+        }
+
+        [data-theme="dark"] {
+            --bg-body: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #cbd5e1;
+            --border-light: #334155;
+            
+            --accent-primary: #818cf8;
+            --accent-secondary: #a5b4fc;
+            --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            
+            --shadow-md: 0 10px 30px rgba(0,0,0,0.5);
+            --shadow-lg: 0 15px 40px rgba(0,0,0,0.6);
+            
+            --table-header-bg: #334155;
+            --table-header-text: #f8fafc;
+            --table-stripe: #0f172a;
+            --table-hover: #475569;
+            
+            --header-text: #f8fafc;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -23,9 +67,11 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--bg-body);
+            color: var(--text-main);
             min-height: 100vh;
             padding: 20px;
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
         .container {
@@ -35,9 +81,12 @@
 
         header {
             text-align: center;
-            color: white;
+            color: var(--header-text);
+            background: var(--accent-gradient);
+            border-radius: 16px;
             margin-bottom: 40px;
             padding: 40px 20px;
+            box-shadow: var(--shadow-md);
         }
 
         header h1 {
@@ -51,6 +100,59 @@
             opacity: 0.9;
         }
 
+        /* --- HERO BANNER CTA --- */
+        .hero-cta {
+            background: var(--accent-gradient);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .hero-cta h2 {
+            font-size: 2.2em;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .hero-cta p {
+            font-size: 1.1em;
+            max-width: 600px;
+            opacity: 0.95;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: #ffffff;
+            color: var(--accent-secondary);
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+            color: var(--accent-primary);
+        }
+
+        /* --- MODULES --- */
         .modules-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -59,24 +161,29 @@
         }
 
         .module-card {
-            background: white;
+            background: var(--bg-card);
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: var(--shadow-md);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .module-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            box-shadow: var(--shadow-lg);
         }
 
         .module-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: var(--accent-gradient);
+            color: #ffffff;
             padding: 20px;
             font-size: 1.3em;
             font-weight: bold;
+        }
+        
+        [data-theme="dark"] .module-header {
+            background: var(--table-header-bg);
+            color: var(--table-header-text);
         }
 
         .module-content {
@@ -89,7 +196,7 @@
 
         .module-content li {
             padding: 10px 0;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid var(--border-light);
         }
 
         .module-content li:last-child {
@@ -97,37 +204,39 @@
         }
 
         .module-content a {
-            color: #667eea;
+            color: var(--accent-primary);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             transition: color 0.3s ease;
         }
 
         .module-content a:hover {
-            color: #764ba2;
+            color: var(--accent-secondary);
             text-decoration: underline;
         }
 
-        .info-section {
-            background: white;
+        /* --- INFO & PROGRESS --- */
+        .info-section, .progress-section, .links-section {
+            background: var(--bg-card);
             border-radius: 10px;
             padding: 30px;
             margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: var(--shadow-md);
         }
 
-        .info-section h2 {
-            color: #667eea;
+        .info-section h2, .progress-section h2, .links-section h2 {
+            color: var(--accent-primary);
             margin-bottom: 15px;
             font-size: 1.5em;
         }
 
-        .info-section p {
+        .info-section p, .progress-item label {
             line-height: 1.8;
-            color: #333;
+            color: var(--text-muted);
             margin-bottom: 10px;
         }
 
+        /* --- TABLE --- */
         .domains-table {
             width: 100%;
             border-collapse: collapse;
@@ -136,39 +245,30 @@
 
         .domains-table th,
         .domains-table td {
-            border: 1px solid #ddd;
+            border: 1px solid var(--border-light);
             padding: 12px;
             text-align: left;
         }
 
         .domains-table th {
-            background-color: #667eea;
-            color: white;
+            background-color: var(--table-header-bg);
+            color: var(--table-header-text);
             font-weight: bold;
         }
 
-        .domains-table tr:nth-child(even) {
-            background-color: #f9f9f9;
+        .domains-table tr:nth-child(even) td {
+            background-color: var(--table-stripe);
+        }
+        
+        .domains-table tr td {
+            background-color: var(--bg-card);
         }
 
-        .domains-table tr:hover {
-            background-color: #f0f0f0;
+        .domains-table tr:hover td {
+            background-color: var(--table-hover);
         }
 
-        .links-section {
-            background: white;
-            border-radius: 10px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .links-section h2 {
-            color: #667eea;
-            margin-bottom: 20px;
-            font-size: 1.5em;
-        }
-
+        /* --- LINKS --- */
         .links-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -176,182 +276,44 @@
         }
 
         .link-card {
-            background: #f9f9f9;
-            border-left: 4px solid #667eea;
+            background: var(--table-stripe);
+            border-left: 4px solid var(--accent-primary);
             padding: 15px;
             border-radius: 5px;
             transition: all 0.3s ease;
         }
 
         .link-card:hover {
-            background: #f0f0f0;
-            border-left-color: #764ba2;
+            background: var(--table-hover);
+            border-left-color: var(--accent-secondary);
         }
 
         .link-card a {
-            color: #667eea;
+            color: var(--accent-primary);
             text-decoration: none;
             font-weight: 500;
             display: block;
             word-break: break-word;
+            margin-top: 4px;
         }
 
         .link-card a:hover {
-            color: #764ba2;
+            color: var(--accent-secondary);
+        }
+        
+        .link-card strong {
+            color: var(--text-main);
         }
 
         footer {
             text-align: center;
-            color: white;
+            color: var(--text-muted);
             padding: 20px;
             margin-top: 40px;
             opacity: 0.8;
         }
 
-        .progress-section {
-            background: white;
-            border-radius: 10px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .progress-section h2 {
-            color: #667eea;
-            margin-bottom: 20px;
-            font-size: 1.5em;
-        }
-
-        .progress-item {
-            margin-bottom: 20px;
-        }
-
-        .progress-item label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 25px;
-            background-color: #eee;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 0.85em;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8em;
-            }
-
-            .modules-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* ===== THEMES & SETTINGS PANEL ===== */
-        [data-theme="dark"] body {
-            background: #0f172a;
-            color: #f8fafc;
-        }
-
-        [data-theme="dark"] header {
-            color: #f8fafc;
-        }
-
-        [data-theme="dark"] .module-card,
-        [data-theme="dark"] .info-section,
-        [data-theme="dark"] .progress-section,
-        [data-theme="dark"] .links-section {
-            background: #1e293b;
-            color: #cbd5e1;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        [data-theme="dark"] .module-header {
-            background: #334155;
-        }
-
-        [data-theme="dark"] .module-content li {
-            border-bottom: 1px solid #334155;
-        }
-
-        [data-theme="dark"] .module-content a {
-            color: #818cf8;
-        }
-
-        [data-theme="dark"] .module-content a:hover {
-            color: #a5b4fc;
-        }
-
-        [data-theme="dark"] .info-section h2,
-        [data-theme="dark"] .progress-section h2,
-        [data-theme="dark"] .links-section h2 {
-            color: #818cf8;
-        }
-
-        [data-theme="dark"] .info-section p,
-        [data-theme="dark"] .progress-item label {
-            color: #cbd5e1;
-        }
-
-        [data-theme="dark"] .domains-table th {
-            background-color: #334155;
-            border-color: #475569;
-        }
-
-        [data-theme="dark"] .domains-table td {
-            border-color: #475569;
-            background-color: #1e293b;
-        }
-
-        [data-theme="dark"] .domains-table tr:nth-child(even) td {
-            background-color: #0f172a;
-        }
-
-        [data-theme="dark"] .domains-table tr:hover td {
-            background-color: #334155;
-        }
-
-        [data-theme="dark"] .link-card {
-            background: #0f172a;
-            border-left-color: #818cf8;
-        }
-
-        [data-theme="dark"] .link-card:hover {
-            background: #334155;
-        }
-
-        [data-theme="dark"] .link-card a {
-            color: #818cf8;
-        }
-
-        [data-theme="dark"] .progress-bar {
-            background-color: #334155;
-        }
-
-        [data-theme="dark"] .user-card {
-            background: #1e293b !important;
-            border-color: #334155 !important;
-        }
-
-        [data-theme="dark"] .user-card p {
-            color: #cbd5e1 !important;
-        }
-
+        /* --- SETTINGS PANEL --- */
         .settings-panel {
             position: fixed;
             top: 20px;
@@ -367,36 +329,38 @@
             gap: 8px;
             padding: 8px 16px;
             border-radius: 100px;
-            border: 1px solid rgba(255,255,255,0.2);
-            background: rgba(255,255,255,0.1);
-            color: white;
+            border: 1px solid var(--border-light);
+            background: var(--bg-card);
+            color: var(--text-main);
             font-size: 0.9rem;
             font-weight: 600;
             cursor: pointer;
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
         .settings-btn:hover {
-            background: rgba(255,255,255,0.2);
+            background: var(--table-stripe);
             transform: translateY(-2px);
+            border-color: var(--accent-primary);
         }
 
         [data-theme="dark"] .settings-btn {
-            border-color: rgba(255,255,255,0.1);
             background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.1);
         }
 
         [data-theme="dark"] .settings-btn:hover {
             background: rgba(255,255,255,0.1);
+            border-color: var(--accent-primary);
         }
 
-        @media (max-width: 640px) {
-            .settings-panel {
-                top: auto;
-                bottom: 20px;
-                right: 20px;
-            }
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8em; }
+            .hero-cta h2 { font-size: 1.8em; }
+            .modules-grid { grid-template-columns: 1fr; }
+            .settings-panel { top: auto; bottom: 20px; right: 20px; }
         }
     </style>
 </head>
@@ -463,7 +427,14 @@
             </table>
         </div>
 
-        <h2 style="color: white; margin-bottom: 20px; text-align: center; font-size: 1.8em;">📚 Módulos de Estudo</h2>
+        
+        <div class="hero-cta">
+            <h2 id="cta-title">🏆 Preparado para o Desafio?</h2>
+            <p id="cta-desc">Teste seus conhecimentos agora mesmo com o nosso simulador completo. Questões bilingues (PT/EN) para você treinar e gabaritar a prova PL-300.</p>
+            <a href="simulado/simulado.html" id="cta-btn" class="btn-cta">🚀 Iniciar Simulado Agora</a>
+        </div>
+        
+<h2 id="mod-title" style="color: var(--text-main); margin-bottom: 20px; text-align: center; font-size: 1.8em;">📚 Módulos de Estudo</h2>
         <div class="modules-grid">
             <div class="module-card">
                 <div class="module-header">01 - Preparar Dados</div>
@@ -522,15 +493,6 @@
                     </ul>
                 </div>
             </div>
-
-            <div class="module-card">
-                <div class="module-header">Simulado PL-300</div>
-                <div class="module-content">
-                    <ul>
-                        <li><a href="simulado/simulado.html">📝 Iniciar Simulado</a></li>
-                    </ul>
-                </div>
-            </div>
         </div>
 
         <div class="links-section">
@@ -565,7 +527,7 @@
 
         <div class="info-section">
             <h2>🚀 Como Utilizar Este Portal</h2>
-            <ol style="line-height: 2; color: #333;">
+            <ol style="line-height: 2; color: var(--text-muted);">
                 <li><strong>Estude seguindo a ordem dos módulos</strong> (de 01 a 04) para uma progressão lógica.</li>
                 <li><strong>Faça os laboratórios práticos</strong> utilizando os arquivos oficiais da Microsoft.</li>
                 <li><strong>Use os resumos como reforço</strong> antes da prova.</li>
@@ -606,13 +568,15 @@
                 mod3Title: "03 - Visualizar e Analisar",
                 mod4Title: "04 - Implementar e Manter",
                 mod5Title: "05 - Labs Oficiais",
-                modSimTitle: "Simulado PL-300",
-                modSimLink: "📝 Iniciar Simulado",
                 mod1Res: "📋 Resumo", mod1L1: "📥 Obter Dados no Power BI", mod1L2: "🔄 Transformar e Limpar Dados", mod1L3: "📤 Carregar Dados",
                 mod2Res: "📋 Resumo", mod2L1: "🏗️ Design do Modelo de Dados", mod2L2: "📐 Criar Medidas DAX", mod2L3: "✅ Boas Práticas de Modelagem",
                 mod3Res: "📋 Resumo", mod3L1: "📊 Criar Relatórios", mod3L2: "🎨 Visualizações Avançadas", mod3L3: "⚡ Analisar Performance",
                 mod4Res: "📋 Resumo", mod4L1: "🏢 Gerenciar Workspaces", mod4L2: "🔐 Compartilhamento e Governança", mod4L3: "🛡️ Segurança (RLS)",
                 mod5L1: "🧪 Guia de Labs", mod5L2: "🔗 Links Úteis",
+                ctaTitle: "🏆 Preparado para o Desafio?",
+                ctaDesc: "Teste seus conhecimentos agora mesmo com o nosso simulador completo. Questões bilingues (PT/EN) para você treinar e gabaritar a prova PL-300.",
+                ctaBtn: "🚀 Iniciar Simulado Agora",
+
                 linksTitle: "🔗 Materiais Oficiais da Microsoft",
                 link1Title: "<strong>Microsoft Learn - Roteiro Oficial</strong>",
                 link3Title: "<strong>Laboratórios Oficiais</strong>",
@@ -646,13 +610,15 @@
                 mod3Title: "03 - Visualize & Analyze",
                 mod4Title: "04 - Deploy & Maintain",
                 mod5Title: "05 - Official Labs",
-                modSimTitle: "PL-300 Simulator",
-                modSimLink: "📝 Start Simulator",
                 mod1Res: "📋 Summary", mod1L1: "📥 Get Data in Power BI", mod1L2: "🔄 Transform & Clean Data", mod1L3: "📤 Load Data",
                 mod2Res: "📋 Summary", mod2L1: "🏗️ Data Model Design", mod2L2: "📐 Create DAX Measures", mod2L3: "✅ Modeling Best Practices",
                 mod3Res: "📋 Summary", mod3L1: "📊 Create Reports", mod3L2: "🎨 Advanced Visualizations", mod3L3: "⚡ Analyze Performance",
                 mod4Res: "📋 Summary", mod4L1: "🏢 Manage Workspaces", mod4L2: "🔐 Sharing & Governance", mod4L3: "🛡️ Security (RLS)",
                 mod5L1: "🧪 Labs Guide", mod5L2: "🔗 Useful Links",
+                ctaTitle: "🏆 Ready for the Challenge?",
+                ctaDesc: "Test your knowledge right now with our complete simulator. Bilingual questions (PT/EN) for you to train and ace the PL-300 exam.",
+                ctaBtn: "🚀 Start Simulator Now",
+
                 linksTitle: "🔗 Official Microsoft Materials",
                 link1Title: "<strong>Microsoft Learn - Official Path</strong>",
                 link3Title: "<strong>Official Labs</strong>",
@@ -731,6 +697,15 @@
                 if(tds[3]) tds[3].innerHTML = t.dom4;
             }
 
+
+            // Hero CTA
+            const ctaTitle = document.getElementById('cta-title');
+            if(ctaTitle) ctaTitle.innerHTML = t.ctaTitle;
+            const ctaDesc = document.getElementById('cta-desc');
+            if(ctaDesc) ctaDesc.innerHTML = t.ctaDesc;
+            const ctaBtn = document.getElementById('cta-btn');
+            if(ctaBtn) ctaBtn.innerHTML = t.ctaBtn;
+
             // Modules
             const modTitle = document.querySelector('h2[style*="text-align: center"]');
             if(modTitle) modTitle.innerHTML = t.modTitle;
@@ -741,7 +716,6 @@
             if(modHeaders[2]) modHeaders[2].innerHTML = t.mod3Title;
             if(modHeaders[3]) modHeaders[3].innerHTML = t.mod4Title;
             if(modHeaders[4]) modHeaders[4].innerHTML = t.mod5Title;
-            if(modHeaders[5]) modHeaders[5].innerHTML = t.modSimTitle;
 
             const modLinks = document.querySelectorAll('.module-content a');
             // mod 1
@@ -767,8 +741,6 @@
             // mod 5
             if(modLinks[16]) modLinks[16].innerHTML = t.mod5L1;
             if(modLinks[17]) modLinks[17].innerHTML = t.mod5L2;
-            // mod Sim
-            if(modLinks[18]) modLinks[18].innerHTML = t.modSimLink;
 
             // Links section
             const linksSec = document.querySelector('.links-section');
