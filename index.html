@@ -261,9 +261,157 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* ===== THEMES & SETTINGS PANEL ===== */
+        [data-theme="dark"] body {
+            background: #0f172a;
+            color: #f8fafc;
+        }
+
+        [data-theme="dark"] header {
+            color: #f8fafc;
+        }
+
+        [data-theme="dark"] .module-card,
+        [data-theme="dark"] .info-section,
+        [data-theme="dark"] .progress-section,
+        [data-theme="dark"] .links-section {
+            background: #1e293b;
+            color: #cbd5e1;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        [data-theme="dark"] .module-header {
+            background: #334155;
+        }
+
+        [data-theme="dark"] .module-content li {
+            border-bottom: 1px solid #334155;
+        }
+
+        [data-theme="dark"] .module-content a {
+            color: #818cf8;
+        }
+
+        [data-theme="dark"] .module-content a:hover {
+            color: #a5b4fc;
+        }
+
+        [data-theme="dark"] .info-section h2,
+        [data-theme="dark"] .progress-section h2,
+        [data-theme="dark"] .links-section h2 {
+            color: #818cf8;
+        }
+
+        [data-theme="dark"] .info-section p,
+        [data-theme="dark"] .progress-item label {
+            color: #cbd5e1;
+        }
+
+        [data-theme="dark"] .domains-table th {
+            background-color: #334155;
+            border-color: #475569;
+        }
+
+        [data-theme="dark"] .domains-table td {
+            border-color: #475569;
+            background-color: #1e293b;
+        }
+
+        [data-theme="dark"] .domains-table tr:nth-child(even) td {
+            background-color: #0f172a;
+        }
+
+        [data-theme="dark"] .domains-table tr:hover td {
+            background-color: #334155;
+        }
+
+        [data-theme="dark"] .link-card {
+            background: #0f172a;
+            border-left-color: #818cf8;
+        }
+
+        [data-theme="dark"] .link-card:hover {
+            background: #334155;
+        }
+
+        [data-theme="dark"] .link-card a {
+            color: #818cf8;
+        }
+
+        [data-theme="dark"] .progress-bar {
+            background-color: #334155;
+        }
+
+        [data-theme="dark"] .user-card {
+            background: #1e293b !important;
+            border-color: #334155 !important;
+        }
+
+        [data-theme="dark"] .user-card p {
+            color: #cbd5e1 !important;
+        }
+
+        .settings-panel {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            display: flex;
+            gap: 10px;
+        }
+
+        .settings-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 100px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .settings-btn:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        [data-theme="dark"] .settings-btn {
+            border-color: rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.05);
+        }
+
+        [data-theme="dark"] .settings-btn:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 640px) {
+            .settings-panel {
+                top: auto;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- ===================== SETTINGS PANEL ===================== -->
+    <div class="settings-panel" id="settings-panel">
+      <button class="settings-btn" id="btn-lang" onclick="toggleLang()" title="Switch language / Alternar idioma">
+        <span class="btn-icon" id="lang-icon">🇧🇷</span>
+        <span id="lang-label">PT</span>
+      </button>
+      <button class="settings-btn" id="btn-theme" onclick="toggleTheme()" title="Toggle dark/light mode">
+        <span class="btn-icon" id="theme-icon">☀️</span>
+        <span id="theme-label">Light</span>
+      </button>
+    </div>
     <div class="container">
         <header>
             <h1>📘 Portal de Estudo</h1>
@@ -427,9 +575,241 @@
         </div>
 
         <footer>
-            <p>Portal de Estudo - Certificação PL-300 | Criado com ❤️ para sua jornada de aprendizado</p>
-            <p style="font-size: 0.9em; margin-top: 10px;">Baseado no material de <strong>Renan Oliveira Andrade</strong> | GitHub: axlrn</p>
+            <p id="footer-text-1">Portal de Estudo - Certificação PL-300 | Criado com ❤️ para sua jornada de aprendizado</p>
+            <p id="footer-text-2" style="font-size: 0.9em; margin-top: 10px;">Baseado no material de <strong>Renan Oliveira Andrade</strong> | GitHub: axlrn</p>
         </footer>
     </div>
+    <script>
+        const state = {
+            lang: 'pt',
+            theme: 'light' // default on index
+        };
+
+        const i18n = {
+            pt: {
+                pageTitle: "📘 Portal de Estudo",
+                pageSub: "Certificação PL-300: Microsoft Power BI Data Analyst",
+                followIn: "+ Seguir no LinkedIn",
+                welcomeTitle: "🎯 Bem-vindo ao seu Portal de Estudos!",
+                welcome1: "Este portal reúne um guia estruturado de estudos para a certificação <strong>PL-300</strong>, utilizando materiais oficiais da Microsoft, anotações pessoais, exercícios e resumos dos principais tópicos cobrados no exame.",
+                welcome2: "Navegue pelos módulos abaixo para começar seus estudos. Cada módulo contém resumos, conteúdo detalhado, exemplos práticos e questões de revisão.",
+                domTitle: "📊 Domínios da Prova e Peso",
+                domHeader: "Domínio",
+                weightHeader: "Peso no Exame",
+                dom1: "<strong>Preparar dados</strong>",
+                dom2: "<strong>Modelar dados</strong>",
+                dom3: "<strong>Visualizar e analisar dados</strong>",
+                dom4: "<strong>Implantar e manter entregáveis</strong>",
+                modTitle: "📚 Módulos de Estudo",
+                mod1Title: "01 - Preparar Dados",
+                mod2Title: "02 - Modelar Dados",
+                mod3Title: "03 - Visualizar e Analisar",
+                mod4Title: "04 - Implementar e Manter",
+                mod5Title: "05 - Labs Oficiais",
+                modSimTitle: "Simulado PL-300",
+                modSimLink: "📝 Iniciar Simulado",
+                mod1Res: "📋 Resumo", mod1L1: "📥 Obter Dados no Power BI", mod1L2: "🔄 Transformar e Limpar Dados", mod1L3: "📤 Carregar Dados",
+                mod2Res: "📋 Resumo", mod2L1: "🏗️ Design do Modelo de Dados", mod2L2: "📐 Criar Medidas DAX", mod2L3: "✅ Boas Práticas de Modelagem",
+                mod3Res: "📋 Resumo", mod3L1: "📊 Criar Relatórios", mod3L2: "🎨 Visualizações Avançadas", mod3L3: "⚡ Analisar Performance",
+                mod4Res: "📋 Resumo", mod4L1: "🏢 Gerenciar Workspaces", mod4L2: "🔐 Compartilhamento e Governança", mod4L3: "🛡️ Segurança (RLS)",
+                mod5L1: "🧪 Guia de Labs", mod5L2: "🔗 Links Úteis",
+                linksTitle: "🔗 Materiais Oficiais da Microsoft",
+                link1Title: "<strong>Microsoft Learn - Roteiro Oficial</strong>",
+                link3Title: "<strong>Laboratórios Oficiais</strong>",
+                link4Title: "<strong>Documentação do Power BI</strong>",
+                howToTitle: "🚀 Como Utilizar Este Portal",
+                ht1: "<strong>Estude seguindo a ordem dos módulos</strong> (de 01 a 04) para uma progressão lógica.",
+                ht2: "<strong>Faça os laboratórios práticos</strong> utilizando os arquivos oficiais da Microsoft.",
+                ht3: "<strong>Use os resumos como reforço</strong> antes da prova.",
+                ht4: "<strong>Compare seu progresso</strong> com o Skills Outline oficial.",
+                ht5: "<strong>Crie exemplos próprios</strong> em Power BI Desktop para consolidar o aprendizado.",
+                ft1: "Portal de Estudo - Certificação PL-300 | Criado com ❤️ para sua jornada de aprendizado",
+                ft2: "Baseado no material de <strong>Renan Oliveira Andrade</strong> | GitHub: axlrn"
+            },
+            en: {
+                pageTitle: "📘 Study Portal",
+                pageSub: "PL-300 Certification: Microsoft Power BI Data Analyst",
+                followIn: "+ Follow on LinkedIn",
+                welcomeTitle: "🎯 Welcome to your Study Portal!",
+                welcome1: "This portal brings together a structured study guide for the <strong>PL-300</strong> certification, using official Microsoft materials, personal notes, exercises, and summaries of the main topics covered in the exam.",
+                welcome2: "Navigate through the modules below to begin your studies. Each module contains summaries, detailed content, practical examples, and review questions.",
+                domTitle: "📊 Exam Domains & Weights",
+                domHeader: "Domain",
+                weightHeader: "Exam Weight",
+                dom1: "<strong>Prepare Data</strong>",
+                dom2: "<strong>Model Data</strong>",
+                dom3: "<strong>Visualize & Analyze Data</strong>",
+                dom4: "<strong>Deploy & Maintain Deliverables</strong>",
+                modTitle: "📚 Study Modules",
+                mod1Title: "01 - Prepare Data",
+                mod2Title: "02 - Model Data",
+                mod3Title: "03 - Visualize & Analyze",
+                mod4Title: "04 - Deploy & Maintain",
+                mod5Title: "05 - Official Labs",
+                modSimTitle: "PL-300 Simulator",
+                modSimLink: "📝 Start Simulator",
+                mod1Res: "📋 Summary", mod1L1: "📥 Get Data in Power BI", mod1L2: "🔄 Transform & Clean Data", mod1L3: "📤 Load Data",
+                mod2Res: "📋 Summary", mod2L1: "🏗️ Data Model Design", mod2L2: "📐 Create DAX Measures", mod2L3: "✅ Modeling Best Practices",
+                mod3Res: "📋 Summary", mod3L1: "📊 Create Reports", mod3L2: "🎨 Advanced Visualizations", mod3L3: "⚡ Analyze Performance",
+                mod4Res: "📋 Summary", mod4L1: "🏢 Manage Workspaces", mod4L2: "🔐 Sharing & Governance", mod4L3: "🛡️ Security (RLS)",
+                mod5L1: "🧪 Labs Guide", mod5L2: "🔗 Useful Links",
+                linksTitle: "🔗 Official Microsoft Materials",
+                link1Title: "<strong>Microsoft Learn - Official Path</strong>",
+                link3Title: "<strong>Official Labs</strong>",
+                link4Title: "<strong>Power BI Documentation</strong>",
+                howToTitle: "🚀 How to Use This Portal",
+                ht1: "<strong>Study following the module order</strong> (from 01 to 04) for a logical progression.",
+                ht2: "<strong>Do the practical labs</strong> using the official Microsoft files.",
+                ht3: "<strong>Use the summaries as reinforcement</strong> before the exam.",
+                ht4: "<strong>Compare your progress</strong> with the official Skills Outline.",
+                ht5: "<strong>Create your own examples</strong> in Power BI Desktop to consolidate learning.",
+                ft1: "Study Portal - PL-300 Certification | Created with ❤️ for your learning journey",
+                ft2: "Based on material by <strong>Renan Oliveira Andrade</strong> | GitHub: axlrn"
+            }
+        };
+
+        function toggleTheme() {
+            state.theme = state.theme === 'dark' ? 'light' : 'dark';
+            applyTheme();
+            localStorage.setItem('pl300_theme', state.theme);
+        }
+
+        function applyTheme() {
+            document.documentElement.setAttribute('data-theme', state.theme);
+            const icon = document.getElementById('theme-icon');
+            const label = document.getElementById('theme-label');
+            if (icon) icon.textContent = state.theme === 'dark' ? '🌙' : '☀️';
+            if (label) label.textContent = state.theme === 'dark' ? 'Dark' : 'Light';
+        }
+
+        function toggleLang() {
+            state.lang = state.lang === 'pt' ? 'en' : 'pt';
+            applyLang();
+            localStorage.setItem('pl300_lang', state.lang);
+        }
+
+        function applyLang() {
+            const icon = document.getElementById('lang-icon');
+            const label = document.getElementById('lang-label');
+            if (icon) icon.textContent = state.lang === 'pt' ? '🇧🇷' : '🇺🇸';
+            if (label) label.textContent = state.lang === 'pt' ? 'PT' : 'EN';
+            applyTranslations();
+        }
+
+        function applyTranslations() {
+            const t = i18n[state.lang] || i18n['pt'];
+            
+            // Header
+            const header = document.querySelector('header');
+            if(header) {
+                header.querySelector('h1').innerHTML = t.pageTitle;
+                header.querySelector('p').innerHTML = t.pageSub;
+            }
+            const followBtn = document.querySelector('a[href*="linkedin.com"]');
+            if(followBtn) followBtn.innerHTML = t.followIn;
+
+            // Welcome
+            const infoSections = document.querySelectorAll('.info-section');
+            if(infoSections[0]) {
+                infoSections[0].querySelector('h2').innerHTML = t.welcomeTitle;
+                const ps = infoSections[0].querySelectorAll('p');
+                if(ps[0]) ps[0].innerHTML = t.welcome1;
+                if(ps[1]) ps[1].innerHTML = t.welcome2;
+            }
+
+            // Domains table
+            const domSec = document.querySelector('.progress-section');
+            if(domSec) {
+                domSec.querySelector('h2').innerHTML = t.domTitle;
+                const ths = domSec.querySelectorAll('th');
+                if(ths[0]) ths[0].innerHTML = t.domHeader;
+                if(ths[1]) ths[1].innerHTML = t.weightHeader;
+                const tds = domSec.querySelectorAll('td:first-child');
+                if(tds[0]) tds[0].innerHTML = t.dom1;
+                if(tds[1]) tds[1].innerHTML = t.dom2;
+                if(tds[2]) tds[2].innerHTML = t.dom3;
+                if(tds[3]) tds[3].innerHTML = t.dom4;
+            }
+
+            // Modules
+            const modTitle = document.querySelector('h2[style*="text-align: center"]');
+            if(modTitle) modTitle.innerHTML = t.modTitle;
+
+            const modHeaders = document.querySelectorAll('.module-header');
+            if(modHeaders[0]) modHeaders[0].innerHTML = t.mod1Title;
+            if(modHeaders[1]) modHeaders[1].innerHTML = t.mod2Title;
+            if(modHeaders[2]) modHeaders[2].innerHTML = t.mod3Title;
+            if(modHeaders[3]) modHeaders[3].innerHTML = t.mod4Title;
+            if(modHeaders[4]) modHeaders[4].innerHTML = t.mod5Title;
+            if(modHeaders[5]) modHeaders[5].innerHTML = t.modSimTitle;
+
+            const modLinks = document.querySelectorAll('.module-content a');
+            // mod 1
+            if(modLinks[0]) modLinks[0].innerHTML = t.mod1Res;
+            if(modLinks[1]) modLinks[1].innerHTML = t.mod1L1;
+            if(modLinks[2]) modLinks[2].innerHTML = t.mod1L2;
+            if(modLinks[3]) modLinks[3].innerHTML = t.mod1L3;
+            // mod 2
+            if(modLinks[4]) modLinks[4].innerHTML = t.mod2Res;
+            if(modLinks[5]) modLinks[5].innerHTML = t.mod2L1;
+            if(modLinks[6]) modLinks[6].innerHTML = t.mod2L2;
+            if(modLinks[7]) modLinks[7].innerHTML = t.mod2L3;
+            // mod 3
+            if(modLinks[8]) modLinks[8].innerHTML = t.mod3Res;
+            if(modLinks[9]) modLinks[9].innerHTML = t.mod3L1;
+            if(modLinks[10]) modLinks[10].innerHTML = t.mod3L2;
+            if(modLinks[11]) modLinks[11].innerHTML = t.mod3L3;
+            // mod 4
+            if(modLinks[12]) modLinks[12].innerHTML = t.mod4Res;
+            if(modLinks[13]) modLinks[13].innerHTML = t.mod4L1;
+            if(modLinks[14]) modLinks[14].innerHTML = t.mod4L2;
+            if(modLinks[15]) modLinks[15].innerHTML = t.mod4L3;
+            // mod 5
+            if(modLinks[16]) modLinks[16].innerHTML = t.mod5L1;
+            if(modLinks[17]) modLinks[17].innerHTML = t.mod5L2;
+            // mod Sim
+            if(modLinks[18]) modLinks[18].innerHTML = t.modSimLink;
+
+            // Links section
+            const linksSec = document.querySelector('.links-section');
+            if(linksSec) {
+                linksSec.querySelector('h2').innerHTML = t.linksTitle;
+                const linkStrs = linksSec.querySelectorAll('.link-card strong');
+                if(linkStrs[0]) linkStrs[0].innerHTML = t.link1Title;
+                if(linkStrs[2]) linkStrs[2].innerHTML = t.link3Title;
+                if(linkStrs[3]) linkStrs[3].innerHTML = t.link4Title;
+            }
+
+            // How to
+            if(infoSections[1]) {
+                infoSections[1].querySelector('h2').innerHTML = t.howToTitle;
+                const lis = infoSections[1].querySelectorAll('li');
+                if(lis[0]) lis[0].innerHTML = t.ht1;
+                if(lis[1]) lis[1].innerHTML = t.ht2;
+                if(lis[2]) lis[2].innerHTML = t.ht3;
+                if(lis[3]) lis[3].innerHTML = t.ht4;
+                if(lis[4]) lis[4].innerHTML = t.ht5;
+            }
+
+            // Footer
+            const ft1 = document.getElementById('footer-text-1');
+            const ft2 = document.getElementById('footer-text-2');
+            if(ft1) ft1.innerHTML = t.ft1;
+            if(ft2) ft2.innerHTML = t.ft2;
+        }
+
+        // Initialize settings on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('pl300_theme');
+            // If there's no saved theme, index.html defaults to light
+            state.theme = savedTheme ? savedTheme : 'light';
+            
+            const savedLang = localStorage.getItem('pl300_lang');
+            state.lang = savedLang ? savedLang : 'pt';
+            
+            applyTheme();
+            applyLang();
+        });
+    </script>
 </body>
 </html>

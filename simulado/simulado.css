@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-/* ===== VARIABLES ===== */
+/* ===== VARIABLES — DARK (default) ===== */
 :root {
   --bg: #07071a;
   --bg-card: rgba(255,255,255,0.04);
@@ -27,6 +27,106 @@
   --radius: 20px;
   --radius-sm: 12px;
   --shadow: 0 20px 50px rgba(0,0,0,0.55);
+}
+
+/* ===== VARIABLES — LIGHT ===== */
+[data-theme="light"] {
+  --bg: #f0f2f8;
+  --bg-card: rgba(255,255,255,0.85);
+  --bg-card-hover: rgba(255,255,255,1);
+  --border: rgba(0,0,0,0.09);
+  --border-accent: rgba(139,92,246,0.35);
+
+  --text: #0f0f23;
+  --text-2: #374151;
+  --text-3: #6b7280;
+
+  --green-bg: rgba(16,185,129,0.10);
+  --red-bg: rgba(239,68,68,0.10);
+  --yellow-bg: rgba(245,158,11,0.10);
+
+  --shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+[data-theme="light"] body { background: var(--bg); }
+
+[data-theme="light"] .orb { opacity: 0.06; }
+
+[data-theme="light"] .quiz-topbar {
+  background: rgba(240,242,248,0.92);
+  border-bottom-color: var(--border);
+}
+
+[data-theme="light"] .modal-box { background: #fff; }
+
+[data-theme="light"] .option-item {
+  background: rgba(255,255,255,0.7);
+}
+
+[data-theme="light"] .option-letter {
+  background: rgba(0,0,0,0.08);
+  color: var(--text);
+}
+
+[data-theme="light"] .nav-btn {
+  background: rgba(0,0,0,0.06);
+  color: var(--text-3);
+}
+
+[data-theme="light"] .review-item {
+  background: rgba(255,255,255,0.7);
+}
+
+/* ===== SETTINGS PANEL (floating) ===== */
+.settings-panel {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 9999;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.settings-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-2);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  backdrop-filter: blur(16px);
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.settings-btn:hover {
+  border-color: var(--border-accent);
+  color: var(--text);
+  background: var(--bg-card-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(139,92,246,0.2);
+}
+
+.settings-btn .btn-icon { font-size: 1rem; }
+
+/* Active lang indicator */
+.settings-btn.lang-active {
+  border-color: var(--purple);
+  color: var(--purple);
+  background: rgba(139,92,246,0.1);
+}
+
+@media (max-width: 640px) {
+  .settings-panel { top: auto; bottom: 16px; right: 12px; }
+  .settings-btn span:not(.btn-icon) { display: none; }
+  .settings-btn { padding: 10px 12px; }
 }
 
 /* ===== RESET ===== */

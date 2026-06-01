@@ -3478,8 +3478,296 @@ const state = {
   marked: new Set(),
   timerInterval: null,
   timeRemaining: 0,
-  startTime: null
+  startTime: null,
+  lang: 'pt',        // 'pt' or 'en'
+  theme: 'dark'      // 'dark' or 'light'
 };
+
+// ============================================================
+//  UI TEXT (i18n)
+// ============================================================
+const UI_TEXT = {
+  pt: {
+    simulatorBadge: '⚡ PL-300 Simulator',
+    welcomeTitle1: 'Simulado ',
+    welcomeTitlePBI: 'Power BI',
+    welcomeTitle2: 'Data Analyst',
+    welcomeSubtitle: 'Prepare-se para a certificação com 340+ questões cobrindo todos os domínios do exame real Microsoft.',
+    statQuestions: 'Questões', statDomains: 'Domínios', statModes: 'Modos', statApproval: 'Aprovação',
+    modeTrainTitle: 'Modo Treino', modeTrainDesc: 'Feedback imediato, escolha o domínio, sem cronômetro',
+    modeOfficialTitle: 'Simulado Oficial', modeOfficialDesc: '110 minutos, todos os domínios, condições reais do exame',
+    viewHistory: '📊 Ver Histórico', backToPortal: '🏠 Voltar ao Portal',
+    chooseDomain: 'Escolha o Domínio', chooseDomainSub: 'Selecione um ou mais domínios para praticar',
+    allDomains: 'Todos os Domínios',
+    domPreparar: 'Preparar Dados', domModelar: 'Modelar Dados',
+    domVisualizar: 'Visualizar e Analisar', domImplementar: 'Implementar e Manter',
+    startTraining: 'Iniciar Treino →',
+    loadingTitle: 'Preparando o simulado...', loadingSub: 'Embaralhando questões dos domínios selecionados',
+    quit: '✕ Sair', question: 'Questão',
+    markReview: '🚩 Marcar para revisão', multiHint: '⚠️ Selecione todas as opções corretas',
+    confirmAnswer: 'Confirmar Resposta', prev: '← Anterior', next: 'Próxima →', seeResult: 'Ver Resultado →',
+    navigation: 'Navegação', answered: 'Respondida', marked: 'Marcada', current: 'Atual',
+    resultTitle: 'Resultado do Simulado', resultTitleOfficial: 'Resultado do Simulado Oficial',
+    resultTitleTraining: 'Resultado do Modo Treino',
+    hits: 'acertos', approved: '🏆 APROVADO — ≥ 70%', failed: '📚 Não Atingiu — < 70%',
+    ofQuestions: 'de', correctQuestions: 'questões corretas', answeredLabel: 'respondidas',
+    time: 'Tempo', domainPerformance: '📊 Desempenho por Domínio',
+    reviewTitle: '📋 Revisão das Questões',
+    filterAll: 'Todas', filterWrong: 'Erradas', filterCorrect: 'Certas',
+    yourAnswer: 'Sua resposta:', correctLabel: 'Correta:', noAnswer: '(sem resposta)',
+    correctFeedback: '✅ <strong>Correto!</strong> ', incorrectFeedback: '❌ <strong>Incorreto.</strong> Resposta correta: ',
+    newSimulado: '🔄 Novo Simulado', history: '📊 Histórico', portal: '🏠 Portal',
+    historyTitle: '📊 Histórico de Simulados', historySub: 'Seus últimos 10 simulados realizados',
+    clearHistory: '🗑️ Limpar Histórico', noHistory: '📭 Nenhum simulado realizado ainda.',
+    confirmClear: 'Tem certeza que deseja apagar todo o histórico?',
+    quitTitle: 'Deseja mesmo sair?', quitMsg: 'Seu progresso atual será perdido.',
+    continueBtn: 'Continuar', quitBtn: 'Sair',
+    selectDomain: 'Selecione pelo menos um domínio para continuar.',
+    selectOption: 'Selecione pelo menos uma opção antes de confirmar.',
+    noQuestions: 'Nenhuma questão foi carregada. Verifique os domínios selecionados e tente novamente.',
+    unansweredMsg: (n) => `Você ainda tem ${n} questão(ões) sem resposta. Deseja ver o resultado mesmo assim?`,
+    questionsOf: 'questões corretas', noFilter: 'Nenhuma questão encontrada neste filtro.',
+    approvedBadge: '✅ Aprovado', failedBadge: '❌ Reprovado',
+    officialLabel: 'Simulado Oficial', trainingLabel: 'Modo Treino',
+    questions: 'questões', back: '← Voltar'
+  },
+  en: {
+    simulatorBadge: '⚡ PL-300 Simulator',
+    welcomeTitle1: 'Simulator ',
+    welcomeTitlePBI: 'Power BI',
+    welcomeTitle2: 'Data Analyst',
+    welcomeSubtitle: 'Prepare for your certification with 340+ questions covering all domains of the real Microsoft exam.',
+    statQuestions: 'Questions', statDomains: 'Domains', statModes: 'Modes', statApproval: 'Pass Rate',
+    modeTrainTitle: 'Training Mode', modeTrainDesc: 'Instant feedback, choose domains, no timer',
+    modeOfficialTitle: 'Official Exam', modeOfficialDesc: '110 minutes, all domains, real exam conditions',
+    viewHistory: '📊 View History', backToPortal: '🏠 Back to Portal',
+    chooseDomain: 'Choose Domain', chooseDomainSub: 'Select one or more domains to practice',
+    allDomains: 'All Domains',
+    domPreparar: 'Prepare Data', domModelar: 'Model Data',
+    domVisualizar: 'Visualize & Analyze', domImplementar: 'Deploy & Maintain',
+    startTraining: 'Start Training →',
+    loadingTitle: 'Preparing the exam...', loadingSub: 'Shuffling questions from selected domains',
+    quit: '✕ Quit', question: 'Question',
+    markReview: '🚩 Mark for review', multiHint: '⚠️ Select all correct options',
+    confirmAnswer: 'Confirm Answer', prev: '← Previous', next: 'Next →', seeResult: 'See Result →',
+    navigation: 'Navigation', answered: 'Answered', marked: 'Marked', current: 'Current',
+    resultTitle: 'Exam Result', resultTitleOfficial: 'Official Exam Result',
+    resultTitleTraining: 'Training Mode Result',
+    hits: 'correct', approved: '🏆 PASSED — ≥ 70%', failed: '📚 Not Passed — < 70%',
+    ofQuestions: 'of', correctQuestions: 'correct answers', answeredLabel: 'answered',
+    time: 'Time', domainPerformance: '📊 Performance by Domain',
+    reviewTitle: '📋 Question Review',
+    filterAll: 'All', filterWrong: 'Wrong', filterCorrect: 'Correct',
+    yourAnswer: 'Your answer:', correctLabel: 'Correct:', noAnswer: '(no answer)',
+    correctFeedback: '✅ <strong>Correct!</strong> ', incorrectFeedback: '❌ <strong>Incorrect.</strong> Correct answer: ',
+    newSimulado: '🔄 New Exam', history: '📊 History', portal: '🏠 Portal',
+    historyTitle: '📊 Exam History', historySub: 'Your last 10 exams',
+    clearHistory: '🗑️ Clear History', noHistory: '📭 No exams taken yet.',
+    confirmClear: 'Are you sure you want to clear all history?',
+    quitTitle: 'Do you really want to quit?', quitMsg: 'Your current progress will be lost.',
+    continueBtn: 'Continue', quitBtn: 'Quit',
+    selectDomain: 'Please select at least one domain to continue.',
+    selectOption: 'Please select at least one option before confirming.',
+    noQuestions: 'No questions loaded. Check selected domains and try again.',
+    unansweredMsg: (n) => `You still have ${n} unanswered question(s). Do you want to see the result anyway?`,
+    questionsOf: 'correct answers', noFilter: 'No questions found for this filter.',
+    approvedBadge: '✅ Passed', failedBadge: '❌ Failed',
+    officialLabel: 'Official Exam', trainingLabel: 'Training Mode',
+    questions: 'questions', back: '← Back'
+  }
+};
+
+function t(key) { return UI_TEXT[state.lang]?.[key] ?? UI_TEXT['pt'][key] ?? key; }
+
+// ============================================================
+//  THEME & LANGUAGE
+// ============================================================
+function toggleTheme() {
+  state.theme = state.theme === 'dark' ? 'light' : 'dark';
+  applyTheme();
+  localStorage.setItem('pl300_theme', state.theme);
+}
+
+function applyTheme() {
+  document.documentElement.setAttribute('data-theme', state.theme);
+  const icon = document.getElementById('theme-icon');
+  const label = document.getElementById('theme-label');
+  if (icon) icon.textContent = state.theme === 'dark' ? '🌙' : '☀️';
+  if (label) label.textContent = state.theme === 'dark' ? 'Dark' : 'Light';
+}
+
+function toggleLang() {
+  state.lang = state.lang === 'pt' ? 'en' : 'pt';
+  applyLang();
+  localStorage.setItem('pl300_lang', state.lang);
+  // If quiz is running, reload current question
+  if (document.getElementById('screen-quiz').classList.contains('active') && state.questions.length > 0) {
+    loadQuestion(state.currentIndex);
+  }
+}
+
+function applyLang() {
+  const icon = document.getElementById('lang-icon');
+  const label = document.getElementById('lang-label');
+  if (icon) icon.textContent = state.lang === 'pt' ? '🇧🇷' : '🇺🇸';
+  if (label) label.textContent = state.lang === 'pt' ? 'PT' : 'EN';
+  applyUITexts();
+}
+
+function applyUITexts() {
+  // Welcome screen
+  const el = (id) => document.getElementById(id);
+  const qs = (sel) => document.querySelector(sel);
+
+  const logoBadge = qs('.logo-badge');
+  if (logoBadge) logoBadge.textContent = t('simulatorBadge');
+
+  const welcomeTitle = qs('.welcome-title');
+  if (welcomeTitle) welcomeTitle.innerHTML = `${t('welcomeTitle1')}<span class="gradient-text">${t('welcomeTitlePBI')}</span><br>${t('welcomeTitle2')}`;
+
+  const welcomeSub = qs('.welcome-subtitle');
+  if (welcomeSub) welcomeSub.textContent = t('welcomeSubtitle');
+
+  // Stats
+  const statLabels = document.querySelectorAll('.stat-label');
+  const statKeys = ['statQuestions', 'statDomains', 'statModes', 'statApproval'];
+  statLabels.forEach((el, i) => { if (statKeys[i]) el.textContent = t(statKeys[i]); });
+
+  // Mode cards
+  const modeCards = document.querySelectorAll('.mode-info');
+  if (modeCards[0]) { modeCards[0].querySelector('h3').textContent = t('modeTrainTitle'); modeCards[0].querySelector('p').textContent = t('modeTrainDesc'); }
+  if (modeCards[1]) { modeCards[1].querySelector('h3').textContent = t('modeOfficialTitle'); modeCards[1].querySelector('p').textContent = t('modeOfficialDesc'); }
+
+  // Welcome actions
+  const welcomeActions = document.querySelectorAll('.welcome-actions .btn-ghost');
+  if (welcomeActions[0]) welcomeActions[0].textContent = t('viewHistory');
+  if (welcomeActions[1]) welcomeActions[1].textContent = t('backToPortal');
+
+  // Domain screen
+  const domTitle = qs('#screen-domain .screen-title');
+  if (domTitle) domTitle.textContent = t('chooseDomain');
+  const domSub = qs('#screen-domain .screen-subtitle');
+  if (domSub) domSub.textContent = t('chooseDomainSub');
+
+  // Domain cards
+  const domainNames = document.querySelectorAll('.domain-name');
+  const domKeys = ['allDomains', 'domPreparar', 'domModelar', 'domVisualizar', 'domImplementar'];
+  domainNames.forEach((el, i) => { if (domKeys[i]) el.textContent = t(domKeys[i]); });
+
+  // Domain counts
+  const domainCounts = document.querySelectorAll('.domain-count');
+  domainCounts.forEach(el => {
+    const num = el.textContent.match(/\d+/);
+    if (num) el.textContent = `${num[0]}+ ${t('questions')}`;
+  });
+
+  // Start training button
+  const startBtn = el('btn-start-treino');
+  if (startBtn) startBtn.textContent = t('startTraining');
+
+  // Back buttons
+  document.querySelectorAll('.btn-back').forEach(b => b.textContent = t('back'));
+
+  // Loading
+  const loadH3 = qs('#screen-loading h3');
+  if (loadH3) loadH3.textContent = t('loadingTitle');
+  const loadP = qs('#screen-loading .text-muted');
+  if (loadP) loadP.textContent = t('loadingSub');
+
+  // Quiz topbar
+  const quitBtn = qs('.btn-quit');
+  if (quitBtn) quitBtn.textContent = t('quit');
+
+  // Mark button
+  const markBtn = el('btn-mark');
+  if (markBtn) markBtn.innerHTML = t('markReview');
+
+  // Submit button
+  const submitBtn = el('btn-submit');
+  if (submitBtn) submitBtn.textContent = t('confirmAnswer');
+
+  // Nav prev
+  const prevBtn = el('btn-prev');
+  if (prevBtn) prevBtn.textContent = t('prev');
+
+  // Nav panel
+  const navTitle = qs('.nav-panel-title');
+  if (navTitle) navTitle.textContent = t('navigation');
+
+  const legendItems = document.querySelectorAll('.nav-legend-item');
+  const legendKeys = ['answered', 'marked', 'current'];
+  legendItems.forEach((el, i) => {
+    const dot = el.querySelector('.nav-dot');
+    if (dot && legendKeys[i]) el.innerHTML = dot.outerHTML + ' ' + t(legendKeys[i]);
+  });
+
+  // Results
+  const scoreLabel = qs('.score-label-sm');
+  if (scoreLabel) scoreLabel.textContent = t('hits');
+
+  // Results card titles
+  const cardTitles = document.querySelectorAll('.card-title');
+  if (cardTitles[0]) cardTitles[0].textContent = t('domainPerformance');
+  if (cardTitles[1]) cardTitles[1].textContent = t('reviewTitle');
+
+  // Filter buttons
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const filterKeys = ['filterAll', 'filterWrong', 'filterCorrect'];
+  filterBtns.forEach((el, i) => { if (filterKeys[i]) el.textContent = t(filterKeys[i]); });
+
+  // Results actions
+  const resultsActions = document.querySelectorAll('.results-actions .btn-primary, .results-actions .btn-ghost, .results-actions a');
+  if (resultsActions[0]) resultsActions[0].textContent = t('newSimulado');
+  if (resultsActions[1]) resultsActions[1].textContent = t('history');
+  if (resultsActions[2]) resultsActions[2].textContent = t('portal');
+
+  // History screen
+  const histTitle = qs('#screen-history .screen-title');
+  if (histTitle) histTitle.textContent = t('historyTitle');
+  const histSub = qs('#screen-history .screen-subtitle');
+  if (histSub) histSub.textContent = t('historySub');
+  const clearBtn = qs('.btn-danger');
+  if (clearBtn) clearBtn.textContent = t('clearHistory');
+
+  // Modal
+  const modalH3 = qs('.modal-box h3');
+  if (modalH3) modalH3.textContent = t('quitTitle');
+  const modalP = qs('.modal-box p');
+  if (modalP) modalP.textContent = t('quitMsg');
+  const modalBtns = document.querySelectorAll('.modal-actions button');
+  if (modalBtns[0]) modalBtns[0].textContent = t('continueBtn');
+  if (modalBtns[1]) modalBtns[1].textContent = t('quitBtn');
+}
+
+function initSettings() {
+  state.theme = localStorage.getItem('pl300_theme') || 'dark';
+  state.lang = localStorage.getItem('pl300_lang') || 'pt';
+  applyTheme();
+  applyLang();
+}
+
+// Auto-init on load
+document.addEventListener('DOMContentLoaded', initSettings);
+
+// ============================================================
+//  QUESTION TEXT HELPER (bilingual)
+// ============================================================
+function getQText(raw) {
+  // Returns { question, options, explanation } in the selected language
+  if (state.lang === 'pt') {
+    return {
+      question: raw.pergunta ?? raw.question ?? '',
+      options: raw.opcoes ?? raw.options ?? [],
+      explanation: raw.explicacao ?? raw.explanation ?? ''
+    };
+  } else {
+    return {
+      question: raw.question ?? raw.pergunta ?? '',
+      options: raw.options ?? raw.opcoes ?? [],
+      explanation: raw.explanation ?? raw.explicacao ?? ''
+    };
+  }
+}
 
 // ============================================================
 //  UTILITIES
@@ -3557,7 +3845,7 @@ function normalizeQuestion(raw) {
 // ============================================================
 function startQuiz() {
   if (state.mode === 'treino' && state.selectedDomains.length === 0) {
-    alert('Selecione pelo menos um domínio para continuar.');
+    alert(t('selectDomain'));
     return;
   }
 
@@ -3660,12 +3948,13 @@ function loadQuestion(index) {
   const q = state.questions[index];
   
   if (!q) {
-    alert('Nenhuma questão foi carregada. Verifique os domínios selecionados e tente novamente.');
+    alert(t('noQuestions'));
     showScreen('screen-start');
     return;
   }
 
   const question = normalizeQuestion(q);
+  const qText = getQText(q);
   const total = state.questions.length;
   const answered = state.answers[index];
 
@@ -3673,7 +3962,7 @@ function loadQuestion(index) {
   document.getElementById('q-current').textContent = index + 1;
   document.getElementById('q-total').textContent = total;
   document.getElementById('q-domain-badge').textContent = question.domain;
-  document.getElementById('q-badge').textContent = `Questão ${index + 1}`;
+  document.getElementById('q-badge').textContent = `${t('question')} ${index + 1}`;
   document.getElementById('progress-fill').style.width = `${((index + 1) / total) * 100}%`;
 
   // Mark button
@@ -3684,18 +3973,18 @@ function loadQuestion(index) {
   const hintContainer = document.getElementById('multi-hint-container');
   const isMulti = Array.isArray(question.answer);
   hintContainer.innerHTML = isMulti
-    ? '<span class="multi-hint">⚠️ Selecione todas as opções corretas</span>'
+    ? `<span class="multi-hint">${t('multiHint')}</span>`
     : '';
 
-  // Question text
-  document.getElementById('question-text').textContent = question.question;
+  // Question text (bilingual)
+  document.getElementById('question-text').textContent = qText.question;
 
   // Options
   const container = document.getElementById('options-container');
   container.innerHTML = '';
   const letters = ['A', 'B', 'C', 'D', 'E'];
 
-  (question.options || []).forEach((opt, i) => {
+  (qText.options || []).forEach((opt, i) => {
     const div = document.createElement('div');
     div.className = 'option-item';
     div.dataset.index = i;
@@ -3744,7 +4033,7 @@ function loadQuestion(index) {
   // Prev/Next buttons
   document.getElementById('btn-prev').disabled = index === 0;
   const nextBtn = document.getElementById('btn-next');
-  nextBtn.textContent = index === total - 1 ? 'Ver Resultado →' : 'Próxima →';
+  nextBtn.textContent = index === total - 1 ? t('seeResult') : t('next');
 
   // Update nav grid
   updateNavGrid();
@@ -3777,7 +4066,7 @@ function submitAnswer() {
   const selected = [...document.querySelectorAll('.option-item.selected')].map(d => parseInt(d.dataset.index));
 
   if (selected.length === 0) {
-    alert('Selecione pelo menos uma opção antes de confirmar.');
+    alert(t('selectOption'));
     return;
   }
 
@@ -3812,12 +4101,13 @@ function submitAnswer() {
 
 function showFeedback(q, isCorrect) {
   const box = document.getElementById('feedback-box');
+  const qText = getQText(q);
   const correctAnswers = Array.isArray(q.answer) ? q.answer : [q.answer];
-  const correctTexts = correctAnswers.map(i => q.options[i]).join(', ');
+  const correctTexts = correctAnswers.map(i => qText.options[i]).join(', ');
   box.className = `feedback-box ${isCorrect ? 'correct' : 'incorrect'}`;
   box.innerHTML = isCorrect
-    ? `✅ <strong>Correto!</strong> ${q.explanation}`
-    : `❌ <strong>Incorreto.</strong> Resposta correta: <em>${correctTexts}</em><br><br>${q.explanation}`;
+    ? `${t('correctFeedback')} ${qText.explanation}`
+    : `${t('incorrectFeedback')} <em>${correctTexts}</em><br><br>${qText.explanation}`;
 }
 
 // ============================================================
@@ -3831,7 +4121,7 @@ function nextQuestion() {
   } else {
     if (!allAnswered() && state.mode === 'treino') {
       const unanswered = state.questions.length - state.answers.filter(a => a !== null).length;
-      if (!confirm(`Você ainda tem ${unanswered} questão(ões) sem resposta. Deseja ver o resultado mesmo assim?`)) return;
+      if (!confirm(t('unansweredMsg')(unanswered))) return;
     }
     clearInterval(state.timerInterval);
     showResults();
@@ -3924,8 +4214,8 @@ function showResults() {
   // Save to history
   const elapsed = Math.floor((Date.now() - state.startTime) / 1000);
   saveHistory({
-    date: new Date().toLocaleString('pt-BR'),
-    mode: state.mode === 'oficial' ? 'Simulado Oficial' : 'Modo Treino',
+    date: new Date().toLocaleString(state.lang === 'pt' ? 'pt-BR' : 'en-US'),
+    mode: state.mode === 'oficial' ? t('officialLabel') : t('trainingLabel'),
     domains: state.selectedDomains,
     correct, total, pct, approved,
     elapsed
@@ -3940,16 +4230,16 @@ function showResults() {
 
   document.getElementById('score-pct').textContent = `${pct}%`;
   document.getElementById('results-title').textContent =
-    state.mode === 'oficial' ? 'Resultado do Simulado Oficial' : 'Resultado do Modo Treino';
+    state.mode === 'oficial' ? t('resultTitleOfficial') : t('resultTitleTraining');
 
   const badge = document.getElementById('result-badge');
-  badge.textContent = approved ? '🏆 APROVADO — ≥ 70%' : '📚 Não Atingiu — < 70%';
+  badge.textContent = approved ? t('approved') : t('failed');
   badge.className = `result-badge ${approved ? 'approved' : 'failed'}`;
 
   document.getElementById('results-detail').textContent =
-    `${correct} de ${total} questões corretas (${answered.length} respondidas)`;
+    `${correct} ${t('ofQuestions')} ${total} ${t('correctQuestions')} (${answered.length} ${t('answeredLabel')})`;
   document.getElementById('results-time').textContent =
-    `Tempo: ${formatTime(elapsed)}`;
+    `${t('time')}: ${formatTime(elapsed)}`;
 
   // Domain chart
   renderDomainChart();
@@ -4002,9 +4292,10 @@ function renderReview(filter) {
     if (filter === 'correct' && !ans.correct) return;
     if (filter === 'wrong' && ans.correct) return;
 
+    const qText = getQText(q);
     const correctAnswers = Array.isArray(q.answer) ? q.answer : [q.answer];
-    const correctTexts = correctAnswers.map(ci => q.options[ci]).join(', ');
-    const selectedTexts = ans.selected.map(si => q.options[si]).join(', ') || '(sem resposta)';
+    const correctTexts = correctAnswers.map(ci => qText.options[ci]).join(', ');
+    const selectedTexts = ans.selected.map(si => qText.options[si]).join(', ') || t('noAnswer');
 
     const item = document.createElement('div');
     item.className = 'review-item';
@@ -4014,18 +4305,18 @@ function renderReview(filter) {
         <span class="review-q-num">Q${i + 1}</span>
         <span class="review-q-domain">${q.domain}</span>
       </div>
-      <p class="review-q-text">${q.question}</p>
+      <p class="review-q-text">${qText.question}</p>
       <div class="review-details" id="review-detail-${i}">
         <div class="review-answer">
-          <span class="review-answer-label">Sua resposta:</span>
+          <span class="review-answer-label">${t('yourAnswer')}</span>
           <span class="review-answer-val ${ans.correct ? 'correct-answer' : 'wrong-answer'}">${selectedTexts}</span>
         </div>
         ${!ans.correct ? `
         <div class="review-answer">
-          <span class="review-answer-label">Correta:</span>
+          <span class="review-answer-label">${t('correctLabel')}</span>
           <span class="review-answer-val correct-answer">${correctTexts}</span>
         </div>` : ''}
-        <div class="review-explanation">${q.explanation}</div>
+        <div class="review-explanation">${qText.explanation}</div>
       </div>
     `;
     item.addEventListener('click', () => {
@@ -4036,7 +4327,7 @@ function renderReview(filter) {
   });
 
   if (list.innerHTML === '') {
-    list.innerHTML = '<p class="text-muted" style="text-align:center;padding:32px 0">Nenhuma questão encontrada neste filtro.</p>';
+    list.innerHTML = `<p class="text-muted" style="text-align:center;padding:32px 0">${t('noFilter')}</p>`;
   }
 }
 
@@ -4073,7 +4364,7 @@ function renderHistory() {
   const history = loadHistoryData();
 
   if (history.length === 0) {
-    list.innerHTML = '<div class="no-history">📭 Nenhum simulado realizado ainda.</div>';
+    list.innerHTML = `<div class="no-history">${t('noHistory')}</div>`;
     return;
   }
 
@@ -4082,18 +4373,18 @@ function renderHistory() {
       <div class="history-score">${h.pct}%</div>
       <div class="history-info">
         <div class="h-mode">${h.mode}</div>
-        <div class="h-detail">${h.correct} de ${h.total} questões corretas · ${formatTime(h.elapsed || 0)}</div>
+        <div class="h-detail">${h.correct} ${t('ofQuestions')} ${h.total} ${t('correctQuestions')} · ${formatTime(h.elapsed || 0)}</div>
         <div class="h-date">${h.date}</div>
       </div>
       <div class="history-badge ${h.approved ? 'approved' : 'failed'}">
-        ${h.approved ? '✅ Aprovado' : '❌ Reprovado'}
+        ${h.approved ? t('approvedBadge') : t('failedBadge')}
       </div>
     </div>
   `).join('');
 }
 
 function clearHistory() {
-  if (confirm('Tem certeza que deseja apagar todo o histórico?')) {
+  if (confirm(t('confirmClear'))) {
     localStorage.removeItem('pl300_history');
     renderHistory();
   }
