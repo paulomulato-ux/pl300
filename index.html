@@ -143,9 +143,8 @@
         .pw-header { display:flex; justify-content:space-between; margin-bottom:20px; }
         .pw-title { font-weight:700; font-size:1.2rem; }
         .pw-pct { color:var(--accent); font-weight:800; font-size:1.2rem; }
-        .pw-track { display:flex; height:12px; border-radius:100px; background:var(--bg-sub); overflow:hidden; gap:2px; }
-        .pw-segment { flex:1; background:var(--bg-sub); cursor:pointer; transition:var(--ease); }
-        .pw-segment.completed { background:var(--accent); }
+        .pw-track { display:flex; height:12px; border-radius:100px; background:var(--bg-sub); overflow:hidden; }
+        .pw-fill { height:100%; background:var(--accent); transition:width 0.5s ease; border-radius:100px; }
 
         /* =========================================================
            DOMAINS TABLE
@@ -353,10 +352,7 @@
                 <div class="pw-pct" id="prog-pct">0%</div>
             </div>
             <div class="pw-track">
-                <div class="pw-segment" data-domain="0"></div>
-                <div class="pw-segment" data-domain="1"></div>
-                <div class="pw-segment" data-domain="2"></div>
-                <div class="pw-segment" data-domain="3"></div>
+                <div class="pw-fill" id="prog-fill" style="width: 0%;"></div>
             </div>
         </section>
 
@@ -602,24 +598,20 @@
 
         function renderProgress() {
             const prog = window.getTopicProgress ? window.getTopicProgress() : {};
-            const segments = document.querySelectorAll('.pw-segment');
             let globalTotal = 0;
             
-            segments.forEach((seg, idx) => {
+            Object.keys(topicsByModule).forEach(idx => {
                 const topics = topicsByModule[idx];
-                if (!topics) return;
                 let completedCount = 0;
                 topics.forEach(t => {
                     if (prog[t]) completedCount++;
                 });
-                
-                const modulePct = (completedCount / topics.length) * 100;
-                seg.innerHTML = `<div style="height:100%; background:var(--accent); width:${modulePct}%; transition:var(--ease);"></div>`;
-                
                 globalTotal += (completedCount / topics.length) * 25;
             });
             
             document.getElementById('prog-pct').innerText = Math.round(globalTotal) + '%';
+            const fillEl = document.getElementById('prog-fill');
+            if (fillEl) fillEl.style.width = globalTotal + '%';
         }
 
         window.addEventListener('portalProgressChanged', renderProgress);
