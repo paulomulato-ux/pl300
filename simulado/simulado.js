@@ -3970,7 +3970,7 @@ function startQuiz() {
     state.answers = new Array(state.questions.length).fill(null);
     state.marked = new Set();
 
-    let globalMarked = new Set(JSON.parse(localStorage.getItem('pl300_global_marked') || '[]'));
+    // globalMarked already declared above
     state.questions.forEach((q, i) => {
       if (globalMarked.has(q.id)) {
         state.marked.add(i);
