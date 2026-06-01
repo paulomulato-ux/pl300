@@ -4126,6 +4126,7 @@ function submitAnswer() {
   document.getElementById('nav-actions').style.display = 'flex';
 
   updateNavGrid();
+  if (typeof updateGlobalStats === 'function') updateGlobalStats();
 }
 
 function showFeedback(q, isCorrect) {
@@ -4180,6 +4181,15 @@ function toggleMark() {
   const btn = document.getElementById('btn-mark');
   btn.className = 'btn-mark' + (state.marked.has(i) ? ' marked' : '');
   updateNavGrid();
+  if (typeof updateGlobalStats === 'function') updateGlobalStats();
+}
+
+function updateGlobalStats() {
+  try {
+    const solved = state.answers.filter(a => a !== null).length;
+    const review = state.marked.size;
+    localStorage.setItem('pl300_sim_stats', JSON.stringify({ solved, review }));
+  } catch(e) {}
 }
 
 // ============================================================
