@@ -95,8 +95,8 @@
         
         const isPt = localStorage.getItem(STORAGE_LANG) !== 'en';
         const bioText = isPt
-            ? "Ajudo organizações a converter dados em inteligência de negócio, apoiando decisões estratégicas com análises, indicadores e dashboards orientados a resultados."
-            : "I help organizations convert data into business intelligence, supporting strategic decisions with results-oriented analytics, indicators and dashboards.";
+            ? "Ajudo empresas a transformar dados em informações estratégicas para apoiar a tomada de decisão."
+            : "I help companies transform data into strategic information to support decision-making";
         const connectText = isPt ? "Conectar no LinkedIn" : "Connect on LinkedIn";
 
         const banner = document.createElement('div');
@@ -112,14 +112,14 @@
                 .cta-name { font-size: 1.1rem; font-weight: 700; color: #fff; }
                 .cta-separator { color: rgba(255, 255, 255, 0.3); font-size: 1rem; }
                 .cta-role { font-size: 0.9rem; color: #7dd3fc; font-weight: 500; }
-                .cta-profile-bio { font-size: 0.8rem; color: rgba(255, 255, 255, 0.9); font-family: 'DM Sans', sans-serif; line-height: 1.3; }
+                .cta-profile-bio { font-size: 0.85rem; color: rgba(255, 255, 255, 0.9); font-family: 'DM Sans', sans-serif; line-height: 1.3; }
                 .btn-linkedin { display: flex; align-items: center; gap: 8px; background: #3b82f6; color: #fff; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; font-size: 0.9rem; white-space: nowrap; border: none; }
                 .btn-linkedin:hover { background: #2563eb; color: #fff; opacity: 1; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4); }
                 
-                body { padding-top: 76px !important; }
-                .settings-panel { top: 84px !important; }
-                .layout-wrapper { height: calc(100vh - 76px) !important; margin-top: 0 !important; }
-                .header, .site-header, .quiz-topbar { top: 76px !important; } 
+                body { padding-top: var(--banner-h, 76px) !important; }
+                .settings-panel { top: calc(var(--banner-h, 76px) + 8px) !important; }
+                .layout-wrapper { height: calc(100vh - var(--banner-h, 76px)) !important; margin-top: 0 !important; }
+                .header, .site-header, .quiz-topbar { top: var(--banner-h, 76px) !important; } 
                 .main-container { padding-top: 156px !important; }
                 
                 @media(max-width:700px) {
@@ -127,10 +127,10 @@
                     .cta-profile { flex-direction: column; text-align: center; gap: 8px; }
                     .cta-profile-name { flex-direction: column; align-items: center; gap: 4px; }
                     .cta-separator { display: none; }
-                    body { padding-top: 150px !important; }
-                    .settings-panel { top: 158px !important; }
-                    .layout-wrapper { height: calc(100vh - 150px) !important; margin-top: 0 !important; }
-                    .header, .site-header, .quiz-topbar { top: 150px !important; }
+                    body { padding-top: var(--banner-h, 150px) !important; }
+                    .settings-panel { top: calc(var(--banner-h, 150px) + 8px) !important; }
+                    .layout-wrapper { height: calc(100vh - var(--banner-h, 150px)) !important; margin-top: 0 !important; }
+                    .header, .site-header, .quiz-topbar { top: var(--banner-h, 150px) !important; }
                     .main-container { padding-top: 230px !important; }
                 }
             </style>
@@ -147,12 +147,25 @@
                     </div>
                 </div>
                 <a href="https://www.linkedin.com/in/paulomulato/" target="_blank" class="btn-linkedin">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
                     <span id="inj-connect">${connectText}</span>
                 </a>
             </div>
         `;
         document.body.prepend(banner);
+
+        const adjustBannerHeight = () => {
+            const h = banner.offsetHeight;
+            const path = window.location.pathname;
+            const isHome = path.endsWith('index.html') || path.endsWith('/') || path.endsWith('pl300-portal/');
+            if (!isHome) {
+                document.documentElement.style.setProperty('--banner-h', h + 'px');
+            }
+        };
+        setTimeout(adjustBannerHeight, 50);
+        window.addEventListener('resize', adjustBannerHeight);
     }
 
     function init() {
