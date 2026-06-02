@@ -15282,37 +15282,80 @@ function loadQuestion(index) {
   // Question text (bilingual)
   document.getElementById('question-text').textContent = qText.question;
 
-  // Options
+  // Options — render as accessible inputs inside labels (fieldset/legend)
   const container = document.getElementById('options-container');
   container.innerHTML = '';
   const letters = ['A', 'B', 'C', 'D', 'E'];
 
+  const fieldset = document.createElement('fieldset');
+  fieldset.className = 'options-fieldset';
+  const legend = document.createElement('legend');
+  legend.className = 'sr-only';
+  legend.textContent = qText.question;
+  fieldset.appendChild(legend);
+
   (qText.options || []).forEach((opt, i) => {
-    const div = document.createElement('div');
-    div.className = 'option-item';
-    div.dataset.index = i;
-    div.onclick = () => toggleOption(div, isMulti);
+    const label = document.createElement('label');
+    label.className = 'option-item';
+    label.dataset.index = i;
+    label.tabIndex = 0;
+
+    const input = document.createElement('input');
+    input.type = isMulti ? 'checkbox' : 'radio';
+    input.name = 'option-input';
+    input.value = i;
+    input.setAttribute('aria-label', letters[i] + ' ' + (qText.options[i] || ''));
 
     // Restore selection if answered
     if (answered) {
-      div.classList.add('disabled');
+      label.classList.add('disabled');
       if (answered.selected.includes(i)) {
+        input.checked = true;
         const correctAnswers = Array.isArray(qText.answer) ? qText.answer : [qText.answer];
-        div.classList.add(correctAnswers.includes(i) ? 'correct' : 'incorrect');
+        label.classList.add(correctAnswers.includes(i) ? 'correct' : 'incorrect');
       } else {
         const correctAnswers = Array.isArray(qText.answer) ? qText.answer : [qText.answer];
         if (correctAnswers.includes(i) && state.mode === 'treino') {
-          div.classList.add('correct'); // show correct answer
+          label.classList.add('correct'); // show correct answer
         }
       }
     }
 
-    div.innerHTML = `
-      <span class="option-letter">${letters[i]}</span>
-      <span class="option-text">${opt}</span>
-    `;
-    container.appendChild(div);
+    label.innerHTML = `
+      `;
+    label.appendChild(input);
+    const spanLetter = document.createElement('span');
+    spanLetter.className = 'option-letter';
+    spanLetter.textContent = letters[i];
+    const spanText = document.createElement('span');
+    spanText.className = 'option-text';
+    spanText.textContent = opt;
+    label.appendChild(spanLetter);
+    label.appendChild(spanText);
+
+    // Input change updates visual selected state
+    input.addEventListener('change', (e) => {
+      if (isMulti) {
+        if (input.checked) label.classList.add('selected'); else label.classList.remove('selected');
+      } else {
+        // unselect others
+        fieldset.querySelectorAll('.option-item').forEach(l => l.classList.remove('selected'));
+        if (input.checked) label.classList.add('selected');
+      }
+    });
+
+    // Allow clicking the entire label to focus/check via keyboard
+    label.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Enter' || ev.key === ' ') {
+        ev.preventDefault();
+        input.click();
+      }
+    });
+
+    fieldset.appendChild(label);
   });
+
+  container.appendChild(fieldset);
 
   // Submit / Nav
   const submitBtn = document.getElementById('btn-submit');
@@ -15346,19 +15389,8 @@ function loadQuestion(index) {
 //  OPTION SELECTION
 // ============================================================
 function toggleOption(div, isMulti) {
-  if (div.classList.contains('disabled')) return;
-
-  if (isMulti) {
-    div.classList.toggle('selected');
-    div.querySelector('.option-letter').style.background = div.classList.contains('selected') ? 'var(--purple)' : '';
-  } else {
-    document.querySelectorAll('.option-item').forEach(o => {
-      o.classList.remove('selected');
-      o.querySelector('.option-letter').style.background = '';
-    });
-    div.classList.add('selected');
-    div.querySelector('.option-letter').style.background = 'var(--purple)';
-  }
+  // Deprecated: handled now by native inputs; kept for backward compat
+  return;
 }
 
 // ============================================================
@@ -15366,7 +15398,10 @@ function toggleOption(div, isMulti) {
 // ============================================================
 function submitAnswer() {
   const q = state.questions[state.currentIndex];
-  const selected = [...document.querySelectorAll('.option-item.selected')].map(d => parseInt(d.dataset.index));
+  // Collect selected indices from inputs
+  const selected = [...document.querySelectorAll('#options-container input[type="radio"], #options-container input[type="checkbox"]')]
+    .filter(inp => inp.checked)
+    .map(inp => parseInt(inp.value));
 
   if (selected.length === 0) {
     alert(t('selectOption'));

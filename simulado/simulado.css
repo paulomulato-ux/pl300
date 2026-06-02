@@ -497,6 +497,23 @@ body {
 .option-item.incorrect{ background:var(--red-bg) !important; border-color:var(--red) !important; }
 .option-item.disabled { cursor:default; pointer-events:none; }
 
+/* Ensure touch targets meet minimum 44x44px recommendation */
+.option-item { min-height:44px; padding:12px 16px; }
+.option-letter { width:40px; height:40px; }
+
+/* Hide inputs visually but keep them accessible to assistive tech */
+.options-fieldset input[type="radio"],
+.options-fieldset input[type="checkbox"] {
+  position: absolute !important;
+  width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); border: 0;
+}
+
+/* Screen-reader only (for legends) */
+.sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); border: 0; }
+
+/* Focus style for keyboard users */
+.option-item:focus-within { outline: 3px solid rgba(193,162,106,0.18); outline-offset: 2px; }
+
 .option-letter {
   width:32px; height:32px; border-radius:50%;
   background:var(--border); display:flex; align-items:center;
