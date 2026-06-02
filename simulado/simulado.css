@@ -589,9 +589,9 @@ body {
 .nav-legend .legend-icon { display:inline-flex; width:16px; height:16px; align-items:center; justify-content:center; }
 .nav-legend .legend-icon svg { width:14px; height:14px; }
 
-.nav-legend .legend-icon.answered { color: #10B981; }
-.nav-legend .legend-icon.marked  { color: #F59E0B; }
-.nav-legend .legend-icon.current { color: #D6A24A; }
+.nav-legend .legend-icon.answered { color: var(--green); }
+.nav-legend .legend-icon.marked  { color: var(--yellow); }
+.nav-legend .legend-icon.current { color: var(--purple); }
 
 /* ===========================
    RESULTS SCREEN
