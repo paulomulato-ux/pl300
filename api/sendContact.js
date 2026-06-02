@@ -17,11 +17,11 @@ module.exports = async (req, res) => {
 
     // Resend free tier structure (no custom domain):
     // from: onboarding@resend.dev (required, fixed)
-    // to: paulomulato@gmail.com (your inbox, fixed)
+    // to: paulomulato+pl300@gmail.com (your email with +label for filtering)
     // reply_to: email from user (so replies go to their email)
     const payload = {
       from: 'onboarding@resend.dev',
-      to: 'paulomulato@gmail.com',
+      to: 'paulomulato+pl300@gmail.com',
       reply_to: email,
       subject: `📩 Nova mensagem de contato: ${name}`,
       html: `
