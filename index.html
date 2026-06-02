@@ -655,7 +655,7 @@
             }
         }
 
-        function sendContactMessage() {
+        async function sendContactMessage() {
             const lang = localStorage.getItem('pl300_lang') || 'pt';
             const name = document.getElementById('contact-name')?.value.trim() || '';
             const email = document.getElementById('contact-email')?.value.trim() || '';
@@ -674,13 +674,29 @@
                 return;
             }
 
-            const recipient = 'paulomulato+pl300@gmail.com';
-            const subject = encodeURIComponent('Contato via PL-300 Portal');
-            const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\nMensagem:\n${message}\n\n---\nEnviado pelo Portal PL-300`);
-            const mailto = `mailto:${recipient}?subject=${subject}&body=${body}`;
+            updateContactStatus('Sending...');
 
-            updateContactStatus(LOCAL_DICT.contact_client_opening[lang]);
-            window.location.href = mailto;
+            try {
+                const resp = await fetch('/api/sendContact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, message })
+                });
+                const data = await resp.json();
+                if (resp.ok && data && data.ok) {
+                    updateContactStatus(lang === 'pt' ? 'Mensagem enviada com sucesso!' : 'Message sent successfully!');
+                    // clear form
+                    document.getElementById('contact-name').value = '';
+                    document.getElementById('contact-email').value = '';
+                    document.getElementById('contact-message').value = '';
+                } else {
+                    console.error('sendContact error', data);
+                    updateContactStatus((data && data.error) ? data.error : 'Erro ao enviar mensagem', true);
+                }
+            } catch (err) {
+                console.error(err);
+                updateContactStatus('Erro de rede ao enviar mensagem', true);
+            }
         }
 
         function attachContactListeners() {
