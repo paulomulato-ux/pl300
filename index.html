@@ -192,6 +192,32 @@
         .mat-icon { font-size:2rem; margin-bottom:16px; }
         .mat-title { font-size:1rem; font-weight:700; margin-bottom:8px; }
 
+        .rating-card {
+            background:var(--bg-surface); border:1px solid var(--border-color);
+            border-radius:16px; padding:28px; margin-bottom:60px; box-shadow:var(--sh-sm);
+        }
+        .rating-card h2 { font-size:1.4rem; margin-bottom:8px; }
+        .rating-card p { color:var(--text-sub); margin-bottom:18px; max-width:660px; }
+        .rating-stars { display:flex; gap:10px; margin-bottom:18px; }
+        .rating-stars input { position:absolute; opacity:0; width:0; height:0; }
+        .rating-stars label {
+            width:44px; height:44px; display:inline-flex; align-items:center; justify-content:center;
+            border-radius:50%; background:rgba(255,255,255,0.08); border:1px solid var(--border-color); color:var(--text-sub);
+            cursor:pointer; font-size:1.3rem; transition:all 0.2s ease;
+        }
+        .rating-stars label:hover,
+        .rating-stars label:focus-visible {
+            border-color:var(--accent); color:var(--accent);
+            outline:2px solid rgba(193,162,106,0.25); outline-offset:2px;
+        }
+        .rating-stars label.active { background:rgba(193,162,106,0.12); border-color:var(--accent); color:var(--accent); }
+        .rating-comment { width:100%; min-height:96px; resize:vertical;
+            padding:14px 16px; border-radius:14px; border:1px solid var(--border-color);
+            background:var(--bg-main); color:var(--text-main); font-family:inherit; font-size:0.95rem; margin-bottom:18px;
+        }
+        .rating-actions { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+        .rating-status { color:var(--accent); font-size:0.95rem; }
+
         @media(max-width:900px) {
             .hero { flex-direction:column; text-align:center; }
             .hero p { margin:0 auto 32px; }
@@ -435,6 +461,25 @@
             <!-- README card removed -->
         </div>
 
+        <div class="rating-card" id="rating-card">
+            <h2 data-i18n="rating_title">Avalie este portal</h2>
+            <p data-i18n="rating_desc">Opcional: escolha quantas estrelas e deixe um comentário se quiser.</p>
+            <form id="rating-form" class="rating-form" autocomplete="off">
+                <div class="rating-stars" role="radiogroup" aria-labelledby="rating-title">
+                    <input type="radio" id="rating-5" name="rating" value="5"><label for="rating-5" aria-label="5 estrelas">★</label>
+                    <input type="radio" id="rating-4" name="rating" value="4"><label for="rating-4" aria-label="4 estrelas">★</label>
+                    <input type="radio" id="rating-3" name="rating" value="3"><label for="rating-3" aria-label="3 estrelas">★</label>
+                    <input type="radio" id="rating-2" name="rating" value="2"><label for="rating-2" aria-label="2 estrelas">★</label>
+                    <input type="radio" id="rating-1" name="rating" value="1"><label for="rating-1" aria-label="1 estrela">★</label>
+                </div>
+                <textarea id="rating-comment" class="rating-comment" placeholder="" aria-label="Comentário opcional"></textarea>
+                <div class="rating-actions">
+                    <button type="button" id="rating-submit" class="btn-primary" data-i18n="rating_submit">Enviar Avaliação</button>
+                    <span id="rating-status" class="rating-status" aria-live="polite"></span>
+                </div>
+            </form>
+        </div>
+
     </div>
 
     <!-- SCRIPT I18N + PROGRESS -->
@@ -497,7 +542,13 @@
             cta_bio: { pt: "Ajudo empresas na transformação de dados em informações estratégicas para apoiar a tomada de decisão.", en: "I help companies transform data into strategic information to support decision-making." },
             cta_connect: { pt: "Conectar no LinkedIn", en: "Connect on LinkedIn" },
             btn_review: { pt: "Revisar Marcadas", en: "Review Marked" },
-            btn_reset: { pt: "Zerar Respostas", en: "Reset Answers" }
+            btn_reset: { pt: "Zerar Respostas", en: "Reset Answers" },
+            rating_title: { pt: "Avalie este portal", en: "Rate this portal" },
+            rating_desc: { pt: "Opcional: escolha quantas estrelas e deixe um comentário se quiser.", en: "Optional: choose how many stars and leave a comment if you like." },
+            rating_submit: { pt: "Enviar Avaliação", en: "Submit Rating" },
+            rating_saved: { pt: "Sua avaliação foi salva localmente.", en: "Your rating has been saved locally." },
+            rating_placeholder: { pt: "Comentário opcional...", en: "Optional comment..." },
+            rating_select_stars: { pt: "Selecione pelo menos uma estrela antes de enviar.", en: "Select at least one star before submitting." }
         };
 
         function updateLocalTranslations() {
@@ -508,6 +559,7 @@
                     el.innerHTML = LOCAL_DICT[key][currentLang];
                 }
             });
+            applyRatingTranslations();
         }
 
         window.addEventListener('portalLangChanged', () => {
@@ -567,6 +619,76 @@
             } catch(e) {}
         }
 
+        const RATING_STORAGE_KEY = 'pl300_rating';
+
+        function applyRatingTranslations() {
+            const lang = localStorage.getItem('pl300_lang') || 'pt';
+            const submitBtn = document.getElementById('rating-submit');
+            const commentField = document.getElementById('rating-comment');
+            if (submitBtn) submitBtn.innerText = LOCAL_DICT.rating_submit[lang];
+            if (commentField) commentField.placeholder = LOCAL_DICT.rating_placeholder[lang];
+        }
+
+        function getSelectedRating() {
+            const checked = document.querySelector('input[name="rating"]:checked');
+            return checked ? Number(checked.value) : 0;
+        }
+
+        function updateRatingStars(value) {
+            document.querySelectorAll('.rating-stars label').forEach((label, index) => {
+                label.classList.toggle('active', index < value);
+            });
+        }
+
+        function updateRatingWidgetUI(saved) {
+            const status = document.getElementById('rating-status');
+            const lang = localStorage.getItem('pl300_lang') || 'pt';
+            if (!status) return;
+            if (saved && saved.rating) {
+                status.innerText = `${LOCAL_DICT.rating_saved[lang]} ${saved.rating}★`;
+                updateRatingStars(saved.rating);
+            } else {
+                status.innerText = '';
+                const rating = getSelectedRating();
+                updateRatingStars(rating);
+            }
+        }
+
+        function loadRatingWidget() {
+            const saved = JSON.parse(localStorage.getItem(RATING_STORAGE_KEY) || 'null');
+            if (saved) {
+                const input = document.querySelector(`input[name="rating"][value="${saved.rating}"]`);
+                if (input) input.checked = true;
+                const commentField = document.getElementById('rating-comment');
+                if (commentField) commentField.value = saved.comment || '';
+                updateRatingWidgetUI(saved);
+            }
+        }
+
+        function saveRating() {
+            const lang = localStorage.getItem('pl300_lang') || 'pt';
+            const rating = getSelectedRating();
+            if (!rating) {
+                const status = document.getElementById('rating-status');
+                if (status) status.innerText = LOCAL_DICT.rating_select_stars[lang];
+                return;
+            }
+            const comment = document.getElementById('rating-comment')?.value.trim() || '';
+            const payload = { rating, comment, submittedAt: new Date().toISOString() };
+            localStorage.setItem(RATING_STORAGE_KEY, JSON.stringify(payload));
+            updateRatingWidgetUI(payload);
+        }
+
+        function attachRatingListeners() {
+            document.querySelectorAll('input[name="rating"]').forEach(input => {
+                input.addEventListener('change', () => {
+                    updateRatingWidgetUI();
+                });
+            });
+            const submitBtn = document.getElementById('rating-submit');
+            if (submitBtn) submitBtn.addEventListener('click', saveRating);
+        }
+
         function resetGlobalProgressFromHome() {
             const lang = localStorage.getItem('pl300_lang') || 'pt';
             const msg = lang === 'pt' 
@@ -587,8 +709,11 @@
             if(typeof updateTheme === 'function') updateTheme();
             if(typeof applyTranslations === 'function') applyTranslations();
             updateLocalTranslations();
+            applyRatingTranslations();
             updateThemeUI();
             updateLangUI();
+            attachRatingListeners();
+            loadRatingWidget();
             renderProgress();
             renderStats();
         });
