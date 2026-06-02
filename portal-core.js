@@ -123,15 +123,17 @@
                 .main-container { padding-top: 156px !important; }
                 
                 @media(max-width:700px) {
-                    .cta-banner-content { flex-direction: column; gap: 12px; text-align: center; }
-                    .cta-profile { flex-direction: column; text-align: center; gap: 8px; }
-                    .cta-profile-name { flex-direction: column; align-items: center; gap: 4px; }
+                    .cta-banner-content { flex-direction: column; gap: 8px; text-align: center; }
+                    .cta-profile { flex-direction: row; align-items:center; gap: 12px; }
+                    .cta-profile-img { width:40px; height:40px; }
+                    .cta-profile-text { font-size:0.85rem; }
+                    .cta-profile-name { flex-direction:row; align-items:center; gap:6px; }
                     .cta-separator { display: none; }
-                    body { padding-top: var(--banner-h, 150px) !important; }
-                    .settings-panel { top: calc(var(--banner-h, 150px) + 8px) !important; }
-                    .layout-wrapper { height: calc(100vh - var(--banner-h, 150px)) !important; margin-top: 0 !important; }
-                    .header, .site-header, .quiz-topbar { top: var(--banner-h, 150px) !important; }
-                    .main-container { padding-top: 230px !important; }
+                    body { padding-top: var(--banner-h, 96px) !important; }
+                    .settings-panel { top: calc(var(--banner-h, 96px) + 6px) !important; }
+                    .layout-wrapper { height: calc(100vh - var(--banner-h, 96px)) !important; margin-top: 0 !important; }
+                    .header, .site-header, .quiz-topbar { top: var(--banner-h, 96px) !important; }
+                    .main-container { padding-top: 140px !important; }
                 }
             </style>
             <div class="cta-banner-content">
