@@ -52,6 +52,14 @@ dirs.forEach(dir => {
         content = content.replace(/<div class="layout-wrapper">[\s\S]*?<div class="content-area">/i, '');
         // Always remove old CSS block so it's always freshly injected
         content = content.replace(/\/\* Sidebar Styles \*\/[\s\S]*?\{ display: block; \}\s*/g, '');
+        // Remove duplicated lang-content rules that accumulate across runs
+        content = content.replace(/(body\.lang-pt \[lang-content="pt"\] \{ display: inline; \}\s*){2,}/g, 'body.lang-pt [lang-content="pt"] { display: inline; }\n');
+        content = content.replace(/(body\.lang-en \[lang-content="en"\] \{ display: inline; \}\s*){2,}/g, 'body.lang-en [lang-content="en"] { display: inline; }\n');
+        content = content.replace(/(body\.lang-pt div\[lang-content[\s\S]*?\{ display: block; \}\s*){2,}/g, '');
+        content = content.replace(/(body\.lang-en div\[lang-content[\s\S]*?\{ display: block; \}\s*){2,}/g, '');
+        // Remove old Settings Panel and Language Utilities CSS blocks from pre-sidebar era
+        content = content.replace(/\/\* Settings Panel \*\/[^<]*\.settings-btn:hover[^<]*\}/g, '');
+        content = content.replace(/\/\* Language Utilities \*\/[\s\S]*?\{ display: block; \}\s*/g, '');
         // Clean up excessive blank lines
         content = content.replace(/\n{4,}/g, '\n\n');
         
@@ -112,8 +120,9 @@ dirs.forEach(dir => {
 
         const sidebarCss = `
         /* Sidebar Styles */
-        body { margin: 0 !important; padding: 0 !important; display: flex; flex-direction: column; min-height: 100vh; background-color: var(--bg-main); color: var(--text-primary); }
-        .layout-wrapper { display: flex; width: 100%; height: 100vh; }
+        body { margin: 0 !important; padding-top: 76px !important; display: flex; flex-direction: column; height: 100vh; box-sizing: border-box; background-color: var(--bg-main); color: var(--text-primary); overflow: hidden; }
+        @media(max-width:700px) { body { padding-top: 160px !important; } .layout-wrapper { height: calc(100vh - 160px) !important; } }
+        .layout-wrapper { display: flex; width: 100%; height: calc(100vh - 76px); overflow: hidden; }
         .sidebar { width: 240px; background: var(--bg-secondary); color: var(--text-primary); padding: 16px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; border-right: 1px solid var(--border-color); display: flex; flex-direction: column; }
         .sidebar-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border-color); flex-shrink: 0; }
         .sidebar-controls { display: flex; gap: 6px; }
@@ -143,7 +152,7 @@ dirs.forEach(dir => {
 
         // Injetar scripts globais
         if (!content.includes('portal-core.js')) {
-            content = content.replace('</head>', `    <link rel="stylesheet" href="../portal-style.css">\n    <script src="../portal-core.js"></script>\n</head>`);
+            content = content.replace('</head>', `    <link rel="stylesheet" href="../portal-style.css">\n    <script src="../portal-core.js?v=2"></script>\n</head>`);
         }
         
         fs.writeFileSync(filePath, content, 'utf-8');
