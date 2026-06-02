@@ -554,8 +554,9 @@ body {
   width:250px; flex-shrink:0;
   background:var(--bg-card); border:1px solid var(--border);
   border-radius:var(--radius); padding:20px;
-  position:relative; align-self:stretch;
-  display:flex; flex-direction:column; justify-content:space-between;
+  position:relative; align-self:flex-start;
+  display:flex; flex-direction:column;
+  height:auto;
 }
 .nav-panel-title {
   font-size:0.75rem; font-weight:700; color:var(--text-3);
