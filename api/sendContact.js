@@ -50,7 +50,15 @@ module.exports = async (req, res) => {
     console.error('resend unexpected response', resp.status, resp.data);
     return res.status(500).json({ error: 'send_failed', detail: resp.data || 'unexpected_response' });
   } catch (err) {
-    console.error('sendContact error', err.response?.data || err.message);
-    return res.status(500).json({ error: 'send_failed', detail: err.response?.data || err.message });
+    console.error('sendContact error:', {
+      status: err.response?.status,
+      data: err.response?.data,
+      message: err.message
+    });
+    return res.status(500).json({ 
+      error: 'send_failed', 
+      detail: err.response?.data || err.message,
+      status: err.response?.status 
+    });
   }
 };
