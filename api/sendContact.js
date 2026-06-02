@@ -1,9 +1,8 @@
 const axios = require('axios');
 
 // Vercel serverless function to forward contact form using Resend (https://resend.com)
+// Uses Resend free tier structure (no custom domain required)
 // Requires environment variable: RESEND_API_KEY
-// Optional: CONTACT_EMAIL (defaults to paulomulato+pl300@gmail.com)
-// Optional: SEND_FROM (defaults to no-reply@pl300.app)
 
 module.exports = async (req, res) => {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
@@ -13,18 +12,28 @@ module.exports = async (req, res) => {
     if (!name || !email || !message) return res.status(400).json({ error: 'Missing required fields' });
 
     const RESEND_KEY = process.env.RESEND_API_KEY;
-    const CONTACT_EMAIL = process.env.CONTACT_EMAIL || 'paulomulato+pl300@gmail.com';
-    const SEND_FROM = process.env.SEND_FROM || 'no-reply@pl300.app';
 
     if (!RESEND_KEY) return res.status(500).json({ error: 'Missing Resend API key (env RESEND_API_KEY)' });
 
-    const text = `Nome: ${name}\nEmail: ${email}\nMensagem:\n${message}`;
-
+    // Resend free tier structure (no custom domain):
+    // from: onboarding@resend.dev (required, fixed)
+    // to: paulomulato@gmail.com (your inbox, fixed)
+    // reply_to: email from user (so replies go to their email)
     const payload = {
-      from: SEND_FROM,
-      to: CONTACT_EMAIL,
-      subject: 'Contato via PL-300 Portal',
-      text
+      from: 'onboarding@resend.dev',
+      to: 'paulomulato@gmail.com',
+      reply_to: email,
+      subject: `📩 Nova mensagem de contato: ${name}`,
+      html: `
+        <h2>Você recebeu uma nova mensagem pelo PL-300 Portal</h2>
+        <p><strong>Nome do visitante:</strong> ${name}</p>
+        <p><strong>E-mail de contato:</strong> ${email}</p>
+        <p><strong>Mensagem:</strong></p>
+        <blockquote style="border-left: 4px solid #8b5cf6; padding: 12px; background: #f5f5f5; margin: 16px 0;">
+          ${message.replace(/\n/g, '<br />')}
+        </blockquote>
+        <p style="color: #999; font-size: 0.9em; margin-top: 20px;">--- Enviado pelo Portal PL-300</p>
+      `
     };
 
     const resp = await axios.post('https://api.resend.com/emails', payload, {
