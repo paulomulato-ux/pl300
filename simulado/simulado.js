@@ -14939,9 +14939,18 @@ function applyUITexts() {
 
   const legendItems = document.querySelectorAll('.nav-legend-item');
   const legendKeys = ['answered', 'marked', 'current'];
+  // Replace legend dots with accessible icons + text
+  const legendSvgs = {
+    answered: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    wrong: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    marked: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 2h9l3 4v14l-6-3-6 3V2z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    current: '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3"/></svg>'
+  };
   legendItems.forEach((el, i) => {
-    const dot = el.querySelector('.nav-dot');
-    if (dot && legendKeys[i]) el.innerHTML = dot.outerHTML + ' ' + t(legendKeys[i]);
+    const key = legendKeys[i];
+    if (!key) return;
+    const svg = legendSvgs[key] || '';
+    el.innerHTML = `<span class="legend-icon">${svg}</span> ${t(key)}`;
   });
 
   // Results
@@ -15569,6 +15578,9 @@ function updateNavGrid() {
     if (status === 'answered') aria += ', answered and correct';
     if (status === 'wrong') aria += ', answered and incorrect';
     btn.setAttribute('aria-label', aria);
+
+    // add tooltip/title for desktop hover
+    btn.setAttribute('title', aria);
 
     // inject small SVG icons for visual state (color + shape)
     if (icon) {

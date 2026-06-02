@@ -586,6 +586,9 @@ body {
 .nav-dot.nd-marked   { background:rgba(245,158,11,0.5); }
 .nav-dot.nd-current  { background:var(--purple); }
 
+.nav-legend .legend-icon { display:inline-flex; width:16px; height:16px; align-items:center; justify-content:center; }
+.nav-legend .legend-icon svg { width:14px; height:14px; }
+
 /* ===========================
    RESULTS SCREEN
    =========================== */
