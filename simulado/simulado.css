@@ -255,8 +255,8 @@ body {
 }
 .btn-back:hover { color:var(--text); }
 
-.back-btn { display: flex; align-items: center; gap: 6px; font-weight: 700; color: #e74c3c; text-decoration: none; font-size: 0.85rem; }
-.back-btn:hover { color: #c0392b; }
+.back-btn { display: flex; align-items: center; gap: 8px; font-weight: 800; color: var(--text-primary, var(--text-2)); text-decoration: none; font-size: 1.25rem; transition: opacity 0.2s ease; }
+.back-btn:hover { opacity: 0.7; color: var(--text); }
 
 .btn-quit {
   background:transparent; border:1px solid var(--border); border-radius:var(--radius-sm);

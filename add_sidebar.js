@@ -95,12 +95,14 @@ dirs.forEach(dir => {
     <div class="layout-wrapper">
         <aside class="sidebar">
             <div class="sidebar-top">
-                <a href="../index.html" class="back-btn" id="btn-back">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/></svg>
-                    <span lang-content="pt">Voltar</span>
-                    <span lang-content="en">Back</span>
-                </a>
-            </div>
+            <a href="../index.html" class="back-btn" id="btn-back">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="22" height="22">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span lang-content="pt">Voltar</span>
+                <span lang-content="en">Back</span>
+            </a>
+        </div>
             <h3 lang-content="pt">Navegação</h3>
             <h3 lang-content="en">Navigation</h3>
             <ul class="nav-links">
@@ -131,8 +133,8 @@ dirs.forEach(dir => {
         .layout-wrapper { display: flex; width: 100%; height: calc(100vh - var(--banner-h, 76px)); overflow: hidden; }
         .sidebar { width: 220px; background: var(--bg-secondary); color: var(--text-primary); padding: 16px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; border-right: 1px solid var(--border-color); display: flex; flex-direction: column; }
         .sidebar-top { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border-color); flex-shrink: 0; }
-        .back-btn { display: flex; align-items: center; gap: 6px; font-weight: 700; color: #e74c3c; text-decoration: none; font-size: 0.85rem; }
-        .back-btn:hover { color: #c0392b; }
+        .back-btn { display: flex; align-items: center; gap: 8px; font-weight: 800; color: var(--text-primary); text-decoration: none; font-size: 1.25rem; transition: opacity 0.2s ease; }
+        .back-btn:hover { opacity: 0.7; color: var(--text-primary); }
         .sidebar a { color: var(--text-primary); text-decoration: none; display: block; padding: 7px 0; opacity: 0.8; font-size: 0.9rem; }
         .sidebar a:hover, .sidebar a.active { color: var(--primary-color); font-weight: bold; opacity: 1; }
         .sidebar h3 { margin: 0 0 8px 0; padding-bottom: 8px; border-bottom: 1px solid var(--border-color); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary); }
