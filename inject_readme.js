@@ -5,10 +5,12 @@ const filePath = path.join(__dirname, 'README.html');
 let content = fs.readFileSync(filePath, 'utf-8');
 
 // Remover se já existe
+content = content.replace(/<header class="site-header[^"]*"[^>]*>[\s\S]*?<\/header>\s*/gi, ''); // remove old content-header
 content = content.replace(/<div class="settings-panel"[\s\S]*?<div class="layout-wrapper">[\s\S]*?<div class="content-area">/i, '');
 content = content.replace(/    <\/div>\n    <\/div>\n<\/body>/i, '</body>');
 content = content.replace(/<div class="layout-wrapper">[\s\S]*?<div class="content-area">/i, '');
-content = content.replace(/\/\* Sidebar Styles \*\/[\s\S]*?\[lang-content\] \{ display: none; \}/g, '');
+// Always remove old CSS block so it's always freshly injected
+content = content.replace(/\/\* Sidebar Styles \*\/[\s\S]*?\{ display: block; \}\s*/g, '');
 
 content = content.replace(/background-color:\s*#f4f4f4;/g, 'background-color: var(--bg-main);');
 content = content.replace(/background:\s*#fff;/g, 'background: var(--surface-card);');
@@ -85,12 +87,11 @@ const sidebarCss = `
         body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
 `;
 
-if (!content.includes('/* Sidebar Styles */')) {
-    if (content.includes('</style>')) {
-        content = content.replace('</style>', `${sidebarCss}\n    </style>`);
-    } else {
-        content = content.replace('</head>', `    <style>${sidebarCss}</style>\n</head>`);
-    }
+// Always inject fresh CSS (old block already removed above)
+if (content.includes('</style>')) {
+    content = content.replace('</style>', `${sidebarCss}\n    </style>`);
+} else {
+    content = content.replace('</head>', `    <style>${sidebarCss}</style>\n</head>`);
 }
 
 if (!content.includes('portal-core.js')) {

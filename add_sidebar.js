@@ -44,10 +44,16 @@ dirs.forEach(dir => {
         
         // Forçar atualização sempre para garantir bilinguismo no menu
         // Limpar modificações antigas se existirem para evitar duplicidade
+        // Remove site-header (with or without closing tag)
+        content = content.replace(/<header class="site-header[^"]*"[^>]*>[\s\S]*?<\/header>\s*/gi, '');
+        content = content.replace(/<header class="site-header[\s\S]*?(?=<div class="container">)/gi, '');
         content = content.replace(/<div class="settings-panel"[\s\S]*?<div class="layout-wrapper">[\s\S]*?<div class="content-area">/i, '');
         content = content.replace(/    <\/div>\n    <\/div>\n<\/body>/i, '</body>');
         content = content.replace(/<div class="layout-wrapper">[\s\S]*?<div class="content-area">/i, '');
-        content = content.replace(/\/\* Sidebar Styles \*\/[\s\S]*?\[lang-content\] \{ display: none; \}/g, '');
+        // Always remove old CSS block so it's always freshly injected
+        content = content.replace(/\/\* Sidebar Styles \*\/[\s\S]*?\{ display: block; \}\s*/g, '');
+        // Clean up excessive blank lines
+        content = content.replace(/\n{4,}/g, '\n\n');
         
         // Remover estilos hardcoded que quebram o Dark Mode
         content = content.replace(/background-color:\s*#f4f4f4;/g, 'background-color: var(--bg-main);');
@@ -128,12 +134,11 @@ dirs.forEach(dir => {
         body.lang-en div[lang-content="en"], body.lang-en p[lang-content="en"], body.lang-en h1[lang-content="en"], body.lang-en h2[lang-content="en"], body.lang-en h3[lang-content="en"] { display: block; }
         `;
 
-        if (!content.includes('/* Sidebar Styles */')) {
-            if (content.includes('</style>')) {
-                content = content.replace('</style>', `${sidebarCss}\n    </style>`);
-            } else {
-                content = content.replace('</head>', `    <style>${sidebarCss}</style>\n</head>`);
-            }
+        // Always inject fresh CSS (old block already removed above)
+        if (content.includes('</style>')) {
+            content = content.replace('</style>', `${sidebarCss}\n    </style>`);
+        } else {
+            content = content.replace('</head>', `    <style>${sidebarCss}</style>\n</head>`);
         }
 
         // Injetar scripts globais
