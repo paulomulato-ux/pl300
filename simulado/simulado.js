@@ -14910,6 +14910,7 @@ function applyUITexts() {
 
   // Back buttons
   document.querySelectorAll('.btn-back').forEach(b => b.textContent = t('back'));
+  document.querySelectorAll('.back-btn span[data-i18n="back"]').forEach(span => span.textContent = t('back'));
 
   // Loading
   const loadH3 = qs('#screen-loading h3');
