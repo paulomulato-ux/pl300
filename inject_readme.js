@@ -75,9 +75,9 @@ if (!content.includes('class="layout-wrapper"')) {
 
 const sidebarCss = `
         /* Sidebar Styles */
-        body { margin: 0 !important; padding-top: 56px !important; display: flex; flex-direction: column; height: 100vh; box-sizing: border-box; background-color: var(--bg-main); color: var(--text-primary); overflow: hidden; }
-        @media(max-width:700px) { body { padding-top: 56px !important; } .layout-wrapper { height: calc(100vh - 56px) !important; } .settings-panel { top: 64px !important; } }
-        .layout-wrapper { display: flex; width: 100%; height: calc(100vh - 56px); overflow: hidden; }
+        body { margin: 0 !important; padding-top: 76px !important; display: flex; flex-direction: column; height: 100vh; box-sizing: border-box; background-color: var(--bg-main); color: var(--text-primary); overflow: hidden; }
+        @media(max-width:700px) { body { padding-top: 150px !important; } .layout-wrapper { height: calc(100vh - 150px) !important; } .settings-panel { top: 158px !important; } }
+        .layout-wrapper { display: flex; width: 100%; height: calc(100vh - 76px); overflow: hidden; }
         .sidebar { width: 220px; background: var(--bg-secondary); color: var(--text-primary); padding: 16px; overflow-y: auto; flex-shrink: 0; font-family: Arial, sans-serif; border-right: 1px solid var(--border-color); display: flex; flex-direction: column; }
         .sidebar-top { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border-color); flex-shrink: 0; }
         .back-btn { display: flex; align-items: center; gap: 6px; font-weight: 700; color: #e74c3c; text-decoration: none; font-size: 0.85rem; }
@@ -88,7 +88,7 @@ const sidebarCss = `
         .sidebar ul { list-style: none; padding: 0; margin: 0; flex-grow: 1; }
         .content-area { flex-grow: 1; overflow-y: auto; padding: 20px; background-color: var(--bg-main); }
         .container { margin: 0 auto; max-width: 900px; background: var(--surface-card); padding: 30px; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border-color); }
-        .settings-panel { position: fixed; top: 64px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
+        .settings-panel { position: fixed; top: 84px; right: 15px; z-index: 1000; display: flex; gap: 8px; }
         .settings-btn { display: flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--surface-card); color: var(--text-primary); cursor: pointer; font-size: 0.8rem; font-weight: 600; transition: all 0.2s; white-space: nowrap; }
         .settings-btn:hover { border-color: var(--primary-color); }
         [lang-content] { display: none; }
