@@ -95,7 +95,7 @@
         
         const isPt = localStorage.getItem(STORAGE_LANG) !== 'en';
         const bioText = isPt
-            ? "Ajudo empresas a transformar dados em informações estratégicas para apoiar a tomada de decisão."
+            ? "Transformo dados em inteligência de negócios, auxiliando empresas na tomada de decisões estratégicas por meio de análises, indicadores e dashboards."
             : "I help companies transform data into strategic information to support decision-making";
         const connectText = isPt ? "Conectar no LinkedIn" : "Connect on LinkedIn";
 
