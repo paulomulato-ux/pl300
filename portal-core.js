@@ -94,44 +94,37 @@
         }
         
         const isPt = localStorage.getItem(STORAGE_LANG) !== 'en';
-        const bioText = isPt
-            ? "Ajudo organizações a converter dados em inteligência de negócio, apoiando decisões estratégicas com análises, indicadores e dashboards orientados a resultados."
-            : "I help organizations convert data into business intelligence, supporting strategic decisions with results-oriented analytics, indicators and dashboards.";
         const connectText = isPt ? "Conectar no LinkedIn" : "Connect on LinkedIn";
 
         const banner = document.createElement('div');
         banner.className = 'top-cta-banner';
         banner.innerHTML = `
             <style>
-                .top-cta-banner { position: fixed; top: 0; left: 0; right: 0; z-index: 1001; background: #005699; color: #fff; padding: 10px 5%; font-size: 0.9rem; display: flex; justify-content: center; font-family: 'DM Sans', sans-serif; }
-                .cta-banner-content { display: flex; align-items: center; gap: 24px; width: 100%; justify-content: space-between; }
-                .cta-profile { display: flex; align-items: center; gap: 16px; text-align: left; }
-                .cta-profile-img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.4); }
-                .cta-profile-text { line-height: 1.4; font-family: 'Inter', sans-serif; }
-                .cta-profile-name { display: flex; align-items: baseline; gap: 8px; margin-bottom: 2px; }
-                .cta-name { font-size: 1.3rem; font-weight: 700; color: #fff; }
-                .cta-separator { color: rgba(255, 255, 255, 0.3); font-size: 1rem; }
-                .cta-role { font-size: 0.9rem; color: #7dd3fc; font-weight: 500; }
-                .cta-profile-bio { font-size: 0.85rem; color: rgba(255, 255, 255, 0.9); font-family: 'DM Sans', sans-serif; }
-                .btn-linkedin { display: flex; align-items: center; gap: 8px; background: #3b82f6; color: #fff; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; font-size: 0.9rem; white-space: nowrap; border: none; }
+                .top-cta-banner { position: fixed; top: 0; left: 0; right: 0; z-index: 1001; background: #005699; color: #fff; padding: 0 10px; height: 56px; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; font-family: 'DM Sans', sans-serif; }
+                .cta-banner-content { display: flex; align-items: center; gap: 16px; width: 100%; justify-content: space-between; }
+                .cta-profile { display: flex; align-items: center; gap: 12px; }
+                .cta-profile-img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.4); flex-shrink: 0; }
+                .cta-profile-text { line-height: 1.2; font-family: 'Inter', sans-serif; }
+                .cta-profile-name { display: flex; align-items: center; gap: 8px; }
+                .cta-name { font-size: 1rem; font-weight: 700; color: #fff; }
+                .cta-separator { color: rgba(255, 255, 255, 0.3); font-size: 0.9rem; }
+                .cta-role { font-size: 0.85rem; color: #7dd3fc; font-weight: 500; }
+                .btn-linkedin { display: flex; align-items: center; gap: 8px; background: #3b82f6; color: #fff; padding: 6px 16px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; font-size: 0.85rem; white-space: nowrap; border: none; }
                 .btn-linkedin:hover { background: #2563eb; color: #fff; opacity: 1; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4); }
                 
-                body { padding-top: 76px !important; }
-                .settings-panel { top: 91px !important; }
-                .layout-wrapper { height: calc(100vh - 76px) !important; margin-top: 0 !important; }
-                .header, .site-header, .quiz-topbar { top: 76px !important; } 
-                .main-container { padding-top: 156px !important; }
+                body { padding-top: 56px !important; }
+                .settings-panel { top: 64px !important; }
+                .layout-wrapper { height: calc(100vh - 56px) !important; margin-top: 0 !important; }
+                .header, .site-header, .quiz-topbar { top: 56px !important; } 
+                .main-container { padding-top: 116px !important; }
                 
                 @media(max-width:700px) {
-                    .cta-banner-content { flex-direction: column; gap: 16px; text-align: center; }
-                    .cta-profile { flex-direction: column; text-align: center; gap: 12px; }
-                    .cta-profile-name { flex-direction: column; align-items: center; gap: 4px; }
+                    .cta-banner-content { gap: 10px; }
+                    .cta-role { display: none; }
                     .cta-separator { display: none; }
-                    body { padding-top: 160px !important; }
-                    .settings-panel { top: 175px !important; }
-                    .layout-wrapper { height: calc(100vh - 160px) !important; margin-top: 0 !important; }
-                    .header, .site-header, .quiz-topbar { top: 160px !important; }
-                    .main-container { padding-top: 240px !important; }
+                    body { padding-top: 56px !important; }
+                    .settings-panel { top: 64px !important; }
+                    .layout-wrapper { height: calc(100vh - 56px) !important; margin-top: 0 !important; }
                 }
             </style>
             <div class="cta-banner-content">
@@ -143,7 +136,6 @@
                             <span class="cta-separator">|</span>
                             <span class="cta-role">Data Analyst</span>
                         </div>
-                        <div class="cta-profile-bio" id="inj-bio">${bioText}</div>
                     </div>
                 </div>
                 <a href="https://www.linkedin.com/in/paulomulato/" target="_blank" class="btn-linkedin">
