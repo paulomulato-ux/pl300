@@ -32,6 +32,10 @@
 <!-- ===================== WELCOME ===================== -->
 <div id="screen-welcome" class="screen active">
   <div class="welcome-content">
+    <div style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.05);">
+      <a href="../index.html" class="btn-back" style="text-decoration: none; margin-bottom: 0;">← Voltar ao Portal</a>
+      <button class="btn-ghost" onclick="showScreen('screen-history')" style="margin: 0; padding: 6px 16px; font-size: 0.85rem; border-color: rgba(255,255,255,0.1);">📊 Ver Histórico</button>
+    </div>
     <div class="logo-badge">⚡ PL-300 Simulator</div>
     <h1 class="welcome-title">Simulado <span class="gradient-text">Power BI</span><br>Data Analyst</h1>
     <p class="welcome-subtitle">Prepare-se para a certificação com 500+ questões cobrindo todos os domínios do exame real Microsoft.</p>
@@ -63,11 +67,7 @@
     </div>
 
     <div class="welcome-actions" style="flex-direction: column; align-items: center;">
-      <button class="btn-primary" id="btn-resume-session" onclick="resumeSession()" style="display: none; width: 100%; margin-bottom: 12px; background-color: var(--purple, #8b5cf6); color: #ffffff;">▶ Continuar Simulado em Andamento</button>
-      <div style="display:flex; gap:12px; width:100%; justify-content:center; flex-wrap: wrap;">
-        <button class="btn-ghost" onclick="showScreen('screen-history')">📊 Ver Histórico</button>
-        <a href="../index.html" class="btn-ghost">🏠 Portal</a>
-      </div>
+      <button class="btn-primary" id="btn-resume-session" onclick="resumeSession()" style="display: none; width: 100%; background-color: var(--purple, #8b5cf6); color: #ffffff;">▶ Continuar Simulado em Andamento</button>
     </div>
   </div>
 </div>
