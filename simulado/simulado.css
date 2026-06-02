@@ -565,16 +565,19 @@ body {
   gap:5px; margin-bottom:14px;
 }
 .nav-btn {
-  width:30px; height:30px; border-radius:7px;
+  width:38px; height:38px; border-radius:8px;
   background:rgba(255,255,255,0.07); border:none;
-  color:var(--text-3); font-size:0.72rem; font-weight:600;
-  cursor:pointer; transition:all 0.2s; font-family:inherit;
+  color:var(--text-3); font-size:0.78rem; font-weight:700;
+  cursor:pointer; transition:all 0.2s; font-family:inherit; display:inline-flex; align-items:center; justify-content:center; gap:6px; padding:6px;
 }
 .nav-btn:hover   { background:var(--bg-card-hover); color:var(--text); }
 .nav-btn.answered{ background:rgba(16,185,129,0.2); color:var(--green); }
 .nav-btn.wrong   { background:rgba(239,68,68,0.2); color:var(--red); }
 .nav-btn.marked  { background:var(--yellow-bg); color:var(--yellow); }
 .nav-btn.current { background:var(--gradient); color:#fff; }
+
+.nav-btn .nav-icon { display:inline-flex; width:14px; height:14px; align-items:center; justify-content:center; }
+.nav-btn .nav-index { font-size:0.78rem; font-weight:700; }
 
 .nav-legend { display:flex; flex-direction:column; gap:6px; }
 .nav-legend-item { display:flex; align-items:center; gap:7px; font-size:0.72rem; color:var(--text-3); }

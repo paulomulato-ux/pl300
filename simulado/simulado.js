@@ -15525,9 +15525,15 @@ function buildNavGrid() {
   state.questions.forEach((_, i) => {
     const btn = document.createElement('button');
     btn.className = 'nav-btn';
-    btn.textContent = i + 1;
+    btn.setAttribute('type', 'button');
+    btn.setAttribute('aria-label', `Question ${i + 1}`);
     btn.onclick = () => goToQuestion(i);
     btn.id = `nav-btn-${i}`;
+    // inner structure: number + icon container
+    btn.innerHTML = `
+      <span class="nav-index">${i + 1}</span>
+      <span class="nav-icon" aria-hidden="true"></span>
+    `;
     grid.appendChild(btn);
   });
 }
@@ -15536,13 +15542,47 @@ function updateNavGrid() {
   state.questions.forEach((_, i) => {
     const btn = document.getElementById(`nav-btn-${i}`);
     if (!btn) return;
+    // reset
     btn.className = 'nav-btn';
+    const icon = btn.querySelector('.nav-icon');
+    if (icon) icon.innerHTML = '';
+
+    let status = 'unanswered';
     if (i === state.currentIndex) {
       btn.classList.add('current');
-    } else if (state.marked.has(i)) {
+      status = 'current';
+    }
+    if (state.marked.has(i)) {
       btn.classList.add('marked');
-    } else if (state.answers[i] !== null) {
-      btn.classList.add(state.answers[i].correct ? 'answered' : 'wrong');
+      status = 'marked';
+    }
+    if (state.answers[i] !== null) {
+      const correct = state.answers[i].correct;
+      btn.classList.add(correct ? 'answered' : 'wrong');
+      status = correct ? 'answered' : 'wrong';
+    }
+
+    // set aria-label with status for screen readers
+    let aria = `Question ${i + 1}`;
+    if (status === 'current') aria += ', current question';
+    if (status === 'marked') aria += ', marked for review';
+    if (status === 'answered') aria += ', answered and correct';
+    if (status === 'wrong') aria += ', answered and incorrect';
+    btn.setAttribute('aria-label', aria);
+
+    // inject small SVG icons for visual state (color + shape)
+    if (icon) {
+      if (status === 'answered') {
+        icon.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      } else if (status === 'wrong') {
+        icon.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      } else if (status === 'marked') {
+        icon.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 2h9l3 4v14l-6-3-6 3V2z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      } else if (status === 'current') {
+        icon.innerHTML = '<svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3"/></svg>';
+      } else {
+        icon.innerHTML = '';
+      }
     }
   });
 }
