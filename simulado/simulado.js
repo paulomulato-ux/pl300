@@ -14950,7 +14950,7 @@ function applyUITexts() {
     const key = legendKeys[i];
     if (!key) return;
     const svg = legendSvgs[key] || '';
-    el.innerHTML = `<span class="legend-icon">${svg}</span> ${t(key)}`;
+    el.innerHTML = `<span class="legend-icon ${key}">${svg}</span> ${t(key)}`;
   });
 
   // Results
