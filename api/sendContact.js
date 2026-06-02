@@ -23,7 +23,7 @@ module.exports = async (req, res) => {
       from: 'onboarding@resend.dev',
       to: 'paulomulato@gmail.com',
       reply_to: email,
-      subject: `📩 Nova mensagem de contato: ${name}`,
+      subject: `[PL300] Nova mensagem de contato: ${name}`,
       html: `
         <h2>Você recebeu uma nova mensagem pelo PL-300 Portal</h2>
         <p><strong>Nome do visitante:</strong> ${name}</p>
@@ -33,7 +33,10 @@ module.exports = async (req, res) => {
           ${message.replace(/\n/g, '<br />')}
         </blockquote>
         <p style="color: #999; font-size: 0.9em; margin-top: 20px;">--- Enviado pelo Portal PL-300</p>
-      `
+      `,
+      headers: {
+        'X-Portal': 'pl300'
+      }
     };
 
     const resp = await axios.post('https://api.resend.com/emails', payload, {
