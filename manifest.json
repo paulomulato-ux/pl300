@@ -1,0 +1,21 @@
+{
+  "name": "PL-300 Portal",
+  "short_name": "PL300",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#1B2530",
+  "theme_color": "#1B2530",
+  "description": "Portal de estudos PL-300 — prática offline para o exame Power BI Data Analyst",
+  "icons": [
+    {
+      "src": "/icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

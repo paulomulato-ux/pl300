@@ -182,4 +182,15 @@
     } else {
         init();
     }
+
+    // Register service worker for PWA/offline support
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js').then(function(reg) {
+                console.log('ServiceWorker registrado:', reg.scope);
+            }).catch(function(err) {
+                console.warn('ServiceWorker falhou:', err);
+            });
+        });
+    }
 })();
