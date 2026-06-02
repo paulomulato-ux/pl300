@@ -192,7 +192,8 @@
         .mat-icon { font-size:2rem; margin-bottom:16px; }
         .mat-title { font-size:1rem; font-weight:700; margin-bottom:8px; }
 
-        .rating-card {
+        .rating-card,
+        .contact-card {
             background:var(--bg-surface); border:1px solid var(--border-color);
             border-radius:16px; padding:28px; margin-bottom:60px; box-shadow:var(--sh-sm);
         }
@@ -461,21 +462,25 @@
             <!-- README card removed -->
         </div>
 
-        <div class="rating-card" id="rating-card">
-            <h2 data-i18n="rating_title">Avalie este portal</h2>
-            <p data-i18n="rating_desc">Opcional: escolha quantas estrelas e deixe um comentário se quiser.</p>
-            <form id="rating-form" class="rating-form" autocomplete="off">
-                <div class="rating-stars" role="radiogroup" aria-labelledby="rating-title">
-                    <input type="radio" id="rating-5" name="rating" value="5"><label for="rating-5" aria-label="5 estrelas">★</label>
-                    <input type="radio" id="rating-4" name="rating" value="4"><label for="rating-4" aria-label="4 estrelas">★</label>
-                    <input type="radio" id="rating-3" name="rating" value="3"><label for="rating-3" aria-label="3 estrelas">★</label>
-                    <input type="radio" id="rating-2" name="rating" value="2"><label for="rating-2" aria-label="2 estrelas">★</label>
-                    <input type="radio" id="rating-1" name="rating" value="1"><label for="rating-1" aria-label="1 estrela">★</label>
+        <div class="contact-card" id="contact-card">
+            <h2 data-i18n="contact_title">Fale conosco</h2>
+            <p data-i18n="contact_desc">Envie uma mensagem direta para a minha caixa de entrada.</p>
+            <form id="contact-form" class="rating-form" autocomplete="off">
+                <div class="contact-field" style="margin-bottom:18px;">
+                    <label for="contact-name" data-i18n="contact_name_label">Seu nome</label>
+                    <input type="text" id="contact-name" class="rating-comment" placeholder="" aria-label="Seu nome">
                 </div>
-                <textarea id="rating-comment" class="rating-comment" placeholder="" aria-label="Comentário opcional"></textarea>
+                <div class="contact-field" style="margin-bottom:18px;">
+                    <label for="contact-email" data-i18n="contact_email_label">Seu e-mail</label>
+                    <input type="email" id="contact-email" class="rating-comment" placeholder="" aria-label="Seu e-mail">
+                </div>
+                <div class="contact-field" style="margin-bottom:18px;">
+                    <label for="contact-message" data-i18n="contact_message_label">Sua mensagem</label>
+                    <textarea id="contact-message" class="rating-comment" placeholder="" aria-label="Sua mensagem"></textarea>
+                </div>
                 <div class="rating-actions">
-                    <button type="button" id="rating-submit" class="btn-primary" data-i18n="rating_submit">Enviar Avaliação</button>
-                    <span id="rating-status" class="rating-status" aria-live="polite"></span>
+                    <button type="button" id="contact-submit" class="btn-primary" data-i18n="contact_submit">Enviar Mensagem</button>
+                    <span id="contact-status" class="rating-status" aria-live="polite"></span>
                 </div>
             </form>
         </div>
@@ -543,12 +548,19 @@
             cta_connect: { pt: "Conectar no LinkedIn", en: "Connect on LinkedIn" },
             btn_review: { pt: "Revisar Marcadas", en: "Review Marked" },
             btn_reset: { pt: "Zerar Respostas", en: "Reset Answers" },
-            rating_title: { pt: "Avalie este portal", en: "Rate this portal" },
-            rating_desc: { pt: "Opcional: escolha quantas estrelas e deixe um comentário se quiser.", en: "Optional: choose how many stars and leave a comment if you like." },
-            rating_submit: { pt: "Enviar Avaliação", en: "Submit Rating" },
-            rating_saved: { pt: "Sua avaliação foi salva localmente.", en: "Your rating has been saved locally." },
-            rating_placeholder: { pt: "Comentário opcional...", en: "Optional comment..." },
-            rating_select_stars: { pt: "Selecione pelo menos uma estrela antes de enviar.", en: "Select at least one star before submitting." }
+            contact_title: { pt: "Fale conosco", en: "Contact us" },
+            contact_desc: { pt: "Envie uma mensagem direta para a minha caixa de entrada.", en: "Send a message directly to my inbox." },
+            contact_name_label: { pt: "Seu nome", en: "Your name" },
+            contact_email_label: { pt: "Seu e-mail", en: "Your email" },
+            contact_message_label: { pt: "Sua mensagem", en: "Your message" },
+            contact_name_placeholder: { pt: "Digite seu nome", en: "Type your name" },
+            contact_email_placeholder: { pt: "Digite seu e-mail", en: "Type your email" },
+            contact_message_placeholder: { pt: "Digite sua mensagem", en: "Type your message" },
+            contact_submit: { pt: "Enviar Mensagem", en: "Send Message" },
+            contact_required_name: { pt: "Por favor, informe seu nome.", en: "Please enter your name." },
+            contact_invalid_email: { pt: "Por favor, informe um e-mail válido.", en: "Please enter a valid email." },
+            contact_required_message: { pt: "Por favor, escreva sua mensagem.", en: "Please write your message." },
+            contact_client_opening: { pt: "Abrindo seu cliente de e-mail...", en: "Opening your email client..." }
         };
 
         function updateLocalTranslations() {
@@ -559,7 +571,7 @@
                     el.innerHTML = LOCAL_DICT[key][currentLang];
                 }
             });
-            applyRatingTranslations();
+            applyContactTranslations();
         }
 
         window.addEventListener('portalLangChanged', () => {
@@ -619,74 +631,61 @@
             } catch(e) {}
         }
 
-        const RATING_STORAGE_KEY = 'pl300_rating';
-
-        function applyRatingTranslations() {
+        function applyContactTranslations() {
             const lang = localStorage.getItem('pl300_lang') || 'pt';
-            const submitBtn = document.getElementById('rating-submit');
-            const commentField = document.getElementById('rating-comment');
-            if (submitBtn) submitBtn.innerText = LOCAL_DICT.rating_submit[lang];
-            if (commentField) commentField.placeholder = LOCAL_DICT.rating_placeholder[lang];
+            const submitBtn = document.getElementById('contact-submit');
+            const nameField = document.getElementById('contact-name');
+            const emailField = document.getElementById('contact-email');
+            const messageField = document.getElementById('contact-message');
+            if (submitBtn) submitBtn.innerText = LOCAL_DICT.contact_submit[lang];
+            if (nameField) nameField.placeholder = LOCAL_DICT.contact_name_placeholder[lang];
+            if (emailField) emailField.placeholder = LOCAL_DICT.contact_email_placeholder[lang];
+            if (messageField) messageField.placeholder = LOCAL_DICT.contact_message_placeholder[lang];
         }
 
-        function getSelectedRating() {
-            const checked = document.querySelector('input[name="rating"]:checked');
-            return checked ? Number(checked.value) : 0;
+        function validateEmail(value) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
         }
 
-        function updateRatingStars(value) {
-            document.querySelectorAll('.rating-stars label').forEach((label, index) => {
-                label.classList.toggle('active', index < value);
-            });
-        }
-
-        function updateRatingWidgetUI(saved) {
-            const status = document.getElementById('rating-status');
-            const lang = localStorage.getItem('pl300_lang') || 'pt';
-            if (!status) return;
-            if (saved && saved.rating) {
-                status.innerText = `${LOCAL_DICT.rating_saved[lang]} ${saved.rating}★`;
-                updateRatingStars(saved.rating);
-            } else {
-                status.innerText = '';
-                const rating = getSelectedRating();
-                updateRatingStars(rating);
+        function updateContactStatus(message, isError = false) {
+            const status = document.getElementById('contact-status');
+            if (status) {
+                status.innerText = message;
+                status.style.color = isError ? 'var(--red)' : 'var(--accent)';
             }
         }
 
-        function loadRatingWidget() {
-            const saved = JSON.parse(localStorage.getItem(RATING_STORAGE_KEY) || 'null');
-            if (saved) {
-                const input = document.querySelector(`input[name="rating"][value="${saved.rating}"]`);
-                if (input) input.checked = true;
-                const commentField = document.getElementById('rating-comment');
-                if (commentField) commentField.value = saved.comment || '';
-                updateRatingWidgetUI(saved);
-            }
-        }
-
-        function saveRating() {
+        function sendContactMessage() {
             const lang = localStorage.getItem('pl300_lang') || 'pt';
-            const rating = getSelectedRating();
-            if (!rating) {
-                const status = document.getElementById('rating-status');
-                if (status) status.innerText = LOCAL_DICT.rating_select_stars[lang];
+            const name = document.getElementById('contact-name')?.value.trim() || '';
+            const email = document.getElementById('contact-email')?.value.trim() || '';
+            const message = document.getElementById('contact-message')?.value.trim() || '';
+
+            if (!name) {
+                updateContactStatus(LOCAL_DICT.contact_required_name[lang], true);
                 return;
             }
-            const comment = document.getElementById('rating-comment')?.value.trim() || '';
-            const payload = { rating, comment, submittedAt: new Date().toISOString() };
-            localStorage.setItem(RATING_STORAGE_KEY, JSON.stringify(payload));
-            updateRatingWidgetUI(payload);
+            if (!email || !validateEmail(email)) {
+                updateContactStatus(LOCAL_DICT.contact_invalid_email[lang], true);
+                return;
+            }
+            if (!message) {
+                updateContactStatus(LOCAL_DICT.contact_required_message[lang], true);
+                return;
+            }
+
+            const recipient = 'paulomulato+pl300@gmail.com';
+            const subject = encodeURIComponent('Contato via PL-300 Portal');
+            const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\nMensagem:\n${message}\n\n---\nEnviado pelo Portal PL-300`);
+            const mailto = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
+            updateContactStatus(LOCAL_DICT.contact_client_opening[lang]);
+            window.location.href = mailto;
         }
 
-        function attachRatingListeners() {
-            document.querySelectorAll('input[name="rating"]').forEach(input => {
-                input.addEventListener('change', () => {
-                    updateRatingWidgetUI();
-                });
-            });
-            const submitBtn = document.getElementById('rating-submit');
-            if (submitBtn) submitBtn.addEventListener('click', saveRating);
+        function attachContactListeners() {
+            const submitBtn = document.getElementById('contact-submit');
+            if (submitBtn) submitBtn.addEventListener('click', sendContactMessage);
         }
 
         function resetGlobalProgressFromHome() {
@@ -709,11 +708,9 @@
             if(typeof updateTheme === 'function') updateTheme();
             if(typeof applyTranslations === 'function') applyTranslations();
             updateLocalTranslations();
-            applyRatingTranslations();
             updateThemeUI();
             updateLangUI();
-            attachRatingListeners();
-            loadRatingWidget();
+            attachContactListeners();
             renderProgress();
             renderStats();
         });
