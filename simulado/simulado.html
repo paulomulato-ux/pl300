@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="simulado.css">
   <link rel="stylesheet" href="../portal-style.css">
   <script src="../portal-core.js"></script>
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
       (function(c,l,a,r,i,t,y){
@@ -183,8 +185,18 @@
         <div id="multi-hint-container"></div>
         <div class="options-grid" id="options-container"></div>
 
-        <div class="question-actions">
-          <button class="btn-primary" id="btn-submit" onclick="submitAnswer()">Confirmar Resposta</button>
+        <div class="question-actions-container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; align-items: center;">
+          <div class="question-secondary-actions" id="secondary-actions" style="display: flex; gap: 12px;">
+            <button class="btn-outline-rounded" onclick="openDiscussModal()">
+              <span class="icon-discuss">💬</span> Discutir
+            </button>
+            <button class="btn-outline-rounded" onclick="openReportModal()">
+              <span class="icon-report">🚩</span> Relatório
+            </button>
+          </div>
+          <div class="question-actions" style="margin-bottom: 0;">
+            <button class="btn-primary" id="btn-submit" onclick="submitAnswer()">Confirmar Resposta</button>
+          </div>
         </div>
 
         <div id="feedback-box" class="feedback-box hidden"></div>
@@ -290,6 +302,132 @@
     <div class="modal-actions">
       <button class="btn-primary" onclick="closeModal()">Continuar</button>
       <button class="btn-danger"  onclick="quitQuiz()">Sair</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== DISCUSS MODAL ===================== -->
+<div id="discuss-modal" class="modal hidden" role="dialog" aria-modal="true">
+  <div class="modal-box modal-lg">
+    <button class="modal-close" onclick="closeDiscussModal()">✕</button>
+    <div class="modal-header-left">
+      <div class="modal-icon discuss-icon">💬</div>
+      <div>
+        <h3 style="margin-bottom: 2px;">Discuta essa questão</h3>
+        <p class="modal-subtitle" id="discuss-modal-subtitle">Pergunta #1 - compartilhe seus pensamentos</p>
+      </div>
+    </div>
+    
+    <div class="modal-body-scroll">
+      <div class="form-group">
+        <label class="form-label">QUAL RESPOSTA VOCÊ ACHA CORRETA?</label>
+        <div class="vote-options" id="discuss-vote-options">
+          <!-- Dynamically populated options A, B, C, D... -->
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">SEU ENDEREÇO DE E-MAIL</label>
+        <input type="email" class="form-input" id="discuss-email" placeholder="you@example.com">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">SEU COMENTÁRIO</label>
+        <textarea class="form-textarea" id="discuss-comment" placeholder="Compartilhe suas opiniões sobre essa pergunta ou responda..."></textarea>
+      </div>
+
+      <div class="section-divider"><span>VOTOS DOS USUÁRIOS</span></div>
+      
+      <div class="votes-container" id="discuss-votes-container">
+        <!-- Mock votes -->
+        <div class="vote-bar-row">
+          <span class="vote-letter">A</span>
+          <div class="vote-bar-bg"><div class="vote-bar-fill" style="width: 100%;">A — 100%</div></div>
+          <span class="vote-count">14</span>
+        </div>
+        <div class="vote-bar-row">
+          <span class="vote-letter">B</span>
+          <div class="vote-bar-bg"><div class="vote-bar-fill" style="width: 0%;"></div></div>
+          <span class="vote-count">0</span>
+        </div>
+        <div class="vote-bar-row">
+          <span class="vote-letter">C</span>
+          <div class="vote-bar-bg"><div class="vote-bar-fill" style="width: 0%;"></div></div>
+          <span class="vote-count">0</span>
+        </div>
+        <p class="vote-total-text">14 votos no total</p>
+      </div>
+
+      <div class="section-divider"><span>COMENTÁRIOS DOS USUÁRIOS</span></div>
+      <div class="comments-empty">
+        <p>Ainda sem comentários. Seja o primeiro a compartilhar seus pensamentos!</p>
+      </div>
+    </div>
+
+    <div class="modal-actions-right">
+      <button class="btn-ghost" onclick="closeDiscussModal()">Cancelar</button>
+      <button class="btn-primary" onclick="submitDiscuss()">Envie →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== REPORT MODAL ===================== -->
+<div id="report-modal" class="modal hidden" role="dialog" aria-modal="true">
+  <div class="modal-box modal-lg">
+    <button class="modal-close" onclick="closeReportModal()">✕</button>
+    <div class="modal-header-left">
+      <div class="modal-icon report-icon">🚩</div>
+      <div>
+        <h3 style="margin-bottom: 2px;">Relate esta pergunta</h3>
+        <p class="modal-subtitle" id="report-modal-subtitle">Pergunta #1 - qual é o problema?</p>
+      </div>
+    </div>
+    
+    <div class="modal-body-scroll">
+      <div class="form-group">
+        <label class="form-label">TIPO DE PROBLEMA</label>
+        <div class="report-checkbox-grid">
+          <label class="report-checkbox-card">
+            <input type="checkbox" name="report_type" value="Resposta errada">
+            <span>Resposta errada</span>
+          </label>
+          <label class="report-checkbox-card">
+            <input type="checkbox" name="report_type" value="Pergunta incorreta">
+            <span>Pergunta incorreta</span>
+          </label>
+          <label class="report-checkbox-card">
+            <input type="checkbox" name="report_type" value="Erro de digitação / ortografia">
+            <span>Erro de digitação / ortografia</span>
+          </label>
+          <label class="report-checkbox-card">
+            <input type="checkbox" name="report_type" value="Opções faltantes">
+            <span>Opções faltantes</span>
+          </label>
+          <label class="report-checkbox-card">
+            <input type="checkbox" name="report_type" value="Explicação errada">
+            <span>Explicação errada</span>
+          </label>
+          <label class="report-checkbox-card">
+            <input type="checkbox" name="report_type" value="Outros">
+            <span>Outros</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">SEU ENDEREÇO DE E-MAIL</label>
+        <input type="email" class="form-input" id="report-email" placeholder="you@example.com">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">NOTAS ADICIONAIS <span class="text-muted">(opcionais)</span></label>
+        <textarea class="form-textarea" id="report-notes" placeholder="Descreva o problema com mais detalhes..."></textarea>
+      </div>
+    </div>
+
+    <div class="modal-actions-right">
+      <button class="btn-ghost" onclick="closeReportModal()">Cancelar</button>
+      <button class="btn-warning" onclick="submitReport()">Envie →</button>
     </div>
   </div>
 </div>

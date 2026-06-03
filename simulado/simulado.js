@@ -15518,6 +15518,117 @@ function toggleMark() {
   saveActiveSession();
 }
 
+// ============================================================
+//  DISCUSS & REPORT MODALS (SUPABASE INTEGRATION)
+// ============================================================
+
+// TODO: Replace with your actual Supabase URL and Anon Key
+const SUPABASE_URL = 'https://YOUR_PROJECT_ID.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJ...';
+
+let supabase = null;
+if (typeof window.supabase !== 'undefined' && SUPABASE_URL !== 'https://YOUR_PROJECT_ID.supabase.co') {
+    supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+}
+
+function openDiscussModal() {
+}
+
+async function submitDiscuss() {
+  const email = document.getElementById('discuss-email').value;
+  const comment = document.getElementById('discuss-comment').value;
+  const selectedVote = document.querySelector('#discuss-vote-options .vote-btn.selected');
+  const ptMode = (state.lang === 'pt');
+  
+  if (!selectedVote) {
+    alert(ptMode ? "Por favor, selecione qual resposta você acha correta." : "Please select which answer you think is correct.");
+    return;
+  }
+  if (!email || !comment) {
+    alert(ptMode ? "Por favor, preencha o e-mail e o comentário." : "Please fill in email and comment.");
+    return;
+  }
+  
+  const currentQ = state.questions[state.currentIndex];
+  const qData = getQText(currentQ);
+  const questionTextSnippet = qData.question.substring(0, 150) + '...';
+
+  if (supabase) {
+    const { data, error } = await supabase
+      .from('question_discussions')
+      .insert([
+        { 
+          exam_code: 'PL-300',
+          question_index: state.currentIndex,
+          question_text: questionTextSnippet,
+          user_email: email,
+          selected_vote: selectedVote.textContent,
+          comment_text: comment
+        }
+      ]);
+      
+    if (error) {
+      console.error('Error submitting discussion:', error);
+      alert(ptMode ? "Ocorreu um erro ao enviar seu comentário. Tente novamente." : "An error occurred while submitting your comment. Please try again.");
+      return;
+    }
+  } else {
+    console.warn('Supabase not configured. Data not saved remotely. Please configure SUPABASE_URL and SUPABASE_ANON_KEY in simulado.js');
+  }
+  
+  alert(ptMode ? "Comentário enviado com sucesso!" : "Comment submitted successfully!");
+  closeDiscussModal();
+}
+
+function openReportModal() {
+}
+
+async function submitReport() {
+  const email = document.getElementById('report-email').value;
+  const notes = document.getElementById('report-notes').value;
+  const checkedTypes = Array.from(document.querySelectorAll('input[name="report_type"]:checked')).map(cb => cb.value);
+  const ptMode = (state.lang === 'pt');
+  
+  if (checkedTypes.length === 0) {
+    alert(ptMode ? "Por favor, selecione o tipo de problema." : "Please select the type of problem.");
+    return;
+  }
+  if (!email) {
+    alert(ptMode ? "Por favor, preencha seu e-mail." : "Please fill in your email.");
+    return;
+  }
+  
+  const currentQ = state.questions[state.currentIndex];
+  const qData = getQText(currentQ);
+  const questionTextSnippet = qData.question.substring(0, 150) + '...';
+
+  if (supabase) {
+    const { data, error } = await supabase
+      .from('question_reports')
+      .insert([
+        { 
+          exam_code: 'PL-300',
+          question_index: state.currentIndex,
+          question_text: questionTextSnippet,
+          user_email: email,
+          problem_types: checkedTypes,
+          additional_notes: notes
+        }
+      ]);
+      
+    if (error) {
+      console.error('Error submitting report:', error);
+      alert(ptMode ? "Ocorreu um erro ao enviar seu relatório. Tente novamente." : "An error occurred while submitting your report. Please try again.");
+      return;
+    }
+  } else {
+    console.warn('Supabase not configured. Data not saved remotely. Please configure SUPABASE_URL and SUPABASE_ANON_KEY in simulado.js');
+  }
+  
+  alert(ptMode ? "Relatório enviado com sucesso! Nossa equipe irá avaliar." : "Report submitted successfully! Our team will review it.");
+  closeReportModal();
+}
+
 function updateGlobalStats() {
   try {
     const solved = state.answers.filter(a => a !== null).length;
@@ -15864,3 +15975,125 @@ function resetGlobalProgress() {
     location.reload();
   }
 }
+
+// ============================================================
+//  DISCUSS & REPORT MODALS
+// ============================================================
+
+function openDiscussModal() {
+  const modal = document.getElementById('discuss-modal');
+  const subtitle = document.getElementById('discuss-modal-subtitle');
+  const voteOptions = document.getElementById('discuss-vote-options');
+  
+  if (!state.questions || state.questions.length === 0) return;
+  const currentQ = state.questions[state.currentIndex];
+  
+  const ptMode = (state.lang === 'pt');
+  subtitle.textContent = ptMode 
+    ? `Pergunta #${state.currentIndex + 1} - compartilhe seus pensamentos`
+    : `Question #${state.currentIndex + 1} - share your thoughts`;
+  
+  // Clear previous options
+  voteOptions.innerHTML = '';
+  
+  // Generate options based on the current question
+  const qData = getQText(currentQ);
+  const numOptions = qData.options ? qData.options.length : 4;
+  const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+  
+  for (let i = 0; i < numOptions; i++) {
+    const btn = document.createElement('button');
+    btn.className = 'vote-btn';
+    btn.textContent = letters[i];
+    btn.onclick = () => {
+      document.querySelectorAll('#discuss-vote-options .vote-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+    };
+    voteOptions.appendChild(btn);
+  }
+  
+  // Mock reset inputs
+  document.getElementById('discuss-email').value = '';
+  document.getElementById('discuss-comment').value = '';
+  
+  modal.classList.remove('hidden');
+}
+
+function closeDiscussModal() {
+  document.getElementById('discuss-modal').classList.add('hidden');
+}
+
+function submitDiscuss() {
+  const email = document.getElementById('discuss-email').value;
+  const comment = document.getElementById('discuss-comment').value;
+  const selectedVote = document.querySelector('#discuss-vote-options .vote-btn.selected');
+  const ptMode = (state.lang === 'pt');
+  
+  if (!selectedVote) {
+    alert(ptMode ? "Por favor, selecione qual resposta você acha correta." : "Please select which answer you think is correct.");
+    return;
+  }
+  if (!email || !comment) {
+    alert(ptMode ? "Por favor, preencha o e-mail e o comentário." : "Please fill in email and comment.");
+    return;
+  }
+  
+  alert(ptMode ? "Comentário enviado com sucesso!" : "Comment submitted successfully!");
+  closeDiscussModal();
+}
+
+function openReportModal() {
+  const modal = document.getElementById('report-modal');
+  const subtitle = document.getElementById('report-modal-subtitle');
+  
+  const ptMode = (state.lang === 'pt');
+  subtitle.textContent = ptMode 
+    ? `Pergunta #${state.currentIndex + 1} - qual é o problema?`
+    : `Question #${state.currentIndex + 1} - what is the problem?`;
+  
+  // Reset inputs
+  document.querySelectorAll('input[name="report_type"]').forEach(cb => cb.checked = false);
+  document.getElementById('report-email').value = '';
+  document.getElementById('report-notes').value = '';
+  
+  modal.classList.remove('hidden');
+}
+
+function closeReportModal() {
+  document.getElementById('report-modal').classList.add('hidden');
+}
+
+function submitReport() {
+  const email = document.getElementById('report-email').value;
+  const checkedTypes = document.querySelectorAll('input[name="report_type"]:checked');
+  const ptMode = (state.lang === 'pt');
+  
+  if (checkedTypes.length === 0) {
+    alert(ptMode ? "Por favor, selecione o tipo de problema." : "Please select the type of problem.");
+    return;
+  }
+  if (!email) {
+    alert(ptMode ? "Por favor, preencha seu e-mail." : "Please fill in your email.");
+    return;
+  }
+  
+  alert(ptMode ? "Relatório enviado com sucesso! Nossa equipe irá avaliar." : "Report submitted successfully! Our team will review it.");
+  closeReportModal();
+}
+
+// Setup event listeners for clicking outside modals
+document.addEventListener('DOMContentLoaded', () => {
+  const discussModal = document.getElementById('discuss-modal');
+  if(discussModal) {
+    discussModal.addEventListener('click', (e) => {
+      if (e.target === discussModal) closeDiscussModal();
+    });
+  }
+  
+  const reportModal = document.getElementById('report-modal');
+  if(reportModal) {
+    reportModal.addEventListener('click', (e) => {
+      if (e.target === reportModal) closeReportModal();
+    });
+  }
+});
