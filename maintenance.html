@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manutenção | PL-300 Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #1B2530;
+            --text-main: #FFFFFF;
+            --text-sub: #8F9CAE;
+            --accent: #C1A26A;
+            --bg-surface: #232E3C;
+            --border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            background: var(--bg-surface);
+            padding: 60px 40px;
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        .icon {
+            font-size: 64px;
+            margin-bottom: 30px;
+            display: inline-block;
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        h1 {
+            font-family: 'Inter', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        h1 span { color: var(--accent); }
+
+        p {
+            font-size: 1.1rem;
+            color: var(--text-sub);
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(193, 162, 106, 0.1);
+            border: 1px solid rgba(193, 162, 106, 0.3);
+            border-radius: 100px;
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .footer-info {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2rem; }
+            .container { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="status-badge">Atualização em curso</div>
+        <div class="icon">🛠️</div>
+        <h1>Estamos em <span>Manutenção</span></h1>
+        <p>O PL-300 Portal está passando por algumas melhorias técnicas para oferecer uma experiência de estudo ainda melhor. Voltaremos em breve!</p>
+        
+        <div class="footer-info">
+            &copy; 2026 PL-300 Portal — Preparação para Certificação Microsoft Power BI
+        </div>
+    </div>
+</body>
+</html>
